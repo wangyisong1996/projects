@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>THU News Search</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="theme.css" rel="stylesheet"> -->
+    <style type="text/css">
+      body {
+        padding-top: 70px;
+        padding-bottom: 30px;
+      }
+      
+      .theme-dropdown .dropdown-menu {
+        position: static;
+        display: block;
+        margin-bottom: 20px;
+      }
+      
+      .theme-showcase > p > .btn {
+        margin: 5px 0;
+      }
+      
+      .theme-showcase .navbar .container {
+        width: auto;
+      }
+    </style>
+
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <font class="navbar-brand">THU News Search</font>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form role="form" class="navbar-form" method="get">
+            <div class="form-group">
+              <input type="text" class="form-control" name="q" maxlength="100" value="{{ query }}" placeholder="Search the news ..." style="width:40em" />
+              <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+          </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <style type="text/css">
+      div.res-container {
+        width: 70%;
+        height: 10%;
+      }
+      font.res-date {
+        font-size: 14px;
+        color: green;
+        padding-left: 10px;
+      }
+      em {
+        font-style: normal;
+        color: red;
+      }
+      h4.res-header {
+        margin-top: 25px;
+      }
+    </style>
+    
+    <div class="container theme-showcase" role="main">
+      
+      <div>
+        <font style="font-size:14px; color:grey">一共找到{{ n }}条新闻</font>
+      </div>
+      
+      {% for item in data %}
+      
+      <div class="res-container">
+        <h4 class="res-header"><a href="{{ item.1 }}" target="_blank">{{ item.0|safe }}</a><font class="res-date">{{ item.2 }}</font></h4>
+        <div>{{ item.3|safe }}</div>
+      </div>
+      
+      {% endfor %}
+      
+      
+      <br />
+      <br />
+      
+      {% if cnt_pg > 0 %}
+        
+        <div class="text-left">
+          <ul class="pagination top-buffer-no bot-buffer-sm">
+            {% if pg == 1 %}
+              <li class="disabled"><span class="glyphicon glyphicon glyphicon-backward"></span></li>
+            {% else %}
+              <li><a href="{{ last_pg_url }}"><span class="glyphicon glyphicon glyphicon-backward"></span></a></li>
+            {% endif %}
+            
+            {% for item in pg_urls %}
+              {% if item.1 == pg %}
+                <li class="active"><a href="{{ item.0 }}">{{ item.1 }}</a></li>
+              {% else %}
+                <li><a href="{{ item.0 }}">{{ item.1 }}</a></li>
+              {% endif %}
+            {% endfor %}
+            
+            {% if pg == cnt_pg %}
+              <li class="disabled"><span class="glyphicon glyphicon glyphicon-forward"></span></li>
+            {% else %}
+              <li><a href="{{ next_pg_url }}"><span class="glyphicon glyphicon glyphicon-forward"></span></a></li>
+            {% endif %}
+            
+          </ul>
+        </div>
+        
+      {% endif %}
+      
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

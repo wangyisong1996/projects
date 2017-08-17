@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我所景仰的赵元任先生</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231215125202365&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9655/index.html' class='navigation_style'>专题新闻</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9710/index.html' class='navigation_style'>清华旧事新“闻”</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">我所景仰的赵元任先生</h3><p align="center">陈原 </p><p align="center">（2001-03-21 光明网）</p><p> 　　我从少年时起就景仰赵元任先生。</p><p> 　　那是半个多世纪前的事了。那时我还是个少年，我迷过阿丽思， 也幻想过钻进耗子洞（不是阿丽思钻的兔子洞）去游玩。那时我不理 会作者译者是谁，但是这书的文字真的把我迷住了，觉得很亲切，很   好玩，不像那时流行的大人国小人国许多童话故事书那样的干巴巴， 只有故事没有文采。长大了，想学“国语”，就拿《国语留声片课本》 当老师，可我没有学好，直到如今垂垂老矣，讲的还是“天不怕地不   怕，最怕广东人说官话”那种“国语”。后来我迷上音乐，学弹琴， 学唱歌，搞合唱团，迷上元任先生的音乐朋友萧友梅介绍的贝多芬 《欢乐颂》的同时，也迷上了《教我如何不想他》——字音和乐音   （也就是《新诗歌集》序中说的“字音跟乐调的关系”）配合得那么 好，那么密切，语词跟音符好像天生揉合在一块儿，这样的境界，在 我以后的音乐实践中，即在译歌配词的实践中，一直引为最高的准则。   30年代初，我跟那个时期的许多“救亡青年”一样，卷进了同救亡运 动密切结合的拉丁化新文字运动，为着制订方言拉丁化方案，狂热的 我不得不去学习和研究语音学，其中得益最多的就是那本《比较语音   学概要》（商务印书馆1930年版），我就是从那本书学会国际音标和 学习一般语音学的，直到今天，我还依稀记得元任先生写的序文介绍 作者译者那种幽默语言。当然，我们更仔细地研究过他首创的国语罗   马字，精读过他捍卫拼音系统的一些论文；觉得很多理论问题他说得 比我们深入比我们清楚，但是——现在想起来真可笑！——那时候啊， 我们这些左倾青年，学问很少，却目空一切；尤其受到了瞿秋白讽刺   国语罗马字是所谓的“肉麻字”的影响，是带着否定的主观武断来接 近这种文字改革试验的。元任先生倡导统一的“国语”（普通话）， 而我们则倾倒于制作大大小小地区的方言拉丁化方案（例如我自己就   是广东话拉丁化方案的制作者之一）；于是拉丁化派跟国罗派猛烈开 火，而不知道大家都在进行文字改革的试验。元任先生当时对此事的 评价是“无聊”，真是一语中的！</p><p> 　　赵元任，赵元任，在我青少年时代，到处都是赵元任的影子，可 我从来没有见过赵元任。</p><p> 　　40年代初，抗日战争越打越大，也越残酷，生活也越来越困难， 连正常的学校几乎都难办下去了，拉丁化新文字运动的热潮只能降温 了。皖南事变后，我的师友叶籁士——即为文字改革奋斗终生的叶籁   士，奉命从重庆撤退到敌后根据地；他临走前，托人把他珍藏的瞿秋 白的北方话写法拉丁化方案某一次手稿，连同那时刚刚印出的高本汉 《中国音韵学研究》送给我——这又是文字改革和赵元任！谁知在日   寇飞机1943年1月5日的滥炸中，我的住处全部夷为平地，那珍贵的手 稿和那本珍贵的大书，通通化为灰烬。</p><p> 　　1949年中华大地发生了翻天覆地的变化，这之后，文字改革的任 务提到了共和国现代化建设的议事日程。我虽然对此大感兴趣，但是 我不得不从事其他工作，只能给文字改革这伟大事业敲敲边鼓。此时，   好像我离开先生很远很远了。谁知十年浩劫（1966－1976）中，“四 人帮”借故发动一场绝灭文化、毁灭语文词典的大战（1974），即对 《现代汉语词典》的“大批判”。在大张挞伐里我首当其冲，一夜之   间就陷入重围，只因为我曾向出版机关推荐这部词典。不知是祸是福， 我在一片喧嚣中倒闲起来了，我有时间扎进语言和语言学的海洋—— 我托海外的亲人给我带来一批语言学著作（那时在这苍茫大地上，书   可是稀有“静”物呀！），其中一本是《语言问题》。又是赵元任！ 我又碰到这位赵元任！《语言问题》这部书，给我打开了语言学的新 天地，诱惑我重新鼓起勇气去钻研我30年代醉心过的语言学，并且引   导我日后去接触信息科学。此时，直到此时，我还没有见过从少年时 代起仿佛注视着我走路的老师赵元任！</p><p> 　　元任先生1973年回国，我是知道的，因为某外事机关一位领导给 我捎来一部英文著作，说是作者回国探亲交给他的，但我当时没有 “资格”跟元任先生会面，只在我的一本语言学笔记中留下此书的摘   录。意想不到的是，当元任先生最后一次回国（1981）时，我却有机 会同先生晤谈，因为当时已雨过天晴了。那年5月下旬，我约请先生和 他的家人以及语言学界几个学者在仿膳欢叙。那天到会的有王力、吕   叔湘、朱德熙、李荣诸公（记得王力先生一进门便必恭必敬地向元任 先生行弟子礼，而王力先生那时已年逾八旬了。）——如今王朱两位 已先后随元任先生去了——那天午间的叙会不会再有了，但是那一天   却是很愉快的，上下古今，无话不说，也无话不可说。时隔十有六年， 所谈内容已不大记得了；只有先生西装左上方的外袋插着一排四管荧 光笔留下了深刻的印象；我默想这四管色笔象征着这位老学者是如何   随时随地用功啊。</p><p> 　　席间还谈到重印《阿丽思漫游奇境记》的事——事前胡乔木同志 接见他时，已同他谈过，说此书可以而且应当由商务印书馆重新出版。 他很高兴，说可以把他已译好同一作者的《镜中世界》合在一起印行，   他说回去再看一下就定稿——可惜的是，翌年（1982）他来不及亲自 再加校订润色便辞世了。这本力作是在先生辞世后六年（1988）后才 印出的，可惜先生已看不到了。</p><p> 　　那么，这位现代中国语言学大师是从什么地方什么时候什么机遇 “切入”语言学领域的呢？</p><p> 　　我可以毫不迟疑地说，他是从文字改革的理论与实践这样一个鲜 为人论述的斜面“切入”语言学的海洋的。尽管他幽默地告诉女儿说， 研究语言学是为了“好玩儿”，但是“好玩儿”的背后藏着很多深意，   世界上很多大科学家研究某种现象和理论时，他们自己常常以为是为 了好玩。元任先生小时候练习说切口和反切口，是为了好玩；他擅长 的“说倒话”，并且常常在公众面前表演“说倒话”，也是为了“好   玩”！…… </p><p>　　“好玩”意味着有趣味，有兴趣，有意思。他说的“好玩”可以 用《最后五分钟（国语罗马字对话戏戏谱）》的序文里的几句话来做 注脚。他说，他翻译这个戏，他用国语罗马字写出剧本，基于三种   “兴趣”——三重“好玩”。第一种兴趣是对国语罗马字的兴趣，即 宣传（国语罗马字）的兴趣；第二是对中国语调的兴趣，即研究学术 的兴趣；最后一种是对于话剧的兴趣，那就是艺术的兴趣，如果引用   一下他阐述的“艺术的兴趣”，就更可以明白“好玩”一词蕴藏的涵 义了。他写道：</p><p> 　　我对于艺术的兴趣仿佛是男人对女人的爱，热就热到火苗儿的程 度。可是热度减了的时候儿，好像就是离开了伊也能过似的，回头又 想念伊起来，可是又觉得没有伊，我的生活全没有光彩似的了。</p><p> 　　这里说的“兴趣”，从某种意义来说，就是“好玩”。好玩者， 不是功利主义，不是沽名钓誉，更不是哗众取宠，不是“一本万利”。</p><p> 　　对文字改革的兴趣，贯串他的一生。早在“五四”运动前，当他 还在美国大学念书的时候，就在留美学生月报上发表了《吾国文字能 否采用字母制及其进行方法》（1916），其实早一年（1915），就在   当时留美学生的圈子里，发表过可以用标音字母来代替汉字的主张。 1920年他回国在清华学校任教时，参加了在北京召开的国语统一运动 筹备委员会会议。次年（1921）同胡适讨论汉字改革问题，所谓汉字   改革，实质上就是要冲击汉字的神圣不可侵犯性，在某些场合，这就 意味着用表音字母来代替几千年父传子子传孙传下来的汉字。同年， 他得到丁文江转赠的高本汉所著《中国音韵学研究》一书，诱使他深   入研究中国文字的音韵。这一年，他趁在美国教书之便，在纽约的一 家唱片公司为商务印书馆灌制国语留声片，并写成课本出版（1922）。 虽然这次发音是按照国音统一会1913年通过的人工国音灌制的，但这   事情在推广中华民族的共同口头语活动中，迈出了很大的一步。搞人 工国音是那时国语运动的一些饱学之士的善意的乌托邦行为，而元任 先生成了唯一能用这种人工语音发音和说话的人；但人工国音是科学   的抽象的语音，不是哪一个地方普通人的语音，很难推广；因此，两 年后（1924），他又根据国语统一会的新规定，采取北京音代替人工 的国音，为商务印书馆再一次灌制国语留声片，这一次是成功的，日   后很多华侨和华裔都据此学会“国语”即现今所称的“普通话”。</p><p> 　　1921年，元任先生应聘赴美哈佛大学教中国语言课之前，在他正 热衷于创制国语罗马字草稿的时候，在他还没有开始进行方言调查并 且决定在学术方向上主攻语言和语言学之前，他做了一件了不起的工   作，那就是翻译了《阿丽思漫游奇境记》。这本小小的童话书，值得 中国翻译史、中国儿童文学史、中国语言学史记上大大的一笔。</p><p> 　　20年代，阿丽思同匹诺曹一样，吸引着那个时代万千少年儿童的 心。阿丽思钻兔子洞，匹诺曹说一句谎话鼻子就长一寸，滑稽得叫人 喷饭，两部书都包含着人生哲理的笑话与趣事，但阿丽思是活生生的   孩子，不是匹诺曹那样的木偶，更使孩子们感到亲切。</p><p> 　　其实元任先生进行这次翻译，不是一般的文学译作，他是在进行 一种实验，语言的试验，文字改革的实验，文学革命的实验，也是不 同思维的文学作品移译的试验。为什么说是一种试验呢？按照译者在   序言中所指出的，这试验至少在三个方面作出的（其实不止这三个方 面）：</p><p> 　　一，只有用语体文（白话文）翻译这等作品才能传神——不要忘 记“五四运动”很重要的内容是白话文应当在一切方面取代文言文， 而这本翻译则在事实上或实践上证明白话文能够做到。</p><p> 　　二，西方语文中一些代名词（如他、她、它之类）在语体文（白 话文）中能够恰如其分地准确地表达——例如当时“她”“它”等才 在创始过程中。现在看来这些都是不成问题的问题，但在七十年前则   是一个需要经过试验才能使人信服的。</p><p> 　　三，西文的“打油诗”能不能用中文的语体诗（白话诗）形式翻 译成可笑的打油诗；元任先生自己说，这是作一次“诗式的试验”， 而不是“诗的试验”。</p><p> 　　令人惊奇的是时隔七十年，这部翻译读起来却好像说话似的流畅， 通顺，而不会令读者嫌弃这里的文字“老”了，“旧”了，不好懂了。 为什么？我想，这就是一个超凡的语言学大师作的口语写成书面语的   试验。</p><p> 　　这部翻译是元任先生留给我们的宝贵财富，值得好好研究的。但 愿我们的少年儿童今后有机会去欣赏一个博学多才的翻译家给他们留 下的“笑话书”（赵元任语）！</p><p> 　　习惯上人们都说元任先生业余从事音乐活动，或者换句话说，他 的业余爱好是音乐。我不这样认为。一个人文学者，一个文艺复兴式 的智者，无所谓业余和业内。音乐是他的事业中的一部分，而且是很   重要的部分。音乐甚至是他生命的一个组成部分。元任先生在他的第 一封《绿信》中（S20）就表达过这样意思，他说，不知怎的，音乐这 东西总是“偷偷地”占据我很多时间和思想。他用了   surreptitiating一字，这就是说，音乐不知不觉地成了他的生命的一 部分。</p><p> 　　他师从著名的音乐学家，他专攻过和声学，专攻过作曲法，他会 摆弄多种乐器，他毕生都与钢琴为伍。他教过音乐或音乐欣赏课。他 一生作过一百多首音乐作品，其中包括器乐（钢琴，小提琴）曲，当   今有些专业作曲家未必能在数量上超过他，更不必说在质量上。他的 音乐作品能历久而不衰。他跟他的女儿们，凡是有机会聚在一起，就 组成一个合唱团，有伴奏或无伴奏（acappella）地练唱他的新作或旧   作。他为同时代的诗人谱曲：刘半农（《教我如何不想他》），徐志 摩（《海韵》），刘大白（《卖布谣》），胡适（《他》），陶行知 （《小先生歌》），施谊（《西洋镜歌》）。他是当今中国的舒伯特，   舒曼；他也自比为舒伯特，舒曼。他记录民间曲调，他为古今民谣谱 曲，若果他不是全身心投入方言调查，他会成为中国的巴拉基略夫 （Bala－kirev）。可是他并没有把自己局限在艺术歌曲的象牙塔里。   他如同古往今来的大音乐家那样，不惜精力地为机关、学校、团体， 以及某些突发事件作歌（1926《呜呼！三月一十八》，1933《我们不 买日本货》，1937《抵抗》）。他为电影作主题歌（1935《西洋镜歌》）   。你在他的乐曲中感受到的不是远离现实生活的孤芳自赏，而是一颗 纯朴的赤子之心！一颗炎黄子孙的心！一颗中华民族好儿女的心！</p><p> 　　元任先生掌握了上尺工六五，也掌握了do，re，mi，fa，sol， la，si；他突破了民族音乐的框框，也突破了西洋音乐的框框，他把 民族的气质融化在西方近代音乐的构架里；不是硬凑，而是交融。他   的乐曲有着浓厚的中国味儿，却又没有那种迂腐的“国粹”气。也许 就是音乐家贺绿汀说的“在旋律上有中国民歌特点，并与语言结合得 很密切，深刻地抒发了原诗的意境和情绪”；也许就是音乐家廖辅叔   说的，《新诗歌集》是“体现了‘五四’精神的近代中国的第一本歌 曲集”。</p><p> 　　使我感触最深的是，元任先生作为20世纪一个伟大的人文学者， 他非常敏感地接受新的科学理论，并且很快将这些新理论导入或应用 到他所致力的语言学中。比如他很快就接受控制论、信息论的观点，   50年代下半期作语言学演讲时，就充分显示出他这种可爱的科学精神。 也许与他跟控制论的创始者N．维纳很早便相识，经常来往切磋有关系。 维纳的父亲L．莱奥·维纳是个语言学家，原籍波兰。人们可以在他的   演讲实录《语言问题》中充分感受到他对新兴的信息科学有很深刻的 理解和恰当的应用，这同他有深厚的数学物理基础有关。将20世纪下 半期发展的信息科学理论导入语言学，并且不是生硬地照搬而是创造   性地运用，我敢说在我国语言学界，除赵元任以外没有第二人！</p><p> 　　能够把深奥的学理，用鲜明通俗的语言表达出来的大学问家不多， 元任先生是其中的一个——很多时候还带有一种幽默感；不是庸俗的 笑话，而是优雅的意味深长的幽默感。他说过，他在演讲中和通俗论   文中，常常要加上一些笑话，“凡是扯得上扯不上的地方总是忍不住 要说（笑话）”，而他在日记中几次记录他在演讲中所安插的笑话得 到了预期的效果。甚至当他的好友刘半农辞世，他写了一副他平常不   爱做应酬文章的挽联，显示出的就不仅是沉痛的哀悼，而是一种高尚 的情谊，还带着即使生离死别也永远不会消失的希望，以及伴随着这 希望而来的微微的幽默。挽联写道：</p><p> 　　十载凑双簧，无词今后难成曲；</p><p> 　　数人弱一个，教我如何不想他！ </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月21日 13:25:17　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9710/2011/20110225231236828371255/20110225231236828371255_.html" target="_blank">浅谈赵元任的语言学研究</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document浅谈赵元任的语言学研究中华读书报 2001年9月19日逸天赵元任先生生于1892年，1982年去世。他早年所学是中国传统的四书五经。后来留学美国，本科专修数学，毕业后进入哈佛的研究院，专修哲学，并获得哲学博士学位。在学期间，除了主修的数学哲学课程，还选修了物理、机械工程、语言学、音乐等多种课程。毕业后，先是在康奈尔大学任......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9710/2011/20110225231233718309168/20110225231233718309168_.html" target="_blank">方言大师赵元任</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document方言大师赵元任作者 □冯爱珍2001-08-15 中华读书报赵元任是杰出的语言大师，也是杰出的方言大师。他自1927年开始系统地调查研究汉语方言，以融会古今、贯通中西的广博学识，新颖精湛的学术思想，严谨科学的研究方法，开创了中国“五四”以后的现代汉语方言学研究领域的全新局面，并取得了令人瞩目的巨大成就。堪称现代汉语方......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9710/2011/20110225231230843502337/20110225231230843502337_.html" target="_blank">浅谈赵元任先生的学术思想背景</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document浅谈赵元任先生的学术思想背景中华读书报 2001-06-20作者 □张　璐赵元任先生（1892－1982）是20世纪有重大影响的语言学家和语言教育学家，他是中国现代语言学的奠基者和开拓者，也是享有世界声誉的语言学大师。在其60余年的学术生涯中，赵先生以超人的智慧和辛勤的劳动，写下了众多具有开创性和影响力的著作，为中国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9710/2011/20110225231215031981104/20110225231215031981104_.html" target="_blank">赵元任相册</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document赵元任相册（光明网 2001年4月18日）赵元任（1892-1982）  一位世所罕见的语言奇才，他具有"录音机的耳朵"和学说语言的能力，一生会讲33种汉语方言，会说英、法、德、日、西班牙语等多种外语；他是我国方言调查研究工作的开拓者和推动者，国语运动的元勋，对于汉语共同语音标准的确定，汉语拉丁化字母的制定做出了重要......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9710/2011/20110225231215062470659/20110225231215062470659_.html" target="_blank">赵元任、杨步伟——“神仙伴侣”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document赵元任、杨步伟——“神仙伴侣”（光明网 2001年4月18日）赵元任自幼就有自由恋爱思想。14岁（1906）那年， 他大姑婆告诉他，他就要和一个姓陈的女孩订婚了，他在日 记上记载说：“婚姻不自由，我至为伤心。”后来这个婚约   终于解除：“我和这个女孩订婚十多年，最后我终于得到自 由。”他幼年还曾沾染上“自我放纵”的毛病......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

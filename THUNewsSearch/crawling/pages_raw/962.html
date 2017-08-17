@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>王国维怎样进清华？</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231227718990901&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9655/index.html' class='navigation_style'>专题新闻</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9710/index.html' class='navigation_style'>清华旧事新“闻”</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><p><font face="楷体_GB2312">清华研究院和四大导师，是清华人文学科最初的辉煌。清华研究院的导师制是曹云祥校长根据胡适的提议设立的。四大导师有三位是胡适推荐的。梁启超是胡适少年时代的精神偶像，赵元任是胡适留美时的挚友。那王国维又是怎么赢得胡适的敬重，并被胡适推进清华呢？文利用第一手史料，叙述了这一鲜为人知的幕后行为，并首次披露王国维的聘书。</font> </p><h3 align="center">王国维怎样进清华？</h3><p align="center">中华读书报 2001年5月16日</p><p align="center"><img src="/publish/news/images/upload/wangguowei2.jpg" width="288" height="188"> </p><p align="center"><b>胡适看重王国维的学问</b></p><p> 　　1917年胡适从美国留学7年后回国，在上海，他考察了出版界后得出的结论是：近几年的学术界“文学书内，只有王国维的《宋元戏曲史》是很好的”（《归国杂感》）。随之，胡适在中国学术界大红大紫，为新学领袖。1922年4月15日，胡适在日记中记有：“读王国维先生译的法国伯希和一文，为他加上标点。此文甚好。”（耿云志主编：《胡适遗稿及秘藏书信》）8月28日，胡适又一次表示出对王的好感，他在日记中写道：“现今的中国学术界真凋敝零落极了。旧式学者只剩王国维、罗振玉、叶德辉、章炳麟四人；其次则半新半旧的过渡学者，也只有梁启超和我们几个人。内中章炳麟是在学术上已半僵化了，罗与叶没有条理系统，只有王国维最有希望。”（1922年《努力》周报第29期登出胡适《谁是中国今日的十二个大人物》一文中，他把王国维与章炳麟、罗振玉，并列在“学者”项目下）。</p><p> 　　1922年王国维在致顾颉刚信（王信的写作时间只署“初三日”，无月份）中说道：“顷阅胡君适之《水浒》、《红楼》二卷，犁然有当于心，其提倡白话诗文，则所未敢赞同也。”（《文献》第18辑，1983年12月）1922年9月9日，胡适在上海得见焦循《剧说》六卷，他看后说：“焦氏此书是《宋元戏曲史》的先声，搜的材料很有可以宝贵的。”（《胡适的日记》）</p><p> 　　1923年，胡适在《五十年来中国之文学》日译本作序时，写道：</p><p> 　　“近人对于元人的曲子和戏曲，明、清人的杂剧、传奇，也都有相当的鉴赏与提倡。最大的成绩自然是王国维的《宋元戏曲史》和《曲录》等书。”同时他在这年的2月10日又写了《读王国维先生的〈曲录〉》的书评文章，以表示对王国维曲学研究的肯定。</p><p> 　　胡适与王国维的政治思想和文学观念不同，但作为学人，他们彼此尊重对方的学问。尤其是胡适，他最看重王国维的考据。</p><p align="center"><b>王国维对胡适的心理震荡</b></p><p> 　　顾颉刚是胡适最得意的学生，学术上也最得胡适“疑古”和考索古史的真精神。王氏对胡适评说，很快由顾传给了胡适。于是，有了胡适对王国维的拜访。据《胡适的日记》1923年12月16日所记：</p><p> 　　往访王静庵先生（国维），谈了一点多钟。他说戴东原之哲学，他的弟子都不懂得，几乎及身而绝。此言是也。戴氏弟子如段玉裁可谓佼佼者了。然而他在《年谱》里恭维戴氏的古文和八股，而不及他的哲学，何其陋也！</p><p> 　　静庵先生问我，小说《薛家将》写薛丁山弑父，樊梨花弑父，有没有特别意义？我竟不曾想过这个问题。希腊古代悲剧中常有这一类的事。</p><p> 　　他又说，西洋人太提倡欲望，过了一定限期，必至破坏毁灭。我对此事却不悲观。即使悲观，我们在今日势不能跟西洋人向这条路上走去。他也以为然。我以为西洋今日之大患不在欲望的发展，而在理智的进步不曾赶上物质文明的进步。</p><p> 　　他举美国一家公司制一影片，费钱六百万元，用地千余亩，说这种办法是不能持久的。我说，制一影片而费如许资本工夫，正如我们考据一个字而费几许精力，寻无数版本，同是一种作事必求完备尽善的精神，正未可厚非也。</p><p> 　　这短短一个多小时的交谈，真正使胡适感到了王国维的存在。王氏对古今中外历史文化的深切关注和独到的见识，是同代旧派学人所不曾达到的，也是新潮学界所不曾注意的。王国维仍保持着年轻时借助叔本华的哲学来解读《红楼梦》的敏锐和好奇。</p><p> 　　王国维所谈的三点都是建立在一种比较文化意义上的问题。戴震在人们的共识中是大学问家。胡适认为在清代有学问，没有哲学；有学问家，没有哲学家。王国维是学问家，但他同时关注一位学问家的哲学思想。这说明他的思考不是单向的。戴震作为清代大学问家，他的哲学思想也有十分引人注目的东西。他的一元论思想，他反对宋学的空泛和虚无，反对程朱理学的以理（礼）杀人，崇尚实用的思想和学术，使他成为清学的一个高峰。小说《薛家将》的作者不可能看过古希腊的悲剧，更不可能知道恋母弑父的“俄狄浦斯情结”、“哈姆雷特情结”，而王国维却在考虑一个比较文学上的问题。他熟悉古典戏曲，对中国戏剧舞台上那种虚拟的神似效果也十分清楚。戏剧舞台上一将几卒，摇旗挥刀，在锣鼓声中，走几个来回，便表示有千军万马。而西方的电影却不同，他们把千军万马真的拉到电影的拍摄现场，投入的实际情形很大，追求的是一种宏大、真实的艺术效果。这是在当时所谓的中西艺术的不同。王国维的这份关注是一般文人所不可能有的。作为一个在世人看来保守的旧学者，他考虑的问题却是十分现代的，他的思想没有停滞，他对新知的追求没有停止。更何况在自己不明白的情况下，又主动地向一位后生请教。</p><p> 　　我们只有在王国维这样的大家身上看到如此的人文景观。</p><p> 　　胡适不能不对王氏的问题投下相应的关注。</p><p> 　　王国维所谈的前两件事都是胡适不曾注意到的事，自然对他产生了相应的刺激，使他自1917年“暴得大名”之后，那一直处于巅峰状态的学者心理受到了一次意外的震荡，多年来他真正有了一次与学界高人交流的机会，并得到了一次学人少有的高峰体验。也使他进一步明白学术界同样是山外有山，天外有天。高山仰止。从王宅出来，敏感的胡适便到马幼渔那里借得戴震后学焦循（里堂）的《雕菰楼集》一部。当天晚上，他便开始着手研究戴震，为陶行知发起筹建的“东原图书馆”试作一篇“述东原在思想史上的位置”的短文（未完）。</p><p> 　　由此可见胡适敏于思，勤于学的学人精神。 　　作为老一代学人和“帝王之师”，王国维自然也懂得胡适在当今新派学界的地位和如日中天的社会影响。他更不能轻视胡适的存在。深谙学界礼数的王国维，第二天（12月17日）便到胡适府上回访。</p><p> 　　直到胡适的晚年，他还保留着对王国维的特殊印象，他对助手胡颂平说：王国维是一个绝顶聪明的人，他少年时用德国叔本华的哲学来解释《红楼梦》，他后来的成就，完全是罗振玉给他训练成功的。当然要靠他自己的天分和功力。说王“他的人很丑，小辫子，样子真难看，但光读他的诗和词，以为他是个风流才子呢！”（胡颂平编：《胡适之先生晚年谈话录》）</p><p align="center"> <b>胡适向曹云祥校长力荐王国维</b></p><p> 　　胡适在学问上日益进取，地位和名声也与日俱增。这时，他没有得意忘形，没敢忽视王国维的真实存在。他时刻在想着王氏的热能还没有完全发挥出来，王氏身上还有一定的待开发的文化余热资源。从个人情谊上讲，他要回报王氏（是王国维启发他写了《戴东原的哲学》一书，帮助他编了《词选》）。</p><p> 　　这里先说胡适与曹云祥校长的前期联络工作。</p><p> 　　1924年，清华学校欲“改办大学”，同时设立研究院。清华学校校长曹云祥于1924年2月22日致函胡适，说聘请“先生担任筹备大学顾问”（耿云志主编：《胡适遗稿及秘藏书信》）。同时，又动员胡适出任筹建中的清华研究院院长（职位同各系科主任）。胡适推辞不就院长（后改为吴宓任主任），但建议曹校长，应采用宋、元书院的导师制，并吸取外国大学的研究生院的学位论文的专题研究法。胡适还向曹校长推荐了四位导师人选：梁启超、王国维、章太炎、赵元任。后因章太炎不就，而改聘陈寅恪（由吴宓推荐）。</p><p> 　　1924年12月8日，胡适陪同曹云祥校长拜访了王国维，第二天，曹云祥在致胡适的信中这样写道：</p><p> 　　适之先生台鉴：</p><p> 　　昨承偕访王静庵先生，晤谈之后，曷胜钦佩。敝校拟添设研究院，即请王君为该院院长。兹将致王君一函并聘书送请察阅如蒙同意，即祈转致，并恳玉成是荷。</p><p> 　　此颂</p><p> 　　道安</p><p> 　　曹云祥谨启</p><p> 　　十二月九日（耿云志主编：《胡适遗稿及秘藏书信》）。</p><p> 　　随之，曹云祥校长在12月11日又致信胡适，约定胡适同王国维到清华聚餐（共商聘请王国维之事）：</p><p> 　　迳启者：订于本月二十日星期六□□□□□，驾临敝校午餐，藉以畅谈，未知是日有暇光降否？倘因公忙或改二十七日星期六亦可，即祈裁定，并约同王静庵先生来校，是所至盼。相应函达至，希查照见覆是荷。</p><p> 　　此致</p><p> 　　胡适之先生</p><p> 　　曹云祥谨启</p><p> 　　十二月十一日（耿云志主编：《胡适遗稿及秘藏书信》）。</p><p align="center"><b>校长曹云祥亲自写聘书</b></p><p> 　　由于曹云祥校长求贤心切，在未与胡适、王国维协商妥当的情况下，按本校聘教员的惯例，给王国维送上了校方统一印制的印刷品聘书。事后，曹云祥方发觉此法不妥，忙致信王国维解释，并附手写聘书一件。信和聘书均请胡适代转。</p><p> 　　信及聘书如下：</p><p> 　　静庵先生大鉴：</p><p> 　　前奉聘书，因系印刷品，表明本校聘请教员事同一律，所以先填送览。</p><p> 　　兹以添注涂改，殊欠敬意，特另缮一份，肃函奉送。</p><p> 　　敬祈察存</p><p> 　　专泐顺颂</p><p> 　　道安</p><p> 　　附聘书一件</p><p> 　　曹云祥谨启</p><p> 　　十二月三十一日（耿云志主编：《胡适遗稿及秘藏书信》）。</p><p> 　　聘书</p><p> 　　兹聘请</p><p> 　　王静庵先生为本校研究院主任，担任国学研究事务。即希</p><p> 　　查照后，列聘约办理为荷。</p><p> 　　（一）每星期内授课拾点钟以内。</p><p> 　　（二）每月薪金银币肆百元，按月照送。</p><p> 　　（三）一切待遇照本校规定研究院教员任用规则办理。</p><p> 　　（四）此项聘约以叁年为期（自民国十四年一月起至十六年十二月底止），期满若得双方同意再行续订。</p><p> 　　清华学校校长曹云祥</p><p> 　　中华民国十三年十二月（耿云志主编：《胡适遗稿及秘藏书信》）。</p><p> 　　同时，胡适积极主动地做废帝溥仪、庄士敦（溥仪的英文老师）和王国维本人的工作。现存胡适给王国维的两封信，可见胡适本人对此事的投入，尤其是他自己从学术着眼，也希望王氏“宜为学术计，不宜拘泥小节”的那份诚意。其一：</p><p> 　　静庵先生：</p><p> 　　清华学校曹君已将聘约送来，今特转呈，以供参考。约中所谓“授课拾时”，系指谈话式的研究，不必是讲演考试式的上课。</p><p> 　　圆明园事，曹君已与庄君商过，今日已备文送去。</p><p> 　　适之上</p><p> 　　（原信无日期）（耿云志、欧阳哲生编：《胡适书信集》）</p><p> 　　信中，“庄君”指庄士敦。</p><p> 　　静庵先生：</p><p> 　　手示敬悉。顷已打电话给曹君，转达尊意了。一星期考虑的话，自当敬遵先生之命。但曹君说，先生到校后，一切行动均极自由；先生所虑（据吴雨僧君说）不能时常往来清室一层，殊为过虑。鄙意亦以为先生宜为学术计，不宜拘泥小节，甚盼先生早日决定，以慰一班学子的期望。日内稍忙，明日或能来奉访。匆匆，即送</p><p> 　　起居佳胜。</p><p> 　　适之上一四，二，十三</p><p> 　　（1925年2月13日）（耿云志、欧阳哲生编：《胡适书信集》）</p><p> 　　“吴雨僧”即研究院筹备处主任吴宓。吴宓同时奉曹校长之命拜访王国维，征求他对生活上的具体意见。</p><p> 　　胡适的诚意和曹校长的善待感动了王国维。于是，他决定亲自到清华研究院去看一看。胡适便用自己的车子拉着王氏，往返陪同，走了一趟清华园。从此，清华园中晃动着一个曾为“帝王之师”而如今仍为废帝之师的学人身影，清华学子也获得到了一代国学大师的教诲。这是清华人的骄傲，也是现代学术史上的一件幸事。</p><p> 　　王国维本人在内心深处也会为此事而感激胡适的。</p><p> 　　然而，后学胡适的这份真诚之意和曹校长的求贤之情，并不能完全医治和抚慰王国维那早已伤透的心，无法再给他一个健全的没有裂痕的灵魂。1927年6月2日，王国维向颐和园的昆明湖纵身一跳，一代学人的生命和一个时代结束了。</p><p> 　　王国维自沉昆明湖后，陈寅恪在《王观堂先生挽词》中特提及王氏晚年生活中的一件大事，即胡适推荐王国维为清华研究院的导师（“鲁连黄鹞绩溪胡，独为神州惜大儒”。胡适为安徽绩溪人）。人们时常忆念清华研究院时代的人才辈出和“四大导师”的卓越贡献。而“四大导师”的背后，摇曳着的是胡适的身影。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年05月16日 10:49:32　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9710/2011/20110225231214953954926/20110225231214953954926_.html" target="_blank">四论王国维的死因</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document四论王国维的死因（光明网 2001年4月18日）“后期的王国维既是封建卫道士，也是亡清的忠臣烈士。对王国维来说，卫道必然殉清，殉清也就是卫道，二者密不可分。”蔡仲德1927年6月2日，王国维投昆明湖自沉。其死因何在？ 关于这个“中国文化史世纪之谜”，72年来有过种种说法， 也有过热烈争论。近有干春松先生《王国维：自杀......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

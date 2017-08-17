@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>人文与科学并重</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225354968426525&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9648/index.html' class='navigation_style'>头条新闻</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><div align=center>  <h3><b><font color=#000000 face=楷体_GB2312             size=5>人文与科学并重</font></b></h3></div><div align=center>  <p><font color=#000000 size=4>看高教发展新趋势</font></p>  <p>（科技日报 2001年4月28日）</p>  <p><font color=#000000 size=3>本报实习记者樊斯坦</font></p></div><p> <div align=left><font color=#000000>   <p>&nbsp; &nbsp; 前不久，一场颇具规模的人文知识竞赛成为了清华九十华诞的焦点，这同时也深切地让人们感受到了一个综合性大学人文日新的气象。清华往常被看作理工科中的翘楚，但现在文理并进、融和发展才是它的教育取向。放眼宏观，科学教育与人文教育走向整合，不仅仅是一、两个学校改革发展的举措，更是整个高等教育的必然选择，是未来高等教育发展的必然趋势。   <p>&nbsp; &nbsp; 人文教育具有着科学教育所不具有的功能，是科学教育的有效补充。清华大学生物物理专业研究生薛毅告诉记者，他本科时学的是物理，在必修课中很重要的一门是物理学史。他说：“以史为鉴，从历史发展中汲取规律，一方面前人的经验能在实践中给予我们指引，而另一方面前人的探索精神也激励着我们去追求真知。”现在研究生阶段，他们还在学习自然辩证法。他表示：“这些哲学课程不仅仅开阔我们眼界，更有利于指导我们思考。唯物的世界观和方法论无论是做学问还是在做人上都对我很有帮助。”   <p>&nbsp; &nbsp; 人文知识对理工科学生钻研本专业知识大有裨益，它与科学教育的配合，更可缓解高科技发展对人性的扭曲，使技术达到人性化。清华计算机专业的申林同学告诉记者，自己对人文教学很感兴趣，在教学之外自己也看了不少人文方面的书籍。谈到这些知识对专业的意义，他说：“计算机科学是一门技术性很强的学科，我是搞软件设计的，现在的设计要求人性化，这样的产品才会受到欢迎。而学习人文知识能从更为深广的层次和层面上去了解人的需求，从而开发出成功的软件。”申林认为现代社会技术高度发达，高技术必须用高情感加以对抗；科学技术的目的在于为人类服务，人性化是目前技术发展的大趋势。“科技以人为本。”他最后引用了一句广告词。   <p>&nbsp; &nbsp; 技术需要人文为其提供精神指导，人文也需要技术作为其提供物质保障。现代化的社会对于技术素质的要求日益水涨船高，掌握一定科学技术成为文科生们的需要。在武汉大学学分制度规定上，记者看到，每个文科专业学生必须选修两门以上理科课程；而计算机基础、高等数学是不少文科专业的必修课。说到技术对于文科的意义，武汉大学新闻学院的单波教授是这么认为的：“技术是需要人文精神作为其内在的精髓，没有人文精神的技术是得不到长远发展的、无生命力的技术；而缺乏技术认识和技术能力的人文工作者，也是不能适应社会和时代的需要、没有生存能力的。这个时代真正的人文人才，应该贯通文理。这样既拥有更开阔的学术视野，更务实的研究方向；并且那一技之长也能让你在社会中更具竞争力。现在不少高校已经认识到了这一点，并在教学中体现出这一点。”   <p>&nbsp; &nbsp; 技术教学融入人文教学，最突出的代表可能属清华的人文学院。清华中文系专业有文学、新闻传播，还有计算机语言学等，其课程设置和一般院校中文系不太一样，除了一般的汉语文学外，还有大量理科课程，可以说是文理兼通。清华中文系有人能保送到中科院的各个研究所读研，这是别的高校中文系学生无法想象的。一个清华中文系学生骄傲地说，他们的电脑水平一点不比计算机系的差，如果到电脑公司，完全能搞技术。事实上，他本人就在新浪兼了一年多的职，做软件汉化工作。而计算机系的学生不如中文系学生会写东西、有文采。因为是复合型人才，社会需求很大，学生常常出现被“抢”现象。清华人文教学的成功给我们极大的启示。   <p>&nbsp; &nbsp; 近日，季羡林先生在网上同广大网友进行了一次交流。有网民问：人文为技术提供精神指导，技术如何为人文提供面包。季老回答，人文和技术恰如人的两条腿，分开来单独谈任何一条腿都是无法前进的；只有共同运作，才能迈开大步：人文和技术并重是建设有中国特色社会主义的必由之路。社会需求决定着高等教育的走向，调查显示，文理兼通的复合型人才最受欢迎。李德恒院士提出，要加强学术交叉，这种交叉并蓄的思想要贯彻科研与教育。一次次合并使综合化发展成为国内高校间最响亮的口号。我国所有高校的都开设了马克思主义哲学、自然辩证法和邓小平理论等课程。许多学校的理工科专业要求学生选修一定的人文学科学分才能毕业，文科也有相应的要求。校方不仅仅加强了学科交叉选课的指导，双学位、主辅修等高教制度的设立和完善也为文理兼修开了方便之门。不过，也需要看到的是，在高等教育的某些领域，仍存在着学科偏废的现象———特别是重理轻文者还大有人在，复合型人才的培养机制也有待于进一步完善。   <p>&nbsp; &nbsp; 有学者评论：当前，新科技革命强劲的发展势头和人们对素质教育、人文教育的重视与复归，为21世纪的大学教育带来了极高的期望。科学教育和人文教育的整合，是知、情、意并重的教育，是使个体的精神道德和科学知识平衡发展的教育，是一个有机的整体。人文教育与科学教育的这种平衡，是多种矛盾运动的结果和历史发展的必然。尽管在实现整合的过程中，科学教育和人文教育的冲突不会停止，整合的真正实现还有待于我们作出艰苦的努力，但在经历了漫长的古老人文教育、独领风骚的现代科学教育之后，我们必将进入更加成熟的现代人文教育与科学教育并重的新时代，这就是21世纪高等教育。  </font></div></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月28日 08:57:37　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225556046997400/20110225225556046997400_.html" target="_blank">钱耕森教授做客新人文讲座解读清华校训</a></h3>
+              <p class="thnews_jqzy">　　钱耕森教授做客新人文讲座解读清华校训【新闻中心讯 通讯员 王刚】11月21日晚，清华老学长、现安徽大学哲学系教授钱耕森先生为清华师生做了题为《自强与强他——清华校训解读》的精彩讲座。讲座中，钱耕森教授回顾了清华校训的由来，简要阐述了《周易》和清华校训中包含的博大精深的哲学思想以及其现今意义。钱耕森教授与本次讲座的主持人、前清华大学思想文化研究所副所长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225556078913642/20110225225556078913642_.html" target="_blank">秦佑国做客新人文讲座畅谈梁思成与北京旧城...</a></h3>
+              <p class="thnews_jqzy">　　秦佑国做客新人文讲座畅谈梁思成与北京旧城保护【新闻中心讯 学生通讯员 孙洁琼】11月18日下午，原清华大学建筑学院院长秦佑国教授做客新人文讲座，为同学们做了题为“梁思成与北京旧城保护”的讲座。秦佑国首先回顾了梁思成先生的生平。梁思成是梁启超的长子，生于1901年，是中国古建筑研究的先驱、中国近代建筑教育事业的奠基者、中国文物建筑保护的开创者和中国近代......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225558484573068/20110225225558484573068_.html" target="_blank">清华学生赴豫南豫北援助留守儿童</a></h3>
+              <p class="thnews_jqzy">　　清华学生赴豫南豫北援助留守儿童【新闻中心讯】9月19日，社科8赴豫南豫北留守儿童自我援助模式构建“吟心”支队举办了2009年暑期实践研讨会，与人文学院、航院、机械系、自动化系、工物系等校级重点支队以及中美支教项目共7支暑期实践支队共同分享实践的收获。联欢会上孩子们与哥哥姐姐一起表演回顾实践之路，期间的思考与感悟难以忘怀。留守儿童作为我国社会转型阶段中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225336187870202/20110225225336187870202_.html" target="_blank">《新人文讲座》等高端讲座成为清华学生必修课</a></h3>
+              <p class="thnews_jqzy">　　《新人文讲座》等高端讲座成为清华学生必修课【新闻中心讯 记者 周襄楠】从本学期开始，清华大学将把《清华大学新人文讲座》等高端演讲、人文社科类和科技学术类的系列讲座和学术报告列入本科生必修环节，名称定为《文化素质教育讲座》。只要学生在本科阶段中累计选听指定范围的8场讲座，并提交一份有一定综合性、思想性和针对性的书面报告，经考核合格就能够取得1个学分。优秀的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225603296150597/20110225225603296150597_.html" target="_blank">清华第163期博士生学术论坛纵论人文与社...</a></h3>
+              <p class="thnews_jqzy">　　清华第163期博士生学术论坛纵论人文与社会科学【新闻中心讯 研通社通讯员 孙大为】11月9日-11日，主题为“人文与社会科学”的清华大学第163期博士生学术论坛在昌平三堡学术基地举行。80余名师生参加了论坛，提交报告论文49篇，张贴论文48篇。本次论坛设“哲学、科哲与教育”、“中文、外语和国际”、“经济、社会与体育”、“政治、历史与马克思主义”4个分......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225607312589600/20110225225607312589600_.html" target="_blank">吴冠英做客新人文讲座讲解北京奥运吉祥物的...</a></h3>
+              <p class="thnews_jqzy">　　吴冠英做客新人文讲座讲解北京奥运吉祥物的产生【新闻中心讯】11月16日下午在清华大学美术学院报告厅，2008年奥运吉祥物“福娃”的设计参与者、残奥会吉祥物“福牛乐乐”的主创者、清华大学美术学院吴冠英教授与大家分享了两个吉祥物的设计理念和创作过程。这是“清华大学新人文讲座”系列之四的第6讲。此次讲座的题目是“用心去创造——北京2008年奥运会、残奥会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225607421249181/20110225225607421249181_.html" target="_blank">韩少功做客“清华大学新人文讲座”演讲文学...</a></h3>
+              <p class="thnews_jqzy">　　韩少功做客“清华大学新人文讲座”演讲文学的旧梦与现实【新闻中心讯】11月9日下午，著名作家韩少功在清华美术学院以《文学——梦游与苏醒》为题，为师生讲述了他对于文学的深厚理解。本次讲座是“清华大学新人文讲座”系列之四的第五讲，讲座由中文系系主任刘勇教授主持。在两个多小时里，听众在韩少功的带领下在文学的多彩世界中畅游，对现当代文学的历史与现状有了更深的认识。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2006.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225607625856388/20110225225607625856388_.html" target="_blank">清华新人文讲座解读《红楼梦》的经典魅力</a></h3>
+              <p class="thnews_jqzy">　　清华新人文讲座解读《红楼梦》的经典魅力【新闻中心讯】10月26日晚在美术学院报告厅，清华大学人文学院肖鹰教授在近3个小时的时间里为清华师生解读了《红楼梦》原著、电视和电影三个版本，重温了经典的魅力。此次讲座是“清华大学新人文讲座”系列之四“艺术、科学与文化的创新”的第四讲。肖鹰教授首先从刘心武揭秘《红楼梦》和电视剧《红楼梦》即将被重新打造这......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225340109452461/20110225225340109452461_.html" target="_blank">清华实施新的本科生文化素质教育方案</a></h3>
+              <p class="thnews_jqzy">　　清华实施新的本科生文化素质教育方案 【新闻中心讯 记者 程曦 摄影 郭海军】清华大学新的本科生文化素质教育方案自今秋起全面推行，2006级本科新生开始按照新方案为自己“配餐”。新方案中的一个突出“亮点”是以人文社科教育为重心的“文化素质教育核心课程”。先行建设的20门核心课程涵盖哲学、历史、文学、艺术与当代中国等人文社科领域，以阅读经典为主要内容，采......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225608234896317/20110225225608234896317_.html" target="_blank">清华学子暑期赴海南为电子农务加油</a></h3>
+              <p class="thnews_jqzy">　　清华学子暑期赴海南为电子农务加油　【新闻中心讯】今年暑期，来自清华软件学院和人文学院的师生一行赴海南进行了为期一个月的暑期就业实践活动，并运用自己所学知识为海口市秀英区的电子农务网改版升级。在为期一个月的实践活动期间，同学们先后走访了海秀镇、永兴镇的农业科技服务站，该站主要为当地农民提供及时的农技服务以及培养技术；还两次走访了“海南省首届科技致富......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225609109234192/20110225225609109234192_.html" target="_blank">第七届人文知识竞赛决赛举行</a></h3>
+              <p class="thnews_jqzy">　　第七届人文知识竞赛决赛举行【新闻中心讯】5月14日晚在清华大学学生活动中心，经过３个小时的角逐与展示，第七届人文知识竞赛落幕，由来自经管学院、计算机系和工物系的同学组成的“鸿铭队”赢得了本次大赛的第一名——“季羡林杯”。进入本次决赛的一共有8支队伍，他们分别是“幸运草”、“五叶”、“张之队”、“鸿铭队”、“石头记”、“吉祥三宝”、“雷鹰”、“清风化羽......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225609343769967/20110225225609343769967_.html" target="_blank">“文新论坛”之“百年清华与人文之魂”校庆...</a></h3>
+              <p class="thnews_jqzy">　　“文新论坛”之“百年清华与人文之魂”校庆专场举行【新闻中心讯 学生记者 王可昕】4月26日晚，由校生会和航天航空学院研究生会联合举办的“文新论坛”校庆专场在公管学院报告厅成功举行。时值九十五周年校庆，校原党委书记方惠坚教授和原党委副书记、新闻与传播学院副院长胡显章教授应邀来到现场，围绕本期论坛“人文日新——百年清华与人文之魂”的主题与大家进行了交流和探讨......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225609546201105/20110225225609546201105_.html" target="_blank">甘阳清华主讲新人文讲座</a></h3>
+              <p class="thnews_jqzy">　　甘阳清华主讲新人文讲座&nbsp;&nbsp;&nbsp; 【新闻中心讯】4月20日下午，香港大学亚洲研究中心研究员甘阳做客清华园，主讲新人文讲座系列之三“文明的对话与梦想”的第四讲“文明的对话：为什么？说什么？怎么说？”。&nbsp;&nbsp;&nbsp; 讲座在图书馆报告厅举行。讲座一开始，甘阳先生就直截了当地提出他独特的观点。他认为，当前中国学术界很......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225609765464208/20110225225609765464208_.html" target="_blank">台湾大学吴展良教授主讲“文新论坛”　</a></h3>
+              <p class="thnews_jqzy">　　台湾大学吴展良教授主讲“文新论坛”【新闻中心讯】“邯郸学步，匍匐以归，这正是我们目前中国人文社会科学研究的困境所在。”4月17日晚的学生文化活动中心多功能厅座无虚席，来自台湾大学历史系的吴展良教授以这种对人文科学发展的深重忧虑为议题，开始了他在清华大学“文新论坛”的演讲。吴展良，祖籍贵州三穗，一九五八年出生于台北。现任台湾大学历史系教授兼所长暨系......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2003.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225346453913920/20110225225346453913920_.html" target="_blank">我校庆祝人文社会科学学院成立10周年</a></h3>
+              <p class="thnews_jqzy">　　无标题文档展人文风采 创清华特色我校庆祝人文社会科学学院成立10周年【新闻中心讯 记者 冬梅】12月19日下午，在追求、探索、建设和调整中一路奔跑过来的我校人文社会科学学院迎来了自己十周岁的庆典。教育部、中国社会科学院、中央党校、中央文献研究室、北大、人大等有关部门的领导，研究机构的学者，人文社会科学学院校友及师生们在充满喜庆、活力的气氛中，一同回顾过去......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2001.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225351984100783/20110225225351984100783_.html" target="_blank">吴良镛：建筑师的人文关怀</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document吴良镛：建筑师的人文关怀《人民日报海外版》 (2001年10月24日第九版)■余玮&nbsp;&nbsp;米春改1952年动工兴建、1958年落成揭幕的人民英雄纪念碑，是由我国杰出建筑学家梁思成先生主持设计的。这一点，想必尽人皆知；至于他的助手、如今新中国的建筑大师吴良镛也参与了有关设计方案的讨论，或许鲜为人知。当时，3......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354109458000/20110225225354109458000_.html" target="_blank">人文社会科学学院举行深化人文素质教育研讨会</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document人文社会科学学院举行深化人文素质教育研讨会【新闻中心讯】5月18～19日，我校人文社会科学学院有关教师、北京市教委高教处和校教务处有关领导汇聚香山饭店，围绕如何深化我校人文素质教育议题进行了有针对性的研讨。大家在发言中指出，无论科学技术如何发展，都不能忽视人文素质教育。要把人文素质教育向深和向广推进，就要建立以人为本......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355796986489/20110225225355796986489_.html" target="_blank">“知清华、爱清华、建清华”——90周年校...</a></h3>
+              <p class="thnews_jqzy">　　岁月悠悠，磨不去人间水清木华；繁星点点，数不尽清华几多英才近千名师生疯狂点击十八家好汉角逐大奖“知清华、爱清华、建清华”——90周年校庆“清华人文知识”大奖赛决赛举行4月13日晚，容纳600多人的建筑馆大报告厅被挤得水泄不通。并且是掌声如潮，笑声不断。不了解内情的人还以为是在举办什么精彩演出。殊不知，这里正是“知清华、爱清华、建清华”——90周年校庆“清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225356015874188/20110225225356015874188_.html" target="_blank">“清华人文知识大奖赛”决赛即将举行</a></h3>
+              <p class="thnews_jqzy">　　“知清华，爱清华，建清华”“知清华，爱清华，建清华”“清华人文知识大奖赛”决赛即将举行经过10天的激烈角逐，“知清华，爱清华，建清华”校庆90周年“清华人文知识大奖赛”预赛网上答题终有结果，共有18名选手获得决赛资格。按照竞赛规则，符合条件的12名学生和6名教师进入决赛，他们将于4月13日晚7点在建筑馆报告厅进行决赛，问鼎大奖。另据主办方介绍，此次决......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

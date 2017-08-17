@@ -1,0 +1,1063 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>高温气冷堆应用和发展国际研讨会在核研院召开</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231210359169357&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>高温气冷堆应用和发展国际研讨会在核研院召开</TITLE><META NAME="Template" CONTENT="D:\office97\Office\html.dot"></HEAD><BODY LINK="#0000ff" VLINK="#800080" bgcolor="#FFFFFF"><FONT FACE="宋体" LANG="ZH-CN" SIZE=4> <h3 ALIGN="CENTER">高温气冷堆应用和发展国际研讨会在核研院召开</h3></FONT><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>为庆祝中国</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>10</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>兆瓦高温气冷实验堆</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>(HTR-10)</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>建成临界，</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>3</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>月</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>19</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>至</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>21</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>日，在我校核研院召开了高温气冷堆应用和发展国际研讨会。来自国际原子能机构</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>(IAEA)</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>、德、法、日、荷、俄、美、南非与中国的代表共</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>56</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>人</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>(</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>外国代表</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>35</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>人</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>)</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>参加了会议。</font></P><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>在开幕式上，清华大学核研院院长吴宗鑫致辞感谢各国、尤其是德国专家对</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>HTR-10</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>建造的支持与帮助。国际原子能机构官员</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>Jim Kendall</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>也祝贺</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>HTR-10</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>建造成功，感谢中国对国际上高温气冷堆活动的支持。中国国家电力公司核电办主任王迎苏介绍了中国能源供应状况和核电发展设想。</font></P><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>会上共宣读论文</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>25</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>篇，介绍了各国发展高温气冷堆的计划，交流了设计、建造、运行高温气冷堆的经验。继日本</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>HTTR</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>与中国</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>HTR-10</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>建成临界之后，南非计划</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>2002</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>年开始建造</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>10</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>万千瓦电功率的高温气冷堆</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>PBMR</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>，俄国和美国正在设计开发模块式高温气冷堆，荷兰也在研究高温气冷堆的供热发电。高温气冷堆因其安全性、经济性好，已被认为是下一代先进堆型之一。</font></P><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>会议期间，代表们参观了</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN" SIZE=4>HTR-10</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>及有关的实验室。我校校长兼核研院总工程师王大中院士会见了与会代表。</FONT><FONT FACE="黑体" LANG="ZH-CN" SIZE=4>（核研院）</font></P></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月23日 09:00:50　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160322094444499327307/20160322094444499327307_.html" target="_blank">清华主持设计高温堆示范工程首台压力容器吊...</a></h3>
+              <p>3月20日上午，由清华大学核研院主持设计的全球首座模块式高温气冷堆示范工程（HTR-PM）首台主设备压力容器在山东荣成石岛湾核电站顺利吊装就位。这是高温气冷堆示范工程的关键里程碑，标志着示范工程全面进入设备安装阶段；这也是高温气冷堆技术发展的重要节点，标志着中国四代核电技术向工业实现又迈进了一大步。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151217165542601426299/20151217165542601426299_.html" target="_blank">万欢：“我始终坚信，自己能走出一条与众不...</a></h3>
+              <p>　　今年7月，万欢在美国交换学习一年，与一位耶鲁大学的留学生一起参加“春晖杯中国留学人员创新创业大赛”，以抗辐射电子器械的产品设计成功入围。这个技术在国内刚刚发展，但在国外，却已相对成熟。在参赛过程中，万欢了解到，我们国家的抗辐射芯片基本依赖国外进口。在美国本土售价350万美金的芯片，卖给中国却要2000万美金，质量还有所差别。从那时起，他就下定决心回国创业，是追逐梦想，也是为了一种任何一个中国人都有的情怀。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20151215085327321635156/20151215085327321635156_.html" target="_blank">清华大学推进产学研合作</a></h3>
+              <p>　　清华大学核研院院长张作义如今有了一个新身份：先进核能技术协同创新中心主任。12月10日在中心举行的2015年年会上，面对同为中心成员的多家企业的代表，张作义介绍了在山东威海建设的高温气冷堆示范电站。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151214004952359103073/20151214004952359103073_.html" target="_blank">核研院主办的先进核能技术协同创新中心年会...</a></h3>
+              <p>12月10日，由清华大学核研院主办的“先进核能技术协同创新中心2015年会”在核研院昌平校区举行，此次年会的主题是“总结示范工程经验，聚焦协同创新发展”。清华大学副校长、先进核能技术协同创新中心（以下简称“中心”）理事长薛其坤，中国核工业建设集团公司党组成员、副总经理、中心常务理事祖斌，国家电力投资集团党组成员、副总经理、中心常务理事魏锁等出席开幕式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151204094740532812863/20151204094740532812863_.html" target="_blank">校长邱勇与核研院领导班子讨论学科发展</a></h3>
+              <p>12月2日，校长邱勇在工字厅东厅听取了核能与新能源技术研究院（以下简称“核研院”）关于重大科技攻关项目进展、“十三五”发展规划制定和人事制度改革方案的汇报，并与核研院领导班子成员进行了交流和讨论。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150521171319356893187/20150521171319356893187_.html" target="_blank">清华与中国广核签署高温气冷堆技术产业推广...</a></h3>
+              <p>5月19日，清华大学与中国广核集团关于高温气冷堆技术产业推广合作协议的签约仪式在工字厅举行。中国广核集团公司董事长贺禹、清华大学校长邱勇出席签约仪式。中国广核集团公司党组成员兼电力股份公司总裁高立刚、清华大学副校长薛其坤分别代表双方签署协议。根据该协议，双方将在已有良好合作的基础上，继续深化合作，发挥各自优势，采用清华大学作为高温气冷堆技术提供方、中国广核作为商业化高温气冷堆投资方的模式，共同推动高温气冷堆的产业化应用与发展。协议的签署将推动清华大学与中国广核集团校企合作迈上新的台阶。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150424204618483548642/20150424204618483548642_.html" target="_blank">南非民用核能培训项目启动会在清华大学举行</a></h3>
+              <p>4月22日，南非民用核能培训项目启动会在清华大学举行。首批50名学员主要来自南非相关政府部门及核电企业。这是中南两国在签署《两国政府间核电项目合作框架协议》后迈出的重要一步。培训项目由中国国家核电技术公司和南非核能集团共同主办，清华大学、上海交通大学、核安全中心等单位共同承办。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150208120810718127694/20150208120810718127694_.html" target="_blank">陈旭调研高温气冷堆重大专项示范工程</a></h3>
+              <p>2月3日，清华大学党委书记陈旭来到山东荣成石岛湾，就高温气冷堆核电站示范工程进行调研并座谈。座谈会上，高温气冷堆核电站重大专项总设计师、清华大学核研院院长张作义汇报了高温气冷堆专项取得的重要进展。他说，2014年是高温堆示范工程开工以来非常关键、全面攻关的一年，压力容器、氦风机、蒸发器、燃料装卸等核心设备逐步固化。在相关部门组织领导下，示范工程将全面按照2017年并网发电安排，进度安排细化到天，责任落实到人，力争按时间节点完成预定目标。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150104132132748111372/20150104132132748111372_.html" target="_blank">中国高温气冷堆核燃料元件在荷兰检测成功</a></h3>
+              <p>　　中国拥有完整自主知识产权的高温气冷堆燃料元件30日在荷兰佩滕成功结束检测，各项指标达到国际先进水平，标志着中国在核电领域取得了又一重大成就。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141103092905122270643/20141103092905122270643_.html" target="_blank">清华大学主办的国际高温气冷堆技术会议举行</a></h3>
+              <p>由清华大学核能与新能源技术研究院主办的“国际高温气冷堆技术会议”27日至31日在荣成举行。来自国际原子能机构、美国、欧洲、俄罗斯等17个国家和地区的专家交流了高温气冷堆研发的经验。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140918085838972358295/20140918085838972358295_.html" target="_blank">高温气冷堆燃料元件生产线主设备安装完成</a></h3>
+              <p>　　近日，相关各方在内蒙古包头市召开高温气冷堆核电站示范工程燃料元件生产线建设进度协调会，其主设备安装基本完成。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140702090017486196166/20140702090017486196166_.html" target="_blank">全国人大环资委到清华核研院就核安全立法开...</a></h3>
+              <p>6月27日，全国人大环境与资源保护委员会副主任委员张云川、王鸿举、龚建明等40余人组成调研组，就我国核安全立法相关问题赴核研院昌平基地进行调研。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140701140156444260619/20140701140156444260619_.html" target="_blank">【党员风采】周羽：制度创新促党建 真情实...</a></h3>
+              <p>在周羽担任党委书记的6年里，核研院党委坚持党的领导，抓班子建设、制度建设、作风建设，在全院形成了风清气正、奋发向上的良好氛围，保证了国家重大科技攻关任务的推进。核研院的党建工作也因此多次受到上级党委的肯定，院党委先后被评为北京高校创先争优先进基层党组织、北京市创先争优先进基层党组织，核研院还被中华全国总工会授予全国“工人先锋号”荣誉称号。周羽本人也先后被评为清华大学优秀共产党员和优秀党建与思想政治工作者。今年“七一”前夕，他还被评为北京市高校优秀党务工作者。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140626151414704360271/20140626151414704360271_.html" target="_blank">校党委书记陈旭到核研院调研</a></h3>
+              <p>6月23日下午，校党委书记陈旭来到核研院昌平校区调研。核研院党政班子全体成员参加调研活动，院长张作义主持调研座谈会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140117100800934207648/20140117100800934207648_.html" target="_blank">【群众路线教育实践】核研院召开教育实践活...</a></h3>
+              <p class="thnews_jqzy">　　核研院召开教育实践活动领导班子专题民主生活会情况通报会&nbsp;&nbsp;&nbsp; 　清华新闻网1月17日电1月9日，核研院领导班子专题民主生活会情况通报会先后在能科楼和昌平校区举行。院党委书记周羽主持并代表院党政班子通报了专题民主生活会的准备、召开以及会后整改的情况。周羽表示，院党政班子将继续接受全院师生的意见建议和评议监督，切实做好整改落实、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140109100229895524773/20140109100229895524773_.html" target="_blank">【群众路线教育实践】核研院领导班子召开群...</a></h3>
+              <p class="thnews_jqzy">　　核研院领导班子召开群众路线教育实践活动专题民主生活会&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网1月9日电日前，核研院党政领导班子在能科楼召开党的群众路线教育实践活动专题民主生活会。校党委常务副书记陈旭、学校教育实践活动督查组成员张再兴出席会议。核研院院长张作义主持会议。&nbsp;&nbsp;&nbsp;&......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131014180312470911099/20131014180312470911099_.html" target="_blank">【群众路线教育实践】胡和平到核研院进行教...</a></h3>
+              <p class="thnews_jqzy">　　胡和平到核研院进行教育实践活动专题调研清华新闻网10月14日电（记者周襄楠通讯员熊倪娟）10月10日，校党委书记胡和平来到核研院昌平校区，进行教育实践活动专题调研。期间，胡和平参加了新材料研究室（301室）党支部召开的组织生活扩大会与高温气冷堆核电站示范工程重大专项团队工作协调会，并走进一线教师的实验室、办公室，面对面听取老师们对学校、机关工作作风的意见......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130710145344132836555/20130710145344132836555_.html" target="_blank">2013世界核大学清华周北京研讨会召开</a></h3>
+              <p class="thnews_jqzy">　　2013世界核大学清华周北京研讨会召开清华新闻网7月10日电7月8日，由中国核能行业协会、世界核大学、清华大学共同举办的世界核大学清华周北京研讨会在北京杏林山庄举行，来自核能领域的集团公司、电厂、科研院所、厂矿及高校共189位代表参加了本次研讨会。中国核能行业协会副理事长兼秘书长马鸿琳、清华大学核研院副院长孙玉良、世界核协会前副总干事史蒂夫&midd......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2013/20130401114710829240588/20130401114710829240588_.html" target="_blank">李十中：根治雾霾重在发展生物燃料</a></h3>
+              <p class="thnews_jqzy">　　面对严重的雾霾，环保部提出了2030年主要城市实现或者达到空气质量国家标准日程表。从源头治理空气污染迫在眉睫。根治雾霾重在发展生物燃料来源：中国科学报 2013-4-1 李十中2013年新年伊始，北京等多个城市遭遇了持续多日的雾霾天气，全国空气污染面积达140万平方公里，污染已达到了灾难性程度。&ldquo;北京咳&rdquo;已成为人们热议的话题，有媒......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2012/20121211170516536349347/20121211170516536349347_.html" target="_blank">“走进清华大学核能与新能源技术研究院”活...</a></h3>
+              <p class="thnews_jqzy">　　实验平台开放系列活动&ldquo;走进清华大学核能与新能源技术研究院&rdquo;活动举行清华新闻网12月11日电（学生通讯员魏旗鹏）12月6日，&ldquo;实验平台开放系列活动之走进核能与新能源技术研究院活动&rdquo;在清华大学核能与新能源技术研究院昌平基地举行。来自多个院系的研究生和本科生，在核研院教师的带领下分别参观了10兆瓦高温气冷试验堆、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121031142707950477171/20121031142707950477171_.html" target="_blank">清华大学核研院通过“北京市模范职工小家”...</a></h3>
+              <p class="thnews_jqzy">　　清华大学核研院通过&ldquo;北京市模范职工小家&rdquo;验收清华新闻网10月31日电10月29日，北京市教育工会常务副主席刘欢等&ldquo;北京市模范职工小家&rdquo;验收专家组一行6人来到清华大学核研院进行建家工作验收。清华大学党委副书记、工会主席韩景阳出席验收工作会。图为&ldquo;北京市模范职工小家&rdquo;验收工作会现场。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120911144841319142257/20120911144841319142257_.html" target="_blank">走进清华大学“200号”</a></h3>
+              <p class="thnews_jqzy">　　走进清华大学&ldquo;200号&rdquo;来源：瞭望新闻周刊 2012-09-11 王仁贵这里是中国核电新技术的孕育地。在国际核能专家看来，其正在研发的模块式球床高温气冷堆是&ldquo;第四代先进核能系统&rdquo;的技术之一。一栋白色的大楼被四周的绿色环绕。从外表看，并没有什么特别之处，但这里却是核电新技术的孕育之地。走进一楼大厅，首先看......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120611105829514436934/20120611105829514436934_.html" target="_blank">战斗在核科学前哨——记全国工人先锋号集体...</a></h3>
+              <p class="thnews_jqzy">　　战斗在核科学前哨&mdash;&mdash;记2012年全国工人先锋号获奖集体核能与新能源技术研究院实习记者赵姝婧图为核研院科研人员在先进反应堆工程实验室集体研讨。供图 核研院清华大学核能与新能源技术研究院（以下简称&ldquo;核研院&rdquo;）是教育部所属高校中最大的实体研究院，致力于通过高水平的科技创新，协助应对国家发展在能源、环境和资源领域所......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120524085647990222234/20120524085647990222234_.html" target="_blank">三峡总经理陈飞考察核研院 陈吉宁陪同并座谈</a></h3>
+              <p class="thnews_jqzy">　　三峡集团总经理陈飞一行考察核研院 陈吉宁陪同并座谈清华新闻网5月24日电&nbsp; （记者刘蔚如通讯员昝青峰）5月22日上午，中国长江三峡集团公司总经理陈飞、副总经理毕亚雄、总工程师张为民一行来到清华大学核研院昌平基地参观考察。清华大学校长陈吉宁陪同考察并与陈飞一行进行座谈。陈飞一行参观了10兆瓦高温气冷实验堆、先进反应堆工程实验室、燃料元件实验室......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120306170853169510714/20120306170853169510714_.html" target="_blank">清华教师段茂盛当选清洁发展机制执行理事会...</a></h3>
+              <p class="thnews_jqzy">　　清华教师段茂盛当选《京都议定书》清洁发展机制执行理事会主席清华新闻网3月6日电日前，在德国波恩举行的《联合国气候变化框架公约&lt;京都议定书&gt;》清洁发展机制执行理事会（CDM Executive Board）第66次会议上，清华大学核研院段茂盛研究员当选该理事会主席，任期一年。这是该理事会自2001年设立以来我国专家首次担任该职务。段茂盛老师......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2012.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120229090610534915794/20120229090610534915794_.html" target="_blank">陈希到核研院考察指导高温气冷堆科研工作</a></h3>
+              <p class="thnews_jqzy">　　陈希到核研院考察指导高温气冷堆核电站国家重大专项科研工作&nbsp;清华新闻网2月29日电2月27日，中国科协常务副主席、书记处第一书记、党组书记陈希到核研院昌平基地，考察调研高温气冷堆核电站国家重大专项科研及工程工作。校党委书记胡和平、校务委员会名誉主任王大中，核研院院长、重大专项总工程师张作义，核研院党委书记周羽等陪同考察。图为陈希（左三）在燃料元件......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2011.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20111214094348240921716/20111214094348240921716_.html" target="_blank">校党委理论学习中心组赴核研院专题学习调研</a></h3>
+              <p>12月12日，校党委理论学习中心组赴核研院开展专题学习调研。顾秉林、胡和平、陈吉宁、陈旭、张凤昌、韩景阳、程建平、史宗恺、邓卫、邱勇和校务委员会名誉主任王大中参加学习调研活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2011.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20111115103943934240138/20111115103943934240138_.html" target="_blank">【人才工作会系列报道】记核研院国家重大科...</a></h3>
+              <p class="thnews_jqzy">　　千人同心其利断金&mdash;&mdash;记清华大学核研院国家重大专项科研团队建设●记者吕露英1964年，第一个全部由中国人自行设计、自行建造和自行运行的屏蔽试验反应堆在核研院的200号基地建成并投入运行。如今，世界上第一座具有第4代核电系统安全特征核电站科研攻关正在开展过程中。这一攻关项目是由清华大学牵头负责的，清华大学核能与新能源研究院是技术负......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2011.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20111025092042943439655/20111025092042943439655_.html" target="_blank">国际原子能机构总干事长天野之弥到访清华</a></h3>
+              <p class="thnews_jqzy">　　国际原子能机构总干事长天野之弥到访清华清华新闻网10月25日电（通讯员赵丽丽）10月21日下午，国际原子能机构（IAEA）总干事长天野之弥一行到清华大学核研院考察高温气冷堆国家重大专项进展。清华大学副校长邱勇、清华大学核研院院长张作义等接待了天野之弥一行。邱勇副校长在欢迎辞中对天野之弥先生的来访表示热烈欢迎。他表示，2011年恰逢清华大学百年校庆，清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2011.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110916100737909818385/20110916100737909818385_.html" target="_blank">国家核电技术研发中心首届理事会召开会议</a></h3>
+              <p class="thnews_jqzy">　　国家核电技术研发中心第一届理事会第二次会议在清华召开清华新闻网9月16日电9月13日上午，国家核电技术研发中心第一届理事会第二次会议在清华大学核研院召开。清华大学校长、国家核电技术研发中心理事长顾秉林主持会议。国家核电技术公司董事长、国家核电技术研发中心理事长王炳华，国家核电副总经理魏锁、总工程师王俊，核研院院长兼总工程师张作义等出席会议。图为理事会会议......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110629150959992100665/20110629150959992100665_.html" target="_blank">核研院举办庆祝建党90周年表彰先进大会暨...</a></h3>
+              <p class="thnews_jqzy">　　核研院举办庆祝建党90周年表彰先进大会暨红色经典歌咏会清华新闻网6月29日电&nbsp;&nbsp;6月27日晚，核研院庆祝中国共产党成立九十周年表彰先进大会暨红色经典歌咏会在清华大学主楼报告厅隆重举行。校党委书记胡和平出席大会并讲话，校党委副书记、纪委书记韩景阳等出席了大会。核研院全院教职工党员、离退休党员、研究生党员、入党积极分子、党外人士代表等约五......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2011.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110316143719708177614/20110316143719708177614_.html" target="_blank">徐超：科学认识“核辐射”</a></h3>
+              <p class="thnews_jqzy">　　科学认识&ldquo;核辐射&rdquo;科学家提醒：冷静面对 不要恐慌&nbsp;《光明日报》2011-03-16 胡其峰&nbsp;日本大地震导致日本多座核电站停止运行。日本东京电力公司3月15日说，福岛第一核电站3号机组反应堆上方有白色蒸汽冒出，4号机组出现爆炸并发生火情。&nbsp;日本福岛核电站的多个机组厂房相续发生爆炸并导致一定程度的放射......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2011.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110311134618193719650/20110311134618193719650_.html" target="_blank">压水堆和高温堆：从跟踪发展到核电自主化</a></h3>
+              <p class="thnews_jqzy">　　压水堆和高温堆：从跟踪发展到核电自主化来源：科技日报 2011-03-09 李艳 高博2011年3月初，国务院批准了山东荣成石岛湾高温气冷堆核电站项目，我国第一座高温气冷堆商业化示范电站的建设终于启动，这正是&ldquo;大型先进压水堆及高温气冷堆核电站&rdquo;重大专项在过去两年所取得的最重大的进展之一。核电，对很多人来说是陌生和遥远的词，曾经......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2011.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232615140403665/20110225232615140403665_.html" target="_blank">清华核研院成国内首家ASME核电标准培训...</a></h3>
+              <p class="thnews_jqzy">　　清华核研院成国内首家ASME核电标准培训授权机构【新闻中心讯】清华大学核研院院获得美国机械工程师学会（ASME）国内首家授权，在中国开展核电标准与规范的培训。1月18日下午，在清华大学科技园举行了授权仪式。仪式上，ASME代表向清华大学核研院颁发了ASME授权培训机构证书，并向获得资质的教师颁发了ASME授权培训教师证书。来自国家核安全局、环保部北方......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232601281411213/20110225232601281411213_.html" target="_blank">马栩泉做客新人文讲座解读“200号”</a></h3>
+              <p class="thnews_jqzy">　　马栩泉做客新人文讲座解读“200号”【新闻中心讯 通讯员 陈昕】11月25日，清华大学核能与新能源技术研究院马栩泉教授做客新人文讲座，讲述清华核研院“200号”的发展历程与精神意蕴。在持续两个多小时的演讲中，马栩泉以亲身经历图文并茂地为220余名清华师生讲述了核研院的创立、成长、攀登、辉煌的整个历程。为了消除同学们眼中的困惑，马栩泉首先对“200号”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232551265577937/20110225232551265577937_.html" target="_blank">国际核能专家赞清华核研院高温堆技术</a></h3>
+              <p class="thnews_jqzy">　　国际核能专家赞清华核研院高温堆技术【新闻中心讯 通讯员 李文娟 记者 周襄楠】固有安全性模块化高温气冷堆发明人之一、《核工程与设计》（Nuclear Engineering and Design）期刊原主编、清华大学讲席教授G. Lohnert先生日前撰文，称赞清华大学核研院的“燃料元件生产线已经属于世界顶尖水平”，“中国在固有安全性核电厂方面已经全球领......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232548531290598/20110225232548531290598_.html" target="_blank">核研院高温气冷堆示范电站全厂DCS合同签约</a></h3>
+              <p class="thnews_jqzy">　　核研院高温气冷堆示范电站全厂DCS合同签约【新闻中心讯 通讯员 张良驹】10月24日，国家重大专项高温气冷堆核电站示范工程全厂DCS合同签约仪式在北京举行。清华大学核能与新能源技术研究院、华能山东石岛湾核电有限公司、中核能源科技有限公司与北京广利核系统工程有限公司签订了高温气冷堆核电站全厂DCS系统（包括非安全级的DCS控制系统和数字化安全级保护系统）设......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225332406967533/20110225225332406967533_.html" target="_blank">刘延东考察调研清华大学核研院</a></h3>
+              <p class="thnews_jqzy">　　刘延东考察调研清华大学核研院强调要坚定不移地推进自主创新【新闻中心讯 记者 程曦 摄影 崔凯】10月24日上午，中共中央政治局委员、国务委员刘延东来到清华大学核能与新能源技术研究院（简称核研院），考察调研国家重大科技专项的实施情况。校党委书记胡和平陪同考察。刘延东听取了核研院院长、高温气冷堆核电站国家科技重大专项总设计师张作义就核研院概况、高温气冷堆......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232547812377326/20110225232547812377326_.html" target="_blank">刘延东考察调研清华大学核研院</a></h3>
+              <p class="thnews_jqzy">　　刘延东考察调研清华大学核研院强调要坚定不移地推进自主创新【新闻中心讯 记者 程曦 摄影 崔凯】10月24日上午，中共中央政治局委员、国务委员刘延东来到清华大学核能与新能源技术研究院（简称核研院），考察调研国家重大科技专项的实施情况。校党委书记胡和平陪同考察。刘延东听取了核研院院长、高温气冷堆核电站国家科技重大专项总设计师张作义就核研院概况、高温气冷堆......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232509890898102/20110225232509890898102_.html" target="_blank">胡和平出席中国共产党清华核研院第二次代表...</a></h3>
+              <p class="thnews_jqzy">　　胡和平出席中国共产党清华大学核研院第二次代表大会【新闻中心讯】6月18日下午，中国共产党清华大学核研院第二次代表大会在核研院举行，校党委书记胡和平出席并讲话。会议选举产生了核研院第十二届党委，周羽代表核研院第十一届党委做工作报告。胡和平在讲话中向中国共产党清华大学核研院第二次代表大会的召开表示祝贺，肯定了核研院上一届党委在学习实践科学发展观活动、领导......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232502468876877/20110225232502468876877_.html" target="_blank">校党委书记胡和平调研核研院</a></h3>
+              <p class="thnews_jqzy">　　校党委书记胡和平调研核研院【新闻中心讯 通讯员 茁石】6月1日下午，清华大学党委书记胡和平、副校长康克军到核研院调研。核研院院长张作义介绍了核研院承担的高温气冷堆国家重大专项和其他重要科研项目工作的进展情况，核研院党委书记周羽介绍了核研院的党建工作情况。认真听取汇报后，胡和平表示，多年以来，清华大学核研院瞄准国际学术前沿，服务国家重大战略需求，很......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232500390260259/20110225232500390260259_.html" target="_blank">清华取得废旧电池清洁循环利用技术关键性突破</a></h3>
+              <p class="thnews_jqzy">　　清华取得废旧电池材料清洁循环利用技术关键性突破【新闻中心讯】5月26日，由中国有色金属工业协会主持的“废旧电池材料清洁循环利用关键技术及其产业化”项目成果鉴定会在清华大学能科楼召开。与会专家认真听取了项目负责人徐盛明博士的技术报告，观看了现场生产线录像。会前，部分专家还亲赴长株潭工业生产基地进行了现场考察。经过讨论和质询，鉴定委员会一致认为，该项目具有开......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2010.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232413734186084/20110225232413734186084_.html" target="_blank">清华核研院签5亿高温堆核电站重大专项科研...</a></h3>
+              <p class="thnews_jqzy">　　清华核研院签订5亿高温气冷堆核电站重大专项科研合同【新闻中心讯 通讯员 王贤刚】2月11日，在钓鱼台国宾馆举行的签字仪式上，国家重大专项高温气冷堆核电站示范工程总设计师、清华大学核能与新能源技术研究院院长兼总工程师张作义与国家能源局电力司许永盛司长签署了高温气冷堆重大专项首批科研合同，合同经费为5.27亿元人民币。国家发改委副主任、国家能源局局长张国宝，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2009.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232351390509986/20110225232351390509986_.html" target="_blank">清华大学核研院完成高放废液分离热验证实验...</a></h3>
+              <p class="thnews_jqzy">　　清华大学核研院完成高放废液分离热验证实验任务【新闻中心讯 通讯员 王贤刚】11月4日，清华大学核研院承担的高放废液分离热验证实验任务获得重要阶段性成果。这项实验于2009年10月26日在中核404公司正式启动，完成了超过120小时稳定连续运行，并随后进行了30小时TRPO复用实验工作，热实验总共运行了199小时，完全达到了“生产堆高放废液分离技术工程应用......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2009.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232336328984869/20110225232336328984869_.html" target="_blank">清华核研院讲席教授荣获2009年度国家友...</a></h3>
+              <p class="thnews_jqzy">　　清华核研院讲席教授荣获2009年度国家友谊奖【新闻中心讯】9月29日，2009年度国家“友谊奖”颁奖大会在人民大会堂举行。清华大学核研院讲席教授、德国核专家、德国斯图加特大学核工程与能源系统研究所前所长G. Lohnert获此荣誉。30日，中共中央政治局常委、国务院总理温家宝在人民大会堂亲切会见获奖的外国专家及其眷属。10月1日，G. Lohnert还应......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232313046430338/20110225232313046430338_.html" target="_blank">世界核大学举行清华周</a></h3>
+              <p class="thnews_jqzy">　　世界核大学举行清华周【新闻中心讯 通讯员 王贤刚】6月29日——7月3日， “世界核大学清华周——北京研讨会”在清华大学举行。研讨会由清华大学、世界核大学、中国核能行业协会共同主办，清华大学核能与新能源技术研究院承办。6月29日上午，世界核大学清华周北京研讨会在美术学院报告厅举行了开幕式。中国核能行业协会副理事长兼秘书长马鸿琳、世界核大学教务长Ste......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232312468993697/20110225232312468993697_.html" target="_blank">核研院用“红歌”纪念中国共产党建党88周年</a></h3>
+              <p class="thnews_jqzy">　　核研院用“红歌”纪念中国共产党建党88周年【新闻中心讯 通讯员 熊倪娟】7月1日，核研院在艺教中心举行了“红歌唱响核研院”歌咏大会，以纪念中国共产党建党88周年，迎接建国60周年。核研院负责同志、全院教职员工、离退休教职工等四百余人参加了活动。校党委副书记、工会主席韩景阳，校党委副书记史宗恺等出席了红歌会。红歌唱响核研院核研院院长张作义发表了热情洋溢......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232258843825281/20110225232258843825281_.html" target="_blank">清华大学领衔核能民用科技项目攻关</a></h3>
+              <p class="thnews_jqzy">　　清华大学领衔核能民用科技项目攻关基于第四代核技术的高温气冷堆核电站建设启动本报讯（记者 柴葳）日前，一项新能源计划在山东荣城启动。这里将建成我国第一座拥有自主知识产权的20万千瓦级模块式球床高温气冷堆商业示范电站，在不久的将来为我国迎来核能源安全民用的收获之秋，也向世界预示着第四代核电技术“中国奇迹”的诞生，而领衔这一国家重大科技攻关项目的就是清华大学的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2009.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232256078960354/20110225232256078960354_.html" target="_blank">核研院东区核电国家重大专项基地建设启动</a></h3>
+              <p class="thnews_jqzy">　　核研院东区核电国家重大专项基地建设启动【新闻中心讯 通讯员 王贤刚】5月8日下午，清华大学核研院在昌平基地举行“先进反应堆工程实验室”奠基仪式，标志着核研院东区“核电国家重大专项基地”建设揭开序幕。先进反应堆工程实验室是高温气冷堆国家重大专项的重要条件保障设施，这个实验室是核研院迎接百年校庆、建设先进反应堆研发平台、加快建设世界一流研究院的一个重要标......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232238062838514/20110225232238062838514_.html" target="_blank">顾秉林校长调研指导核研院深入学习实践科学...</a></h3>
+              <p class="thnews_jqzy">　　顾秉林校长调研指导核研院深入学习实践科学发展观活动【新闻中心讯】3月30日，校长顾秉林到核研院调研深入学习实践科学发展观活动的开展情况。校党委副书记史宗恺，校务委员会副主任、清华大学学习实践活动督导组成员张再兴以及党办、政策研究室有关负责人参加调研。调研中，顾秉林认真听取了院长张作义围绕核研院“科学发展建一流，教育创新迎百年”开展工作和计划安排的汇报......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2009.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232228109644143/20110225232228109644143_.html" target="_blank">科技部部长万钢视察清华大学核研院</a></h3>
+              <p class="thnews_jqzy">　　科技部部长万钢视察清华大学核研院【新闻中心讯】2月23日上午，科技部部长万钢、中纪委驻科技部纪检组组长郭向远等一行5人到清华大学核研院视察工作。清华大学校务委员会名誉主任王大中院士，副校长康克军，高温气冷堆重大专项总设计师、核研院院长张作义等接待了万钢一行。万钢一行参观了清华核研院10兆瓦高温气冷堆、磁悬浮轴承实验室以及核能制氢实验室，详细询问了关键......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225335390698165/20110225225335390698165_.html" target="_blank">高温气冷堆商业示范核电站开启核能安全民用...</a></h3>
+              <p class="thnews_jqzy">　　高温气冷堆商业示范核电站开启核能安全民用的未来新闻中心记者 张菀昀当国际原油价格不断攀升、气候问题不断困扰人类的时候，一项新的能源计划在我国山东荣城启动了。这里将建成我国第一座具有自主知识产权的20万千瓦级模块式球床高温气冷堆商业示范电站，为我国迎来核能源安全民用的“收获”之秋。选择，走我们自己的路核能是一种能大规模替代化石能源的清洁能源，使用时......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232154015942144/20110225232154015942144_.html" target="_blank">国家核电技术公司与清华大学共同成立核电技...</a></h3>
+              <p class="thnews_jqzy">　　国家核电技术公司与清华大学共同成立核电技术研发中心【新闻中心讯 记者 崔凯 摄影 郭海军】10月24日，“国家核电技术研发中心”出资协议签字暨揭牌仪式在清华大学主楼举行。国家核电技术公司董事长王炳华与清华大学校长顾秉林院士共同为中心揭牌，国家核电技术公司副总经理吕华祥与清华控股公司董事长宋军在出资协议书上签字。国家能源局副局长孙勤出席签字仪式并致辞。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2008.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232125421808728/20110225232125421808728_.html" target="_blank">核研院研制的轿车安检系统成功用于奥运</a></h3>
+              <p class="thnews_jqzy">　　核研院研制的轿车安检系统成功用于奥运【新闻中心讯】清华大学核研院研制的“移动式轿车垂直透视安检系统”，于8月5日在先农坛体育场对奥运赛会用轿车进行了综合安检，经过130分钟的高强度连续工作，完成了对七十余辆专用轿车的包括辐射成像及车底扫描的综合安检。安检任务完成得十分成功，奥组委安检指挥部对工作结果很满意，并对清华大学的工作人员表示衷心感谢。这是清华“移......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2008.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232121328570323/20110225232121328570323_.html" target="_blank">清华研制成功反恐移动式轿车垂直透视安检系...</a></h3>
+              <p class="thnews_jqzy">　　清华研制成功反恐移动式轿车垂直透视安检系统奥运期间启用【新闻中心讯】由清华大学核能与新能源技术研究院（简称核研院）研制成功的反恐移动式轿车垂直透视安检系统，于今年6月通过专家评审委员会的评审，奥运会期间将在部分奥运场馆启用。针对利用轿车夹带走私物品和危险物品日益增多的情况，清华大学核研院科研人员主动开展科研攻关，提出垂直投影的辐射成像检测方法，在较短......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232049000555553/20110225232049000555553_.html" target="_blank">高温气冷堆核电站示范工程审评启动交流会召开</a></h3>
+              <p class="thnews_jqzy">　　高温气冷堆核电站示范工程审评启动交流会召开【新闻中心讯】5月4～6日，国家核安全局在北京组织召开华能山东石岛湾核电厂高温气冷堆核电站示范工程审评启动交流会。这标志着高温气冷堆核电站示范工程初步安全分析报告的审评工作正式启动。高温气冷堆核电站重大专项总设计师、清华大学核研院院长张作义出席会议并做报告。他首先介绍了《高温气冷堆核电站重大专项总体实施方案》......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2008.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232020593829457/20110225232020593829457_.html" target="_blank">国防科工委主任张庆伟考察清华核研院</a></h3>
+              <p class="thnews_jqzy">　　国防科工委主任张庆伟考察清华核研院【新闻中心讯】2月14日，国防科工委党组书记、主任张庆伟，副主任孙勤，办公厅主任胡亚枫及相关各司司长、副司长等一行14人考察清华大学核能与新能源技术研究院（以下简称核研院）。中国核工业建设集团公司副总经理高名湘、中核能源科技有限公司总经理吴郁龙等参加考察。清华大学校长顾秉林、副校长康克军、党委副书记史宗恺等接待了张庆伟一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2008.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225602437943393/20110225225602437943393_.html" target="_blank">核研院举办首届研究生节</a></h3>
+              <p class="thnews_jqzy">　　核研院举办首届研究生节【新闻中心讯 研通社通讯员 谢启飞】12月28日晚7：00，清华大学学生活动文化中心一片欢声笑语，核研院首届研究生节暨元旦师生联欢会在这里举行。来自核研院及其他院系的老师和同学参加了晚会。晚会在轻快活泼的《嘻刷刷》节奏中开始，动感十足的舞蹈营造出热烈的气氛。首先举行了核研院年度人物颁奖典礼。清华大学党委副书记史宗恺致辞，他总结过......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231953343941484/20110225231953343941484_.html" target="_blank">刘淇同志一行到清华大学核研院调研座谈</a></h3>
+              <p class="thnews_jqzy">　　刘淇同志一行到清华大学核研院调研座谈【新闻中心讯 摄影 郭海军】11月20日上午，中共中央政治局委员、北京市委书记刘淇在市领导朱善璐、李士祥、陈刚陪同下，率领市委、市政府及有关部门负责人和昌平区委区政府负责人一行来到位于昌平区的清华大学核能与新能源技术研究院（简称核研院）进行考察、调研。校党委书记陈希，校务委员会名誉主任、前校长王大中院士，校党委常务......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231950125408659/20110225231950125408659_.html" target="_blank">核研院举办清华大学首届核能文化节</a></h3>
+              <p class="thnews_jqzy">　　核研院举办清华大学首届核能文化节【新闻中心讯】11月10～12日，核能与新能源技术研究院举办清华大学第一届核能文化节。活动旨在纪念我国氢弹爆炸40周年，并希望通过对核能知识、核工业现状、核能行业发展以及核能公共安全的普及宣传，吸引更多的清华学子投身到核工业的大舞台上来，为国家的发展贡献自己的力量。内容分为“核堂月色”摄影展、“风生核起”核能文化展、“......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2007.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231915500515213/20110225231915500515213_.html" target="_blank">顾秉林校长到核能与新能源技术研究院调研</a></h3>
+              <p class="thnews_jqzy">　　顾秉林校长到核能与新能源技术研究院调研&nbsp;&nbsp;&nbsp; 【新闻中心讯 记者 贾朋俭】7月6日上午，校长顾秉林来到位于昌平校区的核能与新能源技术研究院（简称核研院）调研，参观了磁轴承实验室、新能源实验室、风能试验基地和核化工实验室，并听取了核研院主要负责人的工作汇报。科研院、研究生院、人事处、校办等单位相关负责人参加了调研。&nbsp;&n......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2007.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231849890849374/20110225231849890849374_.html" target="_blank">国防科工委主任张云川考察清华核研院</a></h3>
+              <p class="thnews_jqzy">　　国防科工委主任张云川考察清华核研院【新闻中心讯】4月19日下午，国防科工委主任张云川率领相关部门领导专程赴清华大学核能与新能源技术研究院考察访问。受教育部部长周济委托，教育部副部长吴启迪一同参加考察。校党委书记陈希、校务委员会名誉主任王大中、副校长康克军、核研院院长张作义等陪同考察。张云川一行先后参观了反应堆模型展室、5兆瓦低温核供热反应堆、热工水......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2006.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231830593426503/20110225231830593426503_.html" target="_blank">核研院高温气冷堆通过国际原子能机构核保障...</a></h3>
+              <p class="thnews_jqzy">　　核研院高温气冷堆通过国际原子能机构核保障年度检查【新闻中心讯】12月18日，清华大学核能与新能源技术设计研究院的10MW高温气冷堆通过了国际原子能机构 (IAEA)的年度核保障检查。核研院院长助理唐亚平对核研院10MW高温气冷堆2006年度的运行及核材料使用与管制等情况作了总体介绍。国际原子能机构视察员A.Kist检查了相关记录、帐目、报表，实地核查了核......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231825640642063/20110225231825640642063_.html" target="_blank">清华安继刚院士获“当代发明家”荣誉称号</a></h3>
+              <p class="thnews_jqzy">　　清华安继刚院士获“当代发明家”荣誉称号【新闻中心讯】11月23日，中国发明协会对在自主创新并实现产业化方面做出突出成绩和重大贡献的同志颁发“发明创业奖”特等奖，并同时授予“当代发明家”荣誉称号，清华核研院安继刚院士获此殊荣。“发明创业奖”是中国发明协会为发明家设立的国家最高奖项，以奖励在自主创新并实现产业化方面做出突出成绩的发明者，每年评选一次。本......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231752890974810/20110225231752890974810_.html" target="_blank">清华高温气冷堆二期工程的氦气透平压气机组...</a></h3>
+              <p class="thnews_jqzy">　　清华高温气冷堆二期工程的氦气透平压气机组研制项目通过技术设计阶段专家评审【新闻中心讯】6月20日，清华核研院高温气冷堆二期工程的氦气透平压气机组研制项目在哈尔滨703所通过了技术设计阶段的专家评审。评审会由清华大学核研院院长张作义教授主持，成都飞机发动机公司研究员姚学敏任评审专家组组长，来自各单位的7位院士、教授和专家参与评审。清华大学王大中院士出席了评......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231744078835998/20110225231744078835998_.html" target="_blank">【启航】全标：执着兴趣　圆梦国防</a></h3>
+              <p class="thnews_jqzy">　　执着兴趣 圆梦国防——记核研院签约中国核动力研究设计院硕士毕业生全标●研通社记者 张庆丰 任玮玮“我从大一就想去这个单位，可以说心仪已久。”全标说出这话的时候做了一个双手比划出一个长方形的手势，然后抬头看了我们一眼，确认我们没有发问，又盯着自己的手，继续说：“是这样的……”钱钟书式的痴与迷“高考时我第一志愿报的是军校，但是没有录取上。后面报的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231735625417088/20110225231735625417088_.html" target="_blank">核研院举行迎校庆学术报告会</a></h3>
+              <p class="thnews_jqzy">　　核研院举行迎校庆学术报告会【新闻中心讯】4月26日上午，作为95周年校庆系列活动之一，核研院在能科楼举办了迎校庆学术报告会。核研院安继刚院士和马昌文教授分别做了题为“集装箱辐射成像检测技术”和“高能钍核动力反应堆的研究与发展”的学术报告。会场安继刚院士首先阐述了核研院集装箱辐射成像检测技术的研发背景，并对这一技术的研发原理及其在“八五”攻关到“......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104125703885335/20110226104125703885335_.html" target="_blank">【人物】安继刚：三“关”领将</a></h3>
+              <p class="thnews_jqzy">　　三“关”领将——记中国工程院院士安继刚●实习记者 索阿娣2005年12月13日，中国工程院新增院士名单公布。我校核研院67岁的安继刚当选为院士。当这一中国工程技术界最高荣誉降临到头上时，他微笑着告诉记者：“又可以多做一些工作了”。“误入藕花深处”1938年1月，安继刚出生在上海的法租界。父亲安绍芸早年毕业于清华学堂，时任大学会计专业教授。安继刚5......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231723968639709/20110225231723968639709_.html" target="_blank">【人物】安继刚：三“关”领将</a></h3>
+              <p class="thnews_jqzy">　　三“关”领将——记中国工程院院士安继刚●实习记者 索阿娣2005年12月13日，中国工程院新增院士名单公布。我校核研院67岁的安继刚当选为院士。当这一中国工程技术界最高荣誉降临到头上时，他微笑着告诉记者：“又可以多做一些工作了”。“误入藕花深处”1938年1月，安继刚出生在上海的法租界。父亲安绍芸早年毕业于清华学堂，时任大学会计专业教授。安继刚5......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231722984820733/20110225231722984820733_.html" target="_blank">澳大利亚核协会Hardy博士访问核研院</a></h3>
+              <p class="thnews_jqzy">　　无标题文档澳大利亚核协会Hardy博士访问核研院3月15日澳大利亚核协会副理事长兼秘书长Hardy博士访问清华核研院，了解高温气冷堆的有关情况。Hardy博士是国际核领域著名专家，同时还担任太平洋地区核理事会副主席。他介绍了澳大利亚在核领域的研究状况以及澳大利亚在核技术包括核医学方面开展的前沿性研究，听取了核研院副院长于溯源教授对核研院总体科研布局以......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231642656520100/20110225231642656520100_.html" target="_blank">《科学》介绍我校核研院和高温气冷堆</a></h3>
+              <p class="thnews_jqzy">　　《科学》杂志刊登焦点文章介绍我校核研院和高温气冷堆8月19日新出版的《科学》杂志刊登了两篇焦点文章，介绍我校核研院和高温气冷堆。题为 “Nuclear Industry Dares to Dream of a New Dawn”的文章回顾了高温气冷堆的发展历史，分析、比较了气冷堆相对于传统水堆的优越性，并介绍了美、法、日等国开展高温堆研究的情况。 文章中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2004.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231535390201328/20110225231535390201328_.html" target="_blank">创新，就要革命加拼命</a></h3>
+              <p class="thnews_jqzy">　　创新，就要革命加拼命科技日报  2004-12-9  安继刚&nbsp;&nbsp;&nbsp;集装箱检测系统应用辐射成像技术透视检查大宗货物，是装备国门的“火眼金睛”。我们在八五、九五及十五攻关计划中连续立项研究，获得巨大经济与社会效益，为国家办了一件大事。&nbsp;&nbsp;&nbsp;我有幸在年过半百后，作为技术负责人或项目负责人，亲历了三届攻关全......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2004.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231513437252127/20110225231513437252127_.html" target="_blank">核研院举行屏蔽试验反应堆落成40周年暨院...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档核研院举行屏蔽试验反应堆落成40周年暨院庆纪念活动图片说明：纪念大会主席台 摄影 郭海军【新闻中心10月9日讯】今年10月，是我国第一座自行设计、自主建造的核反应堆——清华大学屏蔽试验反应堆落成40周年。10月9日上午，当年设计建造这座反应堆的我校核能与新能源技术研究院在昌平举行了隆重的纪念活动。我校老领导、教育部原部长、原国家教委副主任何......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2004.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225343968667393/20110225225343968667393_.html" target="_blank">核研院举行屏蔽试验反应堆落成40周年暨院...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档核研院举行屏蔽试验反应堆落成40周年暨院庆纪念活动图片说明：纪念大会主席台 摄影 郭海军【新闻中心10月9日讯】今年10月，是我国第一座自行设计、自主建造的核反应堆——清华大学屏蔽试验反应堆落成40周年。10月9日上午，当年设计建造这座反应堆的我校核能与新能源技术研究院在昌平举行了隆重的纪念活动。我校老领导、教育部原部长、原国家教委副主任何......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2004.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231512953308361/20110225231512953308361_.html" target="_blank">知难而进，众志成城 建设世界一流研究院</a></h3>
+              <p class="thnews_jqzy">　　无标题文档知难而进，众志成城 建设世界一流研究院张作义 徐景明今年10月，核研院举行隆重而简朴的仪式，纪念屏蔽试验堆落成40年暨核研院院庆。  一、建堆报国，建堆育人，忆往昔峥嵘岁月稠  1960年3月，昌平200号基地奠基，当时称为清华大学原子能基地。1962年夏末，由中共北京市委第二书记刘仁定名为清华大学试验化工厂（简称试化厂）。1979年3......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2004.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231513093212281/20110225231513093212281_.html" target="_blank">发扬优良传统 继续奋斗前进</a></h3>
+              <p class="thnews_jqzy">　　无标题文档发扬优良传统   继续奋斗前进王大中  清华大学屏蔽试验反应堆已经建成40年了，如果从1960年3月这座反应堆动工和200号（当年屏蔽试验反应堆工程代号，后成为核研院的代称）基地兴建算起，核研院已经走过44年的历程。遥想当年，在我国核事业创建初期，平均年龄仅为23岁半的清华师生，在昌平虎峪偏僻的山村旁艰苦创业，建成了我国第一座自行研究设计、自主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2004.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231512890645944/20110225231512890645944_.html" target="_blank">清华大学核研院的历史发展进程</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华大学核研院的历史发展进程1958年，校党委和蒋南翔校长决定建立原子能教学、科研、生产联合基地。1960年，清华大学原子能实验基地（200号）在北京昌平虎峪开始兴建。1964年，清华大学屏蔽试验反应堆（901堆）建成投入运行。这是我国第一座自行研究、设计、建造的反应堆。40年来在该反应堆上成功地进行了核潜艇动力堆屏蔽材料试验、中子照像、中子活......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2004.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231513031848071/20110225231513031848071_.html" target="_blank">开展新能源研究 实现可持续发展</a></h3>
+              <p class="thnews_jqzy">　　无标题文档开展新能源研究 实现可持续发展王革华  21世纪人类将面临着巨大的能源挑战。一方面随着社会经济快速发展，能源需求量不断增加；另一方面保护环境的要求越来越严格，对目前以化石燃料为主的能源体系不断提出新的限制。同时化石燃料的储量是有限的，终将面临枯竭。因此，在21世纪开发新的清洁能源是能源领域发展的必然趋势，新能源将成为人类主要的战略选择。  ......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344109424081/20110225225344109424081_.html" target="_blank">第二届国际高温气冷堆专题讨论会在京举行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档探讨新世纪安全的核能第二届国际高温气冷堆专题讨论会在京举行  【新闻中心讯 记者 周襄楠】9月22日上午，来自美国、法国、日本、荷兰、德国等近20个国家的100多名资深核能专家齐聚北京友谊宾馆，在第二届国际高温气冷堆专题讨论会上共同探讨新世纪安全的核能。  该讨论会由我校核能与新能源技术研究院主办，得到了国际原子能机构、欧共体的大力支持。会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2003.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231416640104987/20110225231416640104987_.html" target="_blank">清华大学核能与新能源技术研究院面向全球招...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华大学核能与新能源技术研究院面向全球招聘教授科技日报 2003年10月29日 记者 李大庆清华大学一所一流的研究院出现了人才断档。在人们印象中，清华大学总是和“人才济济”一词相联系，怎么会出现断档呢？出现人才断档的是清华大学核能与新能源技术研究院。这是国内一流的核能设计与研究单位，院里46岁至56岁的教授、学科带头人极缺。为此，核研院终于放下......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348171917004/20110225225348171917004_.html" target="_blank">陈至立视察我校核研院</a></h3>
+              <p class="thnews_jqzy">　　无标题文档陈至立视察我校核研院【新闻中心讯 记者 周襄楠】4月15日下午3时许，国务委员陈至立一行专程来到位于昌平的我校核能技术设计研究院视察。她参观了核研院的国家“863”高技术计划重点项目——刚刚实现满功率运行的10兆瓦高温气冷实验堆工程现场，还有我校自行设计建成的世界上首座投入运行的一体化自然循环壳式供热堆——5兆瓦低温核供热堆，以及热工水利实验室......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231334671647510/20110225231334671647510_.html" target="_blank">陈至立视察我校核研院</a></h3>
+              <p class="thnews_jqzy">　　无标题文档陈至立视察我校核研院【新闻中心讯 记者 周襄楠】4月15日下午3时许，国务委员陈至立一行专程来到位于昌平的我校核能技术设计研究院视察。她参观了核研院的国家“863”高技术计划重点项目——刚刚实现满功率运行的10兆瓦高温气冷实验堆工程现场，还有我校自行设计建成的世界上首座投入运行的一体化自然循环壳式供热堆——5兆瓦低温核供热堆，以及热工水利实验室......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231330218757461/20110225231330218757461_.html" target="_blank">研究型大学　创新的重要源泉</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document研究型大学　创新的重要源泉——清华大学核研院10兆瓦高温气冷堆实现满功率的启示光明日报 2003-03-06本报记者　高晓明通讯员　路露高温气冷堆示范工程的建成并实现满功率运行，使我国跨入反应堆研发领域的国际先进行列，并为此领域储备了宝贵的人才资源，这是一项令人振奋的重大科技成果，也充分显示了高等学校在解决国民经济和......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231329750575900/20110225231329750575900_.html" target="_blank">"八六三"成果 中国十兆瓦高温气冷堆满功...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document&quot;八六三&quot;成果 中国十兆瓦高温气冷堆满功率运行成功人民网 2003年03月03日本报北京3月1日讯记者温红彦、蒋建科报道：由清华大学核能技术设计研究院设计建造的10兆瓦高温气冷实验堆，在2003年1月7日实现并网发电的基础上，近日成功实现72小时连续满功率运行，成为世界首座投入运行的模块式球床高温气冷......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231329765201125/20110225231329765201125_.html" target="_blank">我高温气冷堆技术达世界先进水平</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我高温气冷堆技术达世界先进水平光明日报 2003-03-03国家科学技术部、教育部等部门今天在清华大学核能技术设计研究院召开“10兆瓦高温气冷实验堆满功率运行汇报会”，宣布“我国在高温气冷堆技术领域已达到世界先进水平。”由清华大学核能技术设计研究院设计建造的实验堆是国家863计划重大项目。实验证明，该反应堆主要指标达......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348609523127/20110225225348609523127_.html" target="_blank">我国10兆瓦高温气冷堆满功率运行成功</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我国10兆瓦高温气冷堆满功率运行成功 由清华大学核能技术设计研究院设计、建造的国家863计划重大项目10兆瓦高温气冷实验堆，在2003年1月7日实现并网发电的基础上，于近日成功地实现了72小时连续满功率运行。使该反应堆成为世界上首座投入运行的模块式球床高温气冷实验堆。这是863计划取得的一项重大成果，也是我国在先进反应堆领域取得的一项突破性进展......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231329656692692/20110225231329656692692_.html" target="_blank">中国在核能领域重大进展 高温气冷达世界水平</a></h3>
+              <p class="thnews_jqzy">　　无标题文档中国在核能领域重大进展 高温气冷达世界水平国际在线 2003-3-1 18:21:40国际在线消息(记者耿庆庆)：由清华大学设计、建造的10兆瓦高温气冷试验堆1日通过了专家组的技术鉴定。鉴定指出这个试验堆的建造成功标志着中国在高温气冷堆技术领域已达到了世界水平。10兆瓦高温气冷试验堆技术是中国科技工作者自主研究开发的。该试验堆是世界上首座应......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231329640662037/20110225231329640662037_.html" target="_blank">10兆瓦高温气冷实验堆72小时连续满功率...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档10兆瓦高温气冷实验堆72小时连续满功率运行央视国际 (2003年03月01日 19:59)CCTV.com消息（新闻联播）：国家863计划重大项目10兆瓦高温气冷实验堆，在今年1月7日首次实现并网发电的基础上，又于近日成功实现72小时连续满功率运行，成为世界第一座投入运行的模块式球床高温气冷实验堆。这种反应堆是目前国际公认的新一代先进反应......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231329625866500/20110225231329625866500_.html" target="_blank">我国10兆瓦高温气冷堆满功率运行成功</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我国10兆瓦高温气冷堆满功率运行成功 由清华大学核能技术设计研究院设计、建造的国家863计划重大项目10兆瓦高温气冷实验堆，在2003年1月7日实现并网发电的基础上，于近日成功地实现了72小时连续满功率运行。使该反应堆成为世界上首座投入运行的模块式球床高温气冷实验堆。这是863计划取得的一项重大成果，也是我国在先进反应堆领域取得的一项突破性进展......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2003.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231327031522191/20110225231327031522191_.html" target="_blank">十兆瓦高温气冷堆并网发电成功</a></h3>
+              <p class="thnews_jqzy">　　无标题文档十兆瓦高温气冷堆并网发电成功光明日报 2003年1月9日记者 丰捷本报北京1月8日电 由清华大学核能技术设计研究院承担的国家863计划重点项目——10兆瓦高温气冷实验堆昨天上午成功并网发电，专家表示，这是我国在先进反应堆领域取得的一项重要进展。10兆瓦高温气冷实验堆2000年12月在清华大学核研院建成临界后，正式进入热态试验调试阶段。经过两......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2003.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231326781751888/20110225231326781751888_.html" target="_blank">我校10兆瓦高温气冷堆并网发电成功</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校10兆瓦高温气冷堆并网发电成功 由清华大学核能技术设计研究院承担的国家863计划重点项目——10兆瓦高温气冷实验堆，于2003年1月7日上午11点11分成功地并网发电。这是我国在先进反应堆领域取得的一项重要进展。 10兆瓦高温气冷实验堆2000年12月在清华大学核研院建成临界后，正式进入热态试验调试阶段。经过两年的努力，完成了100项安......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2003.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348781547979/20110225225348781547979_.html" target="_blank">我校10兆瓦高温气冷堆并网发电成功</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校10兆瓦高温气冷堆并网发电成功 由清华大学核能技术设计研究院承担的国家863计划重点项目——10兆瓦高温气冷实验堆，于2003年1月7日上午11点11分成功地并网发电。这是我国在先进反应堆领域取得的一项重要进展。 10兆瓦高温气冷实验堆2000年12月在清华大学核研院建成临界后，正式进入热态试验调试阶段。经过两年的努力，完成了100项安......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2001.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353187180692/20110225225353187180692_.html" target="_blank">核研院党委被授予“全国先进基层党组织”称号</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document核研院党委被授予“全国先进基层党组织”称号7月1日，中共中央在人民大会堂举行大会，隆重纪念中国共产党成立80周年。中共中央总书记江泽民发表重要讲话，中共中央政治局常委胡锦涛宣读中共中央关于表彰全国先进基层党组织和优秀共产党员、优秀党务工作者的决定。我校核能技术设计研究院党委被授予"全国先进基层党组织"光荣称号。我校核......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231216140695071/20110225231216140695071_.html" target="_blank">核研院“城市污水地下回灌技术研究”通过鉴定</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document核研院“城市污水地下回灌技术研究”通过鉴定 4月19日，“九五”国家重点科技攻关项目“城市污水地下回灌技术研究”鉴定会在核研院能科楼召开。会议由建设部科技司主持，汤鸿霄院士任鉴定委员会主任。国家环保总局、中科院生态中心、建设部城市水资源中心等单位的专家学者出席会议。与会专家在听取了课题组的汇报后进行了认真讨论，一致同意通......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231211500454713/20110225231211500454713_.html" target="_blank">我校核化学化工实验室奠基</a></h3>
+              <p class="thnews_jqzy">　　我校核化学化工实验室奠基我校核化学化工实验室奠基【新闻中心讯】马栩泉襄楠报道3月29日上午，是一个阳光明媚的日子，在我校核研院的一片热闹的建筑工地上，举行了我校建设世界一流大学“985”项目核化学化工实验室扩建工程的奠基仪式，原社科院副院长、原清华副校长、现任人大常委滕藤教授，中科院资深院士汪家鼎教授，中国工程院院士朱永(贝睿)，校务委员会副主任孙继铭，......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

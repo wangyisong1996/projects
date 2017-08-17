@@ -1,0 +1,559 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>博士后学术报告会举行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231216453915380&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">博士后学术报告会举行</h3><p>4月23日上午，为庆祝我校90华诞，"清华大学90周年校庆博士后专场学术报告会"在图书馆报告厅隆重举行。龚克副校长出席并致词，科技处、博管办、各系博士后及其他人员等数百人参加。 </p><p>报告会由我校博士后联谊会理事长王健博士主持，王广龙、毕思文、梁荣、孙成仁、王宏桥、廖洪强、李子臣等七位在站和已出站的优秀博士后分别就"基于MEMS的微型飞行器关键技术研究"、"地球系统科学理论构建与青藏高原动力学研究"、"二十一世纪，人类将如何面对疫病"、"城市设计之"道"与后现代科学"、"现代汽车发动机技术"、"环境保护问题中城市生活垃圾的现状、处理技术选择、发展方向及垃圾热解特性"、"二十一世纪的信息技术：智能信息技术"等学科前沿和高科技问题做了精采的学术报告，并与听众进行了深刻的交流和讨论。 </p><p>报告会气氛热烈，给人以启迪，参会人员一致反映收获甚大。（卢晓霞） </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月23日 11:37:37　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140612180750250722207/20140612180750250722207_.html" target="_blank">城市模型学术报告会在清华举办</a></h3>
+              <p>6月11日，“城市模型学术报告会暨2014年北京城市实验室年会”在清华大学建筑学院举办。人居环境研究中心副主任毛其智教授出席论坛并致辞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225332140203198/20110225225332140203198_.html" target="_blank">清华16个博士后流动站获评优秀 居全国之首</a></h3>
+              <p class="thnews_jqzy">　　清华16个博士后流动站获评优秀 居全国之首【新闻中心讯】11月28日，人力资源和社会保障部在全国博士后工作会议上公布了2010年博士后工作综合评估结果，清华大学共有16个博士后流动站被评为全国优秀博士后科研流动站，高居全国参评流动站设站单位之首。同时，清华大学邓芳老师被评为全国优秀博士后管理工作者。这16个流动站是：材料科学与工程、电气工程、电子科学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231746828581615/20110225231746828581615_.html" target="_blank">清华大学举办脑智科学学术报告会</a></h3>
+              <p class="thnews_jqzy">　　清华大学举办脑智科学学术报告会科学时报  2006-05-24  李晨&nbsp;&nbsp;&nbsp;&nbsp;本报讯 5月21日，由清华大学脑智科学研究中心举办的2006年清华大学脑智科学学术报告会在京举行。&nbsp;&nbsp;&nbsp;&nbsp;为促进脑智科学的发展，这场报告会邀请了国内外在脑研究领域具有重要学术影响的多位科学家作前沿学术报......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231746000945864/20110225231746000945864_.html" target="_blank">清华举办脑智科学学术报告会</a></h3>
+              <p class="thnews_jqzy">　　清华举办脑智科学学术报告会【新闻中心讯】5月21日，由清华大学脑智科学研究中心（筹）组织的2006年清华大学脑智科学学术报告会在主楼后厅召开。报告会邀请了国内外在脑研究领域具有重要学术影响的多位科学家作了前沿学术报告，其中包括中国科学院陈霖、郭爱克、韩济生3位院士，来自美国加州大学伯克利分校的Walter J. Freeman教授，美国约翰﹒霍普金斯大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231735625417088/20110225231735625417088_.html" target="_blank">核研院举行迎校庆学术报告会</a></h3>
+              <p class="thnews_jqzy">　　核研院举行迎校庆学术报告会【新闻中心讯】4月26日上午，作为95周年校庆系列活动之一，核研院在能科楼举办了迎校庆学术报告会。核研院安继刚院士和马昌文教授分别做了题为“集装箱辐射成像检测技术”和“高能钍核动力反应堆的研究与发展”的学术报告。会场安继刚院士首先阐述了核研院集装箱辐射成像检测技术的研发背景，并对这一技术的研发原理及其在“八五”攻关到“......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2005.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225341859273168/20110225225341859273168_.html" target="_blank">我校召开博士后二十周年庆祝大会</a></h3>
+              <p class="thnews_jqzy">　　我校召开博士后二十周年庆祝大会【新闻中心讯 记者 顾淑霞 摄影 郭海军】“清水滋润学府，华木擎起辉煌，博采科学精华，士当为国争先，后辈定能居上”。这是李政道先生2002年以“清华博士后”为藏头诗为我校博士后的题词。时至今日，蓬勃发展的清华博士后事业走过了二十年。10月24日下午，我校博士后二十周年庆祝大会在大礼堂隆重召开。中国博士后制度的首倡者李政道先生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2004.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231436328857378/20110225231436328857378_.html" target="_blank">三星清华北邮共建博士后工作站</a></h3>
+              <p class="thnews_jqzy">　　三星清华北邮共建博士后工作站http://finance.sina.com.cn 2004年05月12日 03:53 中华工商时报世界通信技术的领导厂商三星电子在取得中国国家人事部博士后管理委员会的批准后，近日于人民大会堂举行了三星电子中国通信研究所升院及博士后工作站揭牌仪式，并与清华大学和北京邮电大学分别签订了联合培养博士后的合作协议，进行下一代无线互......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2003.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231415265959683/20110225231415265959683_.html" target="_blank">中大集团—清华大学博士后科学基金颁发</a></h3>
+              <p class="thnews_jqzy">　　无标题文档无私资助 友谊长存——中大集团—清华大学博士后科学基金颁发 由清华大学人事处、中大集团共同主办的“中大集团—清华大学博士后科学基金颁发仪式”大会，于2003年10月12日下午在清华大学甲所报告厅隆重举行。 全国博士后管理委员会办公室副主任、中国博士后科学基金会副秘书长李联伟、中大集团董事长徐连国、清华大学人事处长裴兆宏出席会议并讲话。清华大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2003.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231413640755700/20110225231413640755700_.html" target="_blank">中大集团清华博士后科学基金颁发</a></h3>
+              <p class="thnews_jqzy">　　无标题文档中大集团清华博士后科学基金颁发中国交通报 2003年10月16日吴忠勤本报讯 10月12日下午，客车业第一家科研基金——中大集团清华大学博士后科学基金颁奖仪式在清华园举行，12名清华博士后分别获得了总额40万元的中大博士后基金。　 中大集团是全国第一家设立博士后科学基金的民营企业。早在1999年，中大就与清华大学签署协议，由中大向清华博士后资助......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2003.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231407640685594/20110225231407640685594_.html" target="_blank">大学时连收音机都买不起 清华博士后坚毅求学</a></h3>
+              <p class="thnews_jqzy">　　大学时连收音机都买不起 清华博士后坚毅求学海南日报 2003-8-21 姚莉莉 陈成智据海南日报报道，婉拒母校清华的挽留，放弃北京的高薪，海南省引调来的20名博士后之一的朱东海毅然决然投奔海南的理由很简单——欣赏海南大海般的胸怀，相信自己能在宝岛成就一番事业。浙江人朱东海快人快语，这位清华大学博士后的专业是土木建筑工程、软件工程和项目管理工程。朱......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225623093727314/20110225225623093727314_.html" target="_blank">清华博士后：致战斗在抗击“非典”第一线的...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档致战斗在抗击“非典”第一线的医护人员的慰问信尊敬的战斗在抗击“非典”第一线的医护人员：你们好！你们辛苦了！首先，请允许我们代表清华大学700余名博士后向你们致以崇高的敬意！感谢你们以无私奉献的人道主义精神和夜以继日的劳动，给整个社会带来了巨大的抗击“非典”的精神动力和必胜信念！在这场没有硝烟的战争中，昔日战场上的后勤兵，成为今天抗击“非典”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231319953350147/20110225231319953350147_.html" target="_blank">自动化系博士后学术报告会成功举行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档自动化系博士后学术报告会成功举行在党的“十六”大胜利闭幕的喜庆日子里，自动化系博士后学术报告会于11月15日在中央主楼508多媒体教室成功举行。此次博士后学术报告会共有33人参加，其中博士后30人。目前自动化系博士后在站人数为39名，除了企业博士后和几名出差在外的博士后不能参加外，其余博士后全部到会。还有3名其它系（如计算机系）的博士后闻讯......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2002.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231301109253212/20110225231301109253212_.html" target="_blank">走近博士后世界</a></h3>
+              <p class="thnews_jqzy">　　无标题文档科技日报：走近博士后世界（科技日报 2002年6月10日）走出“博士后”观念误区其实，博士后既不是比博士更高一级的学位，也不是专业技术或行政职称，博士后只是代表一种研究经历。无论是国内还是国外，博士都是最高学位，对博士后研究人员不能再授予其它任何名义上的学位称号，因此，不能把“博士后”看成比博士更高一级的学位。博士后首先出现在美国。1876......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2002.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231300250636336/20110225231300250636336_.html" target="_blank">博士后又办学术沙龙</a></h3>
+              <p class="thnews_jqzy">　　无标题文档博士后又办学术沙龙在我校博管办的支持下，5月30日晚，我校博士后联谊会学术部在电子工程系会议室举办了博士后第二次学术沙龙。此次活动主要围绕材料专题开展，材料系两位博士后作了精彩报告。邓元博士的报告《纳米材料在热电材料中的应用》和谢丹博士的报告《硅基铁电薄膜的制备及在FSMIS中的应用研究》介绍了本专业的背景知识和前沿领域，以及研究中所用到的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225623953665759/20110225225623953665759_.html" target="_blank">水木清华 永我难忘</a></h3>
+              <p class="thnews_jqzy">　　无标题文档水木清华 永我难忘我校博士后校庆活动开幕式于4月27日在蒙民伟楼多功能厅召开。到会的嘉宾有人事部原副部长、全国博士后管理委员会原主任蒋冠庄同志、清华大学副校长龚克同志、党委副书记杨振斌同志以及人事部专业技术人员管理司、全国博士后管理办公室和中国博士后科学基金会等部门领导。我校党委副书记杨振斌在致辞时说，经过几年的努力，我校博士后流动站数......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231256156414872/20110225231256156414872_.html" target="_blank">清华大学博士后校庆学术报告会成功举行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华大学博士后校庆学术报告会成功举行4月26日下午在清华大学蒙民伟楼多功能厅举办了博士后校庆学术报告会。会上，原北京大学校长、国家自然科学基金委员会主任、中国物理学会理事长、北京市科协主席陈佳洱院士作了题为：&quot;实施源头创新战略，增强自主创新能力&quot;的精彩报告。中国第一位在企业从事企业管理方面研究的博士后、中华自行车集团公司董事......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231256671356994/20110225231256671356994_.html" target="_blank">水利水电系举行院士学术报告会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档水利水电系举行院士学术报告会4月25日下午，水利水电工程系举行&quot;院士学术报告会&quot;，分别由沈珠江、张楚汉院士做学术报告，参加会议的有水利水电系师生70多人。这项活动是水利水电系庆祝建系50周年下列活动的一部分。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225624281323512/20110225225624281323512_.html" target="_blank">我校博士后学术活动举行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校博士后学术活动举行日前，我校博士后联谊会学术部举行了第一次学术活动，邀请数学系赵阳博士、黎雄博士分别作了学术报告，报告会在东主楼举行。赵阳博士的报告主题是&quot;分形理论&quot;，他从一些简单的例子直观地讨论分形的基本特性，她指出康托尘埃、KOCH曲线、谢尔宾斯基曲线、以及门杰海绵都具有相同的特点：精细结构、局部和整体具有相似性......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231245781676161/20110225231245781676161_.html" target="_blank">我校博士后淮安科技行活动成功举行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档为周总理的故乡造福我校博士后淮安科技行活动成功举行12月13日～17日，我校博士后科技代表团一行37人来到周恩来总理的故乡--江苏省淮安市。这次科技行活动由我校博士后管理办公室和博士后联谊会组织，由博管办主任金锡华老师担任领队。本次活动是今年我校博士后继河北秦皇岛科技行、天津大港科技行、山东烟台科技行之后的又一次科技行活动。本次科技行活动是......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231242593267809/20110225231242593267809_.html" target="_blank">清华博士后烟台科技行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华博士后烟台科技行11月16日到18日，我校博士后组成科技代表团共24人奔赴山东烟台，与烟台市政府联合举行了&quot;2001清华大学博士后与烟台企业对接洽谈会&quot;。在短短的两天时间里，共有7名博士后发布了10项科技成果，烟台龙达水处理有限公司、龙口市兴隆道恩化学有限公司等25家企业与博士后们达成了28项技术开发合作意向，双方在此基......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231241484571631/20110225231241484571631_.html" target="_blank">我校教授、博士后考察团赴辽宁锦州科技行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校教授、博士后考察团赴辽宁锦州科技行10月19日，辽宁省省长薄熙来率领包括14个市长在内的庞大代表团到我校访问，并且与我校签署了省校全面合作协议。仅仅过了十天，11月1日至3日，由计算机系部分教授和博士后组成的一个30人科技服务考察团就奔赴辽宁省锦州市进行了&quot;清华大学博士后锦州科技行&quot;活动。在锦州市委市政府的密切配合和......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231229718157455/20110225231229718157455_.html" target="_blank">博士后秦皇岛科技行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document博士后秦皇岛科技行6月1日，我校博士后联谊会、博士后管理办公室组织一百五十余名博士后乘车来到秦皇岛市，参加"第二届清华大学博士后秦皇岛科技行"活动，与该市的企业和院校进行科技联谊，受到了秦皇岛市政府的热烈欢迎和热情接待。当晚，热情好客的秦皇岛市人民为欢迎博士后的到来举行了隆重的欢迎仪式和精彩的文艺表演。6月2日我校博......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231229546251070/20110225231229546251070_.html" target="_blank">清华博士后再聚港城秦皇岛为发展献计</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华博士后再聚港城秦皇岛为发展献计2001年06月05日 燕赵都市报本报讯（记者宋丽叶）6月1日至3日，应秦皇岛市政府的邀请，清华大学155名博士后携带着最新科研成果和信息聚集秦皇岛，与该市企业界和高等院校进行联谊与项目洽谈。这是继去年5月209名清华博士后访秦后双方开展的第二次联谊活动。此次来秦，100多名博士后每......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

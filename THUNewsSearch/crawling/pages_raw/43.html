@@ -1,0 +1,1098 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清华同方推出2001年高考资源全国共享行动</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231208687586854&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9664/index.html' class='navigation_style'>社会服务</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">清华同方推出2001年高考资源全国共享行动</h3><p align="center"> （2001/03/11 中新社网站）</p><p> 　　中新网北京三月十日消息：清华同方教育技术研究院和清华同方光盘股份有限公司近日正式推出“二00一年高考名师资源共享活动”。</p><p> 　　据悉，教育部已对今年高考的能力与素质考核目标进行了重大调整，以有助于高校选拨人才、促进素质教育和高校办学自主权的扩大。清华同方推出的高考名师资源共享活动即是为了配合这一调整，推进高考改革，帮助全国参加高考的学校和师生适应新的变化。</p><p> 　　这一活动的主要内容是：组织北京、上海等地教育专家分析今年高考改革思路及其导向，研究适应改革的具体措施，研制落实这些措施的高考辅导多媒体资料库，组织全国上千名特级、高级教师在网上直接向考生进行答疑辅导，并使考生共享全国考生与名师答疑信息的精华和创新成果。有关专家认为，这种以素质教育为目标，通过光盘、互联网实现名师资源共享的高考辅导方式是我国教育信息化的一个富有创新性的有益尝试。</p><p> 　　据有关方面透露，清华同方围绕E-ducation进行产业结构战略调整，以推动我国基础教育的跨越式发展为目标，将旗下清华同方光盘股份有限公司、清华同方教育技术研究院等拥有各方面优势的产业进行了战略整合，构建了由拥有教育与知识信息资源、覆盖全国的网络教育软硬件平台和全国上千位名师组成的现代教育资源体系及其共享系统。在这个平台上，全国各地的著名中学教师和学生将可以利用多媒体教育、教学素材库和中国基础教育知识仓库(CFED)进行实时网上教学、辅导、进修、自学。</p><p> 　　有关专家认为，“现代教育资源全国共享行动计划”的实施，对建设我国现代教育基础设施，推动科教兴国战略实施，实现“十五”期间教育的跨越式发展具有重要的意义。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月11日 09:51:35　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2016/20160331154544811216800/20160331154544811216800_.html" target="_blank">北京2017年启动高考综合改革 将取消本...</a></h3>
+              <p>北京教育考试院有关负责人介绍，根据方案要求，北京将从秋季入学的普通高中起始年级开始实施高中学业水平考试，实行合格性考试和等级性考试；将取消本科三批，与本科二批合并；英语听力考试要从笔试中分离，一年两次机考等。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2016/20160316151250164549741/20160316151250164549741_.html" target="_blank">清华等19所在京高校启动自主招生</a></h3>
+              <p>教育部“阳光高考平台”近日陆续公布全国高校2016年自主招生简章。截至15日上午，除北大外，清华、人大、北航等19所在京高校已全部公布各自招生方案，启动自主招生报名工作。对于特别优秀的考生，部分高校可降至一本线录取。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150511171050077748598/20150511171050077748598_.html" target="_blank">清华校长致信高考生邀其来“超越自我”</a></h3>
+              <p>　　清华大学新任校长邱勇昨天向2015年高考考生公开发出邀请信，邀请他们加入清华人的行列，在清华园“发现自我、完善自我、超越自我”。    　　邱勇引用自己的经历：32年前，我怀着人生梦想来到清华，从此就一直浸润在这个美丽而充满生机的园子里。今天，你们像当年的我一样，怀揣梦想、憧憬未来。如果你们要问我:“大学有多大？”我会告诉你们：“清华足够大，就看你的梦想有多大。”他还在信中写道：“清华大学培养的不是仅有一技之长的匠人，而是具有领导力的未来社会引领者、开创者和创新者。也许你已经习惯了为有标准答案的难题做解，但未来你终将要去回答那些还没有答案的题目，乃至去开辟前人尚未涉足的全新领域。”</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150511100437211428103/20150511100437211428103_.html" target="_blank">清华大学校长邱勇致2015年高考考生的邀...</a></h3>
+              <p>水木清华，人文日新。在这个明媚的春天里，我代表清华大学，诚挚地邀请你们加入清华人的行列，在美丽的清华园继续追逐自己的人生理想。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2015/20150107133623976664264/20150107133623976664264_.html" target="_blank">王殿军：学生综合素质，怎么评</a></h3>
+              <p>　　高考招生制度改革历来被视作教育改革中“牵一发动全身”的重点领域和关键环节，而综合素质评价又是其中颇为关键的一个环节。    　　近日，随着《教育部关于普通高中学业水平考试的实施意见》和《教育部关于加强和改进普通高中学生综合素质评价的意见》出台，各种忧虑和担心也浮现出来。在具体落实中，综合素质评价能不能保证科学性、公正性？它和学业考试又是什么关系？对此，记者专访了清华附中校长王殿军。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141218164717393366813/20141218164717393366813_.html" target="_blank">取消六项全国性高考加分 自主招生改在高考...</a></h3>
+              <p>　　17日，教育部、国家民委、公安部、国家体育总局、中国科学技术协会联合公布《关于进一步减少和规范高考加分项目和分值的意见》，2015年1月1日起，取消6项全国性加分项目，保留和完善5项全国性加分项目。大幅减少地方性加分项目，地方性加分原则上只适用于本省份所属高校在本省份招生。同日，教育部发布《关于进一步完善和规范高校自主招生试点工作的意见》，直接回应自主招生这一社会热点。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141217140418563205482/20141217140418563205482_.html" target="_blank">未来高考总成绩怎么计算</a></h3>
+              <p>　　12月16日，教育部网站发布《教育部关于普通高中学业水平考试的实施意见》和《教育部关于加强和改进普通高中学生综合素质评价的意见》，这是《国务院关于深化考试招生制度改革的实施意见》的两个重要配套政策文件。新的普通高中学业水平考试和综合素质评价会为高中教育教学带来什么样的冲击？会给高考带来什么样的变化？让我们来逐一梳理此次改革的关键点。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140905144800058349156/20140905144800058349156_.html" target="_blank">告别一次考试定终身</a></h3>
+              <p>　　在国务院新闻办公室4日举行的新闻发布会上，教育部副部长杜玉波、刘利民，部长助理林蕙青介绍了深化考试招生制度改革的有关情况。这次改革着力解决社会反映强烈的问题，缩小区域及城乡入学机会差距，增加农村学生上重点大学人数，减少高考加分项目和分值，自主招生在高考后进行并且不得联考，高职院校与普通高校分类考试。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140905144532036804502/20140905144532036804502_.html" target="_blank">大学录取依据高考和高中学业水平成绩，参考...</a></h3>
+              <p>　　近日，国务院印发了《关于深化考试招生制度改革的实施意见》，标志着新一轮考试招生制度改革全面启动。教育部负责人就这次改革接受了本报记者专访。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140904121535788340273/20140904121535788340273_.html" target="_blank">高考改革方案公布：外语仍必考 不分文理科</a></h3>
+              <p>　今天上午，国务院发布《国务院关于深化考试招生制度改革的实施意见》。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140623180258553324685/20140623180258553324685_.html" target="_blank">2014高考清华附中学生获得两个文理科第一</a></h3>
+              <p>6月23日，2014年北京市高考成绩发布。清华大学附属中学高1105班学生孙一先以704分获北京市文科实考总分第一名。同时，高1107班学生王悦以实考716分获海淀区理科第一名，计入加分后总分为726分，是北京市理科投档分第一名。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140519162254529548150/20140519162254529548150_.html" target="_blank">教育部：高考改革方案仍在研究制定完善中</a></h3>
+              <p class="thnews_jqzy">　　教育部：高考改革方案仍在研究制定完善中来源：新华网 2014-5-19 吴晶针对&ldquo;高考改革方案2017年实施，英语退出统考&rdquo;的传闻，教育部新闻发言人续梅18日在接受新华社记者采访时表示，考试招生制度改革特别是高考改革事关千万学子和广大群众切身利益，十分重要、十分复杂、十分敏感。目前，教育部正在前期深入调研的基础上，紧锣密鼓地研究制......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140408165151708482097/20140408165151708482097_.html" target="_blank">“技能型”还是“学术型”——高考该如何选...</a></h3>
+              <p>寒窗苦读十二载，当考生争先恐后闯高考这座独木桥时，有人春风得意，如愿以偿；有人郁郁寡欢，铩羽而归。此前，教育部副部长鲁昕透露，我国即将出台方案，实现技能型和学术型两类人才、两种模式高考。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140324133416177480625/20140324133416177480625_.html" target="_blank">教育部副部长：我国将出台高考改革方案 推...</a></h3>
+              <p>教育部副部长鲁昕22日在中国发展高层论坛上表示，我国即将出台方案，实现两类人才、两种模式高考。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140116160115987746395/20140116160115987746395_.html" target="_blank">高考改革方案确定“1＋5” “有意愿、有...</a></h3>
+              <p>教育部部长袁贵仁15日在此间举行的2014年全国教育工作会议上说，教育部将出台“总体方案”和关于高考、外语一年多考、高中学业水平考试、综合素质评价、考试招生违规处理等5个配套“实施意见”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20131227112931593464366/20131227112931593464366_.html" target="_blank">教育部：高考改革方案预计明年上半年发布</a></h3>
+              <p class="thnews_jqzy">　　教育部新闻发言人：高考改革方案预计明年上半年发布来源：新华网 2013-12-26 吴晶教育部新闻发言人续梅26日在教育部新闻办官方微博&ldquo;微言教育&rdquo;进行微访谈时表示，目前教育部正在按照十八届三中全会精神，研究制定考试招生制度改革的总体方案及高考改革等各领域改革实施意见，预计明年上半年发布。据她介绍，各省份2014年年底出台当地......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20131205141012143854619/20131205141012143854619_.html" target="_blank">教育部：考试招生总体方案即将面向全社会公...</a></h3>
+              <p class="thnews_jqzy">　　教育部：考试招生总体方案即将面向全社会公开征求意见来源：新华网 2013-12-5 吴晶 刘奕湛教育部副部长刘利民5日在接受记者采访时表示，根据党的十八届三中全会的部署，教育部已经完成制定考试招生总体方案，即将面向全社会公开征求意见。之后，修改完善，印发实施。刘利民说，《中共中央关于全面深化改革若干重大问题的决定》明确考试招生制度改革的顶层设计，是我......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131023141748033602591/20131023141748033602591_.html" target="_blank">给考生更多选择权——专访清华大学招办主任...</a></h3>
+              <p>21日，北京公布中高考改革方案，这一被称为北京地区“力度和广度前所未有”的改革，为酝酿已久的遍及全国的高考改革释放了怎样的信号？又将对中学教育乃至高等教育产生何种影响？本报记者就此采访了清华大学招办主任于涵。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9942/2013/20130822141920295380535/20130822141920295380535_.html" target="_blank">北京高考理科头名 开始体验大学生活</a></h3>
+              <p class="thnews_jqzy">　　北京高考理科头名 开始体验大学生活 光环褪去心态放平连遇&ldquo;牛人&rdquo; 头名&ldquo;变&rdquo;普通来源：法制晚报 2013-8-21 王贺健一个人、一个背包、一个行李箱&mdash;&mdash;作为首批报到的新生，北京2013年高考理科头名朱宸卓，上周六就出现在清华大学校园中。6年，这是他对这个校园的熟悉度，但那只是作......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130725100929838504444/20130725100929838504444_.html" target="_blank">清华今年录取湖北学子144人 志愿满足率...</a></h3>
+              <p class="thnews_jqzy">　　清华今年录取湖北学子144人 志愿满足率99%录取人数连续5年增长 统招线上95%考生满足第一志愿专业清华新闻网7月25日电清华大学2013年湖北招生录取工作圆满结束。今年清华在鄂招收各类考生总数144人，比去年多招收9名考生，连续5年保持了招生人数的增加，比2009年的119人，扩大了25人，扩招比例达到21%。2013年理科优秀考生仍青睐清华大学，高......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2013/20130705114112915117593/20130705114112915117593_.html" target="_blank">李强：高考改革应取消加分恢复全国统一命题</a></h3>
+              <p class="thnews_jqzy">　　社会学家李强：高考改革应取消加分恢复全国统一命题来源：中国青年报 2013-7-5 王聪聪 曹原我们建议高考恢复全国统一命题，并取消加分。因为调查研究数据证明，这样做会更有利于考生们公平竞争，更有利于防止权力寻租或腐败。考察世界各国的考试制度，制度设计的核心理念都是公平竞争。在任何制度下，差异都不可能完全避免，但国家首先要在制度设计上做到公平公正。时......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130624084230268999847/20130624084230268999847_.html" target="_blank">清华附中朱宸卓获北京市高考理科实考分第一名</a></h3>
+              <p class="thnews_jqzy">　　清华附中朱宸卓获北京市2013年高考理科实考分第一名清华新闻网6月24日电6月23日，2013年北京市高考成绩发布，清华附中学生朱宸卓以725分获得北京市理科实考总分第一名。其中语文142分，数学148分，英语145分，理科综合290分。图为朱宸卓（右二）与清华附中高三年级组长等教师合影。&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&n......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130617162556186749859/20130617162556186749859_.html" target="_blank">清华大学全面启动2013年高考招生工作</a></h3>
+              <p>2013年清华大学计划招收本科生3372人，与去年持平。按照“优化生源结构，促进教育公平”的原则，在保持全国各省招生计划总量相对稳定的同时，重点将招生计划向高等教育欠发达且生源数量相对较多、升学压力较大的地区倾斜。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130608114742023751300/20130608114742023751300_.html" target="_blank">假如爱迪生来到21世纪……</a></h3>
+              <p class="thnews_jqzy">　　假如爱迪生来到21世纪&hellip;&hellip;&mdash;&mdash;今年北京高考作文引出的话题来源：科技日报 2013-6-8 操秀英 游雪晴两位诺贝尔奖得主的一段对话成了今天北京7.2万高考考生的作文题。尽管并没有指明出处，但很显然，这段对话的主人公正是诺贝尔物理学奖获得者杨振宁与诺贝尔文学奖得主莫言。（科技日报5月20日曾刊发《杨振......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130416093601513508898/20130416093601513508898_.html" target="_blank">清华校长陈吉宁向高考同学发出邀请信 共铸...</a></h3>
+              <p>“不仅因为清华是有志青年开启人生梦想的地方，更因为这里是探寻和铸就‘中国梦’的舞台”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130320144140474296239/20130320144140474296239_.html" target="_blank">英语一年多考昭示高考改革方向</a></h3>
+              <p class="thnews_jqzy">　　英语一年多考昭示高考改革方向选拔性测试向水平测试转变来源：中国青年报 2013-3-20 陈竹 孙艺璇教育部在3月初举行的新闻发布会上，放出的一个改革信号备受关注：高考英语科目一年多次考试的实施办法将于今年出台。这意味着以英语为突破口，高考&ldquo;一年多考&rdquo;改革将正式进入实施程序。事实上，探索高考&ldquo;一年多考&rdqu......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130110151631900974567/20130110151631900974567_.html" target="_blank">高考改革 今年搭框架</a></h3>
+              <p class="thnews_jqzy">　　2013年教育工作会议9日召开，教育部部长袁贵仁回应热点高考改革 今年搭框架用好管好经费成重点来源：人民日报 2013-1-10 张烁2013 教育新看点□ 保证教育经费从分配、使用到评估都在阳光下运行□ 推进政事分开、管办分离，扩大学校办学自主权□ 研究提出高考改革的总体目标和基本框架□ 全面清理针对民办教育的歧视政策，鼓励社会力量办教......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2012/20121217161512939843882/20121217161512939843882_.html" target="_blank">谢维和：高等学校的三种入学形式</a></h3>
+              <p class="thnews_jqzy">　　高等学校的三种入学形式&mdash;&mdash;从高考制度改革的&ldquo;兼顾原则&rdquo;及其变量说起来源：中国教育报 2012-12-14 谢维和（编者按）12月，进入普通高考报名阶段，与高考相关的问题再度渐入人们的视野。自2011年9月以来，清华大学谢维和教授在中国教育报先后刊发文章，提出高中教育的新定位问题，引发教育界讨论。为此，本版开......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20121031163406379197422/20121031163406379197422_.html" target="_blank">2014年起奥赛获奖生不再具备高考保送资格</a></h3>
+              <p class="thnews_jqzy">　　2014年起奥赛获奖生不再具备高考保送资格来源：中国广播网 2012-10-30 刘玉蕾据中国之声《央广新闻》报道，北京市教委在日前召开的北京市中小学校长大会上再次发出申明，凡是与公办学校升学挂钩的各类培训班，包括有或明或暗联系的一律叫停，进行重点清理整顿。有一个比较形象的例子，说奥赛就像孙悟空脑袋上的紧箍咒，箍着孩子们的学业生活。保送制度不够完善，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2012/20120614160736167107903/20120614160736167107903_.html" target="_blank">首批高考通知书 上午开投</a></h3>
+              <p class="thnews_jqzy">　　首批高考通知书 上午开投对象为500余名清华保送生 上面首印新生照片 并有校长亲笔签名 北京考生有望明后天收到来源：法制晚报 2012-06-13 徐天今天，清华大学正式投递500多封保送生的录取通知书。据了解，这是北京市首批投递的录取通知书。上午9点30分，清华大学招办的老师们正忙着装通知书。小间会议室里的圆桌上，满满当当地铺着录取通知书内装的各类......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120614151722215867740/20120614151722215867740_.html" target="_blank">北京副市长洪峰到清华高考数学阅卷点检查指...</a></h3>
+              <p class="thnews_jqzy">　　北京副市长洪峰到清华2012年高考数学阅卷点检查指导工作清华新闻网6月14日电（记者李含）6月13日，北京市副市长、市招考委主任委员洪峰来到清华大学，检查指导2012年高考评卷工作，并与清华大学2012年高考评卷相关负责人进行了座谈。北京市委教育工委副书记、市政府教育督导室主任线联平、北京教育考试院院长王健、北京教育考试院副院长李鸿江、北京教育考试院高招......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120612163623581380195/20120612163623581380195_.html" target="_blank">58.1%的人认同真优生不保送也能脱颖而出</a></h3>
+              <p class="thnews_jqzy">　　万人民调：58.1%的人认同真优生不保送也能脱颖而出54.3%的人认为保送生制度难以选出真正人才，41.5%的人赞成取消高考保送生制度来源：中国青年报 2012-06-12 卢迪迪 黄冲日前，教育部&ldquo;阳光高考&rdquo;网公示的数据显示，2012年，北京大学、清华大学、上海交通大学等高校拟录取的保送生占本科招生计划的10%以上，中国科技大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120609173813133667208/20120609173813133667208_.html" target="_blank">清华大学全面启动2012年高考招生工作</a></h3>
+              <p>今年，清华大学本着“因材施招、寓教于招、重点扩招”的理念，推出了一系列新的招生工作举措，如向中西部地区增加招生计划、“清华学堂人才培养计划”在高考后面试录取、与空军合作招收“飞行员班”等等。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120410111317818656142/20120410111317818656142_.html" target="_blank">李强：“不能让民工子弟在高考制度上再处弱...</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;不能让民工子弟在高考制度上再处弱势&rdquo;&mdash;&mdash;专访清华大学人文学院院长李强来源：21世纪经济报道 2012-04-10 定军 黄赟近日，有关北大、清华等名校学生出身问题讨论甚嚣尘上。清华大学人文学院院长李强进行的一项研究发现，重点大学的确有农村学生比例下降的问题。李强认为，解决该问题，需要建立一个机会公平的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120409154606652708068/20120409154606652708068_.html" target="_blank">校长陈吉宁致高考生同学们的邀请信</a></h3>
+              <p class="thnews_jqzy">　　编者按近日，清华大学校长陈吉宁致信广大高考学生，帮助大家了解大学、选择大学，并诚挚地邀请有理想、有追求、有担当的同学们进入清华园，同负时代重任，放飞人生理想。在高考倒计时60天之际，我们将这封&ldquo;邀请信&rdquo;的全文刊登，希望借此帮助和激励广大考生立大志、下苦功、圆梦想。&nbsp;致高考生同学们的邀请信亲爱的同学们：看到这封信的时候......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110721104837130318294/20110721104837130318294_.html" target="_blank">成都“小帕瓦罗蒂”昨收到清华录取通知书</a></h3>
+              <p class="thnews_jqzy">　　成都&ldquo;小帕瓦罗蒂&rdquo;昨收到清华录取通知书来源：成都晚报&nbsp; 2011-07-20&ldquo;王胤泽：已录清华大学材料科学与工程专业。&rdquo;成都晚报记者昨日获悉，树德中学王胤泽收到了清华大学的录取通知书。王胤泽17岁开独唱会、18岁通过清华大学自主招生艺术特长生选拔考试，因对意大利歌剧精湛的演艺，被大家称为&......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110721104637286490365/20110721104637286490365_.html" target="_blank">湖南首份高考录取通知书送达 “雨果”上清华</a></h3>
+              <p class="thnews_jqzy">　　湖南首份高考录取通知书送达 &ldquo;雨果&rdquo;上清华来源：红网 2011-07-20今天（7月20日）10时，家住长沙市芙蓉南路上林苑的禹果，从长沙市邮政速递物流有限公司的工作人员的手中接过了来自清华大学的录取通知书，专业是建筑环境与设备工程。这是湖南今年投递到考生手中的第一封录取通知书。&ldquo;这是我一直的梦想，今天终于梦想......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110719145914850404473/20110719145914850404473_.html" target="_blank">清华在鄂录取结束 招生人数迈上新高</a></h3>
+              <p class="thnews_jqzy">　　清华在鄂录取结束 招生人数迈上新高优秀考生云集&nbsp; 在鄂招生总数达134人清华新闻网7月19日电清华大学2011年湖北招生工作于7月18日全部结束。在提前批、自主招生和统招批次录取中，湖北省93名理科考生和8名文科考生梦圆清华，文理统招的志愿满足率达到100%。连同此前已录取的33名保送生，清华今年在鄂录取总数达134人。优秀考生云集清华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110719145316418313060/20110719145316418313060_.html" target="_blank">清华在吉林高考录取结束 文理科分数线继续...</a></h3>
+              <p class="thnews_jqzy">　　清华在吉林高考录取结束 文理科分数线继续保持领先清华新闻网7月19日电清华大学在吉林省的高考录取工作于日前顺利结束。今年清华大学通过高考录取吉林省学生72人，其中理工类考生66人，统招录取分数线为684分；文史类考生6人，统招录取分数线为652分。理工类考生中包括国防生4人，国防录取最低分数为674分；定向生2人，定向录取最低分数为680分。加上此前已录......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110719143855743546383/20110719143855743546383_.html" target="_blank">清华在四川高考录取结束 135名优秀学子...</a></h3>
+              <p class="thnews_jqzy">　　清华在四川高考录取结束 135名优秀学子圆梦清华清华新闻网7月19日电目前，清华大学在四川省高考录取工作顺利结束。据悉，今年清华大学通过高考录取四川省学生102人，其中，理工类考生86人，统招录取分数线为649分，提前批次定向录取分数线为646分；文史类考生16人，统招录取分数线为624分。此前，清华大学已录取四川省保送生30人，艺术类考生3人，文体......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110719142704835634644/20110719142704835634644_.html" target="_blank">清华在皖录取结束 生源优秀翻番扩招</a></h3>
+              <p class="thnews_jqzy">　　清华在皖录取结束 生源优秀翻番扩招清华新闻网7月19日电日前，清华大学在安徽省高考录取工作顺利结束。今年清华大学通过高考录取安徽省学生99人，实际招生的数量就比原计划47人翻了一番多。其中，文史类考生录取8人，统招录取分数线为635分。理工类考生91人，包括统招录取76人，分数线为670分；国防生录取7人，分数线663分(女653)；定向生录取8人，分数......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110718193100756417537/20110718193100756417537_.html" target="_blank">清华大学加大对新疆西藏招生支持力度</a></h3>
+              <p class="thnews_jqzy">　　清华大学加大对新疆西藏招生支持力度清华新闻网7月18日电目前，清华大学2011年招生录取工作正在进行。据了解，今年清华大学进一步加大了在新疆、西藏两地的招生工作力度，录取人数创历史新高，录取专业更加多样，越来越多的新疆、西藏优秀学子成为了&ldquo;清华人&rdquo;。据悉，清华大学今年共在新疆招收新生46人，共在西藏招收新生9人，均为近年来的最......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110718192346737229014/20110718192346737229014_.html" target="_blank">清华在海南高考录取结束 文科分数线再创历...</a></h3>
+              <p class="thnews_jqzy">　　清华在海南高考录取结束 文科分数线再创历史新高清华新闻网7月18日电7月15日，清华大学在海南省的高考录取工作顺利结束。2011年清华大学通过高考共录取海南考生14人，其中理工类考生12人，统招录取分数线为858分；录取文史类考生2人，统招录取分数线为902分，文科投档分数线创下海南省高考录取文史类的历史最高分。此前，清华大学已录取海南省保送生2人，20......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110718190608482131066/20110718190608482131066_.html" target="_blank">清华在山西高考录取结束 大幅扩招汇集英才</a></h3>
+              <p class="thnews_jqzy">　　清华在山西高考录取结束 大幅扩招汇集英才清华新闻网7月18日电日前，清华大学在山西省高考录取工作顺利结束。今年清华大学通过高考录取山西省学生77人。其中，理工类考生71人，统招录取分数线为662分，国防生录取分数线为656分，定向生录取分数线为658分；文史类考生6人，统招录取分数线为624分，国防生录取分数线为609分，日语提前批录取分数线为609分。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110718185831265896445/20110718185831265896445_.html" target="_blank">清华在江苏高考录取结束 录取总人数历年最高</a></h3>
+              <p class="thnews_jqzy">　　清华在江苏高考录取结束 录取总人数历年最高清华新闻网7月18日电日前，清华大学在江苏省高考录取工作顺利结束。今年清华大学通过高考录取江苏省学生133人，其中理科考生106人，统招录取分数线405分；文科考生27人，统招录取分数线为390分。此前，清华大学已录取江苏省保送生49人，艺术类考生3人，文体特长生3人。今年江苏省共有188名优秀高中学子圆梦清华。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110715095040206393389/20110715095040206393389_.html" target="_blank">清华在新疆高考招生结束 录取人数创历史新高</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;清华在新疆高考招生结束&nbsp;&nbsp;录取人数创历史新高&nbsp;清华新闻网7月15日电&nbsp;&nbsp;&nbsp;&nbsp;日前，清华大学在新疆高考录取工作顺利结束。据悉，今年清华大学通过高考录取新疆学生28人，比原计划增加了8个名额。其中，理工类考生23人，统招录取分数线为670分；文史类考生5人，统招录取分数线为62......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110711141657755725628/20110711141657755725628_.html" target="_blank">清华大学在京高考录取结束</a></h3>
+              <p class="thnews_jqzy">　　精心选才&nbsp; 质量兼收清华大学在京高考录取结束400名优秀高中毕业生圆梦清华清华新闻网7月11日电&nbsp;&nbsp; &nbsp;日前，清华大学在京高考录取工作顺利结束。据悉，今年清华大学通过高考录取北京学生270人。其中，理工类考生239人（含提前批次3人），录取分数线为651分；文史类考生31人（含提前批次3人），统招录取分数线为641......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110708144104174450003/20110708144104174450003_.html" target="_blank">清华提前批次分数线确定</a></h3>
+              <p class="thnews_jqzy">　　清华提前批次分数线确定文科646分、理科659分，中国人民大学、北师大、对外经贸大学等高校也确定小语种提前批次调档线来源：新京报 2011-07-08 郭少峰昨晚清华大学确定了该校在京提前批次的录取分数线，其中文科提前批次调档线646分，理科调档线为659分。昨天，中国人民大学、北京师范大学、对外经贸大学等高校也确定了各自小语种提前批次的调档线。提前......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110706141001926785326/20110706141001926785326_.html" target="_blank">清华2011录取工作拉开序幕  在沪录取...</a></h3>
+              <p>今年清华通过高考共录取上海学生81人，其中，理工类考生64人，文史类考生19人。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9908/2011/20110628102136457860062/20110628102136457860062_.html" target="_blank">顶你上清华：解密河南学子成就清华之路</a></h3>
+              <p class="thnews_jqzy">　　顶你上清华：解密河南学子成就清华之路大河网-大河报 2011-06-27核心提示清华的优秀学子，在学习方法、读书习惯、爱好特长等方面表现出来的与众不同之处，往往有值得他人学习、借鉴的地方。本报与清华大学联合推出&ldquo;顶你上清华&rdquo;活动&mdash;&mdash;独家专访报考清华的优秀豫籍考生。他们鲜花绽放的背后有哪些精彩的故事，是怎......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110628101715116250040/20110628101715116250040_.html" target="_blank">湖南2011年高考状元杨倩：复读就为上清华</a></h3>
+              <p class="thnews_jqzy">　　湖南2011年高考状元杨倩：复读就为上清华来源：潇湘晨报 2011-06-28长沙同升湖实验学校杨倩：语文130分 数学133分 英语146分 理科综合288分（少数民族加分20分）湖南理科档案最高分 717分&ldquo;复读的人心里总是有块阴影，带着些悲伤和绝望的影子。&rdquo;紫色T恤，灰色帆布鞋，低头踢着地上的小石块，第一眼看上去有些羞涩......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110628100959458533871/20110628100959458533871_.html" target="_blank">清华签走3个云南考分第一</a></h3>
+              <p class="thnews_jqzy">　　清华签走3个云南考分第一来源：昆明日报 2011-06-28从清华大学云南招生组了解到：继今年我省高考理科总分第一名（含加分）刘寒，文科总分第一名（含加分）、来自建水一中的王栩淳签约进入清华大学之后，昨天，我省今年高考理科裸分第一名刘璐瑶也已与清华大学签约。今年我省高考理科裸分第一、来自云南师大附中的刘璐瑶昨日签约清华大学经管学院&ldquo;经济与......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110628100745203283074/20110628100745203283074_.html" target="_blank">济南15岁神童高考得696分被清华录取</a></h3>
+              <p class="thnews_jqzy">　　济南15岁神童高考得696分被清华录取来源：青岛早报 2011-06-27&nbsp;696分，这是个人人羡慕的高考成绩，如果知道这名来自济南济北中学的考生闫志存只有15岁，估计很多人会大吃一惊。昨天记者了解到，闫志存之前已获得了清华大学自主招生资格，被清华录取几乎是板上钉钉的事。数学133分没发挥好昨天下午6时许，记者拨通闫志存的电话时，他正准......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110615141855162593360/20110615141855162593360_.html" target="_blank">为清华“不对外公布状元数”喝彩</a></h3>
+              <p class="thnews_jqzy">　　为清华&ldquo;不对外公布状元数&rdquo;喝彩来源：国际在线 2011-06-14 赵木木&ldquo;今年肯定不会对外公布状元数，&rdquo;6月9日，清华大学新闻发布会后接受采访时，招生办主任于涵表示。于涵说，每年高考后社会都会关注状元，&ldquo;一年炒作一次，没人思考成才观和选材观。&rdquo;&ldquo;高考选拔的确能招到很多优......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110614152109773445848/20110614152109773445848_.html" target="_blank">我是怎样成为清华新生的</a></h3>
+              <p class="thnews_jqzy">　　解密优秀生成才规律，钱报家长会网站&ldquo;www.qbedu.com.cn&rdquo;讲述我是怎样成为清华新生的来源：钱江晚报 2011-06-14 章咪佳从今天起。这是一个关于优秀学生成长的故事，他们都是今年被清华大学相中的浙江学子。&ldquo;高考一结束，大家比较关注的是高考分数，能不能上某所学校？报什么专业？&rdquo;清华大学招办......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110611114954361610256/20110611114954361610256_.html" target="_blank">清华称今年不公布高考状元数</a></h3>
+              <p class="thnews_jqzy">　　清华大学称今年不公布高考状元数2011年06月10日《新京报》本报讯 (记者郭少峰)&ldquo;今年肯定不会对外公布状元数，&rdquo;昨天，清华大学新闻发布会后接受采访时，招生办主任于涵表示。去年，北大公布录取状元数之后，清华随即公布状元数，导致两校在状元数上有明显冲突，这被理解为中国高校之争的一个现状，今年清华率先承诺不会对外公布状元数。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110610171223488473614/20110610171223488473614_.html" target="_blank">清华尝试“多元选才”</a></h3>
+              <p class="thnews_jqzy">　　打破唯分数论因材施招清华尝试&ldquo;多元选才&rdquo;来源：中国教育报 2011-06-10&nbsp; 唐景莉&ldquo;顶你上清华&mdash;&mdash;2011新生成长故事&rdquo;活动从今天开始在全国推出。清华大学招办主任于涵表示，优秀学生绝不简单等同于成绩的优秀，更远非高考高分所能全部涵盖。在今年清华的各类招生中，一大批这样......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110609151547821624332/20110609151547821624332_.html" target="_blank">清华大学启动2011年高考招生工作</a></h3>
+              <p>为了给考生提供更好的招生服务，清华大学进一步调整招生工作理念和措施，推出包括清华学堂人才培养计划面向高考直接招生、“顶你上清华”活动、专业填报深度咨询等新举措，优化选才机制。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2011.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232616890591371/20110225232616890591371_.html" target="_blank">清华大学等名校联考助推中国高考改革</a></h3>
+              <p class="thnews_jqzy">　　清华大学等名校联考助推中国高考改革&nbsp;来源：新华网 2011-02-20 李江涛19日上午9时，清华大学、中国科技大学、上海交通大学等7所中国著名高校合作进行的自主招生考试在中国各地的33个城市同时开考，10万多名报名者中，有6万多考生通过预审参加考试。与此次考试类似的是，北京大学、北京航空航天大学等13所高校和北京理工大学、天津大学等8校的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2011.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232611968962437/20110225232611968962437_.html" target="_blank">清华大学大三学生蒋方舟：希望能有“相亲式...</a></h3>
+              <p class="thnews_jqzy">　　清华大学大三学生蒋方舟：希望能有“相亲式”的高考来源：京华时报 2011-1-4&nbsp; 周逸梅十年来，在高校高考招生上，我看见包括清华在内的很多高校都在努力，希望能扩大自主权，不停在撞体制的天花板。就我自己来说，肯定希望高校的自主权能越来越大。我期望的底线是：十年后中国能出现有特色的大学，学校和学生的气质是一样的，学生可以分享到学校的气质。而不是现......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232559281983573/20110225232559281983573_.html" target="_blank">教育部：高校自主招生不会变成小高考</a></h3>
+              <p class="thnews_jqzy">　　教育部：高校自主招生不会变成小高考明年起小语种考生全部参加高考来源：中国青年报 2010-11-26在教育部今天举行的例行新闻发布会上，教育部新闻发言人在回应“保送生政策调整会否影响自主招生”时表示，自主招生是高考改革的一个方向，它一方面要保证高考公平公正，另一方面要体现高考多元标准的评价取向。这位发言人认为，自主招生不会变成新的“小高考”。前不久，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232523812347565/20110225232523812347565_.html" target="_blank">清华2010年本科招生结束</a></h3>
+              <p class="thnews_jqzy">　　清华2010年本科招生结束【新闻中心讯】多年来，清华高考录取成绩一直在全国高校中保持领先。今年，则在已有的基础上又有了新的提高。3350余名全国各地的优秀考生云集清华。各省高考第一名一直为社会所广泛关注。重视高考高分，但不唯高考高分，是清华大学一贯的做法。和往年一样，在招生咨询中，清华大学对于这些第一名的情况进行了重点了解，对那些综合素质优秀、学业一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232505359340927/20110225232505359340927_.html" target="_blank">清华不再以“状元”论英才</a></h3>
+              <p class="thnews_jqzy">　　清华不再以“状元”论英才5人获60分优惠　玉树抗震小英雄获保送来源：光明日报 2010-06-10“‘状元’将不再是优秀学生的唯一标准”，清华大学2010年高考招生工作今天启动，清华大学招办主任孟芊表示，多元评价、公平录取是清华大学本科招生的重要特点，在多元评价机制下，综合素质优秀、各方面独具专长的优秀学生将有更多机会走进清华园。近年来，清华大学积极......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232505406484564/20110225232505406484564_.html" target="_blank">清华2010年招生启动 多元人才成录取对象</a></h3>
+              <p class="thnews_jqzy">　　清华2010年招生工作启动 多元人才成录取对象来源：中广网 2010-06-10据中国之声《新闻纵横》7时40分报道，随着高考结束，清华大学2010年高考招生工作正式启动。作为国内顶尖学府，社会各界纷纷探寻，究竟什么样的学生才是清华优秀生？清华优秀生的选拔标准是什么？清华大学招生办主任孟芊强调：今年清华将着力推进“多元评价、公平录取”的理念，未来“状元”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232505453293231/20110225232505453293231_.html" target="_blank">清华高招重“多元”</a></h3>
+              <p class="thnews_jqzy">　　清华高招重“多元” “状元”不再是唯一来源：人民日报 2010-06-10记者9日从清华大学招生办公室获悉：在清华大学2010年高考招生工作中，将不会单纯以分数作为“优秀生”的评价标准，这也意味着“状元”将不再是唯一，综合素质优秀、各方面独具专长的优秀学生将有更多机会走进清华园。清华大学招生办主任孟芊介绍，清华大学今年将继续推行多元化评价体系，“优秀......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232505500381859/20110225232505500381859_.html" target="_blank">清华大学破格录取两名优秀学生</a></h3>
+              <p class="thnews_jqzy">　　清华大学破格录取两名优秀学生来源：新华网 2010-06-09清华大学今年的高考招生录取将采取多元化评价机制，不单纯以分数为评价标准。在玉树地震中勇救同学的中学生尕玛朋措等两名优秀学生被清华破格录取。清华大学招生办主任孟芊在9日召开的新闻发布会上介绍，青海玉树第二民族中学的尕玛朋措同学自幼家境贫寒，曾两次辍学，但是又凭着顽强的求学欲望和学校的帮助重返......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232503062513306/20110225232503062513306_.html" target="_blank">957万人报名参加2010年高考</a></h3>
+              <p class="thnews_jqzy">　　957万人报名参加2010年高考 平均录取率近70%来源：新华网 2010-06-03根据教育部2日公布的消息，2010年全国共有957万人报名参加高考，比去年减少约65万名；计划招生657万名，平均录取率比去年增加近7个百分点。教育部高校学生司副司长姜钢说，今年高考报名人数是在2008年达到峰值后第二年下降，主要原因是适龄人口和高中毕业生减少。与此......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232449453301432/20110225232449453301432_.html" target="_blank">西城考生扎堆报考清华北大</a></h3>
+              <p class="thnews_jqzy">　　西城考生扎堆报考北大清华北京青年报 2010-05-12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 邓兴军今年，清华大学、北京大学在全市计划招生465人，而西城高三学生预填报这两所高校的人数达408人。为了避免出现高考填报志愿扎堆影响录取的现象，西城招生考试中心公布了今年高考生预填报志愿的情况。从今天开始，本市高考填报志愿正式开始，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232435406658287/20110225232435406658287_.html" target="_blank">上海13所高校认可台湾“高考”</a></h3>
+              <p class="thnews_jqzy">　　上海13所高校认可台湾“高考”对成绩达标的台湾高中生面试合格即可录取东方早报 2010-04-21上海市教委昨天转发教育部通知，为方便台湾高中毕业生来大陆接受高等教育，自2010年起大陆高等学校可依据台湾地区大学入学考试学科能力测验（简称“学测”）成绩招收台湾高中毕业生。招收台湾学生的普通高等学校全国共有123所，其中上海地区有13所。13所招收台湾......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232419046932112/20110225232419046932112_.html" target="_blank">教育部：高考改革方向为分类考试、综合评价...</a></h3>
+              <p class="thnews_jqzy">　　教育部：高考改革方向为分类考试、综合评价、多元录取新华网 2010-03-12在十一届全国人大三次会议新闻中心12日举行的“国家中长期教育改革和发展规划纲要”集体采访中，教育部政策法规司司长孙霄兵表示，高考制度应当存在，但要逐步改革，形成分类考试、综合评价、多元录取的考试制度。孙霄兵说，高考问题是一个涉及到全面推进素质教育、减轻学生负担的重要问题。在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232415562939478/20110225232415562939478_.html" target="_blank">校长顾秉林：高考制度让学生太累</a></h3>
+              <p class="thnews_jqzy">　　清华大学校长顾秉林：高考制度让学生太累北京晨报 2010-03-05●按各地考生人数来确定招生指标，就好比按姓氏占百家姓的比例来确定指标一样。这个办法不合理。●有些地区为了解决退休干部的级别问题，而把干部派到学校去，特别影响学校的发展。●清华大学分房都是依照学术来考虑，行政级别影响不大。继教育部此前声称“历来反对文理分科”之后，全国政协委员、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232316562658053/20110225232316562658053_.html" target="_blank">清华大学高考招生录取部分省市分数线出炉</a></h3>
+              <p class="thnews_jqzy">　　清华大学高考招生录取部分省市分数线出炉【新闻中心讯】继上海市之后，清华大学日前在清华本科招生网上公布了北京、天津、广东等部分省市的高考招生录取分数线。为方便考生及时了解清华大学的招生录取情况，清华大学还将在清华大学本科招生网（http://join-tsinghua.edu.cn）上陆续公布录取分数线等信息。被录取的考生还可通过清华大学本科招生网首页......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232315359503801/20110225232315359503801_.html" target="_blank">清华在网上公布高考招生录取结果</a></h3>
+              <p class="thnews_jqzy">　　清华在网上公布高考招生录取结果【新闻中心讯】为方便考生及时了解清华大学的招生录取情况，清华大学在清华大学本科招生网（网址：http://join-tsinghua.edu.cn）上陆续公布录取分数线等信息。被录取的考生还可通过清华大学本科招生网首页左上角的“录取查询”服务查询或直接输入网址/jsp/lqqk/lqcx.jsp查询录取结果和专业。考生录......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2009.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232303921154996/20110225232303921154996_.html" target="_blank">清华大学多项举措服务考生报考</a></h3>
+              <p class="thnews_jqzy">　　清华大学多项举措服务考生报考新浪网 2009-6-9随着一年一度高考的结束，许多省份的考生开始报考学校和专业。为了给考生填报志愿提供最及时、最充分、最有效的信息，让考生更全面、更深入地了解清华大学的招生政策，各学科的专业内涵、特点以及实力，了解清华学子的在校生活和毕业走向等，清华大学招生办公室将采取网上咨询、电话咨询以及招生组老师面对面咨询等多种方式，为......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232229125632859/20110225232229125632859_.html" target="_blank">香港大学扩招内地生 多所高校提高内地生奖...</a></h3>
+              <p class="thnews_jqzy">　　香港大学扩招内地生 多所高校提高内地生奖学金《东方早报》3-2核心提示：金融危机下，欧美高等学府削减奖学金，香港高校热度上升，港大内地招生负责人透露，今年的非本地生录取名额由10%增加到13%，多家港高校通过增加招生计划或是提高奖学金的方式吸引更多的内地学生。东方早报3月2日报道 金融危机下，欧美等高等学府纷纷削减奖学金，香港高校热度上升。昨天，香港......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2008.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232125468382393/20110225232125468382393_.html" target="_blank">他们在经历汶川地震之后考上清华</a></h3>
+              <p class="thnews_jqzy">　　他们在经历汶川地震之后考上清华【新闻中心讯　记者　襄桦　通讯员　杨华中】亲人的遇难，家庭财产的损失，频繁的余震……在汶川地震后，很多灾区考生从容面对各种困难，选择了坚强与自强不息，在随后的高考中为自己也为关心他们的人们交上了一份精彩的答卷。清华录取的灾区考生中，很多人身后有着非常感人的故事。马李兰：得知喜讯当场激动地哭了起来当清华负责四川招生的老师走......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2008.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232125359482835/20110225232125359482835_.html" target="_blank">清华大学2008年高考录取工作圆满结束</a></h3>
+              <p class="thnews_jqzy">　　清华大学2008年高考录取工作圆满结束【新闻中心讯 通讯员 尹佳】截至8月5日，记者从清华大学招生办公室了解到，在社会各界的关心和支持下，在全校师生的共同努力下，随着在川招生录取工作的结束，清华大学全校2008年本科招生录取工作全部圆满结束。今年的录取工作取得了喜人的成绩，在理科生源继续保持原有优势的基础上，文科生源更上一层楼。七成以上理科高分段考生云集......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2008.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232125328427267/20110225232125328427267_.html" target="_blank">清华在川统招录取工作结束 四大措施助力灾...</a></h3>
+              <p class="thnews_jqzy">　　清华在川统招录取工作结束 四大措施助力灾区考生【新闻中心讯 通讯员 尹佳】8月5日，清华大学在四川省统招录取工作结束。其中非延考区理科录取分数线700分，文科录取分数线670分，居全国在川招生高校之首；延考区理科录取分数线686分，文科632分。今年清华大学在川招生形势喜人，非延考区700分以上的75%理科考生云集清华，文科前10名中的5名考生报考清华。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2008.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232020140579324/20110225232020140579324_.html" target="_blank">平行志愿保护考生利益</a></h3>
+              <p class="thnews_jqzy">　　平行志愿保护考生利益《人民日报》&nbsp; 2008-02-21 杨明方往年，高考考生总为填志愿发愁，高了不敢报，低了不甘心。今年起，教育部推广新办法，考生可以把心仪的学校都填上——平行志愿保护考生利益今年初，教育部发布《2008年工作要点》，明确提出“推广和完善平行志愿投档、分段公开征集志愿等录取方式，进一步提高考生和高校满意度”。最近，北京......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2007.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225231935593661754/20110225231935593661754_.html" target="_blank">看中印高考之异同</a></h3>
+              <p class="thnews_jqzy">　　看中印高考之异同《广州日报》2007－9－24提起印度的高层次人才，人们不禁会想起在美国硅谷的软件公司里，毛发浓密、相貌英俊、说着流利英语、担当公司核心技术工程师的印度IT精英。上世纪共6人获得诺贝尔物理学奖、医学奖、经济学奖和和平奖的种种殊荣也再一次证明了印度人擅长逻辑思维与数据分析的深邃大脑已受到全世界的认同与尊重，这些成绩的取得，与印度的高等教......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2007.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225231917859396967/20110225231917859396967_.html" target="_blank">香港高校、内地“状元”，都是“鲶鱼”</a></h3>
+              <p class="thnews_jqzy">　　香港高校、内地“状元”，都是“鲶鱼”人民日报 2007-07-11一年一度的高招渐露分晓。与往年一样，香港高校赴内地招生，再次成为社会关注的焦点。关注香港与内地教育交流的人们发现，一些省区市的“状元”舍内地名校选香港高校的新闻仍不时见诸报端，与此同时，内地学生在香港高校产生的“鲶鱼效应”，也已经慢慢显现。以几尾鲶鱼带活整池沙丁鱼，人们常说的“鲶鱼效应......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225231905625566471/20110225231905625566471_.html" target="_blank">外国媒体看中国高考30年：必须改革 不能...</a></h3>
+              <p class="thnews_jqzy">　　外国媒体看中国高考30年：必须改革 不能取消新华网　2007年06月08日新华网专稿：中国恢复高考已整整三十年了，但对高考制度的争论与质疑始终没有平息过；今年“两会”期间，有代表提交的一份《关于废除高考，创新高校招生制度的建议》，引发了新一波“废除高考”的争论。后来，教育部长周济表态：高考必须改革，但不能取消，才暂时平息了这轮争论。在纪念恢复高考制度30......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225231905562934323/20110225231905562934323_.html" target="_blank">30年后，站在高考改革的十字路口</a></h3>
+              <p class="thnews_jqzy">　　30年后，站在高考改革的十字路口新华网　2007年06月10日新华网北京６月１０日电（新华社“新华视点”记者 李柯勇、许雪毅、刘丹）在恢复高考３０年后的今天，高考改革成了争论最多的教育话题之一。３０年来，高考成就了无数青年转变命运的梦想，其缺陷也受到越来越多的质疑。高考至今仍是我国最公平、百姓认可度最高的人才选拔制度。但随着时代发展，高考制度已站在了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225231904250220551/20110225231904250220551_.html" target="_blank">高考制度改革进入关键时期</a></h3>
+              <p class="thnews_jqzy">　　高考制度改革进入关键时期《光明日报》6－6　我国高考制度改革正在悄然地渐进式地向前推进，并以其不可逆转的态势向人们昭示了这种改革的必然性和可行性。首先推出的是“3＋X”高考模式，无论这种新的高考模式还有多少值得商榷的地方，其意义和价值都是毋庸置疑的。接着，又有了在部分地区实施的春秋两季招生考试方案，这一新的招考方案的出台，进一步打破了全国统一进行的、“......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225604765750221/20110225225604765750221_.html" target="_blank">写给即将高考的师弟师妹：不给自己后悔的借口</a></h3>
+              <p class="thnews_jqzy">　　写给即将高考的师弟师妹：不给自己后悔的借口●高涛转眼之间自己的大一生活已经过去了一半，总结一下过去的半年，发现自己真的长大了许多，成熟了许多。高中的时候，生活就局限在小小的学校和家庭，局限在小小的宣威城，经济的滞后造成的观念落后深深影响了我们行事的方法和看事物的角度，从而影响到自己人生目标的确立。那时候的我，虽然也想多学点东西，但是没有一个明确的目标......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2007.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225231902218880385/20110225231902218880385_.html" target="_blank">2007年我国高考报名、招生人数均创历史...</a></h3>
+              <p class="thnews_jqzy">　　2007年我国高考报名、招生人数均创历史新高（记者吴晶　崔静）教育部学生司司长林蕙青２８日宣布，今年中国高校招生报名人数约１０１０万，计划招生数５６７万，均创历史新纪录。 据统计，今年全国普通高校招生报名人数和计划招生数分别比去年增加６０万和２７万。应届普通高中毕业生７２１万，占７１.４％，与去年基本持平。全国参加统考的是９５０万，其中文......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2007.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225231859578810722/20110225231859578810722_.html" target="_blank">高科技作弊挑战高考</a></h3>
+              <p class="thnews_jqzy">　　高科技作弊挑战高考 政府屡斥巨资为失信埋单新华网&nbsp;&nbsp; 2007-5－21 在高考这个特殊的环境里，作弊与反作弊的斗争已经演变为高科技的特殊较量。“进高考考场比进机场都难！”今夏，辽宁高考报名人数超过29万，创历史新高。与此同时，高考保障工程也达到前所未有的高度，全省为8000余个考场配备了电子信号屏蔽器、手柄式金属检测器、电......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231749906653463/20110225231749906653463_.html" target="_blank">清华招生咨询活动全面展开</a></h3>
+              <p class="thnews_jqzy">　　清华招生咨询活动全面展开【新闻中心讯 记者 顾淑霞】随着高考的结束，清华大学的招生咨询活动全面铺开。据了解，为了及时给考生填报志愿提供最及时、最充分、最有效的信息，让考生更全面、更深入地了解清华大学的招生政策，了解清华各学科的专业内涵、特点以及实力，了解清华学子的在校生活和毕业走向等，清华大学本科生招办采取网上咨询、电话咨询以及招生组老师面对面咨询等......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231747812148902/20110225231747812148902_.html" target="_blank">清华招办主任教你报志愿：访清华大学招生办...</a></h3>
+              <p class="thnews_jqzy">　　清华招办主任教你报志愿──访清华大学招生办公室主任宗俊峰高考志愿填报在即，报什么学校，选什么专业，以及怎样填报志愿，成为困扰众多考生和家长的难题。为此，我们采访了从事招生工作多年的清华大学招生办公室主任宗俊峰副教授。宗主任结合自己多年的经验，就考生如何科学合理地填报志愿的问题，提出了许多有益的建议。宗俊峰主任说，考生首先要了解各校录取的原则......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231727468610587/20110225231727468610587_.html" target="_blank">清华大学：06年高考7个新专业不招生</a></h3>
+              <p class="thnews_jqzy">　　清华大学：06年高考7个新专业不招生华夏时报  2006-04-05&nbsp;&nbsp;&nbsp;&nbsp;7个新专业不招生 上线考生服从调剂一般不会退档  在京计划招生328人&nbsp;&nbsp;&nbsp;&nbsp;今年，清华大学在全国招生不超过3300人。其中，在北京招生计划为理科303人，文科25人，在专业设置上基本没有变化。&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231605734374830/20110225231605734374830_.html" target="_blank">高考必读访谈：聚焦2005年清华大学招生</a></h3>
+              <p class="thnews_jqzy">　　高考必读访谈：聚焦2005年清华大学招生中国教育报  2005-4-20  王瑜琨&nbsp;&nbsp;&nbsp;水清木华九十余载，清华大学蕴育着独特的精神魅力。&nbsp;&nbsp;&nbsp;清华大学的前身是清华学堂，始建于1911年，1912年更名为清华学校，1925年设立大学部，开始招收四年制大学生，1928年更名为“国立清华大学”。目前，清华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231555671366296/20110225231555671366296_.html" target="_blank">我校继续教育学院为贫困地区师生送去最新高...</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;我校继续教育学院为贫困地区师生送去最新高考信息【新闻中心讯】输送贫困地区最需要的教育资源是清华大学教育扶贫工作的重点。3月12日-29日，我校继续教育学院根据贫困地区的需求，聘请北京部分特级教师，面向贫困地区参加2005年高考的学生和他们的老师组织了九场“高考辅导系列讲座”。本次辅导讲座通过卫星同时在49个清华大学教育扶贫现代远程教学站进行现......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231446500866890/20110225231446500866890_.html" target="_blank">服务考生 高考咨询我校推出五项举措</a></h3>
+              <p class="thnews_jqzy">　　无标题文档服务考生 高考咨询我校推出五项举措【新闻中心讯 记者 飞雨 通讯员 王燕 摄影 郭海军】随着高考的尘埃落定，考后估分填报志愿和出分填报志愿省份的考生和家长进入紧张的填报志愿环节。为了更好地服务考生，为考生科学合理填报志愿提供全面的信息和建议，我校针对上述考生推出了五项措施，为考生和家长提供人性化和全方位的便捷服务。招生老师与考生面对面真诚交流......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225345109469082/20110225225345109469082_.html" target="_blank">服务考生 高考咨询我校推出五项举措</a></h3>
+              <p class="thnews_jqzy">　　无标题文档服务考生 高考咨询我校推出五项举措【新闻中心讯 记者 飞雨 通讯员 王燕 摄影 郭海军】随着高考的尘埃落定，考后估分填报志愿和出分填报志愿省份的考生和家长进入紧张的填报志愿环节。为了更好地服务考生，为考生科学合理填报志愿提供全面的信息和建议，我校针对上述考生推出了五项措施，为考生和家长提供人性化和全方位的便捷服务。招生老师与考生面对面真诚交流......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231443890192543/20110225231443890192543_.html" target="_blank">市、区领导莅临清华附中高考考点视察</a></h3>
+              <p class="thnews_jqzy">　　无标题文档市、区领导莅临清华附中高考考点视察【新闻中心讯】 6月5日，中共北京市委常委、市教育工委书记朱善璐同志莅临清华附中考点检查高考准备工作，重点视察了保密室和教务室，强调了高考保密工作的重要性，对清华附中的考务工作表示满意，尤其是对学校监考员设计的“监考工作程序一览表”评价很高，建议向其他学校推广。 6月6日下午，海淀区教委招办主任陶明等领导一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231359781900045/20110225231359781900045_.html" target="_blank">清华教授谈如何报高考志愿</a></h3>
+              <p class="thnews_jqzy">　　清华教授谈如何报高考志愿光明网 2003-6-27 清华大学教授 韩秀云6月28日就是本届高中生填报高考志愿的日子，很多家长焦急万分，关心如何给孩子选个好学校，如何填报志愿才不会落选。但家长很少想到，如何利用这次最难得的机会，帮助孩子设计一个美好的人生。我在清华大学工作多年，每年都有一些家长在孩子填报高考志愿时前来征求我的意见。我总是先避开他们最关心......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231356390425059/20110225231356390425059_.html" target="_blank">清华退学复读生高考发挥不错</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华退学复读生高考发挥不错目标清华计算机北京晚报 2003年6月11日本报讯原清华大学化工系99级本科生“祥子”（化名）再次走进高考考场，高考结束后，这名高高大大的考生心情十分轻松：数学预计比当年要高出20多分，各科（尤其是理科综合）发挥不错。第一志愿初步定为计算机或数学。祥子1999年曾在西城一所知名高中毕业后参加......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231356015143743/20110225231356015143743_.html" target="_blank">四大举措服务考生 高考咨询清华打出“服务...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档24小时电话咨询服务 网上在线咨询 网上高考预报志愿活动四大举措服务考生 高考咨询清华打出“服务”品牌【新闻中心讯 记者 顾淑霞】24小时全天候电话咨询服务，网上在线咨询服务和网上高考预报志愿服务，在高考后填报志愿期间，清华招办打出了“服务”品牌，竭诚为考生提供更全面完善的高考志愿填报咨询服务。举措一：24小时电话咨询 为了给考生填报志愿提......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231334562406992/20110225231334562406992_.html" target="_blank">清华召开高考准备工作情况汇报会</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华召开高考准备工作情况汇报会新华网 2003-04-15 来源：清华大学 要公平、公正、公开、择优地选择考生！这是记者在教育部自主招生工作和高考准备工作情况汇报会上听到的教育部和各高校招生工作负责人的共同心声。 4月9日上午，来自北京大学、人民大学、北京师范大学、中国政法大学、北京考试院、北京市教委以及我校等单位的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231334312432702/20110225231334312432702_.html" target="_blank">公平、公正、公开、择优地选择考生</a></h3>
+              <p class="thnews_jqzy">　　无标题文档公平、公正、公开、择优地选择考生教育部自主招生工作和高考准备工作情况汇报会在我校举行 要公平、公正、公开、择优地选择考生！这是记者在教育部自主招生工作和高考准备工作情况汇报会上听到的教育部和各高校招生工作负责人的共同心声。 4月9日上午，来自北京大学、人民大学、北京师范大学、中国政法大学、北京考试院、北京市教委以及我校等单位的招生工作有关负......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

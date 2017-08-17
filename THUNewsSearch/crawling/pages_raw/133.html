@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>联姻：首开“校企合作”先河</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231211281502725&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">联姻：首开“校企合作”先河</h3><p align="center">（兰州晨报 2001年4月2日） </p><p> “西部大开发，交通要先行”。清华大学把校企合作的眼光瞄准了甘肃这块“风水宝地”，他们利用自己的科技实力和人才优势，以及清华紫光集团公司的资金、管理优势，以兰州高新技术产业开发区为载体，与甘肃省高等级公路建设开发有限公司共筑科技成果转化舞台，开垦这块现代化智能交通建设的“处女地”，撒播高科技的“金种子”，通过校企合作方式，进行校企强强联盟，达到高科技知识产权交易和成果的转化。甘肃紫光智能交通与控制技术有限公司的诞生，既是西部大开发政治背景下和党中央重大战略决策下的产物，也是校企合作直接催生的必然结果。同时又是甘肃发展地方经济、加强交通基础设施建设、加快高等级公路建设的顺产儿。 </p><p>甘肃紫光智能交通与控制技术有限公司是一家现代化、高科技企业，是我省第一家从事智能交通与高速公路机电系统研究、设计、开发、建设的高新技术专业公司。在西部大开发的新形势下，走出了一条内引外联、东西合作、强强联手的全新企业发展之路，是一次省校合作、校企合作的成功范例，现已通过兰州市高新技术企业的资质认证。因此，甘肃紫光公司可谓顺应时势而生，必将紧紧扎根于甘肃，服务于甘肃交通智能化领域。于是，积极投身西部大开发，为甘肃交通信息化发展倾尽全力，做出成果，便成了公司最基本的企业发展理念；为甘肃地方经济发展做贡献，也是他们的奋斗目标。甘肃高等级公路建设开发有限公司与清华紫光集团的强强联盟，对促进现代物流和信息流的有机结合奠定了坚实的基础。甘肃紫光智能交通与控制技术有限公司与清华紫光集团的携手，又具有优势互补、各取所长的综合合作优势，同时，还具有品牌优势、技术优势、资金优势、人力资源优势。总而言之，甘肃紫光的企业优势占尽天时、地利、人和。即天时：西部大开发，交通大发展；地利：企业本土化，发展地方经济；人和：政府支持，社会需要。本报特约记者唐福耀 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月02日 14:12:14　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120921155627711926951/20120921155627711926951_.html" target="_blank">国内首家校企合作社会化媒体研究中心在清华...</a></h3>
+              <p class="thnews_jqzy">　　国内首家校企合作社会化媒体研究中心在清华成立&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网9月21日电9月19日，清华大学与人人公司在清华新闻与传播学院共同举办仪式，正式宣布双方联合成立中国首家社会化媒体研究中心。清华大学党委副书记韩景阳与人人公司董事长陈一舟出席活动。&nbsp;&nbsp;&nbsp;&n......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2011.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110930095704594346652/20110930095704594346652_.html" target="_blank">清华大学与中国建筑股份有限公司签署战略合...</a></h3>
+              <p class="thnews_jqzy">　　清华大学与中国建筑股份有限公司签署战略合作协议清华新闻网9月30日电（记者崔 凯） 9月29日，中国建筑股份有限公司与清华大学战略合作协议签约仪式在清华大学工字厅隆重举行。中国建筑股份有限公司董事长易军、总裁官庆、副总裁曾肇河、总工程师毛志兵，清华大学校长顾秉林院士、副校长康克军、副校长袁驷、土水学院陈肇元院士出席签约仪式。毛志兵与康克军代表双方签署战略......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2011.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110921090828886985655/20110921090828886985655_.html" target="_blank">高校-腾讯校企合作开放平台在清华启动</a></h3>
+              <p class="thnews_jqzy">　　高校-腾讯校企合作开放平台在清华启动&nbsp;清华新闻网9月21日电&nbsp; 9月17日上午，高校-腾讯校企合作开放平台在清华大学综合体育馆正式启动。教育部高等教育司司长张大良，清华大学党委副书记史宗恺，腾讯公司首席联席技术官、高级执行副总裁熊明华和哈工大、上海交大、华中科大、华南理工、复旦大学、西安交大6所兄弟院校的相关领导共同见证了&ldquo......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110520162002932617349/20110520162002932617349_.html" target="_blank">中国商飞公司－清华大学校企合作座谈会召开</a></h3>
+              <p class="thnews_jqzy">　　中国商飞公司－清华大学校企合作座谈会召开清华新闻网5月20日电5月17日下午，中国商用飞机有限责任公司（简称&ldquo;商飞公司&rdquo;）人力资源部副部长肖云、北京民用飞机技术研究中心副主任王光秋、商飞公司教育培训处处长唐炎华等一行7人访问清华大学，并参加了在工字厅召开的&ldquo;中国商飞公司-清华大学2011-2012年校企合作座谈会&rd......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232610718386109/20110225232610718386109_.html" target="_blank">清华大学：校企合作 互惠共赢</a></h3>
+              <p class="thnews_jqzy">　　近年来，清华大学与多家大企业合作，培养了人才，推动了科研成果产业化——校企合作 互惠共赢来源：经济日报 2010-12-29 佘惠敏 廖晨中国二十二冶集团与清华大学成立大压机研制联合实验室，为提升我国装备制造水平发挥了重要作用。清华大学与中国电信联合建立下一代互联网技术与应用联合实验室，标志着我国下一代互联网向着商业化应用迈进了一大步。围绕国家能源发展战......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232544156932671/20110225232544156932671_.html" target="_blank">清华大学积极推进校企合作</a></h3>
+              <p class="thnews_jqzy">　　清华积极推进校企合作2010年清华大学与企业合作委员会年会召开【新闻中心讯 记者 顾淑霞 通讯员 高云峰 摄影 郭海军】10月15日，由清华大学主办的“能源、经济和环境论坛暨2010年清华大学与企业合作委员会年会”在清华大学主楼接待厅举行。来自国资委、科技部，国内能源、经济和环境领域的专家，清华大学与企业合作委员会（简称企合委）成员单位代表，科研院所和高......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232544312431308/20110225232544312431308_.html" target="_blank">清华大学积极推进校企合作</a></h3>
+              <p class="thnews_jqzy">　　清华大学积极推进校企合作&nbsp;来源：新华网 2010-10-16清华大学发挥自身科研优势，积极推动与海内外知名企业开展科研合作与交流，促进科技成果的转化与应用。&nbsp;由清华大学主办的“能源、经济和环境论坛暨2010年清华大学与企业合作委员会年会”15日举行。清华大学副校长康克军在发言时表示，作为清华大学技术转移体系的重要组成部分，清华大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232544796495670/20110225232544796495670_.html" target="_blank">康克军：开创校企合作新局面</a></h3>
+              <p class="thnews_jqzy">　　整合资源，深化合作，创新模式开创校企合作新局面（2010年10月15日）清华大学副校长 康克军尊敬的各位领导和嘉宾，女士们、先生们：大家上午好！金秋十月是个收获的季节，今天我们在这里隆重举行“能源、经济和环境论坛暨2010年清华大学与企业合作委员会年会”。此次论坛得到了科技部、国资委等相关部委领导的关心支持，也得到了海内外各企合委成员单位的积极响......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232544843839049/20110225232544843839049_.html" target="_blank">清华论剑：专家激辩校企合作</a></h3>
+              <p class="thnews_jqzy">　　清华论剑：专家激辩校企合作【新闻中心讯 记者 淑霞】10月15日，能源、经济和环境论坛暨2010年清华大学与企业合作委员会年会在清华大学举行，会上，相关专家聚集一起，共同进行“校企合作?清华论剑”，就校企合作相关话题进行热烈的讨论。东方卫视、上海第一财经电视节目“头脑风暴”的主持人袁岳主持了清华论剑。以下为清华论剑实录。袁岳：非常高兴能够有机会今天受......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232514250603909/20110225232514250603909_.html" target="_blank">清华大学联合东风日产打造校企合作新模式</a></h3>
+              <p class="thnews_jqzy">　　清华大学联合东风日产打造校企合作新模式来源：科技日报 2010-07-02日前，东风日产联合清华大学，开办了清华大学有史以来首个专为汽车企业经销商量身定做的营销高级研究生课程（EMBA）进修班。东风日产首批全国50家专营店的总经理，将在未来8个月时间里接受十余项专业的课程教育和专业培训。据清华大学继续教育学院孟至和副院长介绍，目前，中国汽车行业尚处在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2009.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232227703683675/20110225232227703683675_.html" target="_blank">国家电网公司党组书记刘振亚一行访问清华</a></h3>
+              <p class="thnews_jqzy">　　国家电网公司党组书记刘振亚一行访问清华【新闻中心讯 记者 周襄楠 通讯员 曾嵘 摄影 郭海军】2月19日上午，国家电网公司党组书记、总经理刘振亚一行访问清华大学，校长顾秉林院士，电机系教授、中国科学院院士卢强等与刘振亚一行在工字厅进行会谈。双方就我国特高压示范线路的成功建设及其取得的最新成果进行了交流。副校长康克军主持会谈。会谈中，刘振亚简要介绍了我......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2009.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232223656129370/20110225232223656129370_.html" target="_blank">国家质检总局与清华大学开展科技合作落实科...</a></h3>
+              <p class="thnews_jqzy">　　国家质检总局与清华大学开展科技合作落实科技兴检　一所凝聚科技精华的百年名校，一个以技术执法为手段的国家机关，1年1个月零15天之后，两只强有力的手再次紧紧握在一起。2008年12月28日，国家质检总局与清华大学科技与人才培养合作协议首次领导小组联席会议暨工作组会议召开，这是双方于2007年11月13日签署正式合作协议后，共同就合作取得的成果展开深入调研......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232220296319317/20110225232220296319317_.html" target="_blank">国家质检总局与清华大学举行高层会晤</a></h3>
+              <p class="thnews_jqzy">　　国家质检总局与清华大学举行高层会晤【新闻中心讯】12月28日，国家质检总局与清华大学就深入推进《国家质检总局与清华大学人才与科技合作协议》举行了高层会晤。国家质检总局总工程师张纲、科技司司长武津生、清华大学副校长康克军、党办主任王岩等出席会晤。双方对一年来战略合作取得的进展和成果进行了认真的总结，并对进一步深化在人才培养、科研开发、高新技术项目推广应用等......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232219968634865/20110225232219968634865_.html" target="_blank">清华大学与铁道部举行高层会晤 双方达成广...</a></h3>
+              <p class="thnews_jqzy">　　清华大学与铁道部举行高层会晤 双方达成广泛共识【新闻中心讯】12月24日上午，教育部党组副书记、副部长、清华大学党委书记陈希，清华大学校长顾秉林前往铁道部，与铁道部党组书记、部长刘志军举行部校高层会晤。铁道部党组成员、副部长陆东福，清华大学党委常务副书记胡和平，副校长康克军等参加会晤。双方回顾了自2003年以来的合作历程及取得的丰硕成果，对进一步深化......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232216078516826/20110225232216078516826_.html" target="_blank">2008清华大学企业合作委员会年会聚焦中...</a></h3>
+              <p class="thnews_jqzy">　　2008清华大学企业合作委员会年会聚焦中国资源战略【新闻中心讯】12月19日，由清华大学主办的“2008年清华大学与企业合作委员会年会暨中国资源战略论坛”在清华大学主楼接待厅举行。全国人大、全国政协、国家发改委、国资委、国家能源专家咨询委员会、国家环境保护部相关领导，国内相关著名专家、清华企合委成员单位嘉宾代表，清华大学副校长、清华大学与企业合作委员会主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2008.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232116125406096/20110225232116125406096_.html" target="_blank">清华博士生实践服务团60余名队员暑期深入...</a></h3>
+              <p class="thnews_jqzy">　　清华博士生实践服务团60余名队员暑期深入基层服务社会【新闻中心讯 研通社记者 霍亮】日前，以“纪念改革开放三十周年”、“追寻改革足迹，践行科学发展”为主题，清华大学博士生实践服务团5个支队共60余名队员陆续分赴广东省深圳市及东莞市、重庆市、浙江省湖州市、山西省大同市、河北省唐山市开展为期18天的实践服务和社会调研活动。在次此活动中，清华博士生将深入基......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232029234609134/20110225232029234609134_.html" target="_blank">罗德公关与新闻学院联合推出"清华&#82...</a></h3>
+              <p class="thnews_jqzy">　　罗德公关与新闻学院联合推出"清华&#8226;罗德企业社会责任项目"　【新闻中心讯 通讯员 肖红缨】日前，清华大学新闻与传播学院与全球领先的罗德公关公司正式签约，联手推出“清华&#8226;罗德企业社会责任（CSR）项目”。该合作项目为期五年，罗德公关公司将在五年内，资助清华大学新闻与传播学院在传播企业社会责任领域的最新研究成果，为学术讨论和商业实践提供有效......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231825750307017/20110225231825750307017_.html" target="_blank">岱海电厂和清华大学实现校企合作力争双赢</a></h3>
+              <p class="thnews_jqzy">　　岱海电厂和清华大学实现校企合作力争双赢新华网内蒙古频道 2006-11-29 刘恩奎新华网内蒙古频道１１月２９日电（刘恩奎）近日，清华大学本科生实践基地揭牌仪式在内蒙古自治区岱海电厂举行，这标志着岱海电厂与清华大学之间的合作又进入了新的阶段。２００６年以来，清华大学与内蒙古岱海电厂之间的合作不断加深。２００６年７月至８月，清华大学先后派出两批师生来到......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2004.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231539578707302/20110225231539578707302_.html" target="_blank">“北京市校企合作产学研项目签约仪式暨新闻...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“北京市校企合作产学研项目签约仪式暨新闻发布会”召开【新闻中心讯】12月21日，北京市教委、科委联合召开了“北京市校企合作产学研项目签约仪式暨新闻发布会”在北航召开。会上清华大学、中蓝膜技术公司共同承担的“热致相分离法聚羟中空纤维微孔膜的制备技术开发”项目等首批7个北京市校企合作产学研项目的高校和企业负责人进行了签约。本次两委共出资3000多万......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

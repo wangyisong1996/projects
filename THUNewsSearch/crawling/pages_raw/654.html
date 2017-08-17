@@ -1,0 +1,552 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清华研制成功我国第一台光学相关ＣＴ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231221750976565&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><p align="center"><font color="#FF0000" face="黑体" size="4"><b><font color="#ff0000">清华</font>研制成功我国第一台光学相关ＣＴ<br></b></font><br>  <font face="楷体_GB2312" size="2" color="#008000"><b>&nbsp;&nbsp;(2001.04.28 新华网)</b></font></p><tr>  <td width="320" height="78" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;新华网北京４月２８日电&nbsp;（记者王文韬&nbsp;&nbsp;刘江&nbsp;&nbsp;江涛）     １９９７年，<font color="#ff0000">清华</font>大学“单原子分子测控教育部重点实验 室”&nbsp;成功研制出了第一个光学相关ＣＴ原型机。并获得     了我国第一张生物微组织断层层析的ＯＣＴ图像（１０微 米级高分辨率，比现今Ｘ光ＣＴ高近千倍），其后又作出 一系列的表层层析图像，并在国防和工农业等许多领域取     得了重要应用。<br>    <br>    &nbsp;&nbsp;&nbsp;&nbsp;这个实验室强化了对生物大分子的测控研究，将原子 分子测控科学中发展出来的新技术新方法“光学相关ＣＴ”     是九十年代中期出现的基于新型原理的层析概念，它能进 行微米级高分辨的精细活体层析成像。ＯＣＴ使人们第一 次既能对活体表层进行层析，又有能力深入到人或动物的     血管以及其它器官内部，以视频速度和接近光学衍射极限 的分辨率进行三维成像。在疾病的早期诊断，以及药物疗 效和手术效果实时监测等领域已经显示出广阔的应用前景。     其功能特点被认为是ＣＴ技术的一次“革命性”的发展。 这个实验室已在国内此领域的竞争中占据了领先地位。
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月28日 14:09:34　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150708154722195448106/20150708154722195448106_.html" target="_blank">清华“学霸”创业突围眼科OCT市场</a></h3>
+              <p>　　白衬衫、黑西裤，瘦削的脸上架着一副黑框眼镜，一字一句的谈吐，恨不得像实验室里的仪器般精准、严谨——这是李鹏给笔者留下的第一印象。    　　2007年，25岁的“学霸”李鹏在清华大学深圳研究生院毕业，按照常理，他完全可以去全球著名公司上班，或轻松地考取北京老家的公务员，捧上令人羡慕的“金饭碗”，但他却并未这样，而是走上一条充满艰辛和挑战的创业路。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150601160154120994773/20150601160154120994773_.html" target="_blank">【新闻联播】薛其坤：做科学真相的“侦探家”</a></h3>
+              <p>　　今天的《领航科技 创新中国》系列报道，我们带您认识一位物理学家——中国科学院院士薛其坤。他带领的团队在实验中首次观测到“量子反常霍尔效应”，这项重大基础物理学成果，被认为“很可能引发一次信息技术革命”。而他常对学生说，“人的能力虽然有限，但努力可以无穷”。    　　2013年4月10日，我国科学家在北京宣布，首次从实验中观测到“量子反常霍尔效应”，这被诺贝尔物理奖获得者杨振宁，称为是“诺贝尔奖级别”的科研成果。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150427133053883289560/20150427133053883289560_.html" target="_blank">CCTV：我国建立公益慈善领域国家级智库...</a></h3>
+              <p>清华大学公益慈善研究院是落实中共中央办公厅、国务院办公厅《关于加强中国特色新型智库建设的意见》和国务院《关于促进慈善事业健康发展的指导意见》等重要决策的要求，由民政部和清华大学联合发起成立的校级科研机构。研究院将开展四个方面的研究：一是公益慈善的制度和体制研究，二是公益慈善的组织和治理研究，三是公益慈善的资源和项目研究，四是公益慈善的价值和文化研究，努力发展成为一个体现国家战略、融入创建一流大学进程、致力于公益慈善研究与人才培养体系建设的国家级智库，为推动中国公益慈善事业的发展做出积极贡献。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2014/20141126093254217941750/20141126093254217941750_.html" target="_blank">王大珩：他用“光”改变中国</a></h3>
+              <p>1958年,长春光机所以研制高精光学仪器和光学玻璃的“八大件一个汤”而闻名全国科技界。“八大件”是指1秒精度大地测量经纬仪、1微米精度万能工具显微镜、大型石英摄谱仪、中型电子显微镜、中子晶体谱仪、地形测量用多倍航摄投影仪、光电测距仪和高温金相显微镜，“一个汤”是指融化态光学玻璃。这是王大珩创办仪器馆以来所花心血的结晶。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130617091420183913124/20130617091420183913124_.html" target="_blank">尤政团队：为航天器装上“慧眼”</a></h3>
+              <p>精仪系教授尤政带领团队完成的“先进空间光学姿态敏感器技术”项目，获2012年度国家技术发明奖二等奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121127151519328147001/20121127151519328147001_.html" target="_blank">四千支设计队参赛 创意大赛决出冠军</a></h3>
+              <p class="thnews_jqzy">　　四千支设计队参赛 创意大赛决出冠军来源：北京青年报 2012-11-27 汀丁日前，2012 PROJECTJ创意设计大赛在清华大学收官。来自清华大学的IAnova团队以其独特的创意、丰富的内涵，力压其余四千余支队伍夺得年度冠军。大赛自今年7月正式启动以来，共收到参赛作品4350件，报名参赛的团队近4200个，网站的浏览量更是超过15万人次。2012 P......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121024155521725441129/20121024155521725441129_.html" target="_blank">体全息光学相关器及在景象匹配中的应用项目...</a></h3>
+              <p class="thnews_jqzy">　　清华&ldquo;体全息光学相关器及其在景象匹配中的应用&rdquo;项目通过教育部科技成果鉴定清华新闻网10月24日电（通讯员郑天祥）10月19日，受教育部委托，清华大学主持召开了清华大学金国藩院士课题组完成的&ldquo;体全息光学相关器及其在景象匹配中的应用&rdquo;项目成果鉴定会。由航天科工集团的钟山院士担任鉴定委员会主任，北京理工大学毛......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120921174542017275905/20120921174542017275905_.html" target="_blank">清华博士也来“说学逗唱”</a></h3>
+              <p class="thnews_jqzy">　　清华博士也来&ldquo;说学逗唱&rdquo;相声大赛现场调侃朱军来源：武汉晚报 2012-09-21第六届CCTV相声大赛第三场非职业组比赛中有一对特别的选手亮相：逗哏李寅飞，清华大学新闻传播学博士；捧哏叶蓬则是飞机修理工程师，这样两个看上去像八竿子搭不上的人怎么就走到一起说相声了呢？李寅飞告诉记者，2005年他考入清华。因为对相声喜爱，他加入了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120509150538723538067/20120509150538723538067_.html" target="_blank">阿尔卡特朗讯联手清华 发布绿色ICT调研...</a></h3>
+              <p class="thnews_jqzy">　　绿色ICT认可度高 对其应用领域了解有待加强阿尔卡特朗讯联手清华 发布绿色ICT调研报告来源：北京青年报 2012-05-09 刘星阿尔卡特朗讯委托清华大学媒介调查实验室执行的一项调研发现，中国信息通信技术（ICT）行业从业人员对该行业绿色化理念的接受度很高，但对于如何通过技术实现碳减排目标仍有争议。阿尔卡特朗讯委托的这一调研项目表明，大部分中国企业......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2011.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232615234546807/20110225232615234546807_.html" target="_blank">李稻葵教授当选“2010CCTV中国经济...</a></h3>
+              <p class="thnews_jqzy">　　李稻葵教授当选“2010CCTV中国经济年度人物”成为本届唯一入选的学者李稻葵近照 摄影/郭海军【新闻中心讯】每年一度的“CCTV中国经济年度人物评选”于1月18日在北京揭晓，清华经管学院教授李稻葵等十人当选“2010CCTV中国经济年度人物”。李稻葵作为唯一一名学者入选，是有着11年历史的该评选活动在继吴敬琏、厉以宁、林毅夫之后，再一次把奖项颁给一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232444062515144/20110225232444062515144_.html" target="_blank">最新一代ECT落户清华附院</a></h3>
+              <p class="thnews_jqzy">　　最新一代ECT落户清华大学附属医院科技日报 2010-04-29清华大学第一附属医院最近引进了目前世界上最先进的飞利浦Allura XperFD20/10双平板数字式心血管造影系统，其高分辨率、高精度、全功能的数字成像功能，通过高清晰度数字化图像，使临床诊断、手术更为精确，更易于早期发现微小病变，对病灶定位精确，适应于血管性疾病血管瘤、血管畸形、血管狭窄......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232437265305202/20110225232437265305202_.html" target="_blank">最先进心血管造影机落户清华附属医院</a></h3>
+              <p class="thnews_jqzy">　　最先进心血管造影机最新一代ECT落户清华大学附属医院北京晚报 2010-04-23清华大学第一附属医院最近引进了目前世界上最先进的飞利浦Allura XperFD20/10双平板数字式心血管造影系统，其高分辨率、高精度、全功能的数字成像功能，通过高清晰度数字化图像，使临床诊断、手术更为精确，更易于早期发现微小病变，对病灶定位精确，适应于血管性疾病血管瘤、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232420750498907/20110225232420750498907_.html" target="_blank">美国光学学会增选63位新会士</a></h3>
+              <p class="thnews_jqzy">　　美国光学学会增选63位新会士8位华人科学家当选科学网 2010-3-17美国光学学会（OSA）2010年新增会士名单近日揭晓，共有63位科学家当选。其中华人科学家8位，分别为：国立台湾大学的張宏鈞、东南大学的崔一平、北京大学的龚旗煌、台湾国立中央大学的孫慶成、美国弗吉尼亚理工大学的Wang Ge、美国德州A&amp;M大学的Yang Ping、加拿大渥太......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232415109458100/20110225232415109458100_.html" target="_blank">刘江永：中日关系 动人心弦</a></h3>
+              <p class="thnews_jqzy">　　刘江永：中日关系 动人心弦不知道您是否记得2009年11月11日的中南海紫光阁洋溢着感人的那一幕，国务院总理温家宝在中南海紫光阁会见了日本遗孤感谢中国人民养育之恩访华团。在会见当中，温总理被日本遗孤现场即兴演唱改编的《说句心里话》感动落泪，温暖感恩的气氛激荡在中南海。时隔不到三个月，今天下午同样是在中南海紫光阁里边，温家宝会见了第五届中日友好二十一世......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232245093869619/20110225232245093869619_.html" target="_blank">清华校友陈绍琛当选2009年国际光学工程...</a></h3>
+              <p class="thnews_jqzy">　　清华校友陈绍琛当选2009年国际光学工程学会会士（SPIE Fellow）【新闻中心讯 通讯员 田阳】近日，清华1984级校友陈绍琛当选2009年国际光学工程学会会士（ Fellow, Society of Photo-Optical Instrumentation Engineers )。陈绍琛1989年于清华热能系热能工程专业毕业后，赴美继续深造......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2008.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232132375458849/20110225232132375458849_.html" target="_blank">王大珩与中国光学会的情缘</a></h3>
+              <p class="thnews_jqzy">　　王大珩与中国光学会的情缘●中国光学学会　庞立　2008年是中国科协成立50周年，在这个纪念日里让我们想起两院院士王大珩先生多年来，关心科协与中国光学学会发展中的一些事。王老是中国科协第三届全委会副主席；是中国光学学会第一，二届的理事长。1979年中国光学学会成立，王老功不可没。1987年王老积极促使中国光学学会正式加入了国际光学学会（ICO）成为世界......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2007.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231833109544738/20110225231833109544738_.html" target="_blank">我国光学界公认的学术奠基人、开拓者和组织...</a></h3>
+              <p class="thnews_jqzy">　　我国光学界公认的学术奠基人、开拓者和组织领导者——王大珩（１９１５— ）卢国琛王大珩，光学专家。我国光学界公认的学术奠基人、开拓者和组织领导者。多年来为开拓我国光学研究及光学仪器制造作出了突出贡献。特别是为我国国防光学工程事业做出了重大贡献，为此曾获国家科技进步特等奖。在激光技术、遥感技术、计量科学、色度标准等方面都作出了重要贡献，是我国“８６３”高......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231737390652899/20110225231737390652899_.html" target="_blank">清华大型高能工业CT技术取得重大进展</a></h3>
+              <p class="thnews_jqzy">　　清华大型高能工业CT技术取得重大进展【新闻中心讯】近日，由清华大学工物系承担的国家自然科学基金重点项目——“大型工业螺旋CT关键物理及技术问题的研究”通过了验收评审。验收评审会由国家自然科学基金委员会主持召开。由北京大学、复旦大学、中科院高能所等7位教授组成的专家组听取了项目组的汇报，并进行了实地考察。经过充分的讨论，专家一致认为，4年来该项目组全面......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2003.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231407859670226/20110225231407859670226_.html" target="_blank">精仪系举办光学计量的新发展高级研讨班</a></h3>
+              <p class="thnews_jqzy">　　无标题文档精仪系举办光学计量的新发展高级研讨班 光学计量的新发展——光栅的电磁场理论高级研讨班在我校精密测试技术及仪器国家重点实验室成功举办。该研讨班于8月21日开始，为期5天，主讲人为国际光栅理论方面的著名专家、长江学者李立峰教授。 此次研讨班的宗旨是提高中国光栅界的光栅理论水平，推广现代光栅电磁场理论在光栅的设计、制作和应用。参加研讨班的学员主要......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231332171174715/20110225231332171174715_.html" target="_blank">集装箱CT检测系统研制成功</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document集装箱CT检测系统研制成功中国包装报 2003年03月24日清华大学核能技术设计研究院日前研制成功Co60集装箱CT检测系统，有效地解决了集装箱检测中的难题。该系统是我国拥有完全自主知识产权的、国际首创的反恐、安检和打击走私的重要设施。作为国家“十五”科技攻关项目，Co60集装箱CT检测系统采用特殊的结构设计，可围绕......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2003.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231327718470418/20110225231327718470418_.html" target="_blank">世界首套钴-60集装箱CT检测系统在我校...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档世界首套钴-60集装箱CT检测系统在我校核研院建成 世界上第一套钴-60集装箱（大型客体）CT检测系统，于近日由我校核研院研制成功。这是我国拥有完全自主知识产权的、国际首创的反恐、安检和打击走私的重要设施。它的研制成功，把当今国内外的集装箱检测技术提升至新的水平，使我国处于国际领先地位。 采用数字辐射成像技术的集装箱检测装备，已是当今各国海......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2002.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231315953507933/20110225231315953507933_.html" target="_blank">首届CTI-STLE摩擦学国际学术讨论会...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档首届CTI-STLE摩擦学国际学术讨论会在我校召开首届CTI-STLE摩擦学国际学术讨论会于10月17日至19日在我校召开。会议针对摩擦学的前沿和发展趋势，重点讨论了如何通过解决摩擦学领域的研究及与其他学术领域的交叉，解决环境保护和节约能源两大可持续发展需求所提出的问题。这次会议由清华大学摩擦学国家重点实验室主办，是第一次在国内组织中国机械......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

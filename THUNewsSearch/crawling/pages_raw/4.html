@@ -1,0 +1,1000 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我校两个集体和46人获国家八六三计划表彰</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231207671620222&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">我校两个集体和46人获国家八六三计划表彰 </h3><p align="center">（《动态信息》134号）</p><p> 　　[本站2月26日讯]在国家高技术研究发展计划(863计划)实施15周年之际，科学技术部、总装备部于2001年2月15日做出《关于联合表彰为国家八六三计划做出贡献的先进集体、先进个人的决定》，对在实施863计划中做出贡献的44个先进集体和599名先进个人进行表彰。我校“清华国家ＣＩＭＳ工程研究中心”和“高温汽冷实验堆－清华大学核能技术设计研究院”获先进集体，过增元院士等46人获先进个人。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年02月26日 08:19:55　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160329160602021310297/20160329160602021310297_.html" target="_blank">我校后勤召开2015年总结表彰大会</a></h3>
+              <p>3月25日，学校召开2015年后勤总结表彰大会。校党委书记陈旭、副校长兼总务长吉俊民出席会议并讲话。陈旭首先对后勤系统全体职工为保障学校发展、服务师生员工所做出的贡献表示感谢，对受到表彰的优质服务项目和先进个人表示祝贺。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150929192507006120389/20150929192507006120389_.html" target="_blank">清华大学举行2015年招生工作总结表彰会</a></h3>
+              <p>9月28日，2015年清华大学招生工作总结表彰会在主楼后厅举行。校长邱勇、副校长杨斌出席会议，校党委副书记、纪委书记李一兵宣读表彰决定。邱勇、杨斌、李一兵共同为获奖者颁奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141216140603235928287/20141216140603235928287_.html" target="_blank">清华工会协会成立三十周年表彰会暨庆祝晚会...</a></h3>
+              <p>12月11日晚，清华大学工会协会成立三十周年表彰会暨庆祝晚会在大礼堂举行。校党委副书记韩景阳，校党委原常务副书记、工会主席庄丽君，校党委原副书记张再兴，校党委常委、工会主席王岩及校工会专（兼）职副主席与各协会广大会员、各分工会干部、各单位教职工共600多人参加了活动。校工会副主席陈红主持表彰会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140923153236937888885/20140923153236937888885_.html" target="_blank">清华大学举行2014年招生工作总结表彰会</a></h3>
+              <p>9月18日，2014年清华大学招生工作总结表彰会举行。校党委书记陈旭，校党委副书记、纪委书记韩景阳，副校长袁驷出席会议并讲话，教务处处长郑力宣读表彰决定，招生办公室原主任于涵汇报了2014年招生情况并回顾了学校2011-2014年招生工作，招办主任于世洁向参会师生介绍并展望在高考改革新形势下的招生工作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140703101507978357200/20140703101507978357200_.html" target="_blank">北京清华长庚医院党委举办建党九十三周年表...</a></h3>
+              <p>7月1日，北京清华长庚医院庆祝建党九十三周年暨表彰大会在清华大学举行，同时纪念北京清华长庚医院党委成立一周年。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130629173235346394533/20130629173235346394533_.html" target="_blank">清华大学纪念中国共产党成立92周年暨表彰...</a></h3>
+              <p>6月28日，清华大学纪念中国共产党成立92周年暨表彰大会举行，校党委书记胡和平讲话。会议表彰了47个先进党支部、101名优秀共产党员、60名优秀党建与思想政治工作者和8名从事党务工作三十年以上的党务工作者，并举行了新入党党员宣誓。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130417155001026684503/20130417155001026684503_.html" target="_blank">清华获得首都高校学习宣传十八大精神评选多...</a></h3>
+              <p class="thnews_jqzy">　　清华获得首都高校学习宣传党的十八大精神评选多项表彰清华新闻网4月17日电（记者魏磊）近日，北京高校学习宣传党的十八大精神先进单位和优秀活动名单揭晓。清华大学化工系、马克思主义学院分别荣获首都高校学习宣传党的十八大精神先进单位，&ldquo;成立宣讲团积极宣传十八大精神&rdquo;、&ldquo;与十八大代表面对面&rdquo;两项活动荣获北京高校学习宣......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130114112935894237127/20130114112935894237127_.html" target="_blank">清华大学射击队召开2012年总结表彰大会</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;清华大学射击队召开2012年总结表彰大会&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网1月14日电1月11日下午，清华大学射击队2012年总结表彰大会在射击馆会议室召开。国家体育总局射击射箭运动管理中心副主任、国家射击队总教练王义夫，校党委副书记、校体委副主任史宗恺出席会议。会后，校党委常务副书记、校体委主任、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121228170449397395033/20121228170449397395033_.html" target="_blank">清华大学表彰优秀辅导员、学生工作助理</a></h3>
+              <p class="thnews_jqzy">　　又红又专 薪火相传清华大学表彰优秀辅导员、学生工作助理&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网12月31日电&nbsp;12月27日下午，清华大学2011-2012学年度优秀辅导员、学生工作助理表彰大会在主楼后厅举行。校党委书记胡和平、林枫基金捐赠人林炎志校友、校党委副书记史宗恺和副校长邱勇、校党委原书记贺美英出席......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120921105207824592331/20120921105207824592331_.html" target="_blank">新闻中心举行学生通讯员学生记者表彰会</a></h3>
+              <p class="thnews_jqzy">　　新闻中心举行2011-2012年度学生通讯员学生记者表彰会清华新闻网9月21日电（记者襄 桦）9月20日下午在紫荆学生综合服务楼，清华大学新闻中心召开了2011-2012年度学生通讯员、学生记者表彰会。校党委宣传部部长、新闻中心主任向波涛，校党委宣传部副部长、新闻中心副主任于世洁，校团委副书记任艺林，校研团委副书记许烨出席了表彰会。&nbsp;图为为获奖......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120918110958623106166/20120918110958623106166_.html" target="_blank">清华大学举行2012年招生工作总结表彰会</a></h3>
+              <p>2012年清华大学招生工作总结表彰会举行，96名（次）先进个人和12个优秀团队获得表彰。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2012.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120702102250698800394/20120702102250698800394_.html" target="_blank">深圳研究生院举行建党91周年创先争优表彰...</a></h3>
+              <p class="thnews_jqzy">　　深圳研究生院举行庆祝中国共产党成立91周年创先争优表彰大会清华新闻网7月2日电&nbsp; 6月29日下午，清华大学深圳研究生院庆祝中国共产党成立91周年创先争优表彰大会在深圳研究生院CⅡ栋三楼大报告厅举行。深圳研究生院党委书记、副院长赵庆刚宣读了获评清华大学创先争优&ldquo;先进党支部&rdquo;和&ldquo;优秀共产党员&rdquo;的名......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2011.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110909182136636872346/20110909182136636872346_.html" target="_blank">清华大学举行2011年教师节庆祝大会</a></h3>
+              <p>在我国第27个教师节来临之际，9月9日下午，清华大学隆重举行教师节庆祝大会。人文社科学院李学勤教授和原研究生院常务副院长、物理系陈皓明教授共同荣获2011年度“清华大学突出贡献奖”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110705093107413391765/20110705093107413391765_.html" target="_blank">清华大学百年校庆工作总结表彰大会隆重举行</a></h3>
+              <p>7月4日下午，清华大学百年校庆工作总结表彰大会在大礼堂隆重举行。顾秉林、胡和平、陈吉宁、陈旭、康克军、张凤昌、谢维和、袁驷、史宗恺、邓卫等学校领导出席大会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110629150959992100665/20110629150959992100665_.html" target="_blank">核研院举办庆祝建党90周年表彰先进大会暨...</a></h3>
+              <p class="thnews_jqzy">　　核研院举办庆祝建党90周年表彰先进大会暨红色经典歌咏会清华新闻网6月29日电&nbsp;&nbsp;6月27日晚，核研院庆祝中国共产党成立九十周年表彰先进大会暨红色经典歌咏会在清华大学主楼报告厅隆重举行。校党委书记胡和平出席大会并讲话，校党委副书记、纪委书记韩景阳等出席了大会。核研院全院教职工党员、离退休党员、研究生党员、入党积极分子、党外人士代表等约五......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110627085057602422220/20110627085057602422220_.html" target="_blank">清华举行庆祝中国共产党成立90周年暨表彰...</a></h3>
+              <p>在中国共产党成立90周年纪念日前夕，清华大学庆祝中国共产党成立九十周年暨表彰先进大会6月24日下午举行。胡和平、顾秉林、陈旭、康克军、韩景阳、邓卫、庄丽君、张再兴等学校领导出席大会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232610093133987/20110225232610093133987_.html" target="_blank">清华总结表彰勤工助学工作</a></h3>
+              <p class="thnews_jqzy">　　清华总结表彰勤工助学工作【新闻中心讯 通讯员 曲莎莎】12月23日下午， 勤工助学2010-2011学年秋季学期总结表彰大会在旧经管报告厅举行。校党委副书记史宗恺出席大会。总结表彰大会现场在总结会上，勤工助学指导中心和学生勤工助学大队分别对2010年的工作进行了总结。为了更好地实现勤工助学的资助功能和育人效果，学校相关部门密切合作，努力为全校家庭经......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232542390609504/20110225232542390609504_.html" target="_blank">清华表彰研究生党建工作</a></h3>
+              <p class="thnews_jqzy">　　清华表彰研究生党建工作【新闻中心讯 研通社记者 熊柴】10月9日下午，为深入贯彻全校党建工作会议精神，以优异成绩迎接“百年校庆”，清华大学召开了2010年研究生党建表彰大会暨研究生党支书培训会议。表彰大会上，授予赵茜等45位同学“优秀党支部书记”荣誉称号，授予许镇等10名同学“优秀研究生共产党员标兵”荣誉称号，授予王鑫等100名同学“优秀研究生共产党......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232534890543140/20110225232534890543140_.html" target="_blank">教师节之际清华教师获北京市表彰</a></h3>
+              <p class="thnews_jqzy">　　教师节之际清华教师获北京市表彰【新闻中心讯 通讯员 瞿福平】9月7日上午，在北京会议中心举行的北京市庆祝教师节大会对获得2010年“北京市师德标兵”和“师德先进个人”称号的教师进行了表彰，其中清华大学5位教师获得表彰。会议由北京市市长郭金龙主持，中央政治局委员、市委书记刘淇、市委副书记、教育工委书记王安顺、教育部副部长陈小娅等先后讲话。副市长黄卫宣读了关......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232423093976319/20110225232423093976319_.html" target="_blank">清华召开2009年度后勤工作总结表彰大会</a></h3>
+              <p class="thnews_jqzy">　　清华召开2009年度后勤工作总结表彰大会【新闻中心讯】3月24日，清华大学2009年度后勤工作总结表彰大会在主楼报告厅召开。校长顾秉林、副校长张凤昌出席会议并讲话。顾秉林在讲话中充分肯定后勤在学校改革发展过程中所取得的经验和成就。顾秉林指出，后勤坚持实事求是，推进后勤改革，走出了清华特色的改革发展道路；坚持内涵式发展，提升了自身的管理服务水平；服务大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232414328553059/20110225232414328553059_.html" target="_blank">清华参加哥本哈根会议教师受表彰</a></h3>
+              <p class="thnews_jqzy">　　清华参加哥本哈根会议教师受表彰【新闻中心讯 记者 文洁】清华大学何建坤、刘滨、段茂盛、滕飞、王灿等五位教师作为中国代表团成员参加了2009年12月在丹麦首都哥本哈根举行的《联合国气候变化框架公约》第15次缔约方会议和《京都议定书》第5次缔约方会议。面对错综复杂、瞬息万变的谈判形势，五位教师沉着应对，积极主动开展工作，废寝忘食、夜以继日，发扬不怕疲劳、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2009.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232404125717111/20110225232404125717111_.html" target="_blank">2008-2009学年度优秀辅导员学生工...</a></h3>
+              <p class="thnews_jqzy">　　2008-2009学年度优秀辅导员学生工作助理表彰大会举行【新闻中心讯】12月25日，清华大学2008～2009学年度优秀辅导员、学生工作助理表彰大会在主楼报告厅举行。热能系刘树红等10名辅导员被授予“林枫辅导员奖”，新闻学院袁丽萍等10名辅导员被授予“优秀辅导员标兵奖”，建筑学院闫琳等100名辅导员被授予“一二&#8226;九辅导员奖”，计算机系蔡英......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2009.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232349078104909/20110225232349078104909_.html" target="_blank">清华大学国庆60周年庆祝工作总结表彰大会...</a></h3>
+              <p class="thnews_jqzy">　　清华大学国庆60周年庆祝工作总结表彰大会举行【新闻中心讯 通讯员 孙伟 贾珈 摄影 郭海军】11月13日晚，清华大学国庆60周年庆祝工作总结表彰大会在主楼报告厅隆重举行。北京市委社会工委书记、社会工作办公室主任、第四分指挥部指挥宋贵伦，北京市委社会工委副书记、社会工作办公室副主任、第四分指挥部执行指挥王力军，北京市妇联副主席、第二分指挥部执行指挥沈洁，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2009.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232345328760839/20110225232345328760839_.html" target="_blank">清华总结表彰2009年学生社会实践工作</a></h3>
+              <p class="thnews_jqzy">　　清华总结表彰2009年学生社会实践工作【新闻中心讯 学生通讯员 王淑娟】10月30日晚，清华大学2009年学生社会实践总结表彰会在公管报告厅召开。来自全校各院系的200余名同学参加了此次总结表彰会。研究生支教团风采展示2008～2009学年度，清华共有13100名同学，组建780余支队参加第二课堂社会实践，同学们的足迹遍布大江南北。其中，暑期实践53......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225334281653001/20110225225334281653001_.html" target="_blank">清华大学举行2009年教师节庆祝大会</a></h3>
+              <p class="thnews_jqzy">　　清华大学举行2009年教师节庆祝大会【新闻中心讯 记者 崔凯 摄影 郭海军】9月10日正值中国第25个教师节来临之际，清华大学隆重举行庆祝大会，欢度节日，表彰先进，总结工作，展望未来。校领导顾秉林、胡和平、陈旭、谢维和、程建平、袁驷以及校长助理宋永华出席大会并为获奖教师代表颁奖。校党委副书记、工会主席韩景阳主持大会。获奖教师代表、各院系领导及教师代表50......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232324453319940/20110225232324453319940_.html" target="_blank">清华大学举行2009年教师节庆祝大会</a></h3>
+              <p class="thnews_jqzy">　　清华大学举行2009年教师节庆祝大会【新闻中心讯 记者 崔凯 摄影 郭海军】9月10日正值中国第25个教师节来临之际，清华大学隆重举行庆祝大会，欢度节日，表彰先进，总结工作，展望未来。校领导顾秉林、胡和平、陈旭、谢维和、程建平、袁驷以及校长助理宋永华出席大会并为获奖教师代表颁奖。校党委副书记、工会主席韩景阳主持大会。获奖教师代表、各院系领导及教师代表50......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232324531560806/20110225232324531560806_.html" target="_blank">钱易、赵纯均获2009年“清华大学突出贡...</a></h3>
+              <p class="thnews_jqzy">　　钱易、赵纯均获2009年“清华大学突出贡献奖”【新闻中心讯 记者 崔凯 摄影 郭海军】9月10日教师节，清华大学召开教师节庆祝大会，隆重表彰先进教师。会上，环境科学与工程系教授、中国工程院院士、我国著名的环境工程专家和环境教育家、清华大学学术委员会主任钱易院士和清华大学经济管理学院教授、国内管理学科的著名专家、中国MBA教育事业的开创者之一赵纯均教授荣获......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225334562127207/20110225225334562127207_.html" target="_blank">清华大学隆重召开纪念中国共产党成立88周...</a></h3>
+              <p class="thnews_jqzy">　　清华大学隆重召开纪念中国共产党成立88周年暨表彰先进大会【新闻中心讯 记者 马宁 摄影 郭海军】7月1日下午，我校在综合体育馆隆重举行纪念中国共产党成立88周年暨表彰先进大会，校领导胡和平、陈旭、康克军、谢维和、韩景阳、程建平、史宗恺以及校党委常委王岩、邓卫出席大会。会议由校党委常务副书记、副校长陈旭主持。校党委书记胡和平发表讲话。他指出，在即将迎来......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232311921351963/20110225232311921351963_.html" target="_blank">清华大学隆重召开纪念中国共产党成立88周...</a></h3>
+              <p class="thnews_jqzy">　　清华大学隆重召开纪念中国共产党成立88周年暨表彰先进大会【新闻中心讯 记者 马宁 摄影 郭海军】7月1日下午，我校在综合体育馆隆重举行纪念中国共产党成立88周年暨表彰先进大会，校领导胡和平、陈旭、康克军、谢维和、韩景阳、程建平、史宗恺以及校党委常委王岩、邓卫出席大会。会议由校党委常务副书记、副校长陈旭主持。校党委书记胡和平发表讲话。他指出，在即将迎来......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2009.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232225765688007/20110225232225765688007_.html" target="_blank">清华举办全校教职工党支部书记研讨班暨表彰会</a></h3>
+              <p class="thnews_jqzy">　　清华举办全校教职工党支部书记研讨班暨表彰会【新闻中心讯】1月13日，2008年度清华大学全校教职工党支部书记研讨班暨表彰会在主楼报告厅举办。本次研讨班的主题是“贯彻落实十七大精神，学习实践科学发展观，以改革创新精神推进基层党建工作”。全校近400名教职工党支部书记和各单位分管教工工作的党委书记或副书记参加了大会，校党委书记胡和平出席研讨班并发表《学习实践......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232221265307880/20110225232221265307880_.html" target="_blank">清华大学表彰优秀辅导员、学生工作助理</a></h3>
+              <p class="thnews_jqzy">　　清华大学表彰优秀辅导员、学生工作助理【新闻中心讯】12月26日下午，清华大学2007～2008学年度优秀辅导员、学生工作助理表彰大会在主楼后厅举行，王鹏等10名辅导员被授予“林枫辅导员奖”，张帆等100名辅导员被授予“一二&#8226;九辅导员奖”，刘坤等6名学生工作助理被授予“一二&#8226;九学生工作助理奖”。校党委常务副书记胡和平、吉林省政协副主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232200312662539/20110225232200312662539_.html" target="_blank">清华5项目14教师获科技奥运先进集体和个...</a></h3>
+              <p class="thnews_jqzy">　　清华5项目14教师获科技奥运先进集体和个人表彰【新闻中心讯】11月10日，“奥运科技（2008）行动计划”领导小组和第29届奥林匹克运动会科学技术委员会对在北京奥运建设中做出突出贡献的122个优秀科技奥运项目、549名个人，分别给予 “科技奥运先进集体”、“科技奥运特别荣誉集体” 和“科技奥运先进个人”荣誉表彰。清华大学有5个项目获“科技奥运先进集体”，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232155781896955/20110225232155781896955_.html" target="_blank">清华大学表彰奥运会残奥会志愿者</a></h3>
+              <p class="thnews_jqzy">　　清华大学表彰奥运会残奥会志愿者【新闻中心讯】11月1日晚清华大学北京奥运会残奥会志愿者颁奖晚会在大礼堂隆重举行。陈雅伦等18名志愿者获得“清华大学奥运会、残奥会志愿者标兵”称号，陈斌娇等583位同学获得“清华大学奥运会、残奥会优秀志愿者”称号，袁小羽等89人获得“清华共青团奥运志愿者服务与保障工作团队优秀队员”称号。同时国家游泳中心第一临时党支部等7个党......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232155734382581/20110225232155734382581_.html" target="_blank">以志愿者之名共享激情与荣耀--清华举行奥...</a></h3>
+              <p class="thnews_jqzy">　　以志愿者之名 共享激情与荣耀清华大学奥运会残奥会志愿者颁奖晚会举行【新闻中心讯】11月1日晚7点，古老的大礼堂座无虚席，清华大学北京奥运会残奥会志愿者颁奖晚会在这里隆重举行，1000多名志愿者洋溢着青春活力、挥洒着奥运激情，一起把礼堂变成了欢乐的海洋。北京市委教育工委副书记王民忠、北京团市委大学部部长胡九龙、奥运火炬手金晶、清华大学党委副书记史宗恺、学生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225335953195379/20110225225335953195379_.html" target="_blank">清华大学举行北京奥运会残奥会总结表彰大会</a></h3>
+              <p class="thnews_jqzy">　　清华大学举行北京奥运会残奥会总结表彰大会【新闻中心讯 记者 崔凯 摄影 郭海军】10月16日下午，清华大学北京奥运会残奥会总结表彰大会在主楼报告厅隆重举行。校领导陈希、陈吉宁、张凤昌、陈旭、史宗恺以及参加北京奥运会的运动员代表、服务奥运会和残奥会的志愿者代表、场馆运行团队、安全保卫、科技奥运、人文奥运、绿色奥运等方面代表400余人出席表彰大会。校党委常务......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232149328936318/20110225232149328936318_.html" target="_blank">清华大学举行北京奥运会残奥会总结表彰大会</a></h3>
+              <p class="thnews_jqzy">　　清华大学举行北京奥运会残奥会总结表彰大会【新闻中心讯 记者 崔凯 摄影 郭海军】10月16日下午，清华大学北京奥运会残奥会总结表彰大会在主楼报告厅隆重举行。校领导陈希、陈吉宁、张凤昌、陈旭、史宗恺以及参加北京奥运会的运动员代表、服务奥运会和残奥会的志愿者代表、场馆运行团队、安全保卫、科技奥运、人文奥运、绿色奥运等方面代表400余人出席表彰大会。校党委常务......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232143015967585/20110225232143015967585_.html" target="_blank">清华大学欧阳明高、赵萌、梁苏会获北京奥运...</a></h3>
+              <p class="thnews_jqzy">　　清华大学欧阳明高、赵萌、梁苏会获北京奥运会、残奥会先进个人称号【新闻中心讯 通讯员 冉杰】9月29日上午，北京奥运会、残奥会总结表彰大会在人民大会堂隆重召开。胡锦涛、吴邦国、贾庆林、李长春、习近平、李克强、贺国强、周永康等党和国家领导人以及中央和国家机关各部门、解放军各大单位主要负责同志；北京奥运会、残奥会筹办工作领导小组及有关工作机构负责同志；北京市、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2008.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232122953795605/20110225232122953795605_.html" target="_blank">清华研究生支教团获团中央表彰</a></h3>
+              <p class="thnews_jqzy">　　清华研究生支教团获团中央表彰【新闻中心讯】7月16日下午，共青团中央等部委在京主办了抗震救灾先进团组织和优秀团员、团干部、第七届中国十大杰出志愿者和志愿服务集体、抗震救灾英雄志愿服务集体和英雄志愿者表彰大会暨新一批赴灾区志愿者服务团队出征仪式。在仪式上，清华大学第八届研究生支教团获得第七届“中国百个优秀志愿服务集体”荣誉称号，受到表彰。清华大学第八届......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232049281292601/20110225232049281292601_.html" target="_blank">校机关举行2007年度先进表彰座谈会</a></h3>
+              <p class="thnews_jqzy">　　校机关举行2007年度先进表彰座谈会【新闻中心讯 记者 飞雨 摄影 郭海军】5月6日下午，清华大学校机关2007年度先进表彰座谈会在医学院会议室举行。2007年度分别获得清华大学先进集体、清华大学先进工作者、清华大学教育职员“爱岗敬业”奖、校机关先进工作者等表彰的70余名校机关教育职员代表参加了座谈会。校党委副书记、纪委书、校机关党委书记程建平及相关部处......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2008.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232039515308100/20110225232039515308100_.html" target="_blank">清华新闻中心表彰2007年度优秀学生通讯员</a></h3>
+              <p class="thnews_jqzy">　　清华新闻中心表彰2007年度优秀学生通讯员【新闻中心讯 记者 周襄楠 摄影 李静】4月17日在紫荆综合服务楼，清华大学新闻中心对在2007年度学生通讯员工作当中表现突出的组织和个人进行了表彰。此次共表彰了清华研究生通讯社等3家“优秀组织奖”，袁小羽同学等5名“优秀学生通讯员奖”，《燃烧创业激情 演绎创业故事——第十届清华创业大赛落幕》等11篇学生通讯员优......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2008.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232022109774020/20110225232022109774020_.html" target="_blank">清华“十七大代表进校园”系列活动受北京市...</a></h3>
+              <p class="thnews_jqzy">　　清华“十七大代表进校园”系列活动受北京市委教育工委表彰【新闻中心讯】日前，清华大学组织的“十七大代表进校园”系列活动受到北京市委教育工委表彰，获评“北京高校学习党的十七大精神优秀主题教育活动”，全市共有十所高校的相关活动获得此项荣誉。自党的十七大胜利召开以来，清华陆续开展了各种形式多样、内容丰富的学习活动，“十七大代表进校园”系列活动便是深受师生好评......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2008.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232019531375150/20110225232019531375150_.html" target="_blank">我校召开国防资质建设总结表彰会</a></h3>
+              <p class="thnews_jqzy">　　我校召开国防资质建设总结表彰会【新闻中心讯 摄影 郭海军】1月22日，我校在主楼召开了国防资质建设总结表彰会。校长顾秉林，副校长康克军，校副秘书长、校办主任王进展，清华国防资质体系覆盖内各管理部门负责人、院系主管负责任、业务部门负责人、体系建设主要参加人员40余人参加了表彰会。科研院副院长张华堂主持了会议。大会对为学校国防资质体系建设做出优异成绩的各单位......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232011937753074/20110225232011937753074_.html" target="_blank">清华举行2007年勤工助学工作总结暨表彰会</a></h3>
+              <p class="thnews_jqzy">　　清华举行2007年勤工助学工作总结暨表彰会【新闻中心讯】12月27日下午，清华大学2007年学生勤工助学工作总结暨表彰会在旧经管报告厅举行。大会为姬颖敏等3名同学颁发“社会工作奖”，授予成俊等20名同学“先进个人”荣誉，并为超市导购分队等7个集体颁发“优秀集体奖”。副校长陈旭，副总务长、后勤党委书记吉俊民，学生工作处处长、勤工助学指导中心主任杜汇良以......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232011578962330/20110225232011578962330_.html" target="_blank">清华大学表彰优秀辅导员、学生工作助理</a></h3>
+              <p class="thnews_jqzy">　　清华大学表彰优秀辅导员、学生工作助理【新闻中心讯】12月26日下午，清华大学2006～2007学年度优秀辅导员、学生工作助理表彰大会在主楼报告厅召开。党安荣等10名同志被授予“林枫辅导员奖”，麦贤敏等100名同志被授予“一二&#8226;九辅导员奖”，郑宝菊等3名同志被授予“一二&#8226;九学生工作助理奖”。校党委书记陈希，吉林省政协副主席、林枫......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231955109833566/20110225231955109833566_.html" target="_blank">清华参与我国《能源法（草案）》起草工作受...</a></h3>
+              <p class="thnews_jqzy">　　清华参与我国《能源法（草案）》起草工作受表彰&nbsp;&nbsp;&nbsp; 【新闻中心讯】11月27日上午，国家能源领导小组办公室在北京召开《能源法》公众征求意见表彰大会，表彰为《能源法（草案）》制定工作做出突出贡献的单位和个人，清华大学环境资源与能源法研究中心成为“集体建言奖”的唯一获奖单位，清华也是获奖的唯一一所高等院校。此次共有6家单位和10名个......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231952250723442/20110225231952250723442_.html" target="_blank">清华学生艺术团进行年度表彰及建团五十周年...</a></h3>
+              <p class="thnews_jqzy">　　清华学生艺术团进行年度表彰及建团五十周年团庆动员【新闻中心讯 通讯员 韩朱旸】11月18日上午，2006——2007学年度清华大学学生艺术团表彰大会暨建团五十周年庆典动员大会在建筑馆报告厅召开。大会对校学术艺术团的优秀团体和个人进行了表彰，颁发了校文艺优秀奖学金、“学艺双馨”奖、“优秀学生干部”奖、“学生艺术团金、银、铜奖团队” 和“学生艺术团原创基......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231949750504604/20110225231949750504604_.html" target="_blank">清华大学对2007年学生社会实践进行总结...</a></h3>
+              <p class="thnews_jqzy">　　清华大学对2007年学生社会实践进行总结表彰&nbsp;&nbsp;&nbsp; 【新闻中心讯 通讯员 李昕明 李虓】11月9日晚，清华大学2007年学生社会实践总结表彰会在公管学院报告厅举行。&nbsp;&nbsp;&nbsp;颁奖现场&nbsp;&nbsp;&nbsp; 校团委副书记孙伟从实践主题、实践规模、管理模式、力量支持、培训体系、评价总结等方面对......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2007.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225338031599361/20110225225338031599361_.html" target="_blank">清华大学教师节表彰教师先进集体和个人</a></h3>
+              <p class="thnews_jqzy">　　清华大学教师节表彰教师先进集体和个人【新闻中心讯 记者 周襄楠 摄影 郭海军】9月10日，在第23个教师节来临之际，清华大学在大礼堂举行了庆祝2007年教师节大会，170余个先进集体和个人在大会上获得表彰。大会由校党委常务副书记、副校长胡和平主持。清华大学党委副书记韩景阳宣读了校党委《关于学习贯彻胡锦涛总书记在全国优秀教师代表座谈会上的重要讲话精神的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2007.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231931750965035/20110225231931750965035_.html" target="_blank">清华大学教师节表彰教师先进集体和个人</a></h3>
+              <p class="thnews_jqzy">　　清华大学教师节表彰教师先进集体和个人【新闻中心讯 记者 周襄楠 摄影 郭海军】9月10日，在第23个教师节来临之际，清华大学在大礼堂举行了庆祝2007年教师节大会，170余个先进集体和个人在大会上获得表彰。大会由校党委常务副书记、副校长胡和平主持。清华大学党委副书记韩景阳宣读了校党委《关于学习贯彻胡锦涛总书记在全国优秀教师代表座谈会上的重要讲话精神的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2007.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225231927015654861/20110225231927015654861_.html" target="_blank">教育部评选表彰先进集体和个人</a></h3>
+              <p class="thnews_jqzy">　　教育部评选表彰先进集体和个人 　《光明日报》&nbsp;2007-08-28 全国教育系统规模最大、称号最多的一次表彰活动即将开始。记者今天从教育部例行新闻发布会上获悉,2007年度全国教育系统先进集体和先进个人评选表彰工作已结束公示。教师节前夕,500个先进集体、2804名先进个人将在教育部召开的庆祝教师节暨全国教育系统先进集体和先进个人表彰大会上......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231911578609402/20110225231911578609402_.html" target="_blank">清华7位同志获北京教育系统“关心下一代优...</a></h3>
+              <p class="thnews_jqzy">　　清华7位同志获北京教育系统“关心下一代优秀党建工作者”表彰【新闻中心讯】6月27日下午，北京教育系统关心下一代工作委员会在北京教育老干部活动中心召开“关心下一代优秀党建工作者”表彰暨经验交流会，清华大学林泰、钱锡康、王鲁生、冯虞章、黄圣伦、宋秦年和凌瑞骥7位同志受到表彰，林泰还作为获奖者代表在会上作了题为“永远做青年学生的良师益友”的发言。全市各高校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231903812187004/20110225231903812187004_.html" target="_blank">清华大学表彰首届十佳紫荆志愿者</a></h3>
+              <p class="thnews_jqzy">　　清华大学表彰首届十佳紫荆志愿者【新闻中心讯 通讯员 袁小羽 学通社记者 吕宁摄影 杜云】去西藏支教，到松堂医院为老人做临终关怀，无偿献血多次，为雅典和都灵奥运会志愿服务……清华大学学生志愿者的身影活跃在越来越多的需要他们的地方。6月1日，在清华大礼堂举行的“志愿者之夜”——2007清华大学志愿者活动月闭幕式上，“清华大学首届十佳紫荆志愿者”表彰成为晚会的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225338671251936/20110225225338671251936_.html" target="_blank">清华大学表彰首届十佳紫荆志愿者</a></h3>
+              <p class="thnews_jqzy">　　清华大学表彰首届十佳紫荆志愿者【新闻中心讯 通讯员 袁小羽 学通社记者 吕宁摄影 杜云】去西藏支教，到松堂医院为老人做临终关怀，无偿献血多次，为雅典和都灵奥运会志愿服务……清华大学学生志愿者的身影活跃在越来越多的需要他们的地方。6月1日，在清华大礼堂举行的“志愿者之夜”——2007清华大学志愿者活动月闭幕式上，“清华大学首届十佳紫荆志愿者”表彰成为晚会的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2007.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231851031114196/20110225231851031114196_.html" target="_blank">李希光、景军获全国人口和计划生育外事工作...</a></h3>
+              <p class="thnews_jqzy">　　李希光、景军获全国人口和计划生育外事工作先进个人表彰【新闻中心讯】4月26～27日，全国人口和计划生育外事工作会议在京召开，会议对在人口和计划生育外事工作中做出突出贡献的先进集体、先进个人进行了表彰，清华国际传播研究中心主任李希光、艾滋病政策研究中心主任景军获得国家人口和计划生育委员会授予的“全国人口和计划生育外事先进个人”称号。该项荣誉表彰了他们在健......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2007.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231850484349997/20110225231850484349997_.html" target="_blank">校机关举行2006年度先进表彰会</a></h3>
+              <p class="thnews_jqzy">　　校机关举行2006年度先进表彰会【新闻中心讯 记者 邵默】4月24日下午，校机关2006年度先进表彰会在二教会议室举行。会上，70位同志获得校机关教育职员“爱岗敬业”奖，校党委副书记韩景阳、校机关党委书记李一兵、校办主任许庆红等为获奖者颁发了证书。在随后举行的座谈会上，8位获奖代表围绕自己的工作经验进行了总结交流。韩景阳代表学校向所有获奖者表示......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2006.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231830406200887/20110225231830406200887_.html" target="_blank">清华大学表彰优秀辅导员</a></h3>
+              <p class="thnews_jqzy">　　清华大学表彰优秀辅导员【新闻中心讯 记者 王玉杰 摄影 郭海军】12月19日，清华大学2005-2006学年度优秀辅导员表彰大会暨“林枫辅导员奖”十周年纪念大会在主楼后厅召开。建筑学院彭小松等100名同志被授予“一二&#8226;九辅导员奖”，机械系崔旭龙等10名同志被授予“林枫辅导员奖”，热能系刘金玲等3名同志被授予“一二&#8226;九学生工作助理奖......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2006.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225339515854968/20110225225339515854968_.html" target="_blank">清华大学表彰优秀辅导员</a></h3>
+              <p class="thnews_jqzy">　　清华大学表彰优秀辅导员【新闻中心讯 记者 王玉杰 摄影 郭海军】12月19日，清华大学2005-2006学年度优秀辅导员表彰大会暨“林枫辅导员奖”十周年纪念大会在主楼后厅召开。建筑学院彭小松等100名同志被授予“一二&#8226;九辅导员奖”，机械系崔旭龙等10名同志被授予“林枫辅导员奖”，热能系刘金玲等3名同志被授予“一二&#8226;九学生工作助理奖......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225340234325441/20110225225340234325441_.html" target="_blank">清华召开2006年教师节庆祝大会表彰获奖...</a></h3>
+              <p class="thnews_jqzy">　　清华召开2006年教师节庆祝大会表彰获奖教师【新闻中心讯 记者 魏磊 通讯员 郑鹏 摄影 郭海军】在又一个教师节来临之际，9月8日上午，我校在公管学院报告厅召开庆祝教师节大会。会上，隆重表彰了我校2005年在教学、科研等领域做出显著成绩的教师。校领导顾秉林、陈希、庄丽君、康克军、汪劲松、胡和平等出席大会并为获奖者颁奖。校党委常务副书记庄丽君主持大会。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231805265533403/20110225231805265533403_.html" target="_blank">教师节前夕清华一批教师获北京市表彰</a></h3>
+              <p class="thnews_jqzy">　　教师节前夕清华一批教师获北京市表彰　【新闻中心讯】教师节前夕，我校一批教师获北京市表彰。土木水利学院石永久教授等15位教师获2006年“北京市优秀教师”称号，人事处杨存荣获“北京市优秀教育工作者”称号，机械系刘文今教授获“北京市师德标兵”称号，土水学院张建民教授等4位教师获2006年“北京市师德先进个人”称号。附：获奖名单2006年“北京市优秀教师”土水学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231805375162680/20110225231805375162680_.html" target="_blank">清华召开2006年教师节庆祝大会表彰获奖...</a></h3>
+              <p class="thnews_jqzy">　　清华召开2006年教师节庆祝大会表彰获奖教师【新闻中心讯 记者 魏磊 通讯员 郑鹏 摄影 郭海军】在又一个教师节来临之际，9月8日上午，我校在公管学院报告厅召开庆祝教师节大会。会上，隆重表彰了我校2005年在教学、科研等领域做出显著成绩的教师。校领导顾秉林、陈希、庄丽君、康克军、汪劲松、胡和平等出席大会并为获奖者颁奖。校党委常务副书记庄丽君主持大会。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231757968495096/20110225231757968495096_.html" target="_blank">16个研究生先进集体受表彰</a></h3>
+              <p class="thnews_jqzy">　　清华大学表彰2005～2006学年度研究生先进集体经2005～2006学年度第22次校务会议（2006年6月29日）讨论通过，决定授予计研4班等16个研究生集体“2005～2006学年度清华大学研究生先进集体”称号。名单如下：计算机科学与技术系 计研4班水利水电工程系 水研2班建筑学院 　建研5班　......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231737734792549/20110225231737734792549_.html" target="_blank">SRT计划十周年回顾总结暨表彰大会召开</a></h3>
+              <p class="thnews_jqzy">　　清华召开SRT计划十周年回顾总结暨表彰大会【新闻中心讯 记者 王玉杰 摄影 郭海军】4月27日，清华大学SRT计划十周年回顾总结暨表彰大会在主楼接待厅举行。副校长汪劲松、党委副书记陈旭等出席会议并为获奖教师和学生颁奖。200余名师生代表参加了大会。陈旭首先宣读了清华大学2005年SRT计划获奖名单。由电机系教师于庆广指导的刘肇熙等两名同学完成的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225340828112323/20110225225340828112323_.html" target="_blank">SRT计划十周年回顾总结暨表彰大会召开</a></h3>
+              <p class="thnews_jqzy">　　清华召开SRT计划十周年回顾总结暨表彰大会【新闻中心讯 记者 王玉杰 摄影 郭海军】4月27日，清华大学SRT计划十周年回顾总结暨表彰大会在主楼接待厅举行。副校长汪劲松、党委副书记陈旭等出席会议并为获奖教师和学生颁奖。200余名师生代表参加了大会。陈旭首先宣读了清华大学2005年SRT计划获奖名单。由电机系教师于庆广指导的刘肇熙等两名同学完成的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231732359782323/20110225231732359782323_.html" target="_blank">清华表彰2005年度国家级教学和科研奖获...</a></h3>
+              <p class="thnews_jqzy">　　清华表彰2005年度国家级教学和科研奖获得者 【新闻中心讯 记者 顾淑霞 摄影 郭海军】4月20日，在主楼报告厅召开的“清华大学2005年度教学科研奖励大会”上，学校对获得2005年国家级教学与科研奖项的单位和个人进行了表彰。表彰大会由副校长康克军主持。副校长谢维和宣读了教学和科研获奖项目名单。校领导顾秉林、陈希、庄丽君、张再兴、岑章志、康克军、张凤......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225340890360764/20110225225340890360764_.html" target="_blank">清华表彰2005年度国家级教学和科研奖获...</a></h3>
+              <p class="thnews_jqzy">　　清华表彰2005年度国家级教学和科研奖获得者 【新闻中心讯 记者 顾淑霞 摄影 郭海军】4月20日，在主楼报告厅召开的“清华大学2005年度教学科研奖励大会”上，学校对获得2005年国家级教学与科研奖项的单位和个人进行了表彰。表彰大会由副校长康克军主持。副校长谢维和宣读了教学和科研获奖项目名单。校领导顾秉林、陈希、庄丽君、张再兴、岑章志、康克军、张凤......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231723078180739/20110225231723078180739_.html" target="_blank">我校2005年度后勤工作总结表彰大会召开</a></h3>
+              <p class="thnews_jqzy">　　我校2005年度后勤工作总结表彰大会召开3月16日上午，清华大学2005年度后勤工作总结表彰大会在蒙民伟楼召开。会议通报表彰了2005年度在北京市、海淀区和学校获得各类奖励的集体和个人并向获得2005年度后勤优质项目的单位颁发了获奖证书。副校长张凤昌做了题为《自强后勤谋科学发展，厚德服务利师生员工》的主题报告，他“从练内功，确保事业持续发展”、“创一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2005.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231704406477569/20110225231704406477569_.html" target="_blank">我校05年研究生社会实践表彰交流会举行</a></h3>
+              <p class="thnews_jqzy">　　加强实践教育 培养创新人才我校2005年研究生社会实践表彰交流会举行&nbsp;&nbsp;&nbsp; 【新闻中心讯 研通社 葛强强 张群芳】11月25日下午，我校研究生社会实践表彰交流会在公共管理学院报告厅举行。2005年研究生社会实践各类获奖集体和先进个人代表200余人参加了表彰交流会。电机系东北电网支队、核研院一院支队、精仪系九院支队等15支支队获得......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231556000713515/20110225231556000713515_.html" target="_blank">我校表彰2004年老有所为、离退休工作先...</a></h3>
+              <p class="thnews_jqzy">　　我校表彰2004年老有所为、离退休工作先进个人&nbsp;&nbsp;&nbsp; 【新闻中心讯 记者 聿才】3月25日，我校在近春楼西楼召开会议，表彰2004年老有所为先进个人和离退休工作先进个人，人文学院林泰等16位同志和机械系徐华洁等18位同志受到表彰。校党委常务副书记、校离退休工作领导小组副组长庄丽君等出席会议，离退休工作处处长刘裕品主持会议。&nb......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2004.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225343375628566/20110225225343375628566_.html" target="_blank">我校召开优秀辅导员、学生工作助理表彰大会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校召开优秀辅导员、学生工作助理表彰大会【新闻中心讯 通讯员 向波涛 摄影 陈鹏翔】12月23日下午，“清华大学2003－2004学年度优秀辅导员、学生工作助理表彰大会”在主楼后厅举行。校党委书记陈希，党委常委、党办主任白永毅及有关部处负责人陈永灿、邱显清、唐杰、郑浩峻等出席大会并为获奖者颁奖。校党委副书记杨振斌主持了大会。来自全校各院系的辅导......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231505984321681/20110225231505984321681_.html" target="_blank">我校召开庆祝教师节暨教学成果表彰大会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校召开庆祝教师节暨教学成果表彰大会 【新闻中心讯 记者 淑霞 摄影 郭海军】9月8日下午，在第20个教师节来临前夕，我校“庆祝教师节暨教学成果表彰大会”在经管学院报告厅召开。校领导顾秉林、陈希、岑章志、庄丽君、汪劲松等出席了大会并为获奖者颁奖。副校长汪劲松主持了大会。 近年来,我校推行了一系列教学改革措施，得到了广大教师的大力支持和积极配......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231400843923621/20110225231400843923621_.html" target="_blank">校机关举行纪念“七一”表彰座谈会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档纪念“七一” 表彰先进校机关举行纪念“七一”表彰座谈会 7月1日下午，在中国共产党第82个生日到来之际，校机关党委在二教会议室举行了校机关纪念“七一”表彰座谈会，来自校机关各部处的20名在非典期间表现突出的党员受到了表彰，会上还通报了校机关受校级表彰的2个先进党支部和5名优秀共产党员、5名优秀党建与思想政治工作者。 随后，大家就自己在非典期......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231400546113460/20110225231400546113460_.html" target="_blank">特写:党性，不竭的前进动力</a></h3>
+              <p class="thnews_jqzy">　　特写：党性，不竭的前进动力jiang yunzhongNormaljiang yunzhong132003-07-01T02:06:00Z2003-07-01T02:09:00Z14492565xcb216300810.2625CleanClean7.8 磅02MicrosoftInternetExplorer4/* Style Definitions */......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231400437811362/20110225231400437811362_.html" target="_blank">中共清华大学委员会表彰决定</a></h3>
+              <p class="thnews_jqzy">　　近年来，我校各级党组织和广大共产党员高举邓小平理论伟大旗帜，认真贯彻和落实“三个代表”重要思想和党的十六大精神，努力发挥基层党组织的政治核心、战斗堡垒作用和共产党员的先锋模范作用，在学校各项事业的改革与发展中，在创建世界一流大学的进程中，与时俱进，开拓lwhNormaljiang yunzhong3222003-06-23T01:36:00Z2003-07-......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231400390782330/20110225231400390782330_.html" target="_blank">我校一批基层党组织和共产党员受到中央和北...</a></h3>
+              <p class="thnews_jqzy">　　我校一批基层党组织和共产党员受到中央和北京市表彰jiang yunzhongNormaljiang yunzhong1322003-07-01T01:05:00Z2003-07-01T01:37:00Z158334xcb2139110.2625CleanClean7.8 磅02MicrosoftInternetExplorer4/* Style Defini......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231400250837439/20110225231400250837439_.html" target="_blank">校党委隆重集会，庆祝中国共产党成立82周年</a></h3>
+              <p class="thnews_jqzy">　　无标题文档校党委隆重集会，庆祝中国共产党成立82周年【新闻中心6月30日讯】6月30日下午，清华大学综合体育馆内响起了庄严的《国际歌》，中国共产党党旗高高飘扬，清华大学党委在这里隆重集会，纪念中国共产党成立82周年。 近年来，我校各级党组织和广大共产党员高举邓小平理论伟大旗帜，认真贯彻和落实“三个代表”重要思想和党的十六大精神，努力发挥基层党组织的战......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225347609484844/20110225225347609484844_.html" target="_blank">校党委隆重集会，庆祝中国共产党成立82周年</a></h3>
+              <p class="thnews_jqzy">　　无标题文档校党委隆重集会，庆祝中国共产党成立82周年【新闻中心6月30日讯】6月30日下午，清华大学综合体育馆内响起了庄严的《国际歌》，中国共产党党旗高高飘扬，清华大学党委在这里隆重集会，纪念中国共产党成立82周年。 近年来，我校各级党组织和广大共产党员高举邓小平理论伟大旗帜，认真贯彻和落实“三个代表”重要思想和党的十六大精神，努力发挥基层党组织的战......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231330890187079/20110225231330890187079_.html" target="_blank">校机关表彰交流大会举行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档校机关表彰交流大会举行 3月13日下午，校机关表彰交流大会在主楼后厅举行。校机关各部门全体工作人员参加了会议。党委书记陈希、常务副校长何建坤出席了会议。 会议由机关党委书记韩景阳主持，机关党委副书记李一兵首先宣读了校机关管理先进等表彰名单。 随后，学生部洪波等12位获奖同志分别在大会上做了交流发言。他们结合自身的工作，交流了管理工作的体......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2002.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231325687643921/20110225231325687643921_.html" target="_blank">我校文科建设成果喜人</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校文科建设成果喜人文科科研表彰暨发展研讨会召开 12月18日，我校文科科研表彰暨发展研讨会在蒙民伟楼多功能厅召开。大会对我校2000～2001年度文科科研方面取得的重大成果进行了表彰。文科工作领导小组组长、文科工作委员会主任贺美英同志为大会作了《坚持先进文化前进方向，努力开创我校文科发展新局面》的主题报告，总结了“九五”以来我校文科取得的可喜......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225349515492870/20110225225349515492870_.html" target="_blank">我校召开2002年教学成果奖表彰大会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校召开2002年教学成果奖表彰大会9月12日，我校在主楼接待厅隆重召开2002年教学成果奖表彰大会，对我校荣获2001年高等教育国家级教学成果奖、2002年清华大学教学工作优秀成果奖、清华大学第七届实验技术成果奖的项目和本年度工会系统先进集体和先进个人进行了表彰。校党委书记陈希教授宣布获奖名单，副校长顾秉林院士讲话，校党委副书记张再兴、副校长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2002.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231300484480861/20110225231300484480861_.html" target="_blank">863计划结硕果 语音核心技术获产业化突破</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document863计划结硕果 语音核心技术获产业化突破（中国电子报 2002年06月03日)【赛迪网讯】日前，由清华大学和北京高新创投共同投资成立北京天朗语音科技公司宣告成立，这标志着由国家863计划支持了15年的一项语音核心技术的研究项目迈出了产业化的第一步。据了解，北京天朗语音科技有限公司是由清华大学和北京高新技术投资公司共......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231250875592902/20110225231250875592902_.html" target="_blank">清华紫光召开2001年度总结表彰大会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华紫光召开2001年度总结表彰大会3月29日下午，清华紫光集团在清华紫光国际交流中心二层多功能厅召开了2001年度总结表彰大会。校党委书记陈希，副校长、校产业领导小组副组长岑章志，校长助理、企业集团董事长荣泳霖等应邀出席大会。陈希、岑章志、荣泳霖等领导分别讲话，肯定了清华紫光13年来取得的成绩，勉励紫光人共同努力，克服困难，在2002年再铸辉......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225625781530682/20110225225625781530682_.html" target="_blank">我校举行2001年学生暑期社会实践总结表...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document认真参与社会实践 落实“三个代表”思想我校举行2001年学生暑期社会实践总结表彰会表彰会金秋十月，是收获的季节。10月25日，我校300名师生满载社会实践的丰硕成果在三联大报告厅参加了2001年学生暑期社会实践总结表彰会。会上校团委副书记张德强介绍了本年度社会实践工作情况。纵观2001年我校学生社会实践的整体情况......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225351890107191/20110225225351890107191_.html" target="_blank">我校举行2001年学生暑期社会实践总结表...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document认真参与社会实践 落实“三个代表”思想我校举行2001年学生暑期社会实践总结表彰会表彰会金秋十月，是收获的季节。10月25日，我校300名师生满载社会实践的丰硕成果在三联大报告厅参加了2001年学生暑期社会实践总结表彰会。会上校团委副书记张德强介绍了本年度社会实践工作情况。纵观2001年我校学生社会实践的整体情况......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353390754917/20110225225353390754917_.html" target="_blank">我校召开大会隆重纪念中国共产党成立八十周年</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我校召开大会隆重纪念中国共产党成立八十周年6月27日，我校在大礼堂召开纪念中国共产党成立八十周年暨"七一"表彰大会，隆重庆祝中国共产党成立八十周年，表彰我校为党的建设做出突出贡献的先进集体和个人。1200多名师生党员参加了大会。校党委书记贺美英发表重要讲话，强调要学习、贯彻"三个代表"的重要思想，用"三个代表"的重要思想......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231219968758633/20110225231219968758633_.html" target="_blank">四位清华校友是“863”计划的倡议者</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document四位清华校友是“863”计划的倡议者(2001.04.28 新华网)新华网北京4月28日电 1986年3月，王淦昌（1929年物理系毕业）、王大珩（1936年物理系毕业）、杨嘉墀（ 1941-1942年西南联大任教）、陈芳允（1938年西南联大物理系毕业）四位毕业于清华大学的科学家向国务院提出了《关于跟踪研究外国战略性高......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231208218848891/20110225231208218848891_.html" target="_blank">【人物转载】王大珩：让“863计划”光耀...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document王大珩：让“863计划”光耀中华（科技日报 2001年3月5日）本报记者郑千里&nbsp; &nbsp; 1986年以前，人们只要提起王大珩院士，就会将他和我国的光学技术发展联系在一起，因为他被国内外同行公认是“中国光电学之父”，是中国光电学行业的奠基人。王大珩早年曾留学英国，但为了祖国的光学事业，他毅然决然在194......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

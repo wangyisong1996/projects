@@ -1,0 +1,489 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>百年梁思成</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231218015938880&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center"><font face=宋体 size=5>百年梁思成</font></h3><p align="center">（北京晚报 2001年4月26日）</p><p align="center"><img src="/publish/news/images/upload/liangsichen.jpg" width="224" height="156"></p><p><font face="宋体" size="4">平生踪迹 </font></p><p><font face="宋体" size="4">　　1901．4．20 </font><p><font face="宋体" size="4">　　出生于日本东京。原籍为广东省新会县 </font><p><font face="宋体" size="4">　　1915－1923 </font><p><font face="宋体" size="4">　　北京清华学校学习 </font><p><font face="宋体" size="4">　　1924－1927 </font><p><font face="宋体" size="4">　　美国宾夕法尼亚大学建筑系、宾夕法尼亚大学研究院，先后获学士、硕士学位 </font><p><font face="宋体" size="4">　　1927－1928 </font><p><font face="宋体" size="4">　　美国哈佛大学研究院肆业 </font><p><font face="宋体" size="4">　　1928－1931 </font><p><font face="宋体" size="4">　　沈阳东北大学建筑系主任、教授 </font><p><font face="宋体" size="4">　　1931－1946 </font><p><font face="宋体" size="4">　　中国营造学社法式组主任、中央研究院历史语言研究所通讯研究员及兼任研究员 </font><p><font face="宋体" size="4">　　1944－1945 </font><p><font face="宋体" size="4">　　任教育部战区文物保存委员会副主任 </font><p><font face="宋体" size="4">　　1946－1947 </font><p><font face="宋体" size="4">　　美国耶鲁大学兼任教授、联合国大厦设计顾问建筑师、美国普林斯顿大学赠授文学博士 </font><p><font face="宋体" size="4">　　1948 </font><p><font face="宋体" size="4">　　当选为中央研究院院士 </font><p><font face="宋体" size="4">　　1946－1972 </font><p><font face="宋体" size="4">　　清华大学建筑系主任 </font><p><font face="宋体" size="4">　　1972．1．9 </font><p><font face="宋体" size="4">　　逝世于北京 </font><p><font face="宋体" size="4">　　著作等身 </font><p><font face="宋体" size="4">　　《我们所知道的唐代佛寺与宫殿》 </font><p><font face="宋体" size="4">　　《蓟县独乐寺山门考》 </font><p><font face="宋体" size="4">　　《宝坻县广济寺三大寺殿》 </font><p><font face="宋体" size="4">　　《正定古建筑调查纪略》 </font><p><font face="宋体" size="4">　　《云冈石窟中所表现的北魏建筑》 </font><p><font face="宋体" size="4">　　《大同古建筑调查报告》（与刘敦桢合写） </font><p><font face="宋体" size="4">　　《赵县大石桥》 </font><p><font face="宋体" size="4">　　《修理故宫景山万寿亭计划》（与刘敦桢合写） </font><p><font face="宋体" size="4">　　《汉代建筑式样与装饰》（与刘敦桢、鲍鼎合写） </font><p><font face="宋体" size="4">　　《清式营造则例》 </font><p><font face="宋体" size="4">　　《杭州六和塔复原状计划》 </font><p><font face="宋体" size="4">　　《清故宫文渊阁实测图说》（与刘敦桢合写） </font><p><font face="宋体" size="4">　　《故宫文渊阁楼面修理计划》（与蔡文荫、刘敦桢合写） </font><p><font face="宋体" size="4">　　《曲阜孔庙之建筑及修葺计划》 </font><p><font face="宋体" size="4">　　《建筑设计参考图叙述》 </font><p><font face="宋体" size="4">　　《建筑设计参考图集简说及（一）台基、（二）台栏杆、（三）店面、（四）斗拱（元明清）》 </font><p><font face="宋体" size="4">　　《中国建筑史》 </font><p><font face="宋体" size="4">　　《中国建筑和艺术》（英文稿） </font><p><font face="宋体" size="4">　　《城市计划大纲序》 </font><p><font face="宋体" size="4">　　《北京－都市计划的无比杰作》 </font><p><font face="宋体" size="4">　　《中国建筑与中国建筑师》 </font><p><font face="宋体" size="4">　　《中国建筑的特征》 </font><p><font face="宋体" size="4">　　《中国建筑发展的历史阶段》（与林徽因、莫宗江合写） </font><p><font face="宋体" size="4">　　《东亚城市建设与改造》 </font><p><font face="宋体" size="4">　　《建筑创造的几个重要问题》 </font><p><font face="宋体" size="4">　　《中国的佛教建筑》 </font><p><font face="宋体" size="4">　　《广西容县武真阁的杠杆结构》 </font><p><font face="宋体" size="4">　　《闲话文物建筑的重修与维护》 </font><p><font face="宋体" size="4">　　《日本唐招提寺与中国唐代建筑》 </font><p><font face="宋体" size="4">　　《营造法式注释（上）》 </font><p><font face="宋体" size="4">　　《A Pictorial History of Chinese Architecture》 </font><p><font face="宋体" size="4">　　《图像中国建筑史（汉英双语版）》 </font><p><font face="宋体" size="4">　　《图说中国建筑史》 </font><p><font face="宋体" size="4">　　梁思成说…… </font><p><font face="宋体" size="4">　　“伟大的中轴线” </font><p><font face="宋体" size="4">　　一根长达八公里，全世界最长，也最伟大的南北中轴线穿过了全城。北京独有的壮美秩序就由这条中轴的建立而产生。前后起伏左右对称的体形或空间的分配都是以这中轴为依据的。气魄之雄伟就在这个南北引伸，一贯到底的规模。我们可以从外城最南的永定门说起，从这南端正门北行，在中轴线左右是天坛和先农坛两个约略对称的建筑群；经过长长一条市楼对列的大街，到达珠市口的十字街口之后，才面向着内城第一个重点——雄伟的正阳门楼。在门前百余米的地方，拦路一座大牌楼，一座大石桥，为这第一个重点做了前卫。但这还只是一个序幕。过了此点，从正阳门楼到中华门，由中华门到天安门，一起一伏，一伏而又起，这中间千步廊（民国初年已拆除）御路的长度，和天安门面前的宽度，是最大胆的空间的处理，衬托着建筑重点的安排。……由天安门起，是一系列轻重不一的宫门和广庭，金色照耀的琉璃瓦顶，一层又一层的起伏峋峙，一直引导到太和殿顶，便到达中线前半的极点，然后向北、重点逐渐退削，以神武门为尾声。再往北，又“奇峰突起”的立着景山做了宫城背后的衬托。景山中峰上的亭子正在南北的中心点上。由此向北是一波又一波的远距离重点的呼应。由地安门，到鼓楼、钟楼，高大的建筑物都继续在中轴线上。但到了钟楼，中轴线便有计划地，也恰到好处地结束了。中线不再向北到达墙根，而将重点平稳地分配给左右分立的两个北面城楼——安定门和德胜门。有这样气魄的建筑总布局，以这样规模来处理空间，世界上就没有第二个！   </font><p><font face="宋体" size="4">　　摘自《伟大的中轴线》 </font><p><font face="宋体" size="4">　　“城墙变公园” </font><p><font face="宋体" size="4">　　有些人主张拆除城墙，理由是：城墙是古代防御的工事，现在已失去了功用，它已尽了它的历史任务了；城墙是封建帝王的遗迹；城墙阻碍交通，限制或阻碍城市的发展；拆了城墙可以取得许多砖，可以取得地皮，利用为公路。简单地说，意思是：留之无用，且有弊害，拆之不但不可惜，且有薄利可图。   </font><p><font face="宋体" size="4">　　但是，从不主张拆除城墙的人的论点上说，这种看法是有偏见的，片面的，狭隘的，也缺乏实际的计算的；由全面城市计划的观点看来，都是知其一不知其二的，见树不见林的。   </font><p><font face="宋体" size="4">　　他说：城墙并不阻碍城市的发展，而且把它保留着与发展北京为现代城市不但没有抵触，而且有利。如果发展它的现代作用，它的存在会丰富北京城人民大众的生活，将久远的为我们可贵的环境。   </font><p><font face="宋体" size="4">　　城墙上面，平均宽度约十米以上，可以砌花池，栽植丁香、蔷薇一类的灌木，或铺些草地，种植草花，再安放些园椅。夏季黄昏，可供数十万人纳凉游息。秋高气爽的时节，登高远眺，俯视全城，西北苍苍的西山，东南无际的平原，居住于城市的人民可以这样接近大自然，胸襟壮阔。还有城楼角楼等可以辟为陈列馆、阅览室、茶点铺。这样一带环城的文娱圈，环城立体公园，是全世界独一无二的。北京城内本来很缺乏公园空地，解放后皇宫禁地都是人民大众工作与休息的地方，清明前后几个周末，郊外颐和园一天的门票曾达到八九万张的纪录，正表示北京的市民如何迫切的需要假日休息的公园。古老的城墙正在等候着负起新的任务，它很方便地在城的四面，等候着为人民服务，休息他们的疲劳筋骨，培养他们的优美情绪，以民族文物及自然景色来丰富他们的生活。   </font><p><font face="宋体" size="4">　　（前）苏联斯摩棱斯克的城墙，周围七公里，被称为“俄罗斯的颈环”，大战中受了损害，（前）苏联人民百般爱护地把它修复。北京的城墙无疑的也可当“中国的颈环”乃至“世界的颈环”的尊号而无愧。它是我们的国宝，也是世界人类的文物遗迹。我们既承继了这样珍贵的一件历史遗产，我们岂可随便把它毁掉！   </font><p><font face="宋体" size="4">　　摘自《关于北京城墙存废问题的讨论》 </font><p><font face="宋体" size="4">　　说梁思成…… </font><p><font face="宋体" size="4">　　“禁止轰炸” </font><p><font face="宋体" size="4">　　七十多岁的罗哲文先生至今仍清晰地记得： </font><p><font face="宋体" size="4">　　1948年底，中国人民解放军迅速完成了对北平的包围。一天午夜，老友张奚若带了两位人民解放军干部，来到梁思成先生家中。当两位来人取出一幅北平的军事地图，请梁先生把有重要文物古迹和古建筑的地方标出来，划出禁止炮击区域，以使之避开炮火。   </font><p><font face="宋体" size="4">　　从未直接和中国共产党人打过交道的梁思成感到十分惊愕：共产党也保护文物古迹。而当他继而又听来人说他们的上级表示，宁可付出流血牺牲代价，也要尽最大可能保全古建筑一砖一瓦时，他更被深深地感动。   </font><p><font face="宋体" size="4">　　他随即和妻子林徽因，用红色的铅笔，在那张军用地图上，把他们认为必须特别加以保护的地点，一一圈点了出来。北平最终获得和平解放，国人额手称庆；而梁思成漏夜圈点禁止炮轰图一事，则成为民族文化遗产保护的永久佳话。   </font><p><font face="宋体" size="4">　　刘东平 </font><p><font face="宋体" size="4">　　“辽代的一块木头” </font><p><font face="宋体" size="4">　　人们曾以无比钦佩的心情，提及梁思成在二次大战期间为日本名城奈良免遭轰炸做出的努力。对于一般人来说，这的确是难以想象的举动。梁和他的民族都正在遭受日本侵略带来的痛苦，而林徽因的弟弟，作为一名中国军队的飞机驾驶员，更是直接牺牲于对日空战之中。   </font><p><font face="宋体" size="4">　　然而，梁思成想得更远、更深。日本的一些城市，对于梁思成来说并不陌生。尤其是奈良，那座由中国唐代高僧鉴真大师亲自指导设计的唐招提寺，是他所知道的保存最为完整的唐代建筑。他不能想象炮火顷刻之间使它灰飞烟灭。   </font><p><font face="宋体" size="4">　　梁思成的建议，受到美军的高度重视，保护奈良的计划终于得以实施。战争之后，幸免于难的奈良因为完好地保存着众多的古代建筑，被宣布为世界历史文化名城。   </font><p><font face="宋体" size="4">　　五十年代在听说自己曾经勘察过的宝坻一座辽代古庙被拆除，梁思成感到十分惋惜。后来，有感于自己的被误解，他有过这样一句无奈的感叹：“我也是辽代的一块木头！”   </font><p><font face="宋体" size="4">　　李辉 </font><p><font face="宋体" size="4">　　“大匠的困惑” </font><p><font face="宋体" size="4">　　梁思成先生是当年力倡保护北京古城的著名建筑学家，在他的心目中，北京的古城墙是无比珍贵的“璎珞”。按照他的设想，古代文物建筑集中的北京城，应该成为“像罗马和雅典那样的世界旅游城市”。环绕北京的城墙应该尽可能保留，并改造成“全世界独一无二”的“一带环城的文娱圈、立体公园”。   </font><p><font face="宋体" size="4">　　对保护历史名城的重要性，今天的人们无疑比以往有更深的认识。但这几年被破坏、被拆毁的历史文化名城，如定海城、云梦楚王城、遵义老城民居等等，都是在专家们的痛惜声中被毁灭的。据不久前赴法国、意大利考察的有关人员介绍，这两个国家早在十九世纪就立法保护古建筑，二十世纪以后又将保护的范围扩大到了历史街区和历史城镇的整体环境，建立了完善的保护机制。在这里，古城、古迹等文化与自然遗产，都是由国家级的规划师、建筑师先进行科学规划，然后再进行整治和修缮的。国家级的规划师、建筑师，当然该是大匠了。这些大匠在保护本国的历史文化名城发挥着举足轻重的作用。而在我们这里，有关专家的强烈呼吁，竟被当做耳边风。虽然现在一些“匠”们也会被邀参与某个城市的规划论证，但一座古城的最终“生杀大权”，却不是这些“匠”们所能左右的。如果古城所在地的头头脑脑们缺乏保护历史文化遗产的意识，再有保留价值的古城，大约也只能“活该倒霉”了。   </font><p><font face="宋体" size="4">　　文净 </font><p><font face="宋体" size="4">　　图一：梁思成与世界著名建筑师一起讨论联合国大厦设计方案 </font><p><font face="宋体" size="4">　　图二：梁思成主持设计的扬州鉴真和尚纪念堂</font></p><p align="center"><img src="/publish/news/images/upload/liangsichen2.jpg" width="220" height="169"></p><p>&nbsp; </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月26日 10:00:58　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231221000974088/20110225231221000974088_.html" target="_blank">清华隆重纪念梁思成诞辰一百周年</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华隆重纪念梁思成诞辰一百周年(2001.04.28 新华网)新华网北京４月２８日电 （记者王军）近日，北京中国美术馆，一位久别人世的建筑大师引起人们深深的怀念，他曾为中国建筑历史研究倾注心血，为中国城市的科学规划倾尽全力，为中国文化名城的保护奔走呼号。他，就是建筑史学家、城市规划学家、建筑教育家梁思成。今年是梁思成......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231220171773087/20110225231220171773087_.html" target="_blank">梁思成先生诞辰一百周年纪念大会举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document追溯建筑大师梁思成的历史足迹梁思成先生诞辰一百周年纪念大会举行【新闻中心讯】记者 周襄楠 4月28日上午，建筑馆报告厅内座无虚席：建筑界的老前辈，中国建筑协会、北京市规划委员会等的代表，兄弟院校建筑院系的同仁，台湾、香港的朋友以及慕名而来的社会各界的朋友，还有年轻的莘莘学子，以及梁思成先生的亲属，大家都为一个共同的目的而......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231221078816749/20110225231221078816749_.html" target="_blank">（清华九十年）“一个大师对另一个大师的培...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document（清华九十年）“一个大师对另一个大师的培养”&nbsp;&nbsp;(2001.04.28 新华网)&nbsp;&nbsp;&nbsp;&nbsp;新华网4月28日&nbsp;&nbsp;今年4月20日是梁思成先生百年诞辰     纪念日。我国建筑学术界举办各种活动，以纪念这位中国 现代建筑学的奠基人。&nbsp;&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355000630113/20110225225355000630113_.html" target="_blank">梁思成先生诞辰一百周年纪念大会举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document追溯建筑大师梁思成的历史足迹梁思成先生诞辰一百周年纪念大会举行【新闻中心讯】记者 周襄楠 4月28日上午，建筑馆报告厅内座无虚席：建筑界的老前辈，中国建筑协会、北京市规划委员会等的代表，兄弟院校建筑院系的同仁，台湾、香港的朋友以及慕名而来的社会各界的朋友，还有年轻的莘莘学子，以及梁思成先生的亲属，大家都为一个共同的目的而......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231218421642955/20110225231218421642955_.html" target="_blank">梁思成先生诞辰一百周年纪念会在京举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document梁思成先生诞辰一百周年纪念会在京举行（科技日报 2001年4月27日）王军我国著名建筑学家和建筑教育家梁思成先生诞辰一百周年纪念座谈会暨《梁思成全集》首发式，近日在北京人民大会堂举行。与会者高度评价了梁思成的生平业绩和辉煌成就，指出梁思成是中国现代建筑教育的奠基人，是中国古建筑研究的先驱者，是中国文物建筑和历史文化名......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355328183641/20110225225355328183641_.html" target="_blank">百年梁思成</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document百年梁思成（北京晚报 2001年4月26日）平生踪迹1901．4．20出生于日本东京。原籍为广东省新会县1915－1923北京清华学校学习1924－1927美国宾夕法尼亚大学建筑系、宾夕法尼亚大学研究院，先后获学士、硕士学位1927－1928美国哈佛大学研究院肆业1928－1931......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231216156974587/20110225231216156974587_.html" target="_blank">我校举行梁思成先生诞辰一百周年纪念会暨《...</a></h3>
+              <p class="thnews_jqzy">　　梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式隆重举行缅怀学术巨人开创中国建筑科学艺术复兴新阶段我校举行梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式【新闻中心讯】记者冬梅4月20日下午，我校在人民大会堂河北厅隆重举行梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式，深切缅怀这位学术巨人，立志学习先贤为祖国和人民不畏艰险、不图浮华、脚踏实地、刻......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355562814432/20110225225355562814432_.html" target="_blank">我校举行梁思成先生诞辰一百周年纪念会暨《...</a></h3>
+              <p class="thnews_jqzy">　　梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式隆重举行缅怀学术巨人开创中国建筑科学艺术复兴新阶段我校举行梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式【新闻中心讯】记者冬梅4月20日下午，我校在人民大会堂河北厅隆重举行梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式，深切缅怀这位学术巨人，立志学习先贤为祖国和人民不畏艰险、不图浮华、脚踏实地、刻......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231216062115138/20110225231216062115138_.html" target="_blank">梁思成诞辰百年纪念会举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document梁思成诞辰百年纪念会举行记者 宋晓梦 通讯员 张莉（光明日报 2001年4月21日）本报北京4月20日电 我国著名建筑学家和建筑教育家梁思成先生诞辰一百周年纪念座谈会暨《梁思成全集》首发式今天在北京人民大会堂举行。全国政协副主席、中共中央统战部部长王兆国，教育部部长陈至立，建设部部长俞正声以及卢强、周干峙、吴良镛等院士出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231215968578271/20110225231215968578271_.html" target="_blank">梁思成诞生百年纪念座谈会举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document梁思成诞生百年纪念座谈会举行王兆国出席座谈会　陈至立到会讲话记者　刘帆（中国教育报 2001年4月21日）本报北京4月20日讯(记者　刘帆)一代宗师、百年思成，学贯中西、高风亮节。今天，我国著名建筑学家和建筑教育家梁思成先生诞辰一百周年纪念座谈会暨《梁思成全集》首发式在北京人民大会堂隆重举行。全国政协副主席、中共中央统战......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231215953304501/20110225231215953304501_.html" target="_blank">专家指出，中国对建筑学缺乏必要关心和重视</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document专家指出，中国对建筑学缺乏必要关心和重视（中国新闻社 2001年4月21日）中新社北京四月二十日电(记者王锦娜朱沿华)中国科学院和中国工程院院士、清华大学教授、中国著名建筑学家吴良镛先生今天在此间指出，中国社会对建筑学缺乏必要的关心和重视。吴良镛先生是在今天举行的中国著名建筑学家梁思成先生诞辰一百周年纪念座谈会暨《梁......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231215875739501/20110225231215875739501_.html" target="_blank">梁思成诞辰百年纪念座谈会举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document梁思成诞辰百年纪念座谈会举行（科技日报 2001年4月21日）本报北京4月20日讯记者李大庆报道：今天下午，我国著名建筑学家和建筑教育家梁思成先生诞辰一百周年纪念座谈会暨《梁思成全集》首发式在北京人民大会堂隆重举行。全国政协副主席、中共中央统战部部长王兆国，教育部部长陈至立，建设部部长俞正声，首都建筑界、教育界、文物界以......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231216000491913/20110225231216000491913_.html" target="_blank">梁思成诞辰100周年纪念会举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document梁思成诞辰100周年纪念会举行(人民日报 2001年04月21日)据新华社北京4月20日电 （记者王军）我国著名建筑学家和建筑教育家梁思成先生诞辰100周年纪念座谈会暨《梁思成全集》首发式，今天在北京人民大会堂举行。与会者高度评价了梁思成的生平业绩和辉煌成就，认为梁思成是中国现代建筑教育的奠基人，是中国古建筑研究的先......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

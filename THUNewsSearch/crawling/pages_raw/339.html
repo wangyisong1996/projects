@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>萧乾:北新书局里的练习生</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231215703420770&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9655/index.html' class='navigation_style'>专题新闻</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9710/index.html' class='navigation_style'>清华旧事新“闻”</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">萧乾:北新书局里的练习生</h3><p align="center"> 陈洁伟　柳　琴</p><p align="center">（《书摘》 2001年2月）</p><p> 　　萧乾，小名乐子，十四岁时应聘到北新书局做练习生……</p><p> 　　乐子按照地址找到了翠花胡同路北的北新书局。这是一家出版图 书并且代售许多新书的出版社，整个书局只有三间南房，两个明间作 门市部，靠东一间是编辑部，部里只有一位编辑名叫袁家骅。袁先生   知道来了应征的，上下打量一眼，便到里院通知李老板了。</p><p> 　　“你多大了?”李老板托着水烟袋，呼噜噜地吸了一口，坐在办公 桌后的高背椅上问。</p><p> 　　“十四岁。”</p><p> 　　“这么矮的个子能干什么呢?” </p><p>　　乐子挺了挺小胸脯：“身小会文国家用，大汉空长作什么?”</p><p> 　　“嗯，你读过私塾?” </p><p>　　“私塾、洋学堂全读过，还写过小说和散文。”</p><p> 　　老板李小峰哈哈一笑，一口烟呛得他咳嗽起来，他想说两句嘲笑 乐子的话，可突然看见他从怀里掏出一张油印小报和一卷斜线格白纸。</p><p> 　　“这是我写的，不值一笑。”乐子交上作品。</p><p> 　　“唷，动起真格的了，拿来请袁先生看看。”</p><p> 　　袁家骅从李老板手里接过崇实中学的油印小报，读了上面《忠实 的考验》，然后重新打量着对面站着的小个子。</p><p> 　　“你叫萧秉乾?”他斟了一杯茶水，放在桌子角上，挥了一下手， “别老站着请坐吧!”</p><p> 　　萧秉乾大大方方地坐在对面椅子上喝茶。</p><p> 　　袁先生把小报交给李老板，又去看那篇英文散文《No,need to give up your life at the loss of live cliff!》(《不要葬身舍身   崖》)。</p><p> 　　当袁先生读完这篇散文时，李老板也读完了那篇小说，二人心照 不宣地交换了一下眼色。</p><p> 　　“萧秉乾，在书局里干活起初都当练习生，不过更多的时间要你 当校对，行不?”</p><p> 　　“练习生就是干杂活儿了。”萧秉乾说。</p><p> 　　“活儿是杂了点，但是你跟他俩(两个在院子里捆书的孩子)的待 遇不同，你住在红楼对面的大兴公寓里，每月薪水嘛……”老板摆弄 着他的水烟袋，过了好一会儿，“五块大洋。”</p><p> 　　从此，乐子便满怀兴趣地投入那带有浓烈油墨气味的工作中去。</p><p> 　　“拿去校一下，要快。”老板李小峰放下他那油亮的算盘，把一 摞手稿递给坐在屋角的萧秉乾，“周大先生的，校仔细点儿。”</p><p> 　　萧秉乾放下手里谢婉莹的稿件，立刻又接过周树人的手稿来。在 起初工作的阶段里，他只是紧张而机械地与原稿逐字对照，至于词句 的联系，文章的内容，他一点也体会不到；尤其是李老板坐在屋里呼   噜噜地吸着水烟袋，或是噼噼啪啪地拨打算盘时，他感到浑身燥热， 呼吸不畅，功夫不大，汗水就湿透了身上的衣衫。然而半年不到的功 夫，他已熟悉了校对的活儿并且被那些文章有力地牵动着。他主观地   认为，那些全是天下第一流的文章，而那些大作家诸如：说起话来声 震屋宇的刘半农，哲理小说家冯文炳，写《性史》的张竞生，写爱情 小说《兰生弟日记》的徐祖正，身材高瘦的章衣萍，女作家谢婉莹，   说话细声细语的钱玄同……还有在这里合编着《语丝》的周大先生(周 树人)、周二先生(周作人)两兄弟——也全是天下第一流的才子。所以 他一面用心地干活儿，一面全神贯注地吞食着那些文学乳浆，尽管有   许多他消化不了，尚难理解，但囫囵吞枣也要品品其中美味。他干起 活儿来兴味浓浓，持久不疲，因而工作出色，很受李老板的喜爱。</p><p> 　　“秉乾，你辛苦一趟。”李老板站在他的办公桌前，把两笔稿酬 装在信封里，然后用手绢包好，系在他的右手腕上，“一笔送给八道 湾周家，一笔送给中剪子巷谢家，你干活儿我放心。” </p><p>　　“好，我就去。”他说着把正在校对的稿件整理好收在柜子里。</p><p> 　　其实，萧秉乾根本没把这种跑腿的事当作苦差事，他明白如果不 是给这些位大作家送稿酬，怎能接近他们呢?他们都是呱呱叫的大学问 家。他总是憧憬着有一天能和他们说一会儿话。他每次到八道湾周府   的时候，心中总有一种说不出的感觉。虽然觉得有一点胆怯，但是却 巴不得遇上个机会能和那位身量不高、面庞微瘦、双目有神、上唇留 着一字胡须的周大先生说上几句话。他读过周先生的许多小说。祥林   嫂、单四嫂的悲惨遭遇和母亲的情况有许多相似之处，他读着感到分 外亲切；而那个生着紫色圆脸，颈上套着明晃晃的银项圈，手捏胡叉 的少年闰土更使他神驰心往。这一个又一个活生生的人物，就是从让   他敬畏不已的周先生笔下诞生的。面对这位大作家，只是可望而不可 及，即使周先生收下稿酬时，也只在账单上写个“收”字，签上名罢 了。彼此间没有说过话。可是有一次，那正是海棠开花的季节，秉乾   又到周府去送稿酬。周先生住的是一处四合院，他就住在有三级石阶 的、带廊子的三间大北房内，房前一左一右就有两棵大海棠树，那时 花开得正旺，粉红色的，望去就似一簇簇缎子扎成的彩球。秉乾送完   稿酬，从海棠树下走过，不由得又转回身来看海棠花，恰在这时，周 先生从房内走出和他看了个对眼，周先生脸上露出慈祥的笑容，他也 受了传染似的笑了，笑完了，他嘴唇动着似乎要说什么，但又没说出   来，便鞠个躬，转身要走。</p><p> 　　“孩子，你要跟我说话吗?你说好了。”是周先生操着江南口音的 话跟他说。</p><p> 　　他转过身来，很紧张，但见周先生等着他说话，便大着胆子说： “先生，您很喜欢小动物吧?”</p><p>　　“喜欢。” </p><p>　　“我也喜欢，什么动物我都喜欢，我有一只猫叫雪儿，可好了， 它通人性。” </p><p>　　“哦，怎么通人性?说给我听好吗?” </p><p>　　他想了想摇摇头：“我怎么跟您说起这些来了，我不会说。”</p><p> 　　周先生仿佛看透了他的想法：“因为我是个作家，你就不会说了。 其实我知道你一定有话说，对不对?”</p><p> 　　萧秉乾脸有些红了，他点点头：“我想告诉先生，您不要作猫敌。”</p><p> 　　“猫敌?” </p><p>　　“您自己说的：而我在全家的口碑上，却的确算一个猫敌。”</p><p> 　　“对，这是我在《兔和猫》里写的话，你记得这么清楚——是呀， 猫也有它可爱的一面。” </p><p>　　“您写的那些小说，《鸭的喜剧》、《端午节》、《孔乙己》我 都看过，有的看不懂也看，有的句子我全能背下来。”</p><p> 　　“你都看过?”周先生很有兴致地看着眼前这黑瘦的少年。</p><p> 　　“是，《狂人日记》、《阿Q正传》，我也看了。还看了好几遍。 先生您写得真好。”</p><p> 　　“倒看不出你这么喜欢读书，你叫什么名字?”周先生问。</p><p> 　　“我叫乐子，大名叫萧秉乾。”</p><p> 　　“萧秉乾进屋来。”</p><p> 　　秉乾随着周大先生走进屋里，周先生从书柜上取出一本书来，并 且提起毛笔签上“鲁迅”两个字，把书送给了他。他接过书一看，那 正是北新书局刚出版的鲁迅小说集《呐喊》。他捧着这本书如获至宝，   欢欢喜喜地离开周府。他以为这件事是他少年时最得意的，终身难忘。</p><p> 　　到冰心寓所送稿酬时，又是一番情趣。由于他和女作家的小弟谢 冰季(为楫)是小学的同学，便亲切地称呼冰心谢大姐。</p><p> 　　每次他推着车进到院里，这位比他大十多岁的冰心女士总是亲切 地走出房门，操着带有闽南口音的话，风趣地说：“小饼干(萧秉乾) 来了，快到屋里喝点水。”</p><p> 　　秉乾也风趣地说：“小饼干正渴着呢，有劳大姐给我水喝。”</p><p> 　　冰心乐了，更显出她的和蔼、慈祥。</p><p> 　　若是冰季也在家，那就更热闹了，不是拉着他下棋，就是要说说 笑话。有一回冰季来约他玩儿，他们乘电车从北新桥要到东单去。那 时北京刚兴电车，车上乘客不多，司机站在车前，手握开关、脚踩车   铃，一路上口当 啷 口当 啷地响着，很有意思。当时人们都管它叫 “口当 口当车”，忽然身旁的一个乘客对另一个乘客说，“电这玩艺 儿太可怕了，弄不好就电死人。在车上就怕串电，一串上，一车人的   眼睛都得报销。”</p><p> 　　秉乾听到这话，立刻紧张起来，车刚开到钱粮胡同他就拉着冰季 下车了，冰季不明白发生了什么事。秉乾说，“好家伙，多悬，你没 听见吗?一串电，眼睛就完了。我要是没有眼睛，不就成了瞎家雀，上   哪儿找食吃呀!”冰季听了满以为然地说，“对，你的眼睛完了，我的 眼睛也保不住。”他们说这段笑话时，冰心也在场，当时真把她逗得 笑弯了腰。</p><p> 　　“姐，这是真的，我们在讲我们的故事。”冰季说。</p><p> 　　“你们呀，一对小科盲，就要进入电气时代，还不懂电。”冰心 止住了笑，从书柜中找出图片，给他们介绍了什么是电和用电的知识， 这使不懂科学的萧秉乾获益不少。</p><p> 　　他每次来到谢家，冰心都对他格外关照，教给他一些做人的道理， 他听后心里感到暖融融的。</p><p> 　　萧秉乾干活儿是很出色的，他得到许多著名作家对他的好感。李 老板看到这些，对他是另眼看待了。吃饭时有徒弟请他到里院和老板 一家人同桌而食，吃一碗徒弟给他盛一碗，但是他拒绝徒弟给他盛饭。</p><p> 　　“秉乾，可要好好地干，听说你也爱好文学。你刚刚十五岁，就 踏破了这些大作家的门坎，将来还了得!你且记住，将来有谁编纂近代 文学史，就这些作家和作品，恐怕要占上大半编。好嘛，这将来还了   得，我说这话对不对?”</p><p> 　　萧秉乾连连点头：“将来您的书局也还了得。” </p><p>　　“哈哈哈哈，好好干吧，买卖兴隆了，会给你再加点儿钱。”</p><p> 　　他觉得李老板对自己不错，便顺口说：“有什么活儿，只管吩咐， 我能干的，绝对好好干。” </p><p>　　“哈哈哈，真让你说着了，袁先生脱不开身，有件差事就得你来 办了。”李老板不慌不忙吸口水烟袋，“什么差事呢，就是每天到沙 滩北大红楼图书馆去抄书，要不漏一个字，不错一个字，连标点符号   也要一模一样地抄好；字数嘛，五千字上下，有一天算一天，你看行 不行?”</p><p> 　　俗话说：既在河边站，就有望海心。别看秉乾年纪小，志向可高 着呢。从小读书，母亲对他的殷切希望，大堂姐对他的文化教育，安 娜嫂对他的不时激励以及他对诸多作家接触时那种羡慕与追求，汇合   成一股精神力量，推动他进取、向上、自强不息，甚至朦胧地意识到： 只要功夫到，也会写文章，他并且盼望着这一天早日来临。现在叫他 到北大去抄书，他愿意干。</p><p> 　　李老板跟他说完话，看他有点儿走神，敲敲桌子：“我刚才的话 你听清没有?行不行?” </p><p>　　“啊，那什么，我全听清了，就是我怕字写不好。”秉乾磕磕巴 巴地说。</p><p> 　　“咳，又不是去办展览，字好坏没关系，主要是别出错儿，清楚， 就行。”</p><p> 　　从第二天开始，他就办了手续，进北大图书馆去抄书。他先借阅 《小说月报》、《现代评论》，从上面一篇一篇地抄下作家徐志摩译 的《曼殊斐尔小说集》，曹靖华译的《三姊妹》等。在三个多月的抄   书期间，他不仅精读了一些世界名著，而且培养了他的文字功底，用 他自己的话说，“抄了三个多月的书，真过瘾，日子没白过。”</p><p> 　　李老板见到他说：“秉乾在外三个多月，有些收获吧，你好像比 以前长高了。”</p><p> 　　“唉，有什么收获，不就是按着您的要求抄回一摞书来嘛。”萧 秉乾轻描淡写地说。</p><p> 　　“干得还不错，以后有什么要求，你只管说。”</p><p> 　　“谢谢您关心，我想下班后借一两本书，拿回公寓看。” </p><p>　　“这个……”老板好像叫蚊子叮了一下，揉着脸：“借书嘛——” 他拉长声调，“办个手续，写清楚借什么书，什么时候还，还了可以 再借。但是有一节需要讲明白，书必须保存完好，不得损坏；如果影   响卖出，只好书归你，再从你薪水里扣除书钱了。” </p><p>　　萧秉乾连连应诺。从此他可以把书带回公寓，散乱地披着衣服， 靠在床头享受书给予他的快乐，与小说中的主人公默默交心。</p><p> 　　有一次他刚下班，郁青说：“小先生回公寓了。”</p><p> 　　“扯淡，咱们都是打杂的，哪有先生?”</p><p> 　　“哎，萧先生话可不能这么说，您每礼拜都休息，我和栓子没年 没节，店铺就是家。” </p><p>　　“郁青说得对，”栓子插话了，“您跟老板一起吃饭，剩的多了， 我们混个肚儿圆，要是剩饭不多，我们可就饿着了。这您恐怕都不知 道吧!” </p><p>　　秉乾点点头：“我确实不知道。”</p><p> 　　“两种待遇嘛，所以别瞧咱仨岁数都差不多，可是说到底，您还 是先生，我俩还是徒弟。” </p><p>　　“岂有此理，这太不公平了。我说栓子、郁青，咱们应该抱成一 团，跟老板去说，咱们都是‘劳工’，‘劳工神圣’你懂不懂?” </p><p>　　“得了小先生，你别拿我们取笑了，我爸爸就是正儿八经的劳工， 可是他怎么说?他说劳工是三孙子，是臭王八蛋。”栓子愤愤地说。</p><p> 　　萧秉乾也有些冒火：“嗨，栓子你可不能胡说八道，辱骂这神圣 的字眼儿。” </p><p>　　“得，我胡说八道，您回公寓休息。”</p><p> 　　“栓子，我真不是这个意思。”秉乾解释说。</p><p> 　　“我明白，您高明，您劳工神圣，我胡说八道，还不行吗?”</p><p> 　　“哎，别嚷，别嚷，都听我说。栓子他爸爸，是打扫茅房的，整 天背着粪桶去掏粪。”郁青说。</p><p> 　　“掏粪怕什么，那也是劳工。”</p><p> 　　“你听我说呀，人家掏完粪，背着粪桶走在胡同里，孩子们捂着 鼻子就喊上了：打扫茅房的呱嗒嗒，我们叫你臭王八，掏完东家掏西 家，老来落个睁眼瞎。这干完活儿还要挨骂惹气，神圣得起来嘛。”   郁青一口气说完，看着秉乾。</p><p> 　　“郁青说的对，赖我没弄清情况，栓子对不起，别跟我生气。” 秉乾表示道歉。</p><p> 　　“我知道你也是为了我们好，但实际上不是那么回事。”栓子说。</p><p> 　　“我看中国人办不成事，就因为太散了，一盘散沙捏不成团儿。 今天咱们三个拧成一股劲，讲清道理，咱们有权利要求平等待遇怎么 样?” </p><p>　　郁青瞟了栓子一眼：“你肚子里墨水儿多，都听你的吧!”</p><p> 　　“对，你指向东，我栓子决不往西。” </p><p>　　“好，拿纸来!”乐子写了几句话，然后念给他俩听“我们要求： 徒弟们不吃剩饭，每礼拜轮流休息一天。成吗?” </p><p>　　“好，好，就这样。”栓子伸出了大手，乐子攥住他的手腕，郁 青又攥住乐子的手腕，表示三人齐心协力。到第二天早起乐子来了， 在纸条上写了劳工者，又署了三个人的名字，压在老板的柜台前，也   不管下板营业，一齐乘坐口当 口当车逛天桥去了。乐子出钱带他们品 尝了天桥的小吃，看了天桥的杂耍，直到傍晚回书局来了。</p><p> 　　李老板坐在他的高背椅子上，翘着二郎腿，吸着水烟袋，悠闲自 在地吐着烟圈。三个新来的徒弟整理着书架。萧秉乾进到书局里，迎 面走来一个徒弟：</p><p> 　　“先生，你买什么书?”</p><p> 　　“我，我们三个人都在书局里干活儿。”</p><p> 　　那徒弟回头看了老板一眼，转过头来说：“三位劳工者，我们老 板说了，这里铺面小，请不起你们三位大劳工。你们呀，小孩儿拉屎—— 挪挪窝儿吧!”说着徒弟们把三个小铺盖卷丢在了书局门外。</p><p> 　　“这可怎么办，我们没地方去了。”郁青说着抱着小铺盖卷哭起 来</p><p>。 　　秉乾没想到争取平等竟会闹成这副局面，他懊悔自己遇事轻率， 不懂得策略。</p><p> 　　“哭什么?”栓子说，“此处不留爷，会有留爷处，先到我家，我 想咱们会有活儿干的。”栓子那股豪爽劲儿，秉乾实在钦佩，他从兜 里拿出两块大洋，给了他俩，然后互道：“后会有期”，转身离去。   暮色渐渐地浓了，深巷里几家小院的屋檐下升起袅袅的炊烟，几家灶 间的蒸锅里散发出了缕缕稻麦的清香，已到阖家一道吃晚饭的时候……</p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月20日 14:24:31　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

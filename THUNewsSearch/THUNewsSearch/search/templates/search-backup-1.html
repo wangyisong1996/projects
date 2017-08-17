@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>Theme Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="theme.css" rel="stylesheet"> -->
+    <style type="text/css">
+      body {
+        padding-top: 70px;
+        padding-bottom: 30px;
+      }
+      
+      .theme-dropdown .dropdown-menu {
+        position: static;
+        display: block;
+        margin-bottom: 20px;
+      }
+      
+      .theme-showcase > p > .btn {
+        margin: 5px 0;
+      }
+      
+      .theme-showcase .navbar .container {
+        width: auto;
+      }
+    </style>
+
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <font class="navbar-brand">THU News Search</font>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form role="form" class="navbar-form" method="get">
+            <div class="form-group">
+              <input type="text" class="form-control" name="q" maxlength="100" value="233" placeholder="Search the news ..." style="width:40em" />
+              <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+          </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <style type="text/css">
+      div.res-container {
+        width: 70%;
+        height: 10%;
+      }
+      font.res-date {
+        font-size: 14px;
+        color: green;
+        padding-left: 10px;
+      }
+      em {
+        font-style: normal;
+        color: red;
+      }
+      h4.res-header {
+        margin-top: 25px;
+      }
+    </style>
+    
+    <div class="container theme-showcase" role="main">
+      
+      <div class="res-container">
+        <h4 class="res-header"><a href="http://news.tsinghua.edu.cn/">哈哈哈</a><font class="res-date">2016-09-01</font></h4>
+        <div>哈哈哈，哈哈哈，哈哈哈哈哈哈哈哈</div>
+      </div>
+      
+      <div class="res-container">
+        <h4 class="res-header"><a href="http://news.tsinghua.edu.cn/">这是一篇很长的新闻</a><font class="res-date">2016-09-01</font></h4>
+        <div>清华新闻网9月6日电（记者 李 婧）9月5日下午，“自强时代，自信中国——中国女排清华行”活动在综合体育馆举行。从里约奥运会载誉而归的12名中国女排队员亮相清华园，走进清华最美丽的季节，与师生近距离交流互动。
+清华大学校长邱勇、校党委书记陈旭一行专门到二校门前迎接女排姑娘，传达清华人对中国女排的喜爱之情。
+校长邱勇、校党委书记陈旭与女排队员合影。记者 张宇 摄
+在综合体育馆，2000余名师生已经等候在场内，他们手持国旗、手举名牌，观看女排在里约的冠军赛录像。当女排姑娘拿下冠军点，五星红旗冉冉升起时，场内观众激动依旧，爆发出雷鸣般的热烈掌声。</div>
+      </div>
+      
+      <div class="res-container">
+        <h4 class="res-header"><a href="http://news.tsinghua.edu.cn/">hehehe</a><font class="res-date">2016-09-01</font></h4>
+        <div>我来到北京海淀区<em>清华大学</em>参加军训</div>
+      </div>
+      
+      <br />
+      <br />
+      
+      <div class="text-left">
+        <ul class="pagination top-buffer-no bot-buffer-sm">
+          <li><a href="/submissions?page=3"><span class="glyphicon glyphicon glyphicon-backward"></span></a></li>
+          <li><a href="/submissions">1</a></li>
+          <li><a href="/submissions?page=2">2</a></li>
+          <li><a href="/submissions?page=3">3</a></li>
+          <li class="active"><a href="/submissions?page=4">4</a></li>
+          <li><a href="/submissions?page=5">5</a></li>
+          <li><a href="/submissions?page=6">6</a></li>
+          <li><a href="/submissions?page=7">7</a></li>
+          <li><a href="/submissions?page=8">8</a></li>
+          <li><a href="/submissions?page=9">9</a></li>
+          <li><a href="/submissions?page=5"><span class="glyphicon glyphicon glyphicon-forward"></span></a></li>
+        </ul>
+      </div>
+      
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

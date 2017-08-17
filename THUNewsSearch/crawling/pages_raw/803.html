@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>4月29日《午间一小时 海外来风》：清华记忆</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231224546902735&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9655/index.html' class='navigation_style'>专题新闻</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9708/index.html' class='navigation_style'>清华大学90周年校庆</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">4月29日《午间一小时 海外来风》：清华记忆 </h3><p align="center">2001年04月29日11:09 中央电台《午间一小时》</p><p> 　　嘉宾：程京德(1982年毕业于清华大学计算机系，现任日本崎玉大学教授)</p><p> 　　曹怀东(1981年毕业于清华大学数学系，现任美国德州A&M大学教授)</p><p> 　　祝京旭(1982年毕业于清华大学化工系，现任加拿大西安大略大学教授)</p><p> 　　王犀(1985年毕业于清华大学自动化系，1999年领导公司上市NASDK)</p><p> 　　主持：林白</p><p> 　　编辑：樊璇</p><p> 　　主持人：中午好，听众朋友，欢迎收听《海外来风》，我是林白，今天是一个特殊的日子，因为有人要过生日，因为有许多人要过生日，在每一天都会有许多人要过生日，也许我们的节目并没有每次能有这样的机会向他们赠出生日的祝福，但是今天《海外来风》要向一个特殊的地方，一群特殊的人，一所特殊的学校，送出我们衷心的祝福，生日快乐，清华大学！好，各位听众朋友，今天是这样一个特殊的日子，它是我们国家著名的，最优秀的高等学府之一清华大学成立90周年的日子，那么在今天，就在此时此刻，清华园里新老校友正欢聚一堂，追忆往事，憧憬未来，所以今天我们的《海外来风》也要把一期特别的节目送给特别的清华。在前天我的同事樊璇约请了几位从海外归来，参加清华校庆的老校友制作了今天这期特别节目——《清华记忆》，让我们一起走入清华人的记忆之中。</p><p> 　　樊：我是樊璇，现在是北京时间4月27号的晚上八点，我们现在在北京香山脚下的香山饭店录制今天的节目，节目播出的那一天是4月29号，也正好是清华大学90周年诞辰的日子，在我们播出的时刻，我想正是中午时分，可能从四海归来的清华校友们都会云集在水木清华畅谈过往，我们可以想像那时的清华校园会是怎样一番热闹的景象，此刻在我们录制节目的房间里，我要向大家介绍几位特殊的嘉宾，他们是从海外归来的专程来参加清华校庆的，昔日的清华学子，我还是请他们四位向我们收音机前的听众朋友做个自我介绍。</p><p> 　　程：我是程京德，我和清华的关系应该追溯到1965的，我是1965年进清华附中的，第二年就开始文化大革命，大革命之后69年到陕北插队，插队之后又过了一段时间，77年高考的时候，文化大革命以后第一次高考，考回清华的，所以是清华77级的计算机系，在清华是82年7月份毕业的，然后83年11月份到日本去，在日本的帝国大学九州大学读了五年书，89年取得了硕士学位以后留在九州大学做教师，96年做正教授，是中国人在日本国立大学的第一个正教授。</p><p> 　　曹：我姓曹，叫曹怀东，是77年进的清华，在清华呆了四年，81年去美国普林斯顿大学，跟丘成桐教授读数学，后来就到了很多地方，在纽约哥伦比亚大学教过书，也到普林斯顿高等研究院访问过一年，最后是在美国德州的A&M大学是正教授。</p><p> 　　祝：我叫祝京旭，我是1977年进清华的，我算是老资格，小字辈，因为说起来文革以后毕业的77级的还是算老资格了，但是我是当时年纪最小的，全班最小的，上大学的时候不到18岁，实际高中没有毕业就去了。82年毕业，84年出国去了加拿大，也没有读硕士，直接读的博士，90年又回到加拿大开始教书，直到现在，前两年提的正教授，现在转的教授，还得了加拿大一个什么国家奖(谦虚地戏说)。</p><p> 　　王：我叫王犀，是清华1980级本科生自动化系，我比他们幸运点，没有上山下乡，直接到美国去插队了。</p><p> 　　樊：(笑)洋插队。</p><p> 　　王：对，我是87年到美国，去了加州理工学院，90年出现去企业，1995年也是在美国的硅谷，它有一个创业的气氛，我开了一家软件公司，很幸运的是1999的时候我作为这家公司的执行长带这家公司在NASDK成功上市了，也是很幸运，作为清华学子，海外学子有上万的，几十万学子，是头一个带着公司在美国上市的。</p><p> 　　樊：您说的带着实际就是领导的意思。</p><p> 　　(音板：90春秋，桃李天下，四海校友，汇聚清华，追忆如火朝阳，畅谈青春过往，欢迎继续收听《海外来风》，庆祝清华大学90周年校庆特别节目——《清华记忆》。)</p><p> 　　樊：各位听众，肯定大家听出来了，坐在我们周围的是几位功成名就的嘉宾，他们都是从海外归来，都在海外做出了突出的成绩，这次是专程赶回来参加清华校庆的吗？</p><p> 　　程：对。</p><p> 　　曹：学校叫我们回来的。</p><p> 　　樊：是邀请吧。(笑)</p><p> 　　王：但是90周年也是大庆。</p><p> 　　程：我们刚才在香山底下吃饭，校长也来了，大家都谈了，清华的学子离开以后对清华就更有感情，我感觉确实是这样，回来以后您刚才提到水木清华，我想贺之章有句诗句，唯有门前镜湖水，春风不改旧时波，咱们学子回来以后唯有门前的水木清华“春风不改旧时波”，回来以后参加清华90年校庆，非常高兴，还有这种机会和大家共同分享一下创业的经历，很幸运。</p><p> 　　樊：你们在此之前有多少年没回清华了？</p><p> 　　祝：我是年年回来。</p><p> 　　程：我也是几乎年年都回来。</p><p> 　　曹：如果是回北京开会或者到什么地方开会一般都要回清华。</p><p> 　　程：我是从95年以后一般每年至少都要回国一到两次，98年的时候我在清华呆的时间是最长的，呆了一个多月，有时候是开会，但是总是要到北京看看以前的老师，同学，还有学校以前的一些老朋友。</p><p> 　　樊：王先生您是？</p><p> 　　王：我不常回来了。</p><p> 　　樊：老领导着人家上市嘛。(笑)</p><p> 　　王：在硅谷竞争实在很大。</p><p> 　　祝：你这次回来一趟损失不少钱吧？</p><p> 　　王：哪里哪里，回来感觉特别好。</p><p> 　　樊：您有几年没回清华了？</p><p> 　　王：清华我是有一年时间了，我去年回来一次，回来到学校看一看，感慨蛮深的，有好多留学生出去，都在弯区，好像清华现在据说有4000多人。</p><p> 　　祝：就是硅谷那一带的弯。</p><p> 　　樊：看来我得修改我的策划了，我原来以为你们都是远离清华多年。(笑)</p><p> 　　王：中间我有八年没回来，从87年回来一次到95才又回来。</p><p> 　　祝：当时是在建业的时候吧？</p><p> 　　王：各种原因吧。</p><p> 　　樊：看来这还是有赖于我们国家投资环境以及教育环境的日益完善，否则像你们这些海外的学子恐怕不会这么频繁地回到祖国，回到母校，学术交流。</p><p> 　　程：对，我们国家在教育，在技术上发展的速度很有关系。</p><p> 　　曹：还有一个是像我们这些在大学教书的人，在做到这样之前要很苦，很努力，一旦做到这里以后就希望有一定余力能够为自己的母校多做一点事情，为国家多做一些事情。</p><p> 　　樊：对，我们今天做的就是庆祝清华诞辰的特别节目，我想问问各位第一次走进清华校园的时候，那时的印象你们如今还记得吗？</p><p> 　　祝：我来的时候中学有个同学转学转到这儿来了，他爸爸是清华的，所以我就非常羡慕，可能15岁的时候就跑到这儿来玩来看。</p><p> 　　樊：您是北京出生的？</p><p> 　　祝：对，但是我们家不在这边原来没有来过嘛，75年的时候中学还没毕业。</p><p> 　　樊：刚见清华的时候是什么感觉？</p><p> 　　祝：很大，半天走不进来，找他们家找不着。</p><p> 　　曹：我是在江苏武庆县的一个小镇上，我想我大概在上大学之前都没有去过太多城市，可能就是附近的常州，无锡去过一些，第一次坐火车就是到北京来上清华大学，所以我从天安门走过的时候大家可以想像，从一个边远小镇到了首都北京天安门那时候学校清华派车来接我们时候，我是很难用任何语言来描述，所以清华、北大我想在北京的知道很多，但在别的地方上清华、北大我想就是登天之事。所以第一次到清华感慨是很多的，也没想到自己居然能到清华，那么梦想的地方，被人传说的地方，我居然去了。</p><p> 　　樊：如今事隔几十年我还能从您的表情上看到您当年的自豪感。</p><p> 　　曹：这真是。</p><p> 　　王：在这之前我没有来过。</p><p> 　　樊：您也不是北京人？</p><p> 　　王：我是哈尔滨人。</p><p> 　　樊：现在改成美籍华人的口音了。</p><p> 　　王：(笑)我是感觉一到清华用哈尔滨话说是贼好，当时我感觉对未来的憧憬，感觉哗，未来有美好的希望，当时有这么一种感觉。</p><p> 　　樊：是一个起点。</p><p> 　　王：对，一个新起点。</p><p> 　　曹：是一个很自豪，也是充满希望这么一个感觉。</p><p> 　　樊：程教授呢？程教授是北京人吗？</p><p> 　　程：对，我生在北京的，家乡是无锡，但是我是生在北京的，我在北京城里。</p><p> 　　樊：那清华在您心目中有没有神秘感？</p><p> 　　程：有有有，第一次进清华的时候大概是小学三年级的时候，因为我姐姐是清华的，她放暑假的时候带我到清华玩，我就记得清华好大，好好玩啊。</p><p> 　　樊：为什么没想到自己会在这个地方来读书？</p><p> 　　程：捉蛐蛐呀，等我小学毕业的时候，因为我们那个时候上中学是要按照地区上的，像清华附中那种学校是可以考的，我在姐姐的鼓动下就考进了清华附中，当时考进清华附中的目的就是大了要上清华大学，那么附中上了一年多就文化革命了，文化革命以后就插队，到最后就是77年高考，知道高考这个消息以后下了决心就一定要考回清华去。所以进清华的时候最高兴，我是在延安拿到清华那张通知书，录取我进清华的时候我最高兴，那种高兴实在是无法形容，我终于考回去了。</p><p> 　　樊：您是继续回来捉蛐蛐？</p><p> 　　祝：(笑)捉大蛐蛐。</p><p> 　　王：接到通知书的时候跟你拿到正教授的感觉有什么不同？</p><p> 　　程：那恐怕还是拿到通知书的时候。</p><p> 　　曹：我也这么想。</p><p> 　　祝：我也是。</p><p> 　　樊：几位现在都是在海外拼搏多年，而且功成名就，为什么还对清华的一纸录取通知书，在你们一生中，在你们生命中的印象还如此深刻，清华这一阶段的学习，对你们的一生究竟产生了什么影响？</p><p> 　　程：我和我清华的老同学讲，清华的人流的都是清华的血。</p><p> 　　樊：上升到这个高度？</p><p> 　　程：对，就是说你进了清华之后，这个烙印就打死了，烙在身上了就是清华的人，你做好事就是为清华争光，做坏事就是为清华丢脸，有这么一种感觉，所以当时说高兴还是小孩子的时候了，现在回过头想为什么清华有这么大的凝聚力，还是有一种文化也好，精神上的东西也好，就是这样的。</p><p> 　　王：我是感觉在清华的训练中创业来讲很有帮助，我们在清华的同学在美国硅谷，他谈起来的时候说清华有四不，不吹牛，不服输，做起事情来还是不紧不慢，我觉得在清华五的培养主要是培养了一个责任感，再有一个是敬业精神，从创业来讲有一个敬业精神，从创业有这个敬业精神。</p><p> 　　曹：我对清华精神真是和你有同感，对清华的自强不息，后得展悟这都是打下一个烙印，以后这几十年道路就一直是这么走下来的。</p><p> 　　樊：您能不能讲一下您在海外工作，学习和创业的过程中会经常想到清华这段学习时光吗？</p><p> 　　曹：我想在不断的时间总会回到你脑子里来，我第一次，81年到普林斯顿读研究生的时候可以说再想的不是父母兄弟姐妹，当然还是想，但是说在清华的同窗那几年生活，那时候的时光，或者一起去图书馆，或者一起讨论，或者一起在宿舍里，哪怕是开玩笑，各种悲喜你好像都很想念，尤其到美国的时候，你一个白天都是很用功在上课，在图书馆，回到宿舍的时候发现有很大的区别，就是缺乏，比较少的就是那时同学们在一起的友谊，同时也是大家一起的交流，一起的亲情也是很缺乏的，还有就老师，我觉得给我们感觉是77届尤其给我们的感觉很强烈，老师真的是清华的老教授，当然岁数都已经很高了，他很多年可能都没教这样的学生了，所以他真是倾注很多的心血在我们身上，所以我们感到要回报清华，回报这些老教授，回报国家，这种成分也蛮多的。</p><p> 　　樊：我记得梅校长曾经说过一句话，他说，大学之大，不在大楼，在乎大师。</p><p> 　　曹：我想这是千真万确的事实。</p><p> 　　(音板)</p><p> 　　樊：有没有幸运在清华读书学习？我想像中可能清华教授更多的是流体力学，理论的，高深的，学术的这种精尖的知识，那么清华究竟是怎么样给你们这样的教育？教给你们那么多做人的道理？</p><p> 　　程：我告诉你一个清华的古老的口号，叫做猎枪和干粮，大概所有的清华的所有人都应该知道这件事情，就是什么呢？清华的一个口号或者说教和学的哲学是什么呢？老师要教给学生的不是干粮，是猎枪，学生要从老师那里拿到的不应该光是干粮，而是猎枪，干粮你吃光了就没有了，就饿死了，你自己不会打嘛，你手里有猎枪就可以自己打东西来吃，这是当时清华对老师和学生一种教和学的很通俗的比喻，这个比喻和流体力学毫无关系，谁都能听得懂，但是这个道理非常深刻，我自己觉得清华的很多学生，实际上你很难说他在具体某门课上，从清华的堂上得到多少收益，这个收益在他后来的一生当中起了多少作用，但是清华这种精神，这种哲学，这个受益一辈子。</p><p> 　　祝：就是学本事，我现在的学生还在讲这个事，英文当然不这么说，NOT TEACH THEM HOW TO SERVE FISH，BUT HOW TO   FISH。这个实际上我也跟学生讲，一个学生在大学学的四年或者五年东西还不到你一辈子的5%，现在飞速发展可能1%都不到，所以实际上学的是一种本事，通过学几门课程学到一种学知识的本事，所以我给学生讲也是不让他们硬背东西，而记住一些东西。我想这些就是程教授，完全都是清华学的一套，所以现在还在发展，不光在国内，还在国外发展去了。</p><p> 　　王：在清华的五年，我们也是同学在一起说这个五年论，这五年里可以培养耐力，做事业就是看谁跑长跑嘛，不是很快的速度，所以有一个耐力的培养，再一个就是打一个很好的基础，我觉得领导能力在清华特别注重，尤其从班里，从系里边，再从学校里边，对领导能力的培养非常的重要。</p><p> 　　樊：所以清华出了很多治国之才，这也不是偶然的。我想你们在清华学到的很多专业上的知识可能已经过时了，很多已经没那么多用处了，但是这种东西可能是留下来伴随你们一生，我想请问，尤其是几位都有在国外学习和工作的经历，你们的感受，清华和国外的一些大学有什么样的区别？像程教授，当你置身在崎玉大学的时候，走在崎玉大学跟在清华的校园里有什么不同的感觉吗？</p><p> 　　程：感觉完全不一样，清华就像我自己的家，其余大学说得通俗一点就是我在那儿混饭吃的地方。</p><p> 　　曹：在那儿只是说我在这边会做研究方面，我会专心的做研究，这就是基本想法，是学术的东西，其他的想得比较少，回到清华那不光是学习，学术，还有亲情，包含得就更多了，内容就丰富得多了。</p><p> 　　樊：即便是您今天再走进清华校园，依然有亲情浓郁的感觉吗？</p><p> 　　祝：每走一步都有亲情，想起到这个桥上是怎么回事，迈过这条小路的时候，今天早上那个讲座我们没有赶上，但是围着化学馆绕一圈就觉得很有意思。 　　王：好像看得出来，你在清华谈恋爱了是吧？(笑)</p><p> 　　樊：印象深刻。</p><p> 　　祝：没有，那时不让谈恋爱！</p><p> 　　(音板)</p><p> 　　樊：像你们在海外清华的校友组织，我想像不出是怎样的一个机构，大家是怎样保持联系，保持对清华的这份关注的？</p><p> 　　祝：清华在外面的人凝聚力特别特别的强，现在我们说的时候我们那个地区有400多人，他们29号的早晨就到多伦多的一个公园聚会，很多人都要去，我们每年都要搞这么一次活动。</p><p> 　　程：清华的日本校友会已经在4月6号星期六在东京一个很大的饭店搞了一个庆祝清华90周年的。</p><p> 　　樊：提前过的生日。</p><p> 　　程：对。</p><p> 　　樊：像你们这次赶回来参加校庆之前是不是他们也让你们带回来很多对清华的问候呢？他们怎么说呢？</p><p> 　　祝：我回去的第一个任务就是向他们汇报这里面的情况，这是要求。</p><p> 　　樊：这是要求，怎么要求你们的？</p><p> 　　祝：就是说要多照点像，把情况讲清楚，因为90周年，比如特殊嘛，有哪个领导人来参加了，搞些什么活动。</p><p> 　　樊：现在问大家这样一个问题，在清华的哪一景，哪一物给你们留下的印象最为深刻，让你们至今不能忘怀？大家轮着说吧。</p><p> 　　王：我是觉得水木清华，当然别的也是都不能忘的，清华的标志，但是我觉得水木清华怎么说呢？有比较平和，因为年轻人出来创业，刚开始都是比较冲嘛，最后都是回到清华自强不息，后德得载悟，我觉得水木清华能够代表，它主要是比较平和，不管有什么风浪，不管天好天坏它总是有很平和的气氛，我是有这个很有感受的。</p><p> 　　樊：这份平和带着你领导同事们上市一定挣了不少钱。你们都一致认为是水木清华吗？</p><p> 　　曹：还是我的宿舍。</p><p> 　　樊：您能跟我们描述一下您的宿舍吗？</p><p> 　　曹：好多同学都喜欢到图书馆去，我在宿舍的时候他们大部分都走了，白天的时候课文完了我就自己在宿舍里，我当时做数学，平时大学都是一人一张桌子，当时四张桌子全是我的，所以就很自在的，很悠闲的可以想自己要想的问题，所以我在那儿渡过很多的时光，也有很多收获。在一张小桌的面前，游于数学浩瀚的海洋。</p><p> 　　樊：可是我想您一个人在美国恐怕会有八张，甚至更多的桌子，为什么那儿的一间小屋子会给您留下这么深刻的印象？</p><p> 　　曹：我想跟你谈恋爱一样，你后面找的可能比你初恋的还要漂亮或者怎么样，但是我想大概还是初恋最难忘。</p><p> 　　樊：那程教授最深刻的景物是您捉蛐蛐的地方？</p><p> 　　程：不是，是清华园的二校门，我们都知道，不知道你知道不？</p><p> 　　樊：我不知道，我在资料看到过。</p><p> 　　程：清华各个方向大门进去到清华比较中心的位置，到现在依然有个二校门，那个二校门是我读小学的时候进清华的，后来上附中进清华的时候都是，上面清华园几个字，印象很深刻的，问题在哪里呢？问题在文化革命的时候就是我上的清华附中的红卫兵，用汽车什么绳子把二大门拉倒，塑给了毛主席像，拉倒属于封资修整。等我们77年进大学的时候那道小门是没有的，毛主席好像还有，后来是文化革命之后我不知道是哪年从日本回来之后我听说清华大学的门又重新修起来了，我专门回来又在那个地方照了一张照片，现在还留着，有一段时间我的主页上的照片就是二校门，二校门实在是不能忘。</p><p> 　　樊：那祝教授呢？</p><p> 　　祝：我可能印象更深的是我们做工程的实验室，因为我们是搞硫钛化工程的，就是把颗粒悬浮在气体里流动，需要很大的设备，我们当时都是跟着老师一起攻关，晚上有时加班，有时反应二十多小时或者七十多小时就要倒班，大家要做就要倒班，很大，我们学到了很多实际的东西，有时候那东西一喷就像洗澡似的，全身都是沙子，满身都是，赶快堵起来，还在那里干，我觉得那种精神对以后的培养都是特别特别有好处的，而且那个沙子有时候滚的时间长了就带静电，你要是不小心碰到反映器金属往上抬一下就能打到肩膀，现在也觉得挺受刺激的。</p><p> 　　樊：那应该是疼痛感，怎么这种疼痛感反而让您这么留恋了？</p><p> 　　祝：我还真有点说不清楚，现在说实在的，有更好的，更高级的设备，有时候看着它，咦？怎么还不喷一下呀？真的说不清那种感觉，但是创业的精神在这里得到了锻炼吧。</p><p> 　　(音板)</p><p> 　　樊：几位再回到清华的时候看到的清华和你们当年求学，生活的清华园有什么样的变化吗？</p><p> 　　王：我觉得从教学楼，从学校的面貌来说用通俗一点的话来说可以说是鸟枪换炮今非昔比，可是学风和敬业精神和清华的传统还是在发扬光大的。</p><p> 　　程：我们今天去理化楼吧？新的理化楼去听杨振宁的报告，虽然没进去但是我好好看了一下物理和数学的楼，有点像北欧老的大学，上面有著名科学家的名字，就是说清华仍然最尊崇科学的精神，感触很深。</p><p> 　　祝：虽然清华建筑外表变了很多，但是你走进图书馆，走进教室，因为我经常来嘛，有时候晚上会走一走，走进教室还是能够看到我们当年学习的气氛，特别静悄悄的，我走路都不敢出声。</p><p> 　　樊：仿佛看见了您自己的当年。</p><p> 　　曹：我回来的时候都已经放假了，可是图书馆还是满座，我觉得这一点还是很不简单。</p><p> 　　樊：那大家看到的清华的这些变化里有没有让你们不太适应的，或者希望清华哪些方面再回到从前？</p><p> 　　程：听到了一些现在的学生，包括研究生没有用出全力来读书和做研究工作，做了一些其他的事情，这个东西很难讲，一定是负作用，年轻人嘛，他现在的想法比我们单纯的时候恐怕要想得多一些，另外对于现在的学生准确的评价，恐怕还是要接触了他们之后才能够做，我昨天到系里面去做了三个小时的报告，我感觉是来听我报告的研究生，我的反映还是很好的，我给日本学生做报告的时候几乎没有人提问题，提问题都提不出像样的问题，但是我昨天在系里做报告的时候学生们提出的问题还是相当好的问题，我们都是做教授的了，就是想尽办法把自己要讲的讲得通俗，讲清楚，如果对方没有反映的话，这是最失望的了。</p><p> 　　曹：你想看到的学生被你讲的东西在吸引，他跟着你的思路走，并且有自己的见解，如果能说出这个东西最后，如果是一片鸦雀无声，你就一点没感觉他们是明白了还是没明白，还是说感不感兴趣，你就一点都没感觉。</p><p> 　　樊：这三位从前在清华读书，如今在国外的大学执教，这位王先生是曾经在清华读书，如今在国外的硅谷的公司做董事长，当你们再回到清华的时候你们愿意对如今的清华的学子们，他们可能正踏在你们曾经踏过的土地上，坐在你们曾经坐过的书桌前，看着窗外你们也曾经看过的，如今可能略有不同的四季的景色，那么你们愿意以一个过来人的身分，对如今的清华学子，愿意对他们说点什么吗？</p><p> 　　祝：如果说特别实际的话，我就想说大学是一个积累的阶段，应该更多的积累，而不是我以后有没有工作，我有没有机会，因为从我个人经历来说，每次都是机会来，机会不多，只有那么几次，但是每次都被我抓住，但是所以能够抓住机会就是因为你有足够的积累。</p><p> 　　王：我感觉做事要有耐心，就要培养耐力，长久的耐力，第二就是培养领导的能力，如果对将来创业的学友，培养领导能力非常重要。</p><p> 　　曹：我觉得大学几年不光是你去学具体的哪个专业方面的知识，而是正好在这个时候一个人个性形成和你成长的过程，在清华这个环境，包括从学术来讲你各个方面也有很好的各种名教授，专家给你教导，你可以吸取各方面的精华，清华对人的培养也是很注重的，我觉得这是一个，就是说你要培养一种性格，往往成功就像王犀讲的要很有耐力，要执着，要做成事情恐怕比你的聪明还要重要，尤其是在后面的阶段，我觉得是那样的。</p><p> 　　程：我如果要用简单的话来归纳还是清华那两句校训，就是厚德载物自强不息，永远要奋斗，要向前，在清华学到的东西，学到的一些具体知识很可能会过时，因为现在知识更新很快，你在清华学到的精神会受益一辈子，刚才祝教授也讲了，不要太图眼前的事情，比如说到哪里多挣一点钱这种事情，钱是永远有得挣的，如果能利用清华这四年的时间能够培养一种精神，在自己身上烙下清华的传统文化也好，精神也好，肯定会受益一辈子，我觉得这是对清华现在在学的每一位学生都是值得考虑的一个问题。</p><p> 　　樊：您不仅是对清华的学生，我想对所有的中国的年轻人，甚至所有的中国人，包括在世界各地的中国人都是一个很好的忠言劝告。</p><p> 　　(音板)</p><p> 　　樊：最后一个问题就是你们在海外最希望听到清华的好消息是什么？或者说你们理想中的，你们希望清华成为一种什么样的院校？</p><p> 　　程：清华在两三年前提出了一个口号，现在是90周年了，就是在清华成立100周年的时候把清华办成世界第一流的高校，我想每一个清华的毕业生都希望这个理想再过10年之后成为现实，如果想听到清华最好的消息就是希望再过10年能听到这个消息。</p><p> 　　曹：对，我也是觉得这个理想，在斯坦福，去柏克林你就能感觉那真是世界一流学府，无论从师资，从学生，从各方面都是，如果清华在10年以后成为世界一流学府，我作为一个清华学子很高兴，很自豪，这不但是清华学子自豪，也是国家的自豪。</p><p> 　　王：我们都是希望不光清华，整个国家都变得特别强盛，这是首先的，所以清华就像我们刚才提到的，这是我们共同的愿望，要达到世界一流，当然这个路不是那么容易走，因为相比之下硬件还好弄一点，大学要一流首先要有一流的教授，我觉得这是很要紧的，但是这还需要时间，真的需要学校和国家在各方面真的要花时间，花精力，希望10年以后再回来能看到梦想成真。</p><p> 　　祝：我个人感觉清华的任何消息对我们来说都是很好的消息，都是让我们听了高兴的消息，像刚才几位学友说的，如果10年以后清华能变成世界上一流的学校，我们都会非常非常高兴。</p><p> 　　樊：对，我想你们在海外也会时刻关注清华的发展，关注祖国的进步。</p><p> 　　主持人：感觉记者樊璇的精彩采访，相信收音机前的各位听众也和我一样沉浸在清华人的往事记忆之中，时间关系，我们的节目很快就要结束了，但是我知道此时此刻在清华校园里，这种欢乐的庆典正在达到高潮。抚古追今，不由得让人感慨万分，90年前，清政府用美国“退还”的部分“庚子赔款”建立了一所留美预科学校那就是清华大学的前身——清华学堂，90年来，清华大学培养了一批又一批治学，兴业和治国之才，她的功绩无须赘言，在我们节目结束之前，我想引用一位清华校友的文章中的一句话，他这样写：清华，我们的母校，今天虽然在庆祝90诞辰，但半个多世纪以来，你没有一丝皱纹，看上去依然年轻，因为你从来不乏师生校友的深情。</p><p> 　　好，感谢各位嘉宾，今天的节目就到这儿了，主持人林白代表编辑樊璇，制作人卫东感谢您的收听，下周再见！在节目最后结束的时候我们还是要再说一句：“生日快乐！水清木华”。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月30日 08:23:48　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

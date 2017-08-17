@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关于“陈寅恪现象”与 九十年代的学术思想界</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231215000337618&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9655/index.html' class='navigation_style'>专题新闻</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9710/index.html' class='navigation_style'>清华旧事新“闻”</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">关于“陈寅恪现象”与 九十年代的学术思想界</h3><p align="center"> 首都师范大学　教授　邓小军</p><p align="center">华东师范大学副教授　胡晓明</p><p align="center">（光明网 2001年4月18日）</p><p> 　　●　进入九十年代，中国学术思想界出现前所未有的景 观。往好处讲，是多元。往差处说，是混乱。目前也很少有 人去探寻关于现代学术界思想混乱方面的症结问题。我想这   个症结跟两个方面有关系，一个就是中国近三百年历史的大 变动,还有一个方面就是世界史的潮流、世界当代的潮流。从 中国的近代史变局来讲,几千年来的中国文化传统（简单地讲   就是人文精神的传统,这种传统是世界历史上少有的）到了近 现代已经逐渐转为技术的东西、功利的东西,也就是说具有价 值意义的古代文化传统基本上失落了，打断了。本世纪初，   特别是“五四”的时候，有人说是“看不起中国文化”，到 了现代有人说“看不到中国文化”，我认为其中一个最大的 转变，最大的变局，即从几千年来悠久丰厚的人文传统文化   中心转变为现代当代的技术中心，功利取向中心，这是一个 本世纪的很大变动（从这个意义上来说，我们就很能理解王 国维、陈寅恪的意义，他们有着真正的文化敏感）。这是现   代思想比较混乱的一个原因、一个根本的原因，中间可能有 很多曲折，有很多人为的因素遮盖了大的变局，那人为的历 史就有一个遮蔽在里面。这个遮蔽后人将会看得越来越清楚，   王国维他们当初就看得很清楚。人为的因素延缓了这个大变 局，这是问题的一个方面，这是纵的方向。从横的方向来看， 还有一个大的变局，就是世界的潮流，现代当代工业化、技   术主义的潮流，也就是资本主义全球化带来的一系列问题,这 些问题正在汇集于中国。</p><p>　　这使我想起韦伯所谈的一个重要思想。韦伯说，合 理化主义(rationalism)是从西方开始生长起来的，它是资本 主义背后的精神。它从西方开始，以后逐渐推向全球,推向很   多原来没有这种传统的国家、地区。合理化主义的背后带来 一个最大的破坏性或者无可奈何的东西，就是原有的古代社 会有“意义”的东西消亡了，用韦伯话来说叫“祛魅”，神   圣性消失了。韦伯说合理性化主义这个东西包括建立在社会 组织上的科学化架构，还有隐藏于各种文化背后的理性化性 格等等,它是无所不在的。比如医学，他说医学基本的理念是   “救死扶伤”，但是医学这个理念在很多情况下是不能回答 生命的意义的问题，如医学对于晚期癌症患者以及先天精神 病患者。对晚期癌症患者来说最恰当去处应该是完结生命解   除痛苦，但医学是不允许这样做的。还有先天的精神病患者， 一辈子给他的家人、亲戚、本人带来了一系列的痛苦，对这 个人来说，对他的亲友来说，结束他的生命是一种解脱，医   学是不管这个东西的。医学管的就是救死扶伤，所以医学并 不能回答什么叫“生命的意义”这个根本的问题。还有韦伯 又以法学为例子，每一个法律都是根据一些很多具体的情况   定出来的一个法则，最终这个法则依据一个什么样的东西来 定，法律根据这个规则来定是否违法或犯法，这些法律背后 的东西，法律是不问的。韦伯认为，法律也是不去追问“意   义”的。还有讲到自然科学、化学、生物学、物理学，对于 自然科学家来说，搞清楚了自然界的规律，搞清楚了其生成、 发展，对于一个自然科学界来说就够了。至于说搞清楚了这   些东西对于人的存在、人的生命有什么意义，自然科学家是 绝对不会问的，自然科学家是不会解决生命的意义这个问题 的。韦伯还举了一系列的例子，有文学、历史学，他说一个   住在博物馆旁的人可能并不是一个真正的文化人，他说文化 学也是只是问文化本身发展的结构、规律，还有它原来的样 貌，至于说这个文化的发展背景，对人的当下的存在有什么   意义是不去问的。历史学家把历史本身的真相揭示出来，至 于说揭示出来的历史真相对于人有什么“意义”，历史学也 是不考虑这些问题的。文学所展现的美的不一定真，真的不   一定美，还有美的不一定善，善的不一定美，其中有很多冲 突的价值，也不能揭示“意义”的存在。而什么东西才能体 现人的存在意义呢？韦伯认为只有原来古代存在的先知传统，   而这类人物在当代社会合理化主义情况下已经脱祛迷魅了( Dischantment),所以现代人生存于一个去掉了魅力的世界， 韦伯认为合理化主义的发展，大大地脱去了魅力。韦伯本人   对于古代的先知是怀着很复杂的一种心意，韦伯其实确有一 种很深的历史情怀，他对宗教的感情很深，一方面对合理化 主义所带来的一系列的东西看到它的弊病，一方面认为这是   不可改变的事实，这正是刚才讲到世界技术化潮流导致世界 失去意义这样的一种情况。这些问题跟资本主义全球一体化 背后所带来的合理化主义的东西，作为思想的一个幽灵在当   代越来越营造着一个脱魅的世界。所以说，这个东西再加上 中国的被人为遮盖的那种大变局带来了现当代中国的价值的 无根，是思想迷失的原因。 　</p><p>　　另外还有第三种原因，我想就是救亡和启蒙的变异。 简单地来讲，现在的情况虽然说不讲“救亡”了，但“救亡” 这个东西在中国嬗变起来，实际上即打“救亡”之旗而行瓜   分之实。或将“救亡”变成了当下的功效性，这就是“救亡” 的变异。还有“启蒙”的变异。启蒙的变异除了阿多尔诺在 《启蒙的辩证法》中所说的，启蒙精神带来科技理性对人自   身的宰制，以及人的膨胀的主体性无限打开所带来的异化， 即对于人的欲望的无法抑制，除此之外，“启蒙”实际上也 是打着启蒙的旗号而排斥思想的多元。特别是“启蒙”本身   所带来的一种对于传统文化的权威的疏离，“启蒙”这个符 号本身就是针对传统而来的，“启蒙”的背后对传统的强烈 的疏离感，它的异化仍然会导致价值的无根，所以思想的混   乱跟这个东西还是有关系的。还有，“救亡”可以证明现代 性的当下功效性，而“启蒙”可以证明现代性的当下的合理 性，所以跟上面讲的还是一个合流,这加深了中国的思想的混   乱。另外，人们意识到的文化优秀传统是能凝聚人心的,但是 另一方面又发现中国文化有一些基本的缺陷，而且这些基本 的缺陷到底是些什么东西，这些东西使他们紧张。还有保存   民族文化固有价值的观念，很多现代人都把它当作一种手段， 而不是一种目的，它到底是一种手段，还是一种目的？这些 方面很值得深思，这些方面也是造成思想混乱的一个原因。</p><p> 　　○ 刚才晓明讲的主要是从西方现代化以来这种价值的失 落,也就是韦伯所讲的合理化主义来到中国，以及当下中国思 想混乱现象的原因。我想补充两点，第一点就是远因，就是   从中国近三百年以来，也就是从满清以来，中国传统的价值 失落所构成的趋势，是中国现代这种思想混乱的自身的原因。 第二点就是近因,就是“五四”以来的全盘西化。全盘西化就   是对中国传统价值的全盘否定。“五四”以来，对中国传统 价值全盘否定以后，主流文化的内容就变成科学与民主,科学 民主并不包含基本价值的内容。“五四”以后的主流文化经   过种种曲折以后，特别是到文革以后出现的这种信仰危机， 这是最近的原因。这样，满清以来传统价值失落的远因， “五四”以来主流文化不具备基本价值内容所形成的近因以   及以后这个主流文化特别是文革以后出现的信仰危机这三点 原因是中国目前思想混乱现象自身的主要原因。</p><p> 　　西方现代化人文价值的失落，这种影响使中国当下思想 混乱现象的追加因素，这个追加因素发生作用主要是在八十 年代以后也就是中国市场经济形成以后发生作用的。另外，   想顺便补充一点，就是韦伯所讲的西方近代以来的这种合理 化思潮,根据我对西方文化的一点了解，我想韦伯所讲的合理 化主义，它的内涵应该是指启蒙运动以后西方文化逐渐抽掉   价值理性，理性的内容就只剩下知性理性，而知性理性并不 决定人的行为，所以这个合理主义我想它实际上可能是一个 人的物质欲望。它的背景应该是近代以来对个人主义或对个   人权力的肯定，使人从对个人束缚之下解放出来。而人的这 种解放，人的束缚的这种解放，它本来是依据人的理性中有 价值的内容来给予肯定的。合理化主义出现以后，把对人的   解放的这种依据、人的价值理性部分逐渐遗忘，逐渐抛弃， 而只剩下这种人的欲望的扩张，人的权力以及在这种欲望支 配之下所加以利用的这种知性理性,这种计算理性。那么应该   补充一句，就是在目前中国当下思想混乱现象的直接原因好 象是西方传染的这种合理主义的影响，但是，实际上，用现 代化合理主义所掩盖的是中国自己的传统价值的失落、被否   定以及中国主流文化所出现的这种危机，在这三个因素之后， 加上最近的因素，才是西方现代化的这种合理主义的影响。 而这种影响实际上是一种追加的因素，它发生重要作用的时   间主要还是八十年代以后，也就是中国选择市场商品化经济 以来的事情。但是这并不能够掩盖造成中国当下思想混乱的 自身的远近的因素。</p><p> 　　●　你刚才的这个说法把中国自身的危机凸现出来了。 西方的这个大的潮流强化、深化了这样的危机感。现在的我 们要讨论的问题就是,在近百年的思想文化的传统背景当中有   很多很多的观念、潮流思想不断变化,那么到底有没有一个东 西，到底有没有一个最有生命的传统，最重要的传统，可以 至少让中国人文知识人思想走出困境的传统，能够在下一世   纪对中国学术文化思想发生深远的引导作用的一个传统的存 在。如果有的话，应该是一个什么样的传统，来使我们真的 感觉到值得尊重。</p><p> 　　○　这个问题，我想大家都可以持比较积极，比较乐观 的态度。就我个人所见而言，本世纪最重要的思想文化传统 或者说学术思想传统至少有两个是值得我们重视的，这两个   思想传统在我来看，一个是王国维、陈寅恪所代表的现代中 国史学传统，另一传统就是熊十力、梁漱溟、马一浮所代表 的现代新儒家的传统。陈寅恪曾经讲到中国将来学术发展的   希望，他认为应该是在他所讲的新宋学的发展上,而王、陈这 个新史学的传统以及梁、熊、马的新儒学传统，实际上已然 构成中国现代新宋学的两大骨干，或者说两支最重要的组成   部分。</p><p> 　　●　非常好。关于新宋学这样的一个提法，“新宋学” 是包含着新史学和新义理学的一个本土思想学术文化概念。 那么我想问一下,“新宋学”跟老的宋学有什么区别?它跟原   有的宋学在传统的承接和回应问题上有些什么样的区别?（摘 自国学网） </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月18日 14:54:59　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9710/2011/20110225231229812340393/20110225231229812340393_.html" target="_blank">陈寅恪没有“博士帽”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document陈寅恪没有“博士帽”科技日报 2001年6月9日□陈鲁民人称“教授的教授”的国学大师陈寅恪，12岁就出国留学，在国外近20年。先后辗转于日、英、德、法等国的数十所名牌大学。他虽然学富五车，满腹经纶，被公认为是留学生中最杰出的“读书种子”，可是却没戴过一顶博士帽。因为他从来不以拿学位和博士帽为念，只要他自己认为这门课程已掌......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9710/2011/20110225231217468102004/20110225231217468102004_.html" target="_blank">“是想看看陈寅恪的藏书”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“是想看看陈寅恪的藏书”□赵武平（中华读书报 2001年4月25日）同样是去拜望陈寅恪，周扬显然比步其后尘而往的康生运气。虽未品尝闭门羹的滋味，可给“突然袭击了一下”，则也完全出乎他的意料。若其秘书回忆可信，他那次造访康乐园的理由很简单，“是想看看陈寅恪的藏书”。学问天下无比的名家，家藏岂有不富之理？陆键东在《陈寅恪......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9710/2011/20110225231217515324691/20110225231217515324691_.html" target="_blank">学历当年</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document学历当年杨建民（中华读书报 2001年4月25日）前不久见到一篇文章，读毕后才知道，通数国多种语言，学问淹博的大学者陈寅恪先生虽在西方多个国家游学多年，却没有获得个什么“博士”学位。对此，陈先生这样说，考博士并不难，但两三年年被一个专题束缚住，就没有时间学其他知识了。他还说，自己从20多岁到德国，立志尽量多学几种语言。他......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9710/2011/20110225231212546179761/20110225231212546179761_.html" target="_blank">陈寅恪致傅斯年</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document陈寅恪致傅斯年（《南方周末》 2001年4月06日 ）敬录陈寅恪先生书札一封，可以见师道之尊严、学人之本色。———编者孟真兄左右：手示敬悉。所以稽迟未即奉复者，以尚未决计南行与否故也。今决计不南行，特陈其理由如下：清华今年无春假，若南行必请假两礼拜，在他人，一回来即可上课，弟则非休息及预备功课数日不能上课，统合计之，......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

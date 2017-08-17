@@ -1,0 +1,580 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我校荣获2000年度国家级科技奖7项</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231207375325906&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><!-- saved from url=(0051)http://www.tsinghua.edu.cn/docsn/xqh/roll/02232.htm --><HTML><HEAD><TITLE></TITLE><META content="text/html; charset=GB2312" http-equiv=Content-Type><META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD><BODY bgColor=#FFFFFF><CENTER>  <p><B><FONT color=#008000 face=楷体_GB2312,楷体 size=+2>我校荣获2000年度国家级科技奖7项 </FONT></B></p>  <p><B> <FONT face=楷体_GB2312,楷体>（葛仲） </FONT></B></p></CENTER><P>　　【本站2月23日讯】2月19日在人民大会堂隆重举行2000年度国家科学技术奖励大会。江泽民主席、朱金容基总理等党和国家领导人出席大会，并为获奖人员颁奖。经过严格的评审，2000年度共评出国家级科技奖288项，其中：国家自然科学奖二等奖15项，国家技术发明奖二等奖23项，国家科技进步奖一等奖22项、二等奖228项。我校荣获各类国家科技奖共7项，其中，国家自然科学奖二等奖1项，国家技术发明奖二等奖3项，国家科技进步奖二等奖3项。分布于我校6个系、院单位，获奖人员43人。获奖项目详见附表。 <P>　　截止到2000年度，我校共获国家科技奖279项，其中，国家自然科学奖27项；国家技术发明奖86项；国家科技进步奖166项（含2项国家级星火奖）。 <P>　　清华大学获 2000年度国家级科技奖项目 <P>　<FONT size=4><FONT face=黑体>序号 项目名称 获奖等级 奖励类别 主要完成人员 我校完成单位 </FONT></FONT><P>　　<FONT face=黑体 size=3>1 低维结构的量子特性及计算</FONT> <P><FONT face=黑体 size=3>设计研究 二等奖 国家自然科学奖 朱嘉麟等5人 物理系 </FONT><P><FONT face=黑体 size=3>　　2 全玻璃真空太阳集热管、集热器及</FONT> <P><FONT face=黑体 size=3>热水系统 二等奖 国家科技进步奖 薛祖庆等10人 电子系等 （第三完成单位） </FONT><P><FONT face=黑体 size=3>　　3 超扭曲液晶显示器（STN-LCD）</FONT> <P><FONT face=黑体 size=3>中试工艺研究 二等奖 国家科技进步奖 高鸿锦等10人 化学系 </FONT><P><FONT face=黑体 size=3>　　4 加速纺机产品结构优化升级的信息</FONT> <P><FONT face=黑体 size=3>集成与虚拟产品开发技术 二等奖 国家科技进步奖 肖田元等10人 自动化系等 </FONT><P><FONT face=黑体 size=3>　　5 钴-60数字辐射照相集装</FONT> <P><FONT face=黑体 size=3>箱检测系统 二等奖 国家技术发明奖 安继刚等6人 核研院 </FONT><P><FONT face=黑体 size=3>　　6 清华系列绿色制冷剂 二等奖 国家技术发明奖 朱明善等6人 热能系等 </FONT><P><FONT face=黑体 size=3>　　7 遥感卫星中频通用接收解调系统 二等奖 国家技术发明奖 杨知行等6人 电子系 </FONT><CENTER></CENTER></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年02月23日 10:47:58　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160310095750910671738/20160310095750910671738_.html" target="_blank">清华女性外籍专家参加人民大会堂妇女节庆祝...</a></h3>
+              <p>3月7日下午，清华大学富布莱特学者Heather Shirey女士、中法中心法方主任Chloe Froissart女士等来自七个国家的7名长期在校的女性外籍专家和专家夫人应邀赴人民大会堂参加了“纪念‘三八’国际妇女节中外妇女招待会”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2016.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2016/20160222162125966798735/20160222162125966798735_.html" target="_blank">我国脑起搏器应用技术获得重大突破</a></h3>
+              <p>　　从19日召开的2015年度北京市科学技术奖励大会上获悉，我国脑起搏器应用技术获得重大突破：由清华大学、首都医科大学附属北京天坛医院等单位共同完成的“脑起搏器关键技术、系统与临床应用”项目获得2015年度北京市科学技术奖一等奖，打破了国外公司的技术垄断，取得了推广应用和产业化的新突破，标志着我国在脑神经调控技术领域已经步入“全球领跑者”行列，为广大功能性神经疾病患者低价治疗带来了希望。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2016/20160108155359146138130/20160108155359146138130_.html" target="_blank">特稿：国际科技合作奖映射中国科技新时代</a></h3>
+              <p>　　“我们正在庆祝中国科学的新时代，我很荣幸能够参与这个时代。”美国哥伦比亚大学教授维尔特·伊恩·利普金在得知自己获得中华人民共和国国际科学技术合作奖之后，激动地向新华社记者表达了自己的感受。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2016/20160108155158473198931/20160108155158473198931_.html" target="_blank">“数”解2015年度国家科学技术奖励</a></h3>
+              <p>　　2015年度国家科学技术奖励大会8日在北京举行。记者根据《国家科学技术奖励公报》，提取数字解析这项盛事。    　　0——2015年度国家最高科学技术奖空缺。根据国务院颁布实施的《国家科学技术奖励条例》规定，国家最高科学技术奖每年授予人数不超过2名，采取记名投票表决方式进行评审，获奖人选应必须由到会委员的三分之二以上多数（含三分之二）通过。2004年时，国家最高科学技术奖也曾空缺。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150708135320971178547/20150708135320971178547_.html" target="_blank">清华与新加坡南洋理工在人民大会堂签署合作...</a></h3>
+              <p>7月3日，国家主席习近平在人民大会堂同新加坡总统陈庆炎举行会谈。两国元首同意双方要总结经验，规划未来，进一步增强政治互信，保持高层密切交往势头，深化经贸和金融领域合作，扩大人文交流合作，一道推动中新关系上升到新高度。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120725103850990259799/20120725103850990259799_.html" target="_blank">清华大学获“全国就业工作先进集体”荣誉称号</a></h3>
+              <p class="thnews_jqzy">　　清华大学获得&ldquo;全国就业工作先进集体&rdquo;荣誉称号清华新闻网7月25日电&nbsp; 7月17日，国务院在北京人民大会堂隆重举行全国就业创业工作表彰大会。中共中央政治局常委、国务院总理温家宝出席会议并讲话。中共中央政治局常委、国务院副总理李克强和回良玉、王岐山、刘延东、梁光烈、孟建柱、戴秉国等领导出席会议，国务委员兼国务院秘书长马凯主持......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120508103831020828916/20120508103831020828916_.html" target="_blank">清华美院唐林涛设计中标人民大会堂照明改造...</a></h3>
+              <p class="thnews_jqzy">　　清华美院唐林涛设计LED照明中标&ldquo;人民大会堂万人礼堂满天星照明改造项目&rdquo;清华新闻网5月8日电近日，由清华大学美术学院工业设计系副教授唐林涛担任项目总设计师的东莞勤上光电股份有限公司设计的LED照明系统，中标&ldquo;人民大会堂万人礼堂满天星照明改造项目&rdquo;。该项目为国家发改委推动的&ldquo;节能减排&rdquo;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2008.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232014906903577/20110225232014906903577_.html" target="_blank">国家科学技术奖励大会隆重举行</a></h3>
+              <p class="thnews_jqzy">　　国家科学技术奖励大会隆重举行中共中央、国务院8日上午在北京隆重举行国家科学技术奖励大会。党和国家领导人胡锦涛、温家宝、李长春、习近平、李克强出席大会并为获奖代表颁奖。温家宝代表党中央、国务院在大会上讲话。李克强主持大会。人民大会堂大礼堂里鲜花吐艳，灯火辉煌，洋溢着喜庆的气氛。上午10时整，大会在雄壮的国歌声中开始。中共中央总书记、国家主席、中央军委主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232011796135093/20110225232011796135093_.html" target="_blank">清华3名教师获第十届中国青年科技奖</a></h3>
+              <p class="thnews_jqzy">　　清华3名教师获第十届中国青年科技奖【新闻中心讯】12月28日，第十届中国青年科技奖颁奖大会在北京举行，清华大学力学系教授冯西桥、核研院研究员吴志芳、水利系高级工程师魏加华获奖。第十届中国青年科技奖经中国青年科技奖评审委员会组织评审、中国青年科技奖领导工作委员会审定，由中央组织部、人事部、中国科学技术协会决定授予，共有99人获第十届中国青年科技奖。同时......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231904906988058/20110225231904906988058_.html" target="_blank">清华李景虹教授获“茅以升科学技术奖—北京...</a></h3>
+              <p class="thnews_jqzy">　　李景虹教授获2006年度“茅以升科学技术奖—北京青年科技奖”【新闻中心讯】日前，清华大学化学系李景虹教授获得2006年度“茅以升科学技术奖－北京青年科技奖”。该奖项由茅以升科技教育基金委员会和北京市科协联合设立，表彰奖励在科技工作中作出突出成绩的优秀青年科技工作者，旨在造就学术和技术带头人,促进北京地区青年科技人才脱颖而出，健康成长。每两年评选一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2007.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231838453209977/20110225231838453209977_.html" target="_blank">清华2006年度国家科技奖获奖项目介绍</a></h3>
+              <p class="thnews_jqzy">　　清华大学2006年度国家科技奖获奖项目介绍国家自然科学奖二等奖一项碳纳米管宏观体的研究清华大学主要完成人：吴德海 朱宏伟 韦进全 曹安源 张先锋项目揭示了碳纳米管宏观体的合成规律，直接合成呈自组织生长的、长度达分米量级（20～40 cm）的单壁、双壁碳纳米管宏观体，发现宏观体具有优异的性能。研究成果发表在2002年5月3......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2007.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231838437744967/20110225231838437744967_.html" target="_blank">10兆瓦高温气冷实验反应堆：推启先进核能...</a></h3>
+              <p class="thnews_jqzy">　　10兆瓦高温气冷实验反应堆：推启先进核能技术应用之门新闻中心记者 张莞昀在人眼无法观察到的世界，一种微小的物质拥有着巨大的能量。核能源，它予人威慑，也为人类创造幸福，其差别就在于人类对它的控制。2007年初，由清华大学研制的“10兆瓦高温气冷试验反应堆”获得了国家科技进步一等奖，其技术应用——我国“高温气冷堆核电示范工程”已列为国家中长期科学和技......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2006.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231801750549706/20110225231801750549706_.html" target="_blank">清华4名教师荣获第九届中国青年科技奖</a></h3>
+              <p class="thnews_jqzy">　　清华4名教师荣获第九届中国青年科技奖【新闻中心讯 记者 周襄楠】近日，由中央组织部、人事部、中国科学技术协会联合举办的第九届中国青年科技奖揭晓，100名优秀科学工作者获奖，其中教育部直属高校中有32人获奖。清华大学数学科学系刘宝碇教授、工程物理系何红建教授、化学系张希教授、生物科学与技术系陈晔光教授榜上有名，清华大学是此届获奖人数最多的高校。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2006.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231715187192380/20110225231715187192380_.html" target="_blank">清华大学面向国家战略需求调整学科和科研重点</a></h3>
+              <p class="thnews_jqzy">　　清华大学面向国家战略需求调整学科和科研重点央视国际   2006-01-18&nbsp;&nbsp;&nbsp;&nbsp;CCTV.com消息（新闻30分）：在日前公布的2005年度国家科学技术奖励中，清华大学共有9项科技成果获奖。近年来清华大学面向国家战略需求调整学科和科研重点，科研实力大大增强。&nbsp;&nbsp;&nbsp;&nbsp;获奖科技成......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231609484305985/20110225231609484305985_.html" target="_blank">我校两教师荣获“茅以升北京青年科技奖”</a></h3>
+              <p class="thnews_jqzy">　　我校两教师荣获“茅以升北京青年科技奖”【新闻中心讯】由北京市科协和茅以升科技教育基金委员会联合举办的第八届“茅以升北京青年科技奖”日前揭晓，我校共有两位教师获此殊荣，化学系张希教授和热能工程系姜培学教授。“茅以升北京青年科技奖”的设立旨在造就学术和技术带头人，促进北京地区青年科技人才脱颖而出，健康成长，表彰奖励在科技工作中做出突出成绩的优秀青年科技工......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2004.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231427703795647/20110225231427703795647_.html" target="_blank">我校首次重奖获国家科技奖的优秀科技人员</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校首次重奖获国家科技奖的优秀科技人员根据我校第2002~2003学年度第4次校务会议通过的“清华大学获国家级科技奖成果奖励办法（试行）”规定，为了贯彻党的尊重知识、尊重人才的方针，鼓励创新，发扬团队精神，激励优秀人才脱颖而出，重奖做出突出贡献的人员，从2002年度起对获国家级科技奖的成果实施奖励。学校首次将88万奖金颁发给我校获2002年度国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225346281649260/20110225225346281649260_.html" target="_blank">我校康克军等获国家科技进步奖一等奖两校友...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校康克军等获国家科技进步奖一等奖两校友获最高奖2003年度共获国家科技奖11项获国家科技三大奖累计308项党中央、国务院于2月20日上午在北京人民大会堂隆重召开2003年度国家科学技术奖励大会。党和国家领导人胡锦涛、温家宝、曾庆红、黄菊、李长春出席大会并为获奖代表颁奖。温家宝总理做重要讲话。我校康克军、高文焕、黄霞、丁晓青、冯冠平和于文东六位......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231425312850696/20110225231425312850696_.html" target="_blank">我校康克军等获国家科技进步奖一等奖两校友...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校康克军等获国家科技进步奖一等奖两校友获最高奖2003年度共获国家科技奖11项获国家科技三大奖累计308项党中央、国务院于2月20日上午在北京人民大会堂隆重召开2003年度国家科学技术奖励大会。党和国家领导人胡锦涛、温家宝、曾庆红、黄菊、李长春出席大会并为获奖代表颁奖。温家宝总理做重要讲话。我校康克军、高文焕、黄霞、丁晓青、冯冠平和于文东六位......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231425125397353/20110225231425125397353_.html" target="_blank"><font color=red><str...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档校友刘东生、王永志获2003年度国家最高科技奖2月20日上午，2003年度国家科学技术奖励大会在人民大会堂举行。我国黄土专家、中国科学院院士、我校校友刘冬生（42地质），中国载人航天工程总设计师、中国工程院院士、我校校友王永志（52-53航空）双双获得国家最高科学技术奖。国家最高科技奖自2000年设立以来，以其权威性和高达500万元人民币的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231401921112767/20110225231401921112767_.html" target="_blank">我校7名教师荣获第七届茅以升北京青年科技...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校7名教师荣获第七届茅以升北京青年科技奖和提名奖第七届茅以升北京青年科技奖评审工作于近日结束。我校数学系章梅荣、电机系闵勇、生物系陈国强及化学系李亚栋获“茅以升北京青年科技奖”，环境系黄霞、力学系刘应华及电子系陆建华获“茅以升北京青年科技奖提名奖”。此次评审共有56个在京的中央、市属单位的99名青年科技工作者提出申请。北京市科协根据《茅以......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231331078169679/20110225231331078169679_.html" target="_blank">清华：获国家最高科学技术奖学校追加奖金5...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华：获国家最高科学技术奖学校追加奖金500万新华网 2003-03-16 来源：北京娱乐信报清华大学获得国家最高科学技术奖者，学校将给予与国家奖励等额的奖金，奖金数额为500万元。记者昨天从清华大学了解到，清华大学目前已通过《清华大学获国家科技奖成果奖励办法（试行）》。该《奖励办法》规定，清华正式工作人员获国家最高......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2003.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231329453356658/20110225231329453356658_.html" target="_blank">2002年度国家科技奖今天公布 我校13...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档2002年度国家科技奖今天公布我校13项科技成果获奖【新闻中心讯】在2月28日上午北京人民大会堂举行的2002年度国家科学技术奖励大会上，我校有13项成果获奖，其中：国家自然科学奖二等奖1项，国家技术发明奖二等奖2项，国家科学技术进步奖二等奖10项，获奖数居全国高校第一。我校43名优秀科技工作者榜上有名，其中雷志栋、陈国强、曾烈光、葛元庆、王仲......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2003.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231329484862867/20110225231329484862867_.html" target="_blank">我校获2002年度国家科技奖项目名单</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校获2002年度国家科技奖项目名单1、持久性污染物的环境界面化学与控制技术原理国家自然科学奖 二等奖钱易（环境系）（4）等5人2、生物塑料PHBHHx的研制与开发国家技术发明奖 二等奖陈国强、陈金春、吴 琼、曹竹安、胡 平、张增民（生物系、化工系）等6人3、 统计预测时钟恢复技术及其系列SDH专用芯片与系统国家技术发明奖 二等......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2003.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348640808983/20110225225348640808983_.html" target="_blank">2002年度国家科技奖今天公布 我校13...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档2002年度国家科技奖今天公布我校13项科技成果获奖【新闻中心讯】在2月28日上午北京人民大会堂举行的2002年度国家科学技术奖励大会上，我校有13项成果获奖，其中：国家自然科学奖二等奖1项，国家技术发明奖二等奖2项，国家科学技术进步奖二等奖10项，获奖数居全国高校第一。我校43名优秀科技工作者榜上有名，其中雷志栋、陈国强、曾烈光、葛元庆、王仲......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2002.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231250671872672/20110225231250671872672_.html" target="_blank">我校2001年度科学与技术奖励大会召开</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校2001年度科学与技术奖励大会召开我校2001年度科学与技术奖励大会前不久在主楼后厅召开。教育部高教司司长张尧学，校领导王大中、陈希、贺美英、何建坤、王明旨、张再兴、胡东成、龚克、顾秉林、杨振斌等出席大会并为获奖代表颁奖。全校70余个基层单位的科技工作者和各系、院、所、部处约400名代表出席大会。2001年度我校共获得各类科研成果奖励3......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231210000810562/20110225231210000810562_.html" target="_blank">数据论坛开进人大会堂</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document远程教育能否成有线电视网络增值手段数据论坛开进人大会堂（北京青年报 2001年3月21日）本报记者牛金荣报道　轻轻地按下遥控器，在数字电视上便可以进行学习、购 物，甚至进行网上医疗。这种数字化时代的生活尽管已经被描述许多次了，但由于   现有网络的带宽、速度、上网费用等多重限制，还只是一个遥远的图画。但随着有 线电视网这......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

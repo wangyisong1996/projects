@@ -1,0 +1,811 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>袁驷：在清华大学建校九十周年庆祝大会上的发言</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231223062106899&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>在清华大学建校九十周年庆典上的讲话</TITLE></HEAD><BODY bgcolor="#FFFFFF"><FONT FACE="黑体" LANG="ZH-CN" SIZE=5> <h3 ALIGN="CENTER">在清华大学建校九十周年庆祝大会上的发言</h3></FONT><FONT FACE="楷体_GB2312" LANG="ZH-CN" SIZE=4><P ALIGN="CENTER">清华大学教授  袁  驷</P><P ALIGN="CENTER">（2001年4月29日）</P></FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=5><P ALIGN="CENTER"></P></FONT><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">尊敬的江泽民主席、朱镕基总理</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">各位领导、嘉宾，各位学长，老师们，同学们：</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">今天是清华大学90周年校庆，在这隆重喜庆的日子，作为一名清华学子，作为一名普通的清华教师，能够站在这里，我感到十分地荣幸。首先，请允许我代表清华大学的全体同事，对我们大家共同敬仰和深爱的母校度过她的九十周年华诞表示最热烈的祝贺！</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">今天是一个具有特殊意义的日子。一年之际在于春，21世纪的第一个春天更是无比宝贵，它代表我国实现现代化进入了第三步战略目标的新阶段，也是清华大学实现建设世界一流大学战略目标的新起点。江泽民主席、朱镕基总理等党和国家领导人的莅临，表明党和国家给予清华大学的崇高荣誉、亲切关怀和殷切期望；众多的海内外嘉宾的光临，表明社会对清华大学的巨大支持，而历届校友们从长城内外、五湖四海欢聚一堂，表明了母校巨大的凝聚力。回首母校九十年的光辉岁月，我们深深地为她感到自豪；展望清华大学新世纪的光明前景，我们欢欣鼓舞，信心满怀！</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">从1974年我进入清华大学土木工程系学习，到1984年成为清华大学土木工程系培养的第一个博士，到1989年我结束在美、欧的博士后研究回到清华大学任教，我由一名普通的清华学子成长为已培养出多名博士的导师。我的努力受到了国家的表彰和鼓励，1991年获得“做出突出贡献的中国博士学位获得者”的称号，1995年获得国家杰出青年科学基金，2000年被聘为教育部长江学者特聘教授。</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">如果要问，我们的成长发展和所取得的一点点成绩主要靠什么？我想，靠自己的发奋努力，靠清华老师的精心教育和倾心培养，靠国家和社会的支持等等；但是，从根本上讲，靠的是清华的精神、传统和氛围。正是在一代代清华先辈们所创造、积淀、传承下来的独特人文精神和优良文化传统的感召、熏陶、化育下，才使得一代代的清华新人辈出。</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">一所名校，一定要有一种精神。清华校训“自强不息、厚德载物”所凝炼的清华精神，底蕴深厚、内涵深邃、博大精深，非只言片语可以透彻解读。它强调身为清华人要有远大的目标和宽广的胸怀。“自强不息”不是为了追功求名，自私利己，而是要“厚德载物”，   承担民族与社会责任，献身科技发展，造福人类。自强不息中的“自强”具有深刻的、内在的自我激励意义。久陷困境能自拔、几经挫折亦不馁、百倍压力仍不折。它也强调“为学”与“为人”的关系，为学自强不息，为人厚德载物。长期以来，校训已经成为一代代清华人立身立业的指南。</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">清华大学集全国一流乃至世界一流的优秀学生而育之，作为一名清华大学的教师，深感教书育人的责任之重大。如何为师？我个人的体会，就是，“慎为人师”。作教师要慎重、要谨慎，作清华的教师，要慎上加慎。我要求自己，“为学”严谨，“为人”诚笃，“为师”行胜于言。</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">作为一名大学的教师，肩负着教书育人和发展科技两副重担。我们要求自己，科研上要勇于创新，以创造性的科研成果带动教学、促进教学，同时也要将教学作为科学研究的创新源，形成教学科研互促并举、相长并进的发展局面。作为清华大学的教师，我们一定要在国家经济建设主战场上发挥好主力军的作用，用一流的创造性的科技成果回报祖国和社会对我们的厚爱。</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">在纪念和庆祝清华大学建校九十周年的日子里，回顾清华人才培养和科技发展的光辉业绩，展望清华大学建设世界一流大学的宏伟战略目标，更加感到教师肩上担子的沉重分量。我们一定要继承和发扬清华和优良传统，以教书育人作为我们的根本任务，立足清华，放眼世界，努力使我们培养出来的学生是高素质、高层次、创造型、多样性的，能够按照中国先进生产力的发展要求，朝着中国先进文化的前进方向，为着中国最广大人民的根本利益，而成才报国，团结奉献，最终能够成为民族振兴和国家强盛的栋梁之才。</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">最后，我愿借此良辰盛况，再次向母校清华献上每一名清华教师的良好祝愿，预祝清华大学早日跻身世界一流大学之列！</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">我们每一名清华教师都会为此而“自强不息”！</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">谢谢大家！</font></P></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月29日 09:04:39　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151027114740386239449/20151027114740386239449_.html" target="_blank">清华大学数据科学研究院遥感大数据研究中心...</a></h3>
+              <p>10月23日下午，“清华大学数据科学研究院遥感大数据研究中心”成立仪式举行。清华大学校务委员会副主任袁驷、国家国防科技工业局重大专项工程中心副主任汤燕等相关负责人参加了仪式。袁驷首先对成立“遥感大数据研究中心”表示祝贺，指出在国家高度支持和倡导大数据发展的背景下，该中心的成立是对地观测领域主动应对大数据时代的一项重要举措，将从科学研究、学科建设、人才培养、产学研协同创新等方面全方位引领发展。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2015/20150311161207697100734/20150311161207697100734_.html" target="_blank">袁驷谈人大环资委如何作为</a></h3>
+              <p>　　丢票1/3，这是本届全国人大环境与资源保护委员会成立时面临的窘境。    　　3月10日下午，在北京梅地亚中心举行的十二届全国人大三次会议记者会上，抛给全国人大环境与资源保护委员会副主任委员袁驷的第一个问题，就是那次丢票的事。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141016170141173523238/20141016170141173523238_.html" target="_blank">袁驷会见卢森堡大学副校长、卢森堡驻华大使</a></h3>
+              <p>10月15日，卢森堡大学副校长勒普沃斯特（Frank Leprévost）教授、卢森堡驻华大使石泰嵋（Paul Steinmetz）先生访问清华大学。清华大学副校长袁驷在工字厅会见了勒普沃斯特教授、石泰嵋先生一行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141015164212604841872/20141015164212604841872_.html" target="_blank">袁驷会见加拿大工程院院士雷萨佩亚一行</a></h3>
+              <p>10月13日，清华大学副校长袁驷在工字厅会见了加拿大土木工程学会前主席、麦吉尔大学教授、加拿大工程院院士加尼·雷萨佩亚（Ghani Razaqpur）先生及加拿大土木工程学会现任副主席陈海铎博士一行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2014.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140815154642887159765/20140815154642887159765_.html" target="_blank">清华拟与瑞典皇家工学院设立核学科双硕士项目</a></h3>
+              <p>8月12日，瑞典皇家工学院副校长雷蒙·维斯（Ramon Wyss）一行3人访问清华大学，副校长袁驷在工字厅会见了来宾。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140527165621106476028/20140527165621106476028_.html" target="_blank">袁驷会见美国华盛顿大学和微软公司代表团</a></h3>
+              <p>5月26日，美国华盛顿大学副教务长玛丽·林斯特荣（Mary Lidstrom）, 副教务长杰弗里·瑞丁格（Jeffrey Riedinger）, 副教务长保罗·杰尼(Paul Jenny)和微软公司政府事务总管德丽·舒玫可（Delee Shoemaker）等一行访问清华大学。清华大学副校长袁驷在工字厅会见了来宾。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140527111450472580732/20140527111450472580732_.html" target="_blank">清华大学独创“讲席教授组”提升教研水平</a></h3>
+              <p>　　为提高教学水平，清华大学独创“讲席教授组”制度，邀请国际一流科学家，帮助清华大学学生提升研究水平，发展基础和新兴交叉学科。5月22日，清华大学曹兴诚生物信息学与系统生物学讲席教授组成立六周年国际学术研讨会召开。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140509151410092773565/20140509151410092773565_.html" target="_blank">清华与加拿大阿尔伯塔大学续签合作协议</a></h3>
+              <p>5月9日，加拿大阿尔伯塔大学教务长卡尔·阿姆雷恩(Carl Amrhein)一行到访清华大学。清华大学副校长袁驷会见了来宾。双方进一步商议了两校能源战略合作项目的启动经费、执行管理委员会构成及运作模式等细节内容，并就在能源项目合作的基础上开展研究生联合培养的可能性交换意见。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140421173723214673964/20140421173723214673964_.html" target="_blank">袁驷会见英国保守党议员、保守党副主席</a></h3>
+              <p>4月18日，英国保守党议员、保守党副主席萨拉·牛顿（Sarah Newton）女士访问清华大学。清华大学副校长袁驷在工字厅会见了牛顿女士一行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131029120434712262731/20131029120434712262731_.html" target="_blank">清华微软联手研究知识产权保护</a></h3>
+              <p class="thnews_jqzy">　　清华微软联手研究知识产权保护来源：北京日报 2013-10-29 任敏昨天，清华大学&mdash;微软创新与知识产权联合研究中心成立，今后，中心将邀请国内外学者研究创新政策扶持、知识产权保护等领域的重要课题。清华大学副校长袁驷介绍，中国非常重视科技创新，科研投入在世界上位居前列，但目前国内的创新体制比较落后，知识产权保护的法律制度也不够完善，社会上发......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131014142312864185497/20131014142312864185497_.html" target="_blank">【24次教育工作讨论会】袁驷到经管学院进...</a></h3>
+              <p class="thnews_jqzy">　　袁驷到经管学院进行24次教育工作讨论会调研　清华新闻网10月14日电10月11日下午，副校长袁驷到经管学院调研，就通识教育、招生改革、教学管理等问题与学院教师代表进行讨论。教务处处长郑力参加调研。座谈中，经管学院院长钱颖一、教师代表钱小军等详细介绍了学院自2009年启动的&ldquo;通识教育与个性发展相结合&rdquo;本科教学改革试点的情况。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130913164249849691055/20130913164249849691055_.html" target="_blank">副校长袁驷、吉俊民检查公共教室的教学准备...</a></h3>
+              <p class="thnews_jqzy">　　副校长袁驷、吉俊民检查公共教室的教学准备工作清华新闻网9月13日电9月12日，副校长袁驷，吉俊民对清华学堂、一教、三教、四教、五教和六教等公共教室的桌椅、多媒体设备、饮水机、空调等设施维护和开学准备情况进行了检查。图为袁驷、吉俊民检查第三教学楼教室情况。学生记者王 涵摄检查过程中，袁驷和吉俊民进入教室，现场查看了桌椅、多媒体设备等教具的准备和使用情况......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130626165455220450323/20130626165455220450323_.html" target="_blank">袁驷会见美国乔治梅森大学教务长</a></h3>
+              <p class="thnews_jqzy">　　袁驷会见美国乔治梅森大学教务长清华新闻网6月26日电（记者李含）6月24日，美国乔治梅森大学教务长Peter Stearns教授一行访问清华大学。清华大学副校长袁驷会见了Stearns教授，并与他就在线课程教育等问题进行了交流。图为袁驷（右）会见美国乔治梅森大学教务长Peter Stearns教授（左）。记者智 斐摄袁驷代表清华大学欢迎Stearns......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130315092714027729716/20130315092714027729716_.html" target="_blank">陈吉宁、袁驷当选第十二届全国人大常务委员...</a></h3>
+              <p class="thnews_jqzy">　　陈吉宁、袁驷当选第十二届全国人民代表大会常务委员会委员&nbsp;&nbsp;&nbsp;清华新闻网3月15日电&nbsp; 3月14日上午，第十二届全国人大一次会议第四次全体会议在人民大会堂举行，会上选举出第十二届全国人民代表大会常务委员会委员161人。清华大学教授陈吉宁（中共）、袁驷（无党派）当选全国人大常委。供稿：统战部&nbsp; 编辑：范 丽&nb......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2013/20130305162407977430892/20130305162407977430892_.html" target="_blank">袁驷：“政府要有魄力为环境牺牲点GDP”</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;政府要有魄力为环境牺牲点GDP&rdquo;十一届全国人大常委会委员袁驷称，雾霾天尚无有效手段直接遏制，可能会越来越频繁来源：南方都市报 2013-3-5 娜迪娅 张伟昨日，十一届全国人大常委会委员、全国人大环境与资源保护委员会副主任委员、清华大学副校长、教务长袁驷就雾霾问题接受南都记者专访时表示，深层次治理雾霾必须进行合理的城市规划，并转......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121220093709096914268/20121220093709096914268_.html" target="_blank">美国罗德岛大学校长大卫·杜里来访清华</a></h3>
+              <p class="thnews_jqzy">　　美国罗德岛大学校长大卫&middot;杜里来访清华&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网12月20日（通讯员张 健）12月19日，美国罗德岛大学（University Of Rhode Island）校长大卫&middot;杜里（David Dooley）博士一行来访清华大学，副校长袁驷在工字厅会见了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121025162838825961412/20121025162838825961412_.html" target="_blank">副校长袁驷出席“中法4+4”项目十五周年...</a></h3>
+              <p class="thnews_jqzy">　　清华大学副校长袁驷出席&ldquo;中法4+4&rdquo;项目十五周年庆典清华新闻网10月25日电(通讯员李宇红 彭赟) 10月23日，清华大学副校长袁驷出席了在西南交通大学举办的&ldquo;中法4+4&rdquo;项目十五周年庆典活动。教育部国际司副司长刘宝利、国家留学基金委副秘书长曹士海、法国驻华大使馆文化教育参赞Anthony Chaumuze......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121023112027029338496/20121023112027029338496_.html" target="_blank">袁驷会见美国圣母大学副校长倪克·恩特里金...</a></h3>
+              <p class="thnews_jqzy">　　袁驷会见美国圣母大学副校长倪克&middot;恩特里金教授一行清华新闻网10月23日电（通讯员张 健）10月22日上午，副校长袁驷在工字厅会见了来访的美国圣母大学副校长倪克&middot;恩特里金教授（Nicholas Entrikin）和助理教务长乔纳森&middot;诺贝尔博士（Jonathan Noble）。双方共同回顾了两校近年来开展的合作，特别......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120906084524245801984/20120906084524245801984_.html" target="_blank">张凤昌、袁驷检查学校教室情况</a></h3>
+              <p class="thnews_jqzy">　　张凤昌、袁驷检查学校教室情况清华新闻网9月6日电（记者范 丽） 9月5日下午，副校长张凤昌、袁驷在相关职能部处负责人的陪同下来到清华各处教学楼，进行新学期开学前教室情况检查。图为张凤昌、袁驷查看中控室。智 斐摄张凤昌、袁驷一行先后查看了清华学堂、一教、三教、四教、五教和六教等公共教室的桌椅、电教设备、饮水机、空调、无障碍通道等设施维护和开学准备情况，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120904110328792509626/20120904110328792509626_.html" target="_blank">袁驷看望2012级外国留学生新生</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;袁驷看望2012级外国留学生新生清华新闻网9月4日电9月3日上午，清华大学副校长、教务长袁驷来到2012级外国留学生报到现场，看望了秋季入学的外国研究生、本科生和进修生。图为袁驷看望2012级外国留学生。袁驷代表学校向来自各国的留学生表示诚挚的欢迎和亲切的问候，并向他们简要介绍了清华的历史和发展情况，祝愿他们在清华学习生活顺利，将来成为优......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2012.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120828133231708537836/20120828133231708537836_.html" target="_blank">马克思主义经济学发展与创新国际学术研讨会...</a></h3>
+              <p class="thnews_jqzy">　　马克思主义经济学发展与创新国际学术研讨会在京举行来源：中国经济网 2012-08-27由中国社会科学院与清华大学联合主办、中国社会科学院经济研究所《经济研究》杂志与清华大学社科学院政治经济学研究中心联合承办的马克思主义经济学发展与创新国际学术研讨会暨全国第六届马克思主义经济学发展与创新论坛于8月26日至27日在清华大学主楼报告厅举行。此次研讨会和论坛......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120521160424025254545/20120521160424025254545_.html" target="_blank">袁驷率团赴法参加“中法4+4”项目回顾总...</a></h3>
+              <p class="thnews_jqzy">　　袁驷率团赴法参加&ldquo;中法4+4&rdquo;项目回顾总结活动清华新闻网5月21日电5月9日至16日，清华大学副校长袁驷应邀率团出访法国，出席&ldquo;中法4+4&rdquo;项目15周年回顾总结活动。在法期间，袁驷一行访问了巴黎、里昂、南特、里尔和马赛五所法国中央理工系统的合作院校，并与在各校学习的清华项目学生进行了座谈。通过交流与实验......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120416150737080856399/20120416150737080856399_.html" target="_blank">袁驷会见图灵奖得主罗伯特·塔扬教授</a></h3>
+              <p class="thnews_jqzy">　　袁驷会见图灵奖得主罗伯特&middot;塔扬教授清华新闻网4月16日电&nbsp;4月13日下午，清华大学副校长袁驷在清华学堂会见了来访的&ldquo;图灵奖&rdquo;得主罗伯特&middot;塔扬（Robert Tarjan）教授。清华大学交叉信息院院长姚期智院士陪同会见。图为袁驷与Robert Tarjan亲切交谈。袁驷对Robert Tar......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120328141108122732841/20120328141108122732841_.html" target="_blank">拜耳医药保健与清华拓展创新药物研发合作</a></h3>
+              <p class="thnews_jqzy">　　拜耳医药保健与清华大学拓展创新药物研发合作来源：中国网 2012-03-28拜耳医药保健有限公司与北京清华大学本周签署了新的战略合作协议，计划在今后三年内开展在生物医学领域的研究合作。拜耳医药保健执行委员会成员、全球药物研发总裁Andreas Busch教授表示，这个决定将延续我们之前的成功合作，同时也强化了拜耳将中国作为公司创新战略重要组成部分的承......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2011.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110906093150057589869/20110906093150057589869_.html" target="_blank">袁驷看望清华2011年外国留学生新生</a></h3>
+              <p class="thnews_jqzy">　　袁驷看望清华2011年外国留学生新生清华新闻网9月6日电&nbsp;（通讯员陈 强）9月5日上午，清华大学副校长袁驷在外国留学生工作办公室看望了前来报到的外国留学生新生。在汉语进修生和专业进修生的报到现场，袁驷分别同来自德国、英国、波兰等国家的外国留学生交谈，了解他们在本国和来中国学习的情况。在清华大学-德国亚琛工业大学联合培养硕士项目的报到现场，袁......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110711161616913524596/20110711161616913524596_.html" target="_blank">袁驷率团参加亚洲科技前沿大学协会论坛</a></h3>
+              <p class="thnews_jqzy">　　袁驷率团参加亚洲科技前沿大学协会论坛清华、韩国科学技术院、东工大三校签署亚洲校园项目&ldquo;合作意向书&rdquo;&nbsp;清华新闻网7月11日电（通讯员刘清伶）7月7日至8日，清华大学副校长袁驷率团出席了在韩国科学技术院（KAIST）举办的亚洲科技前沿大学协会论坛和亚洲校园项目会议。清华大学、韩国科学技术院、东京工业大学三校签署了亚洲校园项目......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110516145612134669341/20110516145612134669341_.html" target="_blank">福建省领导会见清华大学副校长</a></h3>
+              <p class="thnews_jqzy">　　省领导会见清华大学副校长来源：福建日报 2011-05-15&nbsp;&nbsp;14日，省委常委、副省长陈桦在福州会见清华大学副校长袁驷一行。陈桦对袁驷一行专程来闽参加清华大学福州校友会百年校庆活动表示热烈欢迎。她说，长期以来，清华大学为福建培养了大批优秀人才，为福建高校的学科建设提供了重要的指导和支持，积极帮助福建提高高校领导和教师水平，每年还......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2011.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110330153900136152236/20110330153900136152236_.html" target="_blank">袁驷：教师就是要奉献</a></h3>
+              <p class="thnews_jqzy">　　袁驷：教师就是要奉献● 顾淑霞&nbsp;&ldquo;当教师就是要有种奉献精神。置身于荣誉之外而甘于奉献，这是做教学工作的一种境界。&rdquo;袁驷，清华大学副校长，全国人大常委，土木水利学院教授&hellip;&hellip;诸多的头衔中，袁驷把&ldquo;为人师&rdquo;看得最重，在他看来，&ldquo;教书育人是教师一生所追求的境界&......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232541281990638/20110225232541281990638_.html" target="_blank">袁驷会见清华1960级杰出越南校友阮华盛</a></h3>
+              <p class="thnews_jqzy">　　袁驷会见清华1960级杰出越南校友阮华盛【新闻中心讯】9月29日，清华大学副校长袁驷在国际处会见了清华1960级越南留学生校友阮华盛教授。副校长袁驷（左二）会见阮华盛先生（右二）袁驷对阮华盛先生多年来心系母校的深厚感情表示高度赞赏。他说，清华对阮先生在学术上的成就和贡献深感自豪。袁驷还勉励在座的越南留学生以阮华盛教授为榜样，努力学习、早日成才，为发展......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232519078211462/20110225232519078211462_.html" target="_blank">袁驷副校长参加亚洲科技前沿大学协会论坛</a></h3>
+              <p class="thnews_jqzy">　　袁驷副校长参加亚洲科技前沿大学协会论坛【新闻中心讯】7月5-6日，清华大学副校长袁驷参加在东京工业大学举办的亚洲科技前沿大学协会论坛，并发表题为《加强亚洲科技前沿大学协会教育科研合作》的演讲。论坛期间，袁驷与其他学校校长代表一起签署“亚洲科技前沿大学协会实施备忘录”。本次论坛由副校长及高级行政职员会议、学术研讨会、学生讨论会等内容组成。化工系、人文社......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225232506375461992/20110225232506375461992_.html" target="_blank">副校长袁驷出席第二届中韩大学校长论坛</a></h3>
+              <p class="thnews_jqzy">　　副校长袁驷出席第二届中韩大学校长论坛【新闻中心讯 通讯员 刘清伶】6月10日，清华大学副校长袁驷出席了在吉林大学举办的第二届中韩大学校长论坛，并以“清华大学与韩国大学合作的经验及建议”为题进行发言。袁驷介绍了清华与韩国大学合作的概况，包括伙伴大学数量、合作内容和形式，并指出：清华大学重视与韩国大学的合作，以重点合作与常规合作相结合的方式推进合作，同时鼓励......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232433515494510/20110225232433515494510_.html" target="_blank">清华拟采用美高校奖学金制度吸引国外优秀学生</a></h3>
+              <p class="thnews_jqzy">　　清华拟采用美高校奖学金制度吸引国外优秀学生中国新闻网 2010-04-17北京清华大学副校长袁驷16日在纽约接受记者采访时表示，清华大学有意向采用美国高校奖学金制度吸引国外优秀学生前来留学。袁驷表示，目前正在策划阶段，究竟怎样还要看今后发展的情况。袁驷说，总体来讲，中国已经到了要和世界融在一起的地步了，中国的发展离不开世界，世界的发展离不开中国，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232425125950063/20110225232425125950063_.html" target="_blank">副校长袁驷会见中国富强基金会主席李如?？</a></h3>
+              <p class="thnews_jqzy">　　副校长袁驷会见中国富强基金会主席李如樑【新闻中心讯】3月31日，清华大学副校长袁驷在工字厅西厅会见了香港中国富强基金会主席李如樑先生及项目总监陈燕湄女士。袁驷对李如樑主席一行的到访表示欢迎，对于基金会成立之初即关注民生、教育表示赞赏。袁驷向来宾介绍了清华拔尖创新人才培养理念、“优秀新生海外研修团”举办成效，以及清华学堂计划等。本科生招办主任孟芊介绍了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2009.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232340437766244/20110225232340437766244_.html" target="_blank">袁驷出席第六届中日大学校长论坛</a></h3>
+              <p class="thnews_jqzy">　　袁驷出席第六届中日大学校长论坛【新闻中心讯 通讯员 刘清伶】10月15-16日，清华大学副校长袁驷出席了在天津举办的第六届中日大学校长论坛，并做了题为《清华大学与日本伙伴大学务实合作的经验与建议》的讲话。在大会讨论中，袁驷还就加强中日学生交换与教育合作等问题与参会的日方参会大学进行了探讨。在中日大学校长论坛期间，袁驷与东京工业大学副校长大仓一郎会见论......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232314078491117/20110225232314078491117_.html" target="_blank">袁驷副校长在第23次教育工作讨论会开幕式...</a></h3>
+              <p class="thnews_jqzy">　　解放思想 继往开来 探讨新百年人才培养的使命与战略——在第23次教育工作讨论会开幕式上的工作报告（2009年7月8日）清华大学副校长　袁驷老师们、同学们：本次教育工作讨论会的主题是“清华新百年人才培养的使命与战略”。刚才顾校长的报告从大学发展的历史进程，从当代国际高等教育发展趋势，从清华大学百年育人历史传统，从学校建设世界一流大学的目标和未来发展前景，结......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2009.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232308890757991/20110225232308890757991_.html" target="_blank">清华副校长袁驷与自动化系毕业国防生班座谈</a></h3>
+              <p class="thnews_jqzy">　　科学发展 从军报国清华大学副校长袁驷与自动化系毕业国防生班座谈【新闻中心讯 通讯员 谭鹏】6月17日下午，清华大学副校长袁驷与自动化系毕业国防生班自51班在主楼407会议室亲切座谈，畅谈人生理想，勉励同学们到祖国和人民最需要的地方去建功立业。袁驷与自动化系毕业国防生班自51班合影原自51班班长鹿珂珂从学风建设、思想建设、党建工作、团日活动、感情建设、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2009.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232250109820182/20110225232250109820182_.html" target="_blank">【校友访谈】龙驭球与袁驷：薪传火种 执着...</a></h3>
+              <p class="thnews_jqzy">　　薪传火种 执着攀登——记袁驷及其导师龙驭球院士■研通社通讯员 金飞飞 付丹袁驷是清华培养的首批硕士、土木系第一位博士毕业生，而其导师龙驭球院士是土木工程系第一位博士生导师、第一位中国工程院院士。他们共同见证了清华大学土木工程系“薪传火种、执着攀登”的八十余年历史，对清华精神有着更深的理解。求学生涯袁驷的求学生涯并不是一帆风顺的，他的经历似乎还有些......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232232000295235/20110225232232000295235_.html" target="_blank">袁驷：“团结、信心、行动”有助于走出经济...</a></h3>
+              <p class="thnews_jqzy">　　“团结”、“信心”、“行动”有助于走出经济困境■全国人大常委、清华大学副校长 袁驷这次两会，在关注国家各项发展方针的同时，我更希望能够通过这次两会凝聚人心、坚定信心，将全国人民的意志统一到中央的决策和部署上来，并转化为全国上下的自觉行动，这样就能卓有成效地应对国际金融危机对我国经济的冲击，率先走出经济困境。2009年是新世纪以来我国经济发展最困难的一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232214093995318/20110225232214093995318_.html" target="_blank">【改革开放30年】袁驷：争分夺秒的求学氛围</a></h3>
+              <p class="thnews_jqzy">　　袁驷：争分夺秒的求学氛围●记者 程曦 学生记者 邢益瑞作为国内培养的首批硕士和我校土木系培养的首位博士，袁驷副校长对学位制度的记忆中并没有太多富于仪式感的场面。然而，改革开放后首批研究生那股喷涌而出的学习热情却令他记忆犹新。十一届全国政协副主席、台盟中央主席林文漪，原教育部副部长吴启迪，浙大校长杨卫……这些当年在清华不同专业求学的改革开放后首批研究生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232027031509614/20110225232027031509614_.html" target="_blank">清华教授袁驷再次当选全国人大常委会委员</a></h3>
+              <p class="thnews_jqzy">　　清华教授袁驷再次当选全国人大常委会委员【新闻中心讯 记者 崔凯】3月15日，十一届全国人大一次会议第五次全体会议在人民大会堂举行。吴邦国当选第十一届全国人民代表大会常务委员会委员长。王兆国等13人当选全国人大常委会副委员长。161人当选第十一届全国人大常委会委员。清华大学教授袁驷再次当选全国人大常委会委员。袁驷教授，1953年生，无党派人士，现任清华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232025359111000/20110225232025359111000_.html" target="_blank">【两会聚焦】袁驷：以更广阔背景关注教育创...</a></h3>
+              <p class="thnews_jqzy">　　以更广阔背景关注教育创新可持续发展模式●全国人大代表、清华大学副校长 袁驷在教育方面，党和国家的大方针是优先发展教育，本届政府的具体提法和部署很值得期待。教育必须和国家社会的发展结合起来，要从社会发展的大格局和发展形势层面上思考教育问题。作为第十届人大环资委委员，我也非常关心本届政府在环境保护、节能减排方面的举措。环境问题是我国发展面临的重大问题。国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231507359907549/20110225231507359907549_.html" target="_blank">袁驷教授荣获全国模范教师荣誉称号</a></h3>
+              <p class="thnews_jqzy">　　无标题文档袁驷教授荣获全国模范教师荣誉称号  【新闻中心讯 记者 顾淑霞】在第20个教师节前夕，人事部、教育部联合表彰了一批先进教师个人，我校土水学院袁驷教授荣获“全国模范教师”光荣称号。  9月10日下午，袁驷教授作为北京市二名优秀教师代表之一，参加了在人民大会堂举行的全国优秀教师表彰大会，受到了中共中央总书记、国家主席胡锦涛，中共中央政治局常委、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231506328262818/20110225231506328262818_.html" target="_blank">袁驷教授获“全国师德先进个人”光荣称号</a></h3>
+              <p class="thnews_jqzy">　　无标题文档袁驷教授获“全国师德先进个人”光荣称号【新闻中心讯 记者 顾淑霞】第20个教师节前夕，我校土水学院袁驷教授荣获全国教科文卫体工会授予的“全国师德先进个人”光荣称号。袁驷教授为教育部“长江学者奖励计划”特聘教授，从教23年。出版英文专著1部，发表学术论文150余篇。近年出版了《结构力学教程》、《程序结构力学》、《Fortran   90 编程......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2004.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231429468632411/20110225231429468632411_.html" target="_blank">袁驷：精品课是一种境界——在教学科研奖励...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档精品课是一种境界在教学科研奖励大会上的发言袁驷2004年4月6日&nbsp;今天我在这里发言，感到很荣幸，很感慨，同时也感到很为难。我们清华有那么多的精品课，有那么多的名师，有那么多的优秀教师，远不止此次表彰的这些。他们诲人的态度令人亲近，奉献的精神令人景仰，创新的思维让人钦佩，执着的追求让人感奋;自强、博学、厚德、奉献;心甘于师，业精于勤......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2003.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231408953533485/20110225231408953533485_.html" target="_blank">甘为人师 慎为人师——记袁驷教授</a></h3>
+              <p class="thnews_jqzy">　　无标题文档甘为人师 慎为人师——记首届百名中国高校教学名师奖获得者袁驷教授●新闻中心记者 顾淑霞一谈起教书育人，清华大学土木水利学院院长袁驷教授便神采奕奕，似乎有说不完的话。他的那份睿智、对教书育人工作的挚情与挚爱具有穿透力和感染力——听他谈话，是一种享受，一种幸福。袁驷教授是一个“多产高产”的人。他在教学、科研、管理工作和社会工作中扮演着重要角色，并以......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231225156407075/20110225231225156407075_.html" target="_blank">清华大学校长王大中在清华90年校庆会上发言</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学校长王大中在清华90年校庆会上发言中国新闻网 2001年4月29日 22:54中国北京清华大学校长王大中院士，四月二十九日在庆祝清华大学建校90年大会上发言。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354625477968/20110225225354625477968_.html" target="_blank">庆祝清华大学建校九十周年大会在北京举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document庆祝清华大学建校九十周年大会在北京举行新华网 2001.04.29 23:28:48新华网北京四月二十九日电（记者 尹鸿祝 江涛）秉承“自强不息、厚德载物”的精神，享有盛誉的中国著名高等学府清华大学今天迎来了九十华诞。党和国家领导人江泽民、朱镕基、胡锦涛、李岚清等来到清华大学出席庆祝大会。中共中央总书记、国家主席江泽......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231223140130258/20110225231223140130258_.html" target="_blank">朱凤蓉：在清华大学建校九十周年庆祝大会上...</a></h3>
+              <p class="thnews_jqzy">　　在清华大学建校九十周年庆典上的讲话在清华大学建校九十周年庆祝大会上的发言1966级校友   朱凤蓉少将（2001年4月29日）尊敬的江泽民主席、朱镕基总理尊敬的各位领导、各位学长、老师们、同学们：今天我怀着激动的心情祝贺母校建校90周年！我觉得我又回到了学生时代，到教室上课，在操场上打球跑步，到图书馆抢座位看书，仿佛就发生在昨天。记得入学时系领导说：“工......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231222703831877/20110225231222703831877_.html" target="_blank">“半国英才”喜迎校庆</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“半国英才”喜迎校庆新华网 2001.04.29 09:43:30新华网北京４月２９日９时３０分电 （记者王文韬 刘江 江涛）近年来，在全国高校统一招生中，清华大学历年都能从全国各省市招收理科生第一名中的７０％以上，前十名中的６０％以上。所以，清华学子有“半国英才”   的美称。为了迎接学校九十华诞，校园内的学子们组......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225626703454186/20110225225626703454186_.html" target="_blank">接过“爱国奉献”的接力棒</a></h3>
+              <p class="thnews_jqzy">　　在清华大学建校九十周年庆典上的讲话接过“爱国奉献”的接力棒——在清华大学建校九十周年庆祝大会上的发言清华大学学生会主席申跃（2001年4月29日）尊敬的江泽民主席、朱镕基总理、各位领导、来宾，敬爱的各位老师、学长，亲爱的同学们：“紫荆花开满园春”，今天的清华园，洋溢着欢歌笑语，几代清华人聚集一堂，共同庆祝母校九十华诞。此刻，我们两万余名清华学子感到无比的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354890359385/20110225225354890359385_.html" target="_blank">“清华新闻”将滚动播出校庆庆典盛况</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“清华新闻”将滚动播出校庆庆典盛况我校90周年校庆庆典将于今天上午10点开始，届时“清华新闻”将滚动播出庆典盛况，欢迎收看。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354859250523/20110225225354859250523_.html" target="_blank">江泽民等党和国家领导人到达清华园（9:3...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民等党和国家领导人到达清华园(2001.04.29 09:16:24)新华网北京４月２９日８时５０分电（记者江涛、刘江、王文韬）江泽民、朱镕基、胡锦涛、李岚清现在已乘车由清华大学东门进入清华园，他们将在清华听取校长王大中关于清华建设世界一流大学的情况汇报、参观清华科研成果展、出席清华大学建校９０周年庆祝大会。   这......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231223453708684/20110225231223453708684_.html" target="_blank">９０高龄校友参加９０年校庆庆典</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document９０高龄校友参加９０年校庆庆典新华网 2001.04.29 11:39:24新华网北京４月２９日１１时３２分电（记者王文韬江涛 刘江）这次返校参加９０周年校庆的清华大学校友有１万多人，３５００位校友在大会现场。其中，到会校友中最年长者是与清华同龄的１９３１级校友马祖圣，这次专程从美国赶回参加校庆。当年体育代表队的一位......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354828696490/20110225225354828696490_.html" target="_blank">江泽民为清华建校９０周年题词</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民为清华建校９０周年题词新华网 2001.04.29 11:24:41新华网北京４月２９日１１时１０分电（记者江涛 刘江 王文韬）中共中央总书记、国家主席江泽民为清华建校９０周年题词。江泽民的题词是：“建设世界一流大学为实现中华民族的伟大复兴而努力奋斗”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354796243536/20110225225354796243536_.html" target="_blank">江泽民发表重要讲话</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民发表重要讲话新华网 2001.04.29 11:37:20新华网北京４月２９日１１时２４分电（记者刘江、李江涛、王文韬）中共中央总书记、国家主席江泽民在清华大学建校９０周年庆祝大会上发表了热情洋溢的讲话。江泽民在讲话中代表党中央、国务院，并以他个人的名义，向清华大学全体师生员工和海内外校友，表示热烈的祝贺！向参......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354734982989/20110225225354734982989_.html" target="_blank">我校建校90周年庆祝大会召开</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document建设世界一流大学　为实现中华民族的伟大复兴而努力奋斗江泽民总书记为我校建校90周年题词我校建校90周年庆祝大会召开【新闻中心讯】对于清华人来说，4月29日是个不平凡的日子，清华人用自己的方式庆祝九十年历史铸就的辉煌。庆祝大会在新落成的综合体育中心隆重举行。庄重、简朴的会场容纳了将近6千名来自海内外的校友、嘉宾和师生员......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354687788197/20110225225354687788197_.html" target="_blank">江泽民：在庆祝清华大学建校90周年大会上...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民：在庆祝清华大学建校90周年大会上的讲话(新华网 2001.04.29 20:13:30)江泽民老师们，同学们，同志们，朋友们：今天，清华大学校园里春光明媚，万物更新，充满着蓬勃朝气。来到你们中间，我仿佛年轻了许多，心情特别高兴。首先，我代表党中央、国务院，并以我个人的名义，向清华大学全体师生员工和海内外校友，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231223187764087/20110225231223187764087_.html" target="_blank">女少将感谢母校清华的培养</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document女少将感谢母校清华的培养新华网 2001.04.29 11:21:49新华网北京４月２９日１１时０４分电（记者江涛、刘江、王文韬）清华１９６６级校友、朱凤蓉少将在发言中感谢母校的培养，看到９０岁的母校充满了朝气、充满了活力，她为母校所取得的辉煌成就而骄傲。这位来自核试验基地的少将说：我和我的丈夫都是清华学子，长期以来......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354843949825/20110225225354843949825_.html" target="_blank">王大中：在清华大学建校九十周年庆祝大会上...</a></h3>
+              <p class="thnews_jqzy">　　在清华大学建校九十周年庆典上的讲话在清华大学建校九十周年庆祝大会上的讲话清华大学校长王大中（2001年4月29日）尊敬的江泽民主席、尊敬的朱镕基总理、尊敬的各位领导、各位嘉宾、各位学长、老师们、同学们、朋友们：在21世纪的第一个春天,我们在这里隆重集会,庆祝清华大学建校90周年。在这样的历史性时刻，有这么多领导和海内外同仁、嘉宾莅临我校，我们的喜悦与感激......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

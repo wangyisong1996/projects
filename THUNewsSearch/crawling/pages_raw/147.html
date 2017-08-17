@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>英若诚：清华大学戏剧艺术的摇篮</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225356234632895&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9648/index.html' class='navigation_style'>头条新闻</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">清华大学戏剧艺术的摇篮 </h3><p align="center">英若诚</p><p align="center">（光明日报 2001年4月4日）</p><p> 　　今天清华大学的学生中恐怕很少有人是为了从事戏剧而进入清华 的，可是我从一开始就是为此而报了清华大学。</p><p> 　　1950年我从清华毕业时，怎么也不会想到，我一辈子要为之献身 的事业竟然是表演。</p><p> 　　当时，中国只有一家戏剧学校，位于南京，声望也不是太高，但 当时清华却是个出戏剧人才的地方。不是吗？这其中有洪深、曹禺、 张骏祥（写剧本的时候笔名叫袁俊）、李健吾等诸位大师，当然还有   我们敬爱的大姐杨绛先生，这些曾在中国现代戏剧史上作出过卓越贡 献的人物都出自清华大学的外文系。当然，这是诸多因素起作用的结 果，其中一些是起了关键作用的热心人士。这里我想举一个突出的例   子，清华大学当时聘请了不少的外籍教授，其中有一位美籍华人，名 字叫王文显。这位学者对戏剧特别热爱，除了自己写剧本外，还讲授 戏剧课，在他的影响下，学生的校园业余戏剧蓬勃地发展起来。一开   始当然是世界名剧居多，但是中国本民族的作品也随着成长、壮大起 来，这不能不说与王文显教授的热心有关，我本人中学毕业后，一心 一意想考入清华是与此有关的。</p><p> 　　我自己进入清华时，很失望地发现王文显教授早已离开了清华。 尽管如此，我还是在清华找到了满足我对戏剧事业的门径，一个是同 学老师中不乏一些热爱戏剧的同好，另一个则是清华那迷人的图书馆，   我记得当时清华的图书馆不断有新书出现，而只要有有关戏剧的书， 我总是如饥似渴地借出来，先睹为快，我一生第一次看到的史丹尼斯 拉夫斯基的原著（其中包括我后来翻译成中文的《奥塞罗导演计划》），   苏联大师爱森斯坦的《电影感》以及契诃夫、萧伯纳等巨匠的作品， 都是在这座对我来说神圣的大型图书馆中。</p><p> 　　1949年，我最后一次去图书馆借书。当时的管理员告诉我，来了 一批新书，有新剧本，有最新世界上报道戏剧动态的杂志，我记得， 在剧本中最吸引我的是当时一位初露头角的作者阿瑟·密勒，他的获   奖剧本叫《推销员之死》。</p><p> 　　《推销员之死》获得了那一年的“普利策奖”和纽约剧评家最佳 剧本奖。就当时来说，这是了不起的荣誉，剧本深深地打动了我，因 为从内容到形式它都很“新”，写的是一个小人物，而且深刻地揭露   了他的内心世界。我一口气读完剧本后，这个人物———威利·洛曼—— —在我想象中活起来了，好像是个老朋友，好像我完全可以理解他的 每一步行动，每一项决定。这时候，我才20岁，而威利已经是60多岁   的老人了，我还没出学校门，也还没有确定一辈子干什么，所以根本 谈不到扮演这样一个角色。</p><p> 　　在这之后，我参加了刚刚成立的北京人民艺术剧院，在话剧团担 任一名演员。我这样一个“貌不惊人”的材料，在北京人艺居然也给 自己找到了一个安身立命的位置，而且一干就是四五十年。这一年，   我的一位老同学忽然给我打电话，他在他们邀请的友好人士名单上发 现一个名叫阿瑟·密勒的专业戏剧作家，是自费来华旅游的人士。他 问我剧协或人艺有没有兴趣接待这位客人。我想起了在我从清华毕业   时给我印象极深的那个戏《推销员之死》，赶紧查问，结果我大喜过 望，证实了就是同一位阿瑟·密勒，这是我第一次与他见面。</p><p> 　　我对这位大作家的第一个印象就是他身材之高大，我本人1．75米， 不算是小个子，但是密勒却接近两米，在美国人中也要算高个子了。 后来我发现这对我扮演威利·洛曼很有帮助，由于他身材高大，我常   常必须抬着头与他交流，这在下意识中有助于使我获得“小人物”的 自我感觉。当然这是两年以后的事了。</p><p> 　　1982年，我被美国的密苏里大学请去美国教学，并当导演排戏， 又与阿瑟·密勒见面了。这一次，哥伦比亚大学（纽约）的周文中教 授向我们提出建议，请阿瑟·密勒来中国，执导排演一出他的戏，用   中文演出。对他的建议我们可以说是一拍即合，很快达成了协议，剩 下的问题就是决定剧目。我的意见是，选择他的创作中影响最大、最 深，使他一跃而成为美国当代最重要的剧作家的作品。密勒很敏感地   听出来，我的意思是《推销员之死》，他沉默了一会儿，算是同意了， 但接着提出一个条件，剧中主要人物威利·洛曼要由我扮演，理由是 他不会中文，而作为导演，他必须不断地与主要演员交流、探讨。我   同意了，就这样我埋藏在心里30多年的梦想实现了。</p><p> 　　我忘不了1983年5月的首场演出。经过一个多月紧张的排练，我们 终于要和观众见面了，我感觉得到，密勒和我们一样紧张，他在首都 剧场从一个角落走到另一个角落，观察着观众的反应。一个多月来，   我们没有刻意宣传，但是新闻报道，特别是在美国的报刊上，却大量 地播发了新闻、采访分析和预言，其中悲观的预测也大有其人，“中 国观众能够理解美国一个普通小人物吗？”“中国观众能够体会美国   人的价值观吗？”有的文章索性对我们的前途完全持否定态度：“经 过几十年的宣传鼓动，中国观众不会接受这样一部作品”。就在人艺 内部，也有不少人持怀疑态度：“这个剧本的最后一场《安魂曲》，   恐怕中国观众不会接受。主角已经死了，台上只剩下五个人，彼此之 间又没什么戏，中国观众恐怕都要提前撤退，去赶公共汽车，最后整 个戏等于白演了。”可以想象，演员最后是怀着多么紧张的心情等待   着这样一种可能出现的景象。</p><p> 　　大幕终于落下来了。在边幕旁等待谢幕的演员紧张地等待着，台 下却出现了寂静，有一位女演员忍不住哭了。就在这一片寂静中突然 有人鼓起掌来，一下子，好像憋了一晚上的观众忽然都醒过来了，掌   声越来越大，夹杂着观众的喊声，像是暴风雨般地把我们淹没了。观 众不是向剧院外走（所谓去抢坐公共汽车），而是涌向舞台台口，鼓 着掌、喊着向作者和演员们致意。</p><p> 　　回顾我的演艺历程，我由衷地感谢我的母校清华大学给予我的戏 剧艺术的启蒙。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月04日 08:54:47　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2008.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232111812742925/20110225232111812742925_.html" target="_blank">英若诚：奇才奇艺奇志奇行</a></h3>
+              <p class="thnews_jqzy">　　英若诚：奇才奇艺奇志奇行温去非1986年6月，此前几乎从未担任过任何行政职务的英若诚，从北京人艺调任中华人民共和国文化部副部长。病榻上的北京人艺老院长曹禺先生，亲撰一联送给他:大丈夫演好戏当好官，奇君子办实事做真人。展开刚刚出版的《英若诚传》，纵览英若诚先生生平始末，一个“奇”字确是贯穿始终，其庞大渊深的学问，多方面的惊人成就，个性之多姿多彩，际遇之......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2007.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225231935171410196/20110225231935171410196_.html" target="_blank">戏剧人生一甲子——深深地怀念英若诚</a></h3>
+              <p class="thnews_jqzy">　　戏剧人生一甲子——深深地怀念英若诚●梁秉堃英若诚离开人间三年多了。他74岁的一生是从艺的一生，可以说，戏剧就是他的整个生命，血肉相连，不可分割。60年前，英若诚在清华大学外文系读书时，开始钻研英语文学和戏剧，并随后又参加学生业余的“骆驼剧团”，登台演出了《地窖之门》、《保尔·莫莱尔》和《春风化雨》等戏。“戏剧人生一甲子”。今天，我们回望他近60年的舞台......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225351484664215/20110225225351484664215_.html" target="_blank">学非所用又如何？</a></h3>
+              <p class="thnews_jqzy">　　无标题文档名流看教育学非所用又如何？光明日报 2001年11月20日本报记者　夏　欣英若诚，1932年生于北京，著名戏剧表演艺术家、编导、翻译家。曾就读北京培根小学、辅仁中学、天津圣路易中学、清华大学外文系。曾任文化部副部长。记者：许多人用“奇才奇艺”和“学者型艺术家”来评价你。人们常说，“三岁看大，七岁看老”，你从小一直是老师眼里的好学生吗？　......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231241921410957/20110225231241921410957_.html" target="_blank">学非所用又如何？</a></h3>
+              <p class="thnews_jqzy">　　无标题文档名流看教育学非所用又如何？光明日报 2001年11月20日本报记者　夏　欣英若诚，1932年生于北京，著名戏剧表演艺术家、编导、翻译家。曾就读北京培根小学、辅仁中学、天津圣路易中学、清华大学外文系。曾任文化部副部长。记者：许多人用“奇才奇艺”和“学者型艺术家”来评价你。人们常说，“三岁看大，七岁看老”，你从小一直是老师眼里的好学生吗？　......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

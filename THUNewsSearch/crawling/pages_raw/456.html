@@ -1,0 +1,1063 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>“清华创业与投资论坛二00一”开幕</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231217843347826&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9664/index.html' class='navigation_style'>社会服务</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">“清华创业与投资论坛二00一”开幕</h3><p align="center"> （2001年4月26日 中国新闻网）</p><p>　　中新社北京四月二十五日电(记者孙自法)有创业界“财富论坛”之誉的“清华创业与投资论坛二00一”今天上午在清华大学开幕。</p><p> 　　清华大学联合海内外著名风险投资机构共同举办的此次论坛，是清华九十周年校庆系列活动的重要组成部分。来自中外创业投资界数百位精英人士荟萃一堂，就中国创业投资的经验、中国创业投资事业未来的发展道路，进行了深入、广泛的总结和探讨。</p><p> 　　为期一天的论坛安排得非常紧凑，共设立“新世纪中国创业投资”、“风险投资与全球新经济”、“中国创业投资实践探索”和“创业者眼中的风险投资”四个专场。在这之后，台湾新竹清华大学张一熙教授就高科技产业链、技术链和投资链，进行了特别专题评述。论坛结束前，还开展了一场主题为“风险投资家怎样选择项目”的国际VC圆桌会议。</p><p> 　　清华大学常务副校长何建坤教授开幕致辞时表示，创业投资在中国大有可为。在中国经济发展的增长阶段，市场需求为创业者提供了广阔的发展空间。</p><p> 　　中国全国人大常委会副委员长成思危，被业内人士称为“中国风险投资事业之父”。他给论坛发来贺信说，加快风险投资事业的发展，已成为当前一项重要任务，希望今天的论坛能发展成为风险投资界国际交流的名牌。   　　 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月26日 14:03:47　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160331112958566430151/20160331112958566430151_.html" target="_blank">首届中以大学校长论坛召开 刘延东出席并发...</a></h3>
+              <p>以色列当地时间3月29日下午，由以色列高等教育委员会、中国教育部、清华大学主办的首届中以大学校长论坛在耶路撒冷举行，中国国务院副总理刘延东出席论坛并做主旨演讲。以色列教育部长、高教委主席本内特及高教委科技预算委员会主席雅法出席论坛并致辞。清华大学校长邱勇和特拉维夫大学校长卡拉夫特出席论坛并分别代表中以大学发表演讲。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2016/20160330163459612459443/20160330163459612459443_.html" target="_blank">首届中以大学校长论坛举行 刘延东出席并发...</a></h3>
+              <p>当地时间29日下午，由以色列高教委、中国教育部、以色列大学校长委员会、清华大学主办的首届中以大学校长论坛在以色列隆重举行。中国国务院副总理刘延东出席论坛并发表演讲。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2016/20160329164719595797188/20160329164719595797188_.html" target="_blank">石墨烯高峰论坛将在深圳举行</a></h3>
+              <p>为推进中国石墨烯等碳纳米材料的研究和产业发展，2016石墨烯高峰论坛将于4月14日在清华大学深圳研究生院举行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160329111132315446995/20160329111132315446995_.html" target="_blank">首场创想论坛畅谈人工智能前沿应用与创新机遇</a></h3>
+              <p>3月23日下午，在清华大学举办了以 “人工智能前沿应用与创新机遇”为主题的首期创想论坛。论坛上，来自清华大学计算机系的张钹院士、朱小燕教授、邓志东教授，以及微软亚洲研究院学术合作部总监潘天佑博士和国术科技（北京）有限公司总经理袁国术围绕人工智能和创新创业机遇发表了主题演讲。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160328214647034864418/20160328214647034864418_.html" target="_blank">清华大学参加中埃大学校长论坛与中国高等教...</a></h3>
+              <p>3月26日，中埃大学校长论坛与中国高等教育展在尼罗河畔的开罗大学举行。国务院副总理刘延东出席论坛闭幕式并致辞。清华大学副校长杨斌与开罗大学副校长阿穆尔·阿德勒共同主持了论坛。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160323170016187766803/20160323170016187766803_.html" target="_blank">清华与卫计委、海南省政府联合主办博鳌健康...</a></h3>
+              <p>3月23日上午，在博鳌亚洲论坛会议期间，由国家卫生和计划生育委员会、清华大学、海南省人民政府共同主办的2016博鳌健康论坛在博鳌亚洲论坛大酒店召开。国家卫生和计划生育委员会副主任刘谦、海南省人民政府副省长陆俊华、清华大学副校长杨斌等出席开幕式并致辞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160323115018019879041/20160323115018019879041_.html" target="_blank">英国莎学家马丁·巴特勒做客欧美文学论坛</a></h3>
+              <p>3月17日下午，著名莎士比亚学家、英国人文社会科学院院士、英国利兹大学马丁·巴特勒（Martin Butler）教授应清华大学欧美文学中心和国家大学生文化素质教育基地的邀请做客清华大学欧美文学论坛第8期暨新人文讲座专场，为清华和北京地区兄弟院校的400多名师生作了一场题为“银幕上的莎士比亚（Shakespeare on Film）”的讲座。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160321155348758824745/20160321155348758824745_.html" target="_blank">清华三亚国际数学论坛·东亚数学典籍研讨会...</a></h3>
+              <p>3月11日至15日，由清华大学丘成桐数学科学中心、清华大学科学技术史暨古文献研究所与中国数学会数学史分会共同举办的东亚数学典籍研讨会（The Mathematical Texts in East Asia Mathematical History Workshop）在清华三亚国际数学论坛召开。本次会议邀请来自国内外16家大专院校、研究机构的30位参会代表，其中包括来自日本、韩国、美国、丹麦、香港等国家或地区的11位学者，共设大会报告28场。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2016/20160119133951893652342/20160119133951893652342_.html" target="_blank">清华海南文化创意论坛亮点多多</a></h3>
+              <p>　　“2016清华（海南）文化产业博览会”今天在海南国际会议展览中心举行。论坛邀请国内外文化产业投资人和知名企业家，从文化产业的政策解读、投资前景分析、投资与运营实践等方面，进行主题演讲及同台对话。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2016/20160118165839199235143/20160118165839199235143_.html" target="_blank">中国农业农村面临三大问题</a></h3>
+              <p>　　1月9日，一年一度的“清华三农论坛2016”在清华大学举行。国内农业领域专家学者及企业家汇聚一堂，探讨全面建成小康社会背景下的中国农村改革与发展，以及如何贯彻落实“创新、协调、绿色、开放、共享”的发展新理念，加快推进农业现代化、推进农村全面小康的新思路新对策。与会专家认为，当前中国农业、农村面临三大问题。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160113161031352650692/20160113161031352650692_.html" target="_blank">清华三农论坛2016举行</a></h3>
+              <p>1月9日，“清华三农论坛2016”在清华大学举行。清华大学党委副书记邓卫出席主论坛并致辞，中央财经领导小组办公室副主任、中央农村工作领导小组办公室副主任、清华大学中国农村研究院副院长韩俊主持论坛。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2016/20160106104222390837789/20160106104222390837789_.html" target="_blank">首届两岸“互联网+现代农业”论坛在清华举行</a></h3>
+              <p>　　清华大学校长邱勇表示，中华民族的伟大复兴是两岸同胞的共同心愿，清华大学历来高度重视两岸之间的交流与合作，在教育、科技、文化等领域，与台湾高校、学术机构、社会团体以及各界人士展开了广泛的交流和多层次的合作。农业是两岸最早开展交流与合作的领域之一，也是两岸交流合作中最活跃的领域之一，在两岸关系中处于十分重要的地位。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2016/20160105084731456844835/20160105084731456844835_.html" target="_blank">清华海峡研究院主办大数据产业发展论坛</a></h3>
+              <p>12月30日，以“数据驱动城市发展”为主题的厦门大数据产业发展论坛于厦门软件园举行。此次论坛由清华海峡研究院和厦门信息集团有限公司联合主办。双方在论坛上签订了战略合作伙伴关系，确定了进一步合作关系，希望发挥依托各自资源，加强双方在大数据领域的交流互动，开拓大数据产业领域的创新合作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20151229165718590104565/20151229165718590104565_.html" target="_blank">“互联网+”催生两岸农业合作新机遇</a></h3>
+              <p>　　12月27-28日，由清华大学两岸发展研究院与中关村大数据产业联盟联合主办的首届两岸“互联网+现代农业”高峰论坛在京举办。来自海峡两岸政界、学界、商界有影响力的领军人才及种植养殖、食品加工、农村电商等领域的涉农企业代表300余人聚集一堂，探讨“互联网+现代农业”背景下的农业改革与创新，为促进两岸农业合作贡献智慧。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2015/20151222153330866444349/20151222153330866444349_.html" target="_blank">第八届深港澳台博士生南山学术论坛在深圳研...</a></h3>
+              <p>12月18日至20日，以“深研博学、创新未来”为主题的第八届深港澳台博士生南山论坛在深圳研究生院举行。深港澳台博士生南山论坛利用南山区深圳大学城为中心的知识集群效应，吸引了来自清华大学、北京大学、哈尔滨工业大学、中国人民大学、香港大学、香港理工大学、澳门科技大学、台湾新竹清华大学等两岸四地、国内外60多所高校与科研机构的200余名师生参加，专业涉及生命学科、互联网与信息技术学科、人文法律学科、经济金融学科和新能源新材料等多个领域。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20151222164741962393656/20151222164741962393656_.html" target="_blank">第三届中国教育信息化行业论坛聚焦“慕课与...</a></h3>
+              <p>　　日前，第三届中国教育信息化（教育技术）行业新年论坛在北京国家会议中心举行。本届论坛的主题为“智慧教育视野中的慕课浪潮与创客运动”，来自全国百余所高校、二十余家行业企业和近十家媒体单位的三百余位代表共同参与了本次新年论坛。论坛由中国教育技术协会高校理工科专业委员会、中国教育技术协会技术标准委员会、清华大学现代教育技术杂志社、北京雅森国际展览有限公司联合主办。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151215170954112431444/20151215170954112431444_.html" target="_blank">清华大学道德与宗教研究院揭牌</a></h3>
+              <p>12月10日，清华大学道德与宗教研究院揭牌典礼暨全球化视域下的道德与宗教学术论坛在清华大学主楼举行。中央社会主义学院党组书记、第一副院长叶小文、清华大学校长邱勇、国家宗教事务局副局长蒋坚永，以及楼宇烈、唐凯麟、赖永海、陈来、怡学等著名学者出席典礼并为研究院揭牌。邱勇为研究院顾问颁发聘书。海内外高校和学术机构共七十多位专家、学者参加会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151210102555111853714/20151210102555111853714_.html" target="_blank">清华民生经济研究院揭牌仪式举行</a></h3>
+              <p>12月5日上午，以“新百年，新民生”为主题的中国民生经济高峰论坛暨清华大学民生经济研究院揭牌仪式在大礼堂举行。全国政协原主席、全国工商联名誉主席黄孟复，民政部副部长顾朝曦，清华大学校长邱勇，中国民生银行董事长洪崎，中国民生银行行长郑万春，清华大学校党委副书记邓卫、清华大学原副校长谢维和等出席活动。会上，黄孟复、顾朝曦、邱勇、洪崎共同为清华大学民生经济研究院揭牌。本次活动由清华大学与中国民生银行共同主办。清华大学社会科学学院党委书记史志钦主持会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151209141406608813852/20151209141406608813852_.html" target="_blank">清华大学创新发展研究院举办“国际产业协同...</a></h3>
+              <p>12月4日，由清华大学创新发展研究院、中国源头创新百人会主办，深圳证券交易所、深圳市罗湖区政府协办的“国际产业协同发展论坛2015——中国产业转型升级对接国际产业生态”大会在深圳召开。来自北美、欧洲、以色列等国家和地区的创新机构、技术转移机构以及相关产业链重点企业代表、行业领袖和深交所数百家上市公司代表参会，深圳证券交易所总经理宋丽萍致辞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151208142534302717436/20151208142534302717436_.html" target="_blank">中国民生经济高峰论坛在清华大学举行</a></h3>
+              <p>　　据悉，本次论坛由中国民生银行与清华大学共建的清华大学民生经济研究院具体承办。清华大学民生经济研究院是由清华大学与中国民生银行合作设立的校级研究机构，旨在发挥清华大学社会学、经济学和政治学等相关研究力量，结合中国民生银行在民生经济与金融领域的实践优势，推进我国民生经济问题的研究，致力成为民生经济领域具有理论和政策双重影响力的新型智库。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9666/2015/20151207165516654249224/20151207165516654249224_.html" target="_blank">徐星做客文新论坛讲述恐龙飞向蓝天</a></h3>
+              <p>12月1日晚，中国科学院古脊椎与古人类研究所古生动物学家徐星来到清华大学文新论坛，介绍恐龙进化成鸟类的研究成果，以及他从事演化研究的经历和感悟。徐星是中科院古脊椎研究所的研究院，国际知名恐龙专家。他命名的恐龙多达60多种，而他从事的鸟类起源研究，更是在2014年度被《Science》杂质评为年度十大科学突破。徐星首先介绍了自己的工作环境。由于野外地质发掘工作是从事古生物研究非常重要的一个环节，因此他经常会到荒芜的无人区进行考古研究，比如新疆戈壁、西藏高原等等。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151207151929961288053/20151207151929961288053_.html" target="_blank">艺术设计与国家形象塑造论坛在清华大学举行</a></h3>
+              <p>　　2015年12月5日，“艺术设计与国家形象塑造”高端学术论坛在清华大学美术学院A327成功举行。清华大学党委副书记邓卫、清华大学美术学院党委书记李功强、清华大学新闻与传播学院教授和国家形象传播研究中心副理事长胡钰出席论坛并致辞。会上，来自国内近30位艺术设计与国家形象塑造领域的专家、学者以及企业家们汇聚一堂。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20151207151537471298153/20151207151537471298153_.html" target="_blank">清华大学民生经济研究院揭牌仪式顺利举行</a></h3>
+              <p>　　本次论坛由清华大学与中国民生银行共建的清华大学民生经济研究院具体承办。清华大学民生经济研究院是由清华大学与中国民生银行合作设立的校级研究机构，旨在发挥清华大学社会学、经济学和政治学等相关研究力量，结合中国民生银行在民生经济与金融领域的实践优势，推进我国民生经济问题的研究，并将其打造成为民生经济领域具有理论和政策双重影响力的新型智库。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9659/2015/20151207101849395858084/20151207101849395858084_.html" target="_blank">艺术设计与国家形象塑造论坛在清华举行</a></h3>
+              <p>12月5日，“艺术设计与国家形象塑造”高端学术论坛在清华大学美术学院A327举行。清华大学党委副书记、国家形象传播研究中心副理事长邓卫出席论坛并致辞。来自国内近30位艺术设计与国家形象塑造领域的专家、学者以及企业家们汇聚一堂。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151201141115275554748/20151201141115275554748_.html" target="_blank">“探索烯时代”清华大学首届石墨烯学生论坛...</a></h3>
+              <p>11月7日，清华大学未来石墨烯应用兴趣团队（以下简称“团队”）和清华大学化工系共同组织的“探索烯时代”论坛活动在化工新馆举行。此次活动作为清华大学首届石墨烯学生论坛暨团队项目立项会，旨在为校内关注石墨烯相关方向的本科和研究生学生提供学术交流与讨论的平台，通过思维碰撞、学科交叉，引领校内外学生的学术讨论和创新风尚。校内外近六十余人参加活动，6位同学做学术报告，进行了5个项目的立项答辩，话题涉及石墨烯的基础物性测试、理论计算、可控制备与应用开发等。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9665/2015/20151126102638606932628/20151126102638606932628_.html" target="_blank">国际著名厌氧处理专家卡茨·莱廷格做客清华...</a></h3>
+              <p>11月23日下午，国际著名厌氧处理专家、UASB（上流式厌氧污泥床反应器）技术发明人、荷兰瓦赫宁根大学环境技术系名誉教授卡茨·莱廷格(GatzeLettinga)做客清华环境论坛第80期，做了《从社会学视角看待可持续发展技术的实施》（Sociological aspects of the implementation sustainable technologies）的学术报告，并举办了其自传《通往可持续环境保护之路》中文版的新书发布。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151123173401611695558/20151123173401611695558_.html" target="_blank">清华大学欧美文学论坛第七期举行</a></h3>
+              <p>由欧美文学研究中心和外文系共同举办的欧美文学论坛第七期于2015年11月12日下午在清华大学举行。中国社会科学院外国文学研究所研究员、北京大学德国研究中心特聘研究员、中国歌德学会会长叶隽以 “世界文学里的资本语境与侨易空间—以文学世界表现的家族史为中心”为题做客本期论坛，与参加本期论坛的校内外学者和研究生针对世界文学中资本语境的形成及其与世界文学之间的互涉、互动关系进行了热烈的交流和讨论。叶隽指出，虽然维兰德最早提出“世界文学”概念，但这并不妨碍歌德随后成为这一概念最重要的界定者。世界文学不仅可以作为一种理想，而且同时可被视为一种事实，即由各类文学文本所构成的一种超越性的“文学类型”。马克思的“世界文学”概念包括所有用文字表述的东西，并使世界文学过渡到世界市场。“资产阶级，由于开拓了世界市场，使一切国家的生产和消费都成为世界性的了。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9665/2015/20151119091520699694629/20151119091520699694629_.html" target="_blank">欧美文学论坛第七期举办</a></h3>
+              <p>11月12日下午由欧美文学研究中心和外文系共同举办的欧美文学论坛第七期在文南楼２０４会议室举行。中国社会科学院外国文学研究所研究员、北京大学德国研究中心特聘研究员、中国歌德学会会长叶隽以 “世界文学里的资本语境与侨易空间—以文学世界表现的家族史为中心”为题做客本期论坛，与校内外学者和研究生针对世界文学中资本语境的形成及其与世界文学之间的互涉、互动关系进行了热烈的交流和讨论。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151116111944171660386/20151116111944171660386_.html" target="_blank">大山作客文新论坛畅谈喜剧人生欢乐多</a></h3>
+              <p>11月12日晚，清华大学文新论坛第九十一期暨文新论坛十周年“艺路有你”系列活动第一场在人文图书馆大同厅举行。加拿大籍学者、主持人、相声演员大山来到现场，与同学们一起分享自己的人生经历以及对喜剧的体悟。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151113174919864859644/20151113174919864859644_.html" target="_blank">中外足球界人士在清华共议中国足球发展</a></h3>
+              <p>近日由清华大学主办，中国足协支持的“中国足球论坛（2015·清华）”在经管学院伟伦国际报告厅举行。清华大学校务委员会副主任韩景阳、中国足协副主席林晓华、体育部中国足球发展研究中心主任孙葆洁出席了论坛开幕式并致辞，清华大学体育部主任刘波主持会议。来自国际足联、中国足协、西班牙职业足球联赛联盟、巴塞罗那拉玛西亚青训营、部分中超、中甲俱乐部以及国内外相关单位的约400余人参加了论坛。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151113145617723699894/20151113145617723699894_.html" target="_blank">第三十届清华教育信息化论坛举行</a></h3>
+              <p>　　由清华大学教育技术研究所主办的“第三十届清华教育信息化论坛”于近日在北京会议中心举行，来自全国150多所院校300多位代表出席论坛。本届论坛的主题是“信息社会与数字大学”，会议围绕数字大学与高校改革、信息化教育教学变革的关键问题、数字资源与在线教学、教学管理与学习分析等四个专题展开交流研讨。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9659/2015/20151112104110777437655/20151112104110777437655_.html" target="_blank">清华-安进生命科学与医学博士生学术论坛举行</a></h3>
+              <p>11月7日至8日，2015年清华-安进“生命科学与医学”博士生论坛举行。清华大学副校长施一公出席论坛开幕式并致辞。生命科学学院、医学院部分博士生及博士生导师，化学系部分相关领域博士生，清华学堂生命科学实验班本科生等300余人参加了论坛。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151110152639933789913/20151110152639933789913_.html" target="_blank">首届水和污水处理纳米技术国际论坛在深圳研...</a></h3>
+              <p>11月5日至6日，第一届水和污水处理纳米技术国际论坛（深圳）在深圳研究生院召开。此次会议由清华-康达环境纳米工程技术研究院和美国纳米系统工程研究中心（US Nanosystems Engineering Research Center）联合举办。来自美国、澳大利亚、日本、香港以及大陆的顶尖高校，环保行业龙头企业等单位的水和污水处理纳米技术的学术和产业领军人才共聚一堂，交流最新成果，探讨水和污水处理纳米技术的发展方向以及产学研合作机制。深圳研究生院院长康飞宇亲切会见了参会嘉宾，并为论坛致开幕词。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151110112437190466241/20151110112437190466241_.html" target="_blank">创新和大数据论坛聚焦GIX创新发展</a></h3>
+              <p>11月9日，RONG系列国际专场：“创新和大数据论坛”在清华大学举办。美国华盛顿大学校长安娜·玛丽·科斯（Ana Mari Cauce），微软公司全球资深副总裁兼高级副总法律顾问苏瑞驰（Rich Sauer），华盛顿州前州长、前美国驻华大使骆家辉（Gary Locke），华盛顿州前州长克里斯汀·葛瑞格尔（Christine Gregoire），清华大学副校长杨斌，计算机学家、2000年图灵奖得主姚期智，英诺天使基金创始合伙人、清华校友互联网与新媒体协会会长李竹等人出席本次论坛并发表演讲，400余名对大数据领域感兴趣的师生和社会人员共同出席了本次活动。论坛上，姚期智针对大数据领域的创新问题研究，从自身经历出发，分享了自己的科研创新之路。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151110154041562217569/20151110154041562217569_.html" target="_blank">中国足球论坛在清华大学举行</a></h3>
+              <p>　　9日，由清华大学主办的“中国足球论坛（2015·清华）”在清华大学经管学院伟伦国际报告厅举行。    　　本次论坛分为“中国足球改革孕育的商业机遇”、“新形势下的俱乐部经营”、“足球教育及人才培养”三个分论坛。来自国际足联、中国足协、西班牙职业足球联赛联盟、巴塞罗那拉玛西亚青训营，部分中超、中甲俱乐部以及国内外相关单位400余人参加了论坛。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151110152746815990826/20151110152746815990826_.html" target="_blank">中国足球论坛在清华大学举行</a></h3>
+              <p>　　由清华大学主办、中国足协支持的中国足球论坛（2015·清华）9日在清华大学举行。来自国际足联、中国足协、西班牙职业足球联赛联盟、巴塞罗那拉玛西亚青训营、部分中超中甲俱乐部以及国内外相关单位400多人参加了论坛。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151109153423582320463/20151109153423582320463_.html" target="_blank">清华积极心理学研究中心发起中国积极教育联...</a></h3>
+              <p>11月8日，由清华大学心理学系主办，以“做教育改革的奋进者”为主题的2015明德教育论坛暨第十四届全国基础教育学习论坛举行。开幕式由清华大学社会科学学术委员会主席、心理系主任彭凯平主持，并邀请嘉宾进行发言。清华大学校务委员会副主任谢维和致辞中表示，在今天的基础教育领域，特别是全世界基础教育改革的大趋势中，人们越来越关注在基础教育活动中学生学习，乃至于基础教育发展的规划。而从学校的角度来说，我们不仅仅作为一个高等学校，为高等学校培养高层次的人才，也要为基础服务，为广大基础教育战线校长服务。教育部政策法规司司长孙霄兵致辞中表示，基础教育在我们国家具有重中之重的地位。新蓝图规划也要求对教育进行新的发展改革，这样的任务对于我们来说是新的工作，要落实在全国教育系统所有师生员工的肩上，任重而道远。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151106155015305124026/20151106155015305124026_.html" target="_blank">21世纪商法论坛第十五届国际学术会议在清...</a></h3>
+              <p>近日，由清华大学商法研究中心主办的“21世纪商法论坛第十五届国际学术会议”在清华大学法学院召开。本届国际学术会议的中心议题为“资本市场法制的现代化”，“21世纪商法论坛”已经成功举办了十五届，获得海内外商法学术界和实务界的积极评价，业已成为中国商法学界学术研讨的第一品牌。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151106164205507779740/20151106164205507779740_.html" target="_blank">“十三五”规划政策解读高峰论坛在京举办</a></h3>
+              <p>　　“中国经济的结构红利与改革红利的释放已经开始，中国经济将跨入下一个阶段。因此，应该对中国经济的未来抱有充分信心。”魏杰教授在“新起点、新常态、新思路 —‘十三五’规划政策解读高峰论坛”上说到。    　　在备受瞩目的十八届五中全会召开之际，一场由清华大学继续教育学院主办，清华大学继续教育学院国际教育部、清华大学-澳大利亚国立大学管理硕士学位项目教学中心承办的，“新起点、新常态、新思路 —‘十三五’规划政策解读高峰论坛”，在清华大学蒙民伟音乐厅拉开了序幕。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151103134802557252327/20151103134802557252327_.html" target="_blank">清华大学联合主办全国思想政治教育高端论坛</a></h3>
+              <p>10月31日至11月1日，社会主义核心价值观协同创新中心、教育部人文社科百所重点研究基地清华大学高校德育研究中心、清华大学马克思主义学院与东北师范大学马克思主义学院联合主办的“全国思想政治教育高端论坛（长春）暨社会主义核心价值观学术研讨会”在东北师范大学举行。东北师范大学党委书记杨晓慧，教育部社科司副司长徐艳国，吉林省高校工委专职副书记李彧威，社会主义核心价值观协同创新中心主任、清华大学高校德育研究中心副主任吴潜涛教授出席大会开幕式并致辞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151102171024216959592/20151102171024216959592_.html" target="_blank">清华大学举办教育信息化论坛</a></h3>
+              <p>　　昨天，由清华大学教育技术研究所主办的“第三十届清华教育信息化论坛”在北京会议中心举行，来自全国150多所院校的300多位专家、教师出席论坛。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2015/20151029162145466550080/20151029162145466550080_.html" target="_blank">清华—长庚—梅奥医学论坛 共议医疗发展趋势</a></h3>
+              <p>　　适逢北京清华长庚医院开业一周年之际，10月23日，清华大学、台湾长庚纪念医院、美国梅奥诊所联合主办了“清华—长庚—梅奥医学论坛”共同探讨三地医疗发展趋势和改革实践。    　　来自海峡两岸及美国政府机构、医疗行业、学术界人士等齐聚清华大学，解读医疗政策及医疗卫生体制改革趋势，分享推进医疗改革、提升现代医院服务与管理方面的实践成果及思考。为期一天的论坛，分为“趋势”、“实践”两大板块，通过内地、台湾、美国三地医疗发展顶层设计与医院实践的分析对比，为内地医疗卫生体制改革，尤其是现代公立医院的建设与发展提供借鉴与思考。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151028100244434266896/20151028100244434266896_.html" target="_blank">清华大学数据科学研究院·工业大数据研究中...</a></h3>
+              <p>10月26日上午，由清华大学全球产业4.5研究院和数据科学研究院联合主办“清华大学RONG系列论坛五：大数据重构制造业论坛”于清华大学主楼举行。清华大学副校长尤政院士，中国机械工程学会副理事长、原华中科技大学校长李培根院士，科学技术部高新司信息处尉迟坚处长，信息学院院长孙家广院士，以及数据院和产研院的相关负责人出席了此次论坛，并参与清华大学数据科学研究院·工业大数据研究中心的揭牌仪式。今后，清华大学数据科学研究院·工业大数据研究中心以及产研院会继续面向中国制造2025战略，通过促进政、产、学、研的结合，充分利用大数据价值，提高我国制造业生产力、竞争力和创新力。RONG系列论坛也将继续针对更多领域展开讨论。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9666/2015/20151027223840352101792/20151027223840352101792_.html" target="_blank">清华大学“3S”环保社会实践论坛举办</a></h3>
+              <p>10月24日下午，2015年清华大学“3S”（Support the Sustainability Strategy）环保社会实践论坛举办。中国工程院院士、环境学院教授钱易参加了论坛。论坛邀请实践支队进行成果展示和交流，支队与嘉宾及同学们分享实践过程中的收获与思考，深化暑期实践的认识与成果。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151027160438706788117/20151027160438706788117_.html" target="_blank">杜克大学福库商学院拉维·班塞尔做客清华论坛</a></h3>
+              <p>10月26日，杜克大学福库商学院拉维·班塞尔（Ravi Bansal）教授访问清华大学五道口金融学院并做客清华论坛第58讲，在金融学院多功能厅发表了题为“长期风险与宏观公告中的不确定性厌恶”（Long Run Risks and Uncertainty Aversion in Macro-Announcements）的学术讲座。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151027133117095463020/20151027133117095463020_.html" target="_blank">社科学院主办的 “园区经济与全球化论坛”...</a></h3>
+              <p>10月21日，“园区经济与全球化论坛” 启动仪式在北京举办，来自国务院参事室、发改委、商务部、开发区协会、世界银行以及国内外各园区、商贸组织和研究机构的领导与嘉宾共同见证了这一极具纪念意义的时刻。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151023155213153663430/20151023155213153663430_.html" target="_blank">钱颖一对话特斯拉首席执行官埃隆·马斯克</a></h3>
+              <p>10月22日晚，作为清华大学经济管理学院顾问委员会2015年会议的系列活动之一，清华管理全球论坛在清华举行。清华经管学院顾问委员会委员、特斯拉（Tesla）联合创始人、首席执行官兼产品架构师，SpaceX首席执行官兼首席设计师，SolarCity董事长埃隆·马斯克（Elon Musk）与清华经管学院学院院长钱颖一教授展开两小时的对话。在MIT《技术评论》（Technology Review）公布的“2015年全球最具智慧公司50强”榜单中，马斯克的三家公司特斯拉、SolarCity和SpaceX分别排名第1位，第9位和第22位。钱颖一围绕这三家公司的创办初衷、理念与发展计划等方面与马斯克进行了深入的交流马斯克先生逐一回答了问题，并畅谈了自己对现实与未来的看法。谈到SpaceX公司（太空探索技术公司），钱颖一询问马斯克选择进入技术、资金和政府管制都门槛极高的航空航天领域的初衷时，马斯克谈到，自上世纪60年代人类登月以来，航天技术的革新速度减缓，成本越来越高，创造一个公司去减少人类去太空的成本，是他创办SpaceX的动力。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20151023142816818746427/20151023142816818746427_.html" target="_blank">“清华EMBA名师管理论坛”走进新疆 新...</a></h3>
+              <p>　　由清华大学经济管理学院、新疆经济与信息化委员会、新疆工商业联合会等联合主办的“清华EMBA名师管理论坛”20日在乌鲁木齐环球酒店举行。新疆中小企业协会、新疆企业联合会等众多企业界人士纷纷到场“取经”,求解“一路一带”发展商机。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151021170551282624467/20151021170551282624467_.html" target="_blank">清华与联合国儿童基金会举办首届青年创新论坛</a></h3>
+              <p>10月17日，首届清华大学－联合国儿童基金会青年创新论坛美术学院报告厅举行。论坛开幕式上，清华大学校务委员会主任陈旭与联合国儿童基金会执行主任安东尼？雷克（Anthony Lake）分别通过视频向观众致辞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151021163040493466192/20151021163040493466192_.html" target="_blank">霍尼韦尔特性材料和技术集团首席技术官、副...</a></h3>
+              <p>10月20日下午，霍尼韦尔特性材料和技术集团首席技术官、副总裁加文·陶乐（Gavin Towler）博士访问清华大学，做客清华论坛第57讲，在清华主楼接待厅发表了题为“碳氢化合物加工的前沿技术：近年来石油、天然气、煤炭和可再生燃料市场的发展和它们对技术需求的影响”的主题演讲。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9666/2015/20151021162615513129917/20151021162615513129917_.html" target="_blank">清华“一带一路”主题社会实践论坛举行</a></h3>
+              <p>10月18日晚，清华大学“一带一路”主题社会实践论坛在文科图书馆大同厅举行。清华大学当代国际关系研究院副院长刘江永和国际传播研究中心主任李希光出席论坛，并对实践支队进行指导。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20151021152809856285099/20151021152809856285099_.html" target="_blank">柳斌：提升学生素养是基础教育之本</a></h3>
+              <p>　　清华附小举办的这次“世界基础教育高峰论坛”关注学生素养的问题，我觉得非常重要。这是基础教育的重要课题，更是基础教育的重要使命。我认为，社会如果以升学为本，教育如果以考试为本，学习如果以分数为本，决定一个人命运的是考试和分数，而不是道德、品质，不是能力、本领，这样的社会，是会出问题的。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151020124056978736419/20151020124056978736419_.html" target="_blank">2015清华国家形象论坛举行</a></h3>
+              <p>10月17日，“ 2015清华国家形象论坛”在清华大学中央主楼接待厅举行。清华大学党委书记陈旭，人民日报副总编辑、清华大学新闻与传播学院共建主任杜飞进出席论坛开幕式并致辞，全国人大教科文卫委员会主任委员、清华大学新闻与传播学院院长、国家形象传播研究中心理事长柳斌杰发表主旨演讲。陈旭和柳斌杰为首批理事和智库专家代表颁发聘书。本次论坛为中心成立后的首次年会，论坛以“讲好中国故事—‘一带一路’上的国家形象”为主题。分为大会论坛及八个专题分论坛，专题分论坛分别为：文化传播与国家形象、政府形象与国家形象、企业品牌与国家形象、城市品牌与国家形象、建筑与国家形象、外宣媒体与国家形象、公共关系与国家形象、大数据与国家形象。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151019162523845762301/20151019162523845762301_.html" target="_blank">首届青年创新论坛在京举办 200多名中外...</a></h3>
+              <p>　　首届联合国儿童基金会—清华大学青年创新论坛于10月17－18日在北京清华大学举办。    　　本届论坛由联合国儿童基金会和清华大学共同主办，共有来自中国和其他发展中国家的200多名青年学生、技术专家、社会企业家、学者和行业领袖参与。他们分享了自己的创新项目和创业经历，旨在满足全球弱势儿童的需求并促进共同发展。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151019160447269973171/20151019160447269973171_.html" target="_blank">2015年国家形象论坛在清华大学举行</a></h3>
+              <p>　　2015年国家形象论坛近日在清华大学举行。本次论坛由清华大学国家形象传播研究中心主办，以“讲好中国故事——‘一带一路’上的国家形象”为主题，分享各行业最新研究成果，共商国家形象塑造与传播的战略大计。    　　论坛同时设八个圆桌会议，分别围绕政府形象与国家形象、企业品牌与国家形象、城市品牌与国家形象、建筑与国家形象、外宣媒体与国家形象、公共关系与国家形象、大数据与国家形象、文化传播与国家形象等议题展开讨论。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151008174902133666548/20151008174902133666548_.html" target="_blank">第十三期清华大学国际安全论坛聚焦“国际网...</a></h3>
+              <p>　　记者从清华大学当代国际关系研究院获悉，第十三期清华大学国际安全论坛将于10月11日在北京举行。本次会议将聚焦“国际网络安全秩序”。    　　近年来，随着网络技术飞速发展并迅速普及，网络安全问题日益凸显，已经上升为攸关个人和国际安全的新因素，同时也成为国际合作与斗争的新领域，在人类安全中的实际影响已经超过了核武器。在刚刚结束的习近平主席访美之旅中，网络安全也已成为两国首脑会谈的主要议题之一。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150929125350077326092/20150929125350077326092_.html" target="_blank">清华·福州论坛开幕  海峡两岸专家学者共...</a></h3>
+              <p>9月25日，以“科技、文化、创新”为主题的“清华·福州论坛”在闽江之畔隆重开幕，吸引了海峡两岸专家学者、台湾新竹清华大学学术代表团、知名企业和在榕高校、金融机构、行业协会代表等近600人出席，与会人员围绕创新驱动发展、科技成果转化、教育变革、文化传播、青年创业和新型孵化器等话题展开了深入研讨交流和集体思想碰撞，迸发出精彩的智慧火花。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150928154439024589533/20150928154439024589533_.html" target="_blank">清华·福州论坛开幕</a></h3>
+              <p>　　有福之州，创新宝地。昨日，清华·福州论坛在福州隆重开幕。近500名来自海峡两岸的专家学者、企业行业代表汇聚一堂，围绕“科技、文化、创新”主题，碰撞思想火花，强化科技合作，引领创新发展。    　　省委常委、市委书记杨岳，清华大学常务副校长程建平，清华控股有限公司董事长徐井宏，启迪控股股份有限公司总裁王济武分别在论坛开幕式上致辞。中国高等教育学会会长瞿振元、清华大学副校长薛其坤，市领导杨益民、何静彦、林晓英、高明参加开幕式。市长杨益民主持论坛开幕式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150928153228434805096/20150928153228434805096_.html" target="_blank">清华·福州论坛科技文化分论坛举行</a></h3>
+              <p>　　昨日上午，作为清华·福州论坛重要组成部分，中国制造2025·专家论坛及“立足八闽，携手两岸，共创未来”文化论坛同期举行。市委常委、宣传部长何静彦出席科技分论坛并致辞。    　　何静彦指出，当前福州发展面临着千载难逢的历史机遇，加快推进福州新区建设开发，打造福州经济升级版，要做大做强主导产业、改造提升传统产业、培育发展新兴产业，提升产业整体实力和经济综合竞争力。此外，还要坚持创新驱动，主动对接“中国制造2025”“互联网+”，从发展模式上推进产业转型升级。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150925135525602966310/20150925135525602966310_.html" target="_blank">清华·福州论坛开幕  海峡两岸专家学者共...</a></h3>
+              <p>9月25日，以“科技、文化、创新”为主题的“清华·福州论坛”开幕。福建省委常委、福州市委书记杨岳，中国高等教育学会会长瞿振元，清华大学常务副校长程建平，清华大学副校长薛其坤，等出席了开幕式。杨岳、程建平分别代表市校双方致辞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150924095656529161709/20150924095656529161709_.html" target="_blank">文新论坛第90期：纪连海谈抗战那些事儿</a></h3>
+              <p>9月22日晚，清华大学文新论坛第九十期暨文新论坛十周年系列活动——“大师面对面”第5场在西阶梯教室举行。历史名师、《百家讲坛》十大名嘴之最“另类”名嘴纪连海来到现场，与清华学子畅聊从“九一八”到“七七事变”的峥嵘抗战史。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150922161156644606033/20150922161156644606033_.html" target="_blank">创业要少一点征服欲多一点克服力</a></h3>
+              <p>　　“用鼓励创业来促进经济不是一场增加创业实体数量的游戏。”9月19日，在首届北大清华校友创新创业论坛上，清华经管学院教师、清华x-lab主任张帷引用了2009年“创业研究全球奖”获得者Scott Shane的获奖致辞。    　　这篇致辞的观点是基于Scott Shane对于美国、非洲地区的长期数据研究——“真正创造经济增长和就业财富的创业企业是那些‘高质量、高增长，有潜力的企业’，是更应该被鼓励的”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150914190922886988225/20150914190922886988225_.html" target="_blank">第九届中韩国际论坛在烟台举办</a></h3>
+              <p>　　9月8日，第九届中韩国际论坛在山东烟台召开，来自清华大学、韩国安全行政部等120多名专家学者就“互联网+”等话题进行研讨。    　　是届研讨会上，中韩两国专家学者针对“互联网+如何服务于地方治理”、“互联网时代如何服务于人民健康”、“互联网时代如何开展中韩合作”等主题进行了发言与讨论。其中，如何通过“互联网+”改善社会治理、服务民众健康等话题成为讨论热点。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150914114522225846822/20150914114522225846822_.html" target="_blank">西阶论坛潘际銮院士讲述抗日战火中的求学岁月</a></h3>
+              <p>9月9日下午，中国科学院院士、清华大学教授、南昌大学名誉校长、西南联大校友会会长潘际銮院士受邀在清华大学人文社科图书馆为同学们带来了关于西南联大时期的抗战求学的讲座。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150914090800937729639/20150914090800937729639_.html" target="_blank">环境学院贺克斌等四位教授出席夏季达沃斯论坛</a></h3>
+              <p>9月9日至11日，2015年世界经济论坛新领军者年会即夏季达沃斯论坛在大连国际会议中心举行。中国国务院总理李克强出席开幕式并致辞，向世界解码中国经济，诠释中国经济与世界经济的关系，强调创新的重要性。清华大学环境学院院长贺克斌等四位教授应邀出席创想研究室清华大学专场——污染治理小组讨论。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150901161014215763850/20150901161014215763850_.html" target="_blank">清华校友举办纽约论坛</a></h3>
+              <p>　　由清华大学发起，清华校友总会主办、大纽约地区清华校友会承办的首届北美清华校友大会暨纽约论坛日前在曼哈顿举办。    　　据悉，此次年会的主旨在于促进校友间的交流，加强母校与校友的联系，增强清华在北美的影响力，并为中美企业间在技术、人才、资金等方面的进一步合作建立平台，也为北美的2.7万清华校友提供了解国内发展的机会和窗口。论坛分为六个板块，分别聚焦金融、环保新能源、互联网科技、生物医药、教育文化和房地产等领域的前沿话题。来自海内外各界政学研代表逾600人出席了年会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150814110018081797371/20150814110018081797371_.html" target="_blank">校长邱勇到清华三亚国际数学论坛考察工作</a></h3>
+              <p>8月11日下午，校长邱勇一行到清华三亚国际数学论坛视察工作。在参观论坛的过程中，邱勇重点询问了论坛的建设情况、市政配套工程完成情况、房屋结构安全情况、举办国际会议情况等。然后听取了管理中心主任高瑄做的专题工作汇报。高瑄在汇报中，回顾了清华三亚国际数学论坛从艰难创业到努力改善到持续提升的发展过程，介绍了论坛运行2年来，已成功举办近30场国际学术会议，论坛正按照“一流意识、责任意识、创新意识、服务意识”的宗旨，向着具有国际一流水平和影响力的，可与Oberwolfach、Banff并列的高规格和高品位的国际会议中心目标而努力奋斗。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150716105655678315836/20150716105655678315836_.html" target="_blank">信息学院和新疆大学信息学院、软件学院举办...</a></h3>
+              <p>7月9日至10日，清华大学信息学院与新疆大学信息学院、软件学院联合举办了“清华大学-新疆大学第二届双边教师论坛”。与会教师进行了充分交流。9日上午，双边论坛在清华大学信息技术大楼开幕。清华大学信息学院院长孙家广出席论坛开幕式并致辞。他表示，对口支援工作得到双方学校的高度重视，希望两校信息学科群的教师进一步加强交流沟通，使交流合作不断深入。新疆大学信息学院院长吐尔根和软件学院院长于炯先后致辞。他们感谢清华大学信息学院五年来在帮助提升学科建设、教学体系、教学质量、科研服务能力及科学管理水平等方面给予的大力支持，并希望在信息学科战略、大数据、物联网、网络安全等新兴方向加强合作与？交流。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150716104858528806491/20150716104858528806491_.html" target="_blank">第十一届国际博士生论坛在清华大学新闻学院...</a></h3>
+              <p>7月6日至7日，第十一届国际博士生论坛在清华大学新闻与传播学院举办。国际博士生论坛会议（简称IGC）是由清华大学与澳大利亚麦考瑞大学新闻与传播学院于2004年共同创办。法国巴黎新索邦大学、泰国朱拉隆功大学、中国传媒大学也在随后陆续加入。目前，论坛由来自4个国家的5所大学轮流举办。新闻学院党委书记金兼斌在致辞中对与会嘉宾表示欢迎，对本次论坛的成功举办表示祝贺。他指出IGC在成立之初的定位就是给同学们搭建学术交流平台。在交流中，每一位发言者都能充分展示和分享自己的学术研究成果，还可以与与会者进行互动，沟通交流学术意见。他认为IGC可以被视作真正意义上的研究生自己的学术平台。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150707155226470646142/20150707155226470646142_.html" target="_blank">农村研究博士生论坛研讨破解“三农”难题新...</a></h3>
+              <p>7月4日上午，“2015清华农村研究博士生论坛”在清华大学举办。论坛由清华大学中国农村研究院（以下简称农研院）主办，主题是“全面建成小康社会目标下破解‘三农’难题新思路”。中央农村工作领导小组副组长、办公室主任、农研院院长陈锡文，全国政协民族和宗教委员会副主任、国务院参事、农研院指导委员会委员杜鹰，中央财经领导小组办公室副主任、中央农村工作领导小组办公室副主任、农研院副院长韩俊，清华大学副校长谢维和等出席论坛。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150702092740494207507/20150702092740494207507_.html" target="_blank">大数据应用创新高峰论坛在清华召开</a></h3>
+              <p>6月18日，清华大学数据科学研究院、湛庐文化·未来创客联合主办，清华大数据产业联合会协办、清华大学学生大数据研究协会承办的“大数据应用创新高峰论坛”在清华大学经济管理学院报告厅举办。清华大学经济管理学院教授陈煜波、《数据新常态》作者克里斯托弗·苏达克、英特尔中国研究院院长吴甘沙和中国惠普有限公司副总裁李时，四位大数据领域应用创新研究与实践的权威人士在论坛上分享了各自关于大数据的最新理念、趋势分析和创新实践。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2015/20150702112443206670727/20150702112443206670727_.html" target="_blank">清华国家金融研究院举办全球创业金融与创新...</a></h3>
+              <p>6月27日-28日，“全球创业金融与创新”学术论坛在五道口金融学院召开。论坛由清华大学五道口金融学院及清华大学国家金融研究院主办，金融研究评论（Review of Financial Studies, RFS）、清华大学国家金融研究院创业金融与经济增长研究中心、清华大学国家金融研究院中国家族财富研究中心及清华大学—中誉控股有限公司联合研究院承办。五道口金融学院田轩教授、康奈尔大学Andrew Karolyi教授、加州伯克利大学Gustavo Manso教授、波士顿学院Thomas Chemmanur教授、哈佛大学Lauren Cohen教授等近30名来自国际多所著名大学的金融创新领域的学术领袖和顶级学者及100多名来自全国多所知名高校教授、博士生、企业科研人员围绕“全球创业金融与创新”这一主题，就金融创新的前沿问题，特别是具有重要学术价值和实际应用意义的最新研究进展进行广泛交流和深入研讨。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150630084844597765527/20150630084844597765527_.html" target="_blank">李源潮在第四届世界和平论坛开幕式上致辞</a></h3>
+              <p>　　第四届世界和平论坛27日在清华大学举行，国家副主席李源潮出席开幕式并致辞。    　　本届论坛主题是“同舟共济：理解、协商、互助”，论坛主席唐家璇和约500名中外嘉宾出席。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150630084747736223791/20150630084747736223791_.html" target="_blank">第四届世界和平论坛开幕</a></h3>
+              <p>　　第四届世界和平论坛27日在清华大学举行，国家副主席李源潮出席开幕式并致辞。    　　本届论坛主题是“同舟共济：理解、协商、互助”，约500名中外嘉宾参加。论坛主席唐家璇主持开幕式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150629171403032336929/20150629171403032336929_.html" target="_blank">第四届世界和平论坛开幕</a></h3>
+              <p>　　第四届世界和平论坛今天在清华大学开幕。论坛以“同舟共济：理解、协商、互助”为主题。外国前政要、国际安全专家、驻华大使等500多名中外嘉宾出席。世界和平论坛是唯一一个由中国非官方机构举办的国际安全高级别论坛，旨在探讨国际安全问题，寻找建设性解决方法。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150626215506174641104/20150626215506174641104_.html" target="_blank">【快讯】清华主办第四届世界和平论坛</a></h3>
+              <p>6月27日上午，由清华大学主办、中国外交学会协办的第四届世界和平论坛在清华主楼报告厅拉开帷幕。中国国家副主席李源潮出席论坛开幕式并以“共同构建人类和平安全命运共同体”为题发表致辞。清华大学校长邱勇主持开幕式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150625181702623512052/20150625181702623512052_.html" target="_blank">刘延东：大学是中美人文交流的先行者</a></h3>
+              <p>　　国务院副总理刘延东22日在美国休斯敦出席第二届中美大学校长论坛并发表演讲。刘延东表示，大学既是中美人文交流的先行者，也是两国关系发展的推动者。    　　刘延东表示，上世纪70年代初，正是美国大学中一些富有远见的学者向尼克松总统建言献策，推动美国政府调整对华政策，为打开中美建交大门发挥了重要作用。1978年中美发表建交公报10天后，中国首批52名公派赴美留学生抵达纽约，从此掀起了中国有史以来最大规模的留学潮。改革开放以来，中国各类出国留学人员累计350万，其中留学美国的就累计达146万多人。如今，几乎每一所中国的大学，都与美国的大学、企业和科技机构有着不同程度的交流合作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9659/2015/20150625145549272978934/20150625145549272978934_.html" target="_blank">深圳研究生院协办第三届深圳国际低碳城论坛</a></h3>
+              <p>6月17日至18日，第三届深圳国际低碳城论坛开幕式在深圳国际低碳城会展中心举行。本届论坛以“城市绿色低碳转型”为主题，由主论坛及十三个分论坛组成，共汇集了海内外50多个国家和地区的1500余名城市管理者、业界代表和专家学者，旨在交流国内外城市应对气候变化、实践低碳绿色发展的思路、想法和见解，探讨国内外智库专家对应对气候变化和环境污染治理方面的观点，分享知名企业家面对机遇和挑战，实现绿色转型的成功经验。广东省副省长刘志庚，广东省委副书记、深圳市委书记马兴瑞，国家发改委副主任张勇出席开幕式并致辞；伦敦市前市长肯？利文斯通，国务院参事、科技部原副部长刘燕华，国务院参事、住建部原副部长仇保兴分别就“城市在应对气候变化中的关键作用”，“中国的绿色新常态”以及“海绵城市内涵、途径与展望”主题进行了主旨演讲；深圳市市长许勤在论坛上分享了深圳绿色低碳转型的实践经验。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150619160620445955320/20150619160620445955320_.html" target="_blank">第四届世界和平论坛将在清华举行 三重维度...</a></h3>
+              <p>　　18日上午，世界和平论坛秘书处宣布，第四届世界和平论坛将于6月27日至28日在清华大学举行。    　　世界和平论坛于2012年首次举办，是中国第一个由民间机构兴行的高级别大型国际安全会议。首届世界和平论坛举行期间，时任中国国家副主席的习近平同志出席开幕式并发表演讲。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150618152009150350268/20150618152009150350268_.html" target="_blank">第四届世界和平论坛6月27—28日在清华...</a></h3>
+              <p>　　6月18日，世界和平论坛秘书处宣布，第四届世界和平论坛将于6月27日至28日在清华大学举行。    　　第一届世界和平论坛于2012年举办，成为中国第一个由民间机构兴行的高级别大型国际安全会议。通过以往举办的三届世界和平论坛，国内外对其在国际安全问题上的作用都有了新的认识。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150617100952037969517/20150617100952037969517_.html" target="_blank">清华国家金融研究院举办中国资产证券化论坛</a></h3>
+              <p>6月13日，“清华五道口金融家大讲堂：中国资产证券化论坛”在清华大学大礼堂召开，清华大学国家金融研究院联席院长李剑阁、中国工商银行原行长杨凯生分别就资产证券化对于监管体制的挑战及银行信贷资产证券化发表主旨演讲。银监会创新监管部主任王岩岫、证监会债券监管部副主任陈飞、央行金融市场司副司长徐忠等多位监管部门官员从各自监管发展的角度发表观点。二十多位来自学术界的学者和业界的资深从业者从理论和实证角度对资产证券化进行了深度探讨。近七百名金融界、法律界及学界人士参加了论坛。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150617143137514874707/20150617143137514874707_.html" target="_blank">慕尼黑大学教授克里斯多夫·博德做客欧美文...</a></h3>
+              <p>日前，由清华大学人文学院欧美文学研究中心和外文系主办，为期10天的“欧美文学论坛”第六期举办。主讲嘉宾是来自德国慕尼黑大学的克里斯多夫·博德（Christoph Bode）教授。博德教授是慕尼黑大学现代英语文学系主任，欧洲科学院院士，2013年被授予德国功绩勋章。本次论坛由五次讲座和一次工作坊组成，涵盖三个方面：英国浪漫主义文学（British Romanticism）、未来叙事（Future Narratives）、文学史和文学评价（Literary History and Literary Evaluation）。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150612091132784980909/20150612091132784980909_.html" target="_blank">清华长庚成为我国华北泌尿结石病防治基地</a></h3>
+              <p>日前，由清华大学主办，北京清华长庚医院承办的第一届清华大学泌尿系结石论坛在医院成功举办。大会主席、北京清华长庚医院泌尿外科主任李建兴主持论坛，来自全国泌尿医学领域的专家和学者500余人参加论坛。经中华医学会泌尿外科学分会审议，在北京清华长庚医院设立“中国华北泌尿结石病防治基地”。开幕式上，中华医学会泌尿外科分会前主任委员、结石学组组长叶章群教授与清华大学副秘书长、北京清华长庚医院党委书记王志华共同为基地揭牌。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150611160514839843464/20150611160514839843464_.html" target="_blank">清华长庚第一届清华大学泌尿系结石论坛</a></h3>
+              <p>　　近日，由清华大学主办，北京清华长庚医院承办的第一届清华大学泌尿系结石论坛在医院成功举办。此次论坛围绕尿路结石的基础及预防研究进展；体外冲击波碎石相关问题；经皮肾镜和输尿管硬软镜结石治疗进展；复杂结石总额和治疗相关问题；与尿路结石治疗相关的器械进展等5大议题，进行交流和学术讲解。    　　据大会主席、北京清华长庚医院泌尿外科主任李建兴介绍：“清华长庚泌尿外科将致力于华北地区泌尿结石病流行病学调查，结合临床数据，进行饮食、生活方式、环境等泌尿系结石成因的相关研究，并将规范化各类微创泌尿系统碎石取石技术，成为泌尿系结石病防治的权威机构。”</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150611153127828801877/20150611153127828801877_.html" target="_blank">一场关于创业的校企对话</a></h3>
+              <p>　　五四期间，国务院总理李克强给清华大学的创客们回信，鼓励他们从事创业创新的一些行动。此事对清华校内外立志于创新创业的学子来说，无疑是一份最好的青年节礼物。    　　就在不久前，也是在清华的校园里，一场关于高校创业的论坛如约而至。论坛的主题依然是如何扶植高校学生创业，建设高校创业的新生态，但对话的双方却不再是总理和学生，而是换成了学校和企业。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150601180131106153210/20150601180131106153210_.html" target="_blank">清华大学学生志愿者献力亚信非政府论坛</a></h3>
+              <p>在5月22日开幕的首届亚洲相互协作与信任措施会议(亚信)非政府论坛中，清华大学共有9名志愿者作为外交部志愿者参加了志愿服务工作，此前他们均有APEC志愿工作的经历。  　　志愿者正式上岗服务是24至26三天，共计服务时长192个小时.在此次正式上岗之前，志愿者们参加了主办方组织培训，主要培训是关于亚信会议的基本知识以及参会各国的文化礼仪等内容，并在会议召开地点北京国际饭店进行了岗位对接。  　　其中，四名志愿者负责引领包括亚洲国家部分政府的前任首脑或前外长在内的重要来宾，以及开幕式和全体大会场务的工作。志愿者们以专业的微笑和规范的礼仪引领来宾入场，顺利的帮外宾处理一些细节的参会事宜。  　　还有两名志愿者在会议注册岗位。这个岗位是与会者来到北京国家饭店参会的第一站，我们清华的两名女同学展现了良好的精神风貌，认真细致地帮每位代表完成注册。  　　此外，三位志愿者在咨询岗位服务，负责会议事务的咨询工作，与协调会议的文案准备。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150601172700120427532/20150601172700120427532_.html" target="_blank">清华举办2015年中国平坦化技术大会</a></h3>
+              <p>5月28日、29日，由中国平坦化技术联盟主办、清华大学承办的2015年中国平坦化技术大会暨海峡两岸平坦化技术论坛在清华大学举行。来自美国、大陆以及台湾的著名专家、学者和研究生一百余人参加了此次大会。清华大学校长助理、机械工程学院院长尤政院士，中国半导体行业协会执行副理事长、秘书长徐小田，国家自然科学基金委工程与材料科学部常务副主任黎明，清华大学机械系主任、国际摩擦学会副主席雒建斌院士出席开幕式并致辞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150601115846382590955/20150601115846382590955_.html" target="_blank">中国著名作家王跃文做客清华大学文新论坛第...</a></h3>
+              <p>5月29日晚，清华大学文新论坛第89期“王跃文先生解读《大清相国》”在人文社科图书馆大同厅举办。中国著名作家、鲁迅文学奖获得者王跃文先生做客本期论坛，与清华学子分享了一代相国陈廷敬在五十余年宦海生涯中，揭时弊、倡清廉、恤百姓，济世救民的理想主义情怀。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150529134517996843487/20150529134517996843487_.html" target="_blank">“一带一路”急需国际化人才</a></h3>
+              <p>　　随着我国“一带一路”倡议的推进和落实，越来越凸显出具有国际视野、通晓商务知识、精通所在国语言、熟知所在国文化等的高层次国际化复合型人才的匮乏，而人才却恰恰是关系到“一带一路”倡议下与每一个具体国家开展每一个具体项目能否成功的极为重要的因素。    　　鉴于此，为响应国家“一带一路”倡议，发挥人才培养在“一带一路”中的支撑作用，清华大学于5月28日举办“2015‘一带一路’人才战略论坛”，来自国家相关部委及省市教育主管部门、骨干行业以及国内40余所高校代表共计150余人齐聚清华，共议“一带一路”人才培养战略。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150529092954833882868/20150529092954833882868_.html" target="_blank">清华大学举办2015“一带一路”人才战略...</a></h3>
+              <p>为响应“一带一路”国家发展战略，发挥人才培养在“一带一路”中的支撑作用，5月28日，清华大学举办2015“一带一路”人才战略论坛，来自国家相关部委、5个前沿省市教育主管部门、10多家骨干企业及国内40余所高校的代表共聚论坛，从“一带一路”国家战略解读、企业人才需求和高校培养定位及培养机制等方面，共议“一带一路”人才培养战略。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150528153956071730195/20150528153956071730195_.html" target="_blank">清华大学召开论坛 探讨互联网对汽车产业前...</a></h3>
+              <p>　　5月23日，“清华大学汽车产业前沿高峰论坛”在北京举行。来自汽车、互联网行业和学界的领袖、专家及数百名清华校友相聚清华大学经济管理学院伟伦国际报告厅，就“互联网浪潮下的汽车产业”话题展开热烈研讨。    　　峰会现场，中国汽车工业协会常务副会长兼秘书长董扬、《中国汽车报》社长李庆文、清华大学汽车产业与技术战略研究院院长赵福全教授、清华大学经济管理学院弗里曼讲席教授李稻葵和一汽-大众奥迪销售事业部副总经理于秋涛分别阐述了新的互联趋势下，汽车变革的必要和出路。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150527161727531408441/20150527161727531408441_.html" target="_blank">2015清华五道口全球金融论坛年度研究报...</a></h3>
+              <p>5月24日，2015清华五道口全球金融论坛年度研究报告颁奖典礼在清华大学举行。12篇涵盖宏观金融、货币与银行、政府与财政、互联网金融、公司与行业、资本市场六大主题热点的研究报告获奖。本次发布活动于2015年一季度启动，经作者个人自荐、所在单位推荐，共收到稿件约200篇。作者主要来自证券公司、政府部门、高等院校、科研机构、咨询公司和商业银行等机构。最终，高善文、Frank Newman、梁红、黄海清、胡雅丽等中外人士的研究报告脱颖而出。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150527094140599515503/20150527094140599515503_.html" target="_blank">2015清华五道口全球金融论坛闭幕</a></h3>
+              <p>5月24日，为期两天的“新常态 新金融”2015清华五道口全球金融论坛在清华大学落下帷幕，来自“一行三会”的主要负责人、国际金融机构决策者以及学术界、金融和实业界50多位代表人物围绕经济新常态下的全球和中国金融业的机遇和挑战，就货币政策、银行业变革、财富管理、资本市场创新、互联网金融以及“一带一路”战略中的金融支持与合作等重要课题，分享研究和思考，进行对话和论辩，取得了一系列重要的交流成果。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150526115318450340527/20150526115318450340527_.html" target="_blank">两岸清华研究生聚焦新常态下的变革与发展</a></h3>
+              <p>5月23日上午，2015年清华大学博士生学术论坛暨第五届两岸研究生学术论坛在清华大学公共管理学院报告厅开幕。本次论坛以“新常态下的变革与发展”为主题，立足两岸清华大学优势学科，引导热点科学问题讨论，鼓励跨学科交流。清华大学党委副书记史宗恺、新竹清华大学副校长周怀朴出席开幕式并致辞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150526090411127165768/20150526090411127165768_.html" target="_blank">清华党委宣传部获2015京华教育论坛最具...</a></h3>
+              <p>5月21日下午，“新常态 新教育”京华时报2015京华教育论坛举行，清华大学党委宣传部荣获2015京华教育论坛最具创新力教育新闻宣传单位。在颁奖环节，主持人宣读了清华大学党委宣传部的获奖理由：有围墙的是清华校园，没有围墙的是清华宣传。作为中国最知名的大学，清华宣传部本来有资本坐享其成，但他偏偏没有。从招生到就业，从教学到科研，从对外交流到对内革新，清华大学宣传部将校园新闻宣传做到了最好，真正向全世界展现了中国高等学府的风貌。</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

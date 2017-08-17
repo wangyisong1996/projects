@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>杨绛：我爱清华图书馆</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231210562584919&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">我爱清华图书馆</h3><p align="center"> 杨绛</p><p align="center">（光明日报 2001年3月26日）</p><p> 　　我在许多学校上过学，最爱的是清华大学；清华大学里，最爱清 华图书馆。</p><p> 　　1932年春季，我借读清华大学。我的中学旧友蒋恩钿不无卖弄地 对我说：“我带你去看看我们的图书馆！墙是大理石的！地是软木的！ 楼上书库的地是厚玻璃！透亮！望得见楼下的光！”她带我出了古月   堂，曲曲弯弯走到图书馆。她说：“看见了吗？这是意大利的大理石。” 我点头赞赏。她拉开沉重的铜门，我跟她走入图书馆。地，是木头铺 的，没有漆，因为是软木吧？我真想摸摸软木有多软，可是怕人笑话：   捺下心伺得机会，乘人不见，蹲下去摸摸地板，轻轻用指甲掐掐，原 来是掐不动的木头，不是做瓶塞的软木。据说，用软木铺地，人来人 往，没有脚步声。我跟她上楼，楼梯是什么样儿，我全忘了，只记得   我上楼只敢轻轻走，因为走在玻璃上。后来一想，一排排的书架子该 多沉呀，我光着脚走也无妨。我放心跟她转了几个来回。下楼临走， 她说：“还带你去看个厕所。”厕所是不登大雅的，可是清华图书馆   的女厕所却不同一般。我们走进一间屋子，四壁是大理石，隔出两个 小间的矮墙是整块的大理石，洗手池前壁上，横悬一面椭圆形的大镜 子，镶着一圈精致而简单的边，忘了什么颜色，什么质料，镜子里可   照见全身。室内洁净明亮，无垢无尘无臭，高贵朴质，不显豪华，称 得上一个雅字。不过那是将近70年前的事了。</p><p> 　　一年以后，1933年秋季，我考入清华大学研究院外国语文研究所。 清华图书馆扩大了。一年前，我只是个借读生，也能自由出入书库。 我做研究生时，规矩不同了，一般学生不准入书库，教师和研究生可   以进书库，不过得经过一间有人看守的屋子，我们只许空手进，空手 出。</p><p> 　　解放后，我们夫妇（钱钟书和我）重返清华园，图书馆大大改样 了。图书不易记忆，因为图书馆不是人，不是事，只是书库和阅览室； 到阅览室阅读，只是找个空座，坐下悄悄阅读，只留心别惊动人；即   使有伴，也是各自读书。我做研究生时，一人住一间房，读书何必到 阅览室去呢？想一想，记起来了。清华的阅览室四壁都是工具书：各 国的大字典、辞典、人物志、地方志等等，要什么有什么，可以自由   翻阅；如要解决什么问题，查看什么典故，非常方便。这也可见当时 的学风好，很名贵的工具书任人翻看，并没人私下带走。</p><p> 　　有人问我钱钟书在清华图书馆读书学习的情况。我却是不知道。 因为我做借读生时，从未在图书馆看见他。我做研究生时，他不在清 华。我们同返清华，他就借调到城里去工作，每周末回清华，我经常   为他借书还书——大叠的书。说不定偶尔也曾同到图书馆。“三校合 并”后，我们曾一同出入新北大（即旧燕京）图书馆。那个图书馆的 编目特好，有双套编目：一套作品编目，一套作者编目。查编目往往   会有意外收获。可是我们不准入书库。我曾把读书比作“串门儿”， 借书看，只是要求到某某家去“串门儿”，而站在图书馆书库的书架 前任意翻阅，就好比家家户户都可任意出入，这是唯有身经者才知道   的乐趣。我敢肯定，钱钟书最爱的也是清华图书馆。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月26日 10:07:08　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232316750122675/20110225232316750122675_.html" target="_blank">吴晗之子吴彰先生向清华图书馆捐赠《吴晗全...</a></h3>
+              <p class="thnews_jqzy">　　吴晗之子吴彰先生向清华图书馆捐赠《吴晗全集》【新闻中心讯 摄影 崔凯】7月16日下午，在清华大学图书馆贵宾室，著名历史学家、清华1934届校友吴晗之子吴彰先生，从美国专程回来，向清华大学图书馆捐赠了10卷本《吴晗全集》。图书馆馆长薛芳渝教授代表学校接受了捐赠。吴晗之子向清华图书馆捐书今年是我国著名历史学家和社会活动家吴晗诞辰100周年和逝世40周年，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232148750412802/20110225232148750412802_.html" target="_blank">钱钟书和杨绛：留学牛津的日子</a></h3>
+              <p class="thnews_jqzy">　　钱钟书和杨绛：留学牛津的日子两人在图书馆埋头用功，像书虫那样“饱蠹”牛津在伦敦西北泰晤士河上游，它没有都市的繁华喧嚣，风景幽绝，古朴淡雅，别具一种小城的静美。钱钟书到牛津，入埃克塞特学院攻读文学学士学位。阿季（杨绛原名杨季康）本打算进不住宿的女子学院研修文学，但接洽入学时攻读文学的名额已满，要入学只能改修历史。她不愿意，于是决定不入学院，而在牛津......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232143765378529/20110225232143765378529_.html" target="_blank">钱钟书夫人杨绛将出版传记</a></h3>
+              <p class="thnews_jqzy">　　钱钟书夫人杨绛将出版传记 记录98年风雨9月26日三联书店透露，钱钟书夫人、著名作家杨绛传记《听杨绛谈往事》即将由生活·读书·新知三联书店出版，并计划于10月8日在全国各大城市同步上市。据称，该书作者为教育家吴宓之女吴学昭，书中记录了自杨绛出生至98岁的经历。杨绛在为该书所作的序言中称“征得我同意而写的传记，只此一篇”。新书将于10月8日全国同步上市。杨......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2008.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232110890144660/20110225232110890144660_.html" target="_blank">杨绛：走到人生边上</a></h3>
+              <p class="thnews_jqzy">　　杨绛：走到人生边上　 我正站在人生的边缘边缘上，向后看看，也向前看看。向后看，我已经活了一辈子，人生一世，为的是什么呢？我要探索人生的价值。向前看呢，我再往前去，就什么都没有了吗？当然，我的躯体火化了，没有了，我的灵魂呢？灵魂也没有了吗？有人说，灵魂来处来，去处去。哪儿来的？又回哪儿去呢？说这话的，是意味着灵魂是上帝给的，死了又回到上帝那儿去。可是上帝存在吗......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232010281642312/20110225232010281642312_.html" target="_blank">锻炼一生 96岁杨绛决不“封笔”</a></h3>
+              <p class="thnews_jqzy">　　锻炼一生 96岁杨绛决不“封笔”薛鸿时杨绛近影大约一年以前，我去探望杨绛先生时，看见她正在认真钻研哲学著作，桌上放着康德的《实践理性批判》英译本，她告诉我，康德在书中说，有两样东西使他越来越感到神奇和敬畏，那就是：头上的星空和心中的道德律。于是杨先生问我，你认为人死以后是否有不灭的灵魂？对于这个人生终极关怀的大问题，我一向糊里糊涂，因此惶惑得很，只得用年......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2006.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231818140839400/20110225231818140839400_.html" target="_blank">重阳节陈希看望杨绛学长</a></h3>
+              <p class="thnews_jqzy">　　重阳节陈希看望杨绛学长【新闻中心讯】10月30日是九九重阳老人节，校党委书记陈希代表学校看望清华老校友、清华“好读书奖学金”捐助人杨绛学长，祝她健康长寿。原党委常委、党委办公室主任白永毅教授等陪同看望。（基金会 供稿 摄影 井建军 编辑 襄桦）</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2005.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231547359643058/20110225231547359643058_.html" target="_blank">院子里的杨绛（名人专访）</a></h3>
+              <p class="thnews_jqzy">　　院子里的杨绛（名人专访）人民日报海外版  2005-2-5  严欣久&nbsp;&nbsp;&nbsp;虽说与杨绛先生住在同一个院子里，仅相隔几栋楼，却对她的家事知之甚少。因此《我们仨》刚一出版，我也赶紧买了一本来读，而未敢向杨绛先生索要，甚至签名。因为她做事一向低调，大部分时间用来治学、写作，谁忍心去搅扰呢？平时，我也只有在散步遇到杨先生时，跟她打个招呼或......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231512703461059/20110225231512703461059_.html" target="_blank">杨绛：万人如海一身藏</a></h3>
+              <p class="thnews_jqzy">　　杨绛：万人如海一身藏搜狐人物  2004-10-8&nbsp;&nbsp;&nbsp;“一个女人有好几个领域，每个领域我只能拿６０分。”（杨绛语）&nbsp;&nbsp;&nbsp;杨绛：１９１１年生，原名杨季康，中国社会科学院外国文学研究员，作家、评论家、翻译家。剧本有《称心如意》、《弄真成假》、《风絮》；小说有《倒影集》、《洗澡》；论集有《春泥集》、《关......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2004.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231437718798384/20110225231437718798384_.html" target="_blank">静静的人——记清华校友季羡林、杨绛</a></h3>
+              <p class="thnews_jqzy">　　静静的人——记清华校友季羡林、杨绛文汇报 2004-5-16 版次:7   作者:李景端&nbsp;&nbsp;&nbsp;&nbsp;“……钱不多，不过来路清楚，都是自己‘爬格子’所得，希望能够抛砖引玉，为母校做点贡献”&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在追逐名人成为时下一种新潮时尚之际，大凡名......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231236609640389/20110225231236609640389_.html" target="_blank">心血赠清华 设奖“好读书”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document钱锺书杨绛心血赠清华 设奖“好读书”北京晨报 2001年9月16日晨报讯（记者 廖厚才）记者昨天自清华获悉，我国著名作家、翻译家、９０高龄的杨绛女士日前已将钱锺书、杨绛夫妇２００１年上半年所获稿酬现金７２万元及其后出版作品获得报酬的权利，捐赠给了清华教育基金会，设立“好读书”奖学金，以鼓励家庭经济困难的优秀大学生努力学习......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231236468760081/20110225231236468760081_.html" target="_blank">功存教育　义声长孚</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document功存教育　义声长孚——记杨绛代表钱钟书一家向清华捐赠“好读书”奖学金《人民日报》 (2001年09月13日第六版)本报记者 王淑军钱钟书先生逝去两年余，杨绛先生一直闭门谢客。然而，对教育的关切，对清华的深情，让她走出了家门。9月7日，清华大学“好读书”奖学金捐赠仪式上，当杨先生宣布将钱钟书、杨绛夫妇今年上半年所获......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225352687969581/20110225225352687969581_.html" target="_blank">钱钟书、杨绛稿酬捐赠我校 我校设立“好读...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document钱钟书、杨绛稿酬捐赠我校我校设立“好读书”奖学金9月7日上午，在我校主楼举行了清华大学"好读书"奖学金捐赠仪式。我国著名的作家、翻译家杨绛女士将钱钟书、杨绛夫妇2001年上半年所获稿酬现金72万元及其后出版作品获得报酬的权利，捐赠给我校教育基金会，设立"好读书"奖学金，以鼓励家庭经济困难的优秀大学生努力学习、成才报国。9......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231235984595329/20110225231235984595329_.html" target="_blank">钱钟书、杨绛稿酬捐赠我校 我校设立“好读...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document钱钟书、杨绛稿酬捐赠我校我校设立“好读书”奖学金9月7日上午，在我校主楼举行了清华大学"好读书"奖学金捐赠仪式。我国著名的作家、翻译家杨绛女士将钱钟书、杨绛夫妇2001年上半年所获稿酬现金72万元及其后出版作品获得报酬的权利，捐赠给我校教育基金会，设立"好读书"奖学金，以鼓励家庭经济困难的优秀大学生努力学习、成才报国。9......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231235953385543/20110225231235953385543_.html" target="_blank">钱钟书夫人捐稿酬在清华设“好读书”奖学金</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document钱钟书夫人捐稿酬在清华设“好读书”奖学金2001年09月07日 17:19 中国新闻网中新网北京9月7日消息：今天，中国著名作家、翻译家杨绛女士将她与钱钟书先生的部分稿酬捐赠给母校清华大学，设立“好读书”奖学金，以鼓励家庭经济困难的优秀大学生努力学习、成材报国。此次杨绛捐赠的是他们夫妇今年上半年所得稿酬现金72万元及......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231235921249548/20110225231235921249548_.html" target="_blank">钱钟书夫人将稿酬捐赠清华设立奖学金</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document钱钟书夫人将稿酬捐赠清华设立奖学金(2001.09.07 16:55:24 新华网)新华网北京９月７日电（记者江涛）我国著名作家、翻译家杨绛女士今天将她与钱钟书先生的部分稿酬捐赠给母校清华大学，设立“好读书”奖学金，以鼓励家庭经济困难的优秀大学生努力学习、成材报国。刚刚过完九十寿辰的杨绛女士精神矍铄、思维敏捷，她在捐......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225352796707747/20110225225352796707747_.html" target="_blank">钱钟书杨绛全部稿酬版税捐清华</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document钱钟书杨绛全部稿酬版税捐清华光明日报 2001年9月5日记者　张碧涌本报北京9月4日电（记者　张碧涌）　今天，清华大学中文系主任、教授徐葆耕向本报独家透露，已故学术大师钱钟书的夫人杨绛最近决定，把他们夫妇的全部稿酬版税，包括刚出版的《钱钟书集》，即将出版的《钱钟书手稿集》（四十卷）、《宋诗纪事补正》等的稿酬版税，捐赠给清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231235703228657/20110225231235703228657_.html" target="_blank">钱钟书杨绛全部稿酬版税捐清华</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document钱钟书杨绛全部稿酬版税捐清华光明日报 2001年9月5日记者　张碧涌本报北京9月4日电（记者　张碧涌）　今天，清华大学中文系主任、教授徐葆耕向本报独家透露，已故学术大师钱钟书的夫人杨绛最近决定，把他们夫妇的全部稿酬版税，包括刚出版的《钱钟书集》，即将出版的《钱钟书手稿集》（四十卷）、《宋诗纪事补正》等的稿酬版税，捐赠给清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231235687261236/20110225231235687261236_.html" target="_blank">垂馨百代共筑昆仑</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document垂馨百代共筑昆仑——钱钟书、杨绛“好读书”奖学金设立前后中华读书报 2001年9月5日徐葆耕忘不了那个寒冬的早晨，清华园的南北主干道上悬起了一眼望不到头的洁白的千纸鹤。清华学子以此为飘然仙逝的老学长钱钟书送行。其实，钱钟书并没有远去，他的精魂依然萦绕在所有思念他的人们中间。就在他病重的时候，一家三口（钱钟书、杨绛和他们的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231220734911524/20110225231220734911524_.html" target="_blank">杨绛与钱钟书的恋爱</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document杨绛与钱钟书的恋爱（光明网 2001年4月28日）1932年，钱钟书在清华园得识无锡名门才媛杨季康。杨季康(绛)1932年在苏州东吴大学毕业，放弃出国留学机会，考入清华研究院做外国语文研究生。东吴大学是外国教会办的，可以很好地学英语，但学费比较高，只有“公子哥儿”和“小姐”们才上得起。杨绛之所以宁愿不出国而来清华，用......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

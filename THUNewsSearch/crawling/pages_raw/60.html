@@ -1,0 +1,1084 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大学生"网上供需洽谈会"将举行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231209078855120&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9664/index.html' class='navigation_style'>社会服务</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">大学生"网上供需洽谈会"将举行</h3><p align="center"> (2001.03.16 新华网) </p><p>新华网北京３月１６日电（记者李斌）不管是毕业生还是用人单位，足不出户通过一台电脑，就可以参加“供需见面、双向选择”洽谈会。由教育部学生司主办，清华   同方股份有限公司承办并开发的全国高校毕业生就业网（ www.gradnet.edu.cn）将于３月１８日举行高校毕业生就业网上供需洽谈会。 </p><p>届时，网站将提供全国高校毕业生统计数据查询（共有毕业生信息１１８０００余条）和３００多家毕业生就业重点保证单位的人才需求（共有人才需求信息６０００余条，需求岗位３万多个）查询等服务。 </p><p>国防科工委、总参政治部、中国石化集团公司、中国航天机电集团、华为技术有限公司、深圳中兴等２０多家用人单位将在网上和毕业生“见面”。 </p><p>据悉，高校毕业生就业网上供需洽谈会，是教育部学生司为推动毕业生就业信息网络化而实施的一个重要步骤。此前，教育部学生司已将这次洽谈会的预告信息发布给全国各地的高校。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月16日 14:37:05　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2016/20160322090811572658583/20160322090811572658583_.html" target="_blank">清华今年毕业生直接创业者或将破百</a></h3>
+              <p>还有3个月就要毕业了，清华大学精密仪器系硕士生毕滢并没有忙着找工作，而是自己当老板，创办了“北京造万物科技有限公司”。“公司主要进行创客教育研发、创客空间建设、创客项目孵化以及举办创客大赛，将创客精神进行到底。”在日前举行的清华大学2016届毕业生就业洽谈会上，毕滢告诉记者。据清华学生职业发展指导中心主任林成涛介绍，去年该校直接创业的毕业生为60名，今年有望突破百名。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2016/20160322090600312620486/20160322090600312620486_.html" target="_blank">清华2016届毕业生京外就业率预计达53...</a></h3>
+              <p>清华大学2016届毕业生洽谈会17日举行。来自全国22个省、市的近260家用人单位参会，提供超过3万个招聘单位。记者从就业洽谈会获悉，近7000名毕业生参加洽谈会，清华毕业生京外就业率逐年提高，连续三年超过五成，今年预计达到53%左右。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2016/20160318165733494403115/20160318165733494403115_.html" target="_blank">清华 京外就业连续3年超5成</a></h3>
+              <p>昨天下午，清华大学举办年度规模最大的校园招聘会，近260家用人单位参会，提供超过3万个招聘岗位。据了解，今年清华拟参加就业和创业的毕业生约4000人，截至目前签约率已超过五成，京外就业率已连续三年超过50%。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2016/20160318165630922932468/20160318165630922932468_.html" target="_blank">2016清华毕业生近7000人 京外就业...</a></h3>
+              <p>记者17日从清华大学获悉，该校今年预计有毕业生近7000人。除继续深造外，拟参加就业的毕业生约4000人。其中本科生约700人，研究生约3300人。    清华大学年度规模最大的校园招聘会17日举行。来自全国22个省市的近260家用人单位共提供3万多个招聘职位。来自校内外近7000名毕业生参加此次招聘会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151217165542601426299/20151217165542601426299_.html" target="_blank">万欢：“我始终坚信，自己能走出一条与众不...</a></h3>
+              <p>　　今年7月，万欢在美国交换学习一年，与一位耶鲁大学的留学生一起参加“春晖杯中国留学人员创新创业大赛”，以抗辐射电子器械的产品设计成功入围。这个技术在国内刚刚发展，但在国外，却已相对成熟。在参赛过程中，万欢了解到，我们国家的抗辐射芯片基本依赖国外进口。在美国本土售价350万美金的芯片，卖给中国却要2000万美金，质量还有所差别。从那时起，他就下定决心回国创业，是追逐梦想，也是为了一种任何一个中国人都有的情怀。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151126155008031326352/20151126155008031326352_.html" target="_blank">8所中国大学闪耀“QS毕业生就业力排名”...</a></h3>
+              <p>　　QS全球教育集团今天正式启动了一个全新的世界大学排名——“QS全球毕业生就业力排名”，并发布了第一次排名结果。这个排名对世界一流大学在有效解决学生就业和提高毕业生在全球范围内长期的竞争力提供了新的思考。    　　在该项排名中，美国斯坦福、麻省理工、哈佛大学毕业生就业能力位列前三甲。耶鲁、普林斯顿和伯克利分列第5、7、8名。 英国毕业生就业能力最强的是剑桥（第4名）和牛津（第6名）。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151118094922699896291/20151118094922699896291_.html" target="_blank">史宗恺看望清华在藏工作毕业生</a></h3>
+              <p>11月10日至13日，清华大学党委副书记史宗恺一行访问西藏拉萨、山南、阿里三地，走访看望在当地工作的清华大学毕业生。在藏期间，西藏自治区党委书记陈全国会见了史宗恺一行，代表自治区党委、政府对清华大学长期以来给予西藏经济社会发展的关心支持表示衷心感谢，希望清华大学今后一如既往地为西藏发展提供人才支持和智力支撑，也希望双方进一步加强交流与合作，为西藏的长治久安、繁荣发展，为西藏各族人民的幸福安康而共同努力。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151110153532179297057/20151110153532179297057_.html" target="_blank">清华博士“战斗”在军校</a></h3>
+              <p>　　头顶清华大学博士？毕业生、全国百篇优秀博士学位论文获得者、北京市科技新星计划入选者等诸多光环的装甲兵工程学院信息系副教授闫兴鹏，始终谦逊低调。在军事教学科研工作中，他边思考边作为，着力创新，受到学员们的交口称赞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150902163829201766017/20150902163829201766017_.html" target="_blank">清华毕业生研发煎饼打印机</a></h3>
+              <p>　　煎饼无非是圆形或方形，您见过凯蒂猫、小黄人造型的煎饼吗？    　　近日，一家由7名清华大学毕业生创建的科技公司，推出了一款3D煎饼打印机。只要在电脑中输入文字或图片，就可打印出人像、建筑、卡通人物等各种形状的煎饼。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150712234740463141946/20150712234740463141946_.html" target="_blank">邱勇陈旭与2015届毕业生合影</a></h3>
+              <p>七月清华，水木明瑟。9日上午，校长邱勇、校党委书记陈旭来到主楼后厅，与来自学校各个院系2600多名本科毕业生和2600多名研究生毕业生合影留念，祝贺同学们顺利毕业，并为他们送上祝福。合影过程中，大家争相与校长、书记握手。邱勇、陈旭与同学们亲切交谈，非常细致地询问了他们的毕业去向和未来规划，包括将要去的城市、工作待遇等。希望同学们在未来的工作中脚踏实地，秉承清华校训与校风，勇敢追寻自己的梦想。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150710142446437947014/20150710142446437947014_.html" target="_blank">同方威视助力2015年温布尔登网球公开赛...</a></h3>
+              <p>2015年温布尔登网球公开赛于6月29日在英国伦敦开赛。中国企业同方威视技术股份有限公司为此次公开赛提供安保设备。设备包括10台CX6040BI型小型安检设备，其中8台设备用于观众主检查区、1台用于媒体人员检查区、1台用于员工检查区。整个比赛期间，同方威视安检设备运行稳定，性能良好，得到主办方的充分肯定。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150705092334583438445/20150705092334583438445_.html" target="_blank">校长邱勇与2015届研究生毕业生代表座谈</a></h3>
+              <p>“祝贺大家顺利完成学业！你们是我上任以来即将送走的第一批研究生，同时，今天也是我作为新校长的第100天。”7月3日下午，在校史馆，继与2015届本科毕业生代表交流座谈后，履新百日的邱勇校长与15位研究生毕业生代表促膝长谈，认真倾听大家在学期间关于科研及生活的感悟，共同探讨学校改革发展和人才培养之道。座谈会开始前，邱勇与即将毕业的研究生代表亲切合影，祝贺大家研究生阶段取得丰硕成果，满怀信心地走向新的未来。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150701133546318526050/20150701133546318526050_.html" target="_blank">校长邱勇与2015届本科毕业生代表座谈</a></h3>
+              <p>6月30日下午，校长邱勇、校党委副书记史宗恺来到绿荫满窗的清华大学图书馆老馆，与2015届本科毕业生代表围坐在一起，认真倾听大家畅谈大学期间的感受与收获，气氛轻松而热烈。座谈会开始前，邱勇与13位即将毕业的本科生代表亲切合影，祝贺大家圆满完成本科阶段的学业，走进人生新的发展阶段。“你们是清华大学新百年入学的第一批本科同学，也是我上任后即将送走的第一批学生。今天在图书馆——同学们的‘主场’，希望能听听大家的想法，以及对母校的寄语。”邱勇的开场白引起同学们的热烈掌声。在座毕业生代表，有的选择扎根基层，有的选择从军报国，有的将在学校继续学术梦想，还有的选择创业。大家感慨，在清华的时光将成为自己最快乐、最珍贵的记忆，将带着母校的美好期待踏上新的征程，未来更会肩负起清华人的责任与使命。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150521101444509419907/20150521101444509419907_.html" target="_blank">【组图】美院服装设计毕业生作品发布</a></h3>
+              <p>5月18日，清华大学美术学院染织服装艺术设计系2015届服装设计专业毕业生与意大利米兰新美术学院（NABA）毕业生在“新银基-2015中国国际大学生时装周”北京751艺术区D-PARK第一车间联合举办作品发布会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150424153755559350178/20150424153755559350178_.html" target="_blank">拉美为中国安保设备点赞</a></h3>
+              <p>　　距离4月11日美洲峰会闭幕已经十多天了，美国总统奥巴马与古巴领导人劳尔？卡斯特罗会晤的消息也成了旧闻。但在这场峰会安保工作中出现的新角色——中国同方威视，才刚刚走向拉美大型国际会议的前台。在这次峰会期间，几乎所有重要场所的安检工作，都由这家中国企业负责。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150416170047332925054/20150416170047332925054_.html" target="_blank">同方威视为美洲峰会保驾护航</a></h3>
+              <p>第七届美洲国家首脑会议4月10日至11日在巴拿马首都巴拿马城举行。同方威视巴拿马公司为此次峰会提供了行李安检系统、爆炸物探测系统辐射检查系统等，确保了此次峰会的安全举行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150404220636742707537/20150404220636742707537_.html" target="_blank">产学研结硕果：同方威视加速器量产达到10...</a></h3>
+              <p>从1999年第一台加速器在同方威视诞生起，清华大学工程物理系与同方威视就开始了不平凡的产学研合作之路——核心技术源于清华，立足于自主创新、集成创新与引进消化吸收再创新，拥有全部核心技术的自主知识产权，十余年的产学研合作结出了累累的硕果。3月27日下午，清华大学与同方威视共同在密云产学研基地举办了“同方威视加速器1000台纪念活动”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150323132122764702167/20150323132122764702167_.html" target="_blank">清华大学举行2015届毕业生就业洽谈会</a></h3>
+              <p>3月19日，清华大学2015届毕业生就业洽谈会在综合体育馆举行。此次洽谈会是本年度清华大学举办的规模最大的校园招聘会。中国工程物理研究院、中国东方电气集团有限公司、百度在线网络技术（北京）有限公司等来自全国22个省、市的近230家用人单位参会，共提供超过3万个招聘职位</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2015/20150320162554160850951/20150320162554160850951_.html" target="_blank">清华毕业生 逾半不留京</a></h3>
+              <p>　　清华大学毕业生京外就业率连续三年突破50%，2015届毕业生选择京外就业的人数还会增加。而在十年前，80%左右的清华毕业生选择留在北京。清华大学昨天公布了这个数据。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150114165454632382051/20150114165454632382051_.html" target="_blank">75所高校发布2014年毕业生就业质量年...</a></h3>
+              <p>　　教育部直属高校近日陆续发布2014年毕业生就业年度报告。数据显示，75所直属高校中，74所高校本科毕业生就业率超过90%。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141218164117559273450/20141218164117559273450_.html" target="_blank">清华产业的报国之路</a></h3>
+              <p>　　同方、紫光、诚志、启迪、第四代先进核能技术、遗传性耳聋基因检测芯片、大型集装箱检测技术……这一系列知名企业、著名品牌、尖端产品，都源自同一所大学——清华大学。从首都西北角美丽的清华园起步，走向全国，走向世界，以科技改变产业、改善民生、服务国家，这就是清华大学的校办产业。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20141126091112446939229/20141126091112446939229_.html" target="_blank">清华大学2015届毕业生首场招聘会提供2...</a></h3>
+              <p>近日，清华大学举办了2015届毕业生首场招聘会暨四川省高层次人才引进会。300余家来自四川省的高等院校、科研院所、金融机构、国有企业、民营企业等单位参加此次人才引进会，提供2320个招聘岗位及7000余招聘需求。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20141121122446839984598/20141121122446839984598_.html" target="_blank">清华大学2015届毕业生首场招聘会四川专...</a></h3>
+              <p>　　清华大学2015届毕业生首场招聘会暨四川省高层次人才引进会11月20号在清华大学举行，这也拉开了清华大学2015届毕业生就业找工作的序幕。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140829083455133954627/20140829083455133954627_.html" target="_blank">第22届“人环奖”颁奖典礼在同方科技广场...</a></h3>
+              <p>8月21日，第22届“人环奖”颁奖典礼在同方科技广场举行，同方股份、住房与城乡建设部、清华大学建筑学院、中国建筑学会暖通空调分会、中国制冷学会、中国制冷空调工业协会、中国勘察设计协会、中国建筑设计研究院等单位的相关领导出席了大会。本届人环奖共有来自157所高校的2624名建环专业三年级学生报名参加，人数较2013年递增15%。经过层层选拔，共评选出一等奖1名、二等奖7名、三等奖24名、优秀奖31名。清华大学柳珺荣获本届人环奖竞赛一等奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140731090057858471667/20140731090057858471667_.html" target="_blank">同方软件荣获“国家高新区先锋榜百新企业奖”</a></h3>
+              <p>近日，在由中国高新区研究中心、《中国高新技术产业导报》社和中国高新技术产业开发区协会共同发起的“国家高新区先锋榜（2013）”评选活动中，同方软件作为中关村科技园区代表企业参选，荣获2013年度国家高新区先锋榜百新企业奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140711115526421985587/20140711115526421985587_.html" target="_blank">清华大学毕业生李舒涛的青春逐梦路</a></h3>
+              <p>　　又到毕业季，校园里弥漫着惜别的伤感。    　　此刻，也是出发的时节。    　　将人生的第一颗扣子扣在哪儿？选项很多，但无不取决于你内心的天地。    　　人生的舞台不只在高处，从今天起，我们推出一组就业群像，希望以他们的青春影像，昭示后来者，人生处处有风景。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2014/20140708133704646746042/20140708133704646746042_.html" target="_blank">清华毕业生 赶拍“学生证”</a></h3>
+              <p>　　昨晚，清华大学毕业晚会现场，摆放了一组一人高的“学生证”，分别冠以学霸、吃货、运动健将等名号。毕业生按自己的特点，对应名号凑到“学生证”的照片位置留影。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140704200832232721461/20140704200832232721461_.html" target="_blank">校长陈吉宁与2014届本科毕业生代表座谈</a></h3>
+              <p>7月1日上午，校长陈吉宁在工字厅东厅与来自不同院系的11名本科毕业生代表座谈，了解同学们本科期间的学习收获和成长经历，听取他们对学校人才培养的意见和建议，并对他们的未来发展提出期望。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140613154421311997778/20140613154421311997778_.html" target="_blank">同方威视安检设备为巴西世界杯保驾护航</a></h3>
+              <p>2014年巴西世界杯今天开幕，作为本届世界杯安检设备供应商，同方威视技术股份有限公司为巴西世界杯12个举办场馆中的9个球场提供安检设备和服务。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140514142726533956598/20140514142726533956598_.html" target="_blank">高校毕业生就业创业工作会召开</a></h3>
+              <p>　　全国普通高等学校毕业生就业创业工作电视电话会议13日在北京召开。中共中央政治局委员、国务院副总理刘延东，中共中央政治局委员、国务院副总理马凯出席会议并讲话。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140514142438863973462/20140514142438863973462_.html" target="_blank">鼓励创业、加强服务、推进公平</a></h3>
+              <p>　　国务院办公厅近日印发了《关于做好2014年全国普通高等学校毕业生就业创业工作的通知》。人力资源和社会保障部、教育部、财政部相关负责人13日就此进行了解读。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140403145805014248729/20140403145805014248729_.html" target="_blank">75所教育部直属高校发布毕业生就业质量年...</a></h3>
+              <p>记者2日从教育部获悉，75所教育部直属高校已于近日分别在学校网站发布2013届毕业生就业质量年度报告，全国大学生就业公共服务立体化平台对各高校就业质量年度报告进行了链接发布。这是教育部首次组织编制和发布高校毕业生就业质量报告。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2014/20140320113917913439137/20140320113917913439137_.html" target="_blank">清华大学年度最大校园招聘会提供4000余...</a></h3>
+              <p>今天，清华大学举办2014届毕业生就业洽谈会。中国工程物理研究院、中国石油规划总院、中国东方电气集团有限公司等近300家用人单位提供了4000余招聘职位。这是清华大学本年度举办的规模最大的校园招聘会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2014/20140320113806202205337/20140320113806202205337_.html" target="_blank">2014年清华毕业生6500人 四成深造...</a></h3>
+              <p>2014年清华预计有毕业生6500人，其中约40%将继续深造、进修，60%将进入就业市场。准备就业的毕业生约4000人中，本科生约1000人，研究生约3000人。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140314135345272153932/20140314135345272153932_.html" target="_blank">5高校去年就业毕业生超半数留京</a></h3>
+              <p>按教育部要求，今年启动高校毕业生就业质量年度报告发布。截至昨日，清华大学、北京大学、中国人民大学、北京师范大学、中国传媒大学、对外经济贸易大学、北京林业大学7所在京部属高校，首次公布2013年毕业生就业质量报告。报告显示，7所高校本科生就业率均超90%，其中，北师大99.81%的本科生就业率更是接近百分之百，这些毕业生中，多扎堆留京。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2014.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140210141912877874499/20140210141912877874499_.html" target="_blank">北京高校鼓励毕业生到西部建功立业</a></h3>
+              <p>2014年，北京高校毕业生23万人。近日，北京市教委发文，要求在京各高校设立奖励资金，鼓励毕业生到西部基层建功立业。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140122092059007142464/20140122092059007142464_.html" target="_blank">毕业生代表张金松：选择决定人生</a></h3>
+              <p>我是来自物理系2008级的博士毕业生张金松，能够站在这里作为毕业生代表发言， 我深感荣幸。首先请允许我向每一位曾经给予我们教导和帮助的老师、同学、朋友和家人表示最衷心的感谢。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131104132958706121911/20131104132958706121911_.html" target="_blank">清华大学举行2014届毕业生就业动员会</a></h3>
+              <p class="thnews_jqzy">　　清华大学举行2014届毕业生就业动员会清华新闻网11月4日电11月1日下午，清华大学2014届毕业生就业动员会在大礼堂举行。校党委副书记史宗恺出席会议并以&ldquo;中国青年的未来方向&rdquo;为主题作就业动员讲话。图为史宗恺做就业动员讲话。史宗恺说，清华大学百年来培育出一批批优秀的校友，在祖国各地、各行各业，通过自身的选择、努力和坚持，为祖国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131028113417541202591/20131028113417541202591_.html" target="_blank">贵州省赴清华大学选调优秀毕业生</a></h3>
+              <p class="thnews_jqzy">　　贵州省赴清华大学选调优秀毕业生暨专场人才招聘会举行清华新闻网10月28日电10月24日上午，贵州省赴清华大学选调优秀毕业生暨专场人才招聘会在清华主楼接待厅举行。贵州省人民政府副省长陈鸣明率团来清华宣讲，清华大学党委副书记史宗恺等出席活动。图为史宗恺代表学校对贵州省党政领导和用人单位代表的来访表示欢迎。史宗恺代表学校对贵州省党政领导和用人单位代表的来访......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2013.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2013/20130806164139783630402/20130806164139783630402_.html" target="_blank">清华应届生五成选择京外就业</a></h3>
+              <p class="thnews_jqzy">　　清华应届生五成选择京外就业来源：京华时报 2013-08-06 张晓鸽近日，清华大学举行2013年赴西部、基层、国家重点单位工作毕业生出征仪式暨&ldquo;启航计划&rdquo;暑期就业实践启动仪式。据悉，截至启动仪式举行时，清华大学2013届毕业生就业率已达到96.7%，八成毕业生赴国家重点企事业单位工作，目前签订三方就业协议的毕业生中，有50.......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130731212733531522952/20130731212733531522952_.html" target="_blank">八一前夕胡和平到解放军某基地看望我校毕业生</a></h3>
+              <p class="thnews_jqzy">　　八一前夕胡和平到解放军某基地看望我校毕业生&nbsp;清华新闻网7月31日电7月31日上午，校党委书记胡和平到中国人民解放军某基地，调研军地合作，并与在此工作的我校毕业生校友座谈。图为胡和平与我校毕业生合影。&nbsp;基地负责人介绍了基地建设和双方合作情况。陈宇新、李运猛、吴艳林、陈建伟等4名校友汇报了各自在基地的生活工作情况，感谢母校的培养和关心......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130718133513883293562/20130718133513883293562_.html" target="_blank">校长陈吉宁与硕士毕业生代表座谈</a></h3>
+              <p class="thnews_jqzy">　　校长陈吉宁与硕士毕业生代表座谈清华新闻网7月18日电（研通社记者&nbsp;刘仕远）7月11日晚，校长陈吉宁在工字厅东厅与来自各个院系的16名优秀硕士毕业生代表座谈，与同学们交流了在校期间的感悟，听取了他们对硕士生培养和学校建设的意见和建议，并对他们未来的人生规划提出了建议。校党委副书记史宗恺一同参加了座谈会。图为陈吉宁与同学们座谈。学生记者李钧翔摄......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130718130200714705496/20130718130200714705496_.html" target="_blank">清华大学毕业生文明离校记：衣犹未尽，情尚...</a></h3>
+              <p class="thnews_jqzy">　　清华大学毕业生文明离校记：衣犹未尽，情尚未已来源：中国青年网 2013-7-18 黄威 王冬伟 李铁 陈展又是一年毕业季，清华大学的毕业生们满怀深情地参加了毕业典礼，随后背起行囊，走向梦想。在他们即将离开学校的日子里，积极响应中国青年网的号召，根据中国青年网&ldquo;快乐毕业，爱心传递&rdquo;全国百所高校爱心捐助活动的安排，组织了&ldquo;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130716215629392940333/20130716215629392940333_.html" target="_blank">陈吉宁在2013年夏季研究生毕业典礼上的...</a></h3>
+              <p class="thnews_jqzy">　　坚守良知&mdash;&mdash;在2013年夏季研究生毕业典礼暨学位授予仪式上的讲话（2013年7月16日）校长&nbsp; 陈吉宁图为陈吉宁校长在研究生毕业典礼上讲话。记者智 斐摄亲爱的同学们：今天，是清华园一年中最为盛大的节日，久违的蓝天也为你们回到了北京。我们在这里隆重举行研究生毕业典礼暨学位授予仪式，共同庆祝5180名同学顺利完成学业，开启新......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130714214840092652244/20130714214840092652244_.html" target="_blank">校长陈吉宁与博士毕业生代表座谈</a></h3>
+              <p class="thnews_jqzy">　　校长陈吉宁与博士毕业生代表座谈 清华新闻网7月14日电（研通社记者张 旭）7月9日上午，校长陈吉宁在工字厅东厅与来自不同院系的14名博士毕业生代表进行座谈，了解了同学们在校期间的经历与感悟，听取了他们对于学校人才培养工作的意见和建议。校党委副书记史宗恺一同参加座谈。图为陈吉宁与学生交谈。 学生记者李钧翔摄座谈会上，公管学院马伟、工业工程系周佳同学等对......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130710113207815128998/20130710113207815128998_.html" target="_blank">校长陈吉宁与2013届本科毕业生代表座谈</a></h3>
+              <p class="thnews_jqzy">　　校长陈吉宁与2013届本科毕业生代表座谈清华新闻网7月10日电（通讯员张波）7月5日下午，校长陈吉宁与来自各院系的本科毕业生代表座谈，了解同学们4年来学习成长的经历和收获，听取他们对本科生教育培养的意见和建议，并对他们的未来发展提出期望。校党委副书记史宗恺一同参加座谈。图为陈吉宁与学生交谈。学生记者李钧翔摄座谈会上，毕业生代表纷纷表示，通过大学期间的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130613091657061533153/20130613091657061533153_.html" target="_blank">清华大学2013届创业毕业生座谈会举行</a></h3>
+              <p class="thnews_jqzy">　　清华大学2013届创业毕业生座谈会举行清华新闻网6月13日电（通讯员韩威 刘鑫鑫）6月9日上午，由清华大学就业指导中心主办的&ldquo;2013届创业毕业生座谈会&rdquo;举行。来自全校各个院系的30余名2013届创业毕业生参加座谈会。图为座谈会现场。会上，清华大学就业指导中心主任熊义志表示，举办本次座谈会在于整合校内外资源，为毕业生提供一个与......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130329143644391403862/20130329143644391403862_.html" target="_blank">【人物】易家祥：忆往难舍清华情 行道犹念...</a></h3>
+              <p>易家祥，2011届清华大学化学系博士毕业生，毕业仅仅一年就成为第十二届全国人大代表。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2013/20130325170007117311345/20130325170007117311345_.html" target="_blank">四千清华毕业生预计半数不留京</a></h3>
+              <p class="thnews_jqzy">　　下基层返家乡发展前景同样看好四千清华毕业生预计半数不留京来源：北京日报 2013-3-23 任敏昨天，清华大学今年最大规模招聘会开幕，来自全国各地的281家用人单位带来4000个职位，吸引上万学生参加。最近几年，清华大学留京学生人数减少，预计今年找工作的毕业生中，将有一半到京外就业，&ldquo;北京户口&rdquo;的吸引力在下降。2013年清华大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2013/20130325165729988198066/20130325165729988198066_.html" target="_blank">清华大学毕业生京外就业率已接近五成</a></h3>
+              <p class="thnews_jqzy">　　清华大学毕业生京外就业率已接近五成来源：新华网 2013-3-22 李江涛随着国家政策指向倾斜、地方经济发展和就业引导工作的跟进，越来越多的清华大学毕业生主动选择到基层工作，2012届毕业生京外就业率已接近50%。在22日举行的清华大学2013届毕业生就业洽谈会上，该校就业指导中心主任熊义志告诉记者，2003年，学校毕业生留京就业率超过70%，而20......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130228155555849979473/20130228155555849979473_.html" target="_blank">延续爱心 清华毕业生资助庐江男孩</a></h3>
+              <p class="thnews_jqzy">　　延续爱心 清华毕业生资助庐江男孩合肥公益力量也联合起来共同资助来源：江淮晨报 2013-2-28 杜华柱庐江高中生小何（化名）的家境，一被提起来就让人唏嘘不已。母亲去世，父亲因病卧床，爷爷行动不便，奶奶也被查出得了乳腺癌。然而小何却十分争气。如今已考上庐江一中，正在读高一。这让远在北京的一名清华毕业生很是触动，&ldquo;我也是受资助上的大学，只要小何......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2013.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2013/20130226105609332468433/20130226105609332468433_.html" target="_blank">46位老师全是清华北大毕业生</a></h3>
+              <p class="thnews_jqzy">　　雨花安德门社区&ldquo;周末学堂&rdquo;开班46位老师全是清华北大毕业生来源：南京日报 2013-2-25 毛庆 孙建中2月23日上午，雨花台区赛虹桥街道安德门社区&ldquo;周末学堂&rdquo;正式开班，担任&ldquo;周末学堂&rdquo;教师的46名志愿者均为在南京工作的清华、北大毕业生，其中大部分是博士、硕士，他们组成&ldquo......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130102171008038472357/20130102171008038472357_.html" target="_blank">清华新闻学院毕业生获得中国新闻奖</a></h3>
+              <p class="thnews_jqzy">　　清华新闻学院毕业生获得第22届中国新闻奖清华新闻网1月2日电在2012年第22届中国新闻奖评选结果中，清华大学新闻与传播学院2名毕业生：2001级本科、2005级硕士毕业生，现为《人民日报》政治文化部记者杜榕，其参与的作品《红船观澜》获中国新闻奖（新闻专栏类）一等奖；2006级硕士毕业生、现为《中国青年报》特别报道部记者来扬，其参与的作品《宋江明求职验血......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20121126165505781880335/20121126165505781880335_.html" target="_blank">五百名高校毕业生 须配一名就业指导</a></h3>
+              <p class="thnews_jqzy">　　五百名高校毕业生 须配一名就业指导来源：北京青年报 2012-11-25根据教育部网站24日发布的关于做好2013年全国普通高等学校毕业生就业工作的通知，今后高校校级专职就业工作人员数量与应届毕业生人数比例不低于1∶500。通知指出，2013年，全国普通高校毕业生规模达到699万人，比2012年增加19万人，高校毕业生就业形势更加复杂严峻。通知要求各......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2012/20121122143803540935380/20121122143803540935380_.html" target="_blank">清华首场招聘“外”企抢头阵</a></h3>
+              <p class="thnews_jqzy">　　清华首场招聘&ldquo;外&rdquo;企抢头阵为&ldquo;抱负&rdquo;去年半数毕业生京外就业 比例逐年增 校方盛邀外地企业来来源：法制晚报 2012-11-21 徐天昨晚，哈尔滨电气集团公司在清华大学进行专场招聘，这也是清华2013届毕业生的首场招聘会。校党委副书记史宗恺表示，十年来清华学生出京就业人数日渐增多，希望京外企业能够坚持来清华招......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2012/20121121164751022675149/20121121164751022675149_.html" target="_blank">清华大学2013届毕业生首场招聘会举行</a></h3>
+              <p class="thnews_jqzy">　　清华大学2013届毕业生首场招聘会举行来源：中国新闻网 2012-11-20 马海燕随着大型国企哈尔滨电气集团公司把宣讲会开进清华大学标志性主楼，该校2013届毕业生首场招聘会今日正式举行。这也拉开了今年校园招聘系列活动的帷幕。冬日的晚上颇为寒冷，排队交简历的同学还是排起了长龙，不少学生从外校赶来。&ldquo;只要专业对口不妨先试试，也积累一些找工......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121116144352798192010/20121116144352798192010_.html" target="_blank">陈左宁院士续聘清华兼职教授并与国防毕业生...</a></h3>
+              <p class="thnews_jqzy">　　十八大候补委员、陈左宁院士续聘清华兼职教授并与国防毕业生座谈&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网11月16日电11月16日，十八大代表、新当选的中共第十八届中央委员会候补委员、中国工程院院士陈左宁兼职教授续聘仪式暨国防毕业生座谈活动在东主楼计算机系会议室举行。校党委常务副书记陈旭出席仪式并为陈左宁院士......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121115150411605322816/20121115150411605322816_.html" target="_blank">清华大学举行2013届毕业生就业动员会</a></h3>
+              <p>11月14日下午，清华大学2013届毕业生就业动员会在大礼堂举行。校党委副书记史宗恺作就业动员讲话。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2012/20121019164906240307617/20121019164906240307617_.html" target="_blank">清华大学留京毕业生趋减</a></h3>
+              <p class="thnews_jqzy">　　清华大学留京毕业生趋减来源：中国新闻网 2012-10-18 杜燕清华大学留在北京就业的毕业生呈逐年下降趋势，今年留京比例更是低于50%。这是清华大学党委副书记史宗恺在18日举行的一场校园推介会上透露的。18日，广州市规划局、广州发展银行，以及王老吉、白云山等事业单位和当地知名企业携985个职位，走进清华园举办推介会，并将于19日举办专场招聘会，招揽......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120914104635164617725/20120914104635164617725_.html" target="_blank">清华励业金捐赠仪式举行 支持西部基层毕业生</a></h3>
+              <p class="thnews_jqzy">　　清华励业金捐赠仪式举行 支持西部基层毕业生清华新闻网9月14日电（通讯员刘鑫鑫 张 松） 9月11日下午，&ldquo;清华大学励业金&middot;毕业生西部基层职业发展支持项目&rdquo;捐赠仪式在清华大学工字厅举行。捐资校友华清基业投资管理有限公司董事长吕大龙（1978级）、紫光集团有限公司总裁赵伟国（1985级），校党委副书记史宗恺出席活动。　......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2012.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120806101312433794459/20120806101312433794459_.html" target="_blank">胡和平一行赴广西送毕业生到基层就业</a></h3>
+              <p class="thnews_jqzy">　　胡和平一行赴广西送毕业生到基层就业清华新闻网8月6日电8月2日，校党委书记胡和平赴广西送毕业生到基层就业并出席广西自治区党委组织召开的&ldquo;2012年广西定向选调生座谈会&rdquo;。广西自治区党委书记郭声琨，自治区党委副书记危朝安，校党委副书记史宗恺等出席座谈会。自治区委常委、组织部长周新建主持座谈会。&nbsp;图为座谈会现场胡和平在座......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2012.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120726163843743606853/20120726163843743606853_.html" target="_blank">胡和平等赴多地送毕业生到基层就业</a></h3>
+              <p class="thnews_jqzy">　　胡和平等赴多地送毕业生到基层就业清华新闻网7月26日电7月17日到20日，校党委书记胡和平、校党委副书记史宗恺等赴福建、吉林、甘肃等地送毕业生到基层就业。胡和平在福州、长春分别会见了福建省委书记孙春兰，吉林省委书记孙政才、省长王儒林。清华大学在全国高校中率先明确提出和开展就业引导工作，经过不断探索和实践，取得显著成效。毕业生在充分就业的基础上，就业质......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2012.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9652/2012/20120705144812981564286/20120705144812981564286_.html" target="_blank">我们毕业啦（二）</a></h3>
+              <p class="thnews_jqzy">　　我们毕业啦（二）清华新闻网7月5日电（供图郭海军 御智斐 王皓冉）带着几许兴奋，带着些许自豪，带着不舍和依恋，2012届毕业生在这炎炎夏季，辞别密友，挥别恩师，在叮咛与祝福声中踏上精彩笑傲人生的征程。&nbsp;&nbsp;我们毕业啦。智 斐摄&nbsp;&nbsp;马冬晗、马冬昕姐妹双双荣获优秀毕业生荣誉称号。郭海军摄&nbsp;&nbsp;毕业典礼后......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2012.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9652/2012/20120705145003504545739/20120705145003504545739_.html" target="_blank">我们毕业啦（一）</a></h3>
+              <p class="thnews_jqzy">　　我们毕业啦（一）清华新闻网7月5日电7月，是清华的毕业季。又是一年毕业时，他们穿上学位服，告别昨天，从清华园走向人生的另外一个起点。这是我们的博士学位证。研通社记者王皓冉摄若有所思。研通社记者王皓冉摄校长陈吉宁为毕业生拨流苏。研通社记者王皓冉摄校党委书记胡和平为优秀毕业生颁奖。记者智 斐摄图为人文社会科学学院毕业生方阵。记者智 斐摄图为经管学院毕业生方阵......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2012.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120704153442462484395/20120704153442462484395_.html" target="_blank">清华举行毕业生出征仪式暨暑期就业实践启动...</a></h3>
+              <p class="thnews_jqzy">　　清华举行毕业生出征仪式暨暑期就业实践启动仪式清华新闻网7月4日电（通讯员杨亚俊）7月3日下午，清华大学2012赴西部、基层、国家重点单位工作毕业生出征仪式暨&ldquo;启航计划&rdquo;暑期就业实践启动仪式在主楼报告厅举行。校长陈吉宁、副校长袁驷出席仪式，校党委副书记史宗恺主持仪式。图为陈吉宁讲话。智 斐摄陈吉宁高度评价了选择到祖国最需要的地方......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2012.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120704095052566620750/20120704095052566620750_.html" target="_blank">清华大学2012届江西籍毕业生座谈会召开</a></h3>
+              <p class="thnews_jqzy">　　清华大学2012届江西籍毕业生座谈会召开&nbsp;&nbsp;清华新闻网7月4日电（通讯员刘 昊）6月29日，清华大学2012届江西籍毕业生座谈会在汽车研究所会议室召开。中共第十二届、第十三届中央委员，第八届、第九届全国人大常委会委员，中华慈善总会荣誉会长，江西省委原书记万绍芬；中国科学院院士、清华大学教授潘际銮；清华大学党委副书记史宗恺出席座谈会。　......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2012.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120702173726856256402/20120702173726856256402_.html" target="_blank">同方股份有限公司成立15周年庆典召开</a></h3>
+              <p class="thnews_jqzy">　　同方股份有限公司成立15周年庆典召开&nbsp;&nbsp;&nbsp;&nbsp;风雨同行十五载 合志同方向未来清华新闻网7月2日电6月27日，同方股份有限公司成立十五周年庆典大会在清华大学新清华学堂举行。国防科工委副主任张学东，总装备部科技委原副主任徐晓岩，国家工商行政总局原局长刘敏学，清华大学校长陈吉宁，副校长康克军，副校长程建平，清华大学党委原书......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120626113513930514064/20120626113513930514064_.html" target="_blank">校长陈吉宁与2012届本科毕业生代表座谈</a></h3>
+              <p class="thnews_jqzy">　　校长陈吉宁与2012届本科毕业生代表座谈清华新闻网6月26日电（通讯员周景萍）6月20日下午，校长陈吉宁与来自各院系的15名本科毕业生代表座谈，了解同学们4年来学习成长的经历和收获，听取他们对本科生教育培养的意见和建议，并对他们的未来发展提出殷切期望。校党委副书记史宗恺一同参加座谈。图为陈吉宁讲话。智 斐摄座谈会上，毕业生代表纷纷表示，通过大学4年的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120620093244135346648/20120620093244135346648_.html" target="_blank">校长陈吉宁与硕士毕业生代表座谈</a></h3>
+              <p class="thnews_jqzy">　　校长陈吉宁与硕士毕业生代表座谈清华新闻网6月20日电（研通社记者&nbsp;方 文） 6月14日下午，校长陈吉宁在工字厅东厅与来自不同院系的18名硕士毕业生代表座谈，了解同学们在清华学习的心得体会，听取他们对硕士生培养的意见和建议。校党委副书记史宗恺一同参加座谈。图为座谈会现场。研通社记者王皓冉摄座谈会上，建筑学院陈茸、环境学院董立文、电子系黄英、材......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120319140722480597938/20120319140722480597938_.html" target="_blank">数据显示：清华毕业生主要留在了国内</a></h3>
+              <p class="thnews_jqzy">　　数据显示：清华毕业生主要留在了国内来源：中国青年报 2012-03-17 李斌今天，在清华大学举办的毕业生就业洽谈会上，该校就业指导中心主任熊义志说，有一种舆论认为，北大清华培养的学生大多出国了，没有数据支持这个观点。他说，清华大学的毕业生主要留在了国内。在该校2011届毕业生中，有近80%的就业毕业生赴国家重点企事业单位工作。赴北京以外地区就业的毕......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120319110001924925210/20120319110001924925210_.html" target="_blank">清华大学举行大型招聘会 部分学子远赴基层</a></h3>
+              <p class="thnews_jqzy">　　清华大学举行大型招聘会 部分学子远赴基层来源：新华网 2012-03-16 杨述杰清华大学16日举行2012届毕业生就业洽谈会，大型企业、科研机构和重点院校等300多家用人单位共提供逾6000个就业岗位。&nbsp;今年清华大学预计毕业生人数为6500人，除继续深造、进修的以外，拟参加就业的毕业生约4000人，其中本科生1000人，研究生3000人，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2011.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20111229165510029586980/20111229165510029586980_.html" target="_blank">2012届毕业生赴基层公共部门就业动员会</a></h3>
+              <p class="thnews_jqzy">　　2012届毕业生赴基层公共部门就业动员会清华新闻网12月29日电12月27日，2012届毕业生赴基层公共部门就业动员会在西阶教室举行。校党委副书记史宗恺出席并作动员讲话。全校200多名有志于去基层公共部门就业的毕业生参加会议。校党委研究生部副部长黄晟主持会议。史宗恺在动员讲话中讲述了自发到云南乡村小学免费任教的诗人马骅的事迹和美国海上抢险队的誓言等故......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2011.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110930092921907526932/20110930092921907526932_.html" target="_blank">2011届赴西藏基层工作毕业生座谈会召开</a></h3>
+              <p class="thnews_jqzy">　　2011届赴西藏基层工作毕业生座谈会召开清华新闻网9月30日电（通讯员张 铖） 9月27日，2011届赴西藏基层工作毕业生座谈会在工字厅东厅召开，中共中央组织部组织二局副局级巡视员单向前、清华大学党委副书记史宗恺以及陈中祥、邱志勇、秦愿3名即将到西藏基层工作的2011届毕业生出席会议。清华大学就业指导中心主任熊义志汇报了2008年以来赴西藏基层工作的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110629160937320387420/20110629160937320387420_.html" target="_blank">胡和平与2011届毕业生代表座谈</a></h3>
+              <p class="thnews_jqzy">　　胡和平与2011届毕业生代表座谈&nbsp;清华新闻网6月29日电&nbsp; （记者吕露英）6月28日，校党委书记胡和平、党委副书记史宗恺与20多位赴西部、基层、国家重要行业和领域工作的毕业生代表进行了亲切座谈，倾听了同学们的就业选择和人生理想，鼓励他们到祖国最需要的地方建功立业，并对他们提出了殷切希望。图为座谈会现场。　实习记者　御彦捷　摄　来自......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110629114423868391544/20110629114423868391544_.html" target="_blank">清华大学法学院毕业生依然抢手 46名学子...</a></h3>
+              <p class="thnews_jqzy">　　清华大学法学院毕业生依然抢手 &nbsp;46名学子赴基层　来源：光明网 2011-06-28 &nbsp;梁捷日前，清华大学法学院478人法学博士研究生、法学硕士研究生、法律硕士研究生（包括LL.M.中国法项目的外国留学生）以及法学专业本科生完成学业。与往年相同，毕业生基本完成了择业。其中46名优秀学子签约到基层选调、去西部及公共部门工作，占毕业生总人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110620164950521880926/20110620164950521880926_.html" target="_blank">两千毕业生 长跑别清华</a></h3>
+              <p class="thnews_jqzy">　　两千毕业生 长跑别清华百年校庆期间开始收集的&ldquo;时间胶囊&rdquo;同时封存来源：法制晚报 2011-06-18刘汨 徐天&nbsp;奔跑着，将最后一滴汗水留在母校的土地上。今天上午，清华大学两千余名毕业生的&ldquo;人生启航&rdquo;长跑活动举行。同时，百年校庆期间收集到的&ldquo;时间胶囊&rdquo;也在今天进行了封存。&n......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110620142509039228129/20110620142509039228129_.html" target="_blank">陈旭与精75国防毕业班同学座谈</a></h3>
+              <p class="thnews_jqzy">　　校党委常务副书记陈旭与精75国防毕业班同学座谈清华新闻网6月20日电6月17日下午，校党委常务副书记陈旭老师来到精75班，在精75班&ldquo;出发，此生相许国与家&rdquo;主题班会上和同学们亲切座谈，畅谈人生理想。作为7字班的国防生，精75的同学们即将毕业，奔赴祖国的各条国防战线。从学校走向国防战线的各个岗位，这将是同学们人生的一次重要转折点......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110620104127146478367/20110620104127146478367_.html" target="_blank">清华新百年首批毕业生以长跑纪念毕业</a></h3>
+              <p class="thnews_jqzy">　　清华新百年首批毕业生以长跑纪念毕业清华新闻网6月20日电6月18日上午，人生启航&mdash;2011年清华大学毕业长跑在紫荆操场举行。校党委书记胡和平、校党委常务副书记陈旭、校党委副书记史宗恺与来自全校各个院系的1500多名师生共同参加了此次活动。图为长跑的领队方阵。活动在悠扬的百年校庆主题歌曲音乐中开始。胡和平向清华大学新百年的第一批毕业生送上了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110614152717001382640/20110614152717001382640_.html" target="_blank">立给现世的一面华丽镜子——读《毕业生》</a></h3>
+              <p class="thnews_jqzy">　　立给现世的一面华丽镜子&mdash;&mdash;读《毕业生》来源：中国青年报 2011-06-14 &nbsp;张黎姣&ldquo;清华学校与将来中国之命运，实有莫大之关系。关心中国前途者，对于清华以往之历史，盖不可以忽焉者也。&rdquo;此句出于1924年出版的《清华人》，也被写入新出版的《毕业生》一书。《毕业生》试图用百年清华解读近代中国的历......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110427103206205497549/20110427103206205497549_.html" target="_blank">清华赴基层就业毕业生校友做客时代论坛</a></h3>
+              <p class="thnews_jqzy">　　到祖国需要的地方去清华赴基层就业毕业生校友做客时代论坛清华新闻网4月27日电&nbsp;近日，时代论坛周系列活动之&ldquo;到祖国需要的地方去&rdquo;专场访谈活动在西阶梯教室举行。清华赴基层就业毕业生校友做客时代论坛，与学弟学妹们分享了到基层工作的经验体会。校党委副书记史宗恺出席座谈会并讲话。史宗恺在讲话中指出，清华学生有很多职业选择，但选......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2011.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232614531677442/20110225232614531677442_.html" target="_blank">校党委书记胡和平为2011届毕业生讲党课</a></h3>
+              <p class="thnews_jqzy">　　校党委书记胡和平为2011届毕业生讲党课【新闻中心讯】1月13日晚，校党委书记胡和平在建馆报告厅为2011届毕业生党员讲授了一堂生动的党课，500余名研究生和本科生党员毕业生参加学习。胡和平首先和毕业生党员们共同回顾了改革开放三十年来，特别是刚刚过去的2010年我国在经济、科技等方面所取得的巨大成就，同时也分析了目前在教育、民生方面还存在的问题，即将......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2011.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225331875995687/20110225225331875995687_.html" target="_blank">清华与重庆签署战略合作协议</a></h3>
+              <p class="thnews_jqzy">　　携手百年清华 相约红色重庆清华与重庆签署战略合作协议 薄熙来会见顾秉林“百年校庆清华专家重庆行”活动同时启动【新闻中心讯 记者 崔凯 摄影 崔凯】1月7日，“百年校庆清华专家重庆行”暨清华大学与重庆市政府战略合作协议签约仪式在重庆举行，双方将在汽车、机械工程、建筑、镁铝金属制造和材料工程等方面全面合作，助推重庆发展，实现互利双赢。签约仪式前，中共中央政治......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2011.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225331921391674/20110225225331921391674_.html" target="_blank">清华简首批成果发布　提供五大学术贡献</a></h3>
+              <p class="thnews_jqzy">　　《清华大学藏战国竹简（壹）》成果发布暨出版座谈会举行清华简首批成果发布 提供五大学术贡献【新闻中心讯 记者 吕露英 摄影 郭海军】1月5日上午，备受学术界瞩目的清华简首批成果——《清华大学藏战国竹简（壹）》在清华大学主楼发布。该成果为学术研究提供了五大贡献。复旦大学杰出教授裘锡圭，安徽大学党委书记、中国文字学会会长黄德宽，上海文艺集团董事长张晓敏，中西书......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2011.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232611687304739/20110225232611687304739_.html" target="_blank">高校毕业生自主创业每年享受8000元税收...</a></h3>
+              <p class="thnews_jqzy">　　高校毕业生自主创业每年享受8000元税收减免来源：新华网 2011-01-03记者3日从教育部获悉，高校毕业生自主创业3年内按每户每年8000元为限额依次扣减其当年实际应缴纳的营业税、城市维护建设税、教育费附加和个人所得税。据了解，自2011年1月1日起，毕业年度内的高校毕业生在校期间创业，可向所在高校申领《高校毕业生自主创业证》。高校毕业生自主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232603156527830/20110225232603156527830_.html" target="_blank">清华学子向玉树震区捐《同方阵》购书善款</a></h3>
+              <p class="thnews_jqzy">　　清华学子向玉树震区捐《同方阵》购书善款【新闻中心讯】12月2日，清华大学将清华学子自愿认购《同方阵》图书的善款27,420元通过北京市红十字会捐赠给“玉树地区博爱书屋”项目，用于帮助玉树学生改善学习条件，丰富文化生活。清华大学于今年4月出版了清华师生参与国庆60周年活动的纪念图书《同方阵》。当时正值青海省玉树县遭受7.1级强烈地震，参加国庆游行的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232555687661549/20110225232555687661549_.html" target="_blank">“追寻新闻理想的路上,有您陪伴,我们永远...</a></h3>
+              <p class="thnews_jqzy">　　“追寻新闻理想的路上,有您陪伴,我们永远不孤单”——清华大学新闻传播学院毕业生深切缅怀范敬宜院长&nbsp;来源：人民网&nbsp; 2010-11-17照片牵系昨天，白花寄托思念。11月16日晚，清华大学新闻传播学院毕业生悼念范敬宜院长座谈会举行。几十名毕业生、在读学生座满了学院的会议室，缅怀他们的范爷爷。用鲜花、用泪水、用回忆，也用对彼此的鼓励。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225332265453101/20110225225332265453101_.html" target="_blank">“彩虹计划”助清华学子再圆报国梦</a></h3>
+              <p class="thnews_jqzy">　　哪里需要我们&nbsp; 哪里就有我们“彩虹计划”助清华学子再圆报国梦【新闻中心讯 记者 顾淑霞 摄影 崔凯】“清华的毕业生中，有正在做艾滋病村村长的魏华伟；有少数民族毕业生艾里肯江奋战在家乡新疆最基层，有国防毕业生已经成长成为骁勇的连长……我们清华大量同学站在了国家经济建设的主战场上。” 11月11日，在清华大学召开的“2010年度毕业生就业工作会暨就......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232553515794992/20110225232553515794992_.html" target="_blank">清华召开2010年度毕业生就业工作会暨先...</a></h3>
+              <p class="thnews_jqzy">　　清华召开2010年度毕业生就业工作会暨先进表彰会【新闻中心讯 记者 顾淑霞 摄影 崔凯】11月11日，清华大学召开了“2010年度毕业生就业工作会暨就业工作先进表彰会大会”。会上表彰了2009~2010学年度在毕业生就业工作中获得突出成绩的集体和个人。水利系等10个院系荣获“2009~2010学年度清华大学毕业生就业工作先进集体”综合奖；土木建管系等16......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232553546572244/20110225232553546572244_.html" target="_blank">“彩虹计划”助清华学子再圆报国梦</a></h3>
+              <p class="thnews_jqzy">　　哪里需要我们&nbsp; 哪里就有我们“彩虹计划”助清华学子再圆报国梦【新闻中心讯 记者 顾淑霞 摄影 崔凯】“清华的毕业生中，有正在做艾滋病村村长的魏华伟；有少数民族毕业生艾里肯江奋战在家乡新疆最基层，有国防毕业生已经成长成为骁勇的连长……我们清华大量同学站在了国家经济建设的主战场上。” 11月11日，在清华大学召开的“2010年度毕业生就业工作会暨就......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232541328409153/20110225232541328409153_.html" target="_blank">中组部领导与清华将赴西藏工作的毕业生座谈</a></h3>
+              <p class="thnews_jqzy">　　中组部领导与清华将赴西藏工作的毕业生座谈【新闻中心讯 通讯员 蔡甄 王丹】9月28日上午，中组部部务委员、组织二局局长陈向群等一行来到清华园，看望并与即将赴西藏基层工作的清华大学毕业生座谈，校党委书记胡和平一同座谈。座谈会现场座谈会在工字厅东厅举行。就业指导中心负责人熊义志介绍了学校对于选拔优秀毕业生赴西藏基层工作的高度重视和具体举措。为选拔优秀毕业......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232524937593883/20110225232524937593883_.html" target="_blank">创造积极健康毕业文化：毕业生勤工助学捐母校</a></h3>
+              <p class="thnews_jqzy">　　创造积极健康毕业文化：清华2010届毕业生勤工助学捐母校【新闻中心讯 实习记者 吕露英】从5月到7月，有这样一群年轻人，活跃在清华校园的各个岗位：有的在图书馆打扫清洁、整理图书；有的在紫荆超市处理订单、送货上门；有的在各食堂门口顶着中午火辣的太阳为就餐的同学们整理自行车；有的成为治安巡逻服务人员，为校园排除安全隐患，保卫师生的人身和财产安全……他们不辞辛......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225332812619034/20110225225332812619034_.html" target="_blank">刘延东视察浙江清华长三角研究院</a></h3>
+              <p class="thnews_jqzy">　　中共中央政治局委员、国务委员刘延东视察浙江清华长三角研究院【新闻中心讯 通讯员 张海戈】7月17日，中共中央政治局委员、国务委员刘延东视察了浙江清华长三角研究院，校党委书记胡和平陪同视察。刘延东首先参观了浙江清华长三角研究院创新大厦，观看了研究院发展情况介绍展览，听取了关于研究院的发展定位、发展模式、人才队伍建设、科技创新、教育培训、科技成果产业化、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232524234587513/20110225232524234587513_.html" target="_blank">清华美院毕业生西藏当村官</a></h3>
+              <p class="thnews_jqzy">　　清华美院毕业生西藏当村官来源：新京报 2010-07-22高云亮，清华美术学院工艺美术系金属工艺专业本科毕业生，在参加完昨日的毕业典礼后，他即将到西藏去当村官。他说，去西藏基层工作是一种幸运，这是能让他理想和现实交汇的最完美的地方。在他看来，选择西藏，更像是选择一种人生态度和生活方式，他不愿意为此去计较什么。照顾病父辍学八年 四次高考终上清华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232523546844192/20110225232523546844192_.html" target="_blank">顾秉林寄语毕业生：做第一等的事业，做中国...</a></h3>
+              <p class="thnews_jqzy">　　顾秉林寄语清华毕业生：做第一等的事业，做中国的脊梁【新闻中心讯 记者 崔凯 摄影 郭海军】“四年来，你们每天骑着自行车穿行在清华园。清晨到图书馆前排队占座，黄昏去紫荆操场挥汗如雨；在课堂上倾听思考，在寝室里夜话人生。你们是最后一届记得十食堂的同学，是清华路、学堂路、紫荆路命名后第一届毕业的同学，也是让当年的‘校内网’、现在的‘人人网’风靡起来的第一届同学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232522625736357/20110225232522625736357_.html" target="_blank">高云亮：我的西藏情</a></h3>
+              <p class="thnews_jqzy">　　我的西藏情来源：科技日报 2010-07-20高云亮，清华大学美术学院工艺美术系金属工艺专业2010届本科毕业生，家在吉林，毕业后选择到西藏基层工作。对未来，他没有丝毫的担忧，而是充满期待。他说能去西藏基层工作是一种幸运，这是能让他理想和现实交汇的最完美的地方，那里有他的事业，有他即将开始的人生，而这些，远远不是一份职业所能涵盖的。在他看来，选择......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232522593488968/20110225232522593488968_.html" target="_blank">秦冬晖：愿作西部天空的一片朝晖</a></h3>
+              <p class="thnews_jqzy">　　愿作西部天空的一片朝晖来源：科技日报 2010-07-20秦冬晖，清华大学法学院2007级法律硕士。临近毕业时，他选择投身西部，到新疆自治区党委政策研究室工作。秦冬晖去新疆工作并不是一时的决定。早在去年10月，秦冬晖就向学校党委写了一封信。在这封信中，秦冬晖写道：“我决定到祖国和人民最需要的地方去工作已很长时间了。我认为，作为一名清华学子不应......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232522109544166/20110225232522109544166_.html" target="_blank">顾秉林胡和平与2010届毕业生合影留念</a></h3>
+              <p class="thnews_jqzy">　　顾秉林胡和平与2010届毕业生合影留念【新闻中心讯】7月16日上午，为给2010届毕业生送上诚挚的祝福，清华大学校长顾秉林、党委书记胡和平与2010届毕业生合影留念。优秀博士毕业生、优秀硕士毕业生、优秀本科毕业生和优良本科毕业生以及来自各个院系的2010届毕业生分别同校领导合影。时光荏苒，丰富多彩的清华生活转瞬即逝，同学们期望以此作为离校之际的珍贵留......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232521140318764/20110225232521140318764_.html" target="_blank">启航，到祖国最需要的地方去！</a></h3>
+              <p class="thnews_jqzy">　　传承百年清华精神 谱写青春报国新章清华大学举行2010赴西部、基层、国家重要行业与领域就业毕业生出征仪式【新闻中心讯 通讯员 王丹 王莹 实习记者 胡齐明 摄影 郭海军】7月15日下午，清华大学在主楼报告厅为即将奔赴祖国西部、基层、国家重要行业和领域的毕业生举行了隆重的出征仪式。校党委书记胡和平、副校长袁驷出席了仪式，校党委副书记史宗恺主持仪式。学校各部......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

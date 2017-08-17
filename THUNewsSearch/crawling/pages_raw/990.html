@@ -1,0 +1,510 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>发展高科技振兴我中华</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231228156317398&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">发展高科技振兴我中华</h3><p align="center"><img src="/publish/news/images/upload/wangdahen2.jpg" width="135" height="200"> </p><p align="center">王大珩</p><p align="center"> 光明日报 2001-05-24 </p><p> 　　王大珩　1915年2月出生，祖籍江苏吴县，中共党员，中国科学院院士，中国工程院院士。</p><p> 　　1936年毕业于清华大学，1940年获英国伦敦大学硕士学位。我国光学事业和计量事业的奠基人之一。研制了精密跟踪电影经纬仪等多种仪器，开创我国自主研制大型综合光学装备的先河。开拓激光、空间光学、遥感、光度、色度等学科领域，成就突出。曾多次参加制订国家科技规划，联名向国家提出多项重要建议。1986年联名建议发展我国高科技，经采纳，形成国家“863”计划。倡导成立中国光学学会，并当选为第一、二、三届理事长。国际光学工程学会会士，国际宇航科学院院士。</p><p> 　　1979年获“全国劳动模范”称号，1985年获国家科技进步特等奖，1994年获何梁何利科技成就奖，1999年获“两弹一星”功勋奖章。 　　1932年，我考入清华大学物理系，受教于叶企孙、吴有训、周培源等名师。1938年我考取留英公费生，我的同学与好友钱三强已到法国留学，当时法国是中国共产党在欧洲组织中最活跃的所在地。钱三强在法国已与共产党有了较深的接触。1947年春天，他到英国参加学术活动时来看我，向我介绍了毛泽东的《新民主主义论》，还介绍了许多共产党的事情，从那时起，我对共产党有了一些了解。我们商定一起回国，迎接新中国的到来。</p><p> 　　新中国成立以来，由于社会主义现代化建设的需求，我得以很好地发挥所学的知识，使我引为自豪的是为国家做了一些创业性的工作。最先是在物质条件十分困难的情况下，创建了大连大学应用物理系。而最主要的是在上级领导及多方支持下，1952年起创建了中国科学院长春光学精密机械研究所的前身———中国科学院仪器馆。从此我如愿以偿开始发展我们中国自己的光学事业。1953年中科院仪器馆在长春正式成立，建馆第一年就大见成效，不仅完成了光学玻璃、显微镜、水平磁力秤等多项目的研究，而且第二年就有5项科研成果获得了中科院东北分院的荣誉奖励。</p><p> 　　我加入共产党是在1979年。新中国成立之初到大连时，我对党的认识还较肤浅，但对党内上下平等、讲民主的印象很深。学校领导曾问我：“你相信不相信共产党是大公无私的？”我说：“我相信。”当时确实是从心眼里佩服共产党，也一心情愿跟共产党走，并不断以党员的要求勉励自己。多年来，在党的领导、关怀、培育和信任下，使我能有机会带领一批年轻学者努力而有成效地为祖国建设作出重要贡献。“文革”期间我幸运地被列入专家保护对象。党的十一届三中全会刚刚开完，我从思想上对马列主义、毛泽东思想有了新的进一步的认识，党的实事求是的原则，用发展的眼光看事物，强调政治与业务的统一等，使我深切感到党的政策好，有什么想法敢于讲了，觉得合乎道理的意见党是会采纳的。1979年，我提出了入党的要求，很快就得到党组织的批准，成为一名共产党员。</p><p> 　　此时我更感到，作为一名党的科技工作者，对国家的建设有责任提出意见。正是这样，我大胆提出了发展高技术的建议。1986年初，我参加了一个针对美国“星球大战”计划的研讨会，从所看到的资料得悉，英、法、德、前苏联、日本等国都对此做出积极反应，相继出台科技发展战略。我认为，这是一次世界性的高科技发展机会，我们中国应该把握住这个机会，积极参与高科技领域世界性竞争。会后心情久久不能平静，便与有同样心情的三位科学家王淦昌、陈芳允、杨家联名给党中央领导写了《关于跟踪研究外国战略性高技术发展的建议》。</p><p> 　　这份建议很快引起党和国家的高度重视，邓小平同志当即批示：“此事宜速作决断，不要拖延。”国务院立即会同有关部、委、院、所，组织了几百名专家，进行了周密的调查论证。在此基础上，制定出我国的《高技术研究发展纲要》，国务院于1986年11月18日正式发出通知，至此，中国一个面向21世纪的战略性高科技发展计划公之于世。</p><p> 　　由于建议提出和党中央领导批示都是在1986年3月，“863计划”就这样诞生了。现在，“863计划”已结出丰硕的成果，我国的生物、航天、信息、自动化、新材料、能源、激光等高技术领域与世界先进水平的差距大大缩小，我国已经迈进了世界高科技竞争之林。</p><p> 　　（本报记者李海秀采访整理）</p><p> 　　（素描作者：霍然） </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年05月26日 10:04:36　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2014/20141126093254217941750/20141126093254217941750_.html" target="_blank">王大珩：他用“光”改变中国</a></h3>
+              <p>1958年,长春光机所以研制高精光学仪器和光学玻璃的“八大件一个汤”而闻名全国科技界。“八大件”是指1秒精度大地测量经纬仪、1微米精度万能工具显微镜、大型石英摄谱仪、中型电子显微镜、中子晶体谱仪、地形测量用多倍航摄投影仪、光电测距仪和高温金相显微镜，“一个汤”是指融化态光学玻璃。这是王大珩创办仪器馆以来所花心血的结晶。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110818082932319408571/20110818082932319408571_.html" target="_blank">追思两院院士王大珩：他的国防与科学观永远...</a></h3>
+              <p class="thnews_jqzy">　　追思两院院士王大珩：他的国防与科学观永远鼓励我胡思远7月29日在重庆给军训的教师与学生讲&ldquo;海洋战略与南海形势&rdquo;的国防教育课，因为中央刚刚颁发了加强国防教育的指导文件，此项工作是在国际特别是海洋局势紧张的情况下进行的，职业要求我们必需全力以赴！但没能参加当天王老的告别议式，成为心中隐隐的痛楚。遁于天国的王老，请原凉学生的不能两全。　......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110729161244563833716/20110729161244563833716_.html" target="_blank">胡和平前往八宝山送别清华杰出校友王大珩先生</a></h3>
+              <p class="thnews_jqzy">　　胡和平前往八宝山送别清华杰出校友王大珩先生&nbsp;清华新闻网7月29日电&ldquo;两弹一星功勋奖章&rdquo;获得者，中国科学院院士、中国工程院院士，国际宇航科学院院士，著名光学家，我国近代光学工程的重要学术奠基人、开拓者和组织领导者，清华大学的杰出校友王大珩先生，因病于2011年7月21日13时02分在301医院逝世，享年96岁。王大珩先生遗......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110729152506152866297/20110729152506152866297_.html" target="_blank">王大珩：他，用“光”改变了中国</a></h3>
+              <p class="thnews_jqzy">　　王大珩生平：他，用&ldquo;光&rdquo;改变了中国来源：2011-07-22 人民日报&nbsp;王大珩，光学专家，中国科学院院士，中国工程院院士。我国现代光学技术及光学工程的开拓者和奠基人之一。1915年2月26日出生，1936年毕业于清华大学。长春光学精密机械研究所的主要创始人和首任所长，领导该所早期研制了我国第一埚光学玻璃、第一台电子显......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110729105641501694828/20110729105641501694828_.html" target="_blank">“两弹一星”功勋王大珩：摘下星光的人</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;两弹一星&rdquo;功勋王大珩：摘下星光的人来源：北京日报 2011-07-26 马京生&ldquo;两弹一星&rdquo;功勋王大珩：摘下星光的人倡导中国&ldquo;863&rdquo;计划的四位功勋科学家：（左起）陈芳允、王淦昌、杨嘉墀、王大珩。王大珩和夫人顾又芬2011年7月21日下午1时，&ldquo;两弹一星&rdquo;功勋......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110729104315095682273/20110729104315095682273_.html" target="_blank">王大珩留下永恒之光</a></h3>
+              <p class="thnews_jqzy">　　王大珩留下永恒之光&nbsp;来源：光明日报&nbsp;2011-07-22&nbsp;&nbsp; 齐芳&nbsp;中新社记者 毛建军摄&nbsp;资料照片 ▲1995年1月12日，王大珩在首届&ldquo;何梁何利基金&rdquo;奖颁奖大会上。&nbsp;资料照片 ▲&ldquo;863计划&rdquo;四位倡议者合影(左起:王大珩、王淦昌、杨嘉墀、陈......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232414500359799/20110225232414500359799_.html" target="_blank">王大珩学术思想与创新贡献研讨会召开</a></h3>
+              <p class="thnews_jqzy">　　王大珩学术思想与创新贡献研讨会召开“王大珩星”命名仪式同期举行王大珩，1915年生，江苏吴县（今苏州市）人，1936年毕业于清华大学物理系。2月26日是新中国光学事业主要奠基人和创始人——王大珩先生95周岁生日。中国科学院光电研究院等单位当天在京主办了王大珩学术思想与创新贡献研讨会，以回顾他从事科学事业73年来为我国科学事业作出的卓越贡献。王大珩夫人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232324859387559/20110225232324859387559_.html" target="_blank">唐敖庆、王大珩当选“吉林骄傲”人物</a></h3>
+              <p class="thnews_jqzy">　　唐敖庆、王大珩当选“吉林骄傲”人物吉林省为庆祝新中国成立60周年开展的“吉林骄傲”人物评选结果日前在长春揭晓，我校两位老学长唐敖庆和王大珩荣获“吉林骄傲”人物称号。唐敖庆（1915-2008），汉族，江苏省宜兴县人，中共党员。著名化学家、卓越的教育家，享誉国际的具有特色的中国理论化学派的创建人及主要代表者。唐敖庆1940年毕业于西南联大化学系，194......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232147921314645/20110225232147921314645_.html" target="_blank">王大珩：缅怀恩师叶企孙先生</a></h3>
+              <p class="thnews_jqzy">　　缅怀恩师叶企孙先生王大珩值此叶企孙先生诞辰110周年之际，我荣幸地被邀请参加纪念大会。由于我的健康原因，医生劝告不宜参加大型集会。这里写几件往事，表达我对叶先生的崇敬和缅怀之情。第一件事，叶先生是一位杰出的科学家、教育家和爱国者。大家都知道他在美国学成回国后，以极大的爱国热情从事教育工作，创办全国闻名的清华大学物理系，培育众多的科技人才。所以我们......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2008.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232132375458849/20110225232132375458849_.html" target="_blank">王大珩与中国光学会的情缘</a></h3>
+              <p class="thnews_jqzy">　　王大珩与中国光学会的情缘●中国光学学会　庞立　2008年是中国科协成立50周年，在这个纪念日里让我们想起两院院士王大珩先生多年来，关心科协与中国光学学会发展中的一些事。王老是中国科协第三届全委会副主席；是中国光学学会第一，二届的理事长。1979年中国光学学会成立，王老功不可没。1987年王老积极促使中国光学学会正式加入了国际光学学会（ICO）成为世界......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2007.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231833109544738/20110225231833109544738_.html" target="_blank">我国光学界公认的学术奠基人、开拓者和组织...</a></h3>
+              <p class="thnews_jqzy">　　我国光学界公认的学术奠基人、开拓者和组织领导者——王大珩（１９１５— ）卢国琛王大珩，光学专家。我国光学界公认的学术奠基人、开拓者和组织领导者。多年来为开拓我国光学研究及光学仪器制造作出了突出贡献。特别是为我国国防光学工程事业做出了重大贡献，为此曾获国家科技进步特等奖。在激光技术、遥感技术、计量科学、色度标准等方面都作出了重要贡献，是我国“８６３”高......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231236703481646/20110225231236703481646_.html" target="_blank">名师给予学生最多的是什么</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document名流看教育名师给予学生最多的是什么光明日报 2001年9月18日本报记者　夏欣　 编者按 21世纪的人类将面对一个更为复杂多变的世界，我们在探讨未来教育改革和创新的时候，不妨听听各个领域知名人士的看法。他们虽不是研究教育的专家，但往往站在学科的前沿，有引领、开拓的思想高度；他们的教育背景丰富，有兼容东西文化的深厚底蕴；他......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225352515916815/20110225225352515916815_.html" target="_blank">名师给予学生最多的是什么</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document名流看教育名师给予学生最多的是什么光明日报 2001年9月18日本报记者　夏欣　 编者按 21世纪的人类将面对一个更为复杂多变的世界，我们在探讨未来教育改革和创新的时候，不妨听听各个领域知名人士的看法。他们虽不是研究教育的专家，但往往站在学科的前沿，有引领、开拓的思想高度；他们的教育背景丰富，有兼容东西文化的深厚底蕴；他......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231227375621879/20110225231227375621879_.html" target="_blank">年轻人做学问态度最重要</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document年轻人做学问态度最重要北京青年报 2001年5月15日昨天在首届全国科技活动周科普咨询现场，王大珩院士在回答青年本科生提问 时说———本报记者阎建立报道　昨天上午，首届全国科技活动周在中山公园隆重开幕， 70多个学会和研究会的近400名专家展开科普咨询，这当中最引人注目的当属87岁的   中科院工程院院士王大珩，他也......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354312980756/20110225225354312980756_.html" target="_blank">年轻人做学问态度最重要</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document年轻人做学问态度最重要北京青年报 2001年5月15日昨天在首届全国科技活动周科普咨询现场，王大珩院士在回答青年本科生提问 时说———本报记者阎建立报道　昨天上午，首届全国科技活动周在中山公园隆重开幕， 70多个学会和研究会的近400名专家展开科普咨询，这当中最引人注目的当属87岁的   中科院工程院院士王大珩，他也......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231208218848891/20110225231208218848891_.html" target="_blank">【人物转载】王大珩：让“863计划”光耀...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document王大珩：让“863计划”光耀中华（科技日报 2001年3月5日）本报记者郑千里&nbsp; &nbsp; 1986年以前，人们只要提起王大珩院士，就会将他和我国的光学技术发展联系在一起，因为他被国内外同行公认是“中国光电学之父”，是中国光电学行业的奠基人。王大珩早年曾留学英国，但为了祖国的光学事业，他毅然决然在194......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

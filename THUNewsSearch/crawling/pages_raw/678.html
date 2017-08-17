@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>邓小平与清华大学</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225354765972700&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9648/index.html' class='navigation_style'>头条新闻</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">邓小平与清华大学</h3><p align="center"> (2001.04.29 09:57:01) </p><p>新华网北京４月２８日电 从新中国成立后到改革开放时期，清华大学的各个发展过程都得到了邓小平同志的亲切关怀。</p><p> １９５７年１月１２日，时任中央政治局常委的邓小平来到清华为上万名师生作了一场长达５个多小时的形势报告。从俄国十月革命的历史到社会主义的发展，从无产阶级专政的历史经验到完善社会主义民主制度，他侃侃而谈，鞭辟入里。小平同志的谆谆教导和殷切期望深深打动了清华师生的心，他们说：这个报告坦率、深刻，不回避当前存在的问题，这不仅说明党和人民是坦诚相见的，更说明我们党有充分的自信和能力面对并解决这些问题。 </p><p>十年动乱刚刚结束，小平同志自告奋勇主抓教育工作。他曾对清华指示“办学校，要按学校工作的规律办，要按照教育的规律办”，为清华，也为整个教育战线的拨乱反正工作指明了方向。 </p><p>１９７７年７月到９月，邓小平在多次谈话中明确指出：“要抓一批重点大学。重点大学既是办教育的中心，又是办科研的中心。”“清华、北大要恢复起来，要给他们好的学生。”１９７８年春，邓小平同志责成教育部就   清华的情况向中央写出专题报告。当年６月２３日，他在办公室亲切接见了中央主管教育的同志和清华的主要领导，专门听取清华的工作报告，并作了一系列重要指示。他高瞻远瞩地指出：“重点学校的规模应该逐步扩大。将来清华应发展到两万学生，研究生至少两三千。不搞好大学，提不高全民族的科学文化水平。”他对青年学生的健康成长、加强学校的思想政治工作十分重视，指出：“清华过去从高年级学生和青年教师中选出人兼职做政治工作，经过若干年的培养形成了一支又红又专的政治工作队伍，这个经验好。” </p><p>１９８０年３月１２日，小平同志在中央军委常委扩大会议上说：“今天上午我看了清华大学的一个报告。清华大学提出一个很重要的问题，就是学生从到学校第一天起，就要对他们进行政治思想工作——清华大学的经验，应当引起全国注意。又红又专，那个红是绝对不能丢的。”   这是小平同志对清华党团组织和全校教工工作的充分肯定，是对全体师生的极大关怀和鼓舞。</p><p>１９８４年８月，应著名史学家、清华校友吴晗胞妹吴浦月的请求，邓小平同志为清华大学建立的“晗亭”亲笔题名。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月29日 08:50:51　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140918090654999271029/20140918090654999271029_.html" target="_blank">铭记小平同志殷殷嘱托，加快建设世界一流大学</a></h3>
+              <p>今年是邓小平同志诞辰110周年，我们深切缅怀这位改变了中国历史命运和世界历史进程，赢得了中国人民衷心爱戴和世界人民广泛尊敬，为广大清华师生永远铭记的一代伟人。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2014.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140821100847193681461/20140821100847193681461_.html" target="_blank">胡鞍钢：邓小平时代——中国改革开放（之二）</a></h3>
+              <p>邓小平最早对“农业学大寨”的作法提出质疑，并提出农业自由化的思路，积极支持小岗村“包产到户”，把农村作为中国改革的突破口，多次视察农村情况，连续五年的中央1号文件都是关注农村问题。最终，农村改革取得巨大成功，并带动了城市改革的推进。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140819141940885671693/20140819141940885671693_.html" target="_blank">胡鞍钢：邓小平时代——中国改革开放（之一）</a></h3>
+              <p>应观察者网之邀，清华大学国情研究院院长胡鞍钢特此撰文，主要探讨了“毛泽东为邓小平改革开放开启战略机遇窗口”和“为什么是邓小平决定了对外开放”两个问题。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231500890571091/20110225231500890571091_.html" target="_blank">清华师生参观“邓小平在北京图片展”</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“邓小平是中国人民的好儿子！”——清华师生参观“邓小平在北京图片展”感言 【新闻中心讯 记者 周襄楠】为缅怀邓小平同志，8月24日，200多名清华师生来到中华世纪坛，参观了“亲切的关怀 深切的思念——邓小平在北京图片展”。 在宽阔的展厅里，虽然只是在照片里再次看到邓小平的笑容，但是他的笑容给人的感觉还是那么亲切。有的同学和老师一边观看一边记......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231500593926554/20110225231500593926554_.html" target="_blank">我校教师创作的“邓小平铜像”在四川广安落成</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校教师创作的“邓小平铜像”在四川广安落成中共中央总书记、国家主席胡锦涛出席仪式，并为铜像揭幕近日，由我校美术学院教师、雕塑家李象群教授历时两个月精心创作的“邓小平铜像”在四川广安邓小平故居陈列馆落成。中共中央总书记、国家主席胡锦涛为铜像揭幕。江泽民同志在雕塑基座上题写了“邓小平铜像”五个大字。身着短袖衫、军便裤、圆口鞋，面带微笑的邓小平坐......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231500375344646/20110225231500375344646_.html" target="_blank">清华“追随小平足迹”报告团举行座谈</a></h3>
+              <p class="thnews_jqzy">　　清华“追随小平足迹”报告团举行座谈科技日报  2004-8-21  陈毅彬&nbsp;&nbsp;&nbsp;本报北京8月20日电 “追随小平足迹，投身复兴伟业”———清华大学博士生报告团2004暑期系列活动总结座谈会今天举行。&nbsp;&nbsp;&nbsp;为纪念邓小平诞辰一百周年，8月6日至17日，清华大学的72名博硕士研究生组成6支小分队，分赴广西......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231500421854784/20110225231500421854784_.html" target="_blank">清华举行纪念邓小平诞辰百年大会</a></h3>
+              <p class="thnews_jqzy">　　清华举行纪念邓小平诞辰百年大会科技日报  2004-8-21  陈毅彬&nbsp;&nbsp;&nbsp;本报北京8月20日电 今天，清华大学举行了“纪念邓小平同志诞辰一百周年大会”。清华大学党委书记陈希表示，要牢记小平同志教诲，为把清华大学建设成世界一流大学而努力奋斗。&nbsp;&nbsp;&nbsp;大会在专题片《百年小平清华永铭》中拉开序幕。与会代表......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231500000369540/20110225231500000369540_.html" target="_blank">我校举行邓小平同志诞辰一百周年纪念大会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档缅怀世纪伟人 创建一流大学我校举行邓小平同志诞辰一百周年纪念大会【新闻中心记者 类延旭 摄影 郭海军】8月20日下午，主楼后厅，庄严肃穆。嘹亮的国歌，穿透历史的烟云，回荡在清华园的上空，表达着清华人对百年小平的无限敬仰和怀念之情。 “清华大学纪念邓小平同志诞辰一百周年大会”在这里隆重举行。清华师生聚集一堂，共同缅怀这位全党全军全国各族人民公......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231459859319970/20110225231459859319970_.html" target="_blank">缅怀伟人邓小平</a></h3>
+              <p class="thnews_jqzy">　　无标题文档缅怀伟人邓小平张再兴在纪念邓小平诞辰100周年的日子里，亿万中国人民的心中回荡着一代伟人的肺腑之言：我是中国人民的儿子，我深情地爱着我的祖国和人民。对祖国对人民至深至爱的情感是邓小平一生的追求、奋斗的出发点和归宿。在70多年的革命生涯中，邓小平为中国人民的解放，为中华民族的振兴和统一，为社会主义和共产主义的伟大事业和理想，献出了生命、智慧和力量......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231459750303298/20110225231459750303298_.html" target="_blank">拨乱反正，建设中国特色的社会主义</a></h3>
+              <p class="thnews_jqzy">　　无标题文档拨乱反正，建设中国特色的社会主义李传信粉碎“四人帮”以后的拨乱反正工作，是从否定“两个凡是”开始。1977年2月3日人民日报、解放军报和红旗杂志发表同一篇社论，其中提出“凡是毛主席作出的决策，我们都坚决拥护，凡是毛主席的指示，我们都始终不渝地遵循。”1977年3月的中央工作会议，华国锋同志的讲话，坚持“两个凡是”的方针。4月10日，邓小平同志给......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231459687256064/20110225231459687256064_.html" target="_blank">牢记小平同志教诲 建设世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　无标题文档牢记小平同志教诲 建设世界一流大学陈希 顾秉林我们在邓小平同志诞辰100周年的时候，深深缅怀这位全党全军全国各族人民公认的享有崇高威望的卓越领导人，伟大的马克思主义者，伟大的无产阶级革命家、政治家、军事家、外交家，久经考验的共产主义战士，中国社会主义改革开放和现代化建设的总设计师，建设有中国特色社会主义理论的创立者。 邓小平同志在他伟大的革......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231459625899054/20110225231459625899054_.html" target="_blank">百年小平 清华永铭</a></h3>
+              <p class="thnews_jqzy">　　无标题文档百年小平 清华永铭●新闻中心记者 华章八月的清华园里，招展的红旗映红了一张张青春的面孔。清华大学博士生报告团“追寻小平足迹，投身复兴伟业”活动出征仪式隆重举行。火热的活动把这一群年轻的莘莘学子和一个伟大的名字联系在了一起。20多年前，当70多岁的邓小平再次出现在中国政治舞台上的时候，他们当中的很多人还是不谙世事的儿童。而今，当这......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344531227917/20110225225344531227917_.html" target="_blank">我校举行邓小平同志诞辰一百周年纪念大会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档缅怀世纪伟人 创建一流大学我校举行邓小平同志诞辰一百周年纪念大会【新闻中心记者 类延旭 摄影 郭海军】8月20日下午，主楼后厅，庄严肃穆。嘹亮的国歌，穿透历史的烟云，回荡在清华园的上空，表达着清华人对百年小平的无限敬仰和怀念之情。 “清华大学纪念邓小平同志诞辰一百周年大会”在这里隆重举行。清华师生聚集一堂，共同缅怀这位全党全军全国各族人民公......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231459796622286/20110225231459796622286_.html" target="_blank">邓小平同志关怀清华大学</a></h3>
+              <p class="thnews_jqzy">　　无标题文档邓小平同志关怀清华大学方惠坚今年8月是邓小平同志诞辰100周年，我们缅怀邓小平同志的丰功伟绩，就会联想到他对清华大学的关心、爱护和直接的指导。 早在1956年，被毛泽东同志称为“多事之秋”的那一年，上半年苏共召开二十大，下半年发生了波兰和匈牙利事件，以及南斯拉夫共产主义者联盟主席铁托在普拉发表了演说。根据中国共产党中央政治局扩大会议的讨论，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231458531584123/20110225231458531584123_.html" target="_blank">北京高校6000余名师生参观邓小平诞辰百...</a></h3>
+              <p class="thnews_jqzy">　　北京高校6000余名师生参观邓小平诞辰百年展新华社  2004-8-18  王黎&nbsp;&nbsp;&nbsp;新华社北京8月18日电(记者王黎)自8月10日开展以来，邓小平诞辰百年展平均每天都吸引六、七百名高校师生前来参观。截至18日记者发稿时，已有北京大学、清华大学、人民大学、北京师范大学等7所高校的6000多名师生前来观看。&nbsp;&nbsp;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231458203109079/20110225231458203109079_.html" target="_blank">市教工委和市高校党建研究会纪念邓小平诞辰...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档学习小平党建理论 推进高校党建工作市教工委和市高校党建研究会纪念邓小平诞辰100周年座谈会在我校召开【新闻中心讯 记者 华章 摄影 魏磊】8月17日下午，由北京市委教育工委和北京市高校党建研究会共同举办的学习邓小平党建理论暨纪念邓小平同志诞辰100周年座谈会在我校二教会议室举行。来自北京市三十多所高校的负责同志和党建研究人员40多人参加了会议，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231455781747398/20110225231455781747398_.html" target="_blank">“马克思主义中国化与邓小平理论”全国学术...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档重温伟人思想 探讨发展之路“马克思主义中国化与邓小平理论”全国学术研讨会在我校举行【新闻中心讯 刘涛雄 冬梅 摄影 郭海军】为纪念邓小平诞辰100周年，重温伟人思想，缅怀伟人风范，继承伟人遗志，由中国历史唯物主义学会、清华大学马克思主义研究中心、北京大学马克思主义学院、中国人民大学马克思主义学院、中国社会科学院马列所等单位联合发起,清华大学承办......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344687977840/20110225225344687977840_.html" target="_blank">“马克思主义中国化与邓小平理论”全国学术...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档重温伟人思想 探讨发展之路“马克思主义中国化与邓小平理论”全国学术研讨会在我校举行【新闻中心讯 刘涛雄 冬梅 摄影 郭海军】为纪念邓小平诞辰100周年，重温伟人思想，缅怀伟人风范，继承伟人遗志，由中国历史唯物主义学会、清华大学马克思主义研究中心、北京大学马克思主义学院、中国人民大学马克思主义学院、中国社会科学院马列所等单位联合发起,清华大学承办......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344750826866/20110225225344750826866_.html" target="_blank">我校“博士生报告团”重走伟人之路</a></h3>
+              <p class="thnews_jqzy">　　无标题文档追随小平足迹，投身复兴伟业我校“博士生报告团”重走伟人之路【新闻中心讯 记者 聿才】8月6日，“追随小平足迹，投身复兴伟业——清华大学博士生报告团2004暑期系列活动”正式启动。本次活动历时约10天，来自清华大学14个院系的70余名博硕士研究生组成7个团队，将通过对邓小平同志生活战斗过的法国及国内六个省市地区的参观、访问、考察和科技服务，追忆小......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

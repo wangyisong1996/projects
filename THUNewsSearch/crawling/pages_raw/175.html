@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>尹鸿：“新清华人”</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231212078981684&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>清华印象</TITLE><META NAME="Template" CONTENT="D:\office97\Office\html.dot"></HEAD><BODY LINK="#0000ff" VLINK="#800080" bgcolor="#FFFFFF"><B><FONT FACE="宋体" LANG="ZH-CN"><P ALIGN="CENTER">“新清华人”</P><P ALIGN="CENTER">尹鸿</P></font></B><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN">本是一个不太好动的人，总习惯在自己熟悉的轨道上溜达。所以，在四川大学一呆</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">9</FONT><FONT FACE="宋体" LANG="ZH-CN">年，在北师大</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">13</FONT><FONT FACE="宋体" LANG="ZH-CN">年没有动窝。直到后来听别人“人挪活树挪死”的劝说才终于起了改变环境的念头。于是，</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1999</FONT><FONT FACE="宋体" LANG="ZH-CN">年底调入了成立不久的清华大学传播系，成了时间意义上的一个“新清华人”。</font></P><FONT FACE="宋体" LANG="ZH-CN"><P ALIGN="JUSTIFY">刚刚进入清华这个自己过去不熟悉的学校时，还有些不适应角色的突然转换，自己老把自己当外人。所以，每当向清华人问清华事的时候，总会问“你们”清华如何如何；而向别人讲到清华，也习惯说“他们”清华如何如何。不过，经过了一段并不太长的时间以后，我这种“见外”的感觉却不知不觉消失了，在越来越多的场合都会很自然地说“我们”清华如何如何。有时候，我自己也惊讶为何会如此迅速、如此自然而然地与清华人身份认同。</P><P ALIGN="JUSTIFY">回想当初，我第一次闪过到清华工作的念头，是因为喜欢清华校园。清华校园有古朴之风也有现代之韵，闹中有静、静中有动，中西交融、开阔大气，让人心动。调入清华以后，慢慢感受到，清华是所名校，名校就有名校的优越性，清华人在北京、在中国乃至在世界上许多地方都备受尊重，清华学生在当今中国人才市场上也最受欢迎，清华有许多成就卓著的院士、科学家和学者，清华培养了一大批政界、商界、科学界、学界的名流……显然，这些都是清华的魅力。但是，对于我来说，这些东西似乎还过于外在、过于现象。在我的感觉中，清华最有魅力的地方可能还在于它有一种很特殊的气质、很强烈的精神，如果让我来概括这种精神气质的话，就是自傲但并不自满、自信但并不自大。</P><P ALIGN="JUSTIFY">与清华人接触，第一个感觉，就是这里的老师、学生心气都高。一位也刚调入清华不久的教授曾经说，自己到清华后有一个明显的印象，就是清华人眼里看着的、嘴里念叨的往往都是牛津、剑桥、哈佛、麻省、斯坦福这样的世界一流名校，大家言行间便为自己提供了一个不低的参照，做起事来便自己给了自己压力，正是在这种压力之下，许多的清华人都特别能吃苦能耐劳。在清华园里，老师、学生大多行色匆匆，许多人以办公室、实验室为家，学生也习惯了寝室教室图书馆实验室“四点一线”、周而复始的生活。到深夜或周末，办公室、实验室、教室也还常常灯火通明。</P></FONT><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN">也许，清华人生活得太苦太累，不太会享受生活。清华校内，银行很多，数起来至少有</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">4</FONT><FONT FACE="宋体" LANG="ZH-CN">、</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">5</FONT><FONT FACE="宋体" LANG="ZH-CN">家，有的还不止一处营业，有钱人看来并不少。但奇怪的是，清华园内和学校周边，饭店、餐馆却不多，上档次的饭店几乎没有。这在“以食为天”的环境中显得有些不可思议。大学自身就是一个大学城，许多大学校园内外往往都饭店众多、食客盈门。但在清华，人口数以万计，人来人往，熙熙攘攘，却食堂多，饭店少，吃饭的时候除了几块钱的食堂快餐便很少选择的余地。有时候来了朋友，都不太容易在附近找到一家合适的饭店。我不知道清华餐饮业为什么如此不发达，猜想也许是因为清华人对吃的要求不高，吃好或者好吃不仅花钱而且还花时间，不少清华人缺的可能不是钱而是时间。惦记着干事，生活就不免应付。说实在的，对这种多少有些显得自虐的生活方式，一开始让我很不习惯。</font></P><FONT FACE="宋体" LANG="ZH-CN"><P ALIGN="JUSTIFY">但是，人说“入乡随俗”，到清华久了，慢慢也开始适应清华的节奏。下班越来越晚，在办公室的时间越来越长，揽下的工作也越来越多，周末陪太太和孩子的时间却越来越少。有朋友开玩笑说，到了清华多拿了几千块钱的津贴，就该多干点活。但如果真的从效益角度看，这种时间和报酬“比”其实很可能得不偿失。但即便这样，看周围的人，似乎对自己的辛苦并不多么介意。细细想来，也许是因为大家把自己干的事看作是种事业，既然是事业大家就不会完全用经济回报来衡量其价值了。也许，正是因为许多人这样默默地劳动，清华的事业才能一天天发展壮大，清华的品牌才越来越得到社会尊重，反过来，清华人也从中得到心理优越感、一种精神上的充实。这些快乐，在很大程度上也许会超过物质获得带给人的满足。</P><P ALIGN="JUSTIFY">如今，在各个单位，不发牢骚、不骂领导的地方很少。在清华，也能听到人抱怨，听到人们发泄对某人某事的不满。但是，在清华，却很少像在许多单位那样听到人们说，“我们这单位，就是这种德行”，“我们这儿，历来如此”，“我们这儿，没治”等等，无论人们有什么意见，都只是对具体的人和事，但不对学校、不对清华这个名字。对清华，大家总是带着一份关怀、一种希望和一种信任。在大家心目中，清华是自己的家，是自己的家就会付出对家园的热爱。</P></FONT><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN">清华已经有了</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">90</FONT><FONT FACE="宋体" LANG="ZH-CN">年的历史，应该说，为人们留下了许多记忆，而在我看来，最重要的，是留下了清华人对清华的这份厚爱。这真正是一笔宝贵的财富，一种难以估价的精神凝聚力，它让清华成为了清华人心中的一面旗帜。我想，可能也正是从周围所感受到的这种凝聚力，推着我在不知不觉中完成了从一个非清华人向清华人的角色转换，也是这种凝聚力保证了清华东门外铭刻着的校训“厚德载物、自强不息”被一代代默默地延续并铭刻在清华的历程中。</font></P></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月06日 12:56:43　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120612163317417404512/20120612163317417404512_.html" target="_blank">清华学子在伊春安了“家”</a></h3>
+              <p class="thnews_jqzy">　　清华学子在伊春安了&ldquo;家&rdquo;来源：伊春日报 2012-06-12 席仲南6月11日，清华大学新闻与传播学院大学生社会实践基地在我市正式成立，并举行签约授牌仪式。市委书记、市人大常委会主任王爱文出席仪式并与学院负责人就进一步增进合作和发展达成共识。王爱文在会见时说，清华大学新闻与传播学院在我市建立大学生社会实践基地，这是清华对伊春的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110412173003910710719/20110412173003910710719_.html" target="_blank">培养出镜记者 清华不是造星</a></h3>
+              <p class="thnews_jqzy">　　新闻学首次设置第二学位 相貌纳入考察范围 但更注重综合能力培养出镜记者 清华不是造星来源：法制晚报 2011-04-11 徐天 张岩&nbsp;清华大学新闻学院首次开设第二学位，设置&ldquo;出镜记者&rdquo;方向，院方表示，在考察相貌气质和普通话的同时，更注重综合能力。&nbsp;近日，清华新闻与传播学院常务副院长尹鸿在微博透露，该校将面向......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110411181154635644394/20110411181154635644394_.html" target="_blank">尹鸿：人文清华</a></h3>
+              <p class="thnews_jqzy">　　人文清华尹 鸿我在北京已经10多个年头，但因为自己从文，对清华大学一直比较陌生。多年前，我和妻子带女儿到清华蒙民伟楼参加钢琴考级，考后顺便散步清华校园，清华校园的那份清净、那份素雅、那份开阔，连同陈寅恪、吴宓、闻一多、朱自清等等儒风雅韵的名字一起，突然间在冥冥中撞入了我的心灵，不经意间便为我播下了最初的清华情结。此后不久，我几乎是在偶然的情况下就得到......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2010.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232528515845941/20110225232528515845941_.html" target="_blank">尹鸿：走上开放改革壮大之路的中国电影产业</a></h3>
+              <p class="thnews_jqzy">　　走上开放改革壮大之路的中国电影产业尹鸿来源: 中国日报网 2010-08-2521世纪初期，中国电影年产量不足百部，而且大多是由政府直接间接投资；电影市场一片萧条，全国电影年票房区区5、6亿，除了依赖进口影片支撑影院以外，全年只有冯小刚的贺岁片成为唯一被观众普遍认可的国产片；电影文化也陷入历史低谷，电视明星、电视剧、电视现象成为流行热点。这种濒临绝境的局......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232516109610411/20110225232516109610411_.html" target="_blank">尹鸿：电影产业亟待突破五大瓶颈</a></h3>
+              <p class="thnews_jqzy">　　电影产业亟待突破五大瓶颈清华大学新闻与传播学院副院长　尹鸿正处于快速上升期的中国电影产业面临五大瓶颈制约：一是电影市场影院发展不足，影响电影的扩容。近两年影院的发展滞后于观众的需求，房地产价格的高涨导致影院建设受到很大制约。各地城市规划有必要为文化设施留出一定空间，否则影院建设在现代房地产价格之上很难发展。二是市场企业主体不强。国内真正有品牌影响......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232502171736674/20110225232502171736674_.html" target="_blank">尹鸿：中国电影的春天来了</a></h3>
+              <p class="thnews_jqzy">　　中国电影的春天来了尹鸿（清华大学新闻与传播学院常务副院长）电影产业逆势上扬，国内电影票房同比增幅达到42.96%，成为文化产业发展支柱和国民经济发展新亮点。预计2010年国内票房可达100亿元左右。金融危机、经济危机、失业危机、就业危机……没有能挡住中国电影一路狂奔的脚步。在全球经济寒冬的普遍预期中，中国电影却延续着前一年的虎虎生气，仍然风生水起、热......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232442750278131/20110225232442750278131_.html" target="_blank">尹鸿：规避“半中半洋”不可能</a></h3>
+              <p class="thnews_jqzy">　　规避“半中半洋”不可能语言是流动的 规范死了会失去生命力北京晨报 2010-04-26清华大学新闻与传播学院副院长尹鸿认为，语言本身是流动的，语言从来都是不纯洁的，一旦纯洁就会失去生命力，就成了一个表达过去的工具，而无法表达现在。英国《泰晤士报》4月22日发表文章说：“中国网民向Lady Gaga学习英语时髦词汇。”几十年来，西方文化的引入在语言方面......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232432500613189/20110225232432500613189_.html" target="_blank">尹鸿做客新人文讲座谈今日电影之走向</a></h3>
+              <p class="thnews_jqzy">　　尹鸿做客新人文讲座谈今日电影之走向&nbsp;&nbsp;&nbsp; 【新闻中心讯 学生通讯员 李道全】4月16日下午，清华大学新闻与传播学院常务副院长尹鸿教授做客新人文讲座，以“今日电影之走向”为题，介绍了电视时代之后电影艺术发生的重大转向与转变。本次讲座由肖鹰教授主持，吸引了400余名学生刷卡入场聆听。&nbsp;&nbsp;&nbsp; 演讲中，他阐......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232328109615315/20110225232328109615315_.html" target="_blank">清华教授尹鸿出任首届北京电影家协会副主席</a></h3>
+              <p class="thnews_jqzy">　　清华教授尹鸿出任首届北京电影家协会副主席9月20日，北京电影家协会在京宣告成立，并召开第一次会员代表大会，同时选出第一届理事会主席团：张和平任主席，马丛风任驻会副主席，清华大学新闻与传播学院副院长、影视传播研究中心主任尹鸿教授和张宏森、韩三平、李雪健、王中军、王一川等人任副主席。在首届北京影协128名会员名单里，有于洋等老一辈表演艺术家，冯远征、陶红......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232241328512651/20110225232241328512651_.html" target="_blank">【人物】尹鸿：做“不落伍”的学者和师者</a></h3>
+              <p class="thnews_jqzy">　　尹鸿：做“不落伍”的学者和师者●新闻中心实习记者 刘蔚如&nbsp;年少时梦想当兵，却成为1977年恢复高考后的首批大学生；学了十年的中国现代文学，如今却从事影视传播研究；曾经幻想过成为文学家、政治家，最终却做了大学教授。回顾过往，尹鸿笑着说：“有时候是时势选择了你。人是时代的产物，时代给你创造了这样的道路，你就走了。”在2009年初揭晓的200......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104117515637689/20110226104117515637689_.html" target="_blank">【人物】尹鸿：做“不落伍”的学者和师者</a></h3>
+              <p class="thnews_jqzy">　　尹鸿：做“不落伍”的学者和师者●新闻中心实习记者 刘蔚如&nbsp;年少时梦想当兵，却成为1977年恢复高考后的首批大学生；学了十年的中国现代文学，如今却从事影视传播研究；曾经幻想过成为文学家、政治家，最终却做了大学教授。回顾过往，尹鸿笑着说：“有时候是时势选择了你。人是时代的产物，时代给你创造了这样的道路，你就走了。”在2009年初揭晓的200......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2009.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232225187346938/20110225232225187346938_.html" target="_blank">清华尹鸿教授荣登2008文化产业年度人物榜</a></h3>
+              <p class="thnews_jqzy">　　清华尹鸿教授荣登2008文化产业年度人物榜【新闻中心讯 通讯员 肖红缨】日前，2008文化产业年度人物评选揭晓，清华大学新闻与传播学院副院长、影视传播研究中心主任尹鸿教授与胡惠林、祁述裕、陈维东、蔡东青等中国文化产业理论研究和实践领域的著名学者、专家以及奥运福娃等动漫形象榜上有名。在公布该消息的网站“中国文化报社文化网”上，尹鸿教授的上榜理由为：20......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232219203844636/20110225232219203844636_.html" target="_blank">尹鸿：电视像阳光一样构成当代中国人生态环境</a></h3>
+              <p class="thnews_jqzy">　　电视像阳光一样构成当代中国人生态环境尹鸿电视，像阳光、空气和水一样，构成了当代中国人的生态环境。我们很难想象，没有电视，我们过去30年的生活会是什么模样，我们的记忆将会何等苍白，我们可以讨论的共同话题和可以传唱的熟悉旋律能从哪里找到，我们从无比单调的绿蓝两色中山装到今天五颜六色的服装风格诸如此类的巨大演变，将如何被历史记载。从《话说长江》中高低错落、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231948328320773/20110225231948328320773_.html" target="_blank">尹鸿：大片的路会不会越走越窄？</a></h3>
+              <p class="thnews_jqzy">　　尹鸿：大片的路会不会越走越窄？2002年，张艺谋的《英雄》创造了中国国产电影前无古人，尚无来者的最高票房记录。从那一刻起，“中国式大片”，年复一年，就在媒介的热炒中，在喧嚣的票房中，在无边的谩骂中，在期望与失望的周而复始的循环中，走过了四五年。《十面埋伏》、《无极》、《七剑》、《夜宴》相继粉墨登场，《满城尽带黄金甲》、《墨攻》、《赤壁》也接踵而至。中国式......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231906421615656/20110225231906421615656_.html" target="_blank">尹鸿：欧美娱乐节目新观念与新模式</a></h3>
+              <p class="thnews_jqzy">　　欧美娱乐节目新观念与新模式6月11日，由上海电视节组委会、上海文广新闻传媒集团主办的新娱乐华语主持人高峰论坛在浙江乌镇西栅水乡景区开幕，两岸三地著名华语娱乐主持人、专家汇聚一堂。论坛由上海文广新闻传媒集团综艺部总监田明主持，中国电视艺术家协会主持人专业委员会秘书长白谦诚、上海文广新闻传媒集团副总裁腾俊杰与会致词。以下是清华大学新闻与传播学院副......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231745484898871/20110225231745484898871_.html" target="_blank">尹鸿：关于中国百年电影的认知</a></h3>
+              <p class="thnews_jqzy">　　尹鸿：关于中国百年电影的认知从1905年到1949年，中国尽管战乱频频、烽火连绵，社会的政治经济局面混乱无序，好莱坞电影的冲击肆无忌惮，但中国民族电影工业仍然艰难地生存和发展着，并且出现了郑正秋、郑君里、蔡楚生、费穆、吴永刚、孙瑜、袁牧之等一批杰出的电影人，创造了《孤儿救祖记》(张石川、郑正秋编导，1923)、《火烧红莲寺》(张石川编导，1928)、《春......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231554531621169/20110225231554531621169_.html" target="_blank">【清华人物】20年教学时光无悔——访新闻...</a></h3>
+              <p class="thnews_jqzy">　　20年教学时光无悔——访新闻与传播学院尹鸿教授●新闻中心学生记者 何 美采访地点：文西楼新闻与传播学院采访对象：新闻与传播学院副院长兼影视传播研究中心主任 尹鸿图片说明：课堂上的尹鸿摄影 胸康祺“下辈子还要做老师！”第七届清华大学研究生“良师益友”奖最近刚颁奖，这是我校一年一度的研究生学术节的重要活动之一。恭喜您再次获得这一奖项！谢谢！获得学生所......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104128125159480/20110226104128125159480_.html" target="_blank">【清华人物】20年教学时光无悔——访新闻...</a></h3>
+              <p class="thnews_jqzy">　　20年教学时光无悔——访新闻与传播学院尹鸿教授●新闻中心学生记者 何 美采访地点：文西楼新闻与传播学院采访对象：新闻与传播学院副院长兼影视传播研究中心主任 尹鸿图片说明：课堂上的尹鸿摄影 胸康祺“下辈子还要做老师！”第七届清华大学研究生“良师益友”奖最近刚颁奖，这是我校一年一度的研究生学术节的重要活动之一。恭喜您再次获得这一奖项！谢谢！获得学生所......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2004.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225618390754863/20110225225618390754863_.html" target="_blank">我校研究生举办电影沙龙活动</a></h3>
+              <p class="thnews_jqzy">　　无标题文档全球化背景下的中国电影策略——我校研究生举办电影沙龙活动【新闻中心讯 学生记者 杨溢 通讯员 赵畅】当经历了《魔戒》三部曲、《黑客帝国》三部曲的连续“轰炸”之后，我们是否还记得那些曾为之感动过或震撼过的本土电影，还记得《菊豆》或者《活着》么？在全球化带来的媒介资源迅速流转的形势下，世界性的文化空间大大扩展，而中国的本土电影在其中的定位如何？如何......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

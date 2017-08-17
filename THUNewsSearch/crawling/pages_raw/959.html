@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>发展互联网：抓标准　抓人才</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231227640474230&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">发展互联网：抓标准　抓人才</h3><p align="center"> ——访清华大学博士生导师李星教授</p><p align="center">李青</p><p align="center">光明日报 2001年5月16日</p><p align="center"><img src="/publish/news/images/upload/lixin.jpg" width="288" height="193"></p><p align="center"> 国家公用通信网机房</p><p> 　　值世界电信日之际，笔者就互联网在中国发展所面临的机遇、挑战和前景走访了在国内从事互联网研究工作多年的清华大学电子工程系博士生导师李星教授。</p><p> 　　 用户驱动是互联网成功的本质</p><p> 　　李星说，互联网自1995年以来得到了迅猛的发展。它的发展轨迹不同于传统的通信行业：传统的通信行业基本上是由电信运营商驱动来搭建网络，进而运营，而互联网则是用户驱动、自下而上发展起来的开放式网络。李星教授认为，互联网的成功主要有五个决定性因素：一是科研人员具有不怕失败的创新精神；二是一些主要国家对网络研究给予了不断地投入；三是一些主要国家在关键时刻作出具有远见的决策；四是互联网宽松开放的环境使得各国都能积极地参与到标准的制订当中；五是对互联网的风险投资。</p><p> 　　 尽早着手IP地址资源的研究</p><p> 　　互联网，这个网中之网在不断扩张。网络的可扩展性、服务质量以及安全性等问题日益显现，已成为我们必须直面的挑战。服务质量问题的挑战就是让互联网在传输多媒体或语音等实时业务时能够提供电信级的质量。互联网是电子商务、银行业务、国防、远程医疗及教学的“电子通道”，网络安全的重要性更是不言而喻。由于集成电路的发展速度跟不上光通信的发展速度，网速难以进一步提升，再加上IP地址资源日益匮乏，路由表爆炸式增长，网络的可扩展性也成为一大难题。特别是IP地址资源问题，对于拥有12.95亿人口的中国来讲意义重大。李教授算了一笔帐，如果每个中国人拥有一个IP地址的话，至少需要72个A类地址，这并非一个小数目。因此他呼吁中国应抓住发展契机，尽早着手IP地址资源的研究工作，积极参与国际互联网标准的制订。</p><p> 　　 加紧互联网人才的培养</p><p> 　　中国的互联网发展与国外相比还存在哪些差距呢？李星认为，一是网络的基础设施建设方面，差距大概有半年到一年时间；二是网络的基础应用，大概有半年到两年的差距；第三就是人才，至少差15年。这相当于几代大学生的在校时间，差距显然是非常大的。美国的大学生从1985年就开始使用互联网了，到1986、1987年互联网在大学校园里就已经基本普及。同中国的大学生相比，美国的大学生早中国大学生十几年就拥有了一个宽松的网络学习环境，这种知识和人才的积累是非常重要的。所以，创造环境、普及计算机、普及教育、培养人才是应对挑战的根本。</p><p> 　　【李星系国家“863”计划通信技术主题专家、亚太网络工作组（APNG）副主席、亚太网络信息中心（APNIC）执行委员会委员。】 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年05月16日 13:58:45　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225332765745552/20110225225332765745552_.html" target="_blank">清华教授吴建平获国际互联网界最高奖</a></h3>
+              <p class="thnews_jqzy">　　清华教授吴建平获国际互联网界最高奖【新闻中心讯】7月28日于荷兰举行的第78届国际互联网工程组织IETF大会上，国际互联网协会（Internet Society）将2010年乔纳森·波斯塔尔奖(Jonathan B. Postel Awards)颁给中国科学家、清华大学教授吴建平。吴建平获得2010年乔纳森·波斯塔尔奖在颁奖仪式上，国际互联网协会主席......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2007.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225339296510544/20110225225339296510544_.html" target="_blank">下一代互联网技术入选中国十大科技进展</a></h3>
+              <p class="thnews_jqzy">　　下一代互联网技术入选中国十大科技进展【新闻中心讯】“２００６年中国十大科技进展新闻”２１日在京揭晓。 由清华大学吴建平教授主持，清华大学等25所高校共同完成的“下一代互联网技术获重大成果”名列榜首。　 “2006年中国十大科技进展新闻评选由中国科学院院士工作局、中国工程院学部工作局等主办。在院士、科技人员、科技新闻工作者推荐候选新闻的基础上，由565名中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225340125456601/20110225225340125456601_.html" target="_blank">我国下一代互联网研究获得重大进展</a></h3>
+              <p class="thnews_jqzy">　　我国下一代互联网研究获得重大进展【新闻中心讯&nbsp;】9月23日，“中国下一代互联网示范工程CNGI示范网络核心网CNGI-CERNET2/6IX”项目验收和技术鉴定会在清华大学举行。鉴定会现场由清华大学等25所高校承担建设完成的CNGI－CERNET2/6IX项目是中国下一代互联网示范工程CNGI示范网络核心网的重要组成部分。中国下一代互联网示......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2005.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231543031950382/20110225231543031950382_.html" target="_blank">下一代互联网新在哪里？</a></h3>
+              <p class="thnews_jqzy">　　下一代互联网新在哪里？光明日报  2005-1-6&nbsp;&nbsp;&nbsp;特邀嘉宾：&nbsp;&nbsp;&nbsp;吴建平（中国教育和科研计算机网专家委员会主任）&nbsp;&nbsp;&nbsp;张凌（华南理工大学校长助理、计算机学院院长）&nbsp;&nbsp;&nbsp;李星（中国教育和科研计算机网网络中心副主任）&nbsp;&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2005.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231542156540221/20110225231542156540221_.html" target="_blank">下一代互联网怎样改变生活</a></h3>
+              <p class="thnews_jqzy">　　下一代互联网怎样改变生活&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2005.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231541937375857/20110225231541937375857_.html" target="_blank">下一代互联网将给我们带来什么</a></h3>
+              <p class="thnews_jqzy">　　下一代互联网将给我们带来什么人民邮电报  2004-12-29&nbsp;&nbsp;&nbsp;本月25日，中国第一个下一代互联网暨中国下一代互联网示范工程核心网(CERNET2)正式开通，标志着我国下一代互联网建设全面拉开序幕，并在世界下一代互联网发展上取得先机。究竟什么是下一代互联网？下一代互联网与现在的互联网有何区别？它的应用前景和产业意义何在？&n......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2004.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231540906468524/20110225231540906468524_.html" target="_blank">我校IPv6核心路由器中标我国下一代互联...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校IPv6核心路由器中标我国下一代互联网示范工程骨干网【新闻中心讯】国家发改委、教育部、科技部等八部委于12月25日联合宣布，我国第一个全国性的下一代互联网建成开通，并将首先在科研和教学领域应用。这也是迄今为止世界上规模最大的下一代互联网，目前连接全国20个城市、100多所高校和科研单位。在骨干网络招标中，我校研制的具有完全自主知识产权的IP......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2004.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231540000807579/20110225231540000807579_.html" target="_blank">信息产业重大技术发明评选：清华IPv6突...</a></h3>
+              <p class="thnews_jqzy">　　信息产业重大技术发明评选：清华IPv6突破入选通信世界  2004-12-27  阴志华&nbsp;&nbsp;&nbsp;(记者 阴志华)　由信息产业部主办的2004年(第四届)信息产业重大技术发明评选结果12月23日揭晓，在当天举行的新闻发布会上，信息产业部副部长娄勤俭表示，信息产业部决定把获评的重大技术发明项目，纳入电子发展基金给予重点支持。娄勤俭说，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2004.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231539937275680/20110225231539937275680_.html" target="_blank">下一代互联网在我国开通</a></h3>
+              <p class="thnews_jqzy">　　下一代互联网在我国开通京华时报  2004-12-26  熊欣&nbsp;&nbsp;&nbsp;本报讯　优美的小提琴演奏，使观众仿佛置身于音乐厅中……昨天，北京、武汉两地的小提琴实时演奏，通过我国第一个正式开通的下一代互联网真实地展现在人们面前。下一代互联网将逐渐代替现有互联网，惊人的传输速度、用之无穷的IP地址将完全改变人类的生活方式，人们甚至能以运动员......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2004.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231515015247686/20110225231515015247686_.html" target="_blank">第五届APRU远程教育与互联网国际会议在...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档第五届APRU远程教育与互联网国际会议在我校召开【新闻中心讯】10月12日，第五届APRU ( Association of the Pacific Rim Universities ) 远程教育与互联网国际会议( Distance Learning and the Internet Conference 2004 )在我校主楼接待厅拉开帷幕。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231449187980835/20110225231449187980835_.html" target="_blank">清华网络中心引领互联网发展的10年</a></h3>
+              <p class="thnews_jqzy">　　清华网络中心引领互联网发展的10年慧聪网  2004-6-30&nbsp;&nbsp;&nbsp;6月29日，清华大学以一场别开生面的“下一代互联网学术报告会”，来欢庆清华大学信息网络工程研究中心10年华诞。据介绍，在今天的大会上，工程院副院长邬贺铨院士、沈昌祥院士、李星教授等将在会上分别做《网络的挑战：NGI和NGN》、《构建可信任的网络信息系统》、《下一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231442828594592/20110225231442828594592_.html" target="_blank">未来十年中国互联网三大期待：IPv6、3...</a></h3>
+              <p class="thnews_jqzy">　　未来十年中国互联网三大期待：IPv6、3G、北京奥运中国青年报  2004-6-4　 IPV6、电信网与互联网充分融合下的3G和2008年北京奥运会，将是未来十年中国互联网最值得期待的三件事。　 6月1日，在北京召开的2004中国互联网大会新闻发布会上，这三件事被参加大会互动论坛的专家和从业者看作中国互联网未来十年里最重要的三大机遇。　IPv6带来新标准　 ......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231441750610842/20110225231441750610842_.html" target="_blank">我国在下一代互联网技术竞争中初享“话语权”</a></h3>
+              <p class="thnews_jqzy">　　我国在下一代互联网技术竞争中初享“话语权”新华网  2004-6-1&nbsp;&nbsp;&nbsp;国产下一代互联网核心路由器通过技术鉴定&nbsp;&nbsp;&nbsp;在下一代互联网关键技术的竞争中，我国科学家已经开始享有话语权。作为国内第一个通过信息产业部入网测试的国产路由器，由清华大学和清华比威网络公司联合研制成功的第一台基于“互联网协议第６版......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2004.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231441390263828/20110225231441390263828_.html" target="_blank">我国下一代互联网关键技术攻关获重大突破</a></h3>
+              <p class="thnews_jqzy">　　我国下一代互联网关键技术攻关获重大突破&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2003.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231422890802321/20110225231422890802321_.html" target="_blank">清华未来互联网络技术研究中心落成</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华未来互联网络技术研究中心落成【新闻中心讯 记者 周襄楠】12月15日下午，致力于下一代互联网技术领域创新性研究的“清华未来互联网络技术研究中心”在清华大学落成，同时由国家科技部发文批准成立的首批5家国家实验室筹建单位之一的“清华信息科学与技术国家实验室”即将进驻大楼。该中心坐落在清华大学东门内，占地1.89公顷，总建筑面积为36,010......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231241562347923/20110225231241562347923_.html" target="_blank">我成为世界首次大规模网上国际学术会议成员</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我成为世界首次大规模网上国际学术会议成员清华北航展示新一代互联网研究成就记者　袁新文、杨谷光明日报 2001年11月16日本报北京11月15日电　世界首次大规模网上国际会议——全球高性能计算和通信国际会议（SC　2001）今天在全球下一代互联网上举行。在国家自然科学基金委员会资助创建的中国高速互联研究试验网络（简称NSFCnet）的支持下，清华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231241609459942/20110225231241609459942_.html" target="_blank">国产高速互联网提供平台</a></h3>
+              <p class="thnews_jqzy">　　无标题文档国产高速互联网提供平台我学者参加网上国际会议《人民日报》 (2001年11月16日第六版)本报北京11月15日讯 记者任建民报道：全球高性能计算和通信国际会议于11月10日—16日在全球下一代互联网上举行，这是世界上首次大规模网上国际会议。在中国高速互联研究试验网络的支持下，我国科学家首次出席会议。今天上午大会安排了两个小时的中国专场，中国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231241578124740/20110225231241578124740_.html" target="_blank">我国下一代互联网研究冲进前沿</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我国下一代互联网研究冲进前沿记者　刘继安《中国教育报》2001年11月16日第1版本报北京11月15日讯(记者　刘继安)世界首次大规模网上国际会议——全球高性能计算和通信国际会议，今天在北京举行中国专场，中国学者在清华大学和北京航空航天大学通过中国高速互联研究试验网络(NSFCnet)的两个节点，向世界介绍了中国在下一代互联网研究领域的最新进展......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231241515922459/20110225231241515922459_.html" target="_blank">我校与北航代表中国展示新一代互联网研究成就</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校与北航代表中国展示新一代互联网研究成就世界上首次大规模网上国际会议----全球高性能计算和通信国际会议（SC'2001）于2001年11月10--16日在全球下一代互联网上举行。我校和北京航空航天大学代表中国出席会议。11月15日8：30--10：00，大会安排2小时的中国专场。中国学者在我校和北京航空航天大学两个节点的三个会场上参加了本次......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

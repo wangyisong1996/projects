@@ -1,0 +1,538 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>校领导视察我校汽车碰撞实验室</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231210328751367&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>2001年3月21日，校务委员会主任、校党委书记贺美英，副校长杨家庆，副校长、研究生院院长顾秉林，原副校长倪维斗和研究生院常务副院长陈浩明等一同到我校汽车碰撞试验室视察工作并参观了一场别开生面的碰撞试验</TITLE><META NAME="Template" CONTENT="D:\office97\Office\html.dot"></HEAD><BODY LINK="#0000ff" VLINK="#800080" bgcolor="#FFFFFF"><B><FONT FACE="宋体" LANG="ZH-CN" SIZE=5><h3 ALIGN="CENTER">校领导视察我校汽车碰撞实验室</h3></font></B> <P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN"><img src="/publish/news/images/upload/qiche1.jpg" width="283" height="205" align="left"></font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">3</FONT><FONT FACE="宋体" LANG="ZH-CN">月</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">21</FONT><FONT FACE="宋体" LANG="ZH-CN">日，校务委员会主任、校党委书记贺美英，副校长杨家庆，副校长、研究生院院长顾秉林，原副校长倪维斗和研究生院常务副院长陈皓明等领导一行到汽车安全与节能国家重点实验室汽车碰撞实验室视察工作并观摩了第</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">55</FONT><FONT FACE="宋体" LANG="ZH-CN">次汽车整车碰撞实验。</font></P><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN">贺美英书记一进门就热情地对汽车碰撞实验室主任黄世霖教授说，很早就想来了，来看你们的碰撞实验。当得知碰撞实验室的建设一般要几千万元，而清华大学碰撞实验室只用</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">500</FONT><FONT FACE="宋体" LANG="ZH-CN">万元，而且实验设施和测试分析系统基本上是自行开发设计完成，在国内一直保持领先，一些部分还达到国际水平的时候，贺老师感慨地说，这真是很不容易的。黄世霖教授和实验室副主任张金换向校领导汇报了科研群体的建设情况。他们说，新实验基地的建成，促进了教学科研发展的成果，包括虚拟碰撞实验技术、安全气囊、多媒体序列图像分析、人体工程和行人保护等研究方向，并出色地完成国家九五重点科技攻关项目，还重点谈到了以老中青结合、富有活力和战斗力的科研群体为单位的研究生培养、科研基地建设等情况，并演示了一些汽车碰撞实验和模拟计算工作。在演示虚拟实验时，顾秉林问到，这和实际结果的对比情况是怎么样的，黄教授马上演示了自行建模计算的结果和某国际权威软件建模的计算结果与实验结果的对比，当看到自行建模的性能要优于国外时，校领导满意地笑了。在谈到为中国汽车工业作出的贡献时，黄教授说在</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2000</FONT><FONT FACE="宋体" LANG="ZH-CN">年中国国际汽车展览会上展出的国产轿车半数以上是经过清华大学汽车碰撞实验室的实验认证通过的，并且在清华大学的直接推动下，颁布和实施了中国的汽车被动（碰撞）安全法规，有效地推动了中国汽车安全性发展时，贺美英等老师都赞许地点头。</font></P><FONT FACE="宋体" LANG="ZH-CN"><P ALIGN="JUSTIFY">黄世霖还向各领导表达了希望学校能够加快教育教学改革步伐，给科研群体以更大的发展空间，加强合作，形成学科优势，从而能够在国内外激烈竞争的条件下建成一流大学的愿望。</P><P ALIGN="JUSTIFY">校领导饶有兴趣地观看了某家用经济型轿车按照国家标准进行的首次双气囊实车碰撞实验的全过程和高速数字图像数据结果。该车上安装的先进的全数字化的安全气囊电子控制系统是我校承担的九五国家重点攻关项目，是由黄世霖、张金换和指导的研究生自主开发的成果，并已交付工厂批量生产。</P><P ALIGN="JUSTIFY">参观结束后，领导们对实验室的工作给予了肯定，并与全体工作人员一起合影。</P></FONT><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN">黄世霖教授带领的研究室从</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1986</FONT><FONT FACE="宋体" LANG="ZH-CN">年开始从事汽车被动（碰撞）安全性的研究工作，是我国在这个领域的开拓者和领头人，近</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">5</FONT><FONT FACE="宋体" LANG="ZH-CN">年来每年组织召开中国汽车被动安全学术会议，同国际国内的知名汽车公司和科研单位进行了多项合作研究，曾获得国家科技进步二等奖、汽车行业及机械部一等奖等八项部级以上奖励，是一支富有活力和战斗力的、在国内外享有良好的声誉的科研群体。中央电视台东方时空《直播中国》栏目曾在最近对研究室的科研和试验工作做了专题报导《碰撞》，引起社会的广泛关注和良好反响。（汽车系）</font></P><P ALIGN="center"><img src="/publish/news/images/upload/qiche3.jpg" width="283" height="207"></P><P ALIGN="center"><img src="/publish/news/images/upload/qiche2.jpg" width="283" height="196"></P></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月23日 08:08:39　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130520114951260904360/20130520114951260904360_.html" target="_blank">清华大学汽车碰撞试验室采访记</a></h3>
+              <p class="thnews_jqzy">　　撞出来的安全&mdash;&mdash;清华大学汽车碰撞试验室采访记来源：中国质量报 2013-5-20 何可在清华大学，有一个专门&ldquo;搞破坏&rdquo;的实验室，叫做&ldquo;汽车碰撞实验室&rdquo;。它所做的研究项目，不是设计或者生产出新车，而是把一辆辆新车撞烂；它也并不会给车企带来直接收益，反而每年要耗掉上百万元的成本。尽管......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225556265892358/20110225225556265892358_.html" target="_blank">【实践优秀个人】林亦律：在“支教”中加入...</a></h3>
+              <p class="thnews_jqzy">　　在“支教”中加入崭新的元素——记2010实践个人金奖获得者、清华大学汽车系2008级本科生林亦律2009年暑假，清华大学汽车系赴青海西宁阳光成长体育特色支教支队——一支以体育特色支教调研为主题的社会实践队伍，以富有创意和特色给所清华师生留下了深刻的印象。林亦律提到这个创意的缘由，很多人都问该支队队长、清华大学汽车系2008级本科生林亦律：“你是体育特......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2006.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231829187636543/20110225231829187636543_.html" target="_blank">校长顾秉林到汽车系调研</a></h3>
+              <p class="thnews_jqzy">　　校长顾秉林到汽车系调研【新闻中心讯 记者 崔凯】12月14日下午，校长顾秉林院士一行来到汽车系调研，同汽车系负责人和部分教授围绕汽车系的建设和发展进行了座谈。汽车系主任欧阳明高教授从学科平台、科研工作、教学工作、发展前景等方面介绍了汽车系的现状和发展设想，分析了汽车系在发展过程中面临的机遇与挑战，提出力争通过国家重大项目带动横向合作，做自主创新和行业......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225607250107738/20110225225607250107738_.html" target="_blank">汽车系承办清华博士生论坛聚焦汽车新科技</a></h3>
+              <p class="thnews_jqzy">　　汽车系承办清华博士生论坛聚焦汽车新科技【新闻中心讯 研通社通讯员 李哲】11月24日~26日，由清华大学汽车工程系承办的清华大学第135期博士生学术论坛在三堡学术基地举办。汽车系7名教授和61名博士生同学参加了论坛。此外，论坛还邀请了交通部公路交通安全工程研究中心相关研究人员，热能系、精仪系的博士后、博士生以及来自北京理工大学汽车系的多名同学共同交流......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231825109953664/20110225231825109953664_.html" target="_blank">汽车系承办清华博士生论坛聚焦汽车新科技</a></h3>
+              <p class="thnews_jqzy">　　汽车系承办清华博士生论坛聚焦汽车新科技【新闻中心讯 研通社通讯员 李哲】11月24日~26日，由清华大学汽车工程系承办的清华大学第135期博士生学术论坛在三堡学术基地举办。汽车系7名教授和61名博士生同学参加了论坛。此外，论坛还邀请了交通部公路交通安全工程研究中心相关研究人员，热能系、精仪系的博士后、博士生以及来自北京理工大学汽车系的多名同学共同交流......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231804406228634/20110225231804406228634_.html" target="_blank">【师德】为人师表　言传身教</a></h3>
+              <p class="thnews_jqzy">　　为人师表 言传身教严谨的科研态度、投入的教学热情、坦荡的待人接物，这就是同学眼中的李建秋老师。什么是科学的研究态度？什么是激情四射的研究兴致？什么是真诚正直的待人原则？汽车系的同学说：“和李建秋老师相处的时候，你就能真正地体会到。”在做科学研究时，李老师认真严谨。他经常到实验室查看学生的工作情况，发现哪个学生有难题，他就会抽出自己宝贵的时间，和大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231753109133331/20110225231753109133331_.html" target="_blank">【院系主任话专业】欧阳明高：汽车工程—“...</a></h3>
+              <p class="thnews_jqzy">　　欧阳明高：汽车工程—“因材施教”培养工程类、管理类和设计类人才通讯员 杨悦&nbsp;&nbsp;&nbsp; 当全世界的汽车巨头纷纷把眼光投向中国的汽车市场，在中国投资设厂的时候，当汽车工业成为拉动中国经济增长首位行业的时候，许多有志青年也把目光投向了最早设置汽车专业的清华大学。本期“院系主任话专业”，由汽车工程系系主任欧阳明高教授为你讲解“汽车”。&nb......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231749140855572/20110225231749140855572_.html" target="_blank">【启航】项旭升：欲振飞在山城国企里的蝴蝶</a></h3>
+              <p class="thnews_jqzy">　　【启航】项旭升：欲振飞在山城国企里的蝴蝶●汽车系　郝莉项旭升，男，1985年出生，是１字班年龄最小的同学。2005年7月毕业时，他选择了国有企业“二汽”，走进深藏武当山脉中的车城十堰开始了自己的工作。“他是埋头做事的那种人”和很多新生一样，项旭升初来清华汽车系时，对汽车产业的现状并不了解，对未来也没有清晰的认知。直到一次偶然的机会，他在某大公司举......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231744437148260/20110225231744437148260_.html" target="_blank">清华汽车系研制出专为城市上班族设计的超微...</a></h3>
+              <p class="thnews_jqzy">　　清华汽车系研制出专为城市上班族设计的超微型电动车【新闻中心讯】一种新型的交通工具--超微型电动车不久前在清华大学汽车系诞生。该超微型电动车瞄准了当前市场上对于电动交通工具的巨大市场需求，作为新一代城市中近程交通工具，专为城市上班族所设计。该车型设计采用双后轮轮毂电机驱动，最高车速30公里/小时，一次充电能够行驶50公里。该车型车身造型动感时尚，总......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231741234188898/20110225231741234188898_.html" target="_blank">汽车系优秀校友座谈自主创新</a></h3>
+              <p class="thnews_jqzy">　　汽车系优秀校友座谈自主创新&nbsp;&nbsp;&nbsp; 【新闻中心讯 学通社记者 马婧 袁星】4月30日上午，在清华大学95周年校庆当天，汽车工程系各级优秀校友欢聚一堂，在汽车研究所307室就 “我国汽车产业战略与自主创新”进行了研讨。&nbsp;&nbsp;&nbsp; 汽车系校友、中国机械工业联合会副会长、中国汽车工程学会理事长张小虞，汽车系校友......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225609968902635/20110225225609968902635_.html" target="_blank">汽车系举办“车夜狂欢2006”学生节晚会</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;汽车系举办“车夜狂欢2006”学生节晚会&nbsp;&nbsp;&nbsp; 【新闻中心讯】3月31日晚，清华的“汽车人”迎来了属于自己的年度盛宴——“车夜狂欢2006”学生节晚会。&nbsp;&nbsp;&nbsp; 大礼堂外人头攒动，堂内灯火通明。晚会尚未开始，观众席早已是座无虚席，就连后排都站满了观众。舞台的布置巧妙而生动，本次学生节的主题......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610109741638/20110225225610109741638_.html" target="_blank">“清氢校园行”引领氢动未来</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“清氢校园行”引领氢动未来日前，由清华大学学生汽车爱好者协会主办，通用汽车（中国）投资有限公司大力支持的“清氢校园行”系列活动在就业中心举行。该活动围绕通用氢动3号燃料电池车的清华校园展示进行。氢动3号是通用汽车公司于2003年推出的第三代燃料电池车。氢动3号静态展示及与之配合的图片展吸引了大量路过的同学。通用汽车（中国）投资有限公司的副总......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231725703538732/20110225231725703538732_.html" target="_blank">“清氢校园行”引领氢动未来</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“清氢校园行”引领氢动未来日前，由清华大学学生汽车爱好者协会主办，通用汽车（中国）投资有限公司大力支持的“清氢校园行”系列活动在就业中心举行。该活动围绕通用氢动3号燃料电池车的清华校园展示进行。氢动3号是通用汽车公司于2003年推出的第三代燃料电池车。氢动3号静态展示及与之配合的图片展吸引了大量路过的同学。通用汽车（中国）投资有限公司的副总......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2005.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231707562530308/20110225231707562530308_.html" target="_blank">党委书记陈希到汽车工程系调研</a></h3>
+              <p class="thnews_jqzy">　　党委书记陈希到汽车工程系调研&nbsp;&nbsp;&nbsp;&nbsp;【新闻中心讯】12月14日下午，校党委书记陈希到汽车工程系进行调研，听取了汽车工程系近期工作及所面临的挑战和对策的汇报。汽车工程系相关负责人、教授及科研院、基建处等部门相关负责同志参加了调研会。汽车工程系系主任欧阳明高教授首先汇报了汽车工程系在人才培养、科研方向、学科建设和团队构......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2005.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231653250948722/20110225231653250948722_.html" target="_blank">汽车系举行完成神六相关科研任务座谈会</a></h3>
+              <p class="thnews_jqzy">　　汽车系举行圆满完成“神六”相关科研任务座谈会10月17日下午，汽车系召开庆祝“神舟六号”载人航天飞行圆满成功暨圆满完成“神舟六号”相关科研任务座谈会。副校长康克军、科研院、汽车系相关负责人及汽车碰撞课题组黄世霖、张金换、杜汇良等30余位师生参加了座谈会。座谈会由汽车系系主任欧阳明高教授主持。与会人员听取了黄世霖教授代表课题组做的关于参加“神舟六号”着......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2005.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231652609887085/20110225231652609887085_.html" target="_blank">清华汽车系帮神六减震</a></h3>
+              <p class="thnews_jqzy">　　清华汽车系帮神六减震法制晚报  2005-10-17  饶沛&nbsp;&nbsp;&nbsp;&nbsp;据清华大学汽车碰撞试验室主任张金换教授上午介绍，清华一直在航天航空的基础研究和工程研究领域承担着科研任务。此次，清华大学汽车系参与设计了“神六”返回舱坐椅、返回舱底部的减震方案。&nbsp;&nbsp;&nbsp;&nbsp;据介绍，返回舱返回大气层后......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231234828937079/20110225231234828937079_.html" target="_blank">国家经贸委产业政策司司长参观我校汽车碰撞...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document0&&parent.frames.length) {    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i国家经贸委产业政策司司长参观我校汽车碰撞......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231228218168031/20110225231228218168031_.html" target="_blank">组图：美日汽车在清华又一次碰撞成功</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document组图：美日汽车在清华又一次碰撞成功2001年5月24日 13:24 新浪汽车美日汽车安全气囊碰撞实验成功美日汽车碰撞后车头图片美日汽车碰撞后前挡风玻璃图片碰撞前的美日汽车碰撞前的美日汽车5月22日至24日中国汽车工程学会第六届汽车安全技术会，在清华大学召开，应清华大学之邀，已有多次碰撞成功先例的吉利.美日汽车将在24日的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231227984149705/20110225231227984149705_.html" target="_blank">CSAE第六届汽车安全技术会议在我校开幕</a></h3>
+              <p class="thnews_jqzy">　　Untitled DocumentCSAE第六届汽车安全技术会议在我校开幕5月22日，由我校汽车系承办的每年一次的"中国汽车工程学会（CSAE）第六届汽车安全技术会议"在我校隆重开幕。应邀参加开幕式的领导有国务院发展研究中心党组书记、副主任陈清泰，中国汽车工程学会副理事长张宁，国家质量监督检验检疫总局司长程方，公安部交管局科技处处长黎刚，交通部公路司车辆......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231215593919428/20110225231215593919428_.html" target="_blank">国际标准碰撞　撞出红旗世纪安全</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document国际标准碰撞　撞出红旗世纪安全文正（光明日报 2001年4月20日）电视直播，红旗世纪星一展风采3月18日，中央电视台播出了一个特别节目，报道了清华大学国家重点实验室里进行的一次汽车碰撞试验，这是国内电视首次全程现场报道碰撞试验，让广大观众有机会目睹汽车撞击那惊心动魄的场面并直观地了解汽车安全知识。而尤为令人关注的是......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

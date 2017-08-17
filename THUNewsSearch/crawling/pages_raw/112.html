@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>可以授予国外和香港特别行政区学位的合作办学项目</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231210796833011&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">可以授予国外和香港特别行政区学位的合作办学项目 </h3><p align="center">（《中国青年报》 2001-03-27）</p><p> 新华网消息 截至2001年3月，经审核并批准授予国外和香港特别行政区学位的合作办学在办项目已达45个，名单如下：</p><p> 　 1）北京大学与美国福坦莫大学合作培养“国际工商管理”硕士（1998年启动，经批准举办4期）；</p><p> 　 2）<font color="#FF0000">清华大学</font>与香港中文大学合作培养工商管理硕士（金融与财务）（2000年启动，经批准举办1期）；</p><p> 　 3）<font color="#FF0000">清华大学</font>、天津大学及同济大学与香港大学合作举办“房地产经济与管理、建设项目管理”PgD／Msc课程（2000年启动，经批准举办1期）；</p><p> 　 4）中国人民大学与美国布法罗纽约州立大学合作培养MBA（1998年启动，经批准举办3期）；</p><p> 　 5）北方交通大学与澳大利亚维多利亚理工大学合作培养工商管理硕士（1999年启动，经批准举办2期）；</p><p> 　 6）北京航空航天大学与北京技术交流培训中心、澳大利亚新南威尔士大学合作培养国际会计专业商学硕士（1999年启动，经批准举办2期）；</p><p> 　 7）北京航空航天大学与澳大利亚昆士兰大学合作培养MBA（1999年启动，经批准举办2期）；</p><p> 　 8）北京航空航天大学与美国佛罗里达州立大学合作培养制造工业工程科学硕士（1999年启动，经批准举办1期）；</p><p> 　 9）北京工业大学与美国城市大学合作培养MBA（1998年启动，经批准举办3期）；</p><p> 　 10）中国协和医科大学与美国北卡罗来纳大学合作培养护理学硕士（1998年启动，经批准举办1期）；</p><p> 　 11）对外经济贸易大学与法国国家企业管理教育基金会联合开设企业管理研究生课程（1997年启动，经批准举办4期）；</p><p> 　 12）首都经济贸易大学与澳大利亚迪肯大学合作培养专业会计硕士（1998年启动，经批准举办2期）；</p><p> 　 13）中国政法大学与美国天普大学合作培养法律硕士（1998年启动，经批准举办3期）；</p><p> 　 14）南开大学与澳大利亚弗林德斯大学合作培养国际经贸关系硕士（1999年启动，经批准举办2期）；</p><p> 　 15）天津财经学院与美国俄克拉荷马市大学合作培养MBA（1995年启动，经批准举办9期）；</p><p> 　 16）燕山大学与美国都灵大学合作培养MBA（1997年启动，经批准举办2期）；</p><p> 　 17）大连理工大学与美国德龙大学合作培养金融与财务管理硕士（2000年启动，经批准举办1期）；</p><p> 　 18）沈阳工业大学与美国道林大学合作培养MBA（2000年启动，经批准举办1期）；</p><p> 　 19）哈尔滨医科大学与澳大利亚拉筹伯大学合作培养社会医学与卫生事业管理硕士（2001年启动，经批准举办1期）；</p><p> 　 20）同济大学与法国国立路桥大学联合培养MBA（2000年启动，经批准举办1期）；</p><p> 　 21）华东理工大学与澳大利亚堪培拉大学合作培养工商管理硕士（2000年启动，经批准举办1期）；</p><p> 　 22）上海海运学院与荷兰马斯特里赫特管理学院合作培养MBA（1995年启动，经批准举办4期）；</p><p> 　 23）上海财经大学与美国韦伯斯特大学合作培养MBA（1996年启动，经批准举办5期）；</p><p> 　 24）复旦大学与挪威管理学院合作举办“变化管理（含：通信信息管理）”硕士课程（1996年启动，经批准举办4期）；</p><p> 　 25）复旦大学与香港大学合作培养MBA（1998年启动，经批准举办3期）；</p><p> 　 26）复旦大学与香港大学合作培养社会工作硕士和社会行政管理硕士（2001年启动，经批准举办1期）；</p><p> 　 27）南京大学与荷兰马斯特里赫特管理学院等机构合作培养国际工商管理硕士（2000年启动，经批准举办1期）；</p><p> 　 28）浙江大学与香港理工大学合作培养“优质管理”硕士（1999年启动，经批准举办3期）；</p><p> 　 29）浙江大学与香港理工大学合作培养“酒店与旅游业管理”硕士（2000年启动，经批准举办1期）；</p><p> 　 30）浙江大学与香港理工大学合作培养“护理学”理学士（2000年启动，经批准举办1期）；</p><p> 　 31）温州医学院与美国新英格兰视光学院联合培养眼视光学博士（2000年启动，经批准举办1期）；</p><p> 　 32）中国科技大学与美国华盛顿大学合作培养MBA（卓越制造管理）（2000年启动，经批准举办1期）；</p><p> 　 33）南昌大学与法国普瓦提埃大学合作培养“企业管理”硕士（1996年启动，经批准举办5期）；</p><p> 　 34）江西财经大学与美国纽约理工学院合作培养MBA（1998年启动，经批准举办2期）；</p><p> 　 35）重庆大学与香港理工大学合作培养“工程项目管理”硕士（1997年启动，经批准举办3期）；</p><p> 　 37）广州大学、华南理工大学与澳大利亚新南威尔士大学联合培养“国际会计”硕士（1999年启动，经批准举办2期）；</p><p> 　 38）中山大学与法国国家企业管理教育基金会暨里昂第三大学合作举办国际贸易高级专业文凭课程（1998年启动，经批准举办3期）；</p><p> 　 39）中山大学与美国明尼苏达大学卡尔顿管理学院合作培养工商管理硕士（1999年启动，经批准举办1期）；</p><p> 　 40）云南师范大学与澳大利亚拉筹伯大学联合培养英语文学硕士（1994年启动，经批准举办2期）；</p><p> 　 41）西安医科大学等八所院校与泰国清迈大学联合培养“高级护理”硕士（1995年启动，经批准举办5期）；</p><p> 　 42）长春税务学院与澳大利亚查理·斯窦大学合作培养电子商务商学学士（2000年启动，经批准举办4期）；</p><p> 　 43）吉林大学（原长春邮电学院）与加拿大莱姆顿应用技术学院、美国诺斯伍德大学等校合作举办学士学位教育（2000年启动，经批准举办1期）；</p><p> 　 44）上海对外贸易学院与澳大利亚皇家墨尔本理工大学合作培养“运输与物流管理”学士（1999年启动，经批准举办1期）；</p><p> 　 45）郑州工业大学与美国堪萨斯州立大学（Fort Hays）合作举办工商企业管理学士学位教育（2000年启动，经批准举办1期）。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月27日 14:53:57　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2011.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110324103929489484818/20110324103929489484818_.html" target="_blank">清华附小与朝阳区签署合作办学协议</a></h3>
+              <p class="thnews_jqzy">　　走出清华园 首次跨区域合作办学清华附小与朝阳区签署合作办学协议清华新闻网3月24日电&nbsp; 3月22日，清华大学附属小学与北京市朝阳区教育委员会举行了合作办学协议签字仪式。根据协议，朝阳区教委委托清华附小承办清华附小商务中心区实验小学，清华附小校长窦桂梅担任该校法人代表兼校长。这所学校属公办性质，将于2011年9月开学。这是清华附小首次走出清华园，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232453906624587/20110225232453906624587_.html" target="_blank">清华附中将与昌平区合作办学</a></h3>
+              <p class="thnews_jqzy">　　清华附中将与昌平区合作办学【新闻中心讯】5月13日下午，昌平区教育委员会与清华附中在昌平商务会馆举行了合作办学协议签字仪式，清华附中校长王殿军和昌平区教委主任李永生分别代表合作双方签字。清华大学常务副校长陈吉宁在仪式上讲话。陈吉宁在讲话中说，合作协议的签署，标志着清华大学与昌平区的合作越来越密切。他表示，清华大学将充分发挥自身优势，全力支持附属中学的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2002.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231317031649997/20110225231317031649997_.html" target="_blank">清华大学北京协和医学院成立</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学北京协和医学院成立（北京晚报 2002年10月28日）本报讯(记者丁肇文)教育部和卫生部日前签署协议，加强清华大学和中国协和医科大学的紧密合作，两部共建“清华大学北京协和医学院”。中国协和医科大学将更名为“清华大学北京协和医学院”，清华大学不再单独办医学院。中国协和医科大学是我国最重要的综合性医疗教学、科研机......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2002.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231316093815176/20110225231316093815176_.html" target="_blank">清华握手协和医大</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华握手协和医大（北京青年报 2002-10-21）教育部与卫生部日前签署协议，共建“清华大学北京协和医学院”本报记者报道　昨天，中国协和医科大学过85岁后有了一个新的名字“清华大学北京协和医学院”。记者昨天获悉，教育部与卫生部日前已签署了一项协议，要加强清华大学与中国协和医科大学的紧密合作，两部将共建“清华大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2002.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231316156860951/20110225231316156860951_.html" target="_blank">中国协和医大即将更名清华大学北京协和医学院</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document中国协和医大即将更名清华大学北京协和医学院（千龙新闻网 2002年10月20日）本报讯： 今天，记者从中国协和医科大学建校85周年校庆上获悉，中国协和医科大学即将正式更名为清华大学北京协和医学院。目前，教育部、卫生部正在积极推进清华大学与协和医科大学的紧密合作办学，两校共建清华大学北京协和医学院，这是贯彻江总书记要创......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

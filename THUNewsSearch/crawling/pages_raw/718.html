@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>来自雪域高原的祝愿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231222843988918&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">来自雪域高原的祝愿</h3><p align="center"> (新华网 2001.04.29 10:07:45) </p><p>新华网北京４月２９日９时５４分电 （记者王文韬 江涛 刘江）２９位工作在西藏的汉、藏、门巴族清华学子从雪域高原向母校发来了他们衷心的祝愿。 </p><p>他们在贺信中表示，回首往事，我们这些清华学子在西藏虽未做出惊天动地的事业，但可以告慰母校的是：我们都在奋发努力，并没有虚度年华。在西藏奋斗的每一个   清华学子可以说，都做到了“事业有成、问心无愧”，我们的青春年华和母校给予的聪明才智全都奉献给了西藏的美好事业。 </p><p>他们衷心祝福母校兴旺发达，早日成为世界一流的大学。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月29日 09:22:07　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225332156981012/20110225225332156981012_.html" target="_blank">清华为西藏培训首批党委发言人</a></h3>
+              <p class="thnews_jqzy">　　清华为西藏培训首批党委发言人【新闻中心讯】12月1日，西藏自治区首批党委发言人在拉萨接受由清华大学国际传播研究中心团队组织的培训。西藏自治区党委常委、宣传部长崔玉英在开班仪式上说，通过党委发言人的设立， 西藏自治区将做到党务公开和政务公开。崔玉英在会见清华大学国际传播研究中心主任李希光教授时说，自治区党委和政府感谢清华大学10多年来在涉藏研究和人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225559328990434/20110225225559328990434_.html" target="_blank">学生党建骨干畅谈西藏科学发展</a></h3>
+              <p class="thnews_jqzy">　　学生党建骨干畅谈西藏科学发展【新闻中心讯】3月25日晚，清华各院系学生党建骨干代表在学生综合服务楼集中观看了系列纪录片《西藏民主改革50年》，并进行交流座谈。同学们普遍认为，实现西藏的科学发展，对维护国家稳定、加强民族团结至关重要。《西藏民主改革50年》是中央电视台摄制的三集文献纪录片，记述了西藏从1951年和平解放以来，历经平息叛乱、民主改革、改革......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225559359886971/20110225225559359886971_.html" target="_blank">清华学生参观西藏民主改革50年大型展览</a></h3>
+              <p class="thnews_jqzy">　　清华学生参观西藏民主改革50年大型展览【新闻中心讯 学生通讯员 李哲翔 李昕明】3月22日，来自清华全校各院系的部分藏族同学，少数民族同学，港澳台同学与数名立志于报考西藏村官的毕业生一行34人，前往民族文化宫参观“西藏民主改革五十周年大型展览”。展览由国务院新闻办、中央统战部、国家民委、西藏自治区、中央档案馆、新华社共同主办，分为“和平解放西藏”、“......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2007.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225605312453971/20110225225605312453971_.html" target="_blank">走在寻找香巴拉的路上——参与“新闻大篷车...</a></h3>
+              <p class="thnews_jqzy">　　走在寻找香巴拉的路上——参与“新闻大篷车课堂”西藏行的同学感言编者按：4月30日—5月8日，清华大学新闻与传播学院为全校大一新生开设的特色入门课程——“新闻大篷车课堂”开到西藏。主讲教师李希光教授带着15名大一新生在拉萨八廓街进行了为期6天的新闻采访与实践。实践归来，同学们写下了自己的感言。从踏上开往拉萨的青藏铁路列车，我们就开始不断地采访、找故......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225609093755091/20110225225609093755091_.html" target="_blank">清华第三届少数民族文化节主打西藏风情</a></h3>
+              <p class="thnews_jqzy">　　清华第三届少数民族文化节主打西藏风情【新闻中心讯 学通社记者 甄增龙】在日前开幕的清华第三届少数民族文化节上，专门开辟了“雪域之光”——西藏专题活动，来自西藏的少数民族风情成为此次文化节展示的主题。5月10日晚，体现现实西藏面貌的新作——《静静的嘛呢石》在大礼堂上映，由此揭开了本届少数民族文化节的序幕。该片以纪实的手法讲述了一个身处偏远寺庙的小喇......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610375678617/20110225225610375678617_.html" target="_blank">《经历西藏》之十：西藏，我会回来看你的</a></h3>
+              <p class="thnews_jqzy">　　无标题文档《经历西藏》之十：西藏，我会回来看你的●樊世民如今，我虽已离开西藏，但对西藏的感觉依然是那么的亲切。在西藏挂职工作的两年，是我深入了解西藏的两年，是我努力工作的两年，是我收获丰富的两年，是我感受许多的两年，是我体验许多的两年，是我成长成熟的两年。西藏，不枉此行。在此我要对帮助我去西藏挂职工作的清华老师表示感谢，感谢学校给我提供了一个......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610390969591/20110225225610390969591_.html" target="_blank">《经历西藏》之九：感受在西藏</a></h3>
+              <p class="thnews_jqzy">　　无标题文档《经历西藏》之九：感受在西藏●樊世民西藏是一片热土，也是一个圣洁的地方，只有去了才会有很多特殊的感受。热情一踏上西藏这片土地，我就被热情包围着。下飞机，出了机场，看到的就是哈达的海洋，西藏人民在用洁白的哈达热情地迎接客人。当我和这里的人们越来越熟悉后，热情感受就更加多了。遇到的很多人会真诚而热情地邀请你，请你没事时到他家做客。领导同......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610406502627/20110225225610406502627_.html" target="_blank">《经历西藏》之八：体验在西藏</a></h3>
+              <p class="thnews_jqzy">　　《经历西藏》之八：体验在西藏●樊世民西藏，给我的不仅是成长与经验，在这个神奇的地方，我还尝到了人生的酸甜苦辣。离别与相思要去西藏，首先遭遇的就是离别。不到18岁就来京求学的我，对于和家人的离别已经逐渐适应，虽然每次离家还是有许多不舍。但这次是要从北京到西藏，离别的是在北京的爱人、朋友和老师。这是头一遭，亦是不舍。离别时爱人是落了泪的，我也是偷......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610437894309/20110225225610437894309_.html" target="_blank">《经历西藏》之七：收获在西藏</a></h3>
+              <p class="thnews_jqzy">　　无标题文档《经历西藏》之七：收获在西藏●樊世民两年的西藏挂职工作，让我收获、感受和体验了很多很多，每一项都沉甸甸的，难以一项一项累计。很多可能是无法用语言和文字精确地描绘出来，但又那么深刻地记录在我内心深处。找到实现自我价值的方向在西藏的两年挂职工作里最大的收获我觉得就是找到实现自我价值的努力方向。在学校里，我一直在考虑将来自己从事什么职业，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610453800998/20110225225610453800998_.html" target="_blank">《经历西藏》之六：整治西藏的建筑市场</a></h3>
+              <p class="thnews_jqzy">　　经历西藏之六： 整治西藏的建筑市场●樊世民建管处的工作主要一项就是全区建筑市场的管理，对建筑市场中的违法违规行为进行依法处罚。西藏的建筑市场起步较晚，针对西藏实际发展情况，如何逐步规范这些市场主体行为，逐步整治西藏建筑市场秩序迫在眉梢。但同时，建筑市场又是非常复杂的，涉及各方面利益，牵涉面广，要进行整治又是困难重重。检查建筑工地，左一为作者逐......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610500162235/20110225225610500162235_.html" target="_blank">《经历西藏》之四：开始帮助农民工追讨欠款</a></h3>
+              <p class="thnews_jqzy">　　《经历西藏》之四：开始帮助农民工追讨欠款●樊世民2003年11月份开始，我就基本上进入工作角色了。最初是起草些建筑市场管理方面的文件、通知，接着是起草些建管处内部管理规章制度等。在西藏的工作期间，我和岗杰同志保持着很好的沟通，尤其是初到拉萨的几个月里。几乎每个周末，他都会到办公室来和我讨论工作，这让我受益很大。可以说，我在西藏所做的所有的工作都是在建设厅......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610468461229/20110225225610468461229_.html" target="_blank">《经历西藏》之五：再次接手清欠工作</a></h3>
+              <p class="thnews_jqzy">　　经历西藏之五：重回拉萨，再次接手清欠工作●樊世民2004年1月10日，趁着休假的机会我又回到学校进行博士生毕业论文的工作。经过几个月的努力，终于完成博士论文并于2004年6月5日顺利通过答辩。匆匆办完相关论文提交、离校等手续后，未能等得及毕业典礼我就于2004年6月18日回到拉萨。重操旧业我回清华写论文后，厅里从下属单位自治区工程建筑质量监督站抽......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610515968131/20110225225610515968131_.html" target="_blank">《经历西藏》之一:西藏,毅然而矛盾的选择</a></h3>
+              <p class="thnews_jqzy">　　《经历西藏》之一：西藏，毅然而又矛盾的选择●樊世民编者按：樊世民为清华大学材料系2000级的博士生，2003年10月他志愿到西藏挂职，2005年11月挂职结束后，他返回北京并撰写了《经历西藏》一文，较为全面地讲述了他在西藏经历的种种，有对西藏工作的切身体验，有对藏族朋友的浓厚的友谊，有对西藏壮丽景色的赞叹，更有在西藏工作生活中的种种酸甜苦辣。通过他朴......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610546543369/20110225225610546543369_.html" target="_blank">《经历西藏》之二：博士生也要从头学起</a></h3>
+              <p class="thnews_jqzy">　　《经历西藏》之二： 博士生也要从头学起●樊世民2003年10月来到西藏后，海拔3680米的“日光城”拉萨成了我工作的城市。这里空气中氧气含量只有北京的一半多点，我很庆幸高原反应不大，仅有些许头疼。来西藏之前，对于高原我也是心存顾虑的，担心自己并不壮实的身体承受不了这里的较为恶劣的自然环境而不得不返回北京，那样就丢人了。一下飞机，前来迎接的建设厅政工人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610578379602/20110225225610578379602_.html" target="_blank">《经历西藏》之三：被西藏壮美的景色所征服</a></h3>
+              <p class="thnews_jqzy">　　无标题文档《经历西藏》之三：被西藏壮美的景色所征服●樊世民2003年10月26、27日，到拉萨后的第三个周末，也就是来到拉萨后的第17天，我就有机会出差了。那是和自治区文化厅、文物局、旅游局组成一个联合调查工作组去日喀则地区调查两处文物周边建筑规划的情况，我代表建设厅参加。作者考察日喀则地区扎什伦布寺周边建筑规划来到西藏后，第一次走出拉萨到别的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231718125406410/20110225231718125406410_.html" target="_blank">《经历西藏》之三：被西藏壮美的景色所征服</a></h3>
+              <p class="thnews_jqzy">　　无标题文档《经历西藏》之三：被西藏壮美的景色所征服●樊世民2003年10月26、27日，到拉萨后的第三个周末，也就是来到拉萨后的第17天，我就有机会出差了。那是和自治区文化厅、文物局、旅游局组成一个联合调查工作组去日喀则地区调查两处文物周边建筑规划的情况，我代表建设厅参加。作者考察日喀则地区扎什伦布寺周边建筑规划来到西藏后，第一次走出拉萨到别的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2004.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225618078786555/20110225225618078786555_.html" target="_blank">材料系举行樊世民博士西藏挂职经验座谈会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档投身伟大事业 共创美好明天——材料系樊世民博士西藏挂职经验座谈会举行研通社 徐迪你可曾在工作休息之余抬眼即可领略窗外布达拉宫的庄严肃穆？你可曾在出差时驾车驰骋于雪山圣湖之傍？你又可曾在工作时与藏民畅谈并瞭望无际的草原和成群的牛羊？你可知这般非常人生背后蕴藏着什么？种种好奇，诸多疑问，4月21日晚，“这般体验非常人生——材料系樊世民博士西藏挂职经......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225621250515660/20110225225621250515660_.html" target="_blank">医学院师生欢送毕业生欧阳明赴西藏服务</a></h3>
+              <p class="thnews_jqzy">　　无标题文档医学院师生欢送毕业生欧阳明赴西藏服务我校生物医学工程系本科毕业生欧阳明积极响应国家号召，自愿报名参加2003年“大学生志愿服务西部计划”获得批准，不久将踏上赴西藏的征程。他的举动引起了校内众多师生的关注，许多同学在议论之余表示出对他的赞赏与钦佩。在校园网上，这位曾在韩国总统卢武铉来清华演讲时向总统先生提问的欧阳明一时间颇有了几分传奇色彩。7月1......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231226781507376/20110225231226781507376_.html" target="_blank">西藏高原的祝愿</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document西藏高原的祝愿母校校庆办：今年4月29日是我们的母校——清华大学建校90周年校庆之日，我们生活、工作在西藏高原上的汉、藏、门巴族二十多名清华学子感到无比喜悦和激动。忠心祝福母校兴旺发达，早日成为世界一流的大学！虽然远离母校，但我们对母校之深爱，没有因地处边远、离校日久而变化，反而愈加思念；我们无时不在关注母校的发......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

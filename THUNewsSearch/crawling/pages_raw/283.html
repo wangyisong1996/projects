@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>谭浩强：“双肩挑”助我创造世界纪录</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231214531113832&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">“双肩挑”助我创造世界纪录</h3><p align="center"> 谭浩强</p><p align="center">（光明日报 2001年4月16日）</p><p> 　　今年是清华大学成立90周年，我曾在清华大学学习和工作了三十 多年，从年轻时期开始，长期受到了母校优良传统的教育和薰陶，使 我打下了事业成功的坚实基础。有人说我创造了三个世界纪录：我和   其他同志合著的《BASIC语言》发行量超过1200万册，创造了科技书发 行量的世界纪录；20年来，我自己以及和别人合作共编著了130种计算 机著作，此外还主编了18套计算机丛书（包括228种书），是个人编著   科技著作数量之最；我编著的书发行量近3000万册，我主编的书发行 量为1400多万册，二者合计共4400万册，是世界上拥有最多读者的科 技专家。不久前，《计算机世界》报组织的“世纪评选”，评选出了   对我国20世纪IT事业最有影响的10个人，把我列为第2位，说我的功绩 是“把千百万非专业的初学者引入了计算机的大门”。中国工程院院 长宋健同志给我题词：“教授计算机技术的大师，普及现代科技之巨   擘”，这是对我的勉励与鞭策。在本文中，我想着重谈一下在校期间 政治和业务“双肩挑”对日后工作的影响。</p><p> 　　几年前的一天，我在清华大学第二教室楼前与艾知生同志（当时 为广电部长，50年代末60年代初他任清华大学党委副书记兼团委书记， 我任团委副书记）骑车相遇，他热情地对我说：“我经常在电视里看   到你，你现在是全国著名的计算机大专家了，而过去你是一个学生工 作干部，转变如此之大，有什么经验体会？”我不加思索地回答他说： “这要感谢蒋南翔校长提倡的‘双肩挑’制度，使我们在政治上和业   务上都得到很好的锻炼，以后干什么都受益。”艾知生同志说：“你 这点体会很重要，看来一个人在政治上和业务上的能力是相通的。” 他勉励我给现在的大学生谈谈，使他们在年轻时有意识地全面培养自   己，打好今后发展的基础。我的体会是：政治和业务在微观上、时间 上是有矛盾的，但在宏观上是相互促进的。许多人说我在80年代初善 于抓住机遇，把计算机普及搞得轰轰烈烈，这是由于我在长期担任学   生干部的工作中锻炼了敏锐性、开拓性、工作干劲，以及愿作“铺路 石子”的奉献精神。《BASIC语言》是我们为电视讲座而写的处女作， 由于根据初学者的特点采取了读者易于理解的方式进行叙述，突破了   传统的写计算机书的模式，取得了很好的效果，我以该书为教材在中 央电视台向全国讲授BASIC语言，当年收看人数达100万人，从此掀开 了我国计算机普及高潮的序幕。许多人说我写的书很容易看懂，C语言   是比较难学的，不少人望而生畏，后来我写了一本《C程序设计》，许 多人反映：“自从谭教授出版了这本书后，C语言变得不难学了”。现 在这本《C程序设计》已累计发行了330万册，是世界上发行量最大的   大学计算机教材。作者写书必须考虑到怎样写读者才最容易懂，在这 方面，我做学生工作的经历帮了我很大的忙。我常给学生讲话、作报 告，就必须事先了解学生的需要和特点，不能无的放矢。不能脱离群   众。这一基本功，使我今天在写书时，特别注意研究各种不同读者的 认识规律，将心比心针对不同对象，采用不同的叙述方法。</p><p> 　　过去在作报告时，总是要力求生动具体，学生是不爱听枯燥无味 的报告的。我把这一点用到了计算机的教学和写作中。提出“让群众 轻松愉快、兴趣盎然地走入计算机的大门”。自然科学和社会生活、   课堂教学和日常生活，很多人认为是风马牛不相干的事，我则努力把 它们结合起来，用大家比较熟悉的日常生活中的例子去说明计算机中 一些复杂的概念。C语言中二维数组的指针是一个难点，几乎所有的   C语言书都没有把它讲清楚，我用了在连队点名的例子使读者感到“原 来如此，一点也不难”。</p><p> 　　我除了自己写书、上电视台讲课外，还担任全国高等院校计算机 基础教育研究会会长、教育部全国计算机应用技术证书考试（NIT）委 员会主任委员、教育部全国计算机等级考试委员会副主任，20年来，   承担着推动大学计算机基础教育和社会上计算机普及的重任。我常常 感到：一个人在业务领域中所取得的成就不仅仅取决于其业务水平， 而是取决于其全面素质。长期“双肩挑”的实践，锻炼了我的全面素   质。在计算机普及中，有的同志缺乏具体分析，把计算机专业的课程 搬到非计算机专业，把学校的模式搬到社会，要求公务员和一般初学 者都去学二进制转换，考他们：3568．9654转为二进制数是多少？不   少计算机基础教材都是从计算机的原理入手讲计算机，许多人对此已 习以为常。而广大群众反映：“想学计算机，但计算机难学”。这个 问题如果解决不好，计算机就难以普及。我觉得这不是一个纯业务的   问题，而是由于脱离实际，对工作对象缺乏了解。我在报刊上发表了 一篇题为《计算机普及教育中的一个误区》的文章，提出了要注意三 个区别：区别计算机专业与非计算机专业，区别学校与社会，区别计   算机专业人员与计算机应用人员，对不同对象，应当区别对待；对广 大非计算机专业的初学人员，应该从应用入手；要据需要选择学习内 容，坚决舍弃那些现在用不到、将来也用不到的内容（例如不同进制   的转换）；根据初学人员的认识规律编写出一批群众欢迎的教材。 80年代初，我国许多人通过学习BASIC语言进入了计算机应用领域，这 本来是一件好事，但是有少数专家，以“高、精、尖”为衡量工作的   唯一标准，瞧不起BASIC语言，认为它“低级”，说“学BASIC语言是 走了弯路”，主张取消BASIC。在这种情况下，许多从事计算机普及的 老师感到无所适从。这时，过去工作的经验帮助了我，我觉得一切要   从实际出发，便和其他同志一起对国内外情况进行了深入的调查，访 问了一些当年学过BASIC而现在是各领域的专家和在国外的留学生，最 后召开了“BASIC语言及其前景研讨会”，有100多位从事计算机教育   的专家参加会议，最终形成了共识，肯定了BASIC的历史作用。其实， 每一种语言都有自己的适用领域，也有其局限性，决不能强求一律。 每一种事物的发生、发展和消亡都有其自身发展规律，不以任何人的   意志为转移。事实证明BASIC－QBASIC－VisualBASIC一脉相承，有强 大的生命力。不少老师对我们说：“你们做了一件好事，使计算机普 及工作避免了损失。”</p><p> 　　清华大学既有光荣的革命传统，又有优良的科学传统，培养了一 大批政治和业务都优秀的人才。希望母校永远保持和发扬好传统，为 国家培养更多的人才。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月16日 09:32:20　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131118175904602940451/20131118175904602940451_.html" target="_blank">清华大学纪念“双肩挑”政治辅导员制度建立...</a></h3>
+              <p class="thnews_jqzy">　　清华大学纪念&ldquo;双肩挑&rdquo;政治辅导员制度建立60周年来源：新华网 2013-11-17 李江涛清华大学&ldquo;双肩挑&rdquo;政治辅导员制度建立60周年纪念大会17日举行，60年来共有5000多人做过学生辅导员，很多人成为各行各业的骨干人才。清华大学党委书记胡和平说，&ldquo;双肩挑&rdquo;政治辅导员制度是在1......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131008093026045893104/20131008093026045893104_.html" target="_blank">清华举行辅导员海外研修总结交流会</a></h3>
+              <p class="thnews_jqzy">　　2013年清华辅导员海外研修总结交流会暨辅导员学术发展支持沙龙举行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网10月8日电9月29日下午，作为纪念清华大学&ldquo;双肩挑&rdquo;政治辅导员制度建立60年的系列活动之一，由校学生部、研究生部联合举办的清华大学2013年辅导员海外研修总结交流会暨辅导员......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110520103804297701735/20110520103804297701735_.html" target="_blank">谭浩强做客新人文讲座谈清华精神与成功之路</a></h3>
+              <p class="thnews_jqzy">　　谭浩强做客新人文讲座谈清华精神与成功之路清华新闻网5月20日电（学生通讯员高焓） 5月19日，我国计算机普及和高校计算机基础教育的开拓者之一谭浩强教授做客清华新人文讲座，在六教作了题为&ldquo;清华精神使我走上成功之路&rdquo;的精彩演讲，与近350名同学分享了他对清华精神的理解和自己的奋斗经历。&ldquo;什么是清华精神？&rdquo;谭......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232608140911745/20110225232608140911745_.html" target="_blank">“读清华·蒋南翔周”座谈会暨征文颁奖大会...</a></h3>
+              <p class="thnews_jqzy">　　“读清华·蒋南翔周”师生座谈会暨征文颁奖大会举行【新闻中心讯】12月19日上午，“读清华”系列活动蒋南翔周师生座谈会暨“读清华”征文颁奖大会在清华中央主楼11层举行。计算机基础教育专家、原清华大学学生会主席谭浩强教授，原清华大学副校长、原清华大学团委书记张慕葏教授，与在首届清韵烛光“我最喜爱的教师”评选中名列榜首的清华计算机系教授吴文虎共同作为主讲嘉宾，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232313000719335/20110225232313000719335_.html" target="_blank">谭浩强著清华出版社出版的《C程序设计》发...</a></h3>
+              <p class="thnews_jqzy">　　谭浩强著清华出版社出版的《C程序设计》发行一千万册【新闻中心讯 通讯员 杨爱臣】由谭浩强教授著、清华大学出版社出版的《C程序设计》自1991年出版以来，累计发行超过1000万册。为此，清华大学专门在6月27日下午在主楼举行了“《C程序设计》发行1000万册纪念会”。 清华大学出版社宗俊峰社长致欢迎辞，教育部原副部长吴启迪和清华大学党委副书记韩景阳共同为《......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231736812486668/20110225231736812486668_.html" target="_blank">清华双肩挑辅导员制度不断创新完善</a></h3>
+              <p class="thnews_jqzy">　　清华双肩挑辅导员制度不断创新完善中国教育报  2006-04-28  杨晨光&nbsp;&nbsp;&nbsp;&nbsp;“一个学生沉迷于电脑游戏，非常上瘾，耽误学习，班级活动也不参加，主要原因是他的自制能力很差，只要往电脑前一坐，就控制不了自己。我们一位辅导员每天晚上带他去上自习，回来后拉着他去操场上跑圈，经过一个月的时间，学生的精神面貌截然不同。这个事......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2003.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231418750790735/20110225231418750790735_.html" target="_blank">“双肩挑”（三）辅导员的工作要与时俱进</a></h3>
+              <p class="thnews_jqzy">　　无标题文档抚今追昔 话五十年的“双肩挑”（三）记清华大学“双肩挑”辅导员制度50周年纪念座谈会●新闻中心记者 周襄楠 11月15日下午，在工字厅东厅，来自社会各界的曾经担任我校辅导员工作的校友和在任的辅导员团聚在一起，畅谈五十年的“双肩挑”。笔者摘选了其中三个议题记之。辅导员的工作要与时俱进 刚刚回国的校友李军说：“一流大学最重要的体现就是培养出一流......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2003.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231418734370892/20110225231418734370892_.html" target="_blank">“双肩挑”（二）双肩挑是一项政治制度</a></h3>
+              <p class="thnews_jqzy">　　无标题文档抚今追昔 话五十年的“双肩挑”（二）记清华大学“双肩挑”辅导员制度50周年纪念座谈会●新闻中心记者 周襄楠 顾淑霞 11月15日下午，在工字厅东厅，来自社会各界的曾经担任我校辅导员工作的校友和在任的辅导员团聚在一起，畅谈五十年的“双肩挑”。笔者摘选了其中三个议题记之。双肩挑是一项政治制度 中国青年科技杂志社负责人、化工系校友陶海心曾经在新清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2003.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231418703838660/20110225231418703838660_.html" target="_blank">“双肩挑”（一）“双肩挑”教会了我做学问...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档抚今追昔 话五十年的“双肩挑”（一）记清华大学“双肩挑”辅导员制度50周年纪念座谈会●新闻中心记者 周襄楠 顾淑霞 11月15日下午，在工字厅东厅，来自社会各界的曾经担任我校辅导员工作的校友和在任的辅导员团聚在一起，畅谈五十年的“双肩挑”。笔者摘选了其中三个议题记之。“双肩挑”教会了我做学问、做事和做人“我经历了在清华15年的学习和工作，自......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2003.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231418484303100/20110225231418484303100_.html" target="_blank">清华大学辅导员制度50周年纪念大会座谈会...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“双肩挑”给予他们的人生养分清华大学辅导员制度50周年纪念大会座谈会侧记 【新闻中心11月15日讯 记者 顾淑霞】1953年，当时的清华大学校长蒋南翔创造性地提出了政治辅导员制度。时光的列车转舜驶过50年，50年来的历史检验、风雨洗礼，今天的清华园依然活跃着无数辅导员的身影，“双肩挑”辅导员制度依旧焕发着蓬勃的生命力。 “双肩挑”，一肩挑业务......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2003.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231418453820006/20110225231418453820006_.html" target="_blank">我校举行“双肩挑”政治辅导员制度建立50...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档发扬传统 与时俱进 再创辉煌我校举行“双肩挑”政治辅导员制度建立50周年纪念大会五十年风雨洗礼，新世纪再谱新篇。11月15日上午，清华大学“双肩挑”政治辅导员制度建立五十周年纪念大会在主楼后厅隆重召开。来自社会各界的新老辅导员，欢聚一堂，畅谈亲身体会，追忆美好时光。 1953年，为了加强学生政治思想工作，时任清华大学校长的蒋南翔同志提出并建......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2003.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225346656348906/20110225225346656348906_.html" target="_blank">我校举行“双肩挑”政治辅导员制度建立50...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档发扬传统 与时俱进 再创辉煌我校举行“双肩挑”政治辅导员制度建立50周年纪念大会五十年风雨洗礼，新世纪再谱新篇。11月15日上午，清华大学“双肩挑”政治辅导员制度建立五十周年纪念大会在主楼后厅隆重召开。来自社会各界的新老辅导员，欢聚一堂，畅谈亲身体会，追忆美好时光。 1953年，为了加强学生政治思想工作，时任清华大学校长的蒋南翔同志提出并建......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2003.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231418515263614/20110225231418515263614_.html" target="_blank">杨岳：珍惜辅导员的岗位</a></h3>
+              <p class="thnews_jqzy">　　无标题文档杨岳：珍惜辅导员的岗位新闻中心记者 林枫人生中，总有许多经历让人难忘，让人刻骨铭心。这些宝贵的经历成为一个人人生航船前进的重要指针。对团中央书记处书记杨岳来说，在清华生活、学习和做辅导员的经历，以及从中所得到的锻炼和宝贵的经验，是他一生都受用不完的财富。11月15日下午，记者采访了杨岳，倾听了他对六年辅导员工作的回忆，感受了他浓浓的爱校之情。做......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2003.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231411609503929/20110225231411609503929_.html" target="_blank">谭浩强：把平凡的工作做成伟大</a></h3>
+              <p class="thnews_jqzy">　　无标题文档把平凡的工作做成伟大计算机图书“平民作家”谭浩强教授举行第一百场报告会中华读书报 2003年10月8日本报讯　谭浩强教授是我国计算机普及和高校计算机基础教育的开拓者之一。作为一个计算机图书“平民作家”，他创造了三个世界纪录：1、20年来共编著（含合著）了130种计算机著作，主编250种，共380种，是出版科技著作最多的人。2、他编著和主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231334078470757/20110225231334078470757_.html" target="_blank">纪念辅导员制度50周年，60年代团委辅导...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档纪念辅导员制度50周年，60年代团委辅导员在校欢聚伍绍祖学长贺美英副会长和陈清泰学长亲切交谈方惠坚副会长和校友们一起校友们漫步校园两对辅导员夫妻相聚。谭浩强（左1）、郑晓筠（右2），贾春旺（左2）、俞靖芝（右1）参会辅导员合影今年是“双肩挑”辅导员制度建立50周年。作为纪念辅导员制度建立50周年系列活动之一，4月6日，60年代在我校团委工作过的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348234272202/20110225225348234272202_.html" target="_blank">纪念辅导员制度50周年，60年代团委辅导...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档纪念辅导员制度50周年，60年代团委辅导员在校欢聚伍绍祖学长贺美英副会长和陈清泰学长亲切交谈方惠坚副会长和校友们一起校友们漫步校园两对辅导员夫妻相聚。谭浩强（左1）、郑晓筠（右2），贾春旺（左2）、俞靖芝（右1）参会辅导员合影今年是“双肩挑”辅导员制度建立50周年。作为纪念辅导员制度建立50周年系列活动之一，4月6日，60年代在我校团委工作过的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231332703701953/20110225231332703701953_.html" target="_blank">我校“双肩挑”辅导员制度50周年深圳校友...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档50年的“双肩挑”我校“双肩挑”辅导员制度50周年深圳校友座谈会召开2003年是我校“双肩挑”辅导员制度50周年,为总结历史，展望未来，我校纪念“双肩挑”辅导员制度50年深圳校友座谈会于3月23日上午在深圳研究生院召开。来自深圳及周边地区的新老校友40余人聚会一堂，回顾与辅导员相关的校园往事，研讨“双肩挑”制度的未来发展。大家一致认为，辅导员制......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355875560247/20110225225355875560247_.html" target="_blank">谭浩强：“双肩挑”助我创造世界纪录</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“双肩挑”助我创造世界纪录谭浩强（光明日报 2001年4月16日）今年是清华大学成立90周年，我曾在清华大学学习和工作了三十 多年，从年轻时期开始，长期受到了母校优良传统的教育和薰陶，使 我打下了事业成功的坚实基础。有人说我创造了三个世界纪录：我和   其他同志合著的《BASIC语言》发行量超过1200万册，创造了科技书......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2000.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231209578738017/20110225231209578738017_.html" target="_blank">我与清华出版社的不解之缘</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我与清华出版社的不解之缘作者 谭浩强 日期 2000-09-20清华大学出版社走过了艰苦创业和蓬勃发展的20年。我亲眼看到 它成立、发展、壮大和繁荣的全过程。作为清华大学出版社的老作者、 老朋友，我对清华大学出版社20年来取得的巨大成就和光荣业绩感到   无比的兴奋。我记得1978年我国恢复了高考制度，清华大学也......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

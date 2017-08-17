@@ -1,0 +1,734 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我校科研成果被列为2000年中国十大科技新闻和十大科技</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231207343917667&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">我校科研成果被列为2000年中国十大科技新闻和十大科技进展新闻 </h3><p align="center">（戈平华）</p><p>　　【本站1月9日讯】1、"航天清华一号"微小卫星发射成功，被列为"2000年中国十大科技新闻"。"航天清华一号"微小卫星于2000年6月28日发射成功，目前运行良好，已发回大量照片。2、由我校程京教授等研制的电磁式生物芯片被列为"2000年中国十大科技进展新闻"。该技术中的可单点选通的电磁阵列技术、电旋转检测技术等均为世界首创。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年01月09日 08:09:43　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150421173050883966752/20150421173050883966752_.html" target="_blank">我国耳聋基因筛查突破百万人</a></h3>
+              <p>　　“遗传性耳聋基因筛查突破百万暨科学与国际合作论坛”日前在生物芯片北京国家工程研究中心（以下简称中心）举行。中心主任、中国工程院院士、博奥生物集团总裁程京表示，截至4月15日，我国使用耳聋基因筛查芯片筛查的总人数已达120万人，这是全球最大规模使用分子检测技术对遗传性疾病所作的筛查。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150324163102509394732/20150324163102509394732_.html" target="_blank">中国人群唇腭裂遗传研究获突破</a></h3>
+              <p>　　清华大学医学院、生物芯片北京国家工程研究中心日前联合举行新闻发布会，发布了国际上首次对中国人群非综合症型唇腭裂进行全基因组关联研究（GWAS）的成果。研究针对先天性唇腭裂展开全基因组关联研究，除确认了四个曾报道过的关联区域外，还鉴定出一个新的关联位点与中国人的唇腭裂显著关联。相关研究日前在线发表于《自然—通讯》。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150319115051126520910/20150319115051126520910_.html" target="_blank">如何避免“兔唇宝宝”的出生？</a></h3>
+              <p>　　唇腭裂是一种口腔颌面部的先天性畸形，俗称“兔唇”，是由于胚胎时期间充质发育受阻而导致的一种出生缺陷。唇腭裂在我国的发生率极高，不仅给患者本身带来了一系列的生理、心理影响，也给整个家庭带来了巨大的精神痛苦和经济负担。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150312120211104992402/20150312120211104992402_.html" target="_blank">程京：一个人必须身和心都健康 才是真正的...</a></h3>
+              <p>　　3月11日，全国人大代表、中国工程院院士、生物芯片北京国家工程研究中心主任、博奥生物集团总裁程京做客新华网2015年全国两会特别节目——新华会客厅，围绕大家关心的健康话题，与广大网友进行在线交流。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150311160601636953613/20150311160601636953613_.html" target="_blank">程京：用“芯”浇筑健康梦</a></h3>
+              <p>　　程京的身份有很多。    　　清华大学医学院教授、中国工程院院士、博奥生物集团有限公司总裁……    　　但倘若抽丝剥茧，会发现他所扮演的这些角色都有一个共同的精髓——生物芯片。    　　他给学生讲芯片，他研究芯片，开发芯片……从一开始，他就将全部精力注入到这一枚枚小小的、却关系人类健康福祉的芯片中。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150128120020462314094/20150128120020462314094_.html" target="_blank">程京院士的“老吾老”与“幼吾幼”</a></h3>
+              <p>　　50岁出头的程京身材瘦削、相貌俊朗，看上去外表年轻的他有着显赫的头衔：中国工程院院士、生物芯片北京国家工程研究中心主任、博奥生物集团有限公司总裁……</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141229163104526473028/20141229163104526473028_.html" target="_blank">科技日报评出2014年国内国际十大科技新闻</a></h3>
+              <p>　　由科技日报社主办、部分两院院士、中央主流新闻媒体负责人和资深科技记者共同评选出的2014年国内国际十大科技新闻28日在京揭晓。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140929113200510384606/20140929113200510384606_.html" target="_blank">归侨院士程京：生物芯片里的中国心</a></h3>
+              <p>　　“年轻时总说‘救人一命胜造七级浮屠’，可那时是‘和尚念经，有口无心’。现在自己能用生物科技救人性命，心里的滋味大不一样。”日前，归侨程京在北京接受记者采访时说，他在生物科技界找到了自己的人生价值。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140919130945878849371/20140919130945878849371_.html" target="_blank">博奥生物获中国出生缺陷干预救助基金会首届...</a></h3>
+              <p>9月12日，中国出生缺陷干预救助基金会举行了“2014年首届中国出生缺陷干预救助基金会科学技术奖”颁奖仪式。博奥生物暨生物芯片北京国家工程研究中心获“特殊贡献奖”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140311115211829587441/20140311115211829587441_.html" target="_blank">程京代表：激发创新活力顺畅创新医药政策通道</a></h3>
+              <p>程京认为由于我国缺乏创新药物、产品的配套政策，使得企业在承受了巨大技术风险、资金风险将创新药物、产品研制出来后，马上就遇到“政策瓶颈”，创新药物和产品要经过数年时间才能应用到临床，这使得创新企业收回投资困难，从而导致我国许多制药企业不去搞创新药物开发，只是一味去仿制。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130315140926473427280/20130315140926473427280_.html" target="_blank">程京：建议在全国开展遗传性耳聋筛查</a></h3>
+              <p class="thnews_jqzy">　　我国每年新生6万听障儿童人大代表程京：建议在全国开展遗传性耳聋筛查来源：北京晨报 2013-3-15 姜葳 陈琳本月底，列入去年北京市政府&ldquo;实事工程&rdquo;的&ldquo;新生儿耳聋基因筛查工作&rdquo;结束。昨天，全国人大代表、中国工程院院士、生物芯片北京国家工程研究中心主任程京（见图）介绍，一年来，北京市筛查超过202020个新......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120913150146209773633/20120913150146209773633_.html" target="_blank">博奥生物：让专利从“墙上”走下来</a></h3>
+              <p class="thnews_jqzy">　　博奥生物：让专利从&ldquo;墙上&rdquo;走下来来源：新京报 2012-09-13 王海涛 杨万国 蒋彦鑫10年前，提及&ldquo;中关村&rdquo;，映入脑海的恐怕便是那海龙门前熙熙攘攘、川流不息的人群。10年过去了，&ldquo;中关村&rdquo;的概念早已超越了&ldquo;电子一条街&rdquo;。作为中国第一个国家级自主创......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110407160833445328683/20110407160833445328683_.html" target="_blank">程京：探路生物芯片</a></h3>
+              <p class="thnews_jqzy">　　程京：探路生物芯片吴婷婷 蒋欣怡 丰 捷&nbsp;医学和工程科学结合以后，有很多对未来的探索，需要我们研究人员去参与，这样才能将最新的科研成果应用于解决病患问题。&mdash;&mdash;程京&nbsp;2009年12月2日，中国工程院新增院士名单公布，清华大学医学院生物医学工程系46岁教授程京当选院士。&nbsp;曾经在国际会议上作过57次......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2011.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232617156835534/20110225232617156835534_.html" target="_blank">博奥生物：创造中国自己的生物芯片</a></h3>
+              <p class="thnews_jqzy">　　博奥生物：创造中国自己的生物芯片来源：人民日报 2010-02-20 赵永新生物芯片被称作灵敏的“医学侦察兵”，是指在一块指甲大小的玻片、硅片、尼龙膜等材料上放上生物探针，然后收集与血液、尿液、痰液等待测样品反应产生的相关信号，再用计算机或其他方法分析数据获得结果。2006年，被誉为“DNA之父”的美籍诺贝尔奖得主詹姆斯&#8226;沃森就曾预言：在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232544187401855/20110225232544187401855_.html" target="_blank">生物芯片北京国家工程研究中心成立十周年</a></h3>
+              <p class="thnews_jqzy">　　生物芯片北京国家工程研究中心成立十周年【新闻中心讯 记者 陈卓琬 摄影 司徒哲阳 王诗】10月16日，博奥生物有限公司暨生物芯片北京国家工程研究中心（以下简称“生物芯片中心”，前身为清华大学生物芯片研究与开发中心）成立十周年庆典在博奥生物有限公司北京总部举行。中共中央政治局常委、全国政协主席贾庆林为生物芯片中心十周年庆典专门发来贺信。清华大学党委书记胡和......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2010.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232527703574967/20110225232527703574967_.html" target="_blank">习近平视察博奥生物芯片中心</a></h3>
+              <p class="thnews_jqzy">　　中共中央政治局常委、中央书记处书记、国家副主席习近平视察博奥生物芯片中心【新闻中心讯】8月23日上午，中共中央政治局常委、中央书记处书记、国家副主席习近平就中关村科技园区自主创新发展情况，视察了清华控股博奥生物有限公司暨生物芯片北京国家工程研究中心。　习近平参观了博奥生物自主创新产品展览和基因芯片服务实验室，并仔细观看了疾病基因芯片检测的现场演示。博......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232440500432184/20110225232440500432184_.html" target="_blank">程京：观念和政策要紧跟技术发展</a></h3>
+              <p class="thnews_jqzy">　　编者按：目前，国家强调要大力发展战略性新兴产业，而由于政策和观念往往跟不上技术的脚步，导致出台的很多创新战略计划和措施难以尽达初衷。4月15日，在第十届北京生命科学领域学术年会上的演讲中，中国工程院院士、生物芯片北京国家工程研究中心主任程京提出“政策和观念要紧跟技术的发展”的观点，为推动中国战略性新兴产业的发展提供了建设性声音。观念和政策要紧跟技术发展中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232431578163351/20110225232431578163351_.html" target="_blank">海归院士程京：让生物芯片见证中国“加速度”</a></h3>
+              <p class="thnews_jqzy">　　海归院士程京：让生物芯片见证中国“加速度”《神州学人》　 2010年第4期 封面文章&nbsp; 采写：段风华　2009年12月，程京当选中国工程院新院士。实至名归，从1999年回国至今，10年间，他收获的不仅仅是一系列国内、国际的奖项和荣誉，对他而言，更重要的是能够亲历中国生物芯片的快速发展，并且能带领一支堪称中国生物芯片研发、生产的“国家队”——生物......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232431453586966/20110225232431453586966_.html" target="_blank">海归院士程京：让生物芯片见证中国“加速度”</a></h3>
+              <p class="thnews_jqzy">　　海归院士程京：让生物芯片见证中国“加速度”《神州学人》　 2010年第4期 封面文章&nbsp; 采写：段风华　2009年12月，程京当选中国工程院新院士。实至名归，从1999年回国至今，10年间，他收获的不仅仅是一系列国内、国际的奖项和荣誉，对他而言，更重要的是能够亲历中国生物芯片的快速发展，并且能带领一支堪称中国生物芯片研发、生产的“国家队”——生物......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232421421334803/20110225232421421334803_.html" target="_blank">胡和平书记到生物芯片北京国家工程研究中心...</a></h3>
+              <p class="thnews_jqzy">　　校党委书记胡和平到生物芯片北京国家工程研究中心调研【新闻中心讯 记者 崔凯 通讯员 赵春伟】3月18日上午，校党委书记胡和平前往生物芯片北京国家工程研究中心调研。胡和平首先参观了中心的科研成果和产品展台，并参观了光学检测实验室、产品生产车间以及中国造血干细胞捐献者资料库样品库。清华大学医学院教授、中心主任程京院士向胡和平介绍了中心国内外专利授权、成果......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2010.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232407906696299/20110225232407906696299_.html" target="_blank">【人物】程京：中国生物芯片探路者</a></h3>
+              <p class="thnews_jqzy">　　中国生物芯片探路者——记新当选的中国工程院院士、清华医学院教授程京对做工程的人来讲，最大的愉悦是当人家不知道这东西是你做的情况下，说这东西好，碰巧被你听见了，这是最高兴的。医学和工程科学结合以后，有很多对未来的探索，需要我们研究人员去参与，这样才能将最新的科研成果应用于解决病患问题。——程京●学生记者 吴婷婷 蒋欣怡程京院士　摄影　郭海军2009......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2010.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104116078828829/20110226104116078828829_.html" target="_blank">【人物】程京：中国生物芯片探路者</a></h3>
+              <p class="thnews_jqzy">　　中国生物芯片探路者——记新当选的中国工程院院士、清华医学院教授程京对做工程的人来讲，最大的愉悦是当人家不知道这东西是你做的情况下，说这东西好，碰巧被你听见了，这是最高兴的。医学和工程科学结合以后，有很多对未来的探索，需要我们研究人员去参与，这样才能将最新的科研成果应用于解决病患问题。——程京●学生记者 吴婷婷 蒋欣怡程京院士　摄影　郭海军2009......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232028531839971/20110225232028531839971_.html" target="_blank">中国"智"造生物芯片成功实现突围</a></h3>
+              <p class="thnews_jqzy">　　中国"智"造生物芯片成功实现突围阅读提示经过多年自主研发，博奥生物技术有限公司的相关仪器设备已经打破了国际垄断并出口海外。坚持不懈的自主研发、多项专利打造的技术平台，让中国 “智”造的生物芯片向世界证明着自己的实力。生物芯片的出现是近年来高新技术领域中极具时代特征的重大进展，是物理学、微电子学与分子生物学综合交叉形成的高新技术。由于生物芯片具有反......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2007.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231923828672730/20110225231923828672730_.html" target="_blank">生物芯片北京国家工程研究中心项目通过专项...</a></h3>
+              <p class="thnews_jqzy">　　生物芯片北京国家工程研究中心项目通过专项验收&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【新闻中心讯】2007年7月18日和20日，北京市发展和改革委员会分别组织相关专家小组，对生物芯片北京国家工程研究中心建设项目的基本建设、竣工财务决算和创新能力建设三个专项情况进行了验收。验收专家组进行了实地考察，听取了项目建设法人单位博奥生物有限公司（简......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231716609534263/20110225231716609534263_.html" target="_blank">打造中国的生物“芯”</a></h3>
+              <p class="thnews_jqzy">　　打造中国的生物“芯”科技日报 2006-2-7 记者付毅飞&nbsp;&nbsp;&nbsp; “中国应加大在生物芯片研发方面的投资力度，实施强强结合，尽快建立国家级生物芯片工程研究中心，迅速研究开发出一批具有我国自主知识产权的专门技术，积极参与到国际竞争的行列中去。”2000年2月29日，程京在为朱镕基等国务院及有关部委领导作报告时如此呼吁。&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231716640725472/20110225231716640725472_.html" target="_blank">程京：从“四不像”到高精尖人才</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;程京：从“四不像”到高精尖人才科技日报 2006-2-7 记者付毅飞&nbsp;&nbsp;&nbsp; 时针指向中午两点，我已在程京的办公室外等候了半个多钟头。　“对不起，程老师还在跟人谈事，我再想办法催一下。”一位工作人员颇有些尴尬地说着，不停地为我添水。　我的目光正被另一名工作人员吸引，她已在办公室门口张望了几次，这次终于下定决心，硬着......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231643390563056/20110225231643390563056_.html" target="_blank">清华医学生命科学院发现抗真菌新机制</a></h3>
+              <p class="thnews_jqzy">　　清华医学与生命科学院发现抗真菌新机制中国医药报 2005-09-08&nbsp;&nbsp;&nbsp; 清华大学医学与生命科学院的周玉祥教授介绍，他们在使用DNA芯片进行药物研究过程中，揭示了土槿皮酸B抑制真菌的新机制。&nbsp;&nbsp;&nbsp; 与传统方法相比，生物芯片具有快速、准确的优势，它可以在经药物处理的细胞与未处理的细胞之间一次性比较千......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2005.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231544531362770/20110225231544531362770_.html" target="_blank">CERNET2入选全国十大科技新闻十大教...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档CERNET2入选全国十大科技新闻十大教育新闻【新闻中心讯】 由设在我校的CERNET网络中心主持完成的高水平成果──第二代中国教育和科研计算机网（CERNET2），继入选2004年中国高校十大科技进展后，又分别入选中国十大科技新闻和十大教育新闻。 去年12月25日，作为中国下一代互联网示范工程（CNGI）的核心网，CERNET2宣布正式开......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2004.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231518359901727/20110225231518359901727_.html" target="_blank">“2004年国际生物芯片技术论坛”开幕</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“2004年国际生物芯片技术论坛”开幕图片说明：“2004年国际生物芯片技术论坛”开幕式 摄影 郭海军【新闻中心讯  记者 类延旭】“2004年国际生物芯片技术论坛”10月21日上午在北京中关村生命科学园开幕。此次会议是继2000年、2002年国际生物芯片技术论坛后在中国举办的第三届国际生物芯片技术论坛。本次论坛为期三天，主题聚焦于新出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231511421625740/20110225231511421625740_.html" target="_blank">刘淇一行视察生物芯片北京国家工程研究中心</a></h3>
+              <p class="thnews_jqzy">　　无标题文档刘淇一行视察生物芯片北京国家工程研究中心 9月24日，中共中央政治局委员、北京市市委书记刘淇，北京市市委常委、市委秘书长孙政才，北京市副市长兼北京市中关村管委会主任范伯元等一行二十余人来我校生物芯片北京国家工程研究中心视察、指导，参观了公司技术和产品展厅，考察了公司实验室和产品生产车间等设施，并听取程京关于公司技术、产品发展等情况汇报。我校校长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231510296384003/20110225231510296384003_.html" target="_blank">校长顾秉林院士参观博奥生物芯片公司</a></h3>
+              <p class="thnews_jqzy">　　无标题文档校长顾秉林院士参观博奥生物芯片公司图片说明：顾秉林校长参观北京博奥生物芯片有限公司 【新闻中心讯 记者 薛建团】9月22日下午，校长顾秉林一行来到了中关村生命科学园，参观了园内的北京博奥生物芯片有限公司（生物芯片北京国家工程研究中心），听取了中心主任程京博士的汇报。 顾秉林一行了解了生物芯片中心的建设情况，参观了部分实验室，并和实验室里的工......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231351218883195/20110225231351218883195_.html" target="_blank">顾秉林陈希致信慰问测温仪和生物芯片科研人员</a></h3>
+              <p class="thnews_jqzy">　　无标题文档顾秉林陈希致信慰问测温仪和生物芯片科研人员指出他们所表现的精神值得全校师生学习和发扬5月22日，校长、我校防治“非典”科研攻关领导小组组长顾秉林和党委书记、我校防治“非典”工作领导小组组长陈希，向参加红外线测温仪开发生产和非典病毒检测基因芯片研制的全体工作人员发出慰问信，充分肯定他们连续奋战开展科研攻关，为防治非典型肺炎的工作做出了重要贡献，代......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225622906106938/20110225225622906106938_.html" target="_blank">为科学战胜“非典”贡献力量：母亲节献给妈...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档为科学战胜“非典”贡献力量：母亲节献给妈妈的最好礼物——清华大学志愿者参加SARS病毒生物芯片检测临床试验行动侧记雨过天晴，清华园空气清新，万木葱茏，显得格外美丽。5月11日一大早，天气还略带寒意。校团委门前便排起了长长的队伍。同学们领表、填表、验痰、采血、胸透……，在校红十字会同学的引导下，一切程序进行的有条不紊。这是我校志愿者在参与......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231340125777888/20110225231340125777888_.html" target="_blank">北京市副市长范伯元视察我校生物芯片北京国...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档北京市副市长范伯元视察我校生物芯片北京国家工程研究中心4月26日，我校生物芯片北京国家工程研究中心的“非典”快速早诊基因芯片研制工作取得初步成果后，北京市领导非常关心。4月27日上午，范伯元副市长与中关村管委会副主任戴卫、北京生物技术和新医药产业促进中心主任雷霆等有关负责同志一起，到我校生物芯片北京国家工程研究中心考察工作、听取汇报，并对如何科......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231318984331549/20110225231318984331549_.html" target="_blank">2002国际生物芯片技术论坛开讲</a></h3>
+              <p class="thnews_jqzy">　　无标题文档2002国际生物芯片技术论坛开讲11月10日，由生物芯片北京国家工程研究中心主办的“2002国际生物芯片技术论坛”在北京国际会议中心拉开帷幕。论坛为期四天，来自国内外生物芯片技术领域的权威学者、知名专家、科研人员300余人参加了大会。北京市副市长刘志华、国家计委高技术发展司綦成元副司长、我校副校长龚克教授出席了开幕式并对论坛的成功召开表示祝......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2002.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231315734359263/20110225231315734359263_.html" target="_blank">中国“航天清华一号”小卫星在太空运行良好</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document中国“航天清华一号”小卫星在太空运行良好（中新网 2002年10月17日）中新社北京十月十六日电(吕晓戈孙自法)中国航天科工集团公司今日在此间宣布，该公司和清华大学合作研制的“航天清华一号”小卫星，目前在太空中运行良好。专家称，“航天清华一号”小卫星的研制成功并在太空中良好运行，表明中国航天科工集团公司与清华大学在高......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231308984786521/20110225231308984786521_.html" target="_blank">生物芯片在我国离产业化还有多远</a></h3>
+              <p class="thnews_jqzy">　　无标题文档如果说，20世纪属于微电子芯片，那么21世纪则是生物芯片的时代生物芯片在我国离产业化还有多远王薇 经济日报 2002.09.0220世纪以来的科技史上有两项发明影响深远，一是微电子芯片，它是计算机和诸多电器的心脏，改变了人类经济和社会生活的方式；另一项就是生物芯片，它革新了医学诊断和治疗的准确性，改变了生命科学的研究方式。有人认为，从某种意义上......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2002.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231246687781679/20110225231246687781679_.html" target="_blank">“生物芯片”获巨额授信</a></h3>
+              <p class="thnews_jqzy">　　无标题文档广发银行大力扶持高新科技“生物芯片”获巨额授信北京晨报 2002年1月10日晨报讯 （记者 尹文胜） 广东发展银行与北京博奥生物芯片有限责任公司暨生物芯片北京国家工程研究中心昨天签署了２亿元人民币授信额度协议。这是广发银行在支持国家重点产业化项目、扶持中关村高科技企业发展方面的新举措。博奥公司是我国惟一被列入“８６３”计划的生物芯片研发机构......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231242046704100/20110225231242046704100_.html" target="_blank">“航天清华一号”微小卫星</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“航天清华一号”微小卫星科技日报 2001年11月21日2000年6月，由中国航天科工集团公司、清华大学企业集团公司、清华同方股份有限公司以及中国银泰投资公司等四家共同投资组建的航天清华卫星技术有限公司宣告成立。该公司按现代企业制度的形式组建，全部由投资各方出资，而不再由国家单一出资，产权清晰，组织和管理制度先进，市场化运作，并确立了以发展民用......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231237937945643/20110225231237937945643_.html" target="_blank">“生物芯”：缘何让人刮目相看</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“生物芯”：缘何让人刮目相看科学时报 2001年9月27日国内生物芯片公司几乎遍地开花之际，生物芯片北京国家工程研究中心9月25日举行的奠基仪式，却仍引起舆论普遍关注。缘何如此？记者就此进行了采访。首先是因为生物芯片是一项新兴的革命性技术。生物芯片是一种微小固体器件，包括样品制备芯片、生化反应芯片、基因芯片、蛋白芯片......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231237765193484/20110225231237765193484_.html" target="_blank">我国生物“芯”培育初见成效</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我国生物“芯”培育初见成效人民网 2001年9月25日新华社北京９月２５日电（记者李斌）随着奠基仪式的举行，占地约７０亩的生物芯片北京国家工程研究中心建设今天在中关村生命科学园正式启动。这不仅标志着作为国家重大技术工程的生物芯片已经进入实施阶段，而且标志着我国生物“芯”的培育已初见成效。生物芯片是新兴的高技术领域，被......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231237750599440/20110225231237750599440_.html" target="_blank">我国开始建设生物芯片国家工程研究中心</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我国开始建设生物芯片国家工程研究中心标志国家重大技术工程生物芯片进入实施阶段光明日报 2001年9月26日记者　金振蓉本报北京9月25日电　随着奠基仪式的举行，一个占地70亩的生物芯片北京国家工程研究中心基地，今天在北京中关村生命科学园开始建设，这标志着作为国家重大技术工程的生物芯片已经进入了实施阶段。生物芯片是新兴......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231237703466678/20110225231237703466678_.html" target="_blank">“生物芯”：缘何让人刮目相看</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“生物芯”：缘何让人刮目相看人民网 2001年9月25日新华社记者 李斌 国内生物芯片公司几乎遍地开花之际，生物芯片北京国家工程研究中心今天举行的奠基仪式，却仍引起舆论普遍关注。缘何如此？记者就此进行了采访。首先是因为生物芯片是一项新兴的革命性技术。生物芯片是一种微小固体器件，包括样品制备芯片、生化反应芯片、基因芯片......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231230328270427/20110225231230328270427_.html" target="_blank">东阿阿胶投资北京博奥生物芯片公司</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document东阿阿胶投资北京博奥生物芯片公司光明日报 2001-06-15本报讯（记者赵秋丽通讯员吴延华）日前，东阿阿胶股份有限公司与北京清华大学企业集团等9家单位共同签署了北京博奥生物芯片有限责任公司的增资协议。该公司拟出资2500万元人民币入主博奥生物芯片公司，在按出资比例分享收益的同时，可优先有偿占有北京博奥公司这个生物芯片国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231219875138534/20110225231219875138534_.html" target="_blank">清华首创多项生物芯片技术</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华首创多项生物芯片技术(2001.04.28 新华网)新华网北京4月28日电 2000年2月29日是我国生物芯片领域的一个值得纪念的日子，清华大学程京博士应邀到中南海为国务院办公厅举办的第十次科技讲座汇报时，向国家领导人提出建议：“希望国家采取倾斜政策，从国内外抽调、招聘一批从事生物芯片研究的科技人才，在北京中关村组建......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231212781843028/20110225231212781843028_.html" target="_blank">生物芯片将怎样改变我们的生活</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document生物芯片将怎样改变我们的生活◆清华大学生物芯片研究中心主任　程京（光明日报 2001年4月9日）生物芯片已成为热点生物芯片（又称DNA芯片、基因芯片）技术是20世纪90年代初半导 体技术和生物技术“联姻”的结晶，由于它可能形成巨大产业，自然 就成了国际科研的热点。生物芯片有很多种，包括基因芯片、蛋白质芯片、多......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2000.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231214203697807/20110225231214203697807_.html" target="_blank">清华卫星诞生记</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华卫星诞生记(北京青年报 2000-07-11)7月9日，清华大学宇航技术中心宣布：“航天清华一号” 微小卫星（本报7月8日2版曾报道）的特殊发射测控期已结束，开始转入常规运行。目前，卫星的工作情况良好。这样一来，紧张工作了两年多的年轻的专家们终于可以喘口气了。虽然我们早已知道这是一支年轻的队伍，但我们在清华宇航中心见......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2000.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231214015739382/20110225231214015739382_.html" target="_blank">“清华1号”微型卫星在俄发射成功</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“清华1号”微型卫星在俄发射成功(2000.06.30 新华网)莫斯科时间6月28日下午2时38分，在俄罗斯普列谢茨克航天发射场，俄用“宇宙—3M”运载火箭把三颗微型卫星送入太空，其中包括我国清华大学的“清华1号”微型卫星。据悉，“清华1号”微型卫星自重50千克，是由清华大学委托英国萨里卫星工艺公司(SURREYS......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

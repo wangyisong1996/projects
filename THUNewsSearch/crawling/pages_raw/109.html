@@ -1,0 +1,552 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清华附中组织学生进行“申奥”植树活动</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225627046596132&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9654/index.html' class='navigation_style'>校园写意</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">清华附中组织学生进行“申奥”植树活动</h3><p> 绿化首都环境，支持北京申奥是每一个首都公民的美好愿望，作为首都的中学生也不例外。清华附中的广大学生也投入到这股热潮中来。 </p><p>2月份，全校1000多名团员自觉缴纳了数目不等的特殊团费共1500多元，支持海淀共青团建“海淀共青林”。 </p><p>3月25日，响应社会广泛植树造林的号召，附中团委、学生会和红十字会在老师的带领下组织二十余名学生来到凤凰岭青少年活动基地进行申奥植树活动。尽管天气很冷，但同学们的热情很高。大家分工协作，有的挥镐挖坑，有的栽树苗，有的浇水┅┅种完了一棵还想种第二棵。活动将末，同学们在自己种的树苗上纷纷挂牌留念。同学们种下的不只是一棵棵树苗，更是一个个对北京申奥成功的美好愿望。 </p><p>事后同学们热情依然很高，一致表示还将继续参加各种类似的活动，为美好首都环境作贡献，争取2008年在美丽的北京观看奥运会。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月27日 14:47:27　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2012/20120419153403201293220/20120419153403201293220_.html" target="_blank">清华武威校友和支教团防风治沙、植树造林</a></h3>
+              <p class="thnews_jqzy">　　清华武威校友和支教团防风治沙 植树造林清华新闻网4月19日电4月以来，陇原大地终于迎来盼望已久的春天。但是，也预示着每年的扬沙天气即将到来。西北地区的脆弱生态环境也将经受严峻的考验。甘肃省是具有2.67亿亩天然草原的国内六大牧区之一，作为长江、黄河等大江大河的上游重要水源&ldquo;补给区&rdquo;，在生态保护中的地位尤其重要。近年来，千里河西......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232237515826506/20110225232237515826506_.html" target="_blank">清华校友帮南阳农民植树脱贫</a></h3>
+              <p class="thnews_jqzy">　　清华校友帮南阳农民植树脱贫3月10日，来自清华大学河南企业家同学会的数十名代表在南阳卧龙区龙兴乡潦河坡村认种林地并当场捐款，他们的行为感动得十里八村的村民和学生也加入到植树大军的行列。据了解，卧龙区西北部的龙兴乡和安皋镇附近有大面积的浅山丘陵区宜林宜果，由于当地农民缺乏购买适宜的果树资金和种植技术，这里的浅山丘陵地带长期荒芜。前些时，在该区新农村建设......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2008.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232039687177812/20110225232039687177812_.html" target="_blank">绿色奥运，绿色清华，师生共植一片林</a></h3>
+              <p class="thnews_jqzy">　　绿色奥运，绿色清华，师生共植一片林【新闻中心讯】4月15日上午，由校绿色大学建设办公室和清华大学学生绿色协会共同举办的“绿色奥运，绿色清华，师生共植一片林”活动，在游泳馆东侧的草地上举行。校长顾秉林、党委书记陈希、副校长张凤昌、副书记韩景阳和来自校机关、后勤等单位、各院系所的教工、学生一千多人参加了植树活动，栽种白皮松、椴树、橡树、杨树和柳树，共计300......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231946671353551/20110225231946671353551_.html" target="_blank">清华附中举行瑞穗奖励基金首届颁奖典礼</a></h3>
+              <p class="thnews_jqzy">　　清华附中举行瑞穗奖励基金首届颁奖典礼【新闻中心讯】10月31日下午，清华附中瑞穗奖励基金首届颁奖典礼在附中报告厅举行。清华附中首批60名优秀学生和10名优秀教师获奖。清华大学副校长汪劲松、中瑞穗奖励基金中日双方有关负责人以及清华附中部分师生共1000多人出席了颁奖典礼。汪劲松代表清华大学对日本瑞穗银行对清华附中的支持表示感谢，向获得瑞穗奖励金的师生们......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231725328481992/20110225231725328481992_.html" target="_blank">附中女篮打入全国女子高中联赛总冠军决赛</a></h3>
+              <p class="thnews_jqzy">　　清华附中女篮打入全国女子高中联赛总冠军决赛3月25日，中国高中女子篮球联赛南北四强对抗赛(南赛区)在南京金陵中学举行。北京清华附中队与南京金陵中学队经过异常激烈的较量，加时两场才决出胜负，最后主场清华附中队以106分比104分获胜，从而荣获进入全国冠军争夺赛的资格。由中国中学生体育协会主办的中国高中女子篮球联赛，是高中生篮球的传统赛事。本次比赛是经......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610265926224/20110225225610265926224_.html" target="_blank">清华学子赴儿童村爱心植树</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华学子赴儿童村爱心植树3月12日植树节，50多名清华学子奔赴顺义参加由绿色协会举办的“北京儿童村爱心植树活动”。儿童村位于北京顺义郊区，是专门收养服刑人员的无人抚养的未成年子女的救助所，现在有115名1-18岁的儿童在那里生活。儿童村为了自力更生、筹措经费、回报社会，开发了儿童村梨枣种植基地，希望靠其产出来弥补儿童村经费的不足，同时也希望......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231723843572356/20110225231723843572356_.html" target="_blank">清华学子赴儿童村爱心植树</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华学子赴儿童村爱心植树3月12日植树节，50多名清华学子奔赴顺义参加由绿色协会举办的“北京儿童村爱心植树活动”。儿童村位于北京顺义郊区，是专门收养服刑人员的无人抚养的未成年子女的救助所，现在有115名1-18岁的儿童在那里生活。儿童村为了自力更生、筹措经费、回报社会，开发了儿童村梨枣种植基地，希望靠其产出来弥补儿童村经费的不足，同时也希望......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231558437700711/20110225231558437700711_.html" target="_blank">顾秉林、陈希参加首都第21个义务植树日活...</a></h3>
+              <p class="thnews_jqzy">　　顾秉林、陈希参加首都第21个义务植树日活动暨清华生态园建设开工仪式【新闻中心讯】4月2日上午，海淀区绿化办公室和我校绿办在荷清苑小区北侧代征绿地共同举行了首都第21个义务植树日活动暨清华生态园建设开工仪式。北京市政协副主席黄承祥、海淀区委书记谭维克、区长周良洛、我校校长顾秉林、党委书记陈希、常务副校长何建坤、常务副书记庄丽君、副校长张凤昌、纪委书记孙道祥......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225614093900701/20110225225614093900701_.html" target="_blank">在希望的田野上种下绿色——记水利系研究生...</a></h3>
+              <p class="thnews_jqzy">　　在希望的田野上种下绿色——记水利系研究生康复中心植树行研通社 张琳3月19日，水利系研究生与水利系本科紫荆分队一行95人在丰台区利智康复中心成功开展了一次公益植树活动。一同参加植树的还有北京理工大学、北方交通大学、北京第二外国语学院、清华公益协会、中关村第一小学及部分其他学校的同学共200余人。丰台区利智康复中心是一个服务于公益事业的机构，它致力于解......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2004.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225618296109091/20110225225618296109091_.html" target="_blank">清华附中学生在北京市青少年科技创新大赛中...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华附中学生在北京市青少年科技创新大赛中获奖由北京市科协、北京市教委、北京市科委、中国科技馆共同主办的“第24届北京市青少年科技创新大赛”于3月28日在中国科技馆落下帷幕。清华附中五个参赛项目中，二项获得科技论文一等奖、三项获得二等奖。其中《超级节水气动马桶》项目还同时获得了联想集团有限公司赞助的笔记本电脑一台。今年大赛的主题是“探究身......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231427734336177/20110225231427734336177_.html" target="_blank">清华附中与香港圣保罗男女中学结为友好学校</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华附中与香港圣保罗男女中学结为友好学校3月11日上午在香港圣保罗男女中学，应邀来这里访问的清华附中校长赵庆刚与圣保罗男女中学潘镇球校长签订了“圣保罗男女中学与清华大学附属中学建立友好学校的协议”，根据协议内容，双方每年安排一次师生互访活动，并在英文和中文课教学方面进行教师的交流互换，在互联网上进行师生的学术交流与沟通等。中央人民政府驻港联络办......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225623718692237/20110225225623718692237_.html" target="_blank">阳春三月植树忙</a></h3>
+              <p class="thnews_jqzy">　　无标题文档阳春三月植树忙记清华紫荆志愿者的植树活动 【新闻中心讯 记者 周襄楠】3月19日中午，在同方部北面和图书馆南面，我们看到了一片繁忙的植树景象。60多位来自物理系、工业工程系、医学院、法学院、化学系等院系的紫荆志愿者正在挥锹植树。 紫荆志愿者服务总队队长化学系郭勋同学说：“大家都反映铁锹不够，昨天晚上才通知的植树活动，没有想到来了这么多人我们......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225624265620327/20110225225624265620327_.html" target="_blank">我校“乡村第一代大学生”奖学金获得者参加...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校“乡村第一代大学生”奖学金获得者参加植树活动4月7日,可口可乐有限公司组织北京获得&quot;乡村第一代大学生&quot;奖学金的同学到河北的怀莱参加植树活动。我校获&quot;乡村第一代大学生&quot;奖学金的17名同学中有10名同学参加了这次活动。他们顶着漫天的风沙，坚持劳动，大家纷纷表示这次活动对自己的锻炼很大，收获良多。这十名......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225352343141141/20110225225352343141141_.html" target="_blank">刘敬民在我校报告成功申奥历程</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document刘敬民在我校报告成功申奥历程9月28日上午，北京申办2008年奥运会成功报告会在我校体育馆举行，来自首都20所高校的近5000名师生听取了报告会，北京市副市长、奥申委常务副主席刘敬民为大家作了一场生动活泼、激动人心的精彩报告。刘副市长首先总结了这次成功的几个主要因素：一是要归功于党中央、国务院的正确领导和高度重视；二......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231230062252525/20110225231230062252525_.html" target="_blank">邓亚萍为北京申奥忙碌</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document邓亚萍为北京申奥忙碌中国青年报 2001年6月13日　 　 新华社北京6月12日电（记者刘广）一边是已经进入冲刺阶段的北京申奥，一边是已近尾声的大学学业，申奥形象大使邓亚萍近来忙得不亦乐乎。　 今天早上，当记者来到北京奥申委办公地点时，正好看到邓亚萍在接受河南有线电视台的采访。披肩长发，金丝边眼镜，脸上淡妆，衣服黑红搭配，谈......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353906735896/20110225225353906735896_.html" target="_blank">陈至立部长视察清华附中</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document陈至立部长视察清华附中【新闻中心讯】6月1日上午10点整，教育部部长陈至立一行在我校校长王大中、校党委副书记陈希等陪同下来到清华附中教学实验楼接待室，听取了附中校长赵庆刚的工作汇报，并视察了清华附中远程教育情况。赵庆刚在汇报中说，清华附中现有青年骨干教师7人，海淀区学术带头人26人，并引进了几名特级教师，目前仍面向全......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231228250545319/20110225231228250545319_.html" target="_blank">伏明霞为申奥义不容辞</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document伏明霞为申奥义不容辞北京晚报 2001年5月24日本报记者 李立 文并摄前天，久未露面的著名跳水运动员伏明霞出现在北京奥申委接受捐赠的仪式上，依旧是甜甜的微笑，依旧是清新可人，伏明霞并没有什么改变。由于整个仪式十分简短，所以她来去匆匆，面对众多热情的群众，她也只能不停地以微笑表示歉意。最近媒体上很少看到关于她的消息，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231214000735022/20110225231214000735022_.html" target="_blank">邓亚萍：投票时我一定会在莫斯科</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document邓亚萍：投票时我一定会在莫斯科（北京晚报 2001年4月14日）邓亚萍在北京奥申委邓亚萍在北京奥申委本报记者李立文并摄昨天刚刚回到北京的乒乓球女子世界冠军、北京申奥形象大使邓亚萍还没来得及休整，就匆匆赶到了北京奥申委。原来她是应世界奥林匹克协会主席、国际奥委会委员史密特先生之邀，为在国际奥林匹克协会会刊《FLAME》上撰......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355890684295/20110225225355890684295_.html" target="_blank">邓亚萍：投票时我一定会在莫斯科</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document邓亚萍：投票时我一定会在莫斯科（北京晚报 2001年4月14日）邓亚萍在北京奥申委邓亚萍在北京奥申委本报记者李立文并摄昨天刚刚回到北京的乒乓球女子世界冠军、北京申奥形象大使邓亚萍还没来得及休整，就匆匆赶到了北京奥申委。原来她是应世界奥林匹克协会主席、国际奥委会委员史密特先生之邀，为在国际奥林匹克协会会刊《FLAME》上撰......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355953523923/20110225225355953523923_.html" target="_blank">国际大体联官员赞扬北京大运会场馆</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document国际大体联官员赞扬北京大运会场馆(2001.04.13 新华网)新华网北京４月１２日电（记者江涛、徐征）国际大体联官员今天对建设中的第二十一届大运会部分场馆实地考察后给予较高评价，基里安主席更是在清华大学惊叹，没想到在大学校园里有如此好的体育馆。今天下午，国际大体联主席乔治·基里安和监督委员会成员们在北京市副市长、第......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231212140182927/20110225231212140182927_.html" target="_blank">文化简讯</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document文化简讯（北京晚报 2001年4月5日）清华同方最新推出《2001新高考重难点名师辅导》四种版本，其中由北京四中的特级教师顾德希、北京师范大学实验中学的特级教师储瑞年等近九十位著名特级教师进行讲解，4月7日至8日王府井书店五层特邀请清华同方的技术人员进行现场演示。刘艳位于西三环北路的北京国际书店为支持北京申奥，满足广......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231211968213693/20110225231211968213693_.html" target="_blank">清华紫光等8家企业赞助北京申奥</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华紫光等8家企业赞助北京申奥（科技日报 2001年4月5日）本报讯记者袁文芝报道：4月3日上午北京奥申委接受热心赞助商及环保示范工程企业赞助、捐赠仪式在北京奥申委举行。捐赠仪式上，珠海卓夫集团、蓝带啤酒销售有限公司、北京丹纳通精细化工有限公司3家企业被北京奥申委授予“北京2008年奥运会申办委员会热心赞助商”的荣誉......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

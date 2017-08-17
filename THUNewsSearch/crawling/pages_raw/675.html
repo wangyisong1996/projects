@@ -1,0 +1,713 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>江泽民在清华大学考察工作</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225354703979157&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9648/index.html' class='navigation_style'>头条新闻</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">江泽民在清华大学考察工作</h3><p align="center"> (新华网 2001.04.29 21:13:44) </p><p>新华网北京４月２９日电（记者尹鸿祝 江涛）正值 清华大学庆祝９０年华诞之际，中共中央总书记、国家主席江泽民今天来到清华园，听取了学校的工作汇报，参观了清华大学科技成果展览。他对清华大学取得的成绩表示祝贺，希望清华大学朝着具有世界先进水平的一流大学的目标目标不懈努力。</p><p>中共中央政治局常委、国务院副总理李岚清，中共中央政治局委员、北京市委书记贾庆林，中共中央政治局候补委员、书记处书记曾庆红等一同听取汇报，参观展览。 </p><p>清华大学校长王大中在汇报工作时着重介绍了清华大学向世界一流大学迈进的情况。１９９３年，清华大学明确提出，争取在建校１００周年之际，使清华大学成为跻身世界一流的综合性、研究型、开放式的大学。近年来，在党和国家的亲切关怀下，清华大学通过“２１１工程”、   “九五”计划和“面向２１世纪教育振兴行动计划”的实施，已实现了“发展工科优势，加速理科、人文社会学科、经济管理学科和艺术的发展，力争在生命科学和医学方面有所突破”的学科建设发展思路。目前，清华大学理、工、文、法、经济、管理、艺术、综合性学科布局初步完成，教学质量和科研水平不断提高。 </p><p>随后，江泽民参观了清华大学科技成果展览。展览反映了清华大学近年来在科技创新、重大项目攻关、基础研究和国防科技研究中取得的重要成果，其领域涉及信息、核能与核技术、生命科学和技术、新材料、能源与环境、先进制造等。 </p><p>参观过程中，江泽民仔细听取了王大中校长的介绍，饶有兴致地观看了具有我国自主知识产权的数字电视发射与接收系统及其专用芯片、长达５００米的高温超导线材、生物材料等实物，了解了中国教育科研网、低温供热堆应用、全光通信的情况。江泽民听到许多科研成果已经达到世界先进水平时，十分高兴。他希望清华大学继续发扬创新精神，勇于探索，为发展我国的科技事业、培养高素质的人才作出新的贡献。 </p><p>中共中央办公厅主任王刚、教育部部长陈至立也听取了汇报、参观了展览。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月29日 12:53:41　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225335359467474/20110225225335359467474_.html" target="_blank">国务院总理温家宝考察博奥生物芯片中心</a></h3>
+              <p class="thnews_jqzy">　　国务院总理温家宝考察博奥生物芯片中心【新闻中心讯】12月27日上午，中共中央政治局常委、国务院总理温家宝到北京中关村科技园区进行专题调研，重点考察博奥生物有限公司暨生物芯片北京国家工程研究中心（以下简称“博奥生物芯片中心”）等几家高科技企业，看望科技工作者。在中共中央政治局委员、中共北京市委书记刘淇，北京市市长郭金龙的陪同下，温家宝总理参观了博奥生物......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231807687543854/20110225231807687543854_.html" target="_blank">我校党委做出决定认真组织学习《江泽民文选》</a></h3>
+              <p class="thnews_jqzy">　　我校党委做出决定认真组织学习《江泽民文选》【新闻中心讯 记者 云仲】根据中共中央关于学习《江泽民文选》的决定和胡锦涛同志重要讲话精神，近日，我校党委做出决定，要求学校各级党组织和全体共产党员按照党中央的部署，认真学习《江泽民文选》，推动我校党的先进性建设和世界一流大学建设的各项工作。 今年8月，由中共中央文献编辑委员会编辑的《江泽民文选》出版发......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231507687551196/20110225231507687551196_.html" target="_blank">清华大学51名首届国防生致信江泽民的前后</a></h3>
+              <p class="thnews_jqzy">　　清华大学51名首届国防生致信江泽民的前后中国国防报  2004-9-14  孙栋廷 江宛柳 胡春华&nbsp;&nbsp;&nbsp;●也许我们以后的生活中没有大都市的繁华，更不可能腰缠万贯，但享乐安逸不属于我们，无私奉献才是我们的责任。&nbsp;&nbsp;&nbsp;●献身国防，是实现我们报国理想和个人成才的最佳选择。&nbsp;&nbsp;&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504906657013/20110225231504906657013_.html" target="_blank">清华大学师生举行座谈会</a></h3>
+              <p class="thnews_jqzy">　　清华大学师生举行座谈会&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504687894434/20110225231504687894434_.html" target="_blank">江主席勉励清华大学毕业国防生为国防建设建...</a></h3>
+              <p class="thnews_jqzy">　　江主席勉励清华大学毕业国防生为国防建设建功立业解放军报  2004-9-3  孙栋廷 江宛柳&nbsp;&nbsp;&nbsp;本报北京9月2日讯　孙栋廷、记者江宛柳报道：清华大学首届国防生今年暑期毕业分配到部队。毕业前夕，清华大学全体毕业国防生给中央军委江泽民主席写信，表达他们投身军队现代化建设事业的决心和信心。7月15日，江主席致信清华大学毕业国防生，对......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504875570502/20110225231504875570502_.html" target="_blank">清华要有100个这样的班就好了</a></h3>
+              <p class="thnews_jqzy">　　清华要有100个这样的班就好了中国青年报  2004-9-4  潘婷&nbsp;&nbsp;&nbsp;昨天，全国各大媒体都报道了中央军委江泽民主席给清华大学首届国防定向班全体同学回信的新闻，在全国各高校的国防生中引起了强烈反响。为什么一群普通的大学生会引起如此高度的关注？他们为什么要给江主席写信？他们又向江主席说了些什么？记者走进了清华园。&nbsp;&n......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504843932034/20110225231504843932034_.html" target="_blank">江泽民复信国防班震动清华 执笔人透露原委...</a></h3>
+              <p class="thnews_jqzy">　　江泽民复信国防班震动清华 执笔人透露原委 (组图)东方网  2004-9-7&nbsp;&nbsp;&nbsp;9月3日上午，清华大学师生在校园内举行了学习贯彻中央军委主席江泽民同志复信的座谈会，作为信件主要执笔人、电子系无011班党支部书记钟山在会上向记者披露了写这封信的来龙去脉，原来写信的想法是国防班的学生们在毕业前夕的一次班会上偶然碰撞出来的“火花”…......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504765872433/20110225231504765872433_.html" target="_blank">清华大学师生座谈学习江泽民主席给国防生的...</a></h3>
+              <p class="thnews_jqzy">　　清华大学师生座谈学习江泽民主席给国防生的复信新华网  2004-9-3  李江涛、周襄楠&nbsp;&nbsp;&nbsp;新华网北京９月３日电（李江涛、周襄楠）中央军委主席江泽民给清华大学首届国防生的复信在清华园里引起了师生们的强烈反响，他们表示，不辜负党和人民的期望，为祖国的国防事业奉献聪明才智。&nbsp;&nbsp;&nbsp;作为去信的主要执笔人，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504718252714/20110225231504718252714_.html" target="_blank">清华师生学习贯彻江泽民主席给毕业国防生的...</a></h3>
+              <p class="thnews_jqzy">　　清华师生学习贯彻江泽民主席给毕业国防生的复信人民网  2004-9-3  施芳&nbsp;&nbsp;&nbsp;人民网北京9月3日讯 记者施芳报道：清华大学师生今天举行座谈会，学习贯彻中央军委主席江泽民给清华大学毕业国防生的复信。师生们纷纷表示，江主席的回信是对国防生的莫大鼓励，也是对清华师生的莫大鼓励，激励着大家发扬清华大学爱国奉献的光荣传统，把个人追求......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231502921540898/20110225231502921540898_.html" target="_blank">陈希：在清华大学师生学习贯彻中央军委主席...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在清华大学师生学习贯彻中央军委主席江泽民同志复信座谈会上的讲话清华大学党委书记 陈希各位同学、各位老师：  今天参加这个座谈会，我非常高兴，也很感动。首先是我们首届国防定向班的全体同学顺利完成学业，在政治思想、业务素质以及身心等各方面都有了全面的提高。在毕业前夕，同学们给中央军委主席江泽民同志写了一封信，表达了自己参军报国的心情，汇报了在学校的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344437647515/20110225225344437647515_.html" target="_blank">江泽民主席致信我校国防毕业生</a></h3>
+              <p class="thnews_jqzy">　　无标题文档江泽民主席致信我校国防毕业生</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344406386481/20110225225344406386481_.html" target="_blank">我校举行学习贯彻中央军委主席江泽民同志复...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档学习江泽民主席的复信 做好国防人才培养工作我校举行学习贯彻中央军委主席江泽民同志复信座谈会【新闻中心讯 记者 周襄楠摄影 邵默】中央军委主席江泽民给清华首届国防生的复信在校园里引起了师生们的强烈反响。9月3日上午，我校在主楼327会议室召开座谈会学习江泽民主席的复信。校党委书记陈希、党委副书记杨振斌、副校长汪劲松及总政干部部、解放军驻我校后备......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231502890362261/20110225231502890362261_.html" target="_blank">我校举行学习贯彻中央军委主席江泽民同志复...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档学习江泽民主席的复信 做好国防人才培养工作我校举行学习贯彻中央军委主席江泽民同志复信座谈会【新闻中心讯 记者 周襄楠摄影 邵默】中央军委主席江泽民给清华首届国防生的复信在校园里引起了师生们的强烈反响。9月3日上午，我校在主楼327会议室召开座谈会学习江泽民主席的复信。校党委书记陈希、党委副书记杨振斌、副校长汪劲松及总政干部部、解放军驻我校后备......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231502781142001/20110225231502781142001_.html" target="_blank">我校首届国防生给江泽民主席的信（摘登）</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校首届国防生给江泽民主席的信（摘登）敬爱的江泽民主席：您好！我们是即将毕业的清华大学首届国防定向班——电子工程系无０１１班和精密仪器与机械学系机０７班的５１名同学。在我们就要走出清华园，踏上从军报国之路时，特向您汇报一下４年来的成长历程。自２０００年９月入校至今，在部队各级首长和学校老师的亲切关怀、辛勤培育下，我们刻苦学习科学文化知识，不......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231502765407592/20110225231502765407592_.html" target="_blank">江泽民主席致信我校国防毕业生</a></h3>
+              <p class="thnews_jqzy">　　无标题文档江泽民主席致信我校国防毕业生</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231502703966995/20110225231502703966995_.html" target="_blank">清华大学首届国防生给江泽民主席的信（摘发）</a></h3>
+              <p class="thnews_jqzy">　　清华大学首届国防生给江泽民主席的信（摘发）新华网  2004-9-2&nbsp;&nbsp;&nbsp;新华网北京９月２日电&nbsp;&nbsp;&nbsp;敬爱的江泽民主席：&nbsp;&nbsp;&nbsp;您好！我们是即将毕业的清华大学首届国防定向班——电子工程系无０１１班和精密仪器与机械学系机０７班的５１名同学。在我们就要走出清华园，踏上从军报国之......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231502734311752/20110225231502734311752_.html" target="_blank">江泽民主席致信清华大学毕业国防生</a></h3>
+              <p class="thnews_jqzy">　　江泽民主席致信清华大学毕业国防生新华网  2004-9-2&nbsp;&nbsp;&nbsp;新华网北京９月２日电&nbsp;&nbsp;&nbsp;清华大学首届国防生今年暑期毕业分配到部队。毕业前夕，清华大学全体毕业国防生给中央军委主席江泽民写信，表达他们投身军队现代化建设事业的决心和信心。７月１５日，江主席致信清华大学毕业国防生，对他们积极投身国防事业予......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231311296596518/20110225231311296596518_.html" target="_blank">我校师生学习江泽民总书记在北师大百年校庆...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校师生学习江泽民总书记在北师大百年校庆大会上的讲话江泽民总书记9月8日在庆祝北京师范大学建校100周年大会上的讲话发表后，在我校师生中引起热烈反响。9月10日下午，我校师生在工字厅东厅举行座谈会，畅谈学习江总书记重要讲话的体会。与会师生围绕江总书记的重要讲话展开了热烈的讨论。大家一致认为，江总书记在几所重点大学发表的重要讲话体现了党中央对......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231311265368937/20110225231311265368937_.html" target="_blank">我校学生学习江泽民总书记在北师大百年校庆...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校学生学习江泽民总书记在北师大百年校庆大会上的讲话学通社 波涛 2002-9-9 9月8日上午，北京师范大学纪念建校一百周年庆祝大会在人民大会堂隆重举行，中共中央总书记、国家主席江泽民在庆祝大会上发表了重要讲话。9月9日，我校团委组织部分学生进行了学习座谈。 参加座谈会的同学们说，这次北京师范大学建校一百周年的庆祝大会在人民大会堂举行，党......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231310593428239/20110225231310593428239_.html" target="_blank">在庆祝北京师范大学建校100周年大会上的...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在庆祝北京师范大学建校100周年大会上的讲话江泽民(2002年9月8日)老师们，同学们，同志们，朋友们：在美好的金秋时节，在又一个教师节到来之际，我们来参加北京师范大学百年校庆的隆重集会，感到十分高兴。党中央、国务院对我国教育事业的改革和发展是高度重视的，对全国广大教师和教育工作者是十分关心的。在这里，我代表党中央、国务院，向北师大的全体师......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2002.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225349906483748/20110225225349906483748_.html" target="_blank">清华大学举行学习江泽民总书记视察中国人民...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华大学举行学习江泽民总书记视察中国人民大学的重要讲话座谈会5月1日下午，清华大学党委召开座谈会，学习贯彻江泽民总书记4月28日在视察中国人民大学与师生座谈时的重要讲话。校党委常委、清华大学常务副校长何建坤、党委副书记张再兴、杨振斌、校务委员会副主任胡显章，以及学校党委办公室、政策研究室、党委宣传部、文科建设处、经管学院、人文学院、美术学院......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225350046436451/20110225225350046436451_.html" target="_blank">实践“三个代表”重要思想 推进世界一流大...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档实践“三个代表”重要思想 推进世界一流大学建设——清华大学举行学习江泽民同志在庆祝清华大学建校90周年大会上的讲话座谈会4月26日下午，校党委在主楼会议厅举行师生员工座谈会，学习江泽民总书记在庆祝清华大学建校90周年大会上的讲话，畅谈实践&quot;三个代表&quot;重要思想，推进世界一流大学建设的收获和体会。校党委书记陈希同志主持座谈会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2001.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231232640345794/20110225231232640345794_.html" target="_blank">以高尚的思想道德要求和鞭策自己</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document以高尚的思想道德要求和鞭策自己我校企业集团党委学习江泽民总书记“七一讲话”7月3日下午，我校企业集团党委召开了学习江总书记"七一"讲话座谈会，企业集团先进党支部代表、优秀党员20余人参加了座谈会。大家认真学习了江泽民同志在庆祝中国共产党成立八十周年大会上的讲话，并围绕讲话内容展开了讨论。来自同方、紫光、美院、通力、机......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2001.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353265388708/20110225225353265388708_.html" target="_blank">我校师生对江泽民总书记重要讲话反响强烈</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document看庆祝大会现场直播 谈中华复兴远大理想我校师生对江泽民总书记重要讲话反响强烈7月1日上午，中共中央在人民大会堂举行大会，隆重庆祝中国共产党成立80周年。中共中央总书记江泽民在大会上发表重要讲话，系统总结中国共产党80年光辉历程和基本经验，全面阐述"三个代表"重要思想的科学内涵，提出了新的历史条件下加强和改进党的建设的重大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2001.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353250651681/20110225225353250651681_.html" target="_blank">清华大学师生学习江总书记重要讲话</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学师生学习江总书记重要讲话中国教育报 2001年7月2日本报记者　王鹰7月1日中午，清华大学师生在收看庆祝中国共产党成立80周年大会实况后，认真进行学习座谈。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353859366049/20110225225353859366049_.html" target="_blank">江泽民参观艺术与科学国际作品展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民参观艺术与科学国际作品展光明日报 2001年6月5日记者　尹鸿祝新华社北京6月4日电　中共中央总书记、国家主席江泽民今天下午来到中国美术馆，参观了艺术与科学国际作品展。这个展览是清华大学为庆祝建校90周年举办的一系列学术活动的组成部分，共展出来自19个国家32所高等院校的近700件作品。作品以绘画、雕塑、艺术设......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353843691639/20110225225353843691639_.html" target="_blank">江泽民参观艺术与科学国际作品展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民参观艺术与科学国际作品展(新华网 2001.06.04 21:52:41)新华网北京６月４日电（记者尹鸿祝）中共中央总书记、国家主席江泽民今天下午来到中国美术馆，参观了艺术与科学国际作品展。这个展览是清华大学为庆祝建校９０周年举办的一系列学术活动的组成部分，共展出来自１９个国家３２所高等院校的近7００件作品。作......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353812570512/20110225225353812570512_.html" target="_blank">江泽民参观艺术与科学国际作品展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民参观艺术与科学国际作品展指出艺术和科学在很多方面可以相互交融《人民日报》 (2001年06月05日第一版)本报北京6月4日讯 记者郑宏范报道：中共中央总书记、国家主席江泽民今天下午来到中国美术馆，参观了艺术与科学国际作品展。这个展览是清华大学为庆祝建校90周年举办的一系列学术活动的组成部分，共展出来自19个国家......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353781101313/20110225225353781101313_.html" target="_blank">指导高等教育改革发展的思想武器和行动指南</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document指导高等教育改革发展的思想武器和行动指南教育部党组学习中心组深入学习江泽民同志在庆祝清华大学建校九十周年大会上的讲话《中国教育报》2001年6月5日第1版本报讯　江泽民同志在庆祝清华大学建校90周年大会上的讲话发表后，在教育系统特别是高校广大干部和师生员工中引起了强烈反响。5月31日上午，教育部党组书记、部长陈至立主持党......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353890581096/20110225225353890581096_.html" target="_blank">江泽民参观艺术与科学国际作品展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民参观艺术与科学国际作品展科技日报 2001年6月5日新华社北京6月4日电（记者尹鸿祝）中共中央总书记、国家主席江泽民今天下午来到中国美术馆，参观了艺术与科学国际作品展。这个展览是清华大学为庆祝建校90周年举办的一系列学术活动的组成部分，共展出来自19个国家32所高等院校的近700件作品。作品以绘画、雕塑、艺术设......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225626656629593/20110225225626656629593_.html" target="_blank">为中华民族的伟大复兴而努力</a></h3>
+              <p class="thnews_jqzy">　　――学习江总书记在建校90周年庆祝大会上的讲话有感为中华民族的伟大复兴而努力——学习江总书记在建校90周年庆祝大会上的讲话有感人文学院匡辉从2001年的春天开学到现在，一直在等待清华90年校庆这一个节日的来临，其中也为校庆的一些事情奔波。春天是一个复苏的季节，蛰伏了一个冬天的激情，在校庆的筹备过程中慢慢地积累，终于到4月29日校庆这一天喷博而出。作为一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354437538308/20110225225354437538308_.html" target="_blank">校党委通过决定：全校师生员工要认真学习江...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document校党委通过决定：全校师生员工要认真学习江泽民总书记的题词和讲话【新闻中心讯】记者 庄雯 5月7日，校党委常委扩大会议讨论通过了《关于组织全校师生员工学习江泽民总书记给清华大学的题词和在庆祝清华大学建校90周年大会上讲话的决定》，号召我校师生员工认真学习江泽民总书记的题词和讲话，《决定》指出，江泽民总书记的题词和讲话充......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354453186348/20110225225354453186348_.html" target="_blank">教育部发出通知：认真学习江泽民同志在庆祝...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document教育部发出通知：认真学习江泽民同志在庆祝清华建校九十周年大会上的重要讲话中国教育报 2001年5月10日记者　焦新本报北京5月9日讯(记者　焦新)教育部日前发出通知，要求各级教育部门、高等学校组织广大党员干部和师生认真学习江泽民同志重要讲话，深刻认识讲话的重要意义。通知指出，4月29日，中共中央总书记、国家主席江泽民......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354468262994/20110225225354468262994_.html" target="_blank">高扬青春旗帜　投身民族振兴伟业</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document高扬青春旗帜　投身民族振兴伟业江泽民总书记在清华建校90周年大会上的重要讲话激发了高校师生不断进取为祖国和人民而奋斗的强大动力中国教育报 2001年5月10日本报北京5月9日讯(记者　时晓玲)激扬睿智的论述、总揽全局的谆谆教诲，4月29日，江泽民总书记在清华大学建校90周年大会上的重要讲话，在全国大学校园引起了强烈震撼。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354515567478/20110225225354515567478_.html" target="_blank">特写:清华学子牢记总书记的嘱托</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document特写:清华学子牢记总书记的嘱托大洋网 2001年5月4日大洋网讯　新华社报道，“我认为‘以身许国’的号召，对今天的青年学子仍然具有很强的现实意义”。清华大学研究生会主席刘桓在今天该校组织的学习江泽民总书记重要讲话座谈会上说。４月２９日，中共中央总书记、国家主席江泽民在庆祝清华大学建校九十周年大会上发表了重要讲话，对全......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225626687535748/20110225225626687535748_.html" target="_blank">牢记党和人民的嘱托</a></h3>
+              <p class="thnews_jqzy">　　牢记党和人民的嘱托牢记党和人民的嘱托──清华大学学生认真学习江总书记重要讲话决心以实际行动创造无愧于时代和人民的业绩4月29日，中共中央总书记、国家主席江泽民在庆祝清华大学建校90周年大会上发表了重要讲话，对全国大学生提出了殷切希望：希望大学生们成为理想远大、热爱祖国的人，成为追求真理、勇于创新的人，成为德才兼备、全面发展的人，成为视野开阔、胸怀宽广的人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354531862166/20110225225354531862166_.html" target="_blank">牢记党和人民的嘱托</a></h3>
+              <p class="thnews_jqzy">　　牢记党和人民的嘱托牢记党和人民的嘱托──清华大学学生认真学习江总书记重要讲话决心以实际行动创造无愧于时代和人民的业绩4月29日，中共中央总书记、国家主席江泽民在庆祝清华大学建校90周年大会上发表了重要讲话，对全国大学生提出了殷切希望：希望大学生们成为理想远大、热爱祖国的人，成为追求真理、勇于创新的人，成为德才兼备、全面发展的人，成为视野开阔、胸怀宽广的人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231224671903481/20110225231224671903481_.html" target="_blank">江泽民在清华大学考察工作</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民在清华大学考察工作科技日报 2001年4月30日据新华社北京4月29日电（记者尹鸿祝江涛）正值清华大学庆祝90年华诞之际，中共中央总书记、国家主席江泽民今天来到清华园，听取了学校的工作汇报，参观了清华大学科技成果展览。他对清华大学取得的成绩表示祝贺，希望清华大学朝着具有世界先进水平的一流大学的目标不懈努力。中共......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231224796621992/20110225231224796621992_.html" target="_blank">江主席在清华大学考察工作</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江主席在清华大学考察工作李岚清等一同听取汇报参观展览《人民日报》 (2001年04月30日第四版)本报北京4月29日讯 记者温红彦报道：绿草如茵的清华园，紫荆、丁香盛开，彩旗飘扬。正值清华大学庆祝90周年盛典之际，中共中央总书记、国家主席江泽民今天来到清华大学，听取了学校的工作汇报，参观了清华大学科技成果展览。他对清华大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231224218447615/20110225231224218447615_.html" target="_blank">江泽民在清华大学考察工作</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民在清华大学考察工作(新华网 2001.04.29 21:13:44)新华网北京４月２９日电（记者尹鸿祝 江涛）正值 清华大学庆祝９０年华诞之际，中共中央总书记、国家主席江泽民今天来到清华园，听取了学校的工作汇报，参观了清华大学科技成果展览。他对清华大学取得的成绩表示祝贺，希望清华大学朝着具有世界先进水平的一流大学的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354734982989/20110225225354734982989_.html" target="_blank">我校建校90周年庆祝大会召开</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document建设世界一流大学　为实现中华民族的伟大复兴而努力奋斗江泽民总书记为我校建校90周年题词我校建校90周年庆祝大会召开【新闻中心讯】对于清华人来说，4月29日是个不平凡的日子，清华人用自己的方式庆祝九十年历史铸就的辉煌。庆祝大会在新落成的综合体育中心隆重举行。庄重、简朴的会场容纳了将近6千名来自海内外的校友、嘉宾和师生员......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354781927270/20110225225354781927270_.html" target="_blank">江泽民与清华大学</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民与清华大学(新华网 2001.04.29 09:57:01)新华网北京４月２９日电 “为了实现现代化，我国要有若干所具有世界先进水平的一流大学。”江泽民总书记的话带给清华师生前进的力量和信心。早在１９８９年８月２５日，当选中共中央总书记不久的江泽民同志就来到清华园视察。他走进学校机械厂的实习车间，看望参加实践教......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354796243536/20110225225354796243536_.html" target="_blank">江泽民发表重要讲话</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民发表重要讲话新华网 2001.04.29 11:37:20新华网北京４月２９日１１时２４分电（记者刘江、李江涛、王文韬）中共中央总书记、国家主席江泽民在清华大学建校９０周年庆祝大会上发表了热情洋溢的讲话。江泽民在讲话中代表党中央、国务院，并以他个人的名义，向清华大学全体师生员工和海内外校友，表示热烈的祝贺！向参......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354828696490/20110225225354828696490_.html" target="_blank">江泽民为清华建校９０周年题词</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民为清华建校９０周年题词新华网 2001.04.29 11:24:41新华网北京４月２９日１１时１０分电（记者江涛 刘江 王文韬）中共中央总书记、国家主席江泽民为清华建校９０周年题词。江泽民的题词是：“建设世界一流大学为实现中华民族的伟大复兴而努力奋斗”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354687788197/20110225225354687788197_.html" target="_blank">江泽民：在庆祝清华大学建校90周年大会上...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民：在庆祝清华大学建校90周年大会上的讲话(新华网 2001.04.29 20:13:30)江泽民老师们，同学们，同志们，朋友们：今天，清华大学校园里春光明媚，万物更新，充满着蓬勃朝气。来到你们中间，我仿佛年轻了许多，心情特别高兴。首先，我代表党中央、国务院，并以我个人的名义，向清华大学全体师生员工和海内外校友，......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

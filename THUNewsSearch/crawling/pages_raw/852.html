@@ -1,0 +1,1098 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>从核能专家到一校之长——王大中志在一流</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231225562297921&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><p>院士风采 </p><p align="center">从核能专家到一校之长 </p><h3 align="center">王大中志在一流 </h3><p align="center">庄雯　孙立群</p><p align="center">（中国青年报－大教育时代 2001年4月26日） </p><p>　 1993年夏，清华大学在酝酿新一任校长人选时，我国核能专家、当时的清华核研院院长王大中得到了相当的认同。1994年，他出任清华大学校长。交到他手中的是一张铺设在桌上刚刚写下标题的蓝图。蓝图的标题引人注目：到2011年清华大学建校100周年时，把学校建成世界一流的有中国特色的社会主义大学。王大中深感责任重大。</p><p> 　 “在下个世纪初，中国能不能建成世界一流大学？以我国的国情，怎样建设世界一流大学？”几乎每一位采访王大中的记者都提出这样的问题。经过深入调查国内外著名大学的教育实践和经验，不断地从中外历史上优秀教育家的教育思想、治学方略中吸取营养，王校长逐渐明晰了清华建设世界一流大学的方向和步骤：</p><p> 　 面对现代科学技术的发展趋势和中国现代化建设对高等教育提出的要求，清华的发展模式应该是综合性、研究型、开放式，实现这一目标，要经过分两阶段的发展步骤。第一阶段是从1993年到2001年，即到清华建校90周年。这一阶段的重点是：完成学科结构调整，把清华从50年代院系调整中形成的以工科为主的多科性大学变成一所综合性大学；另外在教学体制方面，为了实现人才培养的高层次高质量，学校将全面实行本科生与研究生衔接培养；加快完成师资队伍的新老交替；完成相应规模的研究基地和基础设施的建设，为建设世界一流大学打下物质基础。现在这一阶段任务已圆满完成。第二阶段是21世纪的前10年。这一阶段必须是快速发展的阶段，理、工、文、法、经济、管理、艺术学科中的一批学科将逐步实现一流的目标，医学和生命科学也将在清华得到发展。这是从现在开始清华最重大的任务。</p><p> 　 与世界发达国家相比，中国是一个经济基础和科学发展水平都相对落后的国家。在这样的环境中，要把一个以工科为主的大学办成世界一流大学显然难度相当大。王校长认为，与世界一流大学相比，清华大学最大的差距是缺少一批具有世界一流水平的教授和学者，另外，高水平博士生培养能力不足，高水平、原创性的基础研究成果不多，以及新建学科实力不足，办学经费比国际一流大学少等等，也是差距所在。要弥补这些差距，根本办法是依靠我们社会主义国家集中力量办大事的优势，同时千方百计创造条件，吸引海内外对清华的支持。</p><p> 　 在以王大中为首的清华人的努力下，从1994年至今，清华大学“九五事业发展规划”、“211工程”整体规划和“建设世界一流大学总体规划”相继制定并实施；信息、先进制造、材料、生命科学、能源等一批学科群的建设为学科的联合和交叉创造了条件；理科、经管、人文社会学科的加强、法学院的建立以及与中央工艺美术学院的合并让人感受到清华迈向综合性大学的坚定步伐。在向研究型大学的发展进程中，清华把不断作出重大的科学技术创新成果，培育出众多的有创造性的研究生作为自己的目标。从1999年起研究生招生人数已经超过本科生；高温气冷核反应堆的研制、集装箱检查系统产业化已经取得成功，生物芯片、纳米技术等一批重大科研项目已经有了重大进展；与国外近百所大学的交往，挂在各院系门前的国内外各大企业的联合研究中心的标牌，映衬出清华与外界的紧密联系。正象王大中校长在全校教职工代表大会上所说的那样，清华大学正在努力成为培养高素质、创造性骨干人才的摇篮；成为国家可持续发展的知识创新和技术创新的重要中心；成为推动科技成果转化为生产力和高新技术产业的孵化基地；成为国际科教文化交流的重要桥梁和窗口。即使是校园的基础建设，清华也发生着巨大的变化：理学院楼、法学院楼、科学技术楼、科技园区等一大批富有时代气息的建筑拔地而起，还决定用8年时间，把清华建成一个在环境保护和可持续发展方面都卓有成效的“绿色大学”。所有这一切都使人感到这一任校长的魄力。</p><p> 　 初次见到王校长，你感受的可能只是他的温文尔雅，说话缓缓的、语音轻轻的，好像不是很有鼓动力的慷慨之士。但是交往的时间长了后，你也会看到，在他平和的语言之下，是跳跃奔腾的睿思和充满创造激情的个人魅力。</p><p> 　 “用最长的学制培养条件最好的学生实在是一种浪费。”这是他解释为什么清华大学要实行本硕贯通的最简单而最具实质的理由。现在，本硕统筹培养方案已在清华全面推行。为了提高学生的全面素质，特别是加强对学生创新能力的培养，王大中领导全校开展了“教育思想大讨论”，深入改革教学体系、内容和方法，减轻学生课时负担，为学生全面发展创造宽松的环境。</p><p> 　 “与企业合作，为地区经济服务是学校改革中带有方向性的问题。”从这句话开始，学校成立了“清华大学与企业合作委员会”，目前已有140多个国内外大企业成为会员单位；清华与北京、河北、广东等14个省、直辖市建立了合作关系，努力使清华成为高新技术的孵化器和辐射源。这位有着校长和核能专家双重身份的北京市人大常委会副主任，还时时把为首都经济发展服务作为学校的责任。在贾庆林书记和刘淇市长的直接关怀和推动下，清华大学和北京市科委共同组织了北京市政府、企业与清华大学百名教授、百名企业家的“双百双向”交流活动，进而建立了“北京清华工业发展研究院”，成功实现了多项科技成果的转化。王大中组织清华大学有关同志提出的“对中关村高科技园区的建议”，也有不少概念和内容被有关部门采纳。“优秀的人才只有在竞争和流动中才能获得。”于是，为吸引拔尖人才的种种特殊政策得以落实，自1998年推出“百名人才引进计划”后，一批活跃在学科前沿的青年学术带头人加入了清华的行列。“一流、竞争、流动”正在成为清华教职工的普遍观念，“非升即走”的措施成为激励清华人自强不息的鞭策之一。公开设岗，竞争上岗，择优录用等一系列改革措施的实施，使清华大学师资队伍的年龄、学历结构逐步呈现出良性发展的态势。</p><p> 　 早在几年前，他就把知识经济时代给清华带来的机遇和挑战摆到了清华人面前。他说：“历史的机遇不是经常都有的，我们要抓住机遇，迎头赶上。在这场新的较量中，清华要在知识的传播、创新和转化为生产力方面发挥更大的作用。”</p><p> 　 自从他担任校长以来，每年年初，清华大学领导有一次“无主题讨论会”，说是无主题，其实是有主题的：和国外著名大学相比，和国内兄弟院校相比，清华在哪些方面“技不如人”？从建设世界一流大学的目标出发，清华还需要做什么？怎么做？谁去做？什么时候完成？……许多重大的决策就在这种找差距的过程中决定下来了。在讨论落实建设世界一流大学规划的有关工作时，他要求各级干部“创新、抓实、有序”。就是这样，在工作局面看似忙和乱的时候，他以清醒的思路和有序的安排把握住前进的方向。和他在一起，清华人强烈地感到：作为一校之长，他在前面拉自己，在后面推自己，他鼓励大家跳跃、奔跑，去摘取更诱人的果实。</p><p> 　 也许是多年从事核能研究养成的习惯，王大中充分了解尖端是由许多个一般组合而成的道理。在工作中，他让人看到大手笔，也让人体会到他对细微处的操心：他曾经把厚重的国外大学的信息资料一本本带回学校，作为设计清华信息资料的参考；也曾经收集了厚厚一叠新年贺卡交给清华大学新闻中心，希望他们也能把清华的新年贺卡设计得更典雅一些，而清华后勤搞房屋装修的职工更是对他在色彩和格调上的高标准颇有体会。</p><p> 　 作为中国科学院院士、清华大学教授，王校长没有放弃心爱的专业。如今，他还主持着分别列入国家“九五”规划和“863”计划的两项重大科研项目。在繁忙的校务工作中，他总要挤出时间，参与重大方案的讨论和关键技术的确定，并结合课题指导着几位博士生。</p><p> 　 还是在当学生的时候，王大中就非常注重全面素质的提高。他喜欢艺术，喜欢体育，曾是学生舞蹈队的主力，难度很高的鄂尔多斯舞跳得极其出色；游泳、足球、棒球也有相当的水平。当从中央电视台“东方之子”的采访中了解到王大中有时也看看武侠小说时，清华人为自己校长的坦率而自豪。如今，每天早上，当清华人和自己的校长一起打拳舞剑的时候，在欣赏他协调优美的动作之外，更多了一份亲近的感觉。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月30日 14:01:08　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20151112142228304346998/20151112142228304346998_.html" target="_blank">金字塔尖上的人才为何难冒出来</a></h3>
+              <p>　　国际竞争实质是人才竞争，创新驱动实质上是人才驱动。十八届五中全会强调，深入实施人才优先发展战略，形成具有国际竞争力的人才制度优势，聚天下英才而用之，加快建设人才强国。    　　日前，《统筹推进世界一流大学和一流学科建设总体方案》正式印发，对培养一流的拔尖创新人才提出了具体目标和要求。从今天开始，我们推出系列报道——破解“高精尖缺”培养难题，希望真正抓住一流人才培养的“牛鼻子”，探索中国培养“高精尖缺”人才的路径。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20151106165853731643700/20151106165853731643700_.html" target="_blank">植根中国大地 建设一流大学</a></h3>
+              <p>　　《统筹推进世界一流大学和一流学科建设总体方案》近日正式颁布。《方案》明确提出，到本世纪中叶，我国一流大学、一流学科的数量和实力进入世界前列，基本建成高等教育强国。这是我国经济社会发展的必然要求，是我国高等教育发展自信的充分表现，更是中国高等教育发展史上又一个里程碑式的战略举措。    　　综观世界近现代历史，没有任何一个大国可以在高等教育落后的情况下，真正成为全面领先的世界强国。今天，中国成为世界第二大经济体，步入高等教育大众化阶段，创新驱动成为国家发展战略，拥有世界一流的大学，更是实现国家发展战略目标的必然要求。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20151106165250264553440/20151106165250264553440_.html" target="_blank">冲击“世界一流”的中国路径</a></h3>
+              <p>　　11月5日上午十点，中华人民共和国中央人民政府门户网站和教育部门户网站，几乎同时发布《统筹推进世界一流大学和一流学科建设总体方案》（以下简称《总体方案》）。民间关于“双一流”的各种猜测也随之尘埃落定。    　　《总体方案》全文文本5266字，第一次提出我国大学、学科要在一定时间内进入世界一流前列的宏伟目标，字字句句凝聚着我国对实现从高等教育大国迈向高等教育强国的深沉渴望。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20151105170521255339954/20151105170521255339954_.html" target="_blank">国务院印发《统筹推进世界一流大学和一流学...</a></h3>
+              <p>　　国务院日前印发《统筹推进世界一流大学和一流学科建设总体方案》，要求按照“四个全面”战略布局和党中央、国务院决策部署，坚持以中国特色、世界一流为核心，以立德树人为根本，以支撑创新驱动发展战略、服务经济社会发展为导向，坚持“以一流为目标、以学科为基础、以绩效为杠杆、以改革为动力”的基本原则，加快建成一批世界一流大学和一流学科。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150928143755211295181/20150928143755211295181_.html" target="_blank">严处入手实处着力 推进一流大学建设</a></h3>
+              <p>　　清华大学党委坚持从严处入手、实处着力，以高标准、严要求扎实推进专题教育。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150923120026852288726/20150923120026852288726_.html" target="_blank">两岸四地大学榜 北京清华五连霸</a></h3>
+              <p>　　中国两岸四地最具影响力的高校究竟花落谁家？上海交通大学世界一流大学研究中心周二发布的“2015年中国两岸四地大学排名”显示，今年北京清华大学连续第五次蝉联榜首，台湾地区的清华大学和台湾大学则分获第二、第三名，榜单三甲与去年一样。    　　上海交大世界一流大学研究中心执行主任程莹博士表示，“中国两岸四地大学排名”的调研对象是中国大陆地区、台湾地区、香港特区和澳门特区的高等学府，排名均使用具国际可比性的考评指标，包括人才培养、科学研究、师资品质、学校资源等，榜单2011年问世至今已连续发布五次。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150428173936241127758/20150428173936241127758_.html" target="_blank">清华党委：践行“三严三实”要求 建设世界...</a></h3>
+              <p>　　习近平总书记提出的“三严三实”要求，为加强干部队伍作风建设提供了根本价值观和重要方法论，对高校建设和发展具有重大现实指导意义。清华大学素有科学严谨、求真务实的优良传统，一代代清华人“行胜于言”，“严”和“实”深蕴在血脉之中，是成就百年辉煌的关键所在。开展“三严三实”专题教育，必将为清华大学实现创建世界一流大学梦想注入新的强大动力。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141015173723645435892/20141015173723645435892_.html" target="_blank">一流大学职业发展研讨会在清华举行</a></h3>
+              <p>10月11日，“一流大学职业发展研讨会2014”在清华大学甲所举行。教育部学生司副司长荆德刚、清华大学党委副书记史宗恺出席会议。9所首批获得“985工程”支持的高校就业工作负责人，围绕“研究型大学的职业发展教育定位”这一主题，就职业发展教育的定位和内容、未来一段时期内高校毕业生就业形势及应对、研究型大学如何构建创业指导与服务体系展开广泛而深入的研讨。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141011153158946988238/20141011153158946988238_.html" target="_blank">一流大学建设系列研讨会暨中国大学校长联谊...</a></h3>
+              <p>“一流大学建设系列研讨会-2014暨中国大学校长联谊会”在清华主楼接待厅举行。9所首批获得“985工程”支持的高校和香港大学、香港中文大学、香港科技大学学校负责人，围绕“高等教育大众化阶段的一流大学建设”这一主题展开广泛而深入的研讨。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140918090654999271029/20140918090654999271029_.html" target="_blank">铭记小平同志殷殷嘱托，加快建设世界一流大学</a></h3>
+              <p>今年是邓小平同志诞辰110周年，我们深切缅怀这位改变了中国历史命运和世界历史进程，赢得了中国人民衷心爱戴和世界人民广泛尊敬，为广大清华师生永远铭记的一代伟人。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2014/20140224144427591288121/20140224144427591288121_.html" target="_blank">陈旭：凝心聚力建设世界一流大学</a></h3>
+              <p>深入开展群众观点和群众路线学习教育，推动学校党建工作理论创新。我们党是用科学理论武装起来的马克思主义政党，只有不断推进理论创新，用发展的马克思主义指导实践，才能保持思想理论的强大生命力。清华大学在教育实践活动中坚持把学习教育贯穿始终，发扬理论联系实际优良学风，努力提高全校马克思主义水平。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131106150022857262185/20131106150022857262185_.html" target="_blank">姜胜耀：把一流大学建设放到国家发展的大舞...</a></h3>
+              <p class="thnews_jqzy">　　把一流大学建设放到国家发展的大舞台上清华大学副校长 姜胜耀来源：光明日报 2013-11-6我们需要拥有当代中国与世界互动的宽阔视野，站在教育、科技、文化和经济社会结合的高度上，把握研究型大学的使命与功能，在精英人才培养、服务国家战略、文化引领社会等方面作出表率，进一步探索中国特色的大学制度，构建中国特色的教育思想理论体系。一是培养精英人才。中国需要......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20131029121244982680641/20131029121244982680641_.html" target="_blank">面对变化的世界 9所大学校长共话责任与作为</a></h3>
+              <p class="thnews_jqzy">　　面对变化的世界 9所大学校长共话责任与作为来源：科技日报 2013-10-29 杨保国 曾皓 刘爱华 姚琼面对变化的世界，中国的高校如何处理来自外界的挑战与机遇？又如何解决自身发展中的矛盾？对研究型大学来说，科研与人才培养到底哪个&ldquo;为王&rdquo;？近日，由中国科学技术大学承办的&ldquo;一流大学建设系列研讨会&mdash;2013&r......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130419132259133747246/20130419132259133747246_.html" target="_blank">耶鲁校长：未来10至20年，中国会产生世...</a></h3>
+              <p class="thnews_jqzy">　　耶鲁校长理查德&middot;莱文昨在杭谈中国大学&mdash;&mdash;未来10至20年，中国会产生世界一流大学来源：今日早报 2013-4-19 周炜 高逸平这两天，美国名校耶鲁大学校长理查德&bull;莱文在杭州，他是来浙江大学参加&ldquo;中国-耶鲁大学领导高级研讨班&rdquo;。昨天，他与耶鲁大学副校长罗琳达接受媒体采访。谈及......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130102154317472894049/20130102154317472894049_.html" target="_blank">胡和平：坚持和发展中国特色社会主义 加快...</a></h3>
+              <p class="thnews_jqzy">　　坚持和发展中国特色社会主义 加快建设世界一流大学第十八届中央委员会候补委员、清华大学党委书记 胡和平来源：中国教育报 2012-12-29党的十八大是在我国进入全面建成小康社会决定性阶段召开的一次十分重要的大会。我们要按照中央部署和习近平总书记在中央政治局集体学习时的重要讲话要求，紧紧围绕坚持和发展中国特色社会主义这条主线，认真学习宣传贯彻十八大精神，在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2012/20121126171222447398019/20121126171222447398019_.html" target="_blank">陈吉宁：办世界一流大学要摒弃“门户之见”</a></h3>
+              <p class="thnews_jqzy">　　陈吉宁（清华大学校长）：办世界一流大学要摒弃&ldquo;门户之见&rdquo;来源：光明日报 2012-11-26 韩业庭&ldquo;我们要继承优良传统，要以开阔的学术视野和开放包容的胸怀，摒弃&lsquo;门户之见&rsquo;，强化交流合作，坚守学术道德，弘扬科学精神，推进协同创新。只有这样，才能创办出世界一流大学。&rdquo;清华大学校长陈吉......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20121106173235013686127/20121106173235013686127_.html" target="_blank">台湾综合大学系统成立 目标跻身世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　台湾综合大学系统成立 目标跻身世界一流大学来源：中国台湾网 2012-11-5 杜美莹据台湾&ldquo;中广新闻网&rdquo;报道，继台湾北部的台湾阳明大学、台湾中央大学、台湾&ldquo;清华大学&rdquo;、台湾交通大学的&ldquo;台湾联合大学系统&rdquo;成立后，岛内中南部的台湾成功大学、中兴大学、台湾&ldquo;中山大学&rdqu......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2012/20121012151639748916193/20121012151639748916193_.html" target="_blank">陈吉宁 胡和平：加快建设世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　改革创新 奋勇争先加快建设世界一流大学清华大学校长陈吉宁清华大学党委书记胡和平来源：光明日报 2012-10-12新世纪新阶段，以胡锦涛同志为总书记的党中央深入贯彻落实科学发展观，大力实施科教兴国、人才强国和可持续发展战略，开创了高等教育改革发展的新局面。全国高等学校认真落实教育规划纲要，努力实现从追求数量到提高质量、从外延扩张到内涵发展、从大而全到彰显......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120626153058747405682/20120626153058747405682_.html" target="_blank">从世界一流大学到世界一流高等教育体系</a></h3>
+              <p class="thnews_jqzy">　　从世界一流大学到世界一流高等教育体系&nbsp;不要仅仅关注几所顶尖大学的表现，而应更重视作为整体的高等教育系统的质量。&nbsp;正当世界上很多国家都遭遇经济和财政危机，高等教育需求又空前膨胀之际，大学排名却将众人的目光聚焦在少数世界一流大学身上。大学排名对高等教育政策的制定、大学的发展和公共舆论都产生了深刻而不恰当的影响。大学排名总是偏向资源集中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120531140920533647685/20120531140920533647685_.html" target="_blank">香港科技大学两位校长共同揭秘一流大学“炼...</a></h3>
+              <p class="thnews_jqzy">　　香港科技大学两位校长共同揭秘一流大学&ldquo;炼金术&rdquo;&ldquo;学术自由是大学的核心价值&rdquo;来源：南方日报 2012-05-31 雷雨 刘苗苗5月29日，2012年度国际高等教育评估机构（Quacquarelli Symonds，QS）亚洲大学排名发布，香港科技大学蝉联亚洲第一。在这份被被公认为世界三大大学排行榜之一的最新榜......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120406145555544565660/20120406145555544565660_.html" target="_blank">南京大学校长陈骏：静心办学，坚守大学之道</a></h3>
+              <p class="thnews_jqzy">　　静心办学，坚守大学之道&mdash;&mdash;对话南京大学校长陈骏教授来源：人民日报 2012-04-06 袁新文 张烁从1902年到2012年，南京大学走过了波澜壮阔的110年。从建校之初的校训&ldquo;嚼得菜根，做得大事&rdquo;，到之后的&ldquo;诚朴雄伟，励学敦行&rdquo;，南京大学以诚植身、质朴无华、志存高远。校长陈骏说：&......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120322152803411241840/20120322152803411241840_.html" target="_blank">斯坦福校长：中国建成世界一流大学指日可待</a></h3>
+              <p class="thnews_jqzy">　　斯坦福大学校长表示：中国建成世界一流大学指日可待来源：光明日报 2012-03-22 王庆环美国斯坦福大学校长约翰&bull;亨尼斯今日在北京大学斯坦福中心揭牌仪式上表示，中国建成世界一流大学指日可待。亨尼斯认为，中国大学的发展得到政府强力支持，这在世界上是少有的。如果中国期望拥有跻身世界前50位的一流大学，应该突出重点、集中力量发展一到两三所大学，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120321135506023361606/20120321135506023361606_.html" target="_blank">陈骏：创建世界一流大学是长期艰巨的过程</a></h3>
+              <p class="thnews_jqzy">　　南京大学校长陈骏：创建世界一流大学是长期艰巨的过程来源：中国科学报 2012-03-21 孙琛辉世界一流大学是一种文化，大学文化的形成需要长期的积累、积淀，需要历代师生逐步凝练、形成独特的风格。办我国最好的本科教育就是要正本清源，回归大学的根本。&nbsp;5月20日迎来110周年校庆的南京大学，为社会培养了大量人才，为国家富强和民族振兴作出了重......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120312140045857653001/20120312140045857653001_.html" target="_blank">一流大学三要素：教授、课程、学生</a></h3>
+              <p class="thnews_jqzy">　　北京大学校长周其凤代表一流大学三要素：教授、课程、学生来源：人民日报 2012-03-10 袁泉9日上午，全国人大代表、北京大学校长周其凤院士接受人民网强国论坛在线访谈，就高等教育发展与改革、建设一流大学等回答网民提问。周其凤说，&ldquo;大学作为一种服务机构，主要功能是为社会各领域提供专门人才和智力支持。一国教育和一所大学成功的硬指标是能否为社......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110603150036587165144/20110603150036587165144_.html" target="_blank">2011中国35所一流大学名单揭晓</a></h3>
+              <p class="thnews_jqzy">　　2011中国35所一流大学名单揭晓来源：新浪 2011-06-022011中国一流大学名单揭晓，中国两岸四地35所大学榜上有名2011年6月1日，中国校友会网发布《2011中国大学星级评价报告》，在最新发布的&ldquo;2011中国大学星级排名&rdquo;中，来自中国两岸四地的北京大学、清华大学、香港大学和台湾大学等4所大学荣膺2011年中国六星......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110517130548391645568/20110517130548391645568_.html" target="_blank">顾秉林、胡和平：加快推进世界一流大学建设</a></h3>
+              <p class="thnews_jqzy">　　加快推进世界一流大学建设清华大学校长 顾秉林 清华大学党委书记 胡和平《求是》2011年第10期4月24日，胡锦涛总书记在庆祝清华大学建校100周年大会上发表了重要讲话，代表党中央、国务院对清华大学建校100周年表示热烈祝贺，对百年清华的优良文化传统和光荣革命传统予以充分肯定，对全面提高高等教育质量、加快世界一流大学建设步伐、推动我国高等教育事业改革发展......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110509144629990269760/20110509144629990269760_.html" target="_blank">史静寰：建世界一流大学期待新突破</a></h3>
+              <p class="thnews_jqzy">　　清华大学教育研究院副院长史静寰：建世界一流大学期待新突破来源：中国教育报 2011-05-074月24日，胡锦涛总书记在清华大学百年校庆的讲话中明确提出，中国的社会发展正&ldquo;处于可以大有作为的重要战略机遇期&rdquo;。在这一时期，我们必须进一步强化&ldquo;科技是关键，人才是核心，教育是基础&rdquo;的认识；&ldquo;深入实施科......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10244/2011/20110427155736358154239/20110427155736358154239_.html" target="_blank">落实胡锦涛总书记四项要求 加快一流大学建...</a></h3>
+              <p class="thnews_jqzy">　　落实胡锦涛总书记四项要求 加快一流大学建设步伐CCTV《新闻联播》2011-04-26胡锦涛总书记在庆祝清华百年校庆上的讲话中，对全面提高中国高等教育质量提出了四项要求，提升人才培养水平、增强科学研究能力、服务经济社会发展、推进文化传承创新，在全国各地高校教育工作者中引起强烈反响。&nbsp;长期从事高等教育的专家学者们认为，胡总书记提出的四项要求具......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110424141301911877032/20110424141301911877032_.html" target="_blank">综述：昂首阔步 向世界一流大学迈进</a></h3>
+              <p>一年来，在举办一系列庆祝活动的同时，学校各方面工作稳步向前推进，向百年校庆献上了一份份厚礼。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232543812577076/20110225232543812577076_.html" target="_blank">大学之道在于“服务国家”</a></h3>
+              <p class="thnews_jqzy">　　大学之道在于“服务国家”&nbsp;来源：新华每日电讯 2010-10-14大学教育何处去？多位国内一流大学校长和教育专家11日汇聚复旦大学，研讨“一流大学”建设。他们认为，我国一流高校应该为国家建设输送人才，解决重大问题，培养高校的文化自觉与文化担当，在“服务国家”中实现“世界一流”。为国贡献“世界上没有跨越国界的大学，世界一流大学对人类的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232543375833603/20110225232543375833603_.html" target="_blank">中国模式能圆世界一流大学梦吗</a></h3>
+              <p class="thnews_jqzy">　　国内9所顶尖大学校长齐聚上海探讨——中国模式能圆世界一流大学梦吗来源：中国青年报 2010-10-14国内9所顶尖大学的校长们在10月10日至12日齐聚复旦大学，参加他们一年一度的联谊会。不仅是老友间的叙旧，他们更为一项重大的使命而来。在民众普遍对高等教育的办学质量不甚满意的情况下，校长们此次探讨一个雄心勃勃的话题：创建世界一流大学的中国模式。&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232542812983538/20110225232542812983538_.html" target="_blank">在“服务国家”中担当 不在“世界一流”中...</a></h3>
+              <p class="thnews_jqzy">　　在“服务国家”中担当 不在“世界一流”中学舌&nbsp;来源：新华网 2010-10-12大学教育何处去？是追求“摩登”的国际化，还是在中华文化担当中坚守？11日，多位国内一流大学校长和教育专家汇聚复旦大学，共话“一流大学”建设。这些大学掌门人和专家们认为，中国一流高校就应该为国家建设输送人才，解决重大问题，培养高校的文化自觉与文化担当，不断探索高校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232542531305199/20110225232542531305199_.html" target="_blank">一流大学 形似容易神似难</a></h3>
+              <p class="thnews_jqzy">　　一流大学 形似容易神似难来源：文汇报 2010-10-11“世界一流大学的中国模式”——这个看上去十分宏大的命题，成为昨天出席“一流大学系列研讨会暨中国大学校长联谊会—2010”的校长们必须回答的难题。从1998年中国提出创建世界一流大学计划至今，10多年来，推动大学发展的动作始终不断，其中去年中国顶尖大学联合成立C9联盟，希望通过跨越式发展建设世界......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232542500152310/20110225232542500152310_.html" target="_blank">中国高校探寻世界一流大学建设之路</a></h3>
+              <p class="thnews_jqzy">　　中国高校探寻世界一流大学建设之路来源：新华网 2010-10-10与当今中国地位相适应的一流大学是怎样的？大学如何承担起培养未来10年支持中国迅猛发展的卓越人才的重担？创建世界一流大学的中国模式“路在何方”？10日，中国9所名牌高校校长汇聚上海，共同回应所面临的重要历史使命。今年，中国新世纪第一次教育工作会议在北京隆重召开，《国家中长期教育改革和发展......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225332515986199/20110225225332515986199_.html" target="_blank">清华召开全校党建工作会议</a></h3>
+              <p class="thnews_jqzy">　　清华召开全校党建工作会议【新闻中心讯 记者 云仲 摄影 郭海军】清华大学党建工作会议9月29日下午在清华科技园国际会议中心举行。这次会议是为了深入贯彻党的十七大和十七届四中全会精神，进一步加强我校的党建工作，推进世界一流大学建设，以优异成绩迎接百年校庆，由学校党委决定召开的。校领导胡和平、顾秉林、陈旭、康克军、谢维和、韩景阳、程建平、史宗恺、邓卫、邱勇出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232541234802012/20110225232541234802012_.html" target="_blank">清华召开全校党建工作会议</a></h3>
+              <p class="thnews_jqzy">　　清华召开全校党建工作会议【新闻中心讯 记者 云仲 摄影 郭海军】清华大学党建工作会议9月29日下午在清华科技园国际会议中心举行。这次会议是为了深入贯彻党的十七大和十七届四中全会精神，进一步加强我校的党建工作，推进世界一流大学建设，以优异成绩迎接百年校庆，由学校党委决定召开的。校领导胡和平、顾秉林、陈旭、康克军、谢维和、韩景阳、程建平、史宗恺、邓卫、邱勇出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232537953941063/20110225232537953941063_.html" target="_blank">周济：与世界一流比我国高校仍差财与才</a></h3>
+              <p class="thnews_jqzy">　　周济：与世界一流比我国高校仍差财与才来源：长江日报　2010-09-18日前，中国工程院院长周济应邀参加了华中科技大学2010年暑期工作会。会上，周济谈了建设世界一流大学等问题的看法。周济说，实现我国由高等教育大国向高等教育强国转变的重要标志之一，就是建成若干所世界一流的大学。他称，“中国大学现在的科研经费虽然比以前增加得很多，但是和世界一流大学的差......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232537359787285/20110225232537359787285_.html" target="_blank">在开放中追求一流</a></h3>
+              <p class="thnews_jqzy">　　在开放中追求一流来源：人民日报　2010-09-17近日，有关来华留学生的两则新闻引人瞩目。其一是，在“教育部来华留学英语师资培训中心（医学）”揭牌仪式上，教育部副部长宣布目前共有来自190个国家和地区的近24万名留学生在我国610所高校、科研机构学习。其二是，新学年清华大学外国留学生已占在校生的7%。由过去比较多地关注出国留学，到现在关注来华留学，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225333312923460/20110225225333312923460_.html" target="_blank">牛津大学校长清华演讲谈21世纪世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　牛津大学校长清华演讲谈21世纪世界一流大学&nbsp;&nbsp;&nbsp; 【新闻中心讯 记者 李含 摄影 郭海军】4月15日，英国牛津大学校长安德鲁&#8226;汉密尔顿（Andrew Hamilton）教授访问清华大学，并做客清华大学海外名师讲堂，发表了题为《21世纪的世界一流大学》的精彩演讲。清华大学校务委员会主任胡和平会见了汉密尔顿教授一行。胡和......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225232432125160245/20110225232432125160245_.html" target="_blank">牛津大学校长清华演讲谈21世纪世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　牛津大学校长清华演讲谈21世纪世界一流大学&nbsp;&nbsp;&nbsp; 【新闻中心讯 记者 李含 摄影 郭海军】4月15日，英国牛津大学校长安德鲁&#8226;汉密尔顿（Andrew Hamilton）教授访问清华大学，并做客清华大学海外名师讲堂，发表了题为《21世纪的世界一流大学》的精彩演讲。清华大学校务委员会主任胡和平会见了汉密尔顿教授一行。胡和......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2009.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232356406764195/20110225232356406764195_.html" target="_blank">清华科技园跻身世界一流大学科技园</a></h3>
+              <p class="thnews_jqzy">　　十五年拼搏奋斗赢得今朝辉煌清华科技园跻身世界一流大学科技园《中国高新技术产业导报》2009-12-7“过去的50年，是你们向我们学习；今后的50年，应该是我们向你们学习”——这是美国北卡罗来纳州三角科技园总裁Rick Weddle的评价。“我们还在研究和探讨第三代科技园，你们已经开始运行了”——这是英国曼彻斯特科技园总裁Jane Davies的惊讶......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2009.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232338765127337/20110225232338765127337_.html" target="_blank">清华校史连载之十八：昂首阔步迈向世界一流...</a></h3>
+              <p class="thnews_jqzy">　　清华校史连载之十八昂首阔步迈向世界一流大学■校史研究室 金富军在改革开放新的形势下，清华大学进入了改革发展的新时期。学校遵循&not;“教育要面向现代化、面向世界、面向未来”的办学方向，坚持“着重提高、在提高中发展”的办学指导思想，不断深化、更新教育理念，确立了“综合性、研究型、开放式”办学模式与定位，在党和国家以及社会各界的大力支持下，正向世界一流大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2009.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232302796603287/20110225232302796603287_.html" target="_blank">人才培养质量：一流大学建设的重中之重</a></h3>
+              <p class="thnews_jqzy">　　人才培养质量：一流大学建设的重中之重清华发布关于进一步加强本科教育教学工作、促进拔尖创新人才成长的若干意见【新闻中心讯 记者 程曦 通讯员 张文雪 摄影 郭海军】长期以来，清华大学在办学过程中始终坚持以人才培养为根本。以此次学习实践科学发展观活动为契机，学校组织了“一流大学建设与人才培养”论坛，深入讨论了学校人才培养的使命与战略，如何培养拔尖创新人才，实......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2009.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225334687820483/20110225225334687820483_.html" target="_blank">人才培养质量：一流大学建设的重中之重</a></h3>
+              <p class="thnews_jqzy">　　人才培养质量：一流大学建设的重中之重清华发布关于进一步加强本科教育教学工作、促进拔尖创新人才成长的若干意见【新闻中心讯 记者 程曦 通讯员 张文雪 摄影 郭海军】长期以来，清华大学在办学过程中始终坚持以人才培养为根本。以此次学习实践科学发展观活动为契机，学校组织了“一流大学建设与人才培养”论坛，深入讨论了学校人才培养的使命与战略，如何培养拔尖创新人才，实......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232245484438635/20110225232245484438635_.html" target="_blank">【校庆特稿】教育教学稳步发展 多项获奖高...</a></h3>
+              <p class="thnews_jqzy">　　科学发展 迈向一流●新闻中心特约记者 靳闻各层次教育教学稳步进展 多项获奖数保持高校第一在总结本科教学评估成绩与经验的基础上，学校针对本科教育中存在的问题，结合强化拔尖创新人才培养、提高课堂教学质量、保持优良学风、推进教学队伍与教学组织体系建设等重点问题，开展了一系列专题调查和研讨，分别在院士、教学名师、院系一线教师、机关部处干部、毕业生等多种范围内......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232245406614183/20110225232245406614183_.html" target="_blank">【校庆特稿】学科建设重质量 迈向世界一流</a></h3>
+              <p class="thnews_jqzy">　　胡锦涛总书记在2008年5月4日的重要讲话中要求我们：“始终高举中国特色社会主义伟大旗帜，坚持正确办学方向，继承优良传统，借鉴国外经验，发挥自身优势，紧密联系改革开放和社会主义现代化建设的伟大实践，以更加广阔的视野、更加开放的姿态、更加执著的努力，加快推进创建世界一流大学步伐。”在过去的极不平凡的一年中，我们国家先后战胜了南方部分地区雨雪冰冻和四川汶......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232245640662373/20110225232245640662373_.html" target="_blank">【校庆特稿】为国献智贡献多 上下齐心共出力</a></h3>
+              <p class="thnews_jqzy">　　科学发展 迈向一流●新闻中心特约记者 靳闻想国家之所想 急国家之所急 为战胜困难提升国力奉献才智跻身世界一流大学，必须要具有“中国特色”和“世界水平”，就是一方面要在一些主要办学指标上达到国际上的较高层次，有若干优势学科率先达到世界一流水平；另一方面要形成有中国特色的办学理念和大学文化，为国家的经济建设和社会发展做出突出贡献。过去一年来，我校广大师生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232245718537325/20110225232245718537325_.html" target="_blank">【校庆特稿】培养引进领军人才 深化聘任制...</a></h3>
+              <p class="thnews_jqzy">　　科学发展 迈向一流●新闻中心特约记者 靳闻大力培养引进高层次领军人才 不断深化教师职务聘任制改革继续以拔尖人才的培养和引进带动整体队伍水平的提高，是2008年人事和队伍建设工作的主线。清华积极落实国家新出台的“海外高层次人才引进计划”，共申报8人，并被确定为首批20个海外高层次人才创新创业基地之一。同时，在这一计划的推动和促进下，继续落实好清华“高层......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232245859637246/20110225232245859637246_.html" target="_blank">【校庆特稿】后勤基建稳步发展 办学条件不...</a></h3>
+              <p class="thnews_jqzy">　　科学发展 迈向一流●新闻中心特约记者 靳闻后勤基建财务等工作稳步发展 办学条件和校园环境不断改善近年来，清华基建工程呈现建筑体量大、技术含量高、工期要求紧等特点，特别是随着百年校庆的临近，校园基本建设和环境整治任务日益加重。2008年，校内开复工面积约6万平方米，新清华学堂于校庆97周年之际举行了奠基仪式，“新工物馆－刘卿楼”于年底落成。为迎接奥运，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232245953938655/20110225232245953938655_.html" target="_blank">【校庆特稿】全面贯彻科学发展观 迎接百年...</a></h3>
+              <p class="thnews_jqzy">　　科学发展 迈向一流●新闻中心特约记者 靳闻全面贯彻落实科学发展观 以优异成绩迎接百年华诞2008年是我国改革开放30周年。清华以中国特色社会主义理论为指导，回顾总结改革开放30年来学校的发展成就与办学经验，坚持正确办学方向，着力推动学校各项事业科学发展。校党委首先抓好学校和院系干部的理论学习，在自学的基础上全年安排集中学习12次，并通过课堂教学、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232245562297587/20110225232245562297587_.html" target="_blank">【校庆特稿】科研成果丰硕 创新水平提高</a></h3>
+              <p class="thnews_jqzy">　　科学发展 迈向一流●新闻中心特约记者 靳闻科研成果丰硕经费突破廿亿元大关 科研创新水平呈良好发展趋势清华大学第16次科研工作讨论会自2008年4月至2009年1月举行，历时9个月，针对着力提高科研质量和水平这一主题，学校召开了9个专题讨论会，各院系召开了100余次小型讨论会，广大教师、干部结合实际进行了深入探讨，提出了许多中肯的意见和建议。作为讨论会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232242625547031/20110225232242625547031_.html" target="_blank">清华大学举办一流大学建设与人才培养论坛</a></h3>
+              <p class="thnews_jqzy">　　清华大学举办一流大学建设与人才培养论坛【新闻中心讯 通讯员 郭大勇 记者 欣研 摄影 崔凯】4月15日下午，清华大学深入学习实践科学发展观解放思想大讨论系列论坛——“一流大学建设与人才培养论坛”在中央主楼327会议室举行。校党委书记、校深入学习实践科学发展观领导小组组长胡和平，副校长、领导小组成员汪劲松，校党委副书记、领导小组成员史宗恺出席会议。学校国家......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232240187860507/20110225232240187860507_.html" target="_blank">清华举办“解放思想大讨论—一流大学建设与...</a></h3>
+              <p class="thnews_jqzy">　　清华大学举办“解放思想大讨论——一流大学建设与学科发展论坛”【新闻中心讯】4月8日下午，清华大学学习实践科学发展观“解放思想大讨论——一流大学建设与学科发展论坛”在中央主楼327会议室举行。副校长康克军，校党委副书记韩景阳，高研中心主任聂华桐，理学院院长、中科院院士朱邦芬，物理系教授、中科院院士范守善，材料系教授、中科院院士柳百新，化学系系主任、中科院院......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232218031975415/20110225232218031975415_.html" target="_blank">【改革开放30年】王大中：建设世界一流大...</a></h3>
+              <p class="thnews_jqzy">　　王大中：建设世界一流大学 确立跨越式发展的办学理念●新闻中心记者 张莞昀改革开放以来，我国的高等教育事业取得了举世瞩目的成就，实现了改革与发展的历史性跨越，同时也带来了许多新的挑战。在有限的综合国力下，既要实现高等教育大众化，又要建设世界一流大学，无疑是双重难题和双重目标。走什么样的发展道路，采取什么样的发展模式，成为高等教育必须面对的重大问题。19......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232203687471475/20110225232203687471475_.html" target="_blank">“211工程”：大学兴人才盛</a></h3>
+              <p class="thnews_jqzy">　　“211工程”：大学兴人才盛大学兴，则人才盛。统计表明，2005年按国际可比指标SCI论文收入数和SCI论文被引用次数的排序，清华大学材料科学学科分别位列世界大学第二位、第十四位。通过重点学科突破，清华大学缩小了与世界一流大学的差距，“211工程”功不可没。“211工程”,即面向21世纪、重点建设100所左右的高校和一批重点学科。“九五”、“十五”连......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232153328716357/20110225232153328716357_.html" target="_blank">如何快步迈向世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　如何快步迈向世界一流大学——首批“985工程”高校校长纵论一流大学建设“一流大学建设系列研讨会-2008”10月13日至14日在杭州召开。会上，我国首批进入“985工程”重点建设的9所研究型大学的校长们，围绕“如何加快向世界一流大学迈进的步伐”这一命题进行了深入讨论与交流。大学要出真思想“研究型大学是跟在社会的后面，还是走在社会的前面？如何引领社......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2008.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232038343985002/20110225232038343985002_.html" target="_blank">陈希：建设世界一流大学要坚定不移地走中国...</a></h3>
+              <p class="thnews_jqzy">　　建设世界一流大学要坚定不移地走中国特色社会主义道路———在清华大学学习宣传贯彻党的十七大精神理论研讨会上的讲话● 清华大学党委书记 陈 希2008年4月10日学习宣传贯彻党的十七大精神，是我校当前和今后一段时期首要的政治任务。自十七大召开以来，我们通过组织收视收听大会实况转播，举办“十七大代表进清华”活动，邀请专家学者举办一系列专题讲座，面向教职工、学生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2008.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232033625364003/20110225232033625364003_.html" target="_blank">施一公 饶毅：靠什么创建世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　靠什么创建世界一流大学施一公 饶毅编者按：本文的两位作者是在各自研究领域成就卓著的海外青年学者。带着拳拳报国之心，如今他们全身心地回到国内；带着对中国强盛的热切期盼，他们又将关注的目光投向自己并不“专业”的领域。在世界一流大学学习、任教的经历，使他们更加强烈地认识到，创建中国自己的世界一流大学何其重要。●综观近代世界历史，没有任何一个大国，可以在高等......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231948140179184/20110225231948140179184_.html" target="_blank">杨卫：步入世界一流大学有三道门槛</a></h3>
+              <p class="thnews_jqzy">　　杨卫：步入世界一流大学有三道门槛【新闻中心讯】浙江大学校长杨卫院士在11月4日举行的第二届清华大学高等教育论坛上发言指出，中国的高校步入世界一流大学有三道门槛：第一道是总量要求；第二道是内涵上的要求，比如教师的水平和本身教育质量的好坏；第三道是声誉的要求。他认为，这是目前中国经济发展在世界上的位置以及中国本身的国情所决定的。结合浙江大学的情况，杨......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2007.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225231931937480665/20110225231931937480665_.html" target="_blank">学术盛宴下的世界一流大学建设图景</a></h3>
+              <p class="thnews_jqzy">　　学术盛宴下的世界一流大学建设图景《科学时报》2007-9-118月15日，世界著名心智和语言哲学家约翰&#8226;塞尔在清华论坛作了题为《社会本体论》（Social Ontology）的演讲，为第13届国际逻辑学、方法论和科学哲学大会这样一场学术“盛宴”奉献了最后一道“佳肴”。清华大学心理学与认知科学中心主任蔡曙山教授认为，本届学术大会最重要的意义有3......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2007.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231924546827974/20110225231924546827974_.html" target="_blank">顾秉林校长出席第五届“一流大学建设系列研...</a></h3>
+              <p class="thnews_jqzy">　　顾秉林校长出席第五届“一流大学建设系列研讨会” 【新闻中心讯】8月15日至16日，清华大学校长顾秉林院士出席了在哈尔滨工业大学召开的“一流大学建设系列研讨会——2007”，并做了题为《建设创新文化，造就创新人才》的大会发言。顾秉林指出，我们要充分认识高校建设创新文化的重要性和紧迫性。百余年来，中国现代大学在推动国家发展、社会进步的过程中，形......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2007.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225231858078787523/20110225231858078787523_.html" target="_blank">耶鲁校长：中国大学进入国际一流只是时间问题</a></h3>
+              <p class="thnews_jqzy">　　耶鲁校长：中国大学进入国际一流只是时间问题新华网 2007-05-16 马文博率团来华访问的美国耶鲁大学校长理查德&#8226;莱文１６日在接受采访时说，中国大学进入国际一流行列只是时间问题。　莱文说，中国近年在高校建设上取得了长足进步，中国的大学发生了很多变化，比如建成了更多一流的教学设施和条件优良的研究所、实验室和学生宿舍。希望在未来２０年里能有......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2007.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231839109813576/20110225231839109813576_.html" target="_blank">处处为学子着想：清华大学构建和谐校园侧记</a></h3>
+              <p class="thnews_jqzy">　　处处为莘莘学子着想——清华大学构建和谐校园侧记中国教育报 2007年03月03日（记者唐景莉 通讯员周襄楠）春节的喜庆气息尚未过去，清华大学就业指导中心的工作人员已经忙碌起来——3月9日即将举行的清华大学2007年大型就业洽谈会已经进入倒计时，届时将有300家用人单位来清华寻觅英才；同一天，“职业生涯教练计划”也将拉开帷幕，将有30位来自企事业单位的高层......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231806953139532/20110225231806953139532_.html" target="_blank">代表热议一流大学建设:任重道远 信心十足</a></h3>
+              <p class="thnews_jqzy">　　代表热议一流大学建设：任重道远 信心十足【新闻中心讯 记者 顾淑霞　摄影 郭海军】9月12日，清华大学第十二次党代会开幕，校党委书记陈希代表中共清华大学第十一届委员会做了题为《全面贯彻落实科学发展观，为建设世界一流大学努力奋斗》的报告。在分组讨论中，世界一流大学建设的议题成为各小组讨论的焦点。对世界一流大学的表述清晰明确什么是世界一流大学？跻身世......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231747984761462/20110225231747984761462_.html" target="_blank">顾秉林:努力跻身世界一流大学的行列</a></h3>
+              <p class="thnews_jqzy">　　稳定规模　提高质量努力跻身世界一流大学的行列●顾秉林　高等学校贯彻落实科学发展观，关键在于提高学校的办学质量。多年来，我校在党和政府的亲切关心及社会各界的大力支持下，坚持科学发展，切实把握好规模、结构、质量、效益之间的关系，坚持规模适度、质量为先、结构合理、争创一流，特别是“十五”期间，全校上下进一步明确了奋斗目标、办学思路和理念，通过实施“211工程......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2005.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231620125377085/20110225231620125377085_.html" target="_blank">九大名校校长呼吁建立现代大学制度</a></h3>
+              <p class="thnews_jqzy">　　九大名校校长呼吁建立现代大学制度中国青年报  2005-5-25&nbsp;&nbsp;&nbsp;中国青年报消息 “一流大学建设系列研讨会”近日在南京大学举行。北京大学、清华大学、复旦大学、浙江大学、上海交通大学、中国科技大学、西安交通大学、哈尔滨工业大学和南京大学的校长们呼吁：创建世界一流大学要建立现代大学制度。&nbsp;&nbsp;&nbsp;南京大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2005.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231548703526984/20110225231548703526984_.html" target="_blank">北大清华向世界一流大学迈进</a></h3>
+              <p class="thnews_jqzy">　　北大清华向世界一流大学迈进光明日报  2005-2-23&nbsp;&nbsp;&nbsp;是否拥有世界一流大学，是一个国家高等教育发展水平的标志，是国家综合国力的重要体现，也是一个国家经济、科技、社会发展到一定阶段后的迫切需要。作为我国高等教育的排头兵，北京大学和清华大学近年来在国家强有力的支持下，积极地投入到建设世界一流大学的事业当中，迎来了两校历史上少......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2004.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231529671862064/20110225231529671862064_.html" target="_blank">中国拥有世界一流大学的梦想已有实现的可能</a></h3>
+              <p class="thnews_jqzy">　　中国拥有世界一流大学的梦想已有实现的可能新华社  2004-11-21  战艳 王英诚&nbsp;&nbsp;&nbsp;新华社海南博鳌１１月２１日电 “一流的大学是推动社会发展必不可少的发动机，为使中国经济进一步高速发展，中国需要在自己的土地上建立属于自己的世界一流大学，”正在此间参加“中国科协２００４年学术年会”的中国科协副主席、英国诺丁汉大学校长杨福家......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2004.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231522343994360/20110225231522343994360_.html" target="_blank">世界一流大学看好中国优质生源</a></h3>
+              <p class="thnews_jqzy">　　世界一流大学看好中国优质生源科技日报  2004-11-2  仇方迎 李凝&nbsp;&nbsp;&nbsp;从2002年到2004年，哈佛、耶鲁、斯坦福、剑桥、牛津、早稻田等一大批世界高水平大学的校长纷纷来到北京，参加两年一届的中外大学校长论坛。这些世界上最繁忙的睿智人物摩肩接踵拨冗来华，是他们看好中国的教育大市场。他们在带来世界高等教育发展最新信息的同时......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231455718955386/20110225231455718955386_.html" target="_blank">北大清华人大北师大校长谈创建世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　北大清华人大北师大校长谈创建世界一流大学中国教育报  2004-8-9  唐景莉 黄蔚 卢丽君 杨晨光 吕夺印&nbsp;&nbsp;&nbsp;“建成一所世界一流大学需要什么？”在19世纪后期曾担任哈佛大学校长40年之久的查尔斯·埃利奥特在回答约翰·洛克菲勒的这一问题时说，是“5000万美金和200年”。事实证明不需要这样漫长。20世纪初，芝加哥大学只用了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2003.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231407703748771/20110225231407703748771_.html" target="_blank">清华二0二0年跻身世界一流大学行列</a></h3>
+              <p class="thnews_jqzy">　　胡东成：清华二0二0年跻身世界一流大学行列中新网 2003-8-26中新社北京八月二十五日电(记者曾嘉)清华大学副校长胡东成今天在与台湾“中华教授协会”大陆学术参访团座谈时表示，清华已制定了战略目标，以期在二0二0年跻身世界一流大学行列。这位中国一流高等学府的负责人介绍说，制定的计划为三阶段：第一阶段，一九九一年至二00二年。学校不断补充、完善各......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231355171873062/20110225231355171873062_.html" target="_blank">以一流成果创一流大学</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document以一流成果创一流大学《科学时报》 2003-06-06□ 本报记者 刘英楠 通讯员 范宝龙 刘冬梅清华大学校内，北京市首家“红外快速体温检测仪”生产基地自５月１２日正式投产以来，不到半个月时间就生产８３２台。深圳清华大学研究院研发的这一新式“立柱式”产品，继承了同系列产品的“非接触”优点，还能在体温偏高报警的同时，拍下被......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231350687785756/20110225231350687785756_.html" target="_blank">王大中与清华一同走向世界一流</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document王大中与清华一同走向世界一流光明日报 2003年5月22日本报记者　丰捷清华大学历史上第三位掌校时间最长的校长在这个春夏之交的季节里欣然走下了他为之呕心沥血的岗位。他说他年龄已大，而学校正面临很好的发展机遇，应该让年富力强的同志担当校长，那将有利于学校干部的新老交替，有利于学校整体工作的连续性。于是，清华园里这位可亲可敬......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348046978008/20110225225348046978008_.html" target="_blank">党中央国务院任命顾秉林任清华大学校长</a></h3>
+              <p class="thnews_jqzy">　　无标题文档党中央国务院任命顾秉林任清华大学校长王大中担任清华大学校务委员会名誉主任【新闻中心4月28日讯】4月28日上午，我校在主楼接待厅举行党政干部会，传达党中央、国务院关于清华大学校长职务任免的决定。中组部副部长沈跃跃、教育部部长周济、北京市委副书记龙新民及有关部门的领导到会，我校中层以上干部近200人出席了会议。 会议由校党委书记陈希同志主持。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348078669649/20110225225348078669649_.html" target="_blank">校庆日 王大中校长看望同学们 检查防“非...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档校庆日 王大中校长看望同学们 检查防“非典”工作4月27日，春光明媚的清华园内，一排排新颖别致的彩色刀旗迎风招展。历史悠久而青春蓬勃的清华大学，迎来了她92岁的生辰华诞。尽管非典型肺炎在北京的蔓延，使学校不得不取消了各项大型校庆活动，但蓝天绿草掩映下的紫荆花和师生们一张张欢快而自信的笑脸，依然为校庆日增添了无限的美丽和生机。接近中午时，王大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348093915997/20110225225348093915997_.html" target="_blank">王大中校长致全体校友的一封信</a></h3>
+              <p class="thnews_jqzy">　　无标题文档王大中校长致全体校友的一封信在清华大学即将迎来建校92周年之际，我谨向祖国各地和旅居海外的校友们致以亲切的问候！过去的一年是我校建设发展取得新进展的一年。完善综合性学科布局，提高学科建设水平。2002年在教育部和卫生部的大力支持下，北京协和医科大学将更名为“清华大学北京协和医学院”。至此，涵盖工、理、文、法、管理、艺术和医学等学科领域的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231336312765740/20110225231336312765740_.html" target="_blank">清华大学举办一流大学建设研讨会</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document怎样才算“世界一流大学”清华大学举办一流大学建设研讨会人民日报海外版 2003年04月21日第六版本报讯 近日，我国高等教育学界知名学者和部分重点高校负责人齐聚清华园，共谋一流大学建设的大计，来自清华大学、北京大学、南京大学、浙江大学、复旦大学、中国科学技术大学、西安交通大学、上海交通大学、哈尔滨工业大学、中国人民大学、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231335328340879/20110225231335328340879_.html" target="_blank">清华大学校长：如何创建世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学校长：如何创建世界一流大学王大中人民日报 2003年04月18日第八版编者按：世界一流大学什么样？中国如何创建世界一流大学？早在1993年，清华大学就明确提出创建世界一流大学的奋斗目标，作为校长，王大中同志的思考值得一读。“创建世界一流大学”不应仅是目标，更要成为压力，化为行动。只有一步一个脚印，在继承的基础上不......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231334187155979/20110225231334187155979_.html" target="_blank">怎样建设世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document怎样建设世界一流大学清华大学校长王大中：向世界一流大学跨越中国教育报 2003年4月11日记者　左春明　通讯员　周月红刚刚结束的的“一流大学建设与实践学术研讨会”上，清华大学校长王大中宣布了清华大学“三个九年，分三步走”的总体发展规划。规划提出：在2012到2020年的“第三个九年”中，清华将“在总体上建成世界一流大学”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231333875715672/20110225231333875715672_.html" target="_blank">坚定不移地向着世界一流大学目标奋进</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document坚定不移地向着世界一流大学目标奋进光明日报 2003-04-07本报记者　丰捷记者：党的十五大以来，清华大学进入了历史上发展最快的时期之一，清华基本完成了建设综合性、研究型、开放式大学的阶段发展任务，为实现跻身世界一流大学行列的目标和今后的长远发展打下了坚实的基础。您认为清华的发展具体体现在哪些方面？顾秉林：首先，我......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231333750415572/20110225231333750415572_.html" target="_blank">清华校长公布建成世界一流大学时间表</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华校长公布建成世界一流大学时间表北京晚报 2003年4月6日2011年力争跻身世界一流大学行列2020年总体建成世界一流大学本报讯　清华大学将按照该校“三个九年，分三步走”的总体发展规划建设世界一流大学，该校将在2011年力争跻身世界一流大学行列，2020年总体建成世界一流大学。在清华日前召开的“一流大学的理论与实......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231333218617667/20110225231333218617667_.html" target="_blank">专家指出：一流大学要把面向国家的战略需求...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document专家指出：一流大学要把面向国家的战略需求放在首位光明日报 2003-04-01本报北京3月31日电　什么是一流大学？如何建设一流大学？数十位我国高等教育学界的知名学者和部分重点高校负责人近两天齐聚清华园，结合国内外教育学研究成果和中外高等教育办学实践，围绕一流大学的建设大计取得共识：通过跨越式发展，若干所国家给予重点支持......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231333015744500/20110225231333015744500_.html" target="_blank">清华亮出建设世界一流大学时间表</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华亮出建设世界一流大学时间表2011年力争跻身世界一流，2020年总体建成世界一流科技日报 2003-03-31本报记者 仇方迎清华大学校长王大中3月29日介绍了清华大学建设世界一流大学的时间表。按照该校“三个九年，分三步走”的总体发展规划，该校将在2011年力争跻身世界一流大学行列，2020年总体建成世界一流大学。王......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231333156846962/20110225231333156846962_.html" target="_blank">我校召开一流大学的理论与实践学术研讨会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档教育界名家聚首清华 共谋一流大学建设大计我校召开一流大学的理论与实践学术研讨会3月29日～30日，我国高等教育学界知名学者和部分重点高校负责人50多人聚首清华大学，参加了由清华大学发起的“一流大学的理论与实践学术研讨会”，共谋一流大学建设的大计。 是否拥有世界先进水平的一流大学，是一个国家高等教育发展水平的标志，是国家综合国力的重要体现，也......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231333109799472/20110225231333109799472_.html" target="_blank">一流大学建设需要全社会关注支持</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document这不仅仅是一个学校的荣誉，这关系到国家综合国力的强盛——一流大学建设需要全社会关注支持中国教育报 2003年3月30日记者　范绪锋本报北京3月29日讯(记者　范绪锋)建设一流大学，不仅仅是一个学校的荣誉，而且事关现代化建设全局，关系到国家综合国力的强盛与否。今天，在由清华大学教育研究所和政策研究室主办的“一流大学建设的理......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231333046456882/20110225231333046456882_.html" target="_blank">清华首次公开时间表：2020建成世界一流...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华首次公开时间表：2020建成世界一流大学中国教育报 2003年3月30日本报北京3月29日讯(记者　范绪锋)清华大学校长王大中在今天举行的“一流大学建设的理论与实践学术研讨会”上首次公开了清华创建世界一流大学的时间表，表示将在18年后总体上建成世界一流大学。王大中介绍说，根据党的十六大提出全面建设小康社会的奋斗目......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348250364162/20110225225348250364162_.html" target="_blank">我校召开一流大学的理论与实践学术研讨会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档教育界名家聚首清华 共谋一流大学建设大计我校召开一流大学的理论与实践学术研讨会3月29日～30日，我国高等教育学界知名学者和部分重点高校负责人50多人聚首清华大学，参加了由清华大学发起的“一流大学的理论与实践学术研讨会”，共谋一流大学建设的大计。 是否拥有世界先进水平的一流大学，是一个国家高等教育发展水平的标志，是国家综合国力的重要体现，也......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2003.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231327218403124/20110225231327218403124_.html" target="_blank">清华大学全速驶入新发展阶段</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学全速驶入新发展阶段光明日报 2003-01-12记者　丰捷本报北京1月11日电　在学习贯彻十六大精神的热潮中，清华大学五年一度的科技工作讨论会正在全面展开，如何确定学科建设重点，如何改革科研体制以适应重大科技攻关和原创性基础研究，如何加强科学道德，弘扬严谨求实的清华学风，如何构建大科学平台等一系列关乎清华大学实现......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231311843327111/20110225231311843327111_.html" target="_blank">向世界一流大学挺进</a></h3>
+              <p class="thnews_jqzy">　　无标题文档全面贯彻“三个代表”　以优异成绩迎接十六大向世界一流大学挺进光明日报 2002年9月16日本报记者 丰捷 蔡闯开栏的话再过一个多月，党的十六大就要召开了。统一思想，凝聚力量，振奋精神，开拓创新，全面贯彻“三个代表”，以优异成绩迎接十六大，已成为全党全国各族人民的共同心愿和自觉行动。金秋结硕果，举国迎盛会。从今天开始，本报在一版显著位置开辟《全面......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2002.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231307140529045/20110225231307140529045_.html" target="_blank">2002年暑期中层党政干部会动员全校：解...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档2002年暑期中层党政干部会动员全校解放思想，振奋精神，抓住机遇，加快发展坚定不移地向着世界一流大学目标团结奋进新学期伊始，我校于8月20～23日召开了2002年暑期中层党政干部会。会议在总结“985”一期建设情况的基础上，重点围绕制订“985”二期规划进行了动员和讨论。同时，会议还研究和部署了教师职务聘任制改革、学风建设和教学改革、学生思想教......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2002.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225349609723765/20110225225349609723765_.html" target="_blank">2002年暑期中层党政干部会动员全校：解...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档2002年暑期中层党政干部会动员全校解放思想，振奋精神，抓住机遇，加快发展坚定不移地向着世界一流大学目标团结奋进新学期伊始，我校于8月20～23日召开了2002年暑期中层党政干部会。会议在总结“985”一期建设情况的基础上，重点围绕制订“985”二期规划进行了动员和讨论。同时，会议还研究和部署了教师职务聘任制改革、学风建设和教学改革、学生思想教......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225349921763082/20110225225349921763082_.html" target="_blank">王大中：在庆祝张光斗先生从事水利水电事业...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在庆祝张光斗先生从事水利水电事业68周年暨90寿辰大会上的讲话王大中尊敬的张光斗先生和张夫人，尊敬的宋健、钱正英副主席，尊敬的各位领导、各位来宾：在这春光明媚的4月，在清华大学91年校庆之际，我们怀着喜悦的心情欢聚在一起，举行张光斗先生从事水利水电事业68周年暨90寿辰庆祝会。在此，我谨代表学校向张光斗先生致以热烈的祝贺和崇高的敬意！张光斗......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225349953880135/20110225225349953880135_.html" target="_blank">校长致辞</a></h3>
+              <p class="thnews_jqzy">　　无标题文档校长致辞清华大学校长、中国科学院院士 王大中在新千年第二个春天，清华大学迎来了建校91周年校庆。我谨代表全校师生员工，向海内外的学子以及关心清华大学发展的各界人士致以真诚的问候。90周年校庆，是我校历史上的一个重要的里程碑，也是我校建设与发展的新起点。一年来，我校围绕着创建综合性、研究型、开放式世界一流大学的总目标不断开拓进取，学校的物质文......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2002.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225350734114034/20110225225350734114034_.html" target="_blank">王大中校长荣获“先进校长”称号</a></h3>
+              <p class="thnews_jqzy">　　无标题文档王大中校长荣获“先进校长”称号近年来，在中共北京市委教育工委的领导下，北京高等学校中涌现出一批依靠教职工办好学校的先进党委书记、校长。他们在学校工作中努力贯彻党的全心全意依靠工人阶级的指导方针，充分尊重教职工群众当家作主的权利，能最大限度地保护和调动广大教职工的积极性，不断增强学校的凝聚力和向心力，积极推动学校的民主政治建设，注意发挥工会和教代......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2002.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225350781368839/20110225225350781368839_.html" target="_blank">大学者 有大师之谓也——访清华大学校长王...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档大学者 有大师之谓也——访清华大学校长王大中——清华大学校长王大中谈以一流人才建一流大学《文汇报》 2002年1月09日编者按本报从今天起推出“大学校长访谈”系列报道。在经济全球化的过程中，科技的发展与社会的进步对人类自身的发展不断提出新的要求，高等教育正是通过培养高层次人才、传承文化、知识创新以及维护社会价值准则，不断满足这些要求。我们这......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353000414373/20110225225353000414373_.html" target="_blank">自觉肩负历史重任建设世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document自觉肩负历史重任建设世界一流大学宋晓梦2001-08-04 光明日报本报北京8月3日电（记者宋晓梦）江泽民总书记“七一”重要讲话发表后，清华大学党委组织全校师生员工，认真学习，深刻领会，要求把思想和行动统一到讲话精神上来，统一到党在新时期的历史使命和建设世界一流大学的奋斗目标上来，进一步发挥好党组织的政治核心和战斗堡垒作......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354562557786/20110225225354562557786_.html" target="_blank">从核能专家到一校之长——王大中志在一流</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document院士风采从核能专家到一校之长王大中志在一流庄雯　孙立群（中国青年报－大教育时代 2001年4月26日）　 1993年夏，清华大学在酝酿新一任校长人选时，我国核能专家、当时的清华核研院院长王大中得到了相当的认同。1994年，他出任清华大学校长。交到他手中的是一张铺设在桌上刚刚写下标题的蓝图。蓝图的标题引人注目：到2011年清华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354843949825/20110225225354843949825_.html" target="_blank">王大中：在清华大学建校九十周年庆祝大会上...</a></h3>
+              <p class="thnews_jqzy">　　在清华大学建校九十周年庆典上的讲话在清华大学建校九十周年庆祝大会上的讲话清华大学校长王大中（2001年4月29日）尊敬的江泽民主席、尊敬的朱镕基总理、尊敬的各位领导、各位嘉宾、各位学长、老师们、同学们、朋友们：在21世纪的第一个春天,我们在这里隆重集会,庆祝清华大学建校90周年。在这样的历史性时刻，有这么多领导和海内外同仁、嘉宾莅临我校，我们的喜悦与感激......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355093465700/20110225225355093465700_.html" target="_blank">行健不息须自强——清华大学校长王大中谈建...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document行健不息须自强——清华大学校长王大中谈建设世界一流大学(人民日报海外版 2001年04月28日)王大中校长近影本报记者 王君超暮春时节，清华园紫荆盛开，丁香吐艳，整个校园洋溢着一派迎接90周年校庆的热烈气氛。校庆前夕，记者采访了清华大学校长、我国著名核技术专家王大中院士。谈到即将到来的90周年庆典，儒雅、平实的王校长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231218937181919/20110225231218937181919_.html" target="_blank">向世界一流大学目标迈进——访清华大学校长...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document向世界一流大学目标迈进——访清华大学校长王大中（中国教育报 2001年4月27日）本报记者 唐景莉从一所留美预备学校，到红色工程师的摇篮，再到世界一流大学的建设，清华大学走过20世纪的风雨历程，见证了中国高等教育的发展壮大。在新世纪的第一个春天，清华大学将于4月29日举行90周年校庆庆典。校庆前夕，记者采访了清华大学校长......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

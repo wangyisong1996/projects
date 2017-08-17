@@ -1,0 +1,1014 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>世纪清华：清华科研“顶天立地”</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231218578996675&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">世纪清华：清华科研“顶天立地”</h3><p align="center"> （2001年4月27日 中国新闻网）</p><p> 　　中新社北京四月二十六日电题：清华科研“顶天立地”</p><p> 　　中新社记者朱沿华</p><p> 　　清华大学在校庆期间对外宣布，二000年其科技经费超过七亿元，清华大学获得中国国家科技三大奖已累计二百七十九项，校办科技产业经营总收入达六十三亿元人民币，期末总产值达一百二十亿元人民币，比十年前分别增长了一百一倍和一百九十五倍……</p><p> 　　清华大学用他们实实在在的成绩实现了清华科研“顶天立地”的誓言。</p><p> 　　顶天，完成国家重大技术攻关、高新技术研究和基础研究、在世界科技前沿拼搏之谓。</p><p> 　　目前，在清华园里有国家重点实验室十五个，约占全国的十分之一；清华大学累计申请专利一千一百多项；清华师生承担了十分之一的“八六三”计划民用领域项目，三分之一的“九七三”项目……</p><p> 　　立地，为国民经济主战场服务，面向企业、面向地区，促进科技成果转化为现实生产力之意。</p><p> 　　一贯务实的清华人当然不甘心将辛苦得来的研究成果束之高阁。“既上得天、又入得地”，方显英雄本色。</p><p> 　　早在改革开放之初的一九八三年，清华大学便开始实施“百万元效益奖”，对为企业年增利税百万元或年增产值千万元以上的科研成果的科技研究者进行鼓励。十八年来，清华师生已有二百三十八项成果获奖，新增产值二千亿。</p><p> 　　据清华大学科学技术处吴荫方教授介绍，尽管对于高校研究者来说，推广后企业效益达到百万利税、千万产值已是相当不易，但是随着近年来清华科技社会价值的不断提高，如今校方已经开始筹划提高评奖条件——实属水涨船高。</p><p> 　　清华也由此产生了一批被社会誉为“推广教授”的著名研究者，他们的科研成果被广泛应用，如清华国家计算机集成制造系统工程研究中心的研究成果已推广到了二百多个企业应用、“稠油热采数值模拟技术”被中国胜利、新疆、大庆等各大油田采用，年增产原油三十万吨。</p><p> 　　但这还仅仅是个开始。一九九四年清华与广东省共同筹资创建“广东——清华科技创业基金”、清华大学科技园区创立；九五年清华大学与企业合作委员会成立，清华大学企业集团挂牌；九七年清华同方上市；九九年清华创业园拔地而起……</p><p> 　　一路走来，清华师生吐丝结网，细细地织就了一张巨大的科技网，中国十四个省、直辖市、自治区和四十多个地市皆被“网在网中央”。包括IBM、松下、西门子等在内的二十八家海外企业和一百多家中国企业也通过这张网进入了清华大学与企业合作委员会。</p><p> 　　随着清华大学建设世界一流大学脚步的加快，“自强不息、厚德载物”的清华人欲为“顶天立地”的科研巨人的努力仍在继续…… </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月27日 12:09:05　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2016.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2016/20160406083520024535767/20160406083520024535767_.html" target="_blank">李锋亮：评价科研成果要注重“影响”</a></h3>
+              <p>随着我国高等教育机构的数量与类型越来越多、多样化越来越明显，对高等教育机构及其科研水平进行评价也就显得越来越重要。他山之石，可以攻玉。因此，非常有必要借鉴高等教育强国科研评价的经验与教训，提高我国科研评价的水平，更好地推动我国科研水平的提高。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2016/20160316151545084352850/20160316151545084352850_.html" target="_blank">杨卫：科研经费管理要体现五大发展理念</a></h3>
+              <p>政府工作报告提出，到2020年科技进步对经济增长的贡献率达到60％。科研经费可谓是科技进步的“源头活水”，如何用好科研经费至关重要。科研经费的使用和管理应该体现创新、协调、绿色、开放、共享五大发展理念。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2016/20160113155132781508824/20160113155132781508824_.html" target="_blank">高校50万元以上科研设备均应开放</a></h3>
+              <p>　　为切实推进高校科研基础设施和科研仪器的全面开放、充分共享，提高科研设施与仪器使用、配置的效率和效益，教育部办公厅近日下发《关于加强高等学校科研基础设施和科研仪器开放共享的指导意见》，明确除涉密、功能特殊、技术要求特殊、研究目的特殊等仪器设备之外，其他用于教学科研且具有一定共性需求的科研设施与仪器，特别是单台套价值在50万元以上的科研设施与仪器，均应纳入开放共享范围，提供开放共享服务，开放共享水平和评估结果将作为基地管理、科研管理的考评内容之一，并与规划发展再投入安排挂钩。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160111170140489618534/20160111170140489618534_.html" target="_blank">清华大学2015年全校科研工作会议召开</a></h3>
+              <p>1月7日下午，清华大学2015年全校科研工作会议在环境学院报告厅召开。副校长薛其坤，校务委员会副主任、原副校长谢维和，校学术委员会主任张希出席会议并做大会报告。副校长薛其坤做了年度科研工作总结。他首先回顾了学校“十二五”期间的科研整体情况，并指出清华的“十二五”规划的各项科研指标已全面完成。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20151113151338552913781/20151113151338552913781_.html" target="_blank">中国在高质量科研合作中表现优异</a></h3>
+              <p>　　今天发布的“2015自然指数-科研合作”显示，中国正崛起为国际科研合作的中心，相关指数在全球位列第五，仅次于美国、德国、英国和法国。2014年，在纳入自然指数的高质量科研期刊中，中国大陆的科学家与全球其它94个国家的科研同行合作发表了论文。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151105083657825172578/20151105083657825172578_.html" target="_blank">C919飞机与清华师生的不解情缘</a></h3>
+              <p>11月2日，我国自主研制的C919大型客机成功总装下线，为这一意义重大的型号研制成功奠定了坚实的基础。清华大学常务副校长程建平及学校科研院相关部门负责同志应邀出席仪式，见证了这一历史时刻。当举国上下为祖国航空事业日新月异的发展欢欣鼓舞之时，对参与C919飞机研制过程的清华人来说，7年的拼搏和坚守都历历在目。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9659/2015/20151103123139134719172/20151103123139134719172_.html" target="_blank">交叉创新战略沙龙聚焦环境友好的绿色能源</a></h3>
+              <p>第二次清华大学交叉创新战略沙龙于10月31日下午举行。本次沙龙聚焦环境友好发展，围绕绿色能源，在可再生清洁能源发电、电力转化与储能，以及能源互联网建设等方面展开交叉研讨。来自化工系、电机系、核研院、热能系、工物系、汽车系、环境学院、精仪系、电子系、水利系、自动化系、地学中心等单位的40余人参加沙龙。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151026170055183100586/20151026170055183100586_.html" target="_blank">邱勇听取科技体制机制改革方案起草工作的汇报</a></h3>
+              <p>10月22日下午，学校科技体制机制改革方案起草工作汇报会在工字厅东厅举行。邱勇校长、薛其坤副校长听取了编写组《关于全面深化科技体制改革的若干意见（讨论稿）》（简称《科改意见》）起草情况的汇报。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151009153201779719535/20151009153201779719535_.html" target="_blank">清华专利技术转化医学产品“骼金”进入美国...</a></h3>
+              <p>日，由清华大学专利技术转化实施的矿化胶原人工骨修复产品“骼金”（英文名Bongold, 北京奥精医药科技有限公司）成功获得美国食品和药品管理局（Food and Drug Administration，FDA）市场准入许可（510(k)，许可证号：K141725），从而使该产品具备在美国以及世界其他认可FDA 510(k)的国家和地区进行销售和临床使用的资质。在历经18个月时间的申请、审评和对审查意见的多轮答复后，2015年7月9日，“骼金”（Bongold）人工骨产品获得了FDA 510(k)市场准入许可，被允许在美国市场销售和临床使用。获得美国FDA市场准入许可这一重大突破将促进“骼金”人工骨产品在行业内发挥引领和示范作用，对于提升我国骨科植入物在全球骨科医疗器械产业分工和价值链中的地位产生积极的显著影响。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150702131958112816077/20150702131958112816077_.html" target="_blank">“科研改革与发展战略”系列座谈会（工科2...</a></h3>
+              <p>6月24日晚，第17次科研工作讨论会“科研改革与发展战略”（工科2组）座谈会在工字厅召开。本次会议是学校第17次科研工作讨论会的系列会议之一，是工科教师代表的第二次座谈会，也是本系列座谈会的第五次。本次会议目的是要听取教师对学校工作特别是工科科研工作的意见和建议，一起分析工作中的困难和不足，寻找解决问题的思路和办法。校党委书记陈旭、常务副校长程建平、副校长薛其坤、校长助理尤政出席座谈会并讲话，薛其坤主持会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150626204552921453511/20150626204552921453511_.html" target="_blank">清华召开文科基础学科科研工作讨论会</a></h3>
+              <p>6月25日下午，我校文科基础学科科研工作讨论会在工字厅召开。校长邱勇、副校长谢维和出席会议。人文学院、法学院、马克思主义学院、金融学院、教育研究院等院系的教授及校长办公室、人事处、研究生院、学科规划与建设办公室、文科建设处的负责人参加会议。文科建设处处长苏竣主持会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150623145125401235174/20150623145125401235174_.html" target="_blank">第17次科研工作讨论会聚焦理科科研改革与...</a></h3>
+              <p>近日，我校第17次科研工作讨论会“理科科研改革与发展战略”研讨座谈会举行。理科、工科和教育研究等不同学科背景的教师们汇聚一堂，围绕学校科研目标的确立、制约科研发展的主要因素、跨学科交叉研究、青年科研队伍成长等问题，为学校理科科研的改革发展“把脉开方”。本报特摘编座谈会上四位不同学科教师的发言，以期为全校更大范围内的思考和讨论提供参考和启发。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150604160926726361019/20150604160926726361019_.html" target="_blank">清华大学召开文科科研工作讨论会</a></h3>
+              <p>6月3日下午，清华大学文科科研工作讨论会在工字厅召开。校长邱勇、副校长谢维和出席会议。社科学院、经管学院、人文学院、美术学院、新闻学院、建筑学院、计算机系、土水学院等院系的教授及科研院、研究生院、学科办、文科处的负责人参加会议。文科建设处处长苏竣主持会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150526102001204596492/20150526102001204596492_.html" target="_blank">少即多、静则深、研亦教：论清华科研的新阶...</a></h3>
+              <p>总是听到我们的老师、科研人员和管理人员们抱怨太忙太累，也总是看到面呈疲惫的教授行色匆匆地疾走在校园里，偶尔又耳闻某位教师因病住院，等等。清华大学的老师们、科研人员和管理人员们实在是太忙了！他们具有很强的研究能力，应接着四面八方的诉求，承担太多的课题、研究项目，以及政策咨询的任务，还有自己本身的学术志趣，真是了不得！然而，钦佩之余，我又常常想，清华大学科研究竟到了一个什么样的发展阶段？目前这种状态与清华科研的历史定位是否协调？显然，不同阶段的科研任务与目标是不同的。如同成年人不能以青少年的方式做事一样，否则就显得幼稚。在第17次科研工作讨论会召开之际，我愿意将自己的一些困惑与思考与大家分享，并恳请大家的批评。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150525174724591987806/20150525174724591987806_.html" target="_blank">多项“接地气”科研成果有望服务百姓生活</a></h3>
+              <p>　　老年痴呆症有望治愈？裸眼3D成像瓶颈有望克服？哪类恒星是人类宜居行星？近日，多项由北京地区高校探索研究的科技成果在我国多个领域取得重要突破，不仅显现出我国科学家日益强大的自主创新实力，同时更加“接地气”的学术成果也有望更有针对性地服务于百姓生活。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150522170810853967181/20150522170810853967181_.html" target="_blank">“国际科研评估的方法与实践”报告会举行</a></h3>
+              <p>5月20日下午，“国际科研评估的方法与实践”专题报告会在清华大学主楼举行，该报告会是第17次科研工作讨论会的系列报告会之一。报告人是汤森路透知识产权与科技事业部中国区首席科学家岳卫平博士。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150521145342413898538/20150521145342413898538_.html" target="_blank">神经技术学术午餐会研讨脑与认知跨学科研究</a></h3>
+              <p>5月19日，清华IDG/麦戈文脑科学研究院举办了主题为“跨学科脑与认知研究”的“清华麦戈文神经技术学术午餐会”。清华大学副校长薛其坤出席午餐会并讲话。来自麻省理工学院（MIT）麦戈文脑科学研究院、清华类脑研究中心、计算机系、自动化系、航天航空学院等单位的六位教授做了精彩报告，与麦戈文脑科学研究院的师生分享神经创新技术前沿，探讨脑与认知跨学科研究的新方向和新思路。  薛其坤在讲话中指出，国家正在积极酝酿启动 “中国脑计划”，我校在神经科学领域有了良好的布局，但跨学科融合还需进一步加强。他强调了整合生命医学与理工学科优势发展脑与认知科学的战略意义，认为清华麦戈文脑科学研究院可以作为跨学科大脑研究的中心，汇聚和粘合相关院系的力量，努力成为科研体制改革中跨学科创新的试点。  自动化系戴琼海教授展示了其团队开发的“多维多尺度高分辨率计算摄像技术”的最新进展及其在大脑皮层功能与结构研究中的可能应用。航院李路明教授、类脑计算研究中心主任，精密仪器系施路平教授、中国科学院院士，计算机系教授张钹分别做了“深部脑刺激从临床走向脑研究”、“类脑计算”的前沿与挑战和“脑科学与信息技术”的主题报告。MIT麦戈文脑科学研究院神经技术项目（MINT）主任查尔斯？詹尼斯（Charles Jennings）教授分享了MIT开展脑学科交叉研究的思路与进展。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150413112023485813361/20150413112023485813361_.html" target="_blank">清华大学第17次科研工作讨论会开幕</a></h3>
+              <p>4月9日下午，清华大学第17次科研工作讨论会开幕式在主楼报告厅举行。会议特邀科技部党组书记、副部长王志刚作了题为《创新驱动发展战略与科技体制改革》的专题报告，校长邱勇作了题为《深化科研改革，推动学术创新引领》的动员报告，副校长薛其坤进行了工作部署。校领导陈旭、谢维和、韩景阳、史宗恺、姜胜耀、吉俊民、以及校长助理尤政出席了开幕式。常务副校长程建平主持会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150325114040940394409/20150325114040940394409_.html" target="_blank">清华9个项目获国家重点研究基础发展计划资助</a></h3>
+              <p>日前，科技部发布了《关于国家重点基础研究发展计划2015年项目立项的通知》（国科发基〔2015〕63号），清华大学有9个项目获准资助，其中973计划项目4项（含青年科学家专题项目1项），重大科学研究计划项目5项（含青年科学家专题项目2项）；6位教授被聘为项目首席科学家，3位被聘为青年科学家专题项目负责人。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150312163909164713930/20150312163909164713930_.html" target="_blank">清华教师讨论如何应对“十三五”纵向科研变局</a></h3>
+              <p>近日，科研院组织召开了主题为“如何应对‘十三五’纵向科研变局”的研讨会，以促进校内各单位深入理解纵向科研的新变化和新体系，思考和部署清华大学“十三五”纵向任务，并听取院系对学校科研工作的意见和建议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150127190219880741070/20150127190219880741070_.html" target="_blank">中国加快推进科研设施与仪器向社会开放</a></h3>
+              <p>　　近日，国务院印发《关于国家重大科研基础设施和大型科研仪器向社会开放的意见》（以下简称《意见》），部署通过深化改革和制度创新，加快推进科研设施与仪器向社会开放，进一步提高科技资源利用效率。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150126144907803719087/20150126144907803719087_.html" target="_blank">清华国家重大科研仪器研制项目启动</a></h3>
+              <p>1月22日，由清华大学物理系薛其坤院士担任项目负责人的国家自然科学基金委国家重大科研仪器研制项目“低维量子物质非平衡态物理性质原位综合实验研究平台的研制”启动会在清华大学甲所第三会议室召开。国家自然科学基金委员会主任杨卫院士、清华大学常务副校长程建平出席启动会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150126164549820237138/20150126164549820237138_.html" target="_blank">科研经费：加大投入 更要加强管理</a></h3>
+              <p>　　随着国家对科技体制改革的深入推进，科研经费的管理问题再度成为社会关注的热点。作为拥有上百亿元科研经费划拨权的机构，国家自然科学基金委员会（以下简称基金委）也自然备受关注。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150120151621097371340/20150120151621097371340_.html" target="_blank">让科研人员不再为“三评”纠结</a></h3>
+              <p>　　各类评审活动多，时间分散，部分科研人员长年疲于参加评审或被评审……在党的群众路线教育实践活动中，广大科研人员普遍反映，项目评审、人才评价、机构评估工作中的突出问题，严重影响科研教学活动。针对这一情况，自2013年9月以来，中组部、中宣部、科技部、财政部、人社部等11个部门联合北京市改进科研项目评审、人才评价、机构评估工作（简称“三评”），将“三评”进行项目精简、环节减少和机制完善，取得积极成效。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150116144532026665478/20150116144532026665478_.html" target="_blank">科研经费，各国如何监管？</a></h3>
+              <p>　　科研经费的使用和监管，决定了资源配置的效率，影响一国竞争力的提升和创新驱动发展战略的实现。没有系统的预防和惩治措施，任何一个神圣的学术殿堂都可能沦为硕鼠的乐土</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150108161646494142529/20150108161646494142529_.html" target="_blank">“863”“973”退出历史舞台成定局</a></h3>
+              <p>　　今天，科技部在其官方网站发布的《关于深化中央财政科技计划（专项、基金等）管理改革的方案》（以下简称《方案》）称，政府将通过撤、并、转等方式，对现有科技计划进行整合，其中就包括人们熟知的国家高技术研究发展计划（“863”）和国家重点基础研究发展计划（“973”）。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141218164823106833093/20141218164823106833093_.html" target="_blank">中国科研产出居“自然指数”第二</a></h3>
+              <p>　　17日从《自然》杂志新近出版的《2014自然指数中国增刊》获悉，根据2013年加权分数式计量（根据作者对一篇论文的相对贡献来分配得分值），中国的科研产出在“自然指数”中居第二位，显示出中国主要科研机构和大学对全球科学发展的重要贡献。其中，北京是“自然指数”中科研产出最多的中国城市，如按照加权分数式计量，其科研产出已超过整个加拿大。上海位于北京之后，该市近三分之一的科研产出来自于生命科学领域，这一比例高于全国平均水平。其他科研产出位于前列的还包括南京、香港、长春、武汉、合肥、杭州、广州和天津。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141203170517198695810/20141203170517198695810_.html" target="_blank">CERNET见证中国互联网创新20年</a></h3>
+              <p>　　从无到有，从小到大，由弱到强，CERNET（中国教育和科研计算机网）用自己的成就诠释并见证了中国互联网的辉煌20年。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141029150758313929823/20141029150758313929823_.html" target="_blank">国家重大科研基础设施和大型科研仪器将向社...</a></h3>
+              <p>　　从28日科技部新闻通气会上获悉，《关于国家重大科研基础设施和大型科研仪器向社会开放的意见》已经中央全面深化改革领导小组第六次会议审议通过，并将于进一步修改完善后按程序报批实施。《意见》实施后，不涉密和无特殊规定的国家各类重大科研基础设施和大型科研仪器将一律向社会开放，并将建立相应的、统一开放的国家网络管理服务平台。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141023154752897178251/20141023154752897178251_.html" target="_blank">基础研究投入该拉上扬曲线了</a></h3>
+              <p>　　科研评估体系是一根指挥棒，影响着人们做科研的方法和文化，然而在我国科研投入保持20%以上高增长的十余年间，基础研究投入在全社会研发投入中所占比重，却始终在5%左右徘徊。在昨天召开的2014科研评估体系国际学术研讨会上，中国科学院院士、国家自然科学基金委副主任沈文庆为基础研究投入“鼓与呼”：是时候让基础研究投入拉起一根上扬曲线了。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141021132823836757825/20141021132823836757825_.html" target="_blank">高校科研评价改革在北上广率先启动</a></h3>
+              <p>　　近日，高校科技评价改革试点单位上海市教委、北京市教委和广东省教育厅相继研究或出台政策，加快建立科学合理的高校科研分类评价体系，以质量和实际贡献为导向，通过多元化的评价机制，促进高校管理体制改革和教育综合改革。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141021132714669716336/20141021132714669716336_.html" target="_blank">一年5000亿元科技支出去哪了——中央将...</a></h3>
+              <p>　　近日，多名院士、大学教授因陷科研经费腐败丑闻被查，科技投入问题再次成为社会热议话题。几乎与此同时，《关于深化中央财政科技计划（专项、基金等）管理改革方案》获批，有力地回应了公众关切。有专家称，这一方案的出台，意味着我国科技投入的管理将出现历史性转折。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141015132850864223236/20141015132850864223236_.html" target="_blank">欧盟科研经费管得严</a></h3>
+              <p>　　拥有28个成员国的欧盟家大业大，但在各类经费使用方面却规章制度明确，而且从头管到底，不仅最大限度地避免了不必要的经费开支，减少浪费，也从各个环节堵塞可能产生的腐败和欺诈行为。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140724085507985670949/20140724085507985670949_.html" target="_blank">清华博士到南安科研攻关</a></h3>
+              <p>近期，南安组织开展2014年度清华大学研究生社会实践活动，来自清华大学机械工程等12个院系的22名博士研究生，在14家企事业单位开展为期六周以科技创新为主要内容的科研攻关活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140709144134786477541/20140709144134786477541_.html" target="_blank">英国高教科研经费“双重支持”显成效</a></h3>
+              <p>　　拥有《柳叶刀》、《四面体》、《细胞》等知名学术期刊的科学文献出版社——爱思唯尔（Elsevier）最近发布的分析报告显示，在世界范围内的高引用率论文中，约90%由英国高校参与撰写。英格兰高教拨款委员会骄傲地宣称，英国高校引领世界科研。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140626152520218798536/20140626152520218798536_.html" target="_blank">“京科九条”试行科研成果公开交易</a></h3>
+              <p>　　6月24日，记者从北京市科委获悉，为全面盘活人、财、物，最大限度激发科技创新活力，北京市科委牵头起草了《加快推进科研机构科技成果转化和产业化的若干意见（试行）》（以下简称“京科九条”）。目前，“京科九条”已获北京市政府审议通过。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140624134938675361397/20140624134938675361397_.html" target="_blank">清华大学食品药品安全可视化传播基地启动</a></h3>
+              <p>　　6月20日，国家食品药品监督管理总局和清华大学、数十家媒体记者、编辑，在清华大学人文社科图书馆，参加清华大学食品药品安全可视化传播基地正式启动。国家食品药品监督管理总局副局长、党组副书记尹力，清华大学副校长姜胜耀，清华大学科研院副院长郑永平，清华大学医学院常务副院长鲁白等出席基地成立仪式并共同为基地揭牌。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140616145653482134680/20140616145653482134680_.html" target="_blank">经费可“养人” 信息须公开</a></h3>
+              <p>　　国务院《关于改进和加强中央财政科研项目和资金管理的若干意见》（国发〔2014〕11号）（以下简称11号文）几经反复研究终于落地，中国科学院院士王光谦在接受科技日报采访时表示，“我最关心的是科研经费的分配要按照科研的需求，保证科研能进行，而不是把科研人员看成犯罪分子来监管。11号文比预期的还要走得远，科研经费配置更合理”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140609120555144714464/20140609120555144714464_.html" target="_blank">全国首份研究生科研诚信公约发布</a></h3>
+              <p>　　“树立诚信品质，恪守学术道德，弘扬诚信美德，勇担社会责任……”在6日举行的高校研究生科研诚信研讨会上，来自北京大学、清华大学等全国29所“985工程”高校的研究生代表庄严宣誓，并签署了首份《中国研究生科研诚信公约》。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140603154733709133786/20140603154733709133786_.html" target="_blank">报告显示：我国在工程、物理和数学领域的活...</a></h3>
+              <p>　　拥有《柳叶刀》《细胞》等国际著名学术期刊的爱思唯尔集团日前在京发布2013年“中国科研报告”。报告显示，中国在科研领域的投入持续增长，在工程、物理和数学领域的活跃程度达到国际最高水平。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140530151701454217066/20140530151701454217066_.html" target="_blank">中国科研力量正在提高</a></h3>
+              <p>　　29日，拥有《柳叶刀》《细胞》等国际著名学术期刊的爱思唯尔集团发布了2013年科研报告。报告显示：从2008年到2013年间，中国的科研力量正缓慢提高，虽然质量仍未达到国际平均水平，但“发展速度超过不少科研大国”。中国科研成果的产出量保持高位，但在“域加权引用影响指数”这一通常用以衡量科研质量的指标上，仍未达到国际平均水平，从2008年到2012年间以2.4%的年平均速度稳定增长。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140529142910689462084/20140529142910689462084_.html" target="_blank">来一场科研的狂欢</a></h3>
+              <p>　　日前，在清华大学罗姆楼的多功能厅里，一场“派对”正在进行中。    　　音乐、舞台、红地毯、签名墙……一切似乎和普通的派对没什么区别。但其实这里也有一些与众不同的内容，比如大厅一旁摆放的一百多幅学术海报，每幅海报上都展示着一个构思精巧的科研项目；再比如，参会“嘉宾”之间交流的话题并不是新潮时尚，而是科研创意、学术心得。当然，这些“嘉宾”的身份也有些特殊——他们几乎全部是清华大学各学科的本科生。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140523133035281983912/20140523133035281983912_.html" target="_blank">北京科研人员可享70%成果转化收益</a></h3>
+              <p>　　记者从北京市政府常务会议上获悉：北京将出台《关于推进科研机构科技成果转化和产业化的若干意见》，强化科研人员激励机制，进一步调动科研人员积极性。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140516161221971670576/20140516161221971670576_.html" target="_blank">受公共资金资助科研项目论文实行开放获取</a></h3>
+              <p>　　中国科学院和国家自然科学基金委员会15日分别发表政策声明，从当天起，中科院受各类公共资助科研项目所产生的论文、国家自然科学基金全部或部分资助科研项目产生的论文，将在论文发表后12个月内实施开放获取。“开放获取”就是公众可以不必再订阅科技期刊，即可在相关网络上查阅已发表的学术论文。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140421162957955960540/20140421162957955960540_.html" target="_blank">国外大学教授搞科研的强大后盾</a></h3>
+              <p>　在美国、英国、日本的大学中，人文与社会科学的教授一般都是独自进行研究，没有自己的研究团队。而理工科的教授则完全不同。为了更好地进行科学研究，只要经济条件允许，搞自然科学的教授们就会发出招聘启事，招募博士后研究人员。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140331164041100222550/20140331164041100222550_.html" target="_blank">清华SRT计划，开启本科生科研之门</a></h3>
+              <p>1996年我校在国内率先开展旨在培养本科生科研创新能力的SRT计划。18年来，SRT计划早已在全校本科生中产生良好的口碑和广泛的影响，成为清华独具特色的品牌项目。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140326120803486937255/20140326120803486937255_.html" target="_blank">英国新学年高校科研经费削减或成定局</a></h3>
+              <p>近期，英国政府再一次酝酿削减14亿英镑高等教育经费投入的计划，这一动向引起了英国罗素集团大学校长们的高度关切。在最近一次会议上，众多校长试图游说英国高教与科技事务大臣大卫&middot;威利茨(David Willetts)对维持稳定的大学科研经费投入做出承诺，但是未能获得乐观的回应。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140318120726338609101/20140318120726338609101_.html" target="_blank">英国斥巨资力保科研竞争力</a></h3>
+              <p>英国大学与科学国务大臣威利茨近日宣布，英国政府将斥资2.9亿英镑参与三大国际科研项目。这包括参与建造超级显微镜、世界最大望远镜“平方千米阵”（SKA）和太空望远镜“柏拉图”项目。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140317152309628220200/20140317152309628220200_.html" target="_blank">朱邦芬院士做客“学术之道”讲解科研诚信</a></h3>
+              <p class="thnews_jqzy">　　朱邦芬院士做客&ldquo;学术之道&rdquo;讲解科研诚信清华新闻网3月17日电3月13日下午，&ldquo;清华学堂人才培养计划&rdquo;物理班首席教授朱邦芬院士在六教为400余名师生做了题为《科研诚信&mdash;&mdash;学术之道的基石》的讲座。图为朱邦芬院士进行讲座。学生记者王皓冉摄在讲座中，朱邦芬首先提出&ldquo;人格&rd......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140314135034863271525/20140314135034863271525_.html" target="_blank">《关于改进加强中央财政科研项目和资金管理...</a></h3>
+              <p>记者13日获悉，国务院近日印发《关于改进加强中央财政科研项目和资金管理的若干意见》，对改进加强中央财政民口科研项目和资金管理作出全面部署。《意见》提出，加快建立适应科技创新规律、统筹协调、职责清晰、科学规范、公开透明、监管有力的科研项目和资金管理机制。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140314120647181362665/20140314120647181362665_.html" target="_blank">科研资金：硬约束 严管理</a></h3>
+              <p>为深入贯彻党的十八大和十八届二中、三中全会精神，落实创新驱动发展战略，促进科技与经济紧密结合，近日，国务院发布了《关于改进加强中央财政科研项目和资金管理的若干意见》（国发〔2014〕11号，以下简称《意见》）。《意见》印发以后，社会各界高度关注。就此，记者采访了财政部、科技部有关负责人。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140108094520755158517/20140108094520755158517_.html" target="_blank">【群众路线教育实践】科研院召开教育实践活...</a></h3>
+              <p class="thnews_jqzy">　　科研院召开教育实践活动领导班子专题民主生活会清华新闻网1月8日电2013年12月26日下午，科研院召开党的群众路线教育实践活动领导班子专题民主生活会。副校长薛其坤、学校教育实践活动督查组孙道祥出席会议。会议由常务副院长姜培学主持。首先，姜培学代表科研院领导班子作对照检查，深入剖析了领导班子在&ldquo;四风&rdquo;方面存在的突出问题和产生问题......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140103161739736221018/20140103161739736221018_.html" target="_blank">美科研经费下降 亚洲科研开支占全球份额上升</a></h3>
+              <p>新一期美国《新英格兰医学杂志》刊登的一份研究报告显示，从2007年至2012年，美国的科研经费在下降，而中国和日本在科研领域的开支均呈增势，使得亚洲在全球科研开支中所占份额上升了6个百分点。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140102145241243143915/20140102145241243143915_.html" target="_blank">中国首个100G主干网建成</a></h3>
+              <p class="thnews_jqzy">　　中国首个100G主干网建成来源：新华网 2013-12-31 李斌一部2G容量的资料用10G网络下载，约需16秒，用100G网络下载仅需不足0.2秒&hellip;&hellip;&ldquo;中国教育和科研计算机网（CERNET）主干网和重点学科信息服务体系升级扩容工程&rdquo;12月31日在清华大学通过验收，标志着中国第一个100G主干网诞生，中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20131206144036903680390/20131206144036903680390_.html" target="_blank">欧盟通过“地平线2020”科研规划</a></h3>
+              <p class="thnews_jqzy">　　欧盟通过&ldquo;地平线2020&rdquo;科研规划来源：新华网 2013-12-4 姜岩欧盟的&ldquo;地平线2020&rdquo;科研规划3日顺利获得欧盟部长级会议批准，将从2014年1月1日实施到2020年底，预算为770亿欧元。根据欧盟委员会发布的新闻公报，在布鲁塞尔举行的欧盟竞争力委员会会议（即与科研有关的欧盟部长级会议）3日通过......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20131204135142411842959/20131204135142411842959_.html" target="_blank">科技部发布64个国家重点实验室评估报告</a></h3>
+              <p class="thnews_jqzy">　　科技部发布64个国家重点实验室评估报告相关领域参评实验室5年科研总经费达204亿元来源：中国科学报 2013-12-4 王静科技部日前委托国家自然科学基金委员会，对我国材料领域与工程领域64个国家重点实验室进行了评估。评估结果表明，国家重点实验室已成为承担国家重大科学与工程任务的主力军，参评实验室5年科研总经费达204亿元，其中国家级任务经费占其总经费的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20131012132007946453240/20131012132007946453240_.html" target="_blank">高校科研投入产出效率最高</a></h3>
+              <p class="thnews_jqzy">　　近十年国家科技三大奖中高校获奖率占64.8%高校科研投入产出效率最高来源：中国教育报 2013-10-12 梁杰记者从今天教育部召开的新闻发布会上获悉，近十年，在国家科技奖励三大奖项中，高校获奖率占据半壁江山，达同期全部授奖总数的64.8%。与此同时，在国家科研经费占比中，高校科研经费去年最高，达1170亿元，占总投入的11%。从整个科研投入产出效率看，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20131012131800023881094/20131012131800023881094_.html" target="_blank">今年将建科研信息部署平台</a></h3>
+              <p class="thnews_jqzy">　　国新办发布会&mdash;&mdash;今年将建科研信息部署平台平台可查立项信息，力求公开透明、多部门整合来源：人民日报 2013-10-12 赵展慧11日，国新办举行新闻发布会，全国政协副主席、科技部部长万钢介绍落实创新驱动发展战略相关情况，并就科研经费管理、基础研究投入等问题接受记者提问。中国什么时候能够有科学领域的诺贝尔奖获得者？中国什么时候才......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130922152728109254480/20130922152728109254480_.html" target="_blank">原创性科研仪器：科学之利器</a></h3>
+              <p class="thnews_jqzy">　　原创性科研仪器：科学之利器来源：光明日报 2013-9-19 齐芳110多年来，约1/3的诺贝尔物理学和化学奖奖给了那些在发展科学仪器或测量方法方面有杰出贡献的科学家。中国科学院院士杨国桢说：&ldquo;掌握了最先进的科学仪器研发技术，就掌握了科技发展的主动权。&rdquo;&nbsp;&nbsp;&nbsp;今年年初，由中国科学院院士薛其坤领衔的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130731153752627417414/20130731153752627417414_.html" target="_blank">清华863重点项目成果普适计算关键技术及...</a></h3>
+              <p class="thnews_jqzy">　　清华863重点项目成果普适计算关键技术及支撑平台通过鉴定&nbsp;清华新闻网7月31日电（通讯员陶品）日前，由教育部组织和主持，清华大学计算机系史元春教授牵头完成的&ldquo;普适计算关键技术及支撑平台&rdquo;成果鉴定会在清华大学举行。&ldquo;普适计算关键技术及支撑平台&rdquo;成果鉴定会在清华大学举行&nbsp;&nbsp;吕勇强　......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2013/20130704135222209328631/20130704135222209328631_.html" target="_blank">64名博士南海开展科研实践</a></h3>
+              <p class="thnews_jqzy">　　64名博士南海开展科研实践来源：南方都市报 2013-7-3 张在欢 梁楚贤 廖国津南海再次&ldquo;牵手&rdquo;国内知名高校解决企业难题。昨日，2013年南海高校研究生科研实践活动正式启动，来自清华大学等4所高校的64名博士研究生聚集南海，将开展为期约56天的科研实践，和企业员工同吃同住，利用专业技能帮助企业攻克技术难关。29企业成科研实践基......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130621160054194219376/20130621160054194219376_.html" target="_blank">清华大学召开科研经费管理专题报告会</a></h3>
+              <p class="thnews_jqzy">　　清华大学召开科研经费管理专题报告会清华新闻网6月21日电（通讯员王丽萍）6月20日下午，清华大学科研经费管理专题报告会在蒙民伟音乐厅召开。财政部教科文司副巡视员宋秋玲应邀作专题报告。校党委书记胡和平、常务副校长程建平、副校长薛其坤出席了报告会。报告会由校党委副书记、纪委书记、监委主任韩景阳主持。图为宋秋玲应邀作专题报告。记者智斐&nbsp;摄报告会上......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130614144400162926460/20130614144400162926460_.html" target="_blank">科研取向勿“逐热而动”</a></h3>
+              <p class="thnews_jqzy">　　科研取向勿&ldquo;逐热而动&rdquo;来源：人民日报 2013-6-14 喻思娈■&ldquo;逐热而动&rdquo;的科研取向，不仅不利于取得有价值的成果，也影响了科技资源的配置和效率。同时，支撑社会均衡发展的是一个全面的科研体系，可以有侧重但不宜有偏废，需要统筹规划、未雨绸缪的智慧近来，3D打印技术热浪频频袭来，异常火爆。一位从事该技术多......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130531161144428545145/20130531161144428545145_.html" target="_blank">报告显示中国优质科研论文发表量连年增加</a></h3>
+              <p class="thnews_jqzy">　　报告显示中国优质科研论文发表量连年增加来源：新华网 2013-5-30 刘石磊英国自然出版集团29日发布报告说，去年中国科研人员在该集团旗下刊物发表的高质量论文数量比前一年增长35%，继续保持高增长态势。这份报告名为《2012年中国自然出版指数》，当天以《自然》杂志增刊的形式发布。报告显示，中国科研人员在《自然》系列刊物上发表或参与发表的论文数量持续......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130522085553557443349/20130522085553557443349_.html" target="_blank">清华举行科研经费管理检查动员会</a></h3>
+              <p class="thnews_jqzy">　　清华举行科研经费管理检查动员会清华新闻网5月22日电（记者王冰冰）5月20日上午，清华大学在主楼接待厅举行科研经费管理检查动员会，教育部科技司司长王延觉，检查组组长湖南大学党委副书记栾永玉，清华大学副校长康克军、校党委副书记韩景阳、副校长程建平出席会议。会议由康克军主持。图为王延觉讲话。记者智 斐摄王延觉代表教育部在会上做动员报告。王延觉说明了检查工......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130514150058133677137/20130514150058133677137_.html" target="_blank">国家海洋公益性科研专项在清华深圳研究生院...</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;&nbsp;国家海洋公益性科研专项项目在清华深圳研究生院启动清华新闻网5月14日电（通讯员郭婕敏）5月8日，国家海洋公益性科研专项项目&ldquo;典型滨海湿地修复效果评估与功能保育关键技术研究与示范&rdquo;启动会在清华大学深圳研究生院召开。本项目由清华大学深圳研究生院承担，协作单位包括中山大学、厦门大学、国家海洋局环境监测中心、山......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130427115451314796472/20130427115451314796472_.html" target="_blank">清华大学专家访问中船仪表</a></h3>
+              <p class="thnews_jqzy">　　清华大学专家访问中船仪表来源：国际船舶网 2013-4-26近日，清华大学科研院副院长张华堂、王力军等一行来到九江中船仪表有限责任公司访问。专家组深入中船仪表公司生产区了解、察看了重点产品生产情况。随后，双方进行了座谈交流。中船仪表公司介绍了公司基本概况和科研生产情况，希望借助清华大学的科研资源，开展校企合作，实现双方共赢。清华大学专家介绍了科研院机......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130418132625812357307/20130418132625812357307_.html" target="_blank">姚期智带队清华计算机科学班参加计算机学科...</a></h3>
+              <p class="thnews_jqzy">　　清华计算机科学实验班首席教授姚期智带队参加计算机学科研讨会并作示范课演示&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网4月18日电4月13日，清华学堂计算机科学实验班（简称&ldquo;姚班&rdquo;）首席教授姚期智院士与4位清华&ldquo;姚班&rdquo;学生代表出席了由上海交大承办的2013年&ld......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130320150930380840503/20130320150930380840503_.html" target="_blank">与数量相比 我国科研论文质量偏低</a></h3>
+              <p class="thnews_jqzy">　　10年论文总量世界第二 与数量相比&mdash;&mdash;我国科研论文质量偏低来源：法制晚报 2013-3-19 李洪鹏今天上午，由中国管理问题研究中心编写、科学出版社出版的《中国社会管理发展报告》发布，报告显示，中国科研成果的发表总量日益激增，但总体论文质量不高及创新不足成为中国科研发展的首要问题。报告显示，2006年，中国超过日本和英国，成为......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130306134048359395429/20130306134048359395429_.html" target="_blank">让科研人员从申请经费中解放出来</a></h3>
+              <p class="thnews_jqzy">　　让科研人员从申请经费中解放出来来源：北京日报 2013-3-6 王砚文科技创新的重要动力之一，就是科研水平的提高。事实上，根据中国科学技术信息研究所的统计结果，我国已连续多年论文总数位列全球第二，仅次于美国。但在全国政协委员沈保根眼里，&ldquo;科研原创性成果较少、具有国际影响的创新性成果更少、引领国际学科研究方向的成果少而又少&rdquo;，这些成......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130305163621344632236/20130305163621344632236_.html" target="_blank">两会代表委员热议：万亿科研经费应该怎么分</a></h3>
+              <p class="thnews_jqzy">　　两会代表委员热议：万亿科研经费应该怎么分来源：中国科学报 2013-3-5 彭科峰科研经费分配一直是两会科技界的热点话题。就在今年两会召开前夕，国家统计局公布数据：2012年全年我国科研经费（研究与发展经费）支出10240亿元，比2011年增长17.9%，占国内生产总值的1.97%。如此庞大的资金，其分配的合理性和公开性让本届两会代表和委员高度关注。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130114142352966407210/20130114142352966407210_.html" target="_blank">科技部、财政部：不得截留、挤占、挪用科研...</a></h3>
+              <p class="thnews_jqzy">　　两部门：不得截留、挤占、挪用科研项目基金来源：中国新闻网 2013-1-14据科技部网站消息，近日，科技部、财政部对《科学事业单位财务制度》进行了修订，新规于今年1月1日执行。新规加强了科研项目经费支出管理，明确规定科研项目资金，应当按照国家有关规定或者合同要求进行管理，不得截留、挤占、挪用和违反规定转拨资金，不得虚列支出，不得以任何形式谋取私利。新......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130102155514626534128/20130102155514626534128_.html" target="_blank">教育部：横向科研经费不归项目负责人个人所有</a></h3>
+              <p class="thnews_jqzy">　　教育部：横向科研经费不归项目负责人个人所有来源：中国青年报 2013-1-2 原春琳教育部有关部门负责人昨天纠正了横向科研经费属于项目负责人个人所有的观念。这位负责人强调，不管是纵向科研经费，还是横向科研经费，应全部纳入学校财务统一管理。教育部2012年12月31日在官方网站上公布了关于加强高校科研经费管理、加强科研项目管理和规范高校科研行为的3个文......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20121227122251721192555/20121227122251721192555_.html" target="_blank">我国数百种科技期刊已具有相当的国际影响力</a></h3>
+              <p class="thnews_jqzy">　　我国数百种科技期刊已具有相当的国际影响力专家指出，不应把SCI、SSCI作为判断评价科研成果的唯一标准来源：科技日报 2012-12-27 陈磊今天，《中国学术期刊国际引证报告（2012版）》（简称《CAJ-IJCR》）对外公布，同时2012年度&ldquo;中国最具国际影响力学术期刊&rdquo;和&ldquo;中国国际影响力优秀学术期刊&rdquo;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20121219161805355641821/20121219161805355641821_.html" target="_blank">教育部完善六项机制加强高校科研管理</a></h3>
+              <p class="thnews_jqzy">　　教育部完善六项机制加强高校科研管理纵向及横向科研经费纳入学校财务统一管理核算科研项目和经费数量与科研人员评价、晋升脱钩来源：中国教育报 2012-12-19 杨晨光教育部今天在京召开加强高校科研经费管理视频会，就进一步加强科研经费和项目管理，进一步规范科研行为做出部署。教育部党组书记、部长袁贵仁在会上表示，将以更坚决的态度、更有力的措施，加强高校科研管理......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121212143111976726753/20121212143111976726753_.html" target="_blank">取长补短：伙清华名学者 更获国际重视</a></h3>
+              <p class="thnews_jqzy">　　取长补短：伙清华名学者 更获国际重视来源：香港文汇报 2012-12-11 欧阳文倩香港与内地的科研协作，除经费、土地等支持外，也是研究影响力及应用性的扩张。中大系统工程与工程管理学系教授蒙美玲透过国家自然科学基金会及研资局的联合计划，与清华大学学者合作发展出&ldquo;交互式英语口语学习对话系统&rdquo;，将原先主要针对广东话为母语用户的项目扩至......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121203134812978187196/20121203134812978187196_.html" target="_blank">教育研究院史静寰做客清华“学术之路”</a></h3>
+              <p class="thnews_jqzy">　　教育研究院史静寰做客清华&ldquo;学术之路&rdquo;讲述研究生学术科研规划&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网12月3日电（学生通讯员杨胡凤 李杨阳）11月29日晚，清华大学&ldquo;学术之路&rdquo;系列讲座第56期&ldquo;研究生学术科研规划&rdquo;在文南楼举行。讲座特邀清华教育研......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121024151916803610174/20121024151916803610174_.html" target="_blank">清华环境学院两项行业科研专项项目验收为优...</a></h3>
+              <p class="thnews_jqzy">　　清华环境学院两项环保公益性行业科研专项项目通过环保部验收为优秀项目清华新闻网10月24日电近日，在国家环保部通报的对环保公益性行业科研专项第一批立项的57个项目的验收结果中，清华环境学院郝吉明院士负责的&ldquo;我国未来十五年NOx污染控制技术途径研究&rdquo;项目和李金惠教授负责的&ldquo;废旧家电回收利用与环境监管技术研究&rdquo;项......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120927171112020858816/20120927171112020858816_.html" target="_blank">两地科研互补 融合优势发展</a></h3>
+              <p class="thnews_jqzy">　　两地科研互补 融合优势发展来源：香港文汇报 2012-09-27 刘景熙&ldquo;国家专用集成电路系统工程技术研究中心香港分中心&rdquo;今天开幕，象征两地科研合作踏出新一步。张念坤认为，如果世界科研水平有10分，香港就有6分至7分，而内地则有5分。他认为两地在科研领域各有优势，如结合双方的强项互补，能够迸发出更强的研发能量，&ldquo;希望将......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120907144317271378181/20120907144317271378181_.html" target="_blank">清华大学：科研创新能力增强</a></h3>
+              <p class="thnews_jqzy">　　清华大学：科研创新能力增强来源：中国教育报2012-9-7清华大学按照&ldquo;综合性、研究型、开放式&rdquo;的办学定位，努力将&ldquo;世界一流，中国特色，清华风格&rdquo;统一在办学实践之中，大力推动机制体制改革，学校各项事业蓬勃发展。教育教学质量稳步提高坚持以人才培养为根本任务，提出并深入实施优势转化战略，努力将学校长期办......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2012.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120829152503294847706/20120829152503294847706_.html" target="_blank">“重科研轻教学”更像一幅漫画</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;重科研轻教学&rdquo;更像一幅漫画来源：中国青年报 2012-08-29 胡波教育部副部长杜玉波日前在武汉召开的教育部直属高校工作咨询委员会上表示：&ldquo;一个不把主要精力投入教学的教师不是合格的教师，不为教学操心的校长不是好校长。&rdquo;（《中国青年报》8月27日）一段时间以来，社会上比较关注&ldquo;为什么我们的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120612163913979459899/20120612163913979459899_.html" target="_blank">中大工程院改革 3招吸人投科研</a></h3>
+              <p class="thnews_jqzy">　　中大工程院改革 3招吸人投科研来源：香港文汇报 2012-06-12 刘思诺本港一直希望推动高端科研产业的发展，但人才不足成为无形的掣肘。中文大学工程学院院长汪正平表示，每年有500名工程系学生毕业，但只有1%选择研究之路，情况并不理想。为此，工程学院近年引入改革3招，包括优化评分制度，令一级荣誉毕业生比例增加；又在本科课程提早加入研究学科；他更会亲自监......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120525154112222192130/20120525154112222192130_.html" target="_blank">年度科研经费五月底到位九成</a></h3>
+              <p class="thnews_jqzy">　　年度科研经费五月底到位九成来源：中国科学报 2012-05-25 王静记者今天从科技部科研条件与财务司获悉，我国2012年度科研预算总经费的90%，在5月底前已划拨到科研项目承担单位，目前仅有10%的项目科研经费还在审核中。这得益于科研项目储备库的建立，也是我国科研经费管理改革取得的一项重要进展。近年来，科技部逐步建立了科研项目储备库，让政府具体了解......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120524145244344417502/20120524145244344417502_.html" target="_blank">科技部：禁用课题经费谋私利</a></h3>
+              <p class="thnews_jqzy">　　科技部：修订《国家科技项目（课题）预算管理问答》禁用课题经费谋私利来源：法制晚报 2012-05-23 李洪鹏应当严格按照本办法规定的课题经费开支范围和标准办理支出。严禁使用课题经费支付各种罚款、捐款、赞助、投资等，严禁以任何方式变相谋取私利。今天上午，科技部与财政部两部门修订《国家科技项目（课题）预算管理问答》，作出上述规定。近几年来科研经费腐败频......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120524145118230669364/20120524145118230669364_.html" target="_blank">《自然》：中国高质量科研论文数量持续上升</a></h3>
+              <p class="thnews_jqzy">　　《自然》报告显示中国高质量科研论文数量持续上升来源：新华网 2012-05-24 黄堃著名的英国学术期刊《自然》23日发布报告说，中国的高质量科研论文数量近年来上升势头强劲，目前位居全球第四。据该报告作者预计，到2014年，中国的这一排名有望超过英国和德国，仅次于美国。这份报告当天以《自然》副刊的形式发布。《自然》是世界上最重要的科研学术期刊之一，是......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120417143422232293336/20120417143422232293336_.html" target="_blank">高校聘用科研助理 建议用优秀毕业生</a></h3>
+              <p class="thnews_jqzy">　　高校聘用科研助理 建议用优秀毕业生来源：北京青年报 2012-04-17 雷嘉教育部近日印发《高校科研助理管理办法（暂行）》，要求高校积极吸引优秀毕业生担任科研助理参与学校科研工作。科研助理实行合同聘任制。高校科研助理是指学校根据科研任务和发展需要聘用的从事项目研究、实验（工程）技术和科研辅助的人员，是学校专职科研队伍的重要组成部分。教育部的通知要求......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120411141908641229595/20120411141908641229595_.html" target="_blank">打赢“科学道德保卫战”</a></h3>
+              <p class="thnews_jqzy">　　打赢&ldquo;科学道德保卫战&rdquo;来源：光明日报 2012-04-11 胡其峰&ldquo;我们诚挚呼吁全国科技期刊共同努力，加强学术道德建设，强化科研诚信，营造良好学术氛围，共同推动科技期刊事业的健康发展，共同维护科学共同体的崇高声誉。&rdquo;4月10日上午，来自中国科协所属全国学会的一千多家科技期刊的代表，在一份《中国科协所属全国学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120410111749633828536/20120410111749633828536_.html" target="_blank">科研反腐困局拷问经费结算制度</a></h3>
+              <p class="thnews_jqzy">　　科研反腐困局拷问经费结算制度来源：中国青年报 2012-04-10 雷宇 王倩 马李文博掌握大笔科研经费的教授沦为新的腐败人群，来自公共资金的科研经费被冒领、多领、挪用、浪费&hellip;&hellip;面对近年来不断发生的科研腐败弊案，北京市海淀区人民检察院两名承办多起该类案件的检察官近日呼吁，传统科研经费结算制度已成滋生腐败的温床，亟待变革。传统科......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

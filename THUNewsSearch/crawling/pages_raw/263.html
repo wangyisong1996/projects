@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>季羡林自传</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231213828598435&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9655/index.html' class='navigation_style'>专题新闻</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9711/index.html' class='navigation_style'>清华新人“旧”闻</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">季羡林自传</h3><p align="center"> (2001.04.13 新华网) </p><p>我于一九一一年八月六日生于山东省清平县（现并入临清市）官庄。我们家大概也小康过。可是到了我出生的时候，祖父母双亡，家道中落，形同贫农。父亲亲兄弟三人，无怙无恃，孤苦伶仃，一个送了人，剩下的两个也是食不果腹，衣不蔽体，饿得到枣林里去拣落到地上的干枣来吃。 </p><p>六岁以前，我有一个老师马景恭先生。他究竟教了我些什么，现在完全忘掉了，大概只不过几个字罢了。六岁离家，到济南去投奔叔父。他是在万般无奈的情况下逃到济南去谋生的，经过不知多少艰难险阻，终于立定了脚跟。从那时起，我才算开始上学。曾在私塾里念过一些时候，念的不外是《百家姓》、《千字文》、《三字经》、《四书》之类。以后接着上小学。转学的时候，因为认识一个“骡”字，老师垂青，从高小开始念起。 </p><p>我在新育小学考过甲等第三名、乙等第一名，不是拔尖的学生，也不怎样努力念书。三年高小，平平常常。有一件事值得提出来谈一谈：我开始学英语。当时正规小学并没有英语课。我学英语是利用业余时间，上课是在晚上。学的时间不长，只不过学了一点语法、一些单词而已。我当时有一个怪问题：“有”和“是”都没有“动”的意思，为什么叫“动词”呢？后来才逐渐了解到，这只不过是一个译名不妥的问题。 </p><p>我万万没有想到，就由于这一点英语知识，我在报考中学时沾了半年光。我这个人颇有点自知之明，有人说，我自知过了头。不管怎样，我幼无大志，却是肯定无疑的。当时山东中学的拿摩温是山东省立第一中学。我这个癞蛤蟆不敢吃天鹅肉，我连去报名的勇气都没有，我只报了一个“破”正谊。可这个学校考试时居然考了英语。出的题目是汉译英：“我新得了一本书，已经读了几页，可是有些字我不认得。”我翻出来了，只是为了不知道“已经”这个词儿的英文译法而苦恼了很长时间。结果我被录取，不是一年级，而是一年半级。 </p><p>在正谊中学学习期间，我也并不努力，成绩徘徊在甲等后几名、乙等前几名之间，属于上中水平。我们的学校濒临大明湖，风景绝美。一下课，我就跑到校后湖畔去钓虾、钓蛤蟆，不知用功为何物。但是，叔父却对我期望极大，要求极严。他自己亲自给我讲课，选了一本《课侄选文》，大都是些理学的文章。他并没有受过什么系统教育，但是他绝顶聪明，完全靠自学，经史子集都读了不少，能诗，善书，还能刻图章。他没有男孩子，一切希望都寄托在我身上。他严而慈，对我影响极大。我今天勉强学得了一些东西，都出于他之赐，我永远不会忘掉。根据他的要求，我在正谊下课以后，参加了一个古文学习班，读了《左传》、《战国策》、《史记》等书，当然对老师另给报酬。晚上，又要到尚实英文学社去学英文，一直到十点才回家。这样的日子，大概过了八年。我当时并没有感觉到有什么负担；但也不了解其深远意义，依然顽皮如故，摸鱼钓虾而已。现在回想起来，我今天这一点不管多么单薄的基础不是那时打下的吗？ </p><p>至于我们的正式课程，国文、英、数、理、生、地、史都有。国文念《古文观止》一类的书，要求背诵。英文念《泰西五十轶事》、《天方夜谭》、《莎氏乐府本事》、《纳氏文法》等等。写国文作文全用文言，英文也写作文。课外，除了上补习班外，我读了大量的旧小说，什么《三国》、《西游》、《封神演义》、《说唐》、《说岳》、《济公传》、《彭公案》、《三侠五义》等等无不阅读。《红楼梦》我最不喜欢。连《西厢记》、《金瓶梅》一类的书，我也阅读。这些书对我有什么影响，我说不出，反正我并没有想去当强盗或偷女人。 </p><p>初中毕业以后，在正谊念了半年高中。一九二六年转入新成立的山东大学附设高中。山东大学的校长是前清状元、当时的教育厅长王寿彭。他提倡读经。在高中教读经的有两位老师，一位是前清翰林或者进士，一位绰号“大清国”，是一个顽固的遗老。两位老师的姓名我都忘记了，只记住了绰号。他们上课，都不带课本，教《书经》和《易经》，都背得滚瓜烂熟，连注疏都在内，据说还能倒背。教国文的老师是王崑玉先生，是一位桐城派的古文作家，有自己的文集。后来到山东大学去当讲师了。他对我的影响极大。记得第一篇作文题目是《读〈徐文长传〉书后》。完全出我意料，这篇作文受到他的高度赞扬，批语是“亦简劲，亦畅达”。我在吃惊之余，对古文产生了浓厚的兴趣，弄到了《韩昌黎集》、《柳宗元集》，以及欧阳修、三苏等的文集，想认真钻研一番。谈到英文，由于有尚实英文学社的底子，别的同学很难同我竞争。还有一件值得一提的事情是，我也学了德文。 </p><p>由于上面提到的那些，我在第一学期考了一个甲等第一名，而且平均分数超过九十五分。因此受到了王状元的嘉奖。他亲笔写了一副对联和一个扇面奖给我。这当然更出我意料。我从此才有意识地努力学习。要追究动机，那并不堂皇。无非是想保持自己的面子，决不能从甲等第一名落到第二名，如此而已。反正我在高中学习三年中，六次考试，考了六个甲等第一名，成了“六连贯”，自己的虚荣心得到了充分的满足。 </p><p>这是不是就改变了我那幼无大志的情况呢？也并没有。我照样是鼠目寸光，胸无大志，我根本没有发下宏愿，立下大志，终身从事科学研究，成为什么学者。我梦寐以求的只不过是毕业后考上大学，在当时谋生极为困难的条件下，抢到一只饭碗，无灾无难，平平庸庸地度过一生而已。 </p><p>一九二九年，我转入新成立的山东省立济南高中，学习了一年，这在我一生中是一个重要的阶段。特别是国文方面，这里有几个全国闻名的作家：胡也频、董秋芳、夏莱蒂、董每戡等等。前两位是我的业师。胡先生不遗余力地宣传现代文艺，也就是普罗文学。我也迷离模糊，读了一些从日文译过来的马克思主义文艺理论。我曾写过一篇《现代文艺的使命》，大概是东抄西抄，勉强成篇。不意竟受到胡先生垂青，想在他筹办的杂志上发表。不幸他被国民党反动派通缉，仓促逃往上海，不久遇难。我的普罗文学梦也随之消逝。接他工作的是董秋芳（冬芬）先生。我此时改用白话写作文，大得董先生赞扬，认为我同王联榜是“全校之冠”。这当然给了我极大的鼓励。我之所以五十年来舞笔弄墨不辍，至今将近耄耋之年，仍然不能放下笔，全出于董老师之赐，我毕生难忘。 </p><p>在这里，虽然已经没有经学课程，国文课本也以白话为主。我自己却没有放松对中国旧籍的钻研。我阅读的范围仍然很广，方面仍然很杂。陶渊明、杜甫、李白、王维、李义山、李后主、苏轼、陆游、姜白石等等诗人、词人的作品，我都读了不少。这对我以后的工作起了积极的影响。 </p><p>一九三○年，我高中毕业，到北平来考大学。由于上面说过的一些原因，当年报考中学时那种自卑心理一扫而光，有点接近狂傲了。当时考一个名牌大学，十分困难，录取的百分比很低。为了得到更多的录取机会，我那八十多位同班毕业生，每人几乎都报七八个大学。我却只报了北大和清华。结果我两个大学都考上了。经过一番深思熟虑，我选了清华，因为，我想，清华出国机会多。选系时，我选了西洋系。这个系分三个专修方向（specialized）：英文、德文、法文。只要选某种语言一至四年，就算是专修某种语言。其实这只是一个形式，因为英文是从小学就学起的，而德文和法文则是从字母学起。教授中外籍人士居多，不管是哪国人，上课都讲英语，连中国教授也多半讲英语。课程也以英国文学为主，课本都是英文的，有“欧洲文学史”、“欧洲古典文学”、“中世纪文学”、“文艺复兴文学”、“文艺批评”、“莎士比亚”、“英国浪漫诗人”、“近代长篇小说”、“文学概论”、“文艺心理学（美学）”、“西洋通史”、“大一国文”、“一二年级英语”等等。 </p><p>我的专修方向是德文。四年之内，共有三个教授授课，两位德国人，一位中国人。尽管我对这些老师都怀念而且感激，但是，我仍然要说，他们授课相当马虎。四年之内，在课堂上，中国老师只说汉语，德国老师只说英语，从来不用德语讲课。结果是，学了四年德文，我们只能看书，而不能听和说。我的学士论文是The   early Poems of Holderlin，指导教授是Ecke（艾克）。</p><p> 在所有的课程中，我受益最大的不是正课，而是一门选修课：朱光潜先生的“文艺心理学”和一门旁听课：陈寅恪先生的“佛经翻译文学”。这两门课对我以后的发展有深远影响，可以说是一直影响到现在。我搞一点比较文学和文艺理论，显然是受了朱先生的熏陶。而搞佛教史、佛教梵语和中亚古代语言，则同陈先生的影响是分不开的。 </p><p>顺便说一句，我在大学在课余仍然继续写作散文，发表在当时颇有权威性的报刊上。我可万万没有想到，那样几篇散文竟给我带来了好处。一九二四年，清华毕业，找工作碰了钉子。母校山东济南高中的校长宋还吾先生邀我回母校任国文教员。我那几篇散文就把我制成了作家，而当时的逻辑是，只要是作家就能教国文。我可是在心里直打鼓：我怎么能教国文呢？但是，快到秋天了，饭碗还没有拿到手，我于是横下了一条心：你敢请我，我就敢去！我这个西洋文学系的毕业生一变而为国文教员。我就靠一部《辞源》和过去读的那一些旧书，堂而皇之当起国文教员来。我只有二十三岁，班上有不少学生比我年龄大三四岁，而且在家乡读过私塾。我实在是如履薄冰。 </p><p>教了一年书，到了一九三五年，上天又赐给一个良机。清华大学与德国签订了交换研究生的协定。我报名应考，被录取。这一年的深秋，我到了德国哥廷根大学，开始了国外的学习生活。我选的主系是印度学，两个副系是英国语言学和斯拉夫语言学。我学习了梵文、巴利文、俄文、南斯拉夫文、阿拉伯文等等，还选了不少的课。教授是Sieg、Waldschmidt、   Braun等等。 </p><p>这时第二次世界大战正在剧烈进行。德国被封锁，什么东西也输入不进来，要吃没吃，要穿没穿。大概有四五年的时间，我忍受了空前的饥饿，终日饥肠辘辘，天上还有飞机轰炸。我怀念祖国和家庭。“烽火连六年，家书抵亿金。”实际上我一封家书都收不到。就在这样十分艰难困苦的条件下，我苦读不辍。一九四一年，通过论文答辩和口试，以全优成绩，获得哲学博士学位。我的博士论文是：《〈大事〉中伽陀部分限定动词的变格》。 </p><p>在这一段异常困苦的期间，最使我感动的是德国老师的工作态度和对待中国学生的态度。我是一个素昧平生的异邦青年。他们不但没有丝毫歧视之意，而且爱护备至，循循善诱。Waldschmidt教授被征从军。Sieg教授以耄耋之年，毅然出来代课。其实我是唯一的博士生，他教的对象也几乎就是我一个人。他把他的看家本领都毫无保留地要传给我。他给我讲了《梨俱吠陀》、《波你尼语法》、Patanjali的《大疏54321、《十王子传》等。他还一定坚持要教我吐火罗文。他是这个语言的最高权威，是他把这本天书读通了的。我当时工作极多，又患神经衰弱，身心负担都很重。可是看到这位老人那样热心，我无论如何不能让老人伤心，便遵命学了起来。同学的还有比利时W．Corvreur博士，后来成了名教授。 </p><p>谈到工作态度，我的德国老师都是楷模。他们的学风都是异常地认真、细致、谨严。他们写文章，都是再三斟酌，多方讨论，然后才发表。德国学者的“彻底性”（Grundlichkeit）是名震寰宇的。对此我有深切的感受。可惜后来由于环境关系，我没能完全做到。真有点愧对我的德国老师了。 </p><p>从一九三七年起，我兼任哥廷根大学汉学系讲师。这个系设在一座大楼的二层上，几乎没有人到这座大楼来，因此非常清静。系的图书室规模相当大，在欧洲颇有一些名气。许多著名的汉学家到这里来看书，我就碰到不少，其中最著名的有英国的Arthur   Waley等。我在这里也读了不少的中国书，特别是笔记小说以及佛教大藏经。扩大了我在这方面的知识面。我在哥廷根呆了整整十个年头。一九四五年秋冬之交，我离开这里到瑞士去，住了将近半年。一九四六年春末，取道法国、越南、香港，夏天回到了别离将近十一年的祖国。我的留学生活，也可以说是我的整个学生生活就这样结束了。这一年我三十五岁。 </p><p>一九四六年秋天，我到北京大学来任教授，兼东方语言文学系主任。是我的老师陈寅恪先生把我介绍给胡适、傅斯年、汤用彤三位先生的。按当时北大的规定：在国外获得博士学位回国的，只能任副教授。对我当然也要照此办理。也许是我那几篇在哥廷根科学院院刊上发表的论文起了作用。我到校后没有多久，汤先生就通知我，我已定为教授。从那时到现在时光已经过去了四十二年，我一直没有离开北大过。期间我担任系主任三十来年，担任副校长五年。一九五六年，我当选中国科学院学部委员。十年浩劫中靠边站，挨批斗，符合当时的“潮流”。现在年近耄耋，仍然搞教学、科研工作，从事社会活动，看来离八宝山还有一段距离。以上这一切都是平平常常的经历，没有什么英雄业绩，我就不再罗嗦了。 </p><p>我体会，一些报刊之所以要我写自传的原因，是想让我写点什么治学经验之类的东西。那么，在长达六十年的学习和科研活动中，我究竟有些什么经验可谈呢？粗粗一想，好像很多；仔细考虑，无影无踪。总之是卑之无甚高论。不管好坏，鸳鸯我总算绣了一些。至于金针则确乎没有，至多是铜针、铁针而己。 </p><p>我记得，鲁迅先生在一篇文章中讲了一个笑话：一个江湖郎中在市集上大声吆喝，叫卖治臭虫的妙方。有人出钱买了一个纸卷，层层用纸严密裹住。打开一看，妙方只有两个字：勤捉。你说它不对吗？不行，它是完全对的。但是说了等于不说。我的经验压缩成两个字是勤奋。再多说两句就是：争分夺秒，念念不忘。灵感这东西不能说没有，但是，它不是从天上掉下来的，而是勤奋出灵感。 </p><p>上面讲的是精神方面的东西，现在谈一点具体的东西。我认为，要想从事科学研究工作，应该在四个方面下工夫：一，理论；二，知识面；三，外语；四，汉文。唐代刘知几主张，治史学要有才、学、识。我现在勉强套用一下，理论属识，知识面属学，外语和汉文属才，我在下面分别谈一谈。 </p><p>一、理论 </p><p>现在一讲理论，我们往往想到马克思主义。这样想，不能说不正确。但是，必须注意几点。一，马克思主义随时代而发展，决非僵化不变的教条。二，不要把马克思主义说得太神妙，令人望而生畏，对它可以批评，也可以反驳。我个人认为，马克思主义的精髓就是唯物主义和辩证法。唯物主义就是实事求是。把黄的说成是黄的，是唯物主义。把黄的说成是黑的，是唯心主义。事情就是如此简单明了。哲学家们有权利去作深奥的阐述，我辈外行，大可不必。至于辩证法，也可以作如是观。看问题不要孤立，不要僵死，要注意多方面的联系，在事物运动中把握规律，如此而已。我这种幼儿园水平的理解，也许更接近事实真相。 </p><p>除了马克思主义以外，古今中外一些所谓唯心主义哲学家的著作，他们的思维方式和推理方式，也要认真学习。我有一个奇怪的想法：百分之百的唯物主义哲学家和百分之百的唯心主义哲学家，都是没有的。这就是和真空一样，绝对的真空在地球上是没有的。中国古话说：“智者千虑，必有一失。”就是这个意思。因此，所谓唯心主义哲学家也有不少东西值得我们学习的。我们千万不要像过去那样把十分复杂的问题简单化和教条化，把唯心主义的标签一贴，就“奥伏赫变”。 </p><p>二、知识面</p><p> 要求知识面广，大概没有人反对。因为，不管你探究的范围多么窄狭，多么专门，只有在知识广博的基础上，你的眼光才能放远，你的研究才能深入。这样说已经近于常识，不必再做过多的论证了。我想在这里强调一点，这就是，我们从事人文科学和社会科学研究的人，应该学一点科学技术知识，能够精通一门自然科学，那就更好。今天学术发展的总趋势是，学科界线越来越混同起来，边缘学科和交叉学科越来越多。再像过去那样，死守学科阵地，鸡犬之声相闻，老死不相往来，已经完全不合时宜了。此外，对西方当前流行的各种学术流派，不管你认为多么离奇荒诞，也必须加以研究，至少也应该了解其轮廓，不能简单地盲从或拒绝。 </p><p>三、外语</p><p>外语的重要性，尽人皆知。若再详细论证，恐成蛇足。我在这里只想强调一点：从今天的世界情势来看，外语中最重要的是英语，它已经成为名副其实的世界语。这种语言，我们必须熟练掌握，不但要能读，能译，而且要能听，能说，能写。今天写学术论文，如只用汉语，则不能出国门一步，不能同世界各国的同行交流。如不能听说英语，则无法参加国际学术会议。情况就是如此地咄咄逼人，我们不能不认真严肃地加以考虑。 </p><p>四、汉语 </p><p>我在这里提出汉语来，也许有人认为是非常异议可怪之论。“我还不能说汉语吗？” “我还不能写汉文吗？”是的，你能说，也能写。然而仔细一观察，我们就不能不承认，我们今天的汉语水平是非常成问题的。每天出版的报章杂志，只要稍一注意，就能发现别字、病句。我现在越来越感到，真要想写一篇准确、鲜明、生动的文章，决非轻而易举。要能做到这一步．还必须认真下点工夫。我甚至想到，汉语掌握到一定程度，想再前进一步，比学习外语还难。只有承认这一个事实，我们的汉语水平才能提高，别字、病句才能减少。 </p><p>我在上面讲了四个方面的要求。其实这些话都属于老生常谈，都平淡无奇。然而真理不往往就寓于平淡无奇之中吗？这同我在上面引鲁迅先生讲的笑话中的“勤捉”一样，看似平淡，实则最切实可行，而且立竿见影。我想到这样平凡的真理，不敢自秘，便写了出来，其意不过如野叟献曝而已。 </p><p>我现在想谈一点关于进行科学研究指导方针的想法。六七十年前胡适先生提出来的“大胆的假设，小心的求证”，我认为是不刊之论，是放之四海而皆准的方针。古今中外，无论是社会科学，还是自然科学，概莫能外。在那一段教条主义猖獗、形而上学飞扬跋扈的时期内，这个方针曾受到多年连续不断的批判。我当时就百思不得其解。试问哪一个学者能离开假设与求证呢？所谓大胆，就是不为过去的先入之见所限，不为权威所囿，能够放开眼光，敞开胸怀，独具只眼，另辟路径，提出自己的假设，甚至胡思乱想，想入非非，亦无不可。如果连这一点胆量都不敢有，那只有循规蹈矩，墨守成法，鼠目寸光，拾人牙慧，个人决不会有创造，学术决不会进步。这一点难道还不明白，还要进行烦琐的论证吗？ </p><p>总之，我要说，一要假设，二要大胆，缺一不可。 </p><p>但是，在提倡大胆的假设的同时，必须大力提倡小心的求证。一个人的假设，决不会一提出来就完全符合实际情况，有一个随时修改的过程。我们都有这样一个经验：在想到一个假设时，自己往往诧为“神来之笔”，是“天才火花”的闪烁，而狂欢不己。可是这一切都并不是完全可靠的。假设能不能成立，完全依靠求证。求证要小心，要客观，决不允许厌烦，更不允许马虎。要从多层次、多角度上来求证，从而考验自己的假设是否正确，或者正确到什么程度，哪一部分正确，哪一部分又不正确。所有这一切都必须实事求是，容不得丝毫私心杂念，一以证据为准。证据否定掉的，不管当时显得多么神奇，多么动人，都必须毅然毫不吝惜地加以扬弃。部分不正确的，扬弃部分。全部不正确的，扬弃全部。事关学术良心，决不能含糊。可惜到现在还有某一些人，为了维护自己“奇妙”的假设，不惜歪曲证据，剪裁证据。对自己的假设有用的材料，他就用；没有用的、不利的，他就视而不见，或者见而掩盖。这都是“缺德”（史德也）的行为，我期期以为不可。至于剽窃别人的看法或者资料，而不加以说明，那是小偷行为，斯下矣。 </p><p>总之，我要说，一要求证，二要小心，缺一不可。 </p><p>我刚才讲的“史德”，是借用章学诚的说法。他把“史德”解释成“心术”。我在这里讲的也与“心术”有关，但与章学诚的“心术”又略有所不同。有点引申的意味。我的中心想法是不要骗自己，不要骗读者。做到这一步，是有德。否则就是缺德。写什么东西，自己首先要相信。自己不相信而写出来要读者相信，不是缺德又是什么呢？自己不懂而写出来要读者懂，不是缺德又是什么呢？我这些话决非无中生有，无的放矢。我都有事实根据。我以垂暮之年，写了出来，愿与青年学者们共勉之。 </p><p>现在再谈一谈关于搜集资料的问题。进行科学研究，必须搜集资料，这是不易之理。但是，搜集资料并没有什么一定之规。最常见的办法是使用卡片，把自己认为有用的资料抄在上面，然后分门别类，加以排比。可这也不是唯一的办法。陈寅恪先生把有关资料用眉批的办法，今天写上一点，明天写上一点，积之既久，资料多到能够写成一篇了，就从眉批移到纸上，就是一篇完整的文章。比如，他对《高僧传·鸠摩罗什传》的眉批，竞比原文还要多几倍，是一个典型的例子。我自己既很少写卡片，也从来不用眉批，而是用比较大张的纸，把材料写上。有时候随便看书，忽然发现有用的材料，往往顺手拿一些手边能拿到的东西，比如通知、请柬、信封、小纸片之类，把材料写上，再分类保存。我看到别人也有这个情况，向达先生有时就把材料写在香烟盒上。用比较大张的纸有一个好处，能把有关的材料都写在上面，约略等于陈先生的眉批。卡片面积太小，这样做是办不到的。材料抄好以后，要十分认真细心地加以保存，最好分门别类装入纸夹或纸袋。否则，如果一时粗心大意丢上张把小纸片，上面记的可能是最关重要的材料，这样会影响你整篇文章的质量，不得不鼋勉从事。至于搜集资料要巨细无遗，要有竭泽而渔的精神，这是不言自喻的。但是，要达到百分之百的完整的程度，那也是做不到的。不过我们千万要警惕，不能随便搜集到一点资料，就动手写长篇论文。这样写成的文章，其结论之不可靠是显而易见的。与此有联系的就是要注意文献目录。只要与你要写的文章有关的论文和专著的目录，你必须清楚。否则，人家已经有了结论，而你还在卖劲地论证，必然贻笑方家，不可不慎。 </p><p>我想顺便谈一谈材料有用无用的问题。严格讲起来，天下没有无用的材料，问题是对谁来说，在什么时候说。就是对同一个人，也有个时机问题。大概我们都有这样的经验：只要你脑海里有某一个问题，一切资料，书本上的、考古发掘的、社会调查的等等，都能对你有用。搜集这样的资料也并不困难，有时候资料简直是自己跃入你的眼中。反之，如果你脑海里没有这个问题，则所有这样的资料对你都是无用的。但是，一个人脑海里思考什么问题，什么时候思考什么问题，有时候自己也掌握不了。一个人一生中不知要思考多少问题。当你思考甲问题时，乙问题的资料对你没有用。可是说不定什么时候你会思考起乙问题来。你可能回忆起以前看书时曾碰到过这方面的资料，现在再想去查找，可就“云深不知处”了。这样的经验我一生不知碰到多少次了，想别人也必然相同。 </p><p>那么怎么办呢？最好脑海里思考问题，不要单打一，同时要思考几个，而且要念念不忘，永远不让自己的脑子停摆，永远在思考着什么。这样一来，你搜集面就会大得多，漏网之鱼也就少得多。材料当然也就积累得多，养兵千日，用兵一时；一旦用起来，你就左右逢源了。 </p><p>最后还要谈一谈时间的利用问题。时间就是生命，这是大家都知道的道理。而且时间是一个常数，对谁都一样，谁每天也不会多出一秒半秒。对我们研究学问的人来说，时间尤其珍贵，更要争分夺秒。但是各人的处境不同，对某一些人来说就有一个怎样利用时间的“边角废料”的问题。这个怪名词是我杜撰出来的。时间摸不着看不见，但确实是一个整体，哪里会有什么“边角废料”呢？这只是一个形象的说法。平常我们做工作，如果一整天没有人和事来干扰，你可以从容濡笔，悠然怡然，再佐以龙井一杯，云烟三支，神情宛如神仙，整个时间都是你的，那就根本不存在什么“边角废料”问题。但是有多少人能有这种神仙福气呢？鲁钝如不佞者几十年来就做不到。建国以来，我搞了不知多少社会活动，参加了不知多少会，每天不知有多少人来找，心烦意乱，啼笑皆非。回想十年浩劫期间，我成了“不可接触者”，除了蹲牛棚外，在家里也是门可罗雀。《罗摩衍那》译文八巨册就是那时候的产物。难道为了读书写文章就非变成“不可接触者”或者右派不行吗？浩劫一过，我又是门庭若市，而且参加各种各样的会，终日马不停蹄。我从前读过马雅可夫斯基的《开会迷》和张天翼的《华威先生》，觉得异常可笑，岂意自己现在就成了那一类人物，岂不大可哀哉！但是，人在无可奈何的情况下是能够想出办法来的。现在我既然没有完整的时间，就挖空心思利用时间的“边角废料”。在会前、会后，甚至在会中，构思或动笔写文章。有不少会，讲话空话废话居多，传递的信息量却不大，态度欠端，话风不正，哼哼哈哈，不知所云，又佐之以“这个”、“那个”，间之以“唵”、“啊”，白白浪费精力，效果却是很少。在这时候，我往往只用一个耳朵或半个耳朵去听，就能兜住发言的全部信息量，而把剩下的一个耳朵或一个半耳朵全部关闭，把精力集中到脑海里，构思，写文章。当然，在飞机上，火车上，汽车上，甚至自行车上，特别是在步行的时候，我脑海里更是思考不停。这就是我所说的利用时间的“边角废料”。积之既久，养成“恶”习，只要在会场一坐，一闻会味，心花怒放，奇思妙想，联翩飞来；“天才火花”，闪烁不停；此时文思如万斛泉涌，在鼓掌声中，一篇短文即可写成，还耽误不了鼓掌。倘多日不开会，则脑海活动，似将停止，“江郎”仿佛“才尽”。此时我反而期望开会了。这真叫做没有法子。 </p><p>我在上面拉杂地写了自己七十年的自传。总起来看，没有大激荡，没有大震动，是一个平凡人的平凡的经历。我谈的治学经验，也都属于“勤捉”之类，卑之无甚高论。比较有点价值的也许是那些近乎怪话的意见。古人云：“修辞立其诚”。我没有说谎话，只有这一点是可以告慰自己，也算是对得起别人的。   　　　　　　　　　　　　　　　　　 </p><p>一九八八年十月二十六日写完</p><p>上面的自传是一九八八年写成的，到现在已经整整十年了。在人生百年中，十年是一个不短的期间。时移世异，人事沧桑，今天的我已经非复当年之我了。现在中央党校出版社要出版我的《牛棚杂忆》，希望能附上我的一篇自传，使读者能了解牛棚里的季羡林究竟是何许人，并且建议就用上面这一篇，再加上点延续，一直写到今天。这个建议是合情合理的，我准备采纳。 </p><p>但是，仔细一琢磨，却有了困难。上面这一篇是有头有尾的。如果在尾巴砍上一刀，狗尾续狗，难免不伦不类，不像是一篇完整的文章。考虑再三，决定保留上篇的完整性，再补上一个下篇，看上去，同样是完整的。 </p><p>一九八八年是一个什么样的年头呢？改革开放的政策已经实行了十年，取得了异乎寻常的成功。经济繁荣，人民欢乐，知识分子这一个解放后历届政治运动都处在挨整的地位上的社会群体，现在身上的枷锁砸掉了，身心都感到异常的欢悦，精神又振奋了起来，学术界和文艺界真是一派大好形势。我自己当然也感觉到了这种盎然的春意。虽然早已过了退休的年龄；但是，学校决定我不退休，我感到很光荣，干劲倍增。不似少年，胜似少年，怡怡然忘记了老之已至。我虽然已经没有正式的行政工作，但是社会工作和社会活动，却是有增无减。全国性的学术团体中我被选为主席、会长或名誉主席、会长的有七八个之多。至于理事之类，数目更多。不顾不问的顾问，一个团体的或一部书的，总有几十上百个，确实数目，只有天老爷知道，我个人是搞不清楚的。大型丛书，上千册的，上百册的，由我担任主编的，也有三四部。至于电视采访，照像录音，也是常事。几乎每天下午都是宾客盈门。每天接到各式各样的来信也有多封。里面的请求千奇百怪。一些僻远省份青年学生的来信，确实给我带来很大的快乐。我从内心里感谢这一些天真无邪的青年男女学生对我的信任。一位著名的作家，在自己的文章里提到我，说我每信必覆。这却给我带来了灾难。我哪里能做到每信必覆呢？即使我什么事情都不干，也是做不到的。我只能让我的助手和学生代覆，这难免给一些男女大孩子带来了失望。我内疚于心，然而却无能为力。 </p><p>我写这些事情干什么呢？目的只有一个，那就是，告诉读者我现在生活和工作的真实的情况；如果我有不周到的地方，请他们体贴原谅。 </p><p>在学术工作方面，有人说，我对自己太残酷。已经到了望九之年，虽然大体上说来，我的身体还算是硬朗的，但是眼睛和耳朵都已不太灵光，走路有点“飘”；可我仍然是不明即起，亮起了朗润园里的第一盏灯，伏案读写，孜孜不倦。难道我不知道，到圆明园或颐和园去溜弯，再远一点，到香山去爬山，不比现在这样更轻松愉快吗？难道我在名利方面还有什么野心吗？都不是的。我知道溜弯舒服；但我认为人活着不是为了多溜几年弯。那不是追求的目的。至于名利，我现在不虞之誉纷至沓来；利的方面，爬格子爬出了点名堂，稿费也是纷至沓来。可以说，在名利两个方面我都够用了，再多了，反而会成为累赘。那么，我这样干的目的究竟是为了什么呢？我不愿说谎话，讲些为国为民的大道理。我只能说，这样做能使自己心里平静。如果有一天我没能读写文章，清夜自思，便感内疚，认为是白白浪费一天。习惯成自然，工作对我来说已经成了痼疾，想要改正，只有等待来生了。 </p><p>计算一下，最近几年来，我每年写的文章，数目远远超过过去的任何一年。我平生最长最艰巨的两部书，都是在耄耋之年完成的。一部是长达８０万字的《糖史》，一部是也长达数十万字（因为部分用英文写成的，字数难以准确统计）的吐火罗文Ａ方言（焉耆文）的《弥勒会见记剧本》的译释。我虽然是个杂家，但是杂中还是有重点的。可惜，由于一些原因，不明真相的人往往不明白我干的究竟是哪一行。外面来的信，有的寄到中文系，有的寄到历史系，有的寄到哲学系，有的寄到西语系，有的甚至寄到社会学系。从中可以看出人们对我的了解。两部大书一出，估计可以减少点混乱。对我来说，这种混乱一点影响也没有的。 </p><p>以上是我最近十年来生活的综述，也可以算是“自传”吧。 </p><p>在这期间，我是怎样考虑十年浩劫的呢？实际上，从我脑筋开了窍认识到这一场在极端绚丽的面纱下蒙着的极端残酷的悲剧那一天起，我就没有把它忘记。但是，我期待着，期待着，一直到一九九二年《牛棚杂忆》产生，我的期待结束。到了今年一九九八年，《牛棚杂忆》终于出版问世。我的心情才比较得到了点宁静。这一切我已经在“自序”中比较详尽地介绍了，这里不再重复。我觉得，我总算为中华民族的后世子孙做了一件好事。我又有了新的期待，我期待还能有问津者。</p><p>一九九八．三．十一 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月13日 09:38:08　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

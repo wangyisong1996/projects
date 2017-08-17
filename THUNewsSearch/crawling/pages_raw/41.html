@@ -1,0 +1,741 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首届中国生物信息学大会将在北京召开</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231208656657404&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">首届中国生物信息学大会将在北京召开</h3><p align="center"> (2001.03.09 新华网)</p><p> 新华网北京３月９日电（记者李京华）记者从北京市科技委员会获悉，首届中国生物信息学大会将于４月１１日至１３日在北京召开，会议主题是加强生物信息学研究，推动二十一世纪生命科学发展。 </p><p>据了解，会议将围绕四个分主题进行，包括基因组研究（基因区域的预测、基因功能预测、新基因、新ＳＮＰ的发现与鉴定、完整基因组的比较研究、分子调控网络、生物芯片的数据分析等）、蛋白质结构模型和预测、药物分子设计、生物学数据库（实验数据的获得加工和整理、序列片段的拼接、各种数据库的建立、生物学软件开发等）。 </p><p>生命信息学是生物学与计算机科学以及应用数学等学科相互交叉而形成的一门新兴学科，在中国生物信息学随着人类基因组研究的展开才刚刚起步，<font color="#FF0000">清华大学</font>在基因调控及基因功能分析和蛋白质二级结构预测方面、天津大学物理系和中科院理论物理所在相关算法方面、中科院生物物理所在基因组大规模测序数据的组装和标识方面、北京大学化学学院在蛋白质分子设计方面、中科院遗传所人类基因组研究中心在大规模测序数据处理自动化流程体系及数据库系统建立方面均已开展相关研究。 </p><p>吴旻、李衍达、张春霆、郝柏林、强伯勤等２０多国内知名院士、专家以及海外来宾将参加此次会议。此次会议是由北京市科技委员会、中国人类基因组北方研究中心、中国人类基因组南方研究中心、北京华大基因研究中心、军事医学科学院、北京生物工程学会生物信息学专业委员会、北京生物技术和新医药产业促进中心等单位共同举办。（完） </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月11日 12:08:09　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151111091126618284409/20151111091126618284409_.html" target="_blank">施一公《基因与发育》发文报道哺乳动物凋亡...</a></h3>
+              <p>11月6日，清华大学生命科学学院施一公教授研究组在《基因与发育》（Gene & Development）在线发表题为《凋亡复合体原子分辨率结构：细胞色素c和dATP激活凋亡蛋白酶活化因子1的分子机制》（Atomic structure of the apoptosome: mechanism of cytochrome c- and dATP-mediated activation of Apaf-1）的研究论文，报道了哺乳动物凋亡复合体（apoptosome）的高分辨率电镜结构，并通过结构比对和生化分析揭示了细胞色素c和dATP激活Apaf-1的分子机制。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150421173050883966752/20150421173050883966752_.html" target="_blank">我国耳聋基因筛查突破百万人</a></h3>
+              <p>　　“遗传性耳聋基因筛查突破百万暨科学与国际合作论坛”日前在生物芯片北京国家工程研究中心（以下简称中心）举行。中心主任、中国工程院院士、博奥生物集团总裁程京表示，截至4月15日，我国使用耳聋基因筛查芯片筛查的总人数已达120万人，这是全球最大规模使用分子检测技术对遗传性疾病所作的筛查。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150129161441758882565/20150129161441758882565_.html" target="_blank">《自然·遗传》刊发黄来强等人封面文章和专...</a></h3>
+              <p>国际顶尖学术期刊《自然·遗传》（Nature Genetics ）2015年1月期刊登了清华大学深圳研究生院教授黄来强（Lai-Qiang Huang）等人题为《兰科植物小兰屿蝴蝶兰的全基因组序列》（The genome sequence of the orchid Phalaenopsis equestris）的封面文章，报告世界首个兰科植物（兰花）全基因组序列及分析结果，同时在“News and Views”（新闻与观点）栏目发表国际同行专家撰写的题为《揭开兰科植物奥秘的基因组》（A genome to unveil the mysteries of orchids）的评述论文，对该研究论文的科学发现作深度解读，并给予了高度评价。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141128182634609560244/20141128182634609560244_.html" target="_blank">黄来强教授共同主持完成世界首个兰花全基因...</a></h3>
+              <p>本研究论文（Article长文）受到Nature杂志社各种形式的重点推介。在11月18日提前一周面向在Nature杂志社注册登记的全球媒体的新闻发布中，将本文选为亮点文章 (Press Release Featured Highlights)撰文推介。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20141126180049198702025/20141126180049198702025_.html" target="_blank">中国学者Nature子刊封面文章：首个兰...</a></h3>
+              <p>11月24日Nature Genetics杂志以封面文章的形式公布了植物界种类最丰富的家族之一：兰花（orchid）的全基因组测序结果。这项研究属于兰花基因组计划（Orchid Genome Project）的最新成果，由清华大学深圳研究生院黄来强教授和国家兰科植物种质资源保护中心暨深圳市兰科植物保护研究中心刘仲健教授领衔完成，参与单位还包括台湾成功大学、中国科学院植物所、比利时根特大学、深圳华大基因研究院、华南农业大学林学院等多个研究团队。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140527111450472580732/20140527111450472580732_.html" target="_blank">清华大学独创“讲席教授组”提升教研水平</a></h3>
+              <p>　　为提高教学水平，清华大学独创“讲席教授组”制度，邀请国际一流科学家，帮助清华大学学生提升研究水平，发展基础和新兴交叉学科。5月22日，清华大学曹兴诚生物信息学与系统生物学讲席教授组成立六周年国际学术研讨会召开。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140524200730528160359/20140524200730528160359_.html" target="_blank">生物信息学与系统生物学讲席教授组国际研讨...</a></h3>
+              <p>5月22日，清华大学曹兴诚生物信息学与系统生物学讲席教授组成立六周年国际学术研讨会在信息技术大楼召开。副校长袁驷，校党委原书记、教育基金会原理事长贺美英，信息学院院长、清华信息国家实验室主任孙家广院士，讲席教授组首席教授Michael S. Waterman等出席了开幕式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140516141725020634291/20140516141725020634291_.html" target="_blank">杨茂君等《基因与发育》发文阐明异源二聚体...</a></h3>
+              <p>2014年5月16日，清华大学生命学院杨茂君教授研究组在《Genes & Development》（基因与发育）发表名为 “Hat2p recognizes histone H3 tail to specify the acetylation of newly-synthesized H3/H4 heterodimer by Hat1p/Hat2p complex”（Hat2p识别组蛋白H3的尾部，增强Hat1p/Hat2p复合物乙酰化新合成H3/H4异源二聚体的特异性）的学术论文。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140304085134649393641/20140304085134649393641_.html" target="_blank">李海涛等在《自然》和《基因与发育》发文破...</a></h3>
+              <p>清华李海涛课题组日前在《自然》和《基因与发育》在线发表两篇论文，从结构生物学角度解析组蛋白甲基化修饰识别新机制，进一步揭开错综复杂的表观遗传调控（epigenetic regulation）的神秘面纱。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131108094602764245647/20131108094602764245647_.html" target="_blank">倪建泉等美国科学院院刊发文揭示全新基因编...</a></h3>
+              <p>11月4日，清华大学医学院倪建泉教授研究组在《美国科学院院刊》（PNAS）发表题为《高效及可遗传性果蝇基因组Cas9编辑技术》（Optimized gene editing technology for Drosophila melanogaster using germline-specific Cas9）的研究论文，首次报道了一种高效、可遗传、低耗的果蝇基因组编辑技术，只需构建一种sgRNA质粒就可以实现基因编辑。清华大学医学院博士生任兴杰、孙锦为该论文的共同第一作者。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131106145355532803064/20131106145355532803064_.html" target="_blank">清华大学PNAS发表基因组编辑新技术</a></h3>
+              <p class="thnews_jqzy">　　清华大学PNAS发表基因组编辑新技术来源：生物通 2013-11-6 何嫱来自清华大学医学院、哈佛医学院等处的研究人员开发了一种优化的Cas9/sgRNA系统，证实其能够有效地应用于果蝇进行基因编辑，相关论文发表在11月4日的《美国科学院院刊》（PNAS）杂志上。清华大学医学院的倪建泉（Jian-Quan Ni）博士、许江（Jiang Xu，音译）以......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130528090227382843203/20130528090227382843203_.html" target="_blank">高翔做客水木清华讲解运用小鼠模型理解基因...</a></h3>
+              <p class="thnews_jqzy">　　南京大学高翔教授做客水木清华讲解运用小鼠模型理解基因功能清华新闻网5月28日电5月23日下午，在清华大学生命科学馆报告厅，国家遗传工程小鼠资源库主任、南京大学模式动物研究所教授高翔做客水木清华，作题为《运用小鼠模型理解基因功能》（Understanding the gene function with mice）的学术报告。清华生命科学联合中心教授祁海主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130102154514811761179/20130102154514811761179_.html" target="_blank">清华“基因组改造” 入选《科学》年度十大</a></h3>
+              <p class="thnews_jqzy">　　清华&ldquo;基因组改造&rdquo; 入选《科学》年度十大来源：北京青年报 2012-12-30 雷嘉美国《科学》杂志近日公布的2012年度十大科学突破中，&ldquo;基因组改造&rdquo;的技术革新榜上有名，这一项中引用了清华大学结构生物学中心的重要工作成果。这已经是清华的科研成果在近三年内第二次上榜《科学》的年度十大。对基因组特别是高等......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2011.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20111125145149179431600/20111125145149179431600_.html" target="_blank">北京市新生儿耳聋基因筛查启用生物芯片：改...</a></h3>
+              <p class="thnews_jqzy">　　北京市新生儿耳聋基因筛查启用生物芯片改变人类生活的生命魔方来源：中国青年报 2011-11-25 崔丽 骆沙如果有这样一种技术：取你的一滴血液，放到芯片上进行检测，不久一份关于你个人遗传信息的报告就呈现在医生面前。由此医生可以替你分析诊断个体的健康和罹患相关疾病的风险。你是否相信这一切是真的？在生物芯片的产业空间里，这个听起来无比玄妙的过程早已成为了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232555921426885/20110225232555921426885_.html" target="_blank">清华本科生团队获国际基因工程机械设计大赛...</a></h3>
+              <p class="thnews_jqzy">　　清华本科生团队获国际基因工程机械设计大赛金奖【新闻中心讯】经过半年多的自主科研项目研究，11月6至8日，清华大学生命科学学院和理学院11名本科生组成的团队赴美国麻省理工学院参加合成生物学（Synthetic Biology）领域的一项国际竞赛——国际基因工程机械设计大赛（International Genetically Engineered Machi......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225232434125221222/20110225232434125221222_.html" target="_blank">清华与哥伦比亚大学探讨高等基因组技术合作...</a></h3>
+              <p class="thnews_jqzy">　　清华与哥伦比亚大学探讨高等基因组技术合作事宜【新闻中心讯】美国当地时间4月16日上午，清华大学科研院常务副院长姜培学教授、清华大学-哥伦比亚大学高等基因组技术联合研究中心副主任蒋宇扬教授一行到访哥伦比亚大学，会见了联合研究中心美方主任鞠景月教授、副主任Jameo Russo 博士。双方交流了联合中心自去年10月28日在清华大学成立以来的科研进展，并探......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2009.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232404578484005/20110225232404578484005_.html" target="_blank">清华深圳研究生院共同主持完成世界首个兰花...</a></h3>
+              <p class="thnews_jqzy">　　清华深圳研究生院共同主持完成世界首个兰花基因组框架图【新闻中心讯】中国科学家不久前在深圳宣布完成了世界首个“兰花基因组框架图” (Orchid Genome Draft Map)，标志着“兰花基因组计划” (Orchid Genome Project) 取得了里程碑式的重要成果，受到国内外广泛关注和重视。“兰花基因组计划”，是由清华大学深圳研究生院黄......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232353500954596/20110225232353500954596_.html" target="_blank">清华学生获得国际基因机械设计竞赛（iGE...</a></h3>
+              <p class="thnews_jqzy">　　清华学生获得国际基因机械设计竞赛（iGEM）金奖【新闻中心讯 学生通讯员 李腾】日前，清华大学代表队赴美参加了合成生物学（Synthetic Biology）领域的一项国际竞赛——国际基因工程机械设计大赛（International Genetically Engineered Machine Competition，iGEM），并在最终展示中获得了金......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2009.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232344843987584/20110225232344843987584_.html" target="_blank">清华大学-哥伦比亚大学高等基因组技术联合...</a></h3>
+              <p class="thnews_jqzy">　　清华大学-哥伦比亚大学高等基因组技术联合研究中心成立【新闻中心讯】10月29日，清华大学-哥伦比亚大学高等基因组技术联合研究中心在清华大学医学院成立。双方将借助各自优势的技术基础在基因组技术方面开展合作。清华-哥伦比亚大学高等基因组技术联合中心揭牌此校级联合研究中心的成立标志着清华大学将以更高的起点进军基因组技术开发领域。中心的目标是针对生命科学、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2009.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232321375115204/20110225232321375115204_.html" target="_blank">清华深圳研究生院共同发起“兰花基因组计划”</a></h3>
+              <p class="thnews_jqzy">　　清华深圳研究生院共同发起“兰花基因组计划”【新闻中心讯】中国科学家近日在深圳宣布“兰花基因组计划” (Orchid Genome Project) 正式启动。这项重大研究计划，由清华大学深圳研究生院和深圳市兰科植物保护研究中心（国家兰科植物种质资源保护中心）共同发起，并联合深圳华大基因研究院、中国科学院植物研究所、台湾成功大学等单位，组成“兰花基因组计划......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232312859949397/20110225232312859949397_.html" target="_blank">清华召开国际学术研讨会探讨基于生物网络全...</a></h3>
+              <p class="thnews_jqzy">　　清华召开国际学术研讨会探讨基于生物网络全基因组关联研究【新闻中心讯】6月24日，“基于生物网络的全基因组关联研究及其大规模并行实现”学术研讨会在清华大学信息科学技术大楼举行。来自清华大学、美国冷泉港实验室、美国南加州大学、美国加州大学河滨分校、中国科学院数学与系统科学研究所等单位的30多名研究人员参加了研讨会。会议报告了清华信息科学与技术国家实验室（筹）......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2008.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232040031975535/20110225232040031975535_.html" target="_blank">清华生物信息学教育部重点实验室2008年...</a></h3>
+              <p class="thnews_jqzy">　　清华生物信息学教育部重点实验室2008年会召开&nbsp;&nbsp;&nbsp; 【新闻中心讯】4月19日上午，在清华大学生命科学馆学术报告厅召开了“清华大学生物信息学教育部重点实验室2008年学术年会”。出席会议的有重点实验室学术委员会主席中科院基础所强伯勤、学术委员会成员国家自然科学基金委副主任沈岩等7位院士，清华大学常务副校长陈吉宁教授、生物系系主任......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225601984576458/20110225225601984576458_.html" target="_blank">清华研究生学术沙龙探索医学与生命奥妙</a></h3>
+              <p class="thnews_jqzy">　　清华研究生学术沙龙探索医学与生命奥妙【新闻中心讯 研通社通讯员 潘丽洁】3月27日晚，由医学院与生物系联合承办的清华大学第118期研究生学术沙龙活动在观畴园餐厅咖啡厅成功举行。该次学术沙龙题目为“解密生命科学，探索医学奥妙”，基于医学及生物些方面的一些当今热门学术问题进行学术报告，并展开同学与老师间的探讨。本次活动吸引了来自医学院与生物系的50余名同......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2008.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225337250537167/20110225225337250537167_.html" target="_blank">清华与麻省理工学院麦戈文人脑研究院签订合...</a></h3>
+              <p class="thnews_jqzy">　　大力推进生命科学与医学的发展清华与麻省理工学院麦戈文人脑研究院签订合作协议【新闻中心讯 记者 李含 周襄楠 摄影 郭海军】1月14日，清华大学生命科学与医学研究院（简称医研院）与麻省理工学院麦戈文人脑研究院签署合作协议。根据协议，清华大学医研院与麻省理工学院麦戈文人脑研究院将在教师与学生交换，合作科研项目，信息与学术出版交流等方面进行合作。这是清华大学在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225603546461519/20110225225603546461519_.html" target="_blank">深圳研究生院学生志愿者服务“2007国际...</a></h3>
+              <p class="thnews_jqzy">　　深圳研究生院学生志愿者服务“2007国际基因组学大会”【新闻中心讯 研通社通讯员 高新博】在10月29日至11月2日在深圳召开的2007年国际基因组学大会（The 2007 International Conference on Genomics）上，清华大学深圳研究生院派出35名志愿者对会议进行了志愿服务。大会在深圳大梅沙喜来登酒店举行，由深圳市......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231947437125258/20110225231947437125258_.html" target="_blank">深圳研究生院学生志愿者服务“2007国际...</a></h3>
+              <p class="thnews_jqzy">　　深圳研究生院学生志愿者服务“2007国际基因组学大会”【新闻中心讯 研通社通讯员 高新博】在10月29日至11月2日在深圳召开的2007年国际基因组学大会（The 2007 International Conference on Genomics）上，清华大学深圳研究生院派出35名志愿者对会议进行了志愿服务。大会在深圳大梅沙喜来登酒店举行，由深圳市......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225608125900986/20110225225608125900986_.html" target="_blank">“清华园外看北京”--生物系开展研究生新...</a></h3>
+              <p class="thnews_jqzy">　　“清华园外看北京”生物系开展研究生新生社会调研活动【新闻中心讯】从8月底至9月中旬，生物系研究生会组织2006级研究生新生开展了“清华园外看北京”社会调研活动，旨在让新生走出校园、熟悉北京、了解社会，同时增进新生之间的交流。作为强化新生素质教育的系列活动之一，生物系研究生会在新生入学时就对此次活动进行了大力宣传，得到了新生的热烈响应。58名同学分为七......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231641796555997/20110225231641796555997_.html" target="_blank">生物信息学重点实验室评估会召开</a></h3>
+              <p class="thnews_jqzy">　　教育部生物信息学重点实验室评估会召开8月25日至27日,教育部在生物系馆举行了生物信息学教育部重点实验室评估会。实验室主任王志新院士向评估专家组作了实验室工作报告，实验室部分教授作了学术报告。专家组对工作报告和学术报告进行了审议并到实验室进行了实地参观、考察。专家组对实验室的工作给予了较高评价，认为我校生物信息学教育部重点实验室的一些工作已经进入国际......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2003.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225619078594972/20110225225619078594972_.html" target="_blank">清华附中学生在2003年全国中学生生物学...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华附中学生在2003年全国中学生生物学联赛中获奖2003年全国中学生生物学联赛，于日前公布获奖名单，清华附中刘思颖等8名同学获二等奖；王育卉等13名同学获三等奖。 全国中学生生物学联赛、竞赛是在教育部基础教育司和中国科协青少年部的领导下，由全国中学生生物学竞赛委员会具体承办的。旨在激发高中学生学习生物学的兴趣，拓展学生的思维，促进学生个性......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2003.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225619296362167/20110225225619296362167_.html" target="_blank">清华附中学生在第20届全国中学生物理竞赛...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华附中学生在第20届全国中学生物理竞赛北京赛区复赛中获佳绩在日前举行的第20届全国中学生物理竞赛北京赛区复赛中，清华附中学生取得优异成绩，获奖名单如下：高三8班商震、曹杉获北京市一等奖，并取得2004年高等学校保送生资格。高三8班侯珏、刘巍荣获北京市二等奖。另有七名同学获北京市三等奖：高三6班陈吉堃和高三8班姚锴、赵雪梅、马汉男、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2003.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225619578472676/20110225225619578472676_.html" target="_blank">“中国高校学生NGO生物多样性保护”培训...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“中国高校学生NGO生物多样性保护”培训活动在我校举行11月12日上午,“中国高校学生NGO生物多样性保护”培训活动在我校举行，副校长胡东成出席了开幕式并致欢迎词。这是新世纪中国高校学生环保组织第一次，也是规模最大的聚会。来自全国23家高校的40多名学生环保社团骨干相聚北京，与专家、学者及政府官员一起探讨中国生物多样性保护的问题，并向全社会发出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2003.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225620218603098/20110225225620218603098_.html" target="_blank">清华附中学生在第20届全国中学生物理竞赛...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华附中学生在第20届全国中学生物理竞赛北京赛区预赛中获佳绩在日前举行的第20届全国中学生物理竞赛北京赛区（实验中学杯）预赛中，清华附中参赛学生，有4人获一等奖（高0108班商震、曹杉；高0107班陈硕；高0106班陈吉堃）；6人获二等奖（高0108班白云鹿、黄诗萌、侯珏、姚锴、齐玉琛、赵雪梅）；此外，刘巍等21名同学获三等奖。获奖学生的辅......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225621500633475/20110225225621500633475_.html" target="_blank">“SARS病毒基因芯片检测技术临床应用清...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“SARS病毒基因芯片检测技术临床应用清华大学志愿者行动”举行6月21日，我校近200名师生志愿参加了在校医院举行的“SARS病毒基因芯片检测技术临床应用清华大学志愿者行动”，他们捐献血样、痰样并接受了胸透检查。这是北京非典疫情爆发以来，我校师生参加的第三次为抗击非典的科技攻关工作提供检测样品的志愿行动。此次志愿者行动提供的样品将用于SAR......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231356140529354/20110225231356140529354_.html" target="_blank">ＳＡＲＳ病毒生物信息学研究获进展</a></h3>
+              <p class="thnews_jqzy">　　Untitled DocumentＳＡＲＳ病毒生物信息学研究获进展《科学时报》 2003-06-10本报讯 近一个月以来，清华大学生物系教授孙之荣等通过艰苦努力，在ＳＡＲＳ冠状病毒的全基因组和蛋白质组研究方面取得进展，得到了一系列重要结果。这对于进一步阐明非典病毒特性、发病机制及疫苗、新药的研究，具有重要的指导意义。研究人员利用生物信息学手段，对ＳＡ......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231346125566901/20110225231346125566901_.html" target="_blank">清华大学成功开发基因工程法合成可降解聚酯</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学成功开发基因工程法合成可降解聚酯广东信息网 2003.5.12清华大学陈国强及其合作者在国家自然科学基金资助下，通过开展高分子科学、化工和微生物等学科的交叉研究，在世界上成功开发出基因工程法合成可降解聚酯的新方法，并获得了性能优异的新型可降解聚酯３－羟基丁酸与３－羟基己酸的共聚物（ＰＨＢＨＨｘ），成果获得２００１......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225622906106938/20110225225622906106938_.html" target="_blank">为科学战胜“非典”贡献力量：母亲节献给妈...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档为科学战胜“非典”贡献力量：母亲节献给妈妈的最好礼物——清华大学志愿者参加SARS病毒生物芯片检测临床试验行动侧记雨过天晴，清华园空气清新，万木葱茏，显得格外美丽。5月11日一大早，天气还略带寒意。校团委门前便排起了长长的队伍。同学们领表、填表、验痰、采血、胸透……，在校红十字会同学的引导下，一切程序进行的有条不紊。这是我校志愿者在参与......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231339312996784/20110225231339312996784_.html" target="_blank">我国基因工程法合成可降解聚酯取得突破</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我国基因工程法合成可降解聚酯取得突破化工在线 2003年4月28日清华大学陈国强及其合作者在国家自然科学基金资助下，通过开展高分子科学、化工和微生物等学科的交叉研究，在世界上成功发展了基因工程法合成可降解聚酯的新方法，并获得了性能优异的新型可降解聚酯３－羟基丁酸与３－羟基己酸的共聚物（ＰＨＢＨＨｘ），成果获得２００１年北......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2002.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231304968859100/20110225231304968859100_.html" target="_blank">我校生物信息学教育部重点实验室成立</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校生物信息学教育部重点实验室成立6月27日，清华大学生物信息学教育部重点实验室成立大会暨学术报告会在我校生命科学楼报告厅举行。国家教育部、科技部、国家自然科学基金委有关领导、我校副校长龚克、北京大学副校长迟惠生、相关领域的多位院士、专家，以及生命学院、信息学院的老师和同学近100人出席了大会。传统的生物学是以观察和实验为主的科学。但近年来......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2002.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231304265308058/20110225231304265308058_.html" target="_blank">华裔科学家披露最新研究：基因疗法防艾滋</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document华裔科学家披露最新研究：基因疗法防艾滋(北京晨报 2002年06月20日)晨报讯(记者廖厚才)“我正在从事用基因疗法预防艾滋病的最新研究，以低成本的治疗使更多发展中国家受益。”日前，在清华大学诺贝尔奖大师云集的前沿国际科学研讨会上，艾滋病鸡尾酒疗法发明人、美籍华裔科学家何大一说，不断深入的科学研究为人类终止艾滋病这一全球......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2002.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231249656380886/20110225231249656380886_.html" target="_blank">湖南正虹公司将与我校生物系合作开发基因疫苗</a></h3>
+              <p class="thnews_jqzy">　　无标题文档湖南正虹公司将与我校生物系合作开发基因疫苗3月5日上午10：00，在生命科学馆3楼会议室举行了湖南正虹科技发展股份有限公司与我校生物科学与技术系关于合作开发基因疫苗协议签字仪式。参加签字仪式的有我校副校长岑章志，湖南正虹公司董事长、总裁吴明夏，我校科技开发部副主任张凤桐，科技处副处长张华堂，正虹公司副总裁翁观社等。我校生物系段明星教授将出任该项......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225625187291898/20110225225625187291898_.html" target="_blank">第三届生物知识竞赛决赛举行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档第三届生物知识竞赛决赛举行12月7日晚，&quot;清华大学第三届生物知识竞赛&quot;在蒙民伟楼多功能厅举行决赛，至此，这场从10月1日开始，影响力覆盖全校各院系并波及北大、北理、人大、北外、农大等院校的大型活动落下帷幕。经过11月24的复赛，决出了seetee、快乐基因、三人行、菜鸟直指第一、fantasy、苏中沃尔夫等6支队伍进入决......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231237703466678/20110225231237703466678_.html" target="_blank">“生物芯”：缘何让人刮目相看</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“生物芯”：缘何让人刮目相看人民网 2001年9月25日新华社记者 李斌 国内生物芯片公司几乎遍地开花之际，生物芯片北京国家工程研究中心今天举行的奠基仪式，却仍引起舆论普遍关注。缘何如此？记者就此进行了采访。首先是因为生物芯片是一项新兴的革命性技术。生物芯片是一种微小固体器件，包括样品制备芯片、生化反应芯片、基因芯片......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231230328270427/20110225231230328270427_.html" target="_blank">东阿阿胶投资北京博奥生物芯片公司</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document东阿阿胶投资北京博奥生物芯片公司光明日报 2001-06-15本报讯（记者赵秋丽通讯员吴延华）日前，东阿阿胶股份有限公司与北京清华大学企业集团等9家单位共同签署了北京博奥生物芯片有限责任公司的增资协议。该公司拟出资2500万元人民币入主博奥生物芯片公司，在按出资比例分享收益的同时，可优先有偿占有北京博奥公司这个生物芯片国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231220875863877/20110225231220875863877_.html" target="_blank">陈竺院士应邀作人类基因组研究的报告</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document陈竺院士应邀作人类基因组研究的报告4月28日上午，应我校生命科学与工程研究院赵南明院长的邀请，我校90周年校庆特邀嘉宾、中国科学院副院长陈竺院士和上海第二医科大学附属瑞金医院血液学研究所副所长陈赛娟教授，在我校图书馆报告厅分别做了题为"人类基因组研究的进展及前景"和"急性早幼粒细胞白血病诱导分化疗法——基因产物靶向治疗的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231219875138534/20110225231219875138534_.html" target="_blank">清华首创多项生物芯片技术</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华首创多项生物芯片技术(2001.04.28 新华网)新华网北京4月28日电 2000年2月29日是我国生物芯片领域的一个值得纪念的日子，清华大学程京博士应邀到中南海为国务院办公厅举办的第十次科技讲座汇报时，向国家领导人提出建议：“希望国家采取倾斜政策，从国内外抽调、招聘一批从事生物芯片研究的科技人才，在北京中关村组建......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231216562767833/20110225231216562767833_.html" target="_blank">中鲁：向海洋生物制药又迈一步</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document中鲁：向海洋生物制药又迈一步(2001.04.24 新华网)新华网消息 据中国证券报4月24日报 中鲁B（2992）进军海洋生物制药的步伐明显加快，4月15日，公司与清华大学在北京正式签署合作协议，双方将联合在青岛建立“清华－中鲁海洋生物技术研究所”。该所将借助清华大学在海洋生物技术方面的优势，从事海洋生物科技与技术的研......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231215421304005/20110225231215421304005_.html" target="_blank">清华中鲁海洋生物技术研究所建立</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华中鲁海洋生物技术研究所建立(2001.04.19 新华网)新华网济南４月１９日电（记者张晓晶）山东中鲁远洋渔业股份有限公司与清华大学日前正式签署协议，联合建立“清华中鲁海洋生物技术研究所”。据了解，双方的合作内容包括，山东中鲁远洋渔业股份有限公司和清华大学投资500万元，发挥各自在海洋资源和生物技术方面的优势，在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231212781843028/20110225231212781843028_.html" target="_blank">生物芯片将怎样改变我们的生活</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document生物芯片将怎样改变我们的生活◆清华大学生物芯片研究中心主任　程京（光明日报 2001年4月9日）生物芯片已成为热点生物芯片（又称DNA芯片、基因芯片）技术是20世纪90年代初半导 体技术和生物技术“联姻”的结晶，由于它可能形成巨大产业，自然 就成了国际科研的热点。生物芯片有很多种，包括基因芯片、蛋白质芯片、多......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2001.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231207343917667/20110225231207343917667_.html" target="_blank">我校科研成果被列为2000年中国十大科技...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我校科研成果被列为2000年中国十大科技新闻和十大科技进展新闻（戈平华）【本站1月9日讯】1、"航天清华一号"微小卫星发射成功，被列为"2000年中国十大科技新闻"。"航天清华一号"微小卫星于2000年6月28日发射成功，目前运行良好，已发回大量照片。2、由我校程京教授等研制的电磁式生物芯片被列为"2000年中国十大科技......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

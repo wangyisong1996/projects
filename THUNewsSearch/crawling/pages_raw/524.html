@@ -1,0 +1,1098 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>梁思成先生诞辰一百周年纪念大会举行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225355000630113&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9648/index.html' class='navigation_style'>头条新闻</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><p align="center">追溯建筑大师梁思成的历史足迹 </p><h3 align="center">梁思成先生诞辰一百周年纪念大会举行</h3><p> 【新闻中心讯】记者 周襄楠 4月28日上午，建筑馆报告厅内座无虚席：建筑界的老前辈，中国建筑协会、北京市规划委员会等的代表，兄弟院校建筑院系的同仁，台湾、香港的朋友以及慕名而来的社会各界的朋友，还有年轻的莘莘学子，以及梁思成先生的亲属，大家都为一个共同的目的而来--纪念梁思成先生诞辰一百周年。我校建筑学院院长秦佑国教授主持了这次梁思成先生诞辰一百周年纪念大会，校党委副书记胡显章教授参加了会议。</p><p> 吴良镛院士首先在会上做了发言。他说，梁思成先生为近代中国建筑业的发展作出了不可磨灭的贡献，他是古建筑研究的先驱者之一，也是中国近代城市规划事业的推动者。"他能够取得如此巨大的贡献，这与他的家学渊源，以及坚实的国内外基础教育分不开，为了更好的向他们学习，我们还应从老一代学人身上发掘更深层的蕴藏。"今天我们纪念他，同时也是纪念他的夫人林徽因女士。吴教授还引用梁先生的话"道虽迩，不行不至；事虽小，不谋不成"来阐释学习梁先生的伟大而又现实的意义。</p><p> 美国宾夕法尼亚大学建筑学院院长Gary Hack教授也千里迢迢的赶来为纪念大会致辞。他回忆了梁先生在宾夕法尼亚大学的求学经历，并向我校建筑学院和图书馆赠送了礼物。中国建筑学会副理事长张祖刚代表建筑学会也向大会的召开表示祝贺，他说，梁先生是中国建筑学会的主要创始人之一，也是《建筑学报》的创始人，他积极促成中国建筑学会加入国际建筑师协会组织，为中国建筑学会作出了极大的贡献。北京市规划委员会副主任陈刚，东南大学建筑系主任王建国，华南理工大学建筑学院院长何镜堂，重庆大学建筑学院院长张兴国，哈尔滨工业大学建筑学院院长张伶伶也向大会致辞。</p><p> 随后，郑孝燮，罗哲文，袁镜身，莫伯治等梁先生生前的好友和学生做了纪念发言。会上还进行了第一届"梁思成"杯竞赛颁奖仪式，"梁思成先生生平展"也从今天开展。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月28日 11:40:17　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9666/2015/20151124152817413323718/20151124152817413323718_.html" target="_blank">清华学子歌咏纪念“一二·九”运动八十周年</a></h3>
+              <p>　　今年是中国人民抗日战争暨世界反法西斯战争胜利70周年，胜利日大阅兵威武雄壮，展现捍卫和平的决心；7万羽和平鸽飞向蓝天，寄托人们的美好希冀 。但还有一个日子容易被人们忽略，今年还是“一二·九”运动80周年。    　　11月19日，周四，时间已近晚上九点，清华大学法学院明理楼二楼的阶梯教室灯火通明，窗外寒风瑟瑟，教室里却有一种别样的热度。来自法学院和材料学院一百多名博士生和硕士生手拿着乐谱和歌词在练习唱歌，在今年学校研究生“一二·九”合唱比赛中他们组成了一个联队，12月6日那天，“法材联队”要和其他21支联队展开角逐。来自北京现代音乐学院的专业声乐老师王铮一字一句地教给同学们演唱本次参赛的曲目《追寻》。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151113094036764239211/20151113094036764239211_.html" target="_blank">朱佳木向清华大学校史馆赠送朱理治校友纪念...</a></h3>
+              <p>中华人民共和国国史学会会长、原中国社会科学院副院长兼当代中国研究所所长、我校杰出校友朱理治之子朱佳木，近日向我校校史馆赠送了5册朱理治纪念图书。朱理治，原名朱铭勋，1926年从江苏南通考入清华经济系学习，1927年加入中国共产党，同年11月任清华地下党支部书记，1928年因特务追捕而离开清华。后长期从事党的宣传、组织、军事政治、金融、物资、交通、经济计划等多方面的工作，曾任中共陕甘宁省委书记、东北银行总经理、交通部副部长、国家计委副主任、中共华北局书记处书记等。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151022160448422819096/20151022160448422819096_.html" target="_blank">清华举办纪念金岳霖先生诞辰120周年学术...</a></h3>
+              <p>　　10月17日至19日，纪念金岳霖先生诞辰120周年学术研讨会在清华大学举办。会议由清华大学和金岳霖学术基金会主办，来自国内各高校，美国、荷兰、日本、丹麦、挪威等大学的110名学者参会。    　　开幕式由清华大学教授刘奋荣主持。研讨会围绕着金岳霖的思想研究、当代哲学和逻辑学的发展、清华学派等主题展开学术交流，并公布了第六届金岳霖学术奖的评选结果。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150930151650317644674/20150930151650317644674_.html" target="_blank">清华师生烈士纪念日祭奠英烈</a></h3>
+              <p>9月30日清晨7点30分，由清华大学学生会发起的烈士纪念日祭奠英烈活动在“祖国儿女，清华英烈”纪念碑前举行。校团委书记邴浩等校团委负责人与部分师生手持白菊共同祭奠了英烈。师生们同时清扫、祭奠了“国立西南联合大学纪念碑”、“韦杰三君死难纪念碑”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2015/20150923120203978430167/20150923120203978430167_.html" target="_blank">清华学子多种方式纪念“九·一八”事变</a></h3>
+              <p>　　9月18日，在这个中国人民十四年抗战起始的纪念日，清华大学学生以多种方式开展纪念活动。    　　早上7点半，近三百名师生代表就自发汇集在清华园内的英烈纪念碑前。大家身着素装，集合于大礼堂，在校园讲解员的带领下，先后参观了大礼堂、图书馆与西大操场，观摩学校制作的宣传展，深入了解清华抗战历史，最后走到英烈纪念碑前全体默哀，并依次鞠躬、献上白菊，寄托哀思。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150921110352391788219/20150921110352391788219_.html" target="_blank">纪念抗战胜利70周年学生主题社会实践论坛...</a></h3>
+              <p>9月18日下午，在十四年抗战起始的纪念日，清华大学“纪念抗战胜利70周年”主题实践论坛暨爱国主义教育实践基地签约仪式在清华大学校史馆举行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150907164039669749842/20150907164039669749842_.html" target="_blank">清华31位老同志荣获抗战胜利70周年纪念章</a></h3>
+              <p>今年是纪念中国人民抗日战争胜利暨世界反法西斯战争胜利70周年，清华大学共有31位1945年9月2日之前参加革命工作的离休干部、老战士、老同志获得了由中共中央、国务院、中央军委颁发的“中国人民抗日战争胜利70周年纪念章”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150906170240991874409/20150906170240991874409_.html" target="_blank">清华学子暑期实践纪念抗战胜利70周年</a></h3>
+              <p>　　昨天上午，纪念中国人民抗日战争暨世界反法西斯战争胜利70周年阅兵式在北京举行。70年前的苦难辉煌，民族精神的凝聚传承，值得我们每一个中国人铭记。就在即将过去的这个暑假，一批清华学子怀着对这段历史、这份精神的崇敬，开展了以纪念抗战胜利70周年为主题的社会实践活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150901153543912658760/20150901153543912658760_.html" target="_blank">【图说抗战二】辗转西南，离乱弦歌不辍</a></h3>
+              <p>1937年7月7日，卢沟桥事变爆发。日寇进逼，平津沦陷。为保存文化火种，清华、北大、南开三校于8月南迁长沙，组成长沙临时大学，10月25日临大开学，11月1日正式上课。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150901150057754805004/20150901150057754805004_.html" target="_blank">【图说抗战一】热血激昂，担负天下兴亡</a></h3>
+              <p>1931年，日本帝国主义悍然发动“九·一八”事变。清华师生立即行动起来，以多种形式支援抗日救亡。一些学生投笔从戎走上抗日前线，并献出了自己年轻宝贵的生命。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150901133552637761692/20150901133552637761692_.html" target="_blank">【抗战纪念】投身抗战前线的西南联大学子</a></h3>
+              <p>在那个硝烟弥漫的年代，“一寸山河一寸血，十万青年十万军”，激励着无数知识青年。1943年，中国远征军、驻印军厉兵秣马反攻缅甸，急需大量懂英语的知识青年入伍，大后方的西南联大学子纷纷响应投笔从戎，用他们的青春热血，捍卫了国家的尊严，维护了民族的独立。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150901103442446207026/20150901103442446207026_.html" target="_blank">【抗战纪念】叶继纲：抗战那些年</a></h3>
+              <p>我的老家在广东惠阳县镇隆镇大山下村，那里本来有一间很大的祖屋，我家的房子就在祖屋大门旁边。我的父亲原先在粤汉铁路当职员。抗战时期，惠阳沦陷前后，日军飞机来袭，炸死了我们一个同乡，我的家也被日军烧毁，只剩下靠后的一间小房子，生活也开始变得艰难。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150828152620808292681/20150828152620808292681_.html" target="_blank">【抗战纪念】湖北校友会慰问抗战老兵陈畅吾...</a></h3>
+              <p>8月25日下午，受清华校友总会委托，清华大学湖北省校友会一行在纪念抗战胜利七十周年前夕，来到武汉看望并采访了参加过抗战的清华校友，1944级航空系老学长陈畅吾。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150828151109428438247/20150828151109428438247_.html" target="_blank">【抗战纪念】香港清华同学会访问抗日老兵王...</a></h3>
+              <p>8月25日正直抗日战争胜利70周年纪念日前夕，清华校友总会委托香港清华同学会访问抗日老兵王忠诗学长。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150828145127349474753/20150828145127349474753_.html" target="_blank">【抗战纪念】校友总会看望抗战老兵王伯惠学长</a></h3>
+              <p>8月27日，清华校友总会一行3人与沈阳校友会副秘书长马德禄学长一起，在沈阳看望并采访了原中国驻印军抗战老兵、西南联大土木工程系老校友王伯惠，同时为他带去清华大学校史馆为其颁发的捐赠纪念证书，以感谢王老学长之前向校史馆捐赠的珍贵纪念物——中国驻印军在1944年3月缅北孟关大捷中缴获的日本法西斯侵缅军第十八师团关防大印的复印件。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150818134327256869505/20150818134327256869505_.html" target="_blank">清华等两岸三地高校大学生纪念抗战胜利七十...</a></h3>
+              <p>8月16日上午，云集两岸十二所高校大学生的“两岸同心·三地同行”大学生志愿者实践支队在沈阳举行了纪念中国人民抗日战争胜利七十周年活动。支队前往沈阳“九·一八”历史博物馆参观，并举行座谈会。这次纪念活动由共青团清华大学委员会和共青团沈阳市委员会共同举办。清华大学团委副书记邴浩，沈阳团市委副书记吴波、张德，抗美援朝志愿军老战士马世勋、李维波、宁殿云等出席本次活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150707093033601879593/20150707093033601879593_.html" target="_blank">张斌在纪念中国共产党成立94周年大会上的...</a></h3>
+              <p>作为研究生党员，我一直在科研上努力争先。我博士研究的课题是PM2.5与气候变化之间的相互影响，是全球变化研究的热点和难点，需要谙熟环境、气象、化学、计算机等多个领域的知识。我本科毕业于环境学院，开展如此多学科交叉的研究面临着重重困难。然而我没有畏惧，通过大量阅读文献、自学气象知识和自学编程等方式一步一个脚印，夯实基础。我很庆幸能够就读于地学中心这样一个重视学术交叉、鼓励创新的年轻院系，在这里我得到大气科学、生态遥感乃至计算机科学多名专家学者的指点，逐步掌握了地球系统模式的研究分析方法，在此基础上，我将环境领域的化学模型和气象领域的大气模型相耦合，定量化地模拟了PM2.5和气候变化之间的相互影响。经过不懈的努力，取得了阶段性的科研成果：在研究领域顶级期刊《大气化学和物理》上发表SCI论文一篇，在投SCI论文三篇；多次在本领域顶级会议进行展示。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141217104109872296358/20141217104109872296358_.html" target="_blank">清华纪念首个南京大屠杀死难者国家公祭日</a></h3>
+              <p>12月13日是首个南京大屠杀死难者国家公祭日。上午10时，南京大屠杀死难者国家公祭仪式在侵华日军南京大屠杀遇难同胞纪念馆举行，中共中央总书记、国家主席、中央军委主席习近平出席了公祭仪式并发表重要讲话。在工字厅东厅，校党委书记陈旭，校党委副书记邓卫，参加过抗日战争的老战士、校离休干部李从生、苏佑臣，以及教师代表、学生代表近30人集中收看南京大屠杀死难者国家公祭仪式直播。收看直播过程中，与会师生神情肃穆，当宣布公祭仪式正式开始，《中华人民共和国国歌》奏响时，大家全体起立，齐唱国歌，并向南京大屠杀死难者默哀。直播结束后，与会师生结合学习习近平总书记重要讲话精神和自身实际交流了收看国家公祭仪式的感受与体会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141215163704948989077/20141215163704948989077_.html" target="_blank">张黎、杨伯江等做客文新论坛共话纪念南京大...</a></h3>
+              <p>12月13日，正值我国首个南京大屠杀死难者国家公祭日，导演张黎、中国社会科学院日本研究所副所长杨伯江、北京大学艺术学院副教授陈宇、演员杨歆怡做客文新论坛，共话如何铭记南京大屠杀。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9665/2014/20141203130136720391291/20141203130136720391291_.html" target="_blank">清华学子开展“一二·九”主题纪念品义卖活动</a></h3>
+              <p>12月1日，天气异常寒冷，寒风吹红每个人的脸颊、耳根，而此时此刻，建31的同学们正在紫荆园餐厅门口布置场地，他们这两周以来的劳动成果今天就将为这个寒冷的冬天带来些许温暖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140930152135332119752/20140930152135332119752_.html" target="_blank">在清华园见证我国第一个烈士纪念日</a></h3>
+              <p>清晨，在微凉的晨露中，我们庄严肃穆，手捧白菊，在“祖国儿女，清华英烈”纪念碑前，深切缅怀为祖国的繁荣昌盛和人民的安定幸福抛头颅洒热血的英烈们。此刻，身边是这样的庄严肃穆，但是我的内心，已经回到了战火纷飞的那一刻——在纪念碑上铭刻着的每一个名字，都是热血的化身和希望的指引。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140930112647035774183/20140930112647035774183_.html" target="_blank">清华大学师生烈士纪念日集体缅怀英烈</a></h3>
+              <p>9月30日是我国首个烈士纪念日。清早，上百名清华师生聚集到“祖国儿女 清华英烈”纪念碑前，深切缅怀烈士们的丰功伟绩，弘扬烈士精神。清华大学校长陈吉宁，校党委书记陈旭，副校长袁驷，校党委副书记史宗恺、邓卫，副校长姜胜耀、薛其坤、吉俊民以及校长助理、研究生院院长杨斌等参加了缅怀活动，向英烈碑敬献鲜花并鞠躬致敬。史宗恺主持活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9652/2014/20140905172043203174307/20140905172043203174307_.html" target="_blank">抗日战争胜利纪念日版画特展</a></h3>
+              <p>由清华大学美术学院、北京鲁迅博物馆联合主办，美术学院绘画系承办的“胜利——首次9.3中国人民抗日战争胜利纪念日抗战版画（鲁迅博物馆藏）特展”于9月3日在清华大学美术学院美术馆开幕。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131106150137970698180/20131106150137970698180_.html" target="_blank">纪念蒋南翔同志诞辰100周年座谈会在京举...</a></h3>
+              <p class="thnews_jqzy">　　纪念蒋南翔同志诞辰100周年座谈会在京举行 刘延东出席并讲话来源：新华网 2013-11-5 吴晶纪念蒋南翔同志诞辰100周年座谈会5日在京举行。中共中央政治局委员、国务院副总理刘延东出席座谈会并讲话。蒋南翔同志是忠诚的共产主义战士、无产阶级革命家、马克思主义教育家、我国青年运动的杰出领导者，曾任清华大学校长和党委书记、天津市委书记、教育部部长、中央......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131010135648109327492/20131010135648109327492_.html" target="_blank">蒋南翔诞辰百年研讨会之六：“蒋南翔教育思...</a></h3>
+              <p class="thnews_jqzy">　　清华举行纪念蒋南翔诞辰100周年系列研讨会之六&nbsp;&mdash;&mdash;&ldquo;蒋南翔教育思想研究与实践&rdquo;清华新闻网10月10日电（记者黄岩通讯员刘超）10月9日，蒋南翔教育思想研究与实践研讨会在清华大学丙所会议室召开。副校长谢维和出席会议并讲话，校党委副书记邓卫主持会议。学校老领导顾秉林、胡显章、余寿文、胡东成、孙道祥参......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131009110703761490109/20131009110703761490109_.html" target="_blank">清华5名志愿者参与向人民英雄纪念碑敬献花...</a></h3>
+              <p class="thnews_jqzy">　　清华5名志愿者参与向人民英雄纪念碑敬献花篮活动&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网10月8日电（通讯员苏裴）在中华人民共和国成立64周年纪念日之际，10月1日上午10时许，&ldquo;向人民英雄纪念碑敬献花篮&rdquo;活动在天安门广场举行，清华大学紫荆志愿者服务总队作为北京市&ldquo;身边......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130918152517207762008/20130918152517207762008_.html" target="_blank">清华学子于英烈碑前纪念“九一八”事变</a></h3>
+              <p class="thnews_jqzy">　　勿忘旧耻志兴邦&nbsp; 牢记使命奋自强清华学子于英烈碑前纪念&ldquo;九一八&rdquo;事变清华新闻网9月18日电（研通社记者刘明明 朱昌龙 陈苏 黄蔚）位于大礼堂西侧的清华英烈纪念碑，在淅淅沥沥的秋雨中，显得格外庄重。清晨6时许，清华大学&ldquo;飞行学员班&rdquo;全体96位学员就来到纪念碑前敬献花篮，缅怀&ldquo;九一八&rd......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130629173235346394533/20130629173235346394533_.html" target="_blank">清华大学纪念中国共产党成立92周年暨表彰...</a></h3>
+              <p>6月28日，清华大学纪念中国共产党成立92周年暨表彰大会举行，校党委书记胡和平讲话。会议表彰了47个先进党支部、101名优秀共产党员、60名优秀党建与思想政治工作者和8名从事党务工作三十年以上的党务工作者，并举行了新入党党员宣誓。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130625162323558760471/20130625162323558760471_.html" target="_blank">清华举行林家翘先生追思会 揭幕林家翘纪念...</a></h3>
+              <p class="thnews_jqzy">　　清华举行林家翘先生追思会 揭幕林家翘纪念铜像&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网6月25日电（记者范 丽）6月24日上午，国际公认的力学和应用数学权威、天体物理学家，美国国家科学院院士、美国国家艺术和科学院院士、中国科学院外籍院士，清华大学教授、周培源应用数学研究中心名誉主任林家翘先生追思会在清华大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130505162105318707506/20130505162105318707506_.html" target="_blank">台清华纪念马约翰　两岸清华体育教育先行者</a></h3>
+              <p class="thnews_jqzy">　　台清华纪念马约翰　两岸清华体育教育先行者来源：中评社 2013-5-4 黄文杰台湾新竹清华大学3日举办&ldquo;马约翰教授纪念座谈会&rdquo;，现任北京体育大学教授马迅，来台分享并缅怀祖父生前推动体育的热情。马约翰教授为著名体育家，体育教育的先行者，北京清华创校初期，体育并未列入正式课程，直到马约翰担任体育部主任才开始。清华校训&ldquo;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130505153339444812605/20130505153339444812605_.html" target="_blank">吴良镛：新中国成立后第一丰碑设计建造中的...</a></h3>
+              <p class="thnews_jqzy">　　新中国成立后第一丰碑设计建造中的故事&mdash;&mdash;写于人民英雄纪念碑落成55周年之际来源：光明日报 2013-5-2 吴良镛1950年底，我自美国留学归国，1951年初即随梁思成先生参加一些会议和工作，人民英雄纪念碑就是其中的一项。关于这件事的具体情况，1978年人民英雄纪念碑落成20周年时，我曾经写了一篇介绍文章（《人民英雄纪念碑的创作成......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130428202332590964143/20130428202332590964143_.html" target="_blank">清华大学召开1999级校友毕业十周年纪念...</a></h3>
+              <p class="thnews_jqzy">　　清华大学召开1999级校友毕业十周年纪念大会清华新闻网4月28日电（记者王冰冰）4月28日下午，清华大学1999级校友毕业十周年纪念大会在主楼后厅举行。清华大学校党委常务副书记陈旭、原校长王大中出席活动并致辞。图为陈旭讲话。学生记者王皓冉摄陈旭在大会上致辞。她代表学校向校庆之际返校相聚的1999级校友表示热烈欢迎。她首先介绍了学校新百年来的发展近况，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121225094202468719370/20121225094202468719370_.html" target="_blank">清华大学文理大师顾毓琇先生纪念展闭幕</a></h3>
+              <p class="thnews_jqzy">　　清华大学&ldquo;文理大师顾毓琇先生纪念展&rdquo;闭幕清华新闻网12月25日电（通讯员王 瑶） 12月23日，为期3周的清华大学&ldquo;文理大师顾毓琇先生纪念展&rdquo;在文科图书馆4层闭幕。校党委书记胡和平，党委常务副书记陈旭，顾毓琇先生之子顾慰庆、之孙顾宜凡出席闭展仪式并参观了展览。图为胡和平参观纪念展。研通社记者王皓冉摄本次......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121212143420205349583/20121212143420205349583_.html" target="_blank">厦门纪念马约翰诞辰130周年</a></h3>
+              <p class="thnews_jqzy">　　厦门纪念马约翰诞辰130周年来源：福建日报 2012-12-11 周思明为纪念现代体育先驱马约翰诞辰130周年，9日，厦门马约翰纪念馆、马约翰体育场在鼓浪屿隆重揭牌，马约翰铜像也同时揭幕。马约翰1882年出生于厦门市鼓浪屿，1911年毕业于圣约翰大学。由于具有突出的运动才能，他于1914年秋季应聘到清华学校任教，并逐步升为教授，担任清华大学体育部主任......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121212114536129223814/20121212114536129223814_.html" target="_blank">清华纪念马约翰诞辰130周年系列活动在厦...</a></h3>
+              <p>12月8-9日，清华大学与厦门市政府在厦门共同举办马约翰诞辰130周年系列纪念活动。活动包括纪念马约翰诞辰130周年座谈会、纪念马约翰足球邀请赛、马约翰纪念馆开馆仪式、马约翰铜像揭幕仪式，以及马约翰体育场挂牌仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9905/2012/20121129132909423922493/20121129132909423922493_.html" target="_blank">吴邦国为马约翰纪念馆题字</a></h3>
+              <p class="thnews_jqzy">　　吴邦国为马约翰纪念馆题字来源：厦门日报 2012-11-29 陈泥今年是出生于鼓浪屿的著名人民体育教育家马约翰诞辰130周年，清华大学和厦门市政府将于12月8日联合举行系列纪念活动。作为活动&ldquo;重头戏&rdquo;之一，将在当日揭牌的&ldquo;马约翰纪念馆&rdquo;装修、布展已基本完成，记者昨日从市政府办公厅了解到，全国人大常委会委员长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121105114428459737800/20121105114428459737800_.html" target="_blank">西南联大建校75周年纪念大会在清华大学举行</a></h3>
+              <p>11月3日上午，西南联合大学建校75周年纪念大会在清华大学主楼举行。清华大学校长陈吉宁出席大会。近80位西南联大老校友及家属，以及150余名清华大学、北京大学、南开大学、云南师范大学师生代表参加大会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121029141800060831875/20121029141800060831875_.html" target="_blank">蒙民伟音乐厅倾情演出“蒙民伟先生纪念音乐...</a></h3>
+              <p class="thnews_jqzy">　　蒙民伟音乐厅倾情演出&ldquo;蒙民伟先生纪念音乐会&rdquo;清华新闻网10月29日电（记者赵姝婧）10月27日晚，&ldquo;蒙民伟先生纪念音乐会&rdquo;在清华大学蒙民伟音乐厅演出，校长陈吉宁、党委副书记韩景阳、党委副书记邓卫、学校老领导、校友总会第七届理事会部分成员和蒙民伟夫人蒙王蓓芬、女儿蒙珮儿等出席并观看演出。图为陈吉宁致辞。王建一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2011.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232613218771409/20110225232613218771409_.html" target="_blank">刘达同志诞辰百周年纪念座谈会在清华举行</a></h3>
+              <p class="thnews_jqzy">　　领导清华拨乱反正 生前最恋清华精神刘达同志诞辰百周年纪念座谈会在清华举行【新闻中心讯 记者 胡齐明 摄影 郭海军】1月11日下午，刘达同志诞辰百周年纪念座谈会在清华工字厅东厅举行。清华大学校长顾秉林院士，学校老领导方惠坚、贺美英、滕藤、解沛基、张思敬、黄圣伦、庄丽君，刘达的儿子、孙女，刘达生前的同事及清华大学师生等出席了座谈会，共同缅怀这位清华老校长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2009.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225333750734516/20110225225333750734516_.html" target="_blank">清华大学学生会成立九十周年纪念大会举行</a></h3>
+              <p class="thnews_jqzy">　　清华大学学生会成立九十周年纪念大会举行【新闻中心讯 学生通讯员 何雪冰 摄影 崔凯 常志东】12月19日上午，室外寒流涌动，清华主楼报告厅内却座无虚席、暖意融融。33位历届清华大学学生会主席、14位历届学生会秘书长、141位曾在学生会担任过主要干部的新老校友从四面八方专程赶来，欢聚一堂，与各院系的现任学生会主席和学生代表们共同纪念清华大学学生会成立九十周......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2009.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232402093957213/20110225232402093957213_.html" target="_blank">清华大学学生会成立九十周年纪念大会举行</a></h3>
+              <p class="thnews_jqzy">　　清华大学学生会成立九十周年纪念大会举行【新闻中心讯 学生通讯员 何雪冰 摄影 崔凯 常志东】12月19日上午，室外寒流涌动，清华主楼报告厅内却座无虚席、暖意融融。33位历届清华大学学生会主席、14位历届学生会秘书长、141位曾在学生会担任过主要干部的新老校友从四面八方专程赶来，欢聚一堂，与各院系的现任学生会主席和学生代表们共同纪念清华大学学生会成立九十周......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2009.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232357484653136/20110225232357484653136_.html" target="_blank">清华大学《清园春华》电视栏目百期纪念座谈...</a></h3>
+              <p class="thnews_jqzy">　　清华大学《清园春华》电视栏目百期纪念座谈会召开【新闻中心讯】12月4日上午，清华大学《清园春华》电视栏目百期纪念座谈会在老年活动中心多功能厅召开。清华大学党委常务副书记、副校长、离退休工作领导小组组长陈旭出席并讲话。她充分肯定了《清园春华》栏目创办以来取得的成绩，希望相关部门认真总结经验，进一步发挥该电视栏目的作用，更好地服务离退休教职工，不断提高清华离......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2009.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232347156857965/20110225232347156857965_.html" target="_blank">清华大学成立中国营造学社纪念馆</a></h3>
+              <p class="thnews_jqzy">　　清华大学成立中国营造学社纪念馆【新闻中心讯】11月7日，清华大学建筑学院宣布成立中国营造学社纪念馆，并于当天举行了开馆仪式。原学社成员罗哲文先生和王世襄先生任名誉馆长，清华大学建筑学院建筑历史与文物保护研究所所长王贵祥教授任馆长。建筑学院院长朱文一为王贵祥教授颁发了中国营造学社纪念馆馆长证书。建筑学院院长朱文一（左）为王贵祥教授颁发中国营造学社纪念馆馆长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2009.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232341625863531/20110225232341625863531_.html" target="_blank">唐国安纪念学校暨唐国安纪念馆奠基</a></h3>
+              <p class="thnews_jqzy">　　唐国安纪念学校暨唐国安纪念馆奠基珠海市唐国安纪念学校暨唐国安纪念馆奠基典礼（你好台湾网图）10月24日秋阳高照，唐国安的家乡唐家湾鸡山村锣鼓喧天，热闹非凡。唐国安纪念学校暨唐国安纪念馆举行奠基开工典礼，建成后的校园将秉承清华大学红区建筑风格，整体大气和沉稳，预计于2010年8月竣工。参加庆典的嘉宾有清华大学党委副书记韩景阳，出席仪式的市领导有黄晓东、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2009.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232301250779766/20110225232301250779766_.html" target="_blank">珠海将建唐国安纪念馆 修缮方案正在完善</a></h3>
+              <p class="thnews_jqzy">　　珠海将建唐国安纪念馆 修缮方案正在完善　近年来，随着清华大学百年校庆的日益临近，珠海历史名人、清华学校第一任校长唐国安的故居保护问题，引起了包括国内外专家学者和无数清华学子在内的社会各界的强烈关注。记者近日获悉，唐国安故居即将开始修缮，并将建设唐国安纪念馆，目前正在完善有关方案。“唐国安故居修缮保护正式提上日程，我感到非常高兴！”曾提交引起高度重视的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232231281807165/20110225232231281807165_.html" target="_blank">林徽因在国徽设计中的探索与追求</a></h3>
+              <p class="thnews_jqzy">　　林徽因在国徽和人民英雄纪念碑设计中对民族形式的探索与追求林徽因是我国杰出的建筑师，探索中国建筑的民族形式是她一生的追求。新中国成立后，林徽因参与了中华人民共和国国徽和人民英雄纪念碑的设计，并且在设计过程中作出了重大贡献，完成了她探索中国建筑民族形式的实践，体现出了不可替代的中国风格和中国气魄。1927～1937年，近代中国的建筑学理论探索进入发展兴盛......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225559515188361/20110225225559515188361_.html" target="_blank">校学生会举办澳门回归九周年纪念活动</a></h3>
+              <p class="thnews_jqzy">　　校学生会举办澳门回归九周年纪念活动【新闻中心讯 学生通讯员 安琪】12月19日中午，由清华大学学生会澳门组主办的澳门回归纪念嘉年华活动在紫荆学生综合服务楼前开展。本次嘉年华由一系列游戏、抽奖、表演节目等娱乐性十足的环节组成，现场为参与同学准备了澳门特色食品、纪念币套装等小礼物。主办方介绍，在活动前两天已经开通了短信平台，同学可以发送信息回答一些有关澳......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232216968198845/20110225232216968198845_.html" target="_blank">清华主干道重现纸鹤 师生烛光追思钱钟书</a></h3>
+              <p class="thnews_jqzy">　　清华主干道重现纸鹤 师生烛光追思钱钟书【新闻中心讯 学生通讯员李涵摄影 郭海军】如同十年前钱钟书先生辞世的那天，12月19日，清华大学主干道上挂满了千千纸鹤，寄托浓浓哀思，当晚师生们还在清华大礼堂的日晷前向先生相片敬献白菊，点燃蜡烛进行追思。为纪念钱钟书先生逝世十周年，清华师生举办系列纪念活动，12月19日，“钱钟书先生逝世十周年追思活动”在全校范围......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225335453243153/20110225225335453243153_.html" target="_blank">清华大学解放60周年纪念大会召开</a></h3>
+              <p class="thnews_jqzy">　　皓首追忆弦歌岁月 白发共叙解放征程清华大学解放60周年纪念大会召开【新闻中心讯 记者 张莞昀 摄影 郭海军】12月13日，清华大学主楼报告厅，300余名白发老人共唱一曲“毕业歌”，拉开了清华大学解放60周年纪念大会的序幕。当年地下党领导王汉斌、彭珮云、李晨、许京骐、何东昌、王浒，学校老领导方惠坚、贺美英、汪家镠、滕藤、解沛基、张思敬，1947、194......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232213531901010/20110225232213531901010_.html" target="_blank">60年不老的心灵—清华解放60周年纪念大...</a></h3>
+              <p class="thnews_jqzy">　　60年不老的心灵清华大学解放60周年纪念大会侧记学生记者 连慧阳 赵志冰 苏鹏霁初入会场，在主楼高大穹顶的大厅里，有一群两鬓斑白的老人。虽然他们中有的拄着拐杖，有的由工作人员搀扶着，但他们的脸上却洋溢着年轻人都难以比拟的笑容----他们就是前来参加清华大学解放六十周年纪念的1948至1952级校友。阔别多年，重返母校，而且是在如此特别的日子里，老人们显得......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232213375566430/20110225232213375566430_.html" target="_blank">清华大学解放60周年纪念大会召开</a></h3>
+              <p class="thnews_jqzy">　　皓首追忆弦歌岁月 白发共叙解放征程清华大学解放60周年纪念大会召开【新闻中心讯 记者 张莞昀 摄影 郭海军】12月13日，清华大学主楼报告厅，300余名白发老人共唱一曲“毕业歌”，拉开了清华大学解放60周年纪念大会的序幕。当年地下党领导王汉斌、彭珮云、李晨、许京骐、何东昌、王浒，学校老领导方惠坚、贺美英、汪家镠、滕藤、解沛基、张思敬，1947、194......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232213453882834/20110225232213453882834_.html" target="_blank">陈希：顺应历史潮流 站在时代前列</a></h3>
+              <p class="thnews_jqzy">　　顺应历史潮流 站在时代前列● 校党委书记 陈希今年12月15日，正值清华大学解放60周年纪念日，这是一个非常值得纪念和回忆的日子，是清华历史上具有里程碑意义的日子。60年前，在中国革命正从胜利走向胜利的高潮时期，在北平和平解放的前夕，清华大学先期获得了解放。今年既是清华解放60周年，又是我国改革开放30周年，这两个日子在清华的历史进程中都具有重要的意......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225335796682227/20110225225335796682227_.html" target="_blank">清华大学隆重纪念赵访熊先生诞辰100周年</a></h3>
+              <p class="thnews_jqzy">　　清华大学隆重纪念赵访熊先生诞辰100周年【新闻中心讯 学生记者 余琼 王飞 何怡婷 摄影 崔凯】11月1日上午，“赵访熊先生诞辰100周年纪念大会”在清华大学主楼接待厅隆重举行。赵访熊夫人王繁女士和家人，前教育部部长何东昌，民盟北京市委主委、北京市政协副主席葛剑平，赵访熊先生生前好友及学生，来自政协、民盟等单位代表，以及清华大学数学科学系师生代表共同纪念......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232155500351401/20110225232155500351401_.html" target="_blank">清华大学隆重纪念赵访熊先生诞辰100周年</a></h3>
+              <p class="thnews_jqzy">　　清华大学隆重纪念赵访熊先生诞辰100周年【新闻中心讯 学生记者 余琼 王飞 何怡婷 摄影 崔凯】11月1日上午，“赵访熊先生诞辰100周年纪念大会”在清华大学主楼接待厅隆重举行。赵访熊夫人王繁女士和家人，前教育部部长何东昌，民盟北京市委主委、北京市政协副主席葛剑平，赵访熊先生生前好友及学生，来自政协、民盟等单位代表，以及清华大学数学科学系师生代表共同纪念......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232147734380748/20110225232147734380748_.html" target="_blank">叶企孙诞辰110周年纪念大会在清华大学举行</a></h3>
+              <p class="thnews_jqzy">　　叶企孙诞辰110周年纪念大会在清华大学举行【新闻中心讯 学生记者 吴婷婷 徐博洋 俞理晓 苏鹏霁 摄影 郭海军】10月11日上午，叶企孙先生诞辰110周年纪念大会在清华大学大礼堂举行。大会由清华大学、中国科学院、中国工程院、中国物理学会和北京大学联合举办，清华大学理学院院长、物理系系主任朱邦芬院士主持会议。叶企孙是我国近代物理学奠基人之一，是我国杰出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225336109501207/20110225225336109501207_.html" target="_blank">叶企孙诞辰110周年纪念大会在清华大学举行</a></h3>
+              <p class="thnews_jqzy">　　叶企孙诞辰110周年纪念大会在清华大学举行【新闻中心讯 学生记者 吴婷婷 徐博洋 俞理晓 苏鹏霁 摄影 郭海军】10月11日上午，叶企孙先生诞辰110周年纪念大会在清华大学大礼堂举行。大会由清华大学、中国科学院、中国工程院、中国物理学会和北京大学联合举办，清华大学理学院院长、物理系系主任朱邦芬院士主持会议。叶企孙是我国近代物理学奠基人之一，是我国杰出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2008.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232140265605073/20110225232140265605073_.html" target="_blank">清华大学举行叶企孙先生教育思想研讨会</a></h3>
+              <p class="thnews_jqzy">　　纪念叶企孙先生诞辰110周年清华大学举行叶企孙先生教育思想研讨会【新闻中心讯 记者 邵默 摄影 郭海军】 今年是我国近代物理学奠基人之一叶企孙先生诞辰110周年。9月22日，清华大学物理系与清华大学教育研究所联合举办了叶企孙先生教育思想研讨会。物理系系主任、中科院院士朱邦芬主持会议。叶企孙教育思想研讨会会场叶企孙先生是我国杰出的科学家、教育家和爱国者......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2008.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232042359577857/20110225232042359577857_.html" target="_blank">清华大学航海队建队五十周年纪念大会召开</a></h3>
+              <p class="thnews_jqzy">　　清华大学航海队建队五十周年纪念大会召开【新闻中心讯 记者 王玉杰 摄影 崔凯】4月24日上午，在清华大学精仪系会议室召开的庆祝清华大学航海队成立五十周年大会揭开了校庆九十七周年系列活动的序幕。参加庆祝会的有清华大学原航海队的队员和赛艇队的队员代表们。副校长、校体委主任陈旭，校务委员会副主任郑燕康代表学校出席了庆祝会。陈旭代表学校向前来参加庆祝活动的校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232011828391507/20110225232011828391507_.html" target="_blank">清华举办纪念熙春园·清华园建园三百周年座...</a></h3>
+              <p class="thnews_jqzy">　　清华举办纪念熙春园·清华园建园三百周年座谈会【新闻中心讯】12月27日下午，校长办公室、校史研究室联合举办的纪念熙春园·清华园建园三百周年座谈会在工字厅东厅召开。校原党委书记、校史编委会主任贺美英，副校长张凤昌，原纪委书记、校史编委会副主任叶宏开等，与来自国家第一历史档案馆、海淀区史志办、北京大学档案馆校史馆等单位以及校内部分专家学者参会。贺美英首先......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2007.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231944515221903/20110225231944515221903_.html" target="_blank">复制国立西南联合大学纪念碑在清华落成揭幕</a></h3>
+              <p class="thnews_jqzy">　　九学年刚毅坚卓育英才 七十载薪火传承铸丰碑复制国立西南联合大学纪念碑在清华落成揭幕【新闻中心讯 通讯员 解红岩 摄影 郭海军】10月27日下午，在清华大学团委北侧绿地上，由清华大学复制的国立西南联合大学纪念碑在这里落成揭幕。清晨的一场秋雨，使茵茵的绿地更加青翠，把纪念碑衬托得更加庄重、挺拔。在热烈的掌声中，清华大学校长顾秉林院士，原清华大学党委书记、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2007.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231933500165372/20110225231933500165372_.html" target="_blank">西南联大纪念碑南开重建　清华校长顾秉林为...</a></h3>
+              <p class="thnews_jqzy">　　西南联大纪念碑南开重建 清华校长顾秉林为纪念碑揭幕【新闻中心讯】9月13日，“罗三校，兄弟列，为一体，如胶结。”承载着清华大学、北京大学、南开大学同舟共济办学历史的西南联合大学纪念碑在南开大学原样重现，以此纪念西南联大成立70周年。清华大学校长顾秉林、北京大学校长许智宏和南开大学校长饶子和，共同为纪念碑揭幕。七十年前，清华、北大、南开在抗日烽火中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2007.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231913109770799/20110225231913109770799_.html" target="_blank">继教学院召开党员学习交流报告会纪念建党8...</a></h3>
+              <p class="thnews_jqzy">　　继教学院召开党员学习交流报告会纪念建党86周年【新闻中心讯】6月29日下午， 继续教育学院召开党员学习交流报告，纪念建党86周年。全院党员、入党积极分子和部分员工等150余人参加了此次交流报告会。会上进行了党史学习报告交流，远程教育扶贫办入党积极分子代表讲述了自己参加革命老区教育扶贫工作的感受，表达了决心做好教育扶贫工作，争取早日成为一名光荣的共产党......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231912031767371/20110225231912031767371_.html" target="_blank">【纪念建党86周年】申永胜：在庆祝中国共...</a></h3>
+              <p class="thnews_jqzy">　　在庆祝中国共产党建党86周年大会上的发言精仪系 申永胜2007年6月28日尊敬的各位领导、老师们、同学们，大家好！七一前夕，我们在这里隆重集会，庆祝中国共产党建党86周年。我代表工作在学校教育教学第一线的共产党员向伟大的党献上最诚挚的祝福：祝愿党领导的事业兴旺发达！对于工作在清华大学的共产党员来说，纪念党的生日的最好行动，就是忠诚党的教育事业......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231912062856343/20110225231912062856343_.html" target="_blank">【纪念建党86周年】熊智华：党政团结，和...</a></h3>
+              <p class="thnews_jqzy">　　党政团结，和谐发展----自动化系过程控制工程研究所党支部工作汇报熊智华2007年6月28日各位领导、老师、同志们：在纪念中国共产党成立86周年的日子里，我很荣幸能在这里向大家汇报工作。自动化系过程控制工程研究所党支部现有党员17人，其中在职教师7人，退休教师8人，博士后2人。我们党支部有着较好的工作基础，曾多次荣获校先进党支部称号。按照上级......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231912203563728/20110225231912203563728_.html" target="_blank">清华大学隆重举行纪念建党86周年暨表彰先...</a></h3>
+              <p class="thnews_jqzy">　　清华大学隆重举行纪念建党86周年暨表彰先进大会【新闻中心讯 记者 云仲 摄影 崔凯】清华大学纪念中国共产党成立86周年暨表彰先进大会6月28日下午在综合体育中心隆重举行。受表彰的先进党支部代表、优秀共产党员、优秀党建与思想政治工作者、从事党务工作30年以上的党务工作者，校党委委员、校党代会代表，各基层党委（总支）和支部委员、学生辅导员，过去一年中入党的新......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231911859964257/20110225231911859964257_.html" target="_blank">【纪念建党86周年】张来财：心系师生，厚...</a></h3>
+              <p class="thnews_jqzy">　　心系师生，厚德服务——在清华大学纪念中国共产党成立86周年暨表彰先进大会上的讲话饮食服务中心 张来财2007年6月28日各位领导、同志们，大家下午好：我叫张来财，是饮食服务中心一名普通党员。在即将迎来党的第86个生日的时刻，我非常荣幸的代表后勤战线上的党员向大家汇报一下自己的工作体会。我发言的题目是：心系师生 厚德服务我从事伙食工作已经二......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231911796908470/20110225231911796908470_.html" target="_blank">【纪念建党86周年】于龙江：植根艰苦环境...</a></h3>
+              <p class="thnews_jqzy">　　植根艰苦环境，磨砺无悔人生——在清华大学纪念中国共产党成立86周年暨表彰先进大会上的讲话威视股份 于龙江2007年6月28日尊敬的各位领导、同志们：我是威视股份的于龙江。我于2005年11月到蒙古国负责大型集装箱检查设备的售后服务工作，至今已有一年零七个月。蒙古国现场位于中蒙边境扎门乌德地区，属于沙漠戈壁地貌，海拔约1000米。从每年11月至......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231911718631019/20110225231911718631019_.html" target="_blank">【纪念建党86周年】李强：在清华大学纪念...</a></h3>
+              <p class="thnews_jqzy">　　在清华大学纪念中国共产党成立86周年暨表彰先进大会上的发言新闻与传播学院 李强2007年6月28日尊敬的各位老师、各位同学：大家好！在中国共产党成立86周年之际，我们共同参加神圣的入党宣誓仪式，我的心情感到无比的荣幸和激动，这是我人生中最难忘的时刻。我们这一代年轻人，生在改革开放的新时代，没有机会和老一辈中国共产党党员一起感受那激情燃烧的革命......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225338484720961/20110225225338484720961_.html" target="_blank">清华大学隆重举行纪念建党86周年暨表彰先...</a></h3>
+              <p class="thnews_jqzy">　　清华大学隆重举行纪念建党86周年暨表彰先进大会【新闻中心讯 记者 云仲 摄影 崔凯】清华大学纪念中国共产党成立86周年暨表彰先进大会6月28日下午在综合体育中心隆重举行。受表彰的先进党支部代表、优秀共产党员、优秀党建与思想政治工作者、从事党务工作30年以上的党务工作者，校党委委员、校党代会代表，各基层党委（总支）和支部委员、学生辅导员，过去一年中入党的新......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231911937876068/20110225231911937876068_.html" target="_blank">【纪念建党86周年】刘晓遇：团结群众 共...</a></h3>
+              <p class="thnews_jqzy">　　团结群众，共建和谐——在清华大学纪念中国共产党成立86周年暨表彰先进大会的发言数学科学系离退休教职工党支部书记 刘晓遇2007年6月28日各位领导、各位老师、同学，下午好！我代表数学系离退休教职工党支部向大家汇报我们的工作，主要分为两个方面。一．加强思想建设，永葆革命青春我们数学系离退休教职工党支部共有36名党员，全部是已经退休的同志，80%......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2007.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231854734780290/20110225231854734780290_.html" target="_blank">【82级毕业20年】纪念活动筹备纪实</a></h3>
+              <p class="thnews_jqzy">　　为了春天的相聚清华大学1982级毕业20年纪念活动筹备纪实时光如梭。当上世纪80年代我们在清华园度过了5年青春时光、又唱着“再过二十年，我们来相会”的歌曲告别本科生活时，没有想到20年会过得如此之快！去年深秋的一天，清华校友总会召集我们2字班几位留校工作的同学在科技大厦聚会，大家才意识到：该是纪念2字班毕业20周年的时候了。在校友总会的引导帮助下，正......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2007.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231850390255103/20110225231850390255103_.html" target="_blank">学生求是学会举行成立十五周年纪念大会</a></h3>
+              <p class="thnews_jqzy">　　学生求是学会举行成立十五周年纪念大会【新闻中心讯 记者 云仲】4月21日下午，清华大学学生求是学会成立十五周年纪念大会在就业中心报告厅隆重举行。中国社会科学院原副院长、我校原副校长滕藤，校党委副书记陈旭，以及党委学生部、研究生部和校团委负责人出席大会。大会在庄严的《国际歌》声中开始。求是学会会长张磊同学做了题为《读书 实践 争鸣 战斗》的工作报告。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2007.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231834078538924/20110225231834078538924_.html" target="_blank">清华图书馆举办“孟昭英教授纪念展”</a></h3>
+              <p class="thnews_jqzy">　　清华图书馆举办“孟昭英教授纪念展”【新闻中心讯】2006年12月24日，是著名物理学家、电子学家、教育家、中国科学院院士、清华大学著名教授孟昭英先生诞辰一百周年。2007年1月4日，在清华电子系和物理系的大力支持下，清华大学图书馆在清华特藏文库举办了“孟昭英教授纪念展”，以此纪念这位为我国科技发展作出重要贡献的著名科学家。87岁高龄的孟昭英的夫人来到......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231755015224990/20110225231755015224990_.html" target="_blank">我校离退休老党员用歌声和音乐祝福党的生日</a></h3>
+              <p class="thnews_jqzy">　　我校离退休老党员用歌声和音乐祝福党的生日 【新闻中心讯】6月28日上午，“中国共产党成立85周年暨清华大学第一个党支部建立80周年”专题庆祝会在老年活动中心二楼多功能厅举行。离退休老党员用歌声和音乐祝福党的生日。清华大学老教师合唱二团的大合唱《红星照我去战斗》拉开了庆祝会的序幕。随后，精仪系离休干部韦文林自创改词的一曲《今天是你的生日，中国共产党》，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231755328352627/20110225231755328352627_.html" target="_blank">清华大学庆祝中国共产党成立85周年大会隆...</a></h3>
+              <p class="thnews_jqzy">　　清华大学庆祝中国共产党成立85周年大会隆重举行【新闻中心讯 记者　覃川 摄影 郭海军】6月30日下午，我校在大礼堂隆重举行庆祝中国共产党成立85周年大会。学校党委委员、纪委委员，副处以上党员干部，全校教工（含离退休）党支部书记、学生党支部书记等1000余人参加了庆祝大会。学校领导陈希、顾秉林、何建坤、张再兴、康克军、汪劲松、陈旭、陈吉宁、孙道祥以及校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231755093270997/20110225231755093270997_.html" target="_blank">我校召开离退休老党员“建党85周年及清华...</a></h3>
+              <p class="thnews_jqzy">　　我校召开离退休老党员“建党85周年及清华第一个党支部建立80周年”座谈会【新闻中心讯】6月27日，清华大学“庆祝中国共产党建党85周年暨我校第一个党支部建立80周年座谈会”在老年活动中心召开。18位离退休老党员出席了座谈会。他们中有的参加过抗日战争、解放战争、抗美援朝战争，有的是在敌战区和白区，以地下党员身份组织群众与敌人开展斗争的老干部、地下党党员。 ......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225340546640102/20110225225340546640102_.html" target="_blank">清华大学庆祝中国共产党成立85周年大会隆...</a></h3>
+              <p class="thnews_jqzy">　　清华大学庆祝中国共产党成立85周年大会隆重举行【新闻中心讯 记者　覃川 摄影 郭海军】6月30日下午，我校在大礼堂隆重举行庆祝中国共产党成立85周年大会。学校党委委员、纪委委员，副处以上党员干部，全校教工（含离退休）党支部书记、学生党支部书记等1000余人参加了庆祝大会。学校领导陈希、顾秉林、何建坤、张再兴、康克军、汪劲松、陈旭、陈吉宁、孙道祥以及校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231755375990508/20110225231755375990508_.html" target="_blank">北京市委教育工委副书记刘建看望黄克智院士</a></h3>
+              <p class="thnews_jqzy">　　北京市委教育工委副书记刘建看望黄克智院士　 【新闻中心讯]】6月30日下午，在庆祝中国共产党建党85周年之际，北京市委教育工委副书记刘建来到清华园，亲切看望了中国科学院院士、我校航天航空学院教授、北京市教育系统优秀共产党员黄克智。刘建代表北京市教育工委向黄克智院士表示节日的慰问，并关心地询问了黄克智院士的工作和生活等情况。我校党委常委、组织部长韩景阳、航天航......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231753687747484/20110225231753687747484_.html" target="_blank">解放初清华党组织工作回顾</a></h3>
+              <p class="thnews_jqzy">　　解放初清华党组织工作回顾●何东昌&nbsp;&nbsp;&nbsp; 对清华党组织而言，1952年是一个分水岭。1952年以前，主要是在学生运动的“赤色群众”中建党。全国解放了，许多岗位要党员干部去加强领导。但是对于文教工作要不要党的领导，解放初是有不同认识的，如有的高级知识分子认为共产党员只有小知识分子，小知识分子领导不了大知识分子，等等。这时，党对......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231754062840840/20110225231754062840840_.html" target="_blank">解放前清华党组织的发展历程（一）</a></h3>
+              <p class="thnews_jqzy">　　解放前清华党组织的发展历程（一）●徐心坦1926年11月，清华大学第一个党支部在风雨中诞生。今年是中国共产党建党85周年，也是清华党史的第80个年头，利用这个机会，根据多年来我参加学校党史的征集研究工作中新了解到的史实和体会，向大家介绍一下清华建党的情况和早期的发展历程，供大家参考。五四运动唤醒和教育了清华人清华的建党过程应该从五四运动说起。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231753406821554/20110225231753406821554_.html" target="_blank">清华第一个党支部的建立</a></h3>
+              <p class="thnews_jqzy">　　清华第一个党支部的建立●史轩7月1日是中国共产党的生日，在清华大学的历史上，清晰地留下了党的战斗、发展的足迹。自清华党组织诞生之日，党领导清华师生进行了不屈不挠的斗争，1926年冬清华第一个党支部的建立有着特殊的纪念意义。1926年初冬的一天，几个年轻人聚集在清华三院①的一个房间里秘密开会。这些年轻人都是中共地下党员，他们是：中共北京市委负责人陈......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225609500630043/20110225225609500630043_.html" target="_blank">学生艺术团键盘队举行纪念莫扎特专场</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;学生艺术团键盘队举行纪念莫扎特专场【新闻中心讯】4月25日晚，校学生活动中心多功能厅里座无虚席，由学生艺术团键盘队举行的“纪念莫扎特诞辰250周年专场音乐会”在这里上演。音乐会上，学生艺术团键盘队的队员们演绎了伟大音乐家莫扎特的诸多经典作品，演员们用精湛的演奏技艺、灵动的艺术表现力赢得了观众们阵阵热烈掌声。&nbsp;&nbsp;&nbs......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2005.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225341609855214/20110225225341609855214_.html" target="_blank">清华师生隆重纪念“一二·九”七十周年、“...</a></h3>
+              <p class="thnews_jqzy">　　清华师生隆重纪念“一二·九”七十周年、“一二·一”六十周年91岁“中国贞德”陆璀追忆热血年代校党委书记陈希寄语学子发扬革命传统【新闻中心讯 记者 周襄楠 摄影 郭海军】为纪念70年前的“一二·九”运动和60年前的“一二·一”运动，12月8日，我校师生在主楼接待厅举行了座谈会，与当年参加过这两次运动的老同志一起回顾“一二·九”、“一二·一”运动的光辉历程，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2005.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231705500946778/20110225231705500946778_.html" target="_blank">清华师生隆重纪念“一二·九”七十周年、“...</a></h3>
+              <p class="thnews_jqzy">　　清华师生隆重纪念“一二·九”七十周年、“一二·一”六十周年91岁“中国贞德”陆璀追忆热血年代校党委书记陈希寄语学子发扬革命传统【新闻中心讯 记者 周襄楠 摄影 郭海军】为纪念70年前的“一二·九”运动和60年前的“一二·一”运动，12月8日，我校师生在主楼接待厅举行了座谈会，与当年参加过这两次运动的老同志一起回顾“一二·九”、“一二·一”运动的光辉历程，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2005.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231701859221189/20110225231701859221189_.html" target="_blank">纪念高士其诞辰一百周年座谈会召开</a></h3>
+              <p class="thnews_jqzy">　　纪念高士其先生诞辰一百周年暨高士其科学精神座谈会召开&nbsp;&nbsp;&nbsp; 【新闻中心讯 记者 魏磊 摄影 钱锡康】11月22日，纪念高士其先生诞辰100周年暨高士其科学精神座谈会在北京人民大会堂举行。座谈会由我校与中国科协、福建省人民政府、中国残疾人联合会共同举办。&nbsp;&nbsp;&nbsp; 中央政治局委员、全国人大常委会副委员长王......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231647687753082/20110225231647687753082_.html" target="_blank">清华学子纪念品送李敖</a></h3>
+              <p class="thnews_jqzy">　　清华学子两件纪念品送李敖，亲手制“桥”寓沟通【新闻中心讯 记者 顾淑霞 摄影 郭海军】9月23日，李敖先生《世纪大讲堂》的清华演讲结束之后，清华学子的送上的两件特殊纪念品成为众人关注的焦点之一。在众人期盼的目光中，两件神秘的纪念品被拿上了演讲台：一件文化衫，一座模型桥。“这件文化衫印有清华校训‘自强不息，厚德载物’，希望能与李敖先生共勉。这座模型桥是......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231646046390421/20110225231646046390421_.html" target="_blank">清华国学院为什么值得纪念</a></h3>
+              <p class="thnews_jqzy">　　清华国学院为什么值得纪念中国青年报  2005-09-19  李斌&nbsp;&nbsp;&nbsp;&nbsp;清华国学院重学问不重学位&nbsp;&nbsp;&nbsp;&nbsp;清华国学研究院仅仅存在4年，而9月14日，清华大学为它举行80周年纪念大会。&nbsp;&nbsp;&nbsp;&nbsp;“每年都要纪念它，好像它成立后一直运营了几十年一样......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231645031842633/20110225231645031842633_.html" target="_blank">江蓝生:大学人文精神内核:为学不忘忧国</a></h3>
+              <p class="thnews_jqzy">　　大学人文精神的内核：为学不忘忧国○中国社会科学院副院长 江蓝生今天我们聚会，纪念清华国学研究院建立80周年。一提起清华国学研究院，不能不想起以梁启超、王国维、赵元任、陈寅恪四大名师为杰出代表的一代人文学者，他们在国家备受列强欺辱的年代发起国学研究，虽然梁启超因政治报复受挫转而向治学，这也反映人文知识分子欲从博学做起。那一代知识分子从总体上来说，不论学人文......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225342109465582/20110225225342109465582_.html" target="_blank">清华学子纪念抗战胜利60周年向英烈献花</a></h3>
+              <p class="thnews_jqzy">　　我校举行清华学子纪念抗日战争胜利六十周年献花仪式【新闻中心讯 记者 李 含 摄影 郭海军 】9月2日，清华学子纪念抗日战争胜利六十周年献花仪式在“祖国儿女、清华英烈”纪念碑前举行。清华大学学生会、清华大学研究生会向全校同学发出倡议：牢记历史、不忘过去；珍爱和平、勤奋学习；振兴中华、从我做起！校党委副书记张再兴参加仪式并致辞。他说：纪念碑上铭刻着几十位......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231642359892063/20110225231642359892063_.html" target="_blank">清华学子纪念抗战胜利60周年向英烈献花</a></h3>
+              <p class="thnews_jqzy">　　我校举行清华学子纪念抗日战争胜利六十周年献花仪式【新闻中心讯 记者 李 含 摄影 郭海军 】9月2日，清华学子纪念抗日战争胜利六十周年献花仪式在“祖国儿女、清华英烈”纪念碑前举行。清华大学学生会、清华大学研究生会向全校同学发出倡议：牢记历史、不忘过去；珍爱和平、勤奋学习；振兴中华、从我做起！校党委副书记张再兴参加仪式并致辞。他说：纪念碑上铭刻着几十位......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231640656838896/20110225231640656838896_.html" target="_blank">我校举行纪念抗战胜利60周年座谈会</a></h3>
+              <p class="thnews_jqzy">　　我校举行纪念抗日战争胜利60周年座谈会隆重而庄严的清华大学师生纪念抗日战争胜利60周年座谈会会场。（陈鹏翔 摄）【新闻中心讯 记者 顾淑霞】抗战老战士胸前熠熠生辉的勋章折射出那段让世人难忘的抗日历史，学生们倾情送上的鲜花表达了对老一辈革命家的深深敬仰。8月29日下午，26位抗战前和抗战期间参加革命的老干部和老战士代表参加了在主楼接待厅举行的“清华大学师生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231640750884343/20110225231640750884343_.html" target="_blank">田芊：抗战历史丰碑上的清华人</a></h3>
+              <p class="thnews_jqzy">　　抗战历史丰碑上的清华人60年前中国人民抗日战争取得胜利，这是中国人民反抗外敌入侵取得的第一次完全胜利。今天我们纪念这个胜利，不能忘记千千万万群起抗争、不屈不挠的中国各族人民，尤其不能忘记千百万洒热血、为国捐躯的爱国英雄儿女，同样不能忘记那些与日本侵略者展开顽强斗争的清华人。清华人秉承爱国奉献精神，为抗战做出了巨大贡献，涌现出许多可歌可泣的英雄事迹，他们的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225342140857674/20110225225342140857674_.html" target="_blank">我校举行纪念抗战胜利60周年座谈会</a></h3>
+              <p class="thnews_jqzy">　　我校举行纪念抗日战争胜利60周年座谈会隆重而庄严的清华大学师生纪念抗日战争胜利60周年座谈会会场。（陈鹏翔 摄）【新闻中心讯 记者 顾淑霞】抗战老战士胸前熠熠生辉的勋章折射出那段让世人难忘的抗日历史，学生们倾情送上的鲜花表达了对老一辈革命家的深深敬仰。8月29日下午，26位抗战前和抗战期间参加革命的老干部和老战士代表参加了在主楼接待厅举行的“清华大学师生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231641609211841/20110225231641609211841_.html" target="_blank">清华大学举办图片展</a></h3>
+              <p class="thnews_jqzy">　　清华大学举办图片展 纪念中国抗战胜利六十周年&nbsp;&nbsp; 　中国新闻网2005-8-30中新网北京8月30日电 (记者 周兆军)清华大学29日下午举办“抗日烽火中的清华”主题图片展，纪念抗日战争胜利六十周年。展出的图片资料，记录了清华大学从“一二·九”运动到抗战胜利长达十年的艰难历程。清华大学校史馆负责人介绍，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231641140457240/20110225231641140457240_.html" target="_blank">宋玉芬：一个文艺兵的抗战生活</a></h3>
+              <p class="thnews_jqzy">　　无标题文档一个文艺兵的抗战生活清华大学离休干部 宋玉芬各位领导、战友们、同志们、同学们：我是河北唐县宋高和村人，家乡唐县城于1938年10月8日被日寇侵占，母亲和弟弟惨死在日寇的枪炮下。1939年9月，我带着强烈的民族恨，走上了共产党领导的艰苦卓绝的抗日战场，当时我13岁。 我先到晋察冀边区民族革命中学学习，主要学习政治和党在抗日战争中的方针政策。那......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231641062424645/20110225231641062424645_.html" target="_blank">韩银山：历史不能忘记</a></h3>
+              <p class="thnews_jqzy">　　无标题文档历史不能忘记清华大学离休干部 韩银山各位领导、战友们、同志们、同学们： 今年是抗日战争胜利六十周年，我很想把我在抗战中亲身经历的一些事情说出来，回顾历史，警示后人。 我的家乡在河北省曲阳县，属于保定地区，离北京不远。一九三七年七月，日本兵在北平芦沟桥挑起战火，妄图霸占全中国。没有多久，日本鬼子就占领了我的家乡。我清楚记得那一天，鬼子的坦克打......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231640812247969/20110225231640812247969_.html" target="_blank">陈思:纪念抗战胜利60周年座谈会发言</a></h3>
+              <p class="thnews_jqzy">　　在纪念抗战胜利60周年座谈会上的发言电子系 陈思敬爱的各位老学长、老师们、同学们：首先感谢大家给我这个机会参与今天这个意义非常的座谈会并发言，我为能够亲眼见到各位参加过抗战的老同志、亲耳聆听前辈的事迹和教诲而感到无比激动。 我来自东北的一个小城市——辽宁锦州，我的家乡曾是侵华日军肆虐逞威的地方，曾是伪满洲国傀儡政权的属地，尽管没有亲历过那个屈辱的年代......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231640875719799/20110225231640875719799_.html" target="_blank">潘际銮:纪念抗日战争胜利60周年</a></h3>
+              <p class="thnews_jqzy">　　无标题文档纪念抗日战争胜利60周年潘际銮1937年12月13日日本攻陷南京后，日寇华中方面军司令松井石根和团长谷寿夫明确提出，要“发扬日本武威使中国信服”、“不保留俘虏”，就开始了惨绝人寰的南京大屠杀，全城大街小巷尸横遍野，长江流水尽为之赤。在6个星期中有30多万同胞被屠杀。 南京大屠杀后，我的老家九江一遍混乱，满街是伤兵和难民，当时的国民政府决定三......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231640937389426/20110225231640937389426_.html" target="_blank">方惠坚:“一二·九”运动为抗日战争做了思...</a></h3>
+              <p class="thnews_jqzy">　　“一二·九”运动为抗日战争做了思想和干部的准备——纪念中国人民抗日战争胜利60周年方惠坚今天，我们纪念中国人民抗日战争胜利60周年，我们就会想到在上个世纪30年代，日本帝国主义发动了“九一八”事变，占领了我国东北，又把侵略矛头指向华北。蒋介石政府的不抵抗政策，节节退让，加速了民族危机的到来。1935年7月，签定了卖国的《何梅协定》，国民党政府取消了河北省......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231641000909904/20110225231641000909904_.html" target="_blank">陈希:纪念抗战胜利60周年座谈会讲话</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在清华大学师生纪念中国人民抗日战争胜利60周年座谈会上的讲话中共清华大学党委书记 陈希同志们： 今天，我们清华大学的师生在这里举行座谈会，纪念中国人民抗日战争胜利60周年。首先，我代表学校，向全校参加过抗日战争的老同志表示崇高的敬意和诚挚的慰问！ 中国人民抗日战争的胜利是中华民族由衰败走向复兴的重大转折，彻底改变了中国近代以来因外敌入侵而割......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>杨振宁在我校讲“美与物理学”</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231218703666727&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><p align="center">凤凰世纪大讲堂清华录制 两千师生享受科学与艺术大餐</p><h3 align="center"> 杨振宁在我校讲“美与物理学”</h3><p> <img src="/publish/news/images/upload/yzn.jpg" width="283" height="213" align="left">【新闻中心讯】4月26日下午，凤凰卫视在我校理科楼前下沉式露天广场录制"世纪大讲堂"节目，主讲人是我校教授、著名物理学家、诺贝尔物理学奖获得者杨振宁先生，演讲的题目是"美与物理学"。我校建设世界一流大学，非常重视科学与人文艺术的交融。凤凰卫视"世纪大讲堂"节目组选择在我校90周年校庆之际在物理系楼前，请杨振宁先生做"美与物理学"这样主题的演讲可谓独具匠心。</p><p> 原定下午3:00开始的"讲堂"，2:00不到时理科楼前的广场上已经挤满了闻讯赶来的师生。广场底部的草地上坐的满满的，四周的几层台阶上人与人摩肩接踵，上面周围还站了许多人，二楼的阳台上也有不少人，还有物理系向着广场的窗户也伸出了一张张注视的脸。   一幅白底红字"再造辉煌"的横幅挂在广场边上理科楼物理系的一侧，上面有杨振宁先生的签名，分外引人注目。这幅"再造辉煌"的横幅是物理系1999年9月入住理科楼庆典时师生及来宾的签名长卷，位于居中靠上处的亲笔签名是杨振宁先生对清华物理系的一份祝愿和期盼。</p><p> 当杨振宁先生出现在讲台上时，全场响起了一阵热烈的掌声，物理系两名同学向杨先生献上了美丽的鲜花。节目在主持人和杨振宁先生轻松愉快的对话中开始了。杨振宁先生回忆了自己在清华大学生活的童年，谈到了清华西院的故居。</p><p> 杨先生在60分钟的演讲中讲了几位著名物理学家海森堡、狄拉克、爱因斯坦、麦克斯韦、牛顿、开普勒等人的非凡贡献，列举了许多生动的事例，说明了物理学的美。在分析了物理学与数学的异同时，用两片根相连的树叶做了美妙的比喻。用中外诗人一首首的诗歌表达了对诗人、对物理学美的感受。学物理学的人或者做物理学研究工作的人认识到揭示的宇宙规律的基本结构时所感受的美。</p><p> 杨振宁先生用了40分钟时间回答了现场观众的提问和网友通过互联网向杨先生提出的问题。杨先生的演讲非常精彩，观众不时报以热烈的<img src="/publish/news/images/upload/yzn2.jpg" width="255" height="191" align="right">掌声。</p><p> 最后主持人请杨先生用一句话概括美与物理学的关系。杨振宁先生说，"自然界的现象的结构是非常之美、非常之妙，物理学这些年的研究使得我们对于这个美有了一个认识。"</p><p> 凤凰卫视组织的这次"讲堂"，也吸引了多家媒体进行现场采访，我校学生清华网站做了网上直播。（文/郭钊 摄影/建团） </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月27日 12:20:36　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2005.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225343125761559/20110225225343125761559_.html" target="_blank">贺国强同志看望杨振宁先生</a></h3>
+              <p class="thnews_jqzy">　　无标题文档贺国强同志看望杨振宁先生图片说明：贺国强、周济等与杨振宁先生和夫人合影留念。【新闻中心讯 记者 周襄楠 摄影 郭海军】1月26日下午，中共中央政治局委员、中央书记处书记、中央组织部部长、中央人才工作协调小组组长贺国强一行，专程来到清华园杨振宁先生的家中，亲切看望了杨振宁先生，向他致以新春的问候和良好祝愿，并献上了花篮。教育部部长周济，教育部人事......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344218893346/20110225225344218893346_.html" target="_blank">杨振宁为清华大一新生讲普通物理</a></h3>
+              <p class="thnews_jqzy">　　无标题文档杨振宁为清华大一新生讲普通物理【新闻中心讯 记者 周襄楠 摄影 郭海军】9月13日上午，六教，上课前，他面对来自清华物理系和基础科学班大学一年级的130多张稚气面孔，不时将十指尖合在一起，轻轻托住下巴，一如上个世纪50年代在普林斯顿高等研究院思考时的神态——82岁的杨振宁在这里开始了他为清华本科生讲授普通物理的教学生涯。  “希望大家在这一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2004.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225345375620769/20110225225345375620769_.html" target="_blank">清华大学蒙民伟理科馆命名仪式举行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华大学蒙民伟理科馆命名仪式举行【新闻中心讯 记者 梁君健 摄影 郭海军】5月11日上午，清华大学蒙民伟理科馆命名仪式在主楼接待厅举行。仪式由张凤昌副校长主持，信兴集团主席蒙民伟博士，诺贝尔物理学奖获得者、清华大学教授杨振宁先生和清华大学校长顾秉林院士出席仪式并分别致词。“蒙民伟理科馆”大楼坐落在清华大学校园的西部教学区，建筑面积1.5万平......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2004.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225345468413542/20110225225345468413542_.html" target="_blank">我校设立“杨振宁讲座基金”</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校设立“杨振宁讲座基金”高等研究中心翁征宇教授获批成为首位“杨振宁讲座教授”【新闻中心讯 记者 冷凝 摄影 郭海军】记者刚刚获悉，为了加强我校基础科学研究，培养有创新能力的科学人才，进一步促进清华大学与世界科学界的密切合作与交流，提高人才培养质量，逐步形成基础科学研究优势，推动学校理科建设，建设世界一流的学术队伍，我校决定设立“杨振宁讲座基金......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2002.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231207484347574/20110225231207484347574_.html" target="_blank">杨振宁先生“落户”清华大学</a></h3>
+              <p class="thnews_jqzy">　　去年3月，是我国“863计划”启动14周年。在这项计划实施10周年时，《新清华》记者曾访问了它的发起人之一、著名光学专家、我校校友王大珩院士，并在1996年校庆专刊上发表了题为《近访王大珩学长》的通讯。但由于篇幅所限，文中主要介绍了王大珩校友对母校的回忆、建议等内容，而他在其他方面的许多见解当时未能详尽报道。时隔4年，在我们国家大力实施“科教兴国”战略和......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2002.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225349656111965/20110225225349656111965_.html" target="_blank">我校举行前沿科学国际研讨会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档弘扬科学精神 提高学术水平 促进国际交流我校举行前沿科学国际研讨会庆祝杨振宁先生80寿辰【新闻中心讯】6月17日－19日，为庆祝诺贝尔物理奖获得者、我校教授、高等研究中心名誉主任杨振宁先生80寿辰，弘扬科学精神，提高学术水平，促进国际交流，我校在主楼报告厅隆重举行前沿科学国际研讨会，14位诺贝尔物理奖获得者和1位数学费尔兹奖获得者与会。会议期间......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225352328976258/20110225225352328976258_.html" target="_blank">世界大师之智永驻 振兴民族之心长存——我...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document自从杨振宁先生回到清华，我们就一直盼望着能和我们十分景仰的物理学大师进行一次面对面的交谈。杨先生一直很忙，直到前几天，我走进高等研究中心时，竟惊喜的发现他正坐在办公室里伏案工作。于是，我忐忑不安地敲开了杨先生办公室的门。杨先生和蔼的微笑很快让我忘记了开始时的紧张，在我说明来意后，先生欣然同意。于是我们基础科学班1999级......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225352578912484/20110225225352578912484_.html" target="_blank">杨振宁预测新世纪科技</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document杨振宁预测新世纪科技芯片、医药和生物工程是未来火车头科技日报 2001年9月14日 本报长春9月13日电（记者李大庆张兆军彤宇）今天上午，诺贝尔奖获得者、美籍物理学家杨振宁在长春面对4000多名中国科技工作者预言，今后三四十年间应用研究发展最快的三个领域是：芯片的广泛应用和医学与药物的高速发展和生物工程。他说：“这三个领......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231226203943846/20110225231226203943846_.html" target="_blank">杨振宁：精彩问答实录</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document杨振宁：精彩问答实录北京晚报 2001年5月1日演讲结束进入了精彩的自由提问时间，会场的气氛也达到高潮。“清华昨天过了90华诞，北大4天后也要度过103岁生日，作为国内的百年老校、名校，您认为她们离建成世界一流大学还有多远？”杨先生只回答了一句话就被热烈的掌声打断，“据我所知，北大清华本科生的水平与世界一流大学的学生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231224640121769/20110225231224640121769_.html" target="_blank">杨振宁清华演讲听众爆满</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document杨振宁清华演讲听众爆满科技日报 2001年4月30日本报北京4月27日讯记者李大庆、实习记者刘莉报道：今天早晨，记者冒着大雨走进清华大学西门，赶往理学院的路上，不时地碰见有人打听“请问理学院报告厅在哪里？”今天的理学院报告厅可是清华的热点地带，著名的华裔物理学家杨振宁教授、华裔数学家林家翘教授，将在这里举行一场学术报告会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231220000219058/20110225231220000219058_.html" target="_blank">杨振宁先生与清华</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document杨振宁先生与清华（光明网 2001年4月28日）杨振宁先生于1999年9月正式受聘于清华任清华物理系教授，此后每年有一半时间在清华指导学生，并于当年招收两名博士研究生。杨振宁先生于1929年随父亲迁入清华园，杨先生的父亲杨武之当时任清华大学数学系教授，为清华研究生讲授《群论》，当年听课的有华罗庚，陈省身，柯召等后世闻......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231219359196046/20110225231219359196046_.html" target="_blank">杨振宁：我就是清华园里的那个“杨大头”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document杨振宁：我就是清华园里的那个“杨大头”（2001年4月28日 中国新闻网）世界著名物理学家杨振宁先生，二十七日在北京市清华大学理学院作《量子化、对称、相位因子——二十世纪理论物理学的主旋律》的报告，受到大学师生们的热烈欢迎。中新社记者   张勤 摄中新社北京四月二十七日电题：杨振宁：我就是清华园里的那个“杨大头”中新......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355062440649/20110225225355062440649_.html" target="_blank">杨振宁、林家翘等来校做精彩报告</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华90周年校庆杨振宁、林家翘等来校做精彩报告【新闻中心讯】作为我校建校90周年校庆学术活动的一部分，4月27日上午，著名学者杨振宁、林家翘受邀为我校师生作了精彩的学术报告，在师生中引起热烈响应。上午的报告会在我校理学院报告厅举行。我校校友、诺贝尔物理学奖获得者杨振宁教授，以"量子化、对称、相位因子--20世纪理论物......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225626734334616/20110225225626734334616_.html" target="_blank">杨振宁、林家翘等来校做精彩报告</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华90周年校庆杨振宁、林家翘等来校做精彩报告【新闻中心讯】作为我校建校90周年校庆学术活动的一部分，4月27日上午，著名学者杨振宁、林家翘受邀为我校师生作了精彩的学术报告，在师生中引起热烈响应。上午的报告会在我校理学院报告厅举行。我校校友、诺贝尔物理学奖获得者杨振宁教授，以"量子化、对称、相位因子--20世纪理论物......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355125917124/20110225225355125917124_.html" target="_blank">清华学生为杨振宁倾倒</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华学生为杨振宁倾倒（北京青年报 2001年4月28日）诺贝尔奖得主成清华明星，同学说，大师的思路就是不一样本报记者牛金荣报道　诺贝尔奖获得者杨振宁成为清华校庆期间最耀眼的明星。 4月26日下午，杨振宁一场题为《美与物理学》的报告引来了2000余名听众，而昨天   上午又有几百名学生聆听了一场学术性极强的报告。这......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355250860992/20110225225355250860992_.html" target="_blank">杨振宁在我校讲“美与物理学”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document凤凰世纪大讲堂清华录制 两千师生享受科学与艺术大餐杨振宁在我校讲“美与物理学”【新闻中心讯】4月26日下午，凤凰卫视在我校理科楼前下沉式露天广场录制"世纪大讲堂"节目，主讲人是我校教授、著名物理学家、诺贝尔物理学奖获得者杨振宁先生，演讲的题目是"美与物理学"。我校建设世界一流大学，非常重视科学与人文艺术的交融。凤凰卫视"......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231218609790749/20110225231218609790749_.html" target="_blank">杨振宁先生在北京清华大学作报告</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document杨振宁先生在北京清华大学作报告（2001年4月26日 中国新闻网）著名物理学家、诺贝尔奖获得者杨振宁先生26日在北京清华大学作题为《美与物理学》的报告。中新社记者 张勤 摄</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231218640996000/20110225231218640996000_.html" target="_blank">杨振宁在北京清华大学与儿童在一起</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document杨振宁在北京清华大学与儿童在一起（2001年4月26日 中国新闻网）著名物理学家杨振宁先生，二十六日在北京清华大学理学院作《美与物理学》的报告前，接受一位北京小朋友献出的鲜花。中新社记者 张勤 摄</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231215640972400/20110225231215640972400_.html" target="_blank">杨振宁为何入美国籍</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document杨振宁为何入美国籍（文摘报 2001年4月19日）1957年12月10日晚，杨振宁在瑞典首都斯德哥尔摩市政厅举行的 诺贝尔奖贺宴上即席演讲。在似乎不合时宜地回顾了那场“欧洲多国 和美国军队入侵北京”的“无耻掠夺的战争”后，他深情地说：“我   以自己的中国血统和背景而感到骄傲”。但到了1964年春，杨振宁还是加入了美......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

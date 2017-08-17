@@ -1,0 +1,923 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>梁思成先生诞辰一百周年纪念会在京举行</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231215750953123&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><TITLE>Untitled Document</TITLE> <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312"> </HEAD><BODY BGCOLOR="#FFFFFF"><H3 ALIGN="CENTER">梁思成先生诞辰一百周年纪念会在京举行</H3><P ALIGN="CENTER"> (2001.04.20 新华网) </P><P>新华网北京４月２０日电（记者王军）我国著名建筑学家和建筑教育家梁思成先生诞辰一百周年纪念座谈会暨《梁思成全集》首发式，今天在北京人民大会堂举行。 </P><P>与会者高度评价了梁思成的生平业绩和辉煌成就，指出梁思成是中国现代建筑教育的奠基人，是中国古建筑研究的先驱者，是中国文物建筑和历史文化名城保护工作的倡导者，是中国现代城市规划事业的推动者；他主持了中华人民共和国国徽和人民英雄纪念碑的设计，发起成立中国建筑学会，筹划出版建筑学报；他生前在清华大学执教２６年，创立并长期领导清华大学建筑系，为国家培养了一大批优秀的建筑人才；他关于文物建筑保护和城市规划的学术思想，已成为我国文化遗产保护的理论基础和城市规划理论的典范，具有深远的历史影响和现实的指导意义。</P><P> 梁思成是我国近代著名思想家梁启超之子。在踏访了国内１５个省、２００多个县，研究了２０００多处汉、唐以来的建筑文物后，他完成了中国人的第一部建筑史《中国建筑史》的写作。北平和平解放前夕，他帮助中国人民解放军在地图上标明北平重要文物古迹地点，以免攻城时遭到破坏。新中国成立后，梁思成全身心投入到首都北京的建设工作中。他还以饱满的政治热情参与了党和政府的各项工作，担任多项社会职务。１９７２年，梁思成在北京逝世。 </P><P>今天首发的《梁思成全集》共分九卷，总计４４５万字，是由中国建筑工业出版社出版的，收集了梁思成的古建筑调查报告、古建筑保护理论、城市规划理论、建筑教育理论等著作。 </P><P>全国政协副主席、中共中央统战部部长王兆国，教育部部长陈至立，建设部部长俞正声，原最高人民法院院长郑天翔，民盟中央副主席卢强等出席会议。陈至立、俞正声以及清华大学党委书记贺美英、两院院士吴良镛、梁思成亲属代表梁再冰等在座谈会上发言。梁思成的亲属、生前好友及清华大学师生１００多人参加了座谈会。 </P></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月21日 14:26:52　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151209184448283497938/20151209184448283497938_.html" target="_blank">清华大学纪念冯友兰诞辰120周年</a></h3>
+              <p>　　“纪念冯友兰先生诞辰120周年暨冯友兰学术思想研讨会”日前在清华大学举办。百余名专家学者以“冯友兰哲学创新的典范”“民族性与现代性：冯友兰新儒学诠释中的两个维度”等为题，共同研讨冯友兰哲学思想。冯友兰是中国现当代最负盛名的哲学家之一，他的著作《中国哲学史》《中国哲学简史》等已成为20世纪中国学术的重要经典。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151123200134832358781/20151123200134832358781_.html" target="_blank">纪念冯友兰先生诞辰120周年研讨会召开</a></h3>
+              <p>11月21日上午9点，“纪念冯友兰先生诞辰120周年暨冯友兰学术思想研讨会”开幕式在清华大学中央主楼举办。清华大学党委副书记邓卫出席开幕式并致辞。开幕式上，邓卫代表学校对此次会议的举行表示祝贺，他指出，此次会议的召开，不仅是缅怀冯友兰先生为中国学术独立做出的杰出贡献，感念其为清华学术发展做出的丰厚功绩，更深层的意义在于通过研究、探索、分析其学术思想、育人理念以及学术历程，找到一些对我们今天办学治校富有启发性的东西，从而更好地指导和繁荣清华大学人文社科的建设。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151119105558681195739/20151119105558681195739_.html" target="_blank">俞致贞百年诞辰工笔花鸟画作品展及研讨会举行</a></h3>
+              <p>11月14日下午“笔意凝彩致贞清远——俞致贞百年诞辰纪念活动” 在清华大学美术学院美术馆举行。中国文联副主席、中央文史馆副馆长、中国美协副主席、清华大学美术学院名誉院长、清华大学艺术博物馆馆长冯远先生，清华大学校务委员会副主任袁驷教授，清华大学美术学院原院长常沙娜教授，中央美术学院博士生导师郭怡孮教授，江苏省文化厅艺术处副处长李慧女士，俞致贞先生儿子刘一久出席纪念大会并致辞。清华大学美术学院院长鲁晓波教授担任大会主持。俞致贞先生的亲属、同事、学生以及社会各界来宾400余人出席纪念大会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151022160448422819096/20151022160448422819096_.html" target="_blank">清华举办纪念金岳霖先生诞辰120周年学术...</a></h3>
+              <p>　　10月17日至19日，纪念金岳霖先生诞辰120周年学术研讨会在清华大学举办。会议由清华大学和金岳霖学术基金会主办，来自国内各高校，美国、荷兰、日本、丹麦、挪威等大学的110名学者参会。    　　开幕式由清华大学教授刘奋荣主持。研讨会围绕着金岳霖的思想研究、当代哲学和逻辑学的发展、清华学派等主题展开学术交流，并公布了第六届金岳霖学术奖的评选结果。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141023135134099505414/20141023135134099505414_.html" target="_blank">纪念孔子诞辰2565周年张岂之做客新人文...</a></h3>
+              <p>10月16日下午，在6教C300教室，著名历史学家张岂之教授做客“清华大学新人文系列讲座”，为到场的1000余名清华学子带来了题为《孔子儒学与中华历史》的精彩演讲，与大家一同回顾了儒学发展传播的历史，以此纪念孔子诞辰2565年。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140918090654999271029/20140918090654999271029_.html" target="_blank">铭记小平同志殷殷嘱托，加快建设世界一流大学</a></h3>
+              <p>今年是邓小平同志诞辰110周年，我们深切缅怀这位改变了中国历史命运和世界历史进程，赢得了中国人民衷心爱戴和世界人民广泛尊敬，为广大清华师生永远铭记的一代伟人。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140819141940885671693/20140819141940885671693_.html" target="_blank">胡鞍钢：邓小平时代——中国改革开放（之一）</a></h3>
+              <p>应观察者网之邀，清华大学国情研究院院长胡鞍钢特此撰文，主要探讨了“毛泽东为邓小平改革开放开启战略机遇窗口”和“为什么是邓小平决定了对外开放”两个问题。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131106150137970698180/20131106150137970698180_.html" target="_blank">纪念蒋南翔同志诞辰100周年座谈会在京举...</a></h3>
+              <p class="thnews_jqzy">　　纪念蒋南翔同志诞辰100周年座谈会在京举行 刘延东出席并讲话来源：新华网 2013-11-5 吴晶纪念蒋南翔同志诞辰100周年座谈会5日在京举行。中共中央政治局委员、国务院副总理刘延东出席座谈会并讲话。蒋南翔同志是忠诚的共产主义战士、无产阶级革命家、马克思主义教育家、我国青年运动的杰出领导者，曾任清华大学校长和党委书记、天津市委书记、教育部部长、中央......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131028155917014803170/20131028155917014803170_.html" target="_blank">著名教育家蒋南翔诞辰100周年</a></h3>
+              <p class="thnews_jqzy">　　著名教育家蒋南翔诞辰100周年来源：中国教育报 2013-10-28 沈大雷今天上午，为纪念著名教育家蒋南翔同志诞辰一百周年，由清华大学校友会发起的蒋南翔铜像揭幕及蒋南翔纪念馆奠基仪式在江苏省宜兴市举行。200多名清华校友、蒋南翔亲属代表和宜兴人民齐聚一起，共同缅怀这位无产阶级革命家、马克思主义教育家和我国青年运动的卓越领导者。蒋南翔同志1913年生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20131017151824800394691/20131017151824800394691_.html" target="_blank">中科院等召开座谈会纪念钱三强百年诞辰</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;对先生最好的纪念是完成他们的科学梦&rdquo;中科院等召开座谈会纪念钱三强百年诞辰来源：科技日报 2013-10-17 操秀英49年前的10月16日，我国第一颗原子弹爆炸；100年前的这一天，日后被称为&ldquo;中国原子能之父&rdquo;的钱三强先生诞生。&ldquo;我们对先生最好的纪念，是完成他们这辈人的科学梦。&rdquo;中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131010135648109327492/20131010135648109327492_.html" target="_blank">蒋南翔诞辰百年研讨会之六：“蒋南翔教育思...</a></h3>
+              <p class="thnews_jqzy">　　清华举行纪念蒋南翔诞辰100周年系列研讨会之六&nbsp;&mdash;&mdash;&ldquo;蒋南翔教育思想研究与实践&rdquo;清华新闻网10月10日电（记者黄岩通讯员刘超）10月9日，蒋南翔教育思想研究与实践研讨会在清华大学丙所会议室召开。副校长谢维和出席会议并讲话，校党委副书记邓卫主持会议。学校老领导顾秉林、胡显章、余寿文、胡东成、孙道祥参......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130905142649488888527/20130905142649488888527_.html" target="_blank">清华图书馆举办蒋南翔校长诞辰百年纪念资料展</a></h3>
+              <p>在清华大学原校长蒋南翔百年诞辰之际，由清华图书馆特藏部主办的“斯人斯文·蒋南翔校长诞辰百年纪念资料展”于9月1日至10月1日在清华文库阅览室正式展出，与此同时，在清华大学图书馆主页“网上展厅”也一并推出。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130905084036777318579/20130905084036777318579_.html" target="_blank">校领导参观纪念蒋南翔校长诞辰100周年专...</a></h3>
+              <p class="thnews_jqzy">　　校领导参观纪念蒋南翔校长诞辰100周年专题展&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网9月5日电（记者李含）9月4日，雨中的清华园更添一份静谧。上午，校党委书记胡和平等校领导来到清华大学校史馆，参观了&ldquo;唯实求是 献身党的教育事业&mdash;&mdash;纪念蒋南翔校长诞辰100周年专题展&rd......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130528175343171528822/20130528175343171528822_.html" target="_blank">清华大学举行张维教授百年诞辰纪念座谈会</a></h3>
+              <p>5月25日上午，张维教授百年诞辰纪念座谈会在清华主楼接待厅举行。张维是我国著名的结构工程、固体力学专家，高等工程教育家，科技教育活动家，两院院士，瑞典皇家工程科学院外籍院士，清华大学教授，清华大学原副校长、深圳大学原校长。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121212143420205349583/20121212143420205349583_.html" target="_blank">厦门纪念马约翰诞辰130周年</a></h3>
+              <p class="thnews_jqzy">　　厦门纪念马约翰诞辰130周年来源：福建日报 2012-12-11 周思明为纪念现代体育先驱马约翰诞辰130周年，9日，厦门马约翰纪念馆、马约翰体育场在鼓浪屿隆重揭牌，马约翰铜像也同时揭幕。马约翰1882年出生于厦门市鼓浪屿，1911年毕业于圣约翰大学。由于具有突出的运动才能，他于1914年秋季应聘到清华学校任教，并逐步升为教授，担任清华大学体育部主任......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121212114536129223814/20121212114536129223814_.html" target="_blank">清华纪念马约翰诞辰130周年系列活动在厦...</a></h3>
+              <p>12月8-9日，清华大学与厦门市政府在厦门共同举办马约翰诞辰130周年系列纪念活动。活动包括纪念马约翰诞辰130周年座谈会、纪念马约翰足球邀请赛、马约翰纪念馆开馆仪式、马约翰铜像揭幕仪式，以及马约翰体育场挂牌仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121210172935007134984/20121210172935007134984_.html" target="_blank">纪念马约翰先生诞辰130周年活动举行</a></h3>
+              <p class="thnews_jqzy">　　纪念马约翰先生诞辰130周年活动举行冯建中、于伟国、刘可清、胡和平、杨振斌、陈力俊等出席来源：厦门日报 2012-12-10 蓝碧霞今年是我国近代体育事业的主要开拓者、体育教育奠基人马约翰先生诞辰130周年。昨日，马约翰纪念馆在鼓浪屿开馆，马约翰铜像揭幕、马约翰体育场挂牌仪式及座谈会同时举行，以纪念这位被誉为&ldquo;中国体育界的一面旗帜&rdquo......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121203154748474224289/20121203154748474224289_.html" target="_blank">顾毓琇先生诞辰110周年展览在清华举行</a></h3>
+              <p class="thnews_jqzy">　　顾毓琇先生诞辰110周年展览在清华举行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网12月3日电12月1日，清华大学工学院原院长、电机系创始人顾毓琇先生诞辰110周年纪念展览在清华大学文科图书馆举行。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 本次展览共展出90余件文献和手稿，大部分是第一次......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9905/2012/20121129132909423922493/20121129132909423922493_.html" target="_blank">吴邦国为马约翰纪念馆题字</a></h3>
+              <p class="thnews_jqzy">　　吴邦国为马约翰纪念馆题字来源：厦门日报 2012-11-29 陈泥今年是出生于鼓浪屿的著名人民体育教育家马约翰诞辰130周年，清华大学和厦门市政府将于12月8日联合举行系列纪念活动。作为活动&ldquo;重头戏&rdquo;之一，将在当日揭牌的&ldquo;马约翰纪念馆&rdquo;装修、布展已基本完成，记者昨日从市政府办公厅了解到，全国人大常委会委员长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121126131955365382782/20121126131955365382782_.html" target="_blank">顾毓琇先生诞辰110周年展览即将举行</a></h3>
+              <p class="thnews_jqzy">　　顾毓琇先生诞辰110周年展览即将举行清华新闻网11月26日电为了纪念清华大学工学院前院长、电机系创始人顾毓琇先生诞辰110周年，清华校友总会、清华大学档案馆、清华大学图书馆将于2012年12月1日至16日在文科图书馆四层联合举办《文理大师顾毓琇先生纪念展》。本次展览将展出的文献和手稿，大部分都是第一次与公众见面，其中包括邓小平、江泽民、朱镕基、蒋介石......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121105094608331495683/20121105094608331495683_.html" target="_blank">清华举办赵元任先生诞辰120周年系列纪念...</a></h3>
+              <p class="thnews_jqzy">　　清华举办赵元任先生诞辰120周年系列纪念活动&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网11月5日电11月3日，为庆祝老清华国学院&ldquo;四大导师&rdquo;之一的赵元任先生诞辰120周年，清华大学国学研究院隆重举行了为期一天的系列纪念活动。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120927164603748582279/20120927164603748582279_.html" target="_blank">钱伟长诞辰100周年座谈会在清华大学举办</a></h3>
+              <p class="thnews_jqzy">　　钱伟长诞辰100周年座谈会在清华大学举办来源：人民网 2012-09-26 赵婀娜 贾娜纪念钱伟长诞辰100周年座谈会今日在清华大学举行。钱伟长是我国近代力学奠基人之一，著名的科学家、教育家和杰出的社会活动家，被誉为中国近代&ldquo;力学之父&rdquo;、&ldquo;应用数学之父&rdquo;，与钱学森、钱三强就被称为我国科学界的&ldquo......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120927164439311442971/20120927164439311442971_.html" target="_blank">清华大学纪念钱伟长诞辰百年</a></h3>
+              <p class="thnews_jqzy">　　清华大学纪念钱伟长诞辰百年来源：中国新闻网 2012-09-26 余湛奕&ldquo;回顾我这一辈子，归根结底，我是一个爱国主义者。&rdquo;著名科学家、教育家钱伟长10年前对自己一生的总结，在26日其百年诞辰之际，又被提起，引起共鸣。钱伟长曾经工作学习44年的清华大学当天举行座谈会，纪念其诞辰100周年。&nbsp;1931年，钱伟长以语文......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120927164319575382494/20120927164319575382494_.html" target="_blank">清华大学师生纪念钱伟长诞辰100周年</a></h3>
+              <p class="thnews_jqzy">　　清华大学师生纪念钱伟长诞辰100周年来源：新华网 2012-09-27 李江涛清华大学纪念钱伟长先生诞辰100周年座谈会26日举行，钱伟长亲属与清华师生深情地追忆这位科学巨匠、教育大家、杰出校友。清华大学校长陈吉宁在座谈会上回顾了钱伟长的一生，他说，我们要学习钱伟长学长爱国敬业、矢志不移的品格，为建设世界一流大学贡献力量。据了解，钱伟长生于191......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120927094746037103046/20120927094746037103046_.html" target="_blank">清华举行纪念钱伟长先生诞辰100周年座谈会</a></h3>
+              <p>9月26日下午，纪念钱伟长先生诞辰100周年座谈会在清华大学主楼举行。百余位与会代表和清华师生共同回顾了钱伟长先生在不同时期、不同岗位上，对我国高等教育事业和科技事业发展作出的重大贡献，缅怀钱伟长先生的光辉业绩，学习他的崇高精神。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2011.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232613218771409/20110225232613218771409_.html" target="_blank">刘达同志诞辰百周年纪念座谈会在清华举行</a></h3>
+              <p class="thnews_jqzy">　　领导清华拨乱反正 生前最恋清华精神刘达同志诞辰百周年纪念座谈会在清华举行【新闻中心讯 记者 胡齐明 摄影 郭海军】1月11日下午，刘达同志诞辰百周年纪念座谈会在清华工字厅东厅举行。清华大学校长顾秉林院士，学校老领导方惠坚、贺美英、滕藤、解沛基、张思敬、黄圣伦、庄丽君，刘达的儿子、孙女，刘达生前的同事及清华大学师生等出席了座谈会，共同缅怀这位清华老校长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232556593951941/20110225232556593951941_.html" target="_blank">清华大学师生纪念钱钟书先生百年诞辰</a></h3>
+              <p class="thnews_jqzy">　　清华大学师生纪念钱钟书先生百年诞辰&nbsp;来源：新华网 2010-11-18今年是我国已故著名学者、作家钱钟书先生百年华诞，清华大学师生连日来举行各种纪念活动，深情缅怀这位清华优秀毕业生。在18日举行的座谈会上，伴随着舒缓优雅的钢琴曲，清华大学学生话剧队和化工系的同学共同奉献了一场声情并茂的精彩朗诵。整个朗诵活动以钱钟书先生经历为时间脉络分为五个......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232538906174678/20110225232538906174678_.html" target="_blank">清华大学师生纪念学长曹禺先生百年诞辰</a></h3>
+              <p class="thnews_jqzy">　　清华大学师生纪念学长曹禺先生百年诞辰来源：新华网 2010-09-22清华大学纪念曹禺先生百年诞辰座谈会21日举行，师生们围坐在当年老学长曹禺创作《雷雨》时常用的书桌旁，深情缅怀这位杰出的剧作家。曹禺生于1910年9月24日，1929年考入清华大学外文系。1933年，当时年仅23岁的他在大学毕业前夕创作完成话剧《雷雨》，次年公开发表，引起强烈反响。《......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232539000403986/20110225232539000403986_.html" target="_blank">清华举行座谈会纪念曹禺百年诞辰</a></h3>
+              <p class="thnews_jqzy">　　清华举行座谈会纪念曹禺百年诞辰【新闻中心讯 记者 程曦 摄影 郭海军】9月21日下午，雨后初晴，阳光透过绿叶簇拥的玻璃窗照在清华大学图书馆老馆第一阅览室一张普通的书桌前。近20名清华师生围坐在这里，只空出一把椅子——清华大学纪念曹禺先生百年诞辰座谈会在这里举行。77年前，正是在这扇窗前、这个座位上，曹禺先生写出了代表作《雷雨》。纪念曹禺先生百年诞辰座谈会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232538265740723/20110225232538265740723_.html" target="_blank">北京市文联举行“曹禺主席百年诞辰纪念会”</a></h3>
+              <p class="thnews_jqzy">　　北京市文联举行“曹禺主席百年诞辰纪念会”来源：千龙网 2010-09-19今年9月24日，是中国现代话剧的奠基人、著名剧作家曹禺先生诞辰100周年纪念日。曹禺先生生前曾担任北京市文联第四届主席。今天上午，北京市文联举行了隆重的“曹禺主席百年诞辰纪念会”。中国文联党组成员、副主席、书记处书记廖奔，北京市委宣传部副部长陈启刚、北京市文联主席金铁霖、北京市文联......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232416500583068/20110225232416500583068_.html" target="_blank">纪念夏鼐先生诞辰一百周年</a></h3>
+              <p class="thnews_jqzy">　　纪念夏鼐先生诞辰一百周年今年2月7日是我国杰出的考古学家夏鼐先生诞辰一百周年，我们怀着十分崇敬的心情，深切缅怀夏先生的高尚品德和渊博学识，尤其是先生为中国考古学发展所建立的丰功伟绩。夏鼐先生是我们考古研究所的缔造者。考古所从1950年5月筹备、8月正式成立到现在整整60年，其中夏先生主持工作，任职常务副所长、所长和名誉所长的时间占一半以上。考古所6......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232414046814310/20110225232414046814310_.html" target="_blank">天津将建曹禺故居纪念馆迎接其百年诞辰</a></h3>
+              <p class="thnews_jqzy">　　天津将建曹禺故居纪念馆迎接其百年诞辰今年是中国著名戏剧大师曹禺百年诞辰，记者从天津市旅游局了解到，为纪念曹禺先生百年诞辰，天津市将建立“曹禺故居纪念馆”，并于5月1日对外开放。曹禺是中国新文化运动的开拓者之一，著名戏剧大师，中国话剧奠基人之一，戏剧教育家。曹禺故居坐落于天津市民主道２３号，属意大利风情区。曹禺在此度过了幼年、童年和青少年时光。这时......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2010.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232408500198065/20110225232408500198065_.html" target="_blank">纪念梅贻琦校长诞辰120周年</a></h3>
+              <p class="thnews_jqzy">　　纪念梅贻琦校长诞辰120周年●校史研究室 李亚明梅贻琦1940年，潘光旦曾在《梅月涵夫子任教廿五年序》中做如下感慨：“清华所培养出来的多少人才之中，对母校竭其心力，能如是锲而不舍的，已有几人？目前从事于大学教育的人中，或负行政的责任，或主专门的讲席，对所出身的学校，能如是其全神贯注契合无间的，能有几人？不因时势的迁移，不受名利的诱引，而能雍容揖让与大学环......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2009.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232341703898227/20110225232341703898227_.html" target="_blank">吴晗：追求真理，不断进步的一生</a></h3>
+              <p class="thnews_jqzy">　　追求真理，不断进步的一生——纪念吴晗先生诞辰100周年●校史研究室 刘惠莉吴晗雕像吴晗（1909-1969），原名吴春晗，字辰伯，号梧轩，浙江义乌人，我国著名历史学家、社会活动家、优秀共产党员，也是清华为之骄傲的优秀学子和教师。他的一生，曾历经磨难与坎坷，但是他对学术事业、对真理的执着追求，对社会主义事业的热爱，以及对家庭、爱情、朋友忠诚与担当的优秀品质......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2009.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232339171212618/20110225232339171212618_.html" target="_blank">吴晗先生百年诞辰纪念会召开</a></h3>
+              <p class="thnews_jqzy">　　吴晗先生百年诞辰纪念会召开【新闻中心讯】9月24日，是我国著名的历史学家、坚强的爱国民主战士、优秀的共产党员吴晗先生诞辰100周年纪念日。10月15日“永久的纪念 无尽的追思——吴晗先生诞辰100周年纪念会”在北京师范大学英东学术会堂召开。全国人大原副委员长王汉斌、彭珮云以及民盟中央、民盟北京市委老领导，中国历史学会、北京市历史学会以及吴晗研究分会领导，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232322687417905/20110225232322687417905_.html" target="_blank">走近吴晗——纪念吴晗诞辰100周年</a></h3>
+              <p class="thnews_jqzy">　　走近吴晗——纪念吴晗诞辰100周年（一）结缘吴晗同志今年8月11日是吴晗同志诞辰100周年，10月11日也是他被迫害致死40周年的日子。谨以此文缅怀这位著名的历史学家。一提起义乌有个著名的历史学家，许多人都晓得这是指吴晗同志，但提起“三家村”、“海瑞罢官”，可能不少年轻同志就不知道所以然了。我与吴晗同志就结缘于“海瑞罢官”。1965年11月1......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2009.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232223218905446/20110225232223218905446_.html" target="_blank">清华土水学院纪念黄文熙百年诞辰</a></h3>
+              <p class="thnews_jqzy">　　清华土水学院纪念黄文熙百年诞辰【新闻中心讯】1月3日，清华大学土水学院在主楼接待厅举行纪念黄文熙百年诞辰大会。时任校党委常务副书记的胡和平同志出席大会并讲话。他回顾了黄文熙在水利水电事业和岩土工程领域做出的杰出成就，并追忆了他在清华教书育人方面的卓越贡献。土水学院院长陈永灿主持大会。南京水利科学研究院、河海大学、中国水利水电科学研究院、北京工业大学、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232200468915518/20110225232200468915518_.html" target="_blank">纪念赫崇本教授诞辰百年</a></h3>
+              <p class="thnews_jqzy">　　弘扬先贤伟业 再创蓝色辉煌中国海洋大学校长吴德星：纪念赫崇本教授诞辰百年在赫崇本先生诞辰100周年之际，我们深切缅怀他为推动和发展我国海洋事业所作出的卓越贡献，追思和学习他为国家海洋事业呕心沥血、鞠躬尽瘁的崇高风范，进一步激励广大师生和海洋工作者投身海洋强国建设，推进国家海洋事业在新世纪实现新的跨越式发展。赫崇本先生是我国著名的物理海洋学家、海洋科学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225335796682227/20110225225335796682227_.html" target="_blank">清华大学隆重纪念赵访熊先生诞辰100周年</a></h3>
+              <p class="thnews_jqzy">　　清华大学隆重纪念赵访熊先生诞辰100周年【新闻中心讯 学生记者 余琼 王飞 何怡婷 摄影 崔凯】11月1日上午，“赵访熊先生诞辰100周年纪念大会”在清华大学主楼接待厅隆重举行。赵访熊夫人王繁女士和家人，前教育部部长何东昌，民盟北京市委主委、北京市政协副主席葛剑平，赵访熊先生生前好友及学生，来自政协、民盟等单位代表，以及清华大学数学科学系师生代表共同纪念......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232155500351401/20110225232155500351401_.html" target="_blank">清华大学隆重纪念赵访熊先生诞辰100周年</a></h3>
+              <p class="thnews_jqzy">　　清华大学隆重纪念赵访熊先生诞辰100周年【新闻中心讯 学生记者 余琼 王飞 何怡婷 摄影 崔凯】11月1日上午，“赵访熊先生诞辰100周年纪念大会”在清华大学主楼接待厅隆重举行。赵访熊夫人王繁女士和家人，前教育部部长何东昌，民盟北京市委主委、北京市政协副主席葛剑平，赵访熊先生生前好友及学生，来自政协、民盟等单位代表，以及清华大学数学科学系师生代表共同纪念......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225336109501207/20110225225336109501207_.html" target="_blank">叶企孙诞辰110周年纪念大会在清华大学举行</a></h3>
+              <p class="thnews_jqzy">　　叶企孙诞辰110周年纪念大会在清华大学举行【新闻中心讯 学生记者 吴婷婷 徐博洋 俞理晓 苏鹏霁 摄影 郭海军】10月11日上午，叶企孙先生诞辰110周年纪念大会在清华大学大礼堂举行。大会由清华大学、中国科学院、中国工程院、中国物理学会和北京大学联合举办，清华大学理学院院长、物理系系主任朱邦芬院士主持会议。叶企孙是我国近代物理学奠基人之一，是我国杰出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232147734380748/20110225232147734380748_.html" target="_blank">叶企孙诞辰110周年纪念大会在清华大学举行</a></h3>
+              <p class="thnews_jqzy">　　叶企孙诞辰110周年纪念大会在清华大学举行【新闻中心讯 学生记者 吴婷婷 徐博洋 俞理晓 苏鹏霁 摄影 郭海军】10月11日上午，叶企孙先生诞辰110周年纪念大会在清华大学大礼堂举行。大会由清华大学、中国科学院、中国工程院、中国物理学会和北京大学联合举办，清华大学理学院院长、物理系系主任朱邦芬院士主持会议。叶企孙是我国近代物理学奠基人之一，是我国杰出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2008.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232140265605073/20110225232140265605073_.html" target="_blank">清华大学举行叶企孙先生教育思想研讨会</a></h3>
+              <p class="thnews_jqzy">　　纪念叶企孙先生诞辰110周年清华大学举行叶企孙先生教育思想研讨会【新闻中心讯 记者 邵默 摄影 郭海军】 今年是我国近代物理学奠基人之一叶企孙先生诞辰110周年。9月22日，清华大学物理系与清华大学教育研究所联合举办了叶企孙先生教育思想研讨会。物理系系主任、中科院院士朱邦芬主持会议。叶企孙教育思想研讨会会场叶企孙先生是我国杰出的科学家、教育家和爱国者......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232030875143229/20110225232030875143229_.html" target="_blank">纪念冯仲云同志诞辰100周年座谈会在京举行</a></h3>
+              <p class="thnews_jqzy">　　纪念冯仲云同志诞辰100周年座谈会在京举行纪念冯仲云同志诞辰100周年座谈会今天在北京举行。全国政协原副主席钱正英出席会议并讲话，来自水利部、黑龙江省、清华大学等冯仲云战斗和工作过的地方和单位代表以及冯仲云同志的亲属在会上作了发言。冯仲云同志是我党早期的革命家。早在1927年，冯仲云同志在清华大学学习期间就加入了中国共产党，后被选为清华大学支部书记。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2007.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231902906985389/20110225231902906985389_.html" target="_blank">顾秉林校长出席王淦昌百年诞辰座谈会</a></h3>
+              <p class="thnews_jqzy">　　顾秉林校长出席王淦昌百年诞辰座谈会【新闻中心讯 特约记者靳闻】 在我国杰出的核物理学家、“两弹元勋”、清华校友王淦昌院士百年诞辰之日，王淦昌学术思想座谈会于5月28日下午在人民大会堂举行。中共中央政治局委员、国务院副总理曾培炎出席并讲话。王淦昌院士1925年考入清华，1929年毕业于物理系，之后还担任了一年助教。上世纪六七十年代，他以“我愿以身许国”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2007.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231834078538924/20110225231834078538924_.html" target="_blank">清华图书馆举办“孟昭英教授纪念展”</a></h3>
+              <p class="thnews_jqzy">　　清华图书馆举办“孟昭英教授纪念展”【新闻中心讯】2006年12月24日，是著名物理学家、电子学家、教育家、中国科学院院士、清华大学著名教授孟昭英先生诞辰一百周年。2007年1月4日，在清华电子系和物理系的大力支持下，清华大学图书馆在清华特藏文库举办了“孟昭英教授纪念展”，以此纪念这位为我国科技发展作出重要贡献的著名科学家。87岁高龄的孟昭英的夫人来到......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2006.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231831062531564/20110225231831062531564_.html" target="_blank">深切缅怀清华无线电系的创建人孟昭英院士</a></h3>
+              <p class="thnews_jqzy">　　深切缅怀清华无线电系的创建人孟昭英院士吴佑寿今年12月24日是孟昭英院士百岁冥寿。清华大学物理系和电子工程系联合召开纪念会, 纪念他在无线电电子学领域所做出的杰出贡献, 特别是他为发展我国电子科学技术教育呕心沥血的精神和热爱祖国、热爱人民, 追求社会进步的高尚品德. 1952年以来, 我有幸在孟先生直接领导下工作，对他临危受命, 迎难而上, 勇挑重任,......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2006.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231831031593266/20110225231831031593266_.html" target="_blank">孟昭英教授百年诞辰纪念大会在清华举行</a></h3>
+              <p class="thnews_jqzy">　　孟昭英教授百年诞辰纪念大会在清华举行【新闻中心讯 记者 程曦 摄影 郭海军】12月24日上午，孟昭英教授百年诞辰纪念大会在清华主楼举行。清华大学校长顾秉林院士，天津大学校长龚克教授，清华大学党委副书记陈旭教授，吴良镛、李德平、周炳琨等10余位院士，孟昭英夫人贺苇女士及孟先生的家人、亲友和学生等出席了纪念大会，共同缅怀这位著名的物理学家、电子学家和教育家......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2006.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231829218966921/20110225231829218966921_.html" target="_blank">清华大学纪念陶葆楷先生诞辰100周年</a></h3>
+              <p class="thnews_jqzy">　　清华大学纪念陶葆楷先生诞辰100周年【新闻中心讯 通讯员 屈彩云】12月16日，陶葆楷先生诞辰100周年纪念大会在清华大学隆重举行。陶葆楷先生（1906－1992）是我国环境工程学科的奠基人之一、清华大学环境科学与工程学科创始人，他从事市政工程和环境工程教育和科研工作60载，硕果累累，桃李满天下，为我国市政建设和环境保护事业做出了重大贡献。校长顾......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2005.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231708046822728/20110225231708046822728_.html" target="_blank">我校纪念冯友兰先生诞辰110周年</a></h3>
+              <p class="thnews_jqzy">　　我校纪念冯友兰先生诞辰110周年【新闻中心讯】为纪念冯友兰先生诞辰110周年，12月16日，“冯友兰与清华大学文学院——纪念冯友兰先生诞辰110周年座谈会”在新斋104会议室召开。冯友兰先生女儿、著名作家冯钟璞女士，著名翻译家文洁若女士，冯学研究会会长、北京大学朱伯昆教授，中科院院士唐稚松教授等近30位清华文学院老校友与会，深情缅怀冯友兰先生，回顾当年名......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2005.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231658859541919/20110225231658859541919_.html" target="_blank">我校举行陈士骅先生百年诞辰纪念会</a></h3>
+              <p class="thnews_jqzy">　　我校举行陈士骅先生百年诞辰纪念会11月7日， “陈士骅先生百年诞辰纪念会”在主楼接待厅隆重举行。校党委书记、校务委员会主任陈希，原校党委书记、教育基金会理事长贺美英出席了纪念会。应邀出席的还有我校原党委第一副书记、全国人大原教科文卫委员会副主任刘冰，原党委副书记、副校长、教育部原副部长高沂，民盟北京市委常务副主委朱尔澄，北京大学校友会副会长谢青等。陈......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231500000369540/20110225231500000369540_.html" target="_blank">我校举行邓小平同志诞辰一百周年纪念大会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档缅怀世纪伟人 创建一流大学我校举行邓小平同志诞辰一百周年纪念大会【新闻中心记者 类延旭 摄影 郭海军】8月20日下午，主楼后厅，庄严肃穆。嘹亮的国歌，穿透历史的烟云，回荡在清华园的上空，表达着清华人对百年小平的无限敬仰和怀念之情。 “清华大学纪念邓小平同志诞辰一百周年大会”在这里隆重举行。清华师生聚集一堂，共同缅怀这位全党全军全国各族人民公......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344531227917/20110225225344531227917_.html" target="_blank">我校举行邓小平同志诞辰一百周年纪念大会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档缅怀世纪伟人 创建一流大学我校举行邓小平同志诞辰一百周年纪念大会【新闻中心记者 类延旭 摄影 郭海军】8月20日下午，主楼后厅，庄严肃穆。嘹亮的国歌，穿透历史的烟云，回荡在清华园的上空，表达着清华人对百年小平的无限敬仰和怀念之情。 “清华大学纪念邓小平同志诞辰一百周年大会”在这里隆重举行。清华师生聚集一堂，共同缅怀这位全党全军全国各族人民公......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231458531584123/20110225231458531584123_.html" target="_blank">北京高校6000余名师生参观邓小平诞辰百...</a></h3>
+              <p class="thnews_jqzy">　　北京高校6000余名师生参观邓小平诞辰百年展新华社  2004-8-18  王黎&nbsp;&nbsp;&nbsp;新华社北京8月18日电(记者王黎)自8月10日开展以来，邓小平诞辰百年展平均每天都吸引六、七百名高校师生前来参观。截至18日记者发稿时，已有北京大学、清华大学、人民大学、北京师范大学等7所高校的6000多名师生前来观看。&nbsp;&nbsp;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231458203109079/20110225231458203109079_.html" target="_blank">市教工委和市高校党建研究会纪念邓小平诞辰...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档学习小平党建理论 推进高校党建工作市教工委和市高校党建研究会纪念邓小平诞辰100周年座谈会在我校召开【新闻中心讯 记者 华章 摄影 魏磊】8月17日下午，由北京市委教育工委和北京市高校党建研究会共同举办的学习邓小平党建理论暨纪念邓小平同志诞辰100周年座谈会在我校二教会议室举行。来自北京市三十多所高校的负责同志和党建研究人员40多人参加了会议，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344750826866/20110225225344750826866_.html" target="_blank">我校“博士生报告团”重走伟人之路</a></h3>
+              <p class="thnews_jqzy">　　无标题文档追随小平足迹，投身复兴伟业我校“博士生报告团”重走伟人之路【新闻中心讯 记者 聿才】8月6日，“追随小平足迹，投身复兴伟业——清华大学博士生报告团2004暑期系列活动”正式启动。本次活动历时约10天，来自清华大学14个院系的70余名博硕士研究生组成7个团队，将通过对邓小平同志生活战斗过的法国及国内六个省市地区的参观、访问、考察和科技服务，追忆小......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2003.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231423609991423/20110225231423609991423_.html" target="_blank">我校举行师生纪念毛泽东同志诞辰110周年...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校举行师生纪念毛泽东同志诞辰110周年晚会“我们唱着《东方红》，当家作主站起来……”毛泽东，这位人民共和国的缔造者，这位领导中国人民走向独立和富强的世纪伟人，在他诞辰110周年的时候，仍然受到我校师生的衷心爱戴和崇敬。12月23日晚，在校工会举办的纪念毛泽东同志诞辰110周年晚会上，我校师生用深情的歌声和动人的表演表达了自己对毛泽东同志的深厚......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2003.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231410687206252/20110225231410687206252_.html" target="_blank">纪念毛泽东同志诞辰110周年征文活动通知</a></h3>
+              <p class="thnews_jqzy">　　无标题文档纪念毛泽东同志诞辰110周年征文活动通知2003年12月26日，是毛泽东同志诞辰110周年纪念日。中共北京市委宣传部、中共北京市委党史研究室、北京市社会科学界联合会、北京市邓小平理论研究中心决定在全市开展纪念毛泽东同志诞辰110周年征文活动。优秀论文入选参加2003年12月下旬召开的“首都纪念毛泽东同志诞辰110周年理论研讨会”并将特别优秀论文......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2002.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231305828318760/20110225231305828318760_.html" target="_blank">朱自清百年诞辰纪念座谈会在京举行　江泽民...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document朱自清百年诞辰纪念座谈会在京举行　江泽民亲笔题诗(新华网 2002.07.15)新华社北京１９９８年１１月１３日电（记者李术峰）寒意蹒跚，故都秋长，清华园内硕大的荷叶依然能够遮波蔽水。面对此情此景，人们总会情不自禁地想起朱自清——一位百年前诞生的现代著名诗人、散文家。他曾在这荷塘月色下徘徊低吟，他的《背影》、《荷塘月色》......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231240671297431/20110225231240671297431_.html" target="_blank">美术学院举行纪念陈叔亮先生诞辰100周年...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document美术学院举行纪念陈叔亮先生诞辰100周年座谈会11月1日下午，北京市美术界、书法界人士约60人汇聚我校美术学院，共同纪念我国著名书画艺术家、艺术教育家陈叔亮先生诞辰100周年。陈叔亮先生1901年出生于浙江省黄岩县，1931年毕业于上海艺术专科学校。1938年，他带领部分爱国青年奔赴延安，在延安鲁迅艺术学院美术系任教......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231231593744517/20110225231231593744517_.html" target="_blank">无悔的追求——三位中国知识分子的信仰之路</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document无悔的追求——三位中国知识分子的信仰之路吴良镛《人民日报海外版》 (2001年06月27日第九版)王军“奈不舍破国山河何！”&nbsp;&nbsp;&nbsp;&nbsp;79岁的“两院”院士吴良镛已是满脸倦容，但在记者面前，他的笑容还是那样动人。&nbsp;&nbsp;&nbsp;&nbsp;他手捧厚厚的一摞书稿，徐徐......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353359667391/20110225225353359667391_.html" target="_blank">无悔的追求——三位中国知识分子的信仰之路</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document无悔的追求——三位中国知识分子的信仰之路吴良镛《人民日报海外版》 (2001年06月27日第九版)王军“奈不舍破国山河何！”&nbsp;&nbsp;&nbsp;&nbsp;79岁的“两院”院士吴良镛已是满脸倦容，但在记者面前，他的笑容还是那样动人。&nbsp;&nbsp;&nbsp;&nbsp;他手捧厚厚的一摞书稿，徐徐......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231230250210815/20110225231230250210815_.html" target="_blank">感人肺腑——3位中国知识分子的信仰之路</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document感人肺腑——3位中国知识分子的信仰之路新华网 2001年6月14日新华社记者 王军“奈不舍破国山河何！”79岁的“两院”院士吴良镛已是满脸倦容，但在记者面前，他的笑容还是那样动人。他手捧厚厚的一摞书稿，徐徐打开：“好几个月了，没日没夜地写作，今天终于赶出来了。”为这部题为《人居环境学导论》的学术巨著，吴良镛用了大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353656450106/20110225225353656450106_.html" target="_blank">感人肺腑——3位中国知识分子的信仰之路</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document感人肺腑——3位中国知识分子的信仰之路新华网 2001年6月14日新华社记者 王军“奈不舍破国山河何！”79岁的“两院”院士吴良镛已是满脸倦容，但在记者面前，他的笑容还是那样动人。他手捧厚厚的一摞书稿，徐徐打开：“好几个月了，没日没夜地写作，今天终于赶出来了。”为这部题为《人居环境学导论》的学术巨著，吴良镛用了大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231221000974088/20110225231221000974088_.html" target="_blank">清华隆重纪念梁思成诞辰一百周年</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华隆重纪念梁思成诞辰一百周年(2001.04.28 新华网)新华网北京４月２８日电 （记者王军）近日，北京中国美术馆，一位久别人世的建筑大师引起人们深深的怀念，他曾为中国建筑历史研究倾注心血，为中国城市的科学规划倾尽全力，为中国文化名城的保护奔走呼号。他，就是建筑史学家、城市规划学家、建筑教育家梁思成。今年是梁思成......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231218421642955/20110225231218421642955_.html" target="_blank">梁思成先生诞辰一百周年纪念会在京举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document梁思成先生诞辰一百周年纪念会在京举行（科技日报 2001年4月27日）王军我国著名建筑学家和建筑教育家梁思成先生诞辰一百周年纪念座谈会暨《梁思成全集》首发式，近日在北京人民大会堂举行。与会者高度评价了梁思成的生平业绩和辉煌成就，指出梁思成是中国现代建筑教育的奠基人，是中国古建筑研究的先驱者，是中国文物建筑和历史文化名......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355562814432/20110225225355562814432_.html" target="_blank">我校举行梁思成先生诞辰一百周年纪念会暨《...</a></h3>
+              <p class="thnews_jqzy">　　梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式隆重举行缅怀学术巨人开创中国建筑科学艺术复兴新阶段我校举行梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式【新闻中心讯】记者冬梅4月20日下午，我校在人民大会堂河北厅隆重举行梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式，深切缅怀这位学术巨人，立志学习先贤为祖国和人民不畏艰险、不图浮华、脚踏实地、刻......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231216156974587/20110225231216156974587_.html" target="_blank">我校举行梁思成先生诞辰一百周年纪念会暨《...</a></h3>
+              <p class="thnews_jqzy">　　梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式隆重举行缅怀学术巨人开创中国建筑科学艺术复兴新阶段我校举行梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式【新闻中心讯】记者冬梅4月20日下午，我校在人民大会堂河北厅隆重举行梁思成先生诞辰一百周年纪念会暨《梁思成全集》首发式，深切缅怀这位学术巨人，立志学习先贤为祖国和人民不畏艰险、不图浮华、脚踏实地、刻......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355625594595/20110225225355625594595_.html" target="_blank">梁思成先生诞辰一百周年纪念会在京举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document梁思成先生诞辰一百周年纪念会在京举行(2001.04.20 新华网)新华网北京４月２０日电（记者王军）我国著名建筑学家和建筑教育家梁思成先生诞辰一百周年纪念座谈会暨《梁思成全集》首发式，今天在北京人民大会堂举行。与会者高度评价了梁思成的生平业绩和辉煌成就，指出梁思成是中国现代建筑教育的奠基人，是中国古建筑研究的先驱者......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231215875739501/20110225231215875739501_.html" target="_blank">梁思成诞辰百年纪念座谈会举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document梁思成诞辰百年纪念座谈会举行（科技日报 2001年4月21日）本报北京4月20日讯记者李大庆报道：今天下午，我国著名建筑学家和建筑教育家梁思成先生诞辰一百周年纪念座谈会暨《梁思成全集》首发式在北京人民大会堂隆重举行。全国政协副主席、中共中央统战部部长王兆国，教育部部长陈至立，建设部部长俞正声，首都建筑界、教育界、文物界以......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231215968578271/20110225231215968578271_.html" target="_blank">梁思成诞生百年纪念座谈会举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document梁思成诞生百年纪念座谈会举行王兆国出席座谈会　陈至立到会讲话记者　刘帆（中国教育报 2001年4月21日）本报北京4月20日讯(记者　刘帆)一代宗师、百年思成，学贯中西、高风亮节。今天，我国著名建筑学家和建筑教育家梁思成先生诞辰一百周年纪念座谈会暨《梁思成全集》首发式在北京人民大会堂隆重举行。全国政协副主席、中共中央统战......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231216000491913/20110225231216000491913_.html" target="_blank">梁思成诞辰100周年纪念会举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document梁思成诞辰100周年纪念会举行(人民日报 2001年04月21日)据新华社北京4月20日电 （记者王军）我国著名建筑学家和建筑教育家梁思成先生诞辰100周年纪念座谈会暨《梁思成全集》首发式，今天在北京人民大会堂举行。与会者高度评价了梁思成的生平业绩和辉煌成就，认为梁思成是中国现代建筑教育的奠基人，是中国古建筑研究的先......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231216062115138/20110225231216062115138_.html" target="_blank">梁思成诞辰百年纪念会举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document梁思成诞辰百年纪念会举行记者 宋晓梦 通讯员 张莉（光明日报 2001年4月21日）本报北京4月20日电 我国著名建筑学家和建筑教育家梁思成先生诞辰一百周年纪念座谈会暨《梁思成全集》首发式今天在北京人民大会堂举行。全国政协副主席、中共中央统战部部长王兆国，教育部部长陈至立，建设部部长俞正声以及卢强、周干峙、吴良镛等院士出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231215953304501/20110225231215953304501_.html" target="_blank">专家指出，中国对建筑学缺乏必要关心和重视</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document专家指出，中国对建筑学缺乏必要关心和重视（中国新闻社 2001年4月21日）中新社北京四月二十日电(记者王锦娜朱沿华)中国科学院和中国工程院院士、清华大学教授、中国著名建筑学家吴良镛先生今天在此间指出，中国社会对建筑学缺乏必要的关心和重视。吴良镛先生是在今天举行的中国著名建筑学家梁思成先生诞辰一百周年纪念座谈会暨《梁......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231212750984871/20110225231212750984871_.html" target="_blank">第一届梁思成建筑设计双年展在京举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document第一届梁思成建筑设计双年展在京举行(2001.04.08 新华网)新华网北京４月８日电新华社记者 王军今天，北京中国美术馆，一位久别人世的建筑大师引起人们深深的怀念，他曾为中国建筑历史研究倾注心血，为中国城市的科学规划倾尽全力，为中国文化名城的保护奔走呼号。他，就是建筑史学家、城市规划学家、建筑教育家梁思成。......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

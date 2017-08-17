@@ -1,0 +1,1084 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>生命的足迹――访1933级和1941级校友</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231223734221853&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">生命的足迹</h3><p align="center"> ――访1933级和1941级校友</p><p align="center"> 记者 李颖洁</p><p> 花团锦簇、绿叶舒展的美好日子里，我校迎来了90岁生日，各级各界校友纷纷赶回为母校祝寿。29日上午，我们看到了一幕幕故友重逢、忆昔思今的动人场面。1933级与1941级校友分别在工字厅东西厅与后厅感慨往昔，畅谈如今。</p><p> 在后厅，十多位1933级老校友们讲起学习和工作条件感慨万分：他们上学的时候兵荒马乱，想学点什么、做点什么都是很不容易的事情；现在环境大变样，清华的发展很快呀！提到要把清华建设成世界一流的大学，老校友们都非常赞同：清华人有"自强不息，厚德载物"的精神，有良好的道德风尚。这都有利于学术的发展，建"一流"的目标一定可以达到。曾考取清华第一届公费留学的著名化工学家孙曾爵与夫人张鸣冬女士将他们珍藏多年的中国国画大师徐悲鸿的画作"食草马"于去年10月捐赠给北美清华教育基金会，其爱校之情至诚至殷，令人感动，从海外赶来的他，在谈到当今的出国热时动情地说："出了国也罢，不出国也罢，一定不要忘了祖国，祖国需要清华的人才。也希望清华的同学出国后不忘为祖国的发展出一份力!"</p><p> 许多校友已经近二十年没有回过清华，这次回校发现母校发生了很大的变化。他们对现在学校向综合性大学迈进极度赞扬，也很赞成现在各系同学都学一些其它系的公共课，认为这样打下的基础广泛，能够提高综合素质，工作时适应性强，可以做出更大的贡献。校友们看到新建筑多了，草坪树木也多了，都很高兴。他们衷心希望母校成为名符其实的"水木清华"的大学。</p><p> 90周年校庆，又逢1941级校友西南联大毕业60周年，双逢盛会，园宇生辉，群贤咸集，20多位1941级校友围坐在东西厅里，一堂畅叙。其中有原土木系的卢肇钧等院士，核化工专家汪家鼎院士，还有专程从台北赶回来的著名作家翟国瑾老先生。海外赶来的熊女士还刚于27日上午主持了由她捐赠60万美元修建的老年学研究中心"熊知行楼"的开工典礼。正当大家谈兴正浓时，门被轻轻推开了，一位老者走了进来，他激动地和在座的"老大哥"、"老大姐"们握手，互致问候，并不住地说："都老了，都老了啊！"当他哽咽着转过头时，泪水已打湿了他的眼眶。</p><p> 老人们谈起自己的大学生活时都十分感慨。他们感到在西南联大的学习、生活是一生最宝贵的经历。汪家鼎先生谈到，尽管抗战期间西南联大的学习生活条件都很艰苦，但联大的教育让他们受益终生，给了他们全面的培养，使他们吸取了各方面的知识，所以他们毕业后可以自如地从事任一项工作。大家颇为感慨地说："清华在过去，现在，以致将来都在培养'通才'。"</p><p> 在对王树声校友的采访中，老人的深情和喜悦不时地感染着我们。他动情地说："现在的清华可真不得了啊！报纸上、广播电视里经常有她的名字。""现在我们都可以这样说，'我不用去考清华了！'什么意思？就是说我可以在网上学到清华里的许多知识。"</p><p> 工字厅前，高大繁茂的银杏树下，一位老学长出神地站着，旁边轮椅上的，坐着他的夫人。默默无言的二老，耳畔的空气中流动的仿佛都是几十年的风风雨雨；他们的眼中、心中，是否都是几十年前在美丽的清华园里共度的青春岁月呢？</p><p> 在清华学习的日子可能只是校友们人生旅途短短的一瞬，而这一瞬留给他们的回忆却太多太多。当一位位校友记忆的闸门缓缓开启，那些曾在清华发生过的一幕幕，确是校友心中永不磨灭的生命的足迹。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月29日 11:36:44　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160328125807444384108/20160328125807444384108_.html" target="_blank">珠海校友会庆母校建校105周年活动举行</a></h3>
+              <p>3月19日上午，“清华大学珠海校友会庆母校105周年暨唐国安纪念馆开馆5周年活动”在珠海唐国安纪念馆举行，珠海市政协副主席刘青华，清华大学副校长尤政及来自全国各地及珠三角的200余位校友参加了本次活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9659/2016/20160316092251966182167/20160316092251966182167_.html" target="_blank">两会校友代表与五道口金融学院师生共话中国...</a></h3>
+              <p>由清华大学五道口金融学院党委主办的“两会校友代表与清华五道口师生共话中国经济新常态”两场座谈会分别于3月10日、12日在五道口金融学院举行。座谈会上，政协委员、中央汇金投资有限责任公司副总经理、五道口金融学院兼职教授赵海英，水木投资集团创始人、84级校友方方以及人大代表、宝新能源董事长、学院GFD首期班在读学生宁远喜，老百姓大药房董事长、EMBA2015秋季班学生谢子龙，EMBA2014春季班学生天明集团董事长姜明、春江集团有限公司董事长裴春亮，浙江华联集团有限公司董事长、EMBA2015春季班学生徐爱华七位嘉宾与学院党委、学生党支部代表们共话中国经济改革等两会热点。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2016.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160225095253912309580/20160225095253912309580_.html" target="_blank">校友马登科、沈悦、许可获得2016年斯隆...</a></h3>
+              <p>2月23日，美国斯隆基金会（Alfred P. Sloan Foundation）公布了2016年获得斯隆研究奖（Sloan Research Fellowships）的126名青年学者名单，共有17位华人学者获奖，其中有3位清华校友，分别为：马登科获神经科学奖，沈悦获物理学奖，许可获化学奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2016.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160222102858817490453/20160222102858817490453_.html" target="_blank">【人物】邹昊：福布斯全球“30 Unde...</a></h3>
+              <p>新年伊始，邹昊被选为2016年福布斯全球30位30岁（30 under 30）以下金融奇才，他亦是此项全球青年领袖榜单金融领域中唯一的中国人。1月28日，在中国农历新年到来之前，校友总会通过微信视频采访到了远在美国加州的他。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2016/20160113152723458206406/20160113152723458206406_.html" target="_blank">2016中国大学CNS论文排行榜，清华大...</a></h3>
+              <p>　　2016年1月11日，艾瑞深中国校友会网《2016中国大学评价研究报告》公布最新2016中国大学排行榜700强、2016中国两岸四地大学排行榜和2016中国大学国际化水平排行榜等榜单。其中，北京大学连续9年夺得中国大学排行榜冠军，清华大学第二，复旦大学第三，武汉大学第四，浙江大学第五；吉林大学珠海学院、河南理工大学万方科技学院和四川大学锦江学院列2016中国独立学院排行榜前三甲；武昌首义学院、文华学院和山东英才学院居2016中国民办大学排行榜前三强。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2016/20160113151157958739664/20160113151157958739664_.html" target="_blank">2016中国大学ESI高被引论文排行榜，...</a></h3>
+              <p>　　2016年1月11日，艾瑞深中国校友会网《2016中国大学评价研究报告》公布最新2016中国大学排行榜700强、2016中国两岸四地大学排行榜和2016中国大学国际化水平排行榜等榜单。其中，北京大学连续9年夺得中国大学排行榜冠军，清华大学第二，复旦大学第三，武汉大学第四，浙江大学第五；</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9665/2016/20160104143750906574290/20160104143750906574290_.html" target="_blank">校友总会一行看望西南联大校友会常务副会长...</a></h3>
+              <p>12月31日，清华大学校友总会与校史馆一行看望了原国家测绘局局长、西南联大校友会常务副会长李晓学长，并为他送上鲜花和新年的祝福。李晓1922年生于辽宁新宾，1941年考入西南联大历史学系，1945年毕业后回到东北工作，曾任职于黑龙江省委、辽宁省委，后出任国家建委副秘书长、国家测绘局局长。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9665/2015/20151231170043327173038/20151231170043327173038_.html" target="_blank">清华校友羽毛球俱乐部荣获全国社会体育竞赛...</a></h3>
+              <p>12月29日,北京市第十届全民健身体育节总结颁奖暨社会体育工作交流会议在北京住总京体健身中心召开。会上，北京市社会体育管理中心主任李炳熙对十家全国社会体育竞赛活动优秀单位和队伍作了表彰，其中，清华校友羽毛球俱乐部代表北京市在2015年京津冀羽毛球冠军挑战赛中取得优异成绩，作出突出贡献，因此荣获表彰。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151229141225023429279/20151229141225023429279_.html" target="_blank">鲁红兵校友入选国际实验力学学会会士</a></h3>
+              <p>近日，国际实验力学学会（Society for Experimental Mechanics，SEM）公布了2016年新选会士名单，共4位科学家入选，清华校友鲁红兵名列其中。鲁红兵1964年生，1986年在华中工学院取得学士学位，同年考入清华大学工程力学系，师从黄克智教授和杨卫教授攻读固体力学专业,1988年12月毕业获得硕士学位。1997年在加州理工学院获得航空学博士学位。现任美国德克萨斯大学达拉斯分校机械工程系教授、副系主任。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9665/2015/20151224101858439127524/20151224101858439127524_.html" target="_blank">校友总会看望物理学家洪朝生院士</a></h3>
+              <p>12月23日上午，校友总会秘书长唐杰一行到中国科学院物理研究所看望了95岁高龄的中国科学院院士、物理学家洪朝生老学长。洪朝生的同年级同学、现年97岁高龄的机械系校友吴大昌老学长也一同前往看望。唐杰为两位老学长送上了新年的祝福。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151224093248954167887/20151224093248954167887_.html" target="_blank">许渊冲校友当选传播中华文化年度人物</a></h3>
+              <p>12月18日，由文化部、国务院新闻办公室、国务院侨务办公室、中国人民对外友好协会、孔子学院总部、国家汉办、中国文联和中央电视台共同主办的第四届“中华之光——传播中华文化年度人物”颁奖典礼在中央电视台举行，有关部门向获奖的13位个人和1个集体颁奖。许渊冲先生以对中国古典文化的推广和传播的贡献而榜上有名。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9659/2015/20151225143235665951382/20151225143235665951382_.html" target="_blank">2015清华环境华东论坛举办</a></h3>
+              <p>12月20日，由清华校友总会和清华大学环境学院主办，清华大学环境学院华东校友会和上海华峰超纤材料股份有限公司承办的“2015清华环境华东论坛暨环境风险防控与企业责任金山峰会”在上海市举办。“清华环境华东论坛”已经是连续第五年举办，今年的峰会主题是环境风险防控与企业责任。围绕本届论坛的主题，会议分为三场进行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151223141700592862552/20151223141700592862552_.html" target="_blank">清华校友总会第七届常务理事会全体会议召开</a></h3>
+              <p>12月20日下午，清华校友总会第七届常务理事会全体会议召开。校长、校友总会会长邱勇，校党委副书记、校友总会副会长史宗恺，校友总会副会长胡东成、白永毅等18位常务理事出席会议，校党委书记、校友总会副会长陈旭主持会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151222164927997414436/20151222164927997414436_.html" target="_blank">清华经管学院在深圳成立欧洲校友会法国分会</a></h3>
+              <p>　　清华经管学院法国校友会成立大会昨天在深圳举行，钱颖一院长出席致辞并为法国校友会揭牌，为会长、副会长、秘书长、副秘书长等颁发聘书。    　　钱颖一在致辞中表示，清华经管学院法国校友会成立大会原定于11月23日在巴黎召开，由于巴黎事件延期至今在深圳举行。钱颖一说，11月22日学院在英国伦敦成立了欧洲校友会即英国分会，11月25日在德国慕尼黑成立了欧洲校友会德国分会，加上如今成立的欧洲校友会法国分会，这三个分会构成了清华经管学院欧洲校友会。欧洲校友会是继2013年5月成立香港校友会、2014年11月成立东南亚校友会、2015年4月成立北美校友会之后，学院在海外成立的第四个校友会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151217162233505239141/20151217162233505239141_.html" target="_blank">清华大学院系校友工作研讨会举行</a></h3>
+              <p>12月16日下午，2015年清华大学院系校友工作研讨会在二教会议室举行，主题是“总会与院系协同配合探索校友工作新机制”。来自建筑学院、土木系、水利系、环境学院等34个院系的校友工作负责人、工作人员，校友总会秘书处负责人及各部门负责人共50余人参加会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9665/2015/20151215140818121966180/20151215140818121966180_.html" target="_blank">波士顿清华校友会举办“同行小聚—电力改革...</a></h3>
+              <p>12月6日，波士顿清华校友会在剑桥InTeaHouse举办“同行小聚—电力改革新机遇”活动。三十多位在波士顿能源行业工作学习的校友们共聚一堂，以“电改新机遇”为主题展开讨论。11月30日国家发改委出台了9号电改的六大配套文件，文件涉及输配电价改革、发电售电引入竞争、电力市场建设，此次改革可以说是过去十年中力度最大的一次，也给中国未来能源市场带来了无限多新的机遇。借此电改之际，来自技术、政策、商业、金融等不同领域的专家们以轻松的交流形式，结合自己的专业领域展开讨论。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151201100504108773747/20151201100504108773747_.html" target="_blank">13位清华校友获选2016年度IEEE ...</a></h3>
+              <p>近日，国际电气与电子工程师学会（IEEE，The Institute of Electrical and Electronics Engineers）公布了新选2016年度会士（IEEE Fellow）名单，全球共有296人获此殊荣，10位清华校友入选，其中1位目前任教于母校清华。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151125174522223392987/20151125174522223392987_.html" target="_blank">校友向涛当选发展中国家科学院院士 周兴江...</a></h3>
+              <p>11月21日，为期4天的发展中国家科学院（TWAS）第26届院士大会在奥地利首都维也纳闭幕。本次会议增选了44名发展中国家科学院院士，颁发了本年度的11个科学奖项。清华校友、中科院物理所研究员向涛当选发展中国家科学院院士。清华校友、中科院物理所研究员周兴江与土耳其科学家共同荣获2015年TWAS物理学奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151119101611857486197/20151119101611857486197_.html" target="_blank">清华校友通讯合订本赠送国家图书馆收藏</a></h3>
+              <p>11月17日上午，在国家图书馆原副馆长唐绍明学长的推荐下，《清华校友通讯》主编孙哲到国家图书馆，将《清华校友通讯》（复1期至复71期）、《校友文稿资料选编》（第一辑至19辑）合订本一套共25册、清华校友通讯光盘珍藏版2套赠送国家图书馆收藏。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151107183727076902742/20151107183727076902742_.html" target="_blank">清华校友马伟明院士获何梁何利基金最高奖</a></h3>
+              <p>11月4日，何梁何利基金2015年度颁奖大会在北京钓鱼台国宾馆举行。清华大学电机系1996届（博士）校友、海军工程大学马伟明院士获得最高奖项——2015年度何梁何利“科学与技术成就奖”，另外一位获得该奖项的是解放军信息工程大学教授邬江兴。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151105100714354835920/20151105100714354835920_.html" target="_blank">清华美院建院59周年值年校友大会举行</a></h3>
+              <p>11月1日上午，清华美院建院59周年值年校友大会举行。1965届、1985届、1995届、2005届的216位校友欢聚在院庆现场，师生聚首、同窗再聚，有说不完的话，道不完的情。会上，美院院长鲁晓波首先致欢迎词，他代表学院感谢校友们从全国各地回到母校，赞扬他们为社会做出的贡献，感谢他们对母校的关注和帮助，同时也详细介绍了美院的现状、成绩和未来的发展。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20151104160853516879941/20151104160853516879941_.html" target="_blank">徐州校友联谊会举行</a></h3>
+              <p>10月31日， 67位校友汇聚在徐州工程机械集团汽车制造厂，庆祝清华大学104周年华诞暨徐州校友会第32次联谊活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20151104095236218758293/20151104095236218758293_.html" target="_blank">从清华园到深圳湾——2015深圳清华校友...</a></h3>
+              <p>10月25日，由深圳市清华大学校友会主办、深圳清华校友会青年联合会承办的“从清华园到深圳湾——2015深圳清华校友迎新日”活动举行。近200位校友积极参加了本次活动，新老校友在欢快轻松的氛围中相见相识。本次迎新聚会活动形式新颖、内容丰富，众多校友的大力支持为本次活动增色添彩，年轻校友的连连称赞声，并期盼着今后更多活动的举办。自2012年深圳清华校友会青年联合成立以来，在会长房立新学长的积极推动和青联成员的热情组织下，每年秋季都会举办迎新日活动，欢迎当年来鹏城工作的新校友，向新校友介绍清华在深机构和优秀校友企业，搭建新老校友交流平台，帮助新校友适应新环境，更好、更快地成长发展。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151026211312073396501/20151026211312073396501_.html" target="_blank">清华大学第十七次校友工作会议在江西南昌举行</a></h3>
+              <p>10月24日至25日，清华大学第十七次校友工作会议在江西南昌举行。来自海内外66 个地区校友会、5个行业协会的130多位校友代表与会。清华大学校长、清华大学校友总会会长邱勇院士，清华大学党委副书记、清华大学校友总会副会长史宗恺，清华大学校友总会副会长胡东成、白永毅出席会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10065/2015/20150930142031985820384/20150930142031985820384_.html" target="_blank">美国南加州清华校友会探访抗战老兵于汉经学长</a></h3>
+              <p>适逢抗日战争胜利七十周年，美国南加州清华校友会代表一行七人于9月17日在洛杉矶帕萨迪纳市探访了抗战老兵于汉经（1941级外语系）。于汉经于1942年加入抗日名将孙立人将军（清华学校1923级）率领的新38师在缅甸抗击日军。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150922161156644606033/20150922161156644606033_.html" target="_blank">创业要少一点征服欲多一点克服力</a></h3>
+              <p>　　“用鼓励创业来促进经济不是一场增加创业实体数量的游戏。”9月19日，在首届北大清华校友创新创业论坛上，清华经管学院教师、清华x-lab主任张帷引用了2009年“创业研究全球奖”获得者Scott Shane的获奖致辞。    　　这篇致辞的观点是基于Scott Shane对于美国、非洲地区的长期数据研究——“真正创造经济增长和就业财富的创业企业是那些‘高质量、高增长，有潜力的企业’，是更应该被鼓励的”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150922105021999444192/20150922105021999444192_.html" target="_blank">校长邱勇在温哥华考察校友企业并与校友共叙...</a></h3>
+              <p>当地时间9月20日，校长邱勇在加拿大温哥华与90多名老中青校友欢聚一堂，共叙清华情。邱勇首先代表学校向校友们致以亲切问候，并感谢校友们在各行各业做出的杰出成绩和对母校的重要贡献。在回顾百年清华与祖国同呼吸共命运的历史后，他介绍了学校人事制度改革、教学改革、人才培养、交叉学科建设以及国际合作等方面取得的成就和设想。在展望新百年工作时，邱勇指出，清华不但要为国家战略发展做出应有贡献，还要为解决全球面临的共同问题培养具有国际视野的全面人才。最后，他引用钱穆先生的话“伟大的校友成就伟大的母校”和自己在首届北美校友大会的视频致辞“有校友的地方就是清华”，欢迎校友们常回家看看。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150917165042665115584/20150917165042665115584_.html" target="_blank">邵学校友捐赠清华大学仪式举行</a></h3>
+              <p>9月16日下午，邵学校友捐赠清华大学仪式在工字厅举行。捐赠仪式上，清华大学副校长、校教育基金会理事长杨斌，清华大学副秘书长、校教育基金会秘书长李家强与清华大学精密仪器系1980级校友、北京华宇软件有限公司董事长、总经理邵学共同签署了捐赠相关协议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150914112635012460340/20150914112635012460340_.html" target="_blank">清华校友—毛宗强励学基金设立</a></h3>
+              <p>9月10日，清华校友、清华大学核能与新能源技术研究院教授毛宗强学长协同儿子毛志明（2000级，软件学院）出席了“清华校友——毛宗强励学基金”设立仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2015/20150907153100205642709/20150907153100205642709_.html" target="_blank">抗战烽火中的清华校友</a></h3>
+              <p>　1937年抗日战争爆发，正值国家危难之际，一大批清华学子戎马沙场，以鲜血践行“行胜于言”的校训，用青春谱写了知识青年悲壮的战书。从那一刻起，清华人将争取民族独立、国家复兴为己任，攻坚克难，冲锋陷阵，踏上了铁血报国之路。清华有大师，更出猛将！看看这些清华学子吧！</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150902143626185871506/20150902143626185871506_.html" target="_blank">近七百名海内外校友欢聚首届北美清华校友大会</a></h3>
+              <p>8月29日，由清华校友总会主办、大纽约地区清华校友会承办的首届北美清华校友大会暨纽约论坛在曼哈顿举办。中国驻纽约领馆总领事章启月大使到会祝贺，清华大学校长、清华校友总会会长邱勇以题为“有你们的地方就是清华”的视频向广大校友表达了问候，清华大学校务委员会主任陈旭、新竹清华大学校长贺陈弘在论坛上分别讲话。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150831144134644623178/20150831144134644623178_.html" target="_blank">首届北美清华校友大会暨纽约论坛成功举办</a></h3>
+              <p>　　首届北美清华校友大会暨纽约论坛在清华校友总会、大纽约地区清华校友会的共同努力下日前在纽约成功举办。大会以“凝聚力量，共谋发展，引领未来”为主题，大力促进海内外校友间的交流，着力加强母校与校友的联系，增强清华在北美的影响力，并为中美企业在技术，人才，资金等方面的进一步合作搭建平台。海峡两岸清华大学校领导、海内外杰出校友、近700人欢聚一堂，畅叙友情。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150828152620808292681/20150828152620808292681_.html" target="_blank">【抗战纪念】湖北校友会慰问抗战老兵陈畅吾...</a></h3>
+              <p>8月25日下午，受清华校友总会委托，清华大学湖北省校友会一行在纪念抗战胜利七十周年前夕，来到武汉看望并采访了参加过抗战的清华校友，1944级航空系老学长陈畅吾。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150828151109428438247/20150828151109428438247_.html" target="_blank">【抗战纪念】香港清华同学会访问抗日老兵王...</a></h3>
+              <p>8月25日正直抗日战争胜利70周年纪念日前夕，清华校友总会委托香港清华同学会访问抗日老兵王忠诗学长。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150828145127349474753/20150828145127349474753_.html" target="_blank">【抗战纪念】校友总会看望抗战老兵王伯惠学长</a></h3>
+              <p>8月27日，清华校友总会一行3人与沈阳校友会副秘书长马德禄学长一起，在沈阳看望并采访了原中国驻印军抗战老兵、西南联大土木工程系老校友王伯惠，同时为他带去清华大学校史馆为其颁发的捐赠纪念证书，以感谢王老学长之前向校史馆捐赠的珍贵纪念物——中国驻印军在1944年3月缅北孟关大捷中缴获的日本法西斯侵缅军第十八师团关防大印的复印件。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150828141105060434516/20150828141105060434516_.html" target="_blank">【抗战纪念】清华革命先驱黄绍湘忆抗战岁月</a></h3>
+              <p>黄绍湘，历史学家。1915年5月10日出生，湖南临澧人。1937年毕业于清华大学历史系。1944年赴美国留学，1946年获哥伦比亚大学历史学硕士学位，1947年回国。建国后，历任山东大学教授、人民出版社编审、北京大学教授、中国社会科学院世界历史研究所研究员。学术专长为美国史，专著有《美国简明史》、《美国早期发展史》、《美国通史简编》、《美国史纲》、《黄绍湘集》等。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150820110747217520211/20150820110747217520211_.html" target="_blank">清华天津新生有了30位“校友导师”</a></h3>
+              <p>今年走进清华园的天津学子，不仅将在清华有导师和辅导员等指导，还各有一位在津工作的清华学长担任校友导师──这是日前举行的清华大学天津新生与在津校友座谈会上传出的新鲜事。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150715160644888430286/20150715160644888430286_.html" target="_blank">张思敬学长捐资设立“清华校友-张思敬励学...</a></h3>
+              <p>在庆祝建党94周年之际，1948年在学生时代就加入中国共产党的清华大学原副校长、85岁高龄的张思敬老学长向学校捐赠30万元，设立“清华校友—张思敬励学基金”，用以奖励有革命理想和爱国奉献精神，志在为国家和社会做出贡献的在校家庭经济困难的学生。7月14日上午，校友总会秘书长唐杰等到张思敬学长家中表示感谢，并为老学长送上了捐赠纪念证书。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150710151727526467111/20150710151727526467111_.html" target="_blank">清华人的体育精神</a></h3>
+              <p>　　6月13日，在树德中学光华校区的运动场上，随着一阵阵有力而强劲的击鼓声，2015蓉城校友足球联盟赛决赛在清华大学四川校友会足球队与华中科技大学四川校友会足球队之间展开，比赛进行到第37分钟，清华凭借角球机会，由队员李映漂亮地 “回头望月”，把李籼蒿的助攻顶进球门，最终以1：0战胜华科获得冠军，华中科技大学校友会足球队与天津大学四川校友会足球队分别获得亚军、季军。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150710151512639503152/20150710151512639503152_.html" target="_blank">清华四川校友会2015年（麓湖）年会隆重...</a></h3>
+              <p>　　清华大学四川校友会每年都会在成都举办两场盛大的校友聚会，一场是在5月举办的校友会年会，另一场是在10月举办的金秋联谊聚会。每次聚会都会邀全川清华校友共同欢聚。今年，在清华大学成立104周年之际，“清华四川校友会2015年 （麓湖）年会”在麓湖艺展中心隆重召开。清华大学党委书记陈旭出席年会并看望了在川清华校友。清华大学党委组织部部长李一冰，清华大学土木水利学院院长、长江特聘教授陈永灿，清华校友总会副秘书长陈伟强一同出席了年会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150625181941697125626/20150625181941697125626_.html" target="_blank">台媒：大陆考生最爱大学 清华超北大居首</a></h3>
+              <p>　　台媒称，2015年大陆各地大学成绩陆续公布，据艾瑞深中国校友会网最新公布，清华大学、北京大学、复旦大学、上海交通大学和中国科学院大学雄踞2015中国考生最青睐大学排行榜前5强。    　　据台湾《中国时报》网站6月23日报道，大陆媒体报道称，2015年中国考生最青睐大学排行榜，依据2014年全国各地高考（大学）各批次高校文科和理科录取提档线综合统计得出。艾瑞深研究院名誉院长、中南大学蔡言厚教授指出，国家政策倾斜力度、经济形势、综合办学实力、社会声望、区位地域优势、专业优先选择权、奖学金额度和高考志愿填报方式等都是影响 全大陆优秀考生挑大学选专业的最主要因素。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150609100710235102676/20150609100710235102676_.html" target="_blank">经管学院举行珠三角地区校友日</a></h3>
+              <p>5月31日下午，“清华经管学院校友日：2015年·珠三角”活动在深圳举行。清华经管学院举办校友日是一个传统，旨在与校友一起探讨学院的发展。清华经管学院院长钱颖一教授，党委副书记朱岩教授以及清华经管学院珠三角地区校友和各界人士400余人参加活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150601095526108672035/20150601095526108672035_.html" target="_blank">2015清华五道口校友之夜举办</a></h3>
+              <p>5月23日晚，2015清华五道口校友之夜在清华大学五道口金融学院举办。学院兼职导师、各年级校友与在校师生700余人参加活动。本次活动由清华大学五道口金融学院主办，五道口校友会承办，鸿儒金融教育基金会赞助支持。活动包括嘉宾致辞、主题演讲、创业分享以及文艺展示等环节。五道口金融学院创始人、学院名誉理事长刘鸿儒首先在致辞中带领大家回忆了道口34年来的发展，并希望学院能够坚持既定发展目标，紧跟国际一流商学院发展，同时寄语校友紧跟世界巨变，持续学习和研究，努力登上新台阶，取得新发展。1981级校友、学院理事长兼院长吴晓灵致欢迎词，1981级校友、丝路基金董事长金琦就对“一路一带”的理解以及丝路基金发挥的作用、组建和运营的基本情况做了主题演讲，1986级校友、鸿儒金融教育基金会秘书长李秀兰代表赞助支持单位致辞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150506093453315475068/20150506093453315475068_.html" target="_blank">陈旭赴西安看望慰问清华校友</a></h3>
+              <p>4月29日至5月1日，清华大学党委书记陈旭带队走访考察了西安的有关国防军工单位，看望慰问了在陕西工作的部分清华校友。29日下午，陈旭一到西安，就乘车来到中航工业集团631所、618所调研考察和看望校友，并出席了618所召开的清华校友座谈会。631所所长周波和618所所长宋科璞、党委书记藤霖分别陪同考察，向陈旭一行介绍了企业发展情况和成就，对清华大学在人才、科技等方面所给予的大力支持表示衷心感谢。陈旭表示，清华大学与中航工业集团及下属企业有着长期的合作关系，非常感谢631所、618所对清华毕业生的重视和培养，学校将一如既往鼓励和引导毕业生到中航工业集团工作。陈旭希望清华校友珍惜企业提供的广阔舞台和良好条件，勤奋工作，勇于担当，甘于奉献，为实现航空强国之梦和中华民族伟大复兴的中国梦作出贡献。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150429103250772369209/20150429103250772369209_.html" target="_blank">计算机系“大众创业、万众创新”校友论坛举行</a></h3>
+              <p>4月25日下午，由清华大学计算机校友会主办的校庆活动“春雷新雨看潮生——2015年计算机系‘大众创业、万众创新’校友论坛”在信息技术大楼多功能厅召开。吴建平代表计算机系师生对系友和嘉宾的到来表示热烈欢迎，并在致辞中表示计算机系已连续3年举办以创新创业为主题的系友年会活动，活动旨在为创新创业者及其所在企业提供一个高水平的展示平台，为广大系友创造深度沟通的机会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150429095732828905654/20150429095732828905654_.html" target="_blank">马克思主义学院聘请校友当导师</a></h3>
+              <p>4月26日下午，马克思主义学院校友论坛暨校友导师计划启动及聘任仪式在善斋举行。马克思主义学院“校友导师计划”计划，是因应学校教育教学改革的具体举措，落实“三位一体”培养模式的重要环节，建设“六个课堂”的有效手段，旨在更好地发挥校友“集资、集智、集力、集心”，“励教、励学、励业、励志”的作用，增进校友与学院的沟通与合作，发挥校友在育人工作中的积极性、主动性和重要作用，提高在校学生认知社会和择业就业能力，更好地为学生的成长成才服务。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150428171239543677301/20150428171239543677301_.html" target="_blank">邱勇、陈旭与2005届毕业国防生班校友见...</a></h3>
+              <p>4月26日下午，清华大学2005届毕业国防生校友座谈会在主楼会议室举行，校党委书记陈旭出席并与校友座谈交流。座谈会开始之前，校长邱勇也来到了会场，与校友们见面并对大家回到母校表示欢迎。参加此次座谈会的班级为机16班、无111班，是清华第二届国防生班级。值此毕业十年之际，来自两个班级的20余名校友回到母校，向老师们汇报自己毕业十年的成长情况及心路历程，并结合自身的发展，对在校国防生培养提出了一些思考和建议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150428102916876780347/20150428102916876780347_.html" target="_blank">【校庆组图】追忆清华缘</a></h3>
+              <p>最美四月天——在这烂漫的春光里，清华迎来自己104岁生日。合着校友相聚的欢乐，伴着音乐会的韵律，也有活动比赛的热闹，清华灵动妩媚，迸发出勃勃生机。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150426183957875704469/20150426183957875704469_.html" target="_blank">首届清华校友网球联赛开幕</a></h3>
+              <p>　　4月25日，由清华校友总会、清华大学体育部主办，网球邦承办，清华大学网球协会协办的首届清华校友网球联赛在清华紫荆网球场华丽拉开帷幕。    　　本届赛事，共分为青年组和中年组两个组别，每组分男子单打/女子单打/男子双打/女子双打四个项目。首届网球联赛吸引了来自全球各个国家和地区将近100余名清华校友报名参赛，他们特意为此次比赛而来，这些风华正茂的清华学子，经过时光的洗礼，现在已成为各个行业领军人物；今天，他们摘下社会的头衔，回归学生时代的纯真和青涩，专注而肆意的在球场驰骋。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150426183316755375781/20150426183316755375781_.html" target="_blank">清华大学校友励学金资助千余名清华学子</a></h3>
+              <p>　　4月23日下午，2014-2015年度清华大学校友励学金大会在主楼接待厅举行。校长邱勇代表学校向所有捐赠励学金的校友表示了感谢，并欢迎校友们返校。    　　副校长姜胜耀在会上宣读了校友励学金获得者名单。2014-2015学年度，清华大学共评定了161项校友励学金，1102名学生获得资助。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150426163431336411648/20150426163431336411648_.html" target="_blank">【校庆报道】1975届校友毕业40周年纪...</a></h3>
+              <p>4月26日上午，1975届毕业40周年纪念大会在大礼堂举行。清华大学校长邱勇，副校长谢维和，学校老领导方惠坚、张凤昌，老教师代表潘际銮院士等参加大会。9点刚过，很多校友便早早就来到现场。毕业经年，一别40载再续同窗情，老同学见面，分外亲切。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150426143701701257072/20150426143701701257072_.html" target="_blank">【校庆花絮】校友采访：我与清华的缘分和故事</a></h3>
+              <p>4月26日，清华大学迎来自己104岁生日。来自各个院系的老中青三代校友们从天南地北赶来，共同为母校庆生，回忆曾经在园子里生活的青葱岁月，讲诉自己与清华的缘分和故事。大礼堂前，一位白发苍苍的老人热泪盈眶地看着眼前热闹的情景，激动之情溢于言表。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150425172520765994083/20150425172520765994083_.html" target="_blank">校友总会七届理事会三次会议召开 邱勇当选...</a></h3>
+              <p>4月25日上午，清华校友总会第七届理事会第三次会议在主楼接待厅召开，清华大学校长邱勇当选为清华校友总会会长，唐杰当选为清华校友总会秘书长。清华大学党委书记、清华校友总会副会长陈旭主持会议。陈旭首先通报了清华校友总会第七届理事会第三次会议的到会人员情况，本次会议应参会理事89人，实际参会理事61人，合乎法定人数。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150425150734937811936/20150425150734937811936_.html" target="_blank">【校庆报道】土木系暖5校友庆祝毕业50周年</a></h3>
+              <p>清华大学104周年校庆，风和日丽。4月25日上午老土木馆二层报告厅，土木系暖5班近30名老同学欢聚一堂，共同庆祝毕业50周年和母校104周年华诞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150425130813469198210/20150425130813469198210_.html" target="_blank">【校庆报道】化工系1965届毕业50年校...</a></h3>
+              <p>4月25日上午，清华大学化工系1965届毕业50年校友返校活动在第二教学楼举行。清华大学校长邱勇出席活动并致辞。邱勇在讲话中对各位学长回到母校表示热烈欢迎。他说，今年是1965届毕业50周年，在座的各位学长都已经为祖国健康工作了50年，完成了蒋南翔老校长的嘱托。1965届化工系毕业生积极投身于祖国大西北建设，在国防科研等各领域里均取得了突出成绩，在各位学长身上看到了纯正的清华精神，一定会深深影响后来的化工人、清华人。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150425095456429187939/20150425095456429187939_.html" target="_blank">【校庆快讯】邱勇当选清华校友总会会长</a></h3>
+              <p>4月25日上午，清华校友总会第七届理事会第三次会议在主楼接待厅召开，清华大学校长邱勇当选为清华校友总会会长。清华大学党委书记、清华校友总会副会长陈旭主持会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150424171413833594980/20150424171413833594980_.html" target="_blank">【校庆报道】清华经管学院北美校友会旧金山...</a></h3>
+              <p>当地时间4月18日，清华大学经济管理学院北美校友会暨美西分会成立大会在美国旧金山举行。清华经管学院院长钱颖一教授，中国驻旧金山总领馆副总领事邓繁华、科技参赞王俊明、清华经管学院顾问委员会委员、Accel Partners合伙人Jim Breyer、伯灵格姆（Burlingame）市市政委员会委员Michael Brownrigg、清华大学旧金山湾区校友会会长陈科等嘉宾与清华经管学院校友100余人出席大会。会议由1987级经管学院硕士生李强主持。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150424212145872468260/20150424212145872468260_.html" target="_blank">热能系65届校友毕业50周年班会举行 吴...</a></h3>
+              <p>今年是清华大学1959级毕业50周年，4月24日下午，中共中央政治局原常委、中纪委原书记吴官正学长及夫人回到母校参加了毕业50年庆祝班会。清华大学校长邱勇，党委书记陈旭，热能系热5、量5班校友共60余人出席活动。会前，邱勇、陈旭向吴官正汇报了学校在人才培养、教学科研、思想政治工作等方面的情况，老学长听了非常高兴。邱勇、陈旭还向学长赠送了当年清华大学“学籍卡”，以及在清华大学校报《新清华》刊登的“记动力系优秀毕业生吴官正”的文章。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150424122725854947094/20150424122725854947094_.html" target="_blank">【校庆报道】矣晓沅：轮椅上的人生 依然发...</a></h3>
+              <p>我想今天在座的每一个同学都有属于自己的艰难困苦，都曾走过崎岖坎坷的人生道路。或许我们的世界曾经充满黑暗，但关怀与帮助是一支火炬，我们从各位学长的手中接过了它，照亮了我们小小的一方天地。那么，即使再难，我们也愿将这支火炬继续燃烧并传递下去，总有一天，星星点点的火光将会驱散黑暗。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150424104408623796022/20150424104408623796022_.html" target="_blank">【校庆报道】深切怀念陆璀学长</a></h3>
+              <p>陆璀学长在她的《晨星集》前言中说:“但晨星中却有启明星，它是预告黎明到来的。也就是说，它预告黑暗的长夜即将过去，光明的白昼即将来临。”陆璀是中华民族的巾帼英雄，她就是一颗启明晨星。2015年2月16日13时08分，这颗明亮的启明晨星陨落。从此，清华校友失去了一位德高望重的老学长。1935年12月9日和12月16日，陆璀参加了著名的“一二·九”抗日救国运动的两次示威游行，站在了斗争的最前列。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150424103329730678996/20150424103329730678996_.html" target="_blank">【校庆报道】贺旺：北川守望者，天府“造雨...</a></h3>
+              <p>贺旺，1996 年考入清华大学建筑系,2003 年毕业于清华土木工程学院城市规划管理专业，获硕士学位。汶川大地震发生时，他是中国城市规划设计院的规划师。2008 年7 月，作为中组部、团中央特殊选派到灾区服务的“博士服务团”成员之一，贺旺挂职北川羌族自治县副县长，任期一年。后任绵阳市城乡规划局局长。2013 年9 月，贺旺任绵阳市政府副秘书长。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150423115737709511479/20150423115737709511479_.html" target="_blank">【校庆报道】李稻葵：幸运的精灵</a></h3>
+              <p>上世纪80 年代的第一个秋天，我们31位来自全国二十多个省市的年轻学子，怀着极其兴奋的心情，踏入了清华园。我们是刚刚成立的经济管理工程系（经管学院前身）的第一批本科生，不折不扣地成为经管学院0字号试验品。沿用清华传统，我们班的编号是经零，从此我们31位同学自称精灵。80 年代中国，充满着变革的生机，改革、开放、发展是那个时代的主旋律。那时大学生，堪称天之骄子、时代的宠儿，全国只有2%的同龄人能上大学。在校园里，我们如饥似渴地学习。为了晚自习，常常提前吃晚饭，抢自习位子。图书馆灯光好，找参考书方便，能抢到图书馆的自习位子，像今天出国能做头等舱一样是奢侈品。我们精灵同学最羡慕的是建筑系同学，他们每个班有自己的专用教室，在主楼还有自己的图书馆建筑分馆。能混到他们的图书馆里呆上大半天，在我们真是享受。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150423121442048481066/20150423121442048481066_.html" target="_blank">【校庆报道】方存好：地方工作以来的几点体会</a></h3>
+              <p>？2004 年，我从清华计算机系博士毕业，留校工作两年后，被学校派至江苏无锡挂职担任无锡高新区管委会副主任，一年后正式留任。2013 年7 月，通过公选来到四川工作，任四川省信委副主任、党组成员。清华毕业到地方工作已近七年，从刚出校门时的略带青涩到现在的逐渐成熟，深感地方工作舞台很大，在积极工作的同时自身收获和感触也很多，有几点体会愿与校友们分享。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150422152630662742160/20150422152630662742160_.html" target="_blank">【校庆报道】一家三口都上清华是一种怎样的...</a></h3>
+              <p>虽然在清华正式学习才两年多，我和这个园子的缘分却已结下20多年。没有清华，就没有爸妈的相识相知，没有我的出生，没有我高考的时候几乎顺理成章地报考清华。清华教给我的东西，远超过专业知识和社会技能。随着年龄的增加，尤其是在清华学习生活过后，我才感受到父母身上的“清华精神”在潜移默化间对我的成长有多大影响。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150417145039050932311/20150417145039050932311_.html" target="_blank">【校庆报道】习亚华：重返青藏线</a></h3>
+              <p>2006年4月30日，在清华大学建校95周年纪念大会上，我代表1975年响应国家号召，赴青海、西藏参加青藏铁路建设的152名工农兵学员毕业生，在清华大礼堂作了发言，发言几次被掌声打断。会后，学校领导顾秉林校长、陈希书记上台和参会的30 多名同学握手，并合影留念。同学们激动万分，大家纷纷约定：重走一次青藏线！于是，就有了2009年的“重返青藏线”征程。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150417142715745528576/20150417142715745528576_.html" target="_blank">【校庆报道】柳百成：爱国奉献 顽强拼搏</a></h3>
+              <p>对我来说，2015年是非常值得纪念和庆贺的一年。我从清华毕业，并在清华工作已60周年了, 连同大学4年，我在清华已度过64 个年头。回忆在清华所经历的漫长岁月，真是记忆犹新，感慨万千。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150416154247374399883/20150416154247374399883_.html" target="_blank">【校庆报道】范崇仁：梦回故园</a></h3>
+              <p>四年的教育既有知识的干  粮，也有获取知识的猎枪，奠定了我们一生得以安身立命的坚实基础。自强不息、厚德载物的校训时刻激励着我们奋发向上，去努力实现报效祖国的梦想。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150403154216435244209/20150403154216435244209_.html" target="_blank">清华大学x-lab和水木清华校友种子基金...</a></h3>
+              <p>　　北京市第一批“众创空间”之一、清华大学x-lab和水木清华校友种子基金加速计划2014～2015毕业路演近日顺利举行。在清华科创园地下一层的一间活动室里，椅子间的空隙都站满了人，到场的不仅有学生、老师，还有慕名而来的投资人和创业导师。从100支创业团队中杀出的10支团队，在导师密切关注下经过4个月打磨，将在这里展示成果，甚至获取投资。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150331134054607375298/20150331134054607375298_.html" target="_blank">访清华大学自动化系1990级校友刘佳晨</a></h3>
+              <p>时下，微信已经成为流行的通讯工具，对于刘佳晨学长也不例外。从发出邀请到最终预约采访，整个流程都以简洁的线上方式完成。从陌生到面对面交谈，我们从几个细节捕捉到了刘佳晨学长对母校母系的深厚感情：当我们向学长发送好友请求时，“清华系友”的署名很快就通过了认证；收到我们的访谈邀请，学长不仅欣然接受，而且认真细致地阅读了访谈文案。毕业多年却愈加浓厚的清华情结，就这样在不经意间流露了出来。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150320090020432225314/20150320090020432225314_.html" target="_blank">清华校友剧艺社举行“人生与梦想”诗文朗诵会</a></h3>
+              <p>3月12日晚，由清华大学图书馆、宣传部、学生部、校团委、清华校友总会联合主办，由清华校友剧艺社演出的“人生与梦想”诗文朗诵会在清华大学图书馆文科馆举行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150123092257055695378/20150123092257055695378_.html" target="_blank">李然、施锦珊捐赠清华大学两岸发展研究院发...</a></h3>
+              <p>1月19日，鑫桥联合控股(香港)有限公司、鑫桥联合融资租赁有限公司董事局主席李然、董事局副主席兼总裁施锦珊捐赠“清华大学两岸发展研究院发展基金”仪式在清华大学丙所举行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150113151918108767762/20150113151918108767762_.html" target="_blank">2015中国大学媒体影响力排行 清华问鼎...</a></h3>
+              <p>　　日前，艾瑞深中国校友会网编制完成《2015中国大学评价研究报告》，报告公布2015中国大学排行榜700强、中国两岸四地大学排行榜和中国大学国际化水平排行榜等榜单。北京大学雄居2015中国大学排行榜榜首，连续八年蝉联第一﹔清华大学列第二，复旦大学居第三，武汉大学列第四，中国人民大学居第五﹔中国科技大学和国防科技大学首次跻身2015中国顶尖大学队列。华中科技大学武昌分校、吉林大学珠海学院和河南理工大学万方科技学院名列独立学院前三强﹔西安外事学院、文华学院和山东英才学院名列民办大学前三甲。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20141223145156542642805/20141223145156542642805_.html" target="_blank">河北省企业与清华大学海外校友进行项目对接</a></h3>
+              <p>　　今天上午，清华大学海外校友河北行对接洽谈活动在河北会堂举行。80多名来自不同国家和地区的清华海外校友携带科技成果参会，我省150多家企业参加了对接洽谈。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20141222171615966172940/20141222171615966172940_.html" target="_blank">周本顺会见清华大学党委书记陈旭一行</a></h3>
+              <p>　　今天下午，省委书记、省人大常委会主任周本顺在石家庄会见了清华大学党委书记陈旭，清华大学校长助理、院士尤政和清华大学海外校友代表一行，并出席清华大学海外校友河北行创业环境说明会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141209095224156551142/20141209095224156551142_.html" target="_blank">清华大学四位教师八位校友获选2015年度...</a></h3>
+              <p>近日，国际电气与电子工程师学会（IEEE, The Institute of Electrical and Electronics Engineers）公布了新选2015年度会士（IEEE Fellow）名单，全球共有300人获此殊荣，清华大学软件学院院长刘云浩等4位教师、陈飚等8位校友入选。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20141204143414227455752/20141204143414227455752_.html" target="_blank">2014清华校友华东环境论坛成功举办</a></h3>
+              <p>　　11月30日，由清华大学校友总会和清华大学环境学院主办，江苏启迪科技园发展有限公司承办的2014清华校友华东环境论坛暨环保技术创新与创业投资发展南京启迪峰会在南京市成功举办。本次会议邀请到了近两百名从事环保相关工作的校友齐聚一堂，来宾中不仅有主管部门的政府官员和学术机构的专家学者，还有多位龙头企业的重量级产业领袖和专注环保行业的投资精英。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141121153128186269708/20141121153128186269708_.html" target="_blank">校党委书记陈旭到南方电网看望校友</a></h3>
+              <p>日前，校党委书记陈旭访问中国南方电网公司，与该公司副总经理、党组成员祁达才学长（电机系1979级），广东电网公司董事长、党委书记江毅学长（电机系1980级）等公司高层和部分清华校友进行了交流会谈。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141119111243838836613/20141119111243838836613_.html" target="_blank">2014清华长三角化工与新材料校友论坛在...</a></h3>
+              <p>为增进长三角地区清华化工与新材料领域校友间的交流，加强创业校友在转型发展新形势下的交流与合作，清华大学化工系和清华校友总会于11月8日在江苏省昆山市举办了“2014清华长三角化工与新材料校友论坛”。清华大学党委常务副书记、副校长、中科院院士邱勇，江苏省科协主席、清华江苏校友会会长、中国工程院院士欧阳平凯，昆山市委常委黄健、副市长党建兵，清华校友总会秘书长郭樑等参加了论坛。共有九十多位清华校友与会，其中以长三角化工与新材料领域自主创业校友代表为主，也有金融和贸易领域以及其他区域的受邀校友，还有应邀参会的浙江清华长三角研究院和清华无锡应用技术研究院的负责人。清华大学化工系主任赵劲松、系党委书记朱兵、系内6位不同学科的教授代表参加，朱兵主持了当天的论坛活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20141117144938131485346/20141117144938131485346_.html" target="_blank">清华经管学院东南亚校友会暨新加坡校友分会...</a></h3>
+              <p>　　清华大学经济管理学院东南亚校友会成立大会暨新加坡校友分会MBA新加坡校友分会、EMBA新加坡同学会16日上午在新加坡管理大学举行。新加坡贸工部政务部长张思乐，中国驻新加坡大使馆公使衔参赞郑超、教育参赞郁云峰，清华经管学院院长钱颖一，中国银行新加坡分行行长郭宁宁等出席大会。同时参会的还有新加坡、印尼、马来西亚等地的清华经管院本硕博、MBA、EMBA校友代表。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141103100257517539313/20141103100257517539313_.html" target="_blank">清华大学深圳研究生院校友会在深圳成立</a></h3>
+              <p>10月26日上午，清华大学深圳研究生院校友会成立大会在深圳研究生院召开。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20141103110019912207486/20141103110019912207486_.html" target="_blank">水木清华校友种子基金助推创新创业</a></h3>
+              <p>　　作为全国第一支全部用于学生和年轻校友创业的基金，水木清华校友种子基金近日在清华大学宣布成立并举行创新创业论坛。该项基金由水木清华理事会多位校友共同出资3000万元作为基础投资，清华控股参与支持，将全部用于投资扶持清华在校学生和年轻校友创业起步。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20141028161946176999228/20141028161946176999228_.html" target="_blank">清华大学3000万种子基金助力学生创业</a></h3>
+              <p>　　“只要你敢来创业，那么我们就敢投资你！” 记者从清华大学获悉，为进一步助力在校大学生和刚刚步出校门的年轻人创新创业，水木清华理事会22日发起成立了基础投资为3000万元的“水木清华校友种子基金”，这是全国第一支全部用于学生和年轻校友创业的基金。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20141024150137245442258/20141024150137245442258_.html" target="_blank">清华大学正式宣布成立水木清华校友种子基金</a></h3>
+              <p>　　10月22日，由水木清华理事会发起，旨在支持校友创新创业为目的的“水木清华校友种子基金”正式成立。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141024132147381128535/20141024132147381128535_.html" target="_blank">水木清华校友种子基金成立大会暨创新创业论...</a></h3>
+              <p>10月22日，全国第一支全部用于学生和年轻校友创业的基金——水木清华校友种子基金成立大会暨创新创业论坛在清华大学蒙民伟音乐厅举行。清华大学校长陈吉宁、校党委副书记史宗恺、中关村科技园区管委会主任郭洪等出席大会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141020154445157794806/20141020154445157794806_.html" target="_blank">清华大学基层校友座谈会举行</a></h3>
+              <p>近日，清华大学学生基层公共部门发展研究会（以下简称基层研究会）在校团委会议室举办基层公共部门就业校友座谈会。清华大学党委副书记史宗恺出席会议并讲话。来自甘肃、青海、宁夏、吉林等地的10余名基层校友代表参加了座谈会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20141013101817997994068/20141013101817997994068_.html" target="_blank">清华校友、中国科学院工程院士蔡睿贤同志逝世</a></h3>
+              <p>清华校友，杰出的能源动力科学家，中国共产党的亲密朋友，中国民主促进会中央委员会原副主席，中国科学院工程热物理研究所原所长，中国科学院院士蔡睿贤同志，因病于2014年10月4日1时30分在北京逝世，享年80岁。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140918113907161684783/20140918113907161684783_.html" target="_blank">清华大学2位教师2位校友获得“求是”科学奖</a></h3>
+              <p>9月13日，“求是”科学奖颁奖典礼在复旦大学举行。清华大学物理系教授薛其坤获得2014年度“求是杰出科学家奖”。清华大学生命科学学院研究员颉伟，清华大学校友、复旦大学教授赵俊，清华大学校友、上海交通大学特别研究员张川获得2014年度“求是杰出青年学者奖”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2014.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140825141405716971183/20140825141405716971183_.html" target="_blank">清华大学青海校友会启动“助梦计划”</a></h3>
+              <p>　　“真是对清华有了深深的感情，希望能够通过自己一年的努力，包括争取去把握清华自主招生等机会实现自己的清华梦，成为清华人，让自己未来也有力量去传递助梦这份精神。”8月20日，来自湟中县的20名品学兼优、家境贫困的学子，结束在北京为期一周的公益游学返回家乡。此次活动是由清华大学青海校友会启动的“助梦计划”提供支持的。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140722150415263338988/20140722150415263338988_.html" target="_blank">佛山设立国内首个定向吸引清华校友创业专项...</a></h3>
+              <p>上周五，6个清华校友创业团队获得了佛山高新区每年100万到300万元不等的资金扶持，而这项资金是国内首个用于定向吸引清华大学校友创业的专项资金。包括设计了全球首台精密喷射仪器的海归团队在内，这六个项目已经签约入驻佛山高新区，清华校友表示，入驻佛山看重的更加是佛山强大的制造业基础。中山大学与清华大学校友合作的创业项目i房网也在进驻项目之列。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140627111348265486029/20140627111348265486029_.html" target="_blank">清华校友积极参建“清华大学学生社会实践实...</a></h3>
+              <p>由清华大学校团委主办，清华校友总会、各地校友会、各校友行业协会支持的“清华大学学生社会实践实习基地”项目得到广大校友的积极响应。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140620152812756408182/20140620152812756408182_.html" target="_blank">1984级系友向计算机系校友会赠送著名书...</a></h3>
+              <p>6月19日，1984级系友、英诺天使基金创始合伙人、清华校友TMT协会会长李竹代表计算机系1984年级向系友会赠送由著名书法家王汉光题字“饮水思源”的书法作品，庆贺并纪念84级思源基金成立。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140616145209506974825/20140616145209506974825_.html" target="_blank">200余位清华学子兰州谏言甘肃发展</a></h3>
+              <p>　　6月14日，主题为“企业活力与丝绸之路经济带发展”的第二届清华校友陇原发展论坛在兰州举行。200多位在甘清华校友和部分在上海、陕西、青海的清华校友围绕甘肃如何发力丝绸之路经济带黄金段建设？企业应该如何抢抓机遇，增强活力、提升竞争力等问题展开交流讨论。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9955/2014/20140530170920013121848/20140530170920013121848_.html" target="_blank">庆祝清华建校103周年暨洛阳校友会成立3...</a></h3>
+              <p>日前，庆祝清华大学建校103周年暨洛阳校友会成立30周年大会在河南科技大学报告厅举行。清华大学党委原书记贺美英，清华大学校务委员会副主任、原副校长张凤昌，洛阳市委原书记、洛阳校友会创始人之一王德忱等出席了会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140530150905203691595/20140530150905203691595_.html" target="_blank">清华大学广西校友会整合资源助推“美丽广西”</a></h3>
+              <p>　　学校党委书记深入贫困村调研、确立联系点结对帮扶、组织动员校友全力投入用心探索……从今年开始，清华大学广西校友会将“美丽广西”乡村建设作为校友会活动主题，积极整合学校及校友人力、物力、智力等多方资源，启动了一场凝心聚力建设“美丽广西”的持久性战役，力争探索出可复制、可推广的乡村建设长效机制，搭建起一条清华大学与广西开展涉农合作的桥梁。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140523142210922713515/20140523142210922713515_.html" target="_blank">清华计算机系举办旧金山、西雅图校友日活动</a></h3>
+              <p>日前，清华大学计算机系校友会先后在美国旧金山硅谷TIPark和西雅图Bellevue市微软公司举办旧金山校友日和西雅图校友日活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140512170953190669709/20140512170953190669709_.html" target="_blank">安徽校友汇聚合肥庆祝母校103周年华诞</a></h3>
+              <p>2014年5月10日上午，“安徽校友会庆祝母校103周年华诞纪念大会”在合肥举行。来自安徽各地的近300位校友汇聚一堂，共庆母校103周年华诞。清华大学常务副校长程建平参加了大会并致辞。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140507135405467615925/20140507135405467615925_.html" target="_blank">清华大学首次举办秩年博士后校友校庆纪念活动</a></h3>
+              <p>4月26日，适逢清华大学103周年校庆之际，清华博士后校友会首次举办了1994年（入学20年）、2004年（入学10年）博士后校友秩年纪念活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140427172230731107996/20140427172230731107996_.html" target="_blank">梦想路演 圆梦创业：1988级校友共话创...</a></h3>
+              <p>4月26日下午在清华大学主楼后厅， 88级校友举行以“创新、创业、互帮、互助”为主题的聚会。清华大学党委副书记史宗恺和清华校友总会秘书长郭樑参加会议并讲话。</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

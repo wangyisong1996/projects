@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>水木清华 祖国以光——写在清华大学建校90周年之际</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225355343639477&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9648/index.html' class='navigation_style'>头条新闻</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">水木清华 祖国以光——写在清华大学建校90周年之际 </h3><p align="center">（光明日报 2001年4月26日）</p><p align="center">本报记者 宋晓梦 李家杰</p><p> 　　当新世纪的第一个春天来临之际，清华大学迎来了90周年校庆。这个校庆对清华之所以特别重要，是因为他们将以此为新的起点，向着既定的目标——在百年校庆时跻身世界一流大学行列，加速前进。此时此刻，回顾以往走过的道路，无论对于清华，还是对于正在奋进中的中国高等教育界，都具有特殊的意义。 </p><p align="center"><font size="+1"><b>人文荟萃 毓秀钟灵<br>  一代大师奠定基业</b></font></p><p> 　　清华大学建于1911年，前身是清华学堂；1928年定名为国立清华大学，并进入一个新的发展阶段；1929年建立研究院，在国内大学中开创科学研究之先河。继而，在梅贻琦校长的主持下，清华大学学风严谨、师资力量雄厚，办学经费充裕，至抗战前夕，已是全国一流的高等学府。</p><p> 　　1937年抗战爆发后，清华举校南迁，与北大、南开联合成立长沙临时大学。1938年临时大学迁往昆明，定名为西南联大。诺贝尔奖获得者杨振宁、李政道就是当时清华研究院物理学部毕业的研究生。抗战胜利后，清华大学于1946年迁回原北平旧址复校。</p><p> 　　1948年12月清华园解放。此时的清华大学已经是一所设有理、工、文、法、农五个学院，26个学系，23个研究所的全国著名的综合性大学。</p><p> 　　清华人把1911年至1949年这一历史时期称为“老清华”。“老清华”在中国教育史上是值得回眸的一段历史。人文荟萃，大师云集，是这段历史的重要特色。德国古典风格的清华学堂，是当年“国学研究院”所在地，著名的四大国学导师梁启超、王国维、陈寅恪、赵元任及考古学家李济、文学家吴宓等曾在这里会聚，他们倡导的“中西融汇，古今贯通，形成独具特色的清华学派”，培养了整整一代国学研究家。“三院”是清华早期的教室、宿舍群，当年文、法学院的冯友兰、朱自清、闻一多、陈岱孙等名教授都在这里开设过讲堂；始建于1917年的科学馆，在30年代即成为国内先进的物理、化学实验基地，著名物理学家叶企孙，吴有训、萨本栋、周培源、赵忠尧等都曾在这里设帐讲学；比科学馆早建成一年的体育馆，更有我国体育先驱马约翰以及李剑秋、郝更生、夏翔等在这里长期任教；著名数学家熊庆来、杨武之、华罗庚；化学学科的先驱高宗熙、黄子卿、张子高；被誉为“一代宗师”的动物学家陈桢，植物学家李继侗，地质学家翁文灏、袁复礼，都曾在清华执教和进行学术研究。</p><p> 　　“所谓大学者，非谓有大楼之谓也，有大师之谓也”。梅贻琦校长的治校名言，影响了清华近一个世纪的办学之路；“自强不息，厚德载物”是梁启超演讲时引用《周易》的辞句，后来作为校训，激励着一代代清华学子；“诗人主要的天赋是爱，爱他的祖国，爱他的人民”，闻一多教授的诗句及他和清华一代大师用生命来体现的爱国情怀，一直是海内外清华学人的精神家园。 </p><p align="center"><font size="+1"><b>为人在正 为学在严<br>  清华精神代代相传</b></font></p><p> 　　什么是清华精神，清华徐葆耕教授的见解具有一定代表性——</p><p> 　　一是耻不如人。清华原是留美预备学校，而学生出洋后却痛感西方人对黄种人的歧视；这种为民族雪耻的激情，转化为为祖国独立富强而献身的意志。二是讲究科学。清华国学院一成立，主任吴宓就宣称本院与其他大学的不同之处在于重视“科学方法”。梅贻琦校长到任后，办校重学术自由，更重“科学家的眼光和态度”，强调理性和纪律，主张一切以事实为出发点，从而构成清华独特的风格。冯友兰说，清华文科的共同特点是追求“新思想”“比较有科学精神。”解放后，清华一任任校长均明确提出继承和发扬严谨科学的传统，并在广度和深度上大大超越从前。三是重视实干。早在三十年代，朱自清就说过，“清华的精神是实干。”凡是到过清华的人都会对这一点留下强烈的印象。</p><p> 　　1952年，在全国高等院校大规模的院系调整中，清华大学的文、理、法、农学科全部被调出，虽然清华人对于这样的调整感到惋惜，但在蒋南翔校长的带领下，清华不失时机地兴建起原子能、电子及自动控制等当时在世界上属于新技术领域的10个专业，并逐步建立了工程物理、工程化学、工程力学数学和自动控制系及一批研究机构，使清华大学迅速发展成为一所实力强大的多科性工科大学。“厚德载物”被赋予了时代的内涵。校友王淦昌在上级征求他的意见，是否愿意隐性埋名从事“两弹一星”研究工作时毅然回答：我愿以身许国！使清华毕业生后来走上各级领导岗位的“双肩挑”制度也是在那时建立的。在知识经济时代到来的今天，这一育人经验仍然显得特别宝贵。 </p><p align="center"><font size="+1"><b>自强不息 厚德载物<br>  十万校友英才辈出</b></font></p><p> 　　在90年的历史中，尤其令清华人骄傲的是，毕业于清华的10余万名校友。气象学家竺可桢，化学和化学工程家侯德榜，现代桥梁工程奠基人茅以升，教育家和物理学家叶企孙，建筑学家杨廷宝和梁思成，天文学家张钰哲，理论物理学家周培源，经济学家、教育家马寅初，哲学家、逻辑学家金岳霖，经济学家陈岱孙，社会学家、教育家潘光旦，哲学家贺麟，语言学家王力等都是清华早期毕业生。</p><p> 　　1928年改名为国立清华大学后的毕业生中，华凤翔有“中国近代航空先行者”之称；梁守磐是中国火箭事业的奠基人之一，赵九章被誉为“中国卫星的头号功臣”，钱学森被称作“中国导弹之父”；王德臣是长二捆火箭总设计师；屠守锷任澳星发射总顾问，杨南生为我国杰出的探空火箭专家；吴有训、钱三强、王淦昌、彭桓武是新中国原子科学技术的奠基者；邓稼先被誉为“两弹元勋”，汪德熙、朱光亚、周光召、唐孝威、王承书、曹本熹、胡仁宇等都是原子能领域的带头人。1999年9月，国家表彰的23位“两弹一星”功勋科学家中，即有14位出自清华。</p><p> 　　工科以外的领域，有著名哲学家张岱年、语言学家季羡林、历史学家吴晗、考古学家夏鼐，数学家华罗庚、陈省身，化学家唐敖庆；中国现代话剧奠基人曹禺，著名学者钱钟书，著名戏剧家洪深、英若诚，外交界的章汉夫、乔冠华、章文晋，海牙国际法庭大法官王铁崖和远东国际法庭首席法官梅汝敖等。</p><p> 　　在中国科学院院士中，清华校友占近30％；在中国工程院院士中，清华校友占近20％；在1955年中国科学院哲学社会科学部64名学部委员中，有18位委员是清华校友。还有校友担负着党和国家重要的领导工作。 </p><p align="center"><font size="+1"><b>走向世界 争创一流 <br>  行百里者半九十</b></font></p><p> 　　没有人怀疑，清华在中国数以千计的大学中是最有实力向世界一流大学冲击的高校之一。然而，1993年清华在第一次提出这一目标之前，至少酝酿和准备了十年！</p><p> 　　清华大学党委把建设世界一流大学这个总目标从时间上分解为从1993年到2001年即校庆90周年和21世纪前10年这样两个阶段，每个阶段又由几个具体目标组成，每个具体目标的完成，又有一整套保障体系，使其具有极强的可操作性。</p><p> 　　几年前，王大中校长在接受媒体采访时说：从1993年到2001年，这一阶段我们重点要完成几件大事，一是学科结构的调整，把清华变成一所综合性大学；二是进行教学体制的调整，按研究型大学的要求扩大研究生培养规模；三是完成师资队伍的新老交替；四是完成相应规模的基础设施建设，为建设世界一流大学打下物质基础。</p><p> 　　今天，当清华90年校庆进入倒计时之际，审视这一阶段的任务完成情况，有助于我们进一步了解清华精神的内涵。</p><p> 　　——从1984年清华成立经管学院起，到2000年的17年中，清华相继成立和恢复了理学院、人文社会科学学院、法学院、美术学院、应用技术学院、生命科学研究院、医学科学研究中心，成为一所拥有理、工、文、法、经济、管理、艺术等学科的综合性大学。在1992年国家对部分二级学科和1995年对部分一级学科的评估中，清华3／5的学科名列第一；在全国4年一次的教学成果评比中，清华获得特等奖4项；在29个国家重点学科中固体力学、建筑、先进制造、电力系统等已经跻身于世界先进的行列；在工科和理科两个物理教学基地以及生物学人才培养基地的全国评比中，清华名列前茅；在60个国家重大基础研究项目计划“973项目中，清华主持和参与的有20余项，7位教授担任首席科学家，SCI收录的论文数由1993年全国高校第5名上升到1999年的第二名。EI和ISTP收录的论文数多年名列全国高校第一。</p><p> 　　——从1999年起，清华大学每年入学的研究生人数超过了本科生。在校研究生总数从1995年的4千多人增加到目前的9千多人。其中博士生近1／3。在校研究生与本科生的比例接近0.8∶1，为全国高校之最，研究型大学的人才培养格局初步形成。在1999年和2000年全国百篇优秀博士论文的评选中，清华两次名列第一。改革开放后清华培养的博士中，已有5人成为院士。在2000年全国MBA教学评估中，清华获得总评和6个单项评比的全部第一。</p><p> 　　——先后出台“百名人才计划”、青年骨干支持计划等措施，推出“非升即走”、“岗位聘任和津贴”等人事制度的改革，使清华大学逐渐成为吸引全国优秀人才的地方。目前，全校3000多名教师中，中国科学院和中国工程院院士46人，是全国拥有院士最多的高校，约50％的教师具有博士学位。</p><p> 　　——育人条件明显改善，电子化图书馆的资源建设、信息化水平以及管理服务处于国内领先水平，对SCI、EI数据库电子资源访问量与美国哈佛、麻省理工学院等著名大学相当。一幢幢以学院为单元、具有现代建筑色彩的教学科研楼群拔地而起，成为清华园内一处处蔚为壮观的新景观。</p><p> 　　统计表明，清华在建设世界一流大学的进程中，第一阶段的任务已经出色完成。</p><p> 　　如果说90年来清华有一种最可宝贵的东西，那就是由清华精神形成的一种强大的凝聚力。这种凝聚力使清华诚如季羡林先生所说：“清华要办的事，一定办得成。”</p><p> 　　站在新的起跑线上，清华十分冷静：“与世界著名大学相比，我们还缺少一批具有国际一流水平的教授和学者；在高层次人才培养上，特别是高水平博士生培养方面，与一流大学仍有距离；在基础研究方面，高水平的原创性的研究成果不够多；在学科建设方面，一些新建学科要上水平还有相当长的路要走。” </p><p>　　“行百里者半九十”，为了胜利完成更加艰巨的最后十年的冲刺，清华已做好准备。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月26日 13:30:07　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131128092021977529920/20131128092021977529920_.html" target="_blank">詹启敏做客水木清华讲座讲解细胞周期调控蛋白</a></h3>
+              <p class="thnews_jqzy">　　詹启敏做客水木清华讲座讲解细胞周期调控蛋白在肿瘤发生发展中的作用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;清华新闻网11月28日电11月20日下午，中国工程院院士、中国医学科学院副院长、北京协和医学院副校长詹启敏做客水木清华生命科学讲座，在医学科学楼报告厅作了题为&ldquo;细胞周期调控蛋白在肿瘤发生发展中的作用&rdquo......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131015105050403369690/20131015105050403369690_.html" target="_blank">973首席科学家林圣彩作客清华讲解代谢平衡</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;973&rdquo;首席科学家林圣彩作客水木清华讲座 讲解代谢平衡控制的机制清华新闻网10月15日电10月9日下午，厦门大学生命科学学院院长、&ldquo;973&rdquo;首席科学家林圣彩教授作客水木清华生命科学讲座，在医学科学楼报告厅为广大师生作了题为《代谢平衡控制的机制（Mechanisms for the Control of M......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130712085420714986952/20130712085420714986952_.html" target="_blank">水木清华造型艺术作品展在宋庄美院艺术中心...</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;水木清华造型艺术作品展&rdquo;在宋庄美院艺术中心开展&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网7月12日电近日，清华美术学院&ldquo;水木清华造型艺术作品展&rdquo;开幕式在宋庄美院艺术中心举行。图为作品展现场。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130708152039395133633/20130708152039395133633_.html" target="_blank">徐涛做客水木清华讲座讲解工程技术和生命科学</a></h3>
+              <p class="thnews_jqzy">　　徐涛做客水木清华讲座讲解工程技术和生命科学的汇聚清华新闻网7月8日电7月4日下午，中科院生物物理所所长徐涛研究员做客清华大学水木清华生命科学讲座，在生命科学馆报告厅，为来自清华生命学院、医学院、化学系及其他相关院系的100多名师生作题为《工程技术和生命科学的汇聚》的报告。图为徐涛作报告。徐涛从生物医学的三次革命谈起，向大家讲述了自己的科研经历，并介绍......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130609143626854902863/20130609143626854902863_.html" target="_blank">中科院院士李林做客清华讲述Wnt信号转导...</a></h3>
+              <p class="thnews_jqzy">　　中科院院士李林做客水木清华讲述Wnt信号转导与调控的分子机制清华新闻网6月9日电6月6日，中国科学院院士、上海生命科学研究院副院长李林做客水木清华生命科学系列讲座第九讲，在清华大学生命科学馆报告厅，作题为《Wnt 信号转导与调控的分子机制》的报告，向大家介绍其实验室多年来的研究工作及取得的成果。　图为李林做客水木清华生命科学系列讲座。李林指出，Wnt......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130528090227382843203/20130528090227382843203_.html" target="_blank">高翔做客水木清华讲解运用小鼠模型理解基因...</a></h3>
+              <p class="thnews_jqzy">　　南京大学高翔教授做客水木清华讲解运用小鼠模型理解基因功能清华新闻网5月28日电5月23日下午，在清华大学生命科学馆报告厅，国家遗传工程小鼠资源库主任、南京大学模式动物研究所教授高翔做客水木清华，作题为《运用小鼠模型理解基因功能》（Understanding the gene function with mice）的学术报告。清华生命科学联合中心教授祁海主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130415093131355384406/20130415093131355384406_.html" target="_blank">薛勇彪作客水木清华讲座解密显花植物的“枕...</a></h3>
+              <p class="thnews_jqzy">　　中科院薛勇彪做客水木清华生命科学讲座解密显花植物的&ldquo;枕边话&rdquo;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;清华新闻网4月15日电4月11日下午，在清华大学生命科学馆报告厅，中国科学院遗传发育所研究员薛勇彪做客水木清华生命科学系列讲座，为来自清华生命学院、医学院以及兄弟院校的80余名师生带来题为《显花植物的&......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130329164843466168606/20130329164843466168606_.html" target="_blank">中科院周琪做客水木清华阐述干细胞研究的医...</a></h3>
+              <p class="thnews_jqzy">　　中国科学院周琪教授做客水木清华阐述干细胞研究引领新医学革命&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网3月29日电3月28日下午，在清华大学生命科学馆报告厅，中国科学院动物研究所研究员周琪为清华师生们带来题为《干细胞&mdash;&mdash;新医学革命的核心》的学术报告。&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130318160859785273432/20130318160859785273432_.html" target="_blank">徐国良做客水木清华 讲述发育的奥秘</a></h3>
+              <p class="thnews_jqzy">　　徐国良教授做客清华水木清华讲座 讲述发育的奥秘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网3月19日电3月14日下午，应清华大学生命科学联合中心邀请，中国科学院研究员徐国良教授在生命科学馆报告厅作题为DNA Oxidation towards Totipotency in Mammalian Developm......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121228110226572349988/20121228110226572349988_.html" target="_blank">朱玉贤院士在清华讲述棉纤维细胞伸长机制研究</a></h3>
+              <p class="thnews_jqzy">　　朱玉贤院士作客水木清华讲座讲述棉纤维细胞伸长机制研究&nbsp;&nbsp;&nbsp; 　清华新闻网12月28日电&nbsp;12月20日，由清华大学生命科学联合中心主办的第三期&ldquo;水木清华生命科学讲座系列&rdquo;在清华大学生命科学馆报告厅举行。中国科学院院士、著名植物生理学家朱玉贤教授做了题为《棉纤维细胞伸长机制研究》的学术报告。朱玉......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130109094903774145983/20130109094903774145983_.html" target="_blank">张启发做客水木清华生命科学讲座阐述籼稻和...</a></h3>
+              <p class="thnews_jqzy">　　张启发做客水木清华生命科学讲座阐述籼稻和粳稻&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网12月10日电12月6日，清华生命科学联合中心第二期&ldquo;水木清华生命科学讲座系列&rdquo;在清华大学生命科学馆报告厅举行。著名作物遗传育种和植物分子生物学家张启发院士为广大师生做了一场名为《Understanding&n......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130109100200042216574/20130109100200042216574_.html" target="_blank">张学敏作客水木清华生命科学讲座系列</a></h3>
+              <p class="thnews_jqzy">　　张学敏作客水木清华生命科学讲座系列&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网11月26日电11月22日下午， 清华生命科学联合中心&ldquo;水木清华生命科学讲座系列&rdquo;第一期学术报告会在清华大学生物新馆报告厅举行。中国科学院院士，军事医学科学院国家生物医学分析中心主任、蛋白质组学国家重点实验室副主任张学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2012/20120321134233135327479/20120321134233135327479_.html" target="_blank">清华硕士转行写悬疑小说</a></h3>
+              <p class="thnews_jqzy">　　清华硕士转行写悬疑小说来源：金陵晚报 2012-03-20 姜静悬疑小说越来越受追捧，悬疑小说的作者也越来越神秘。日前，记者采访了扬州一名悬疑小说作家，如果不是他主动说出来，谁也无法将文质彬彬的他和紧张刺激的悬疑小说联系起来。从《死亡通知单》到《鬼望坡》，再到如今被众多读者热捧的《刑警罗飞》系列，扬州青年作家周浩晖在国内悬疑小说界已独树一帜。工科硕士......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2011.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110907140709027553808/20110907140709027553808_.html" target="_blank">日本前卫书法艺术展亮相“水木清华”</a></h3>
+              <p class="thnews_jqzy">　　日本前卫书法艺术展亮相&ldquo;水木清华&rdquo;来源：新华网 2011-09-06&nbsp; 隋笑飞日本前卫书法艺术展6日在清华大学美术学院拉开帷幕。这次展览共展出表立云、板桥辉美、上林三千代、高桑昌子、时女信子、松村知春等10位日本艺术家的48件艺术作品。展出的作品主要包括《黎明前》《怎么样》《城市》《波涛》《香风》《悠闲》《跳舞吗？》......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9652/2011/20110413155046509584471/20110413155046509584471_.html" target="_blank">镜头中的母校清华</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;&nbsp;《水木清华&mdash;&mdash;镜头中的母校》摄影画册出版&nbsp;清华新闻网4月13日电以学生的视角看清华、反映清华校园风光和学生生活的摄影画册《水木清华&mdash;&mdash;镜头中的母校》，经过一年半的创作，已由清华大学出版社在清华大学百年华诞到来前正式出版（国际书号ISBN 978-7-302-25182-8）......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232606875208523/20110225232606875208523_.html" target="_blank">徜徉水木清华</a></h3>
+              <p class="thnews_jqzy">　　徜徉水木清华来源：长沙晚报 12-20&nbsp; 梁敏十一月的那天在清华园内徜徉，天空蓝得湛澈，没有一丝白云，不含一点杂质；太阳耀人眼目，照在人身上暖暖的，让人内心里有微微的暖意；风有些寒冽，吹得人干干的，却也有不似南方初冬的爽气；园内树木全都高大笔直，草地有些泛黄，但与枯叶倒也相安。银杏的叶子非常美丽，看过去有一幅幅油画的味道。　&nbsp;&nbs......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231356265635868/20110225231356265635868_.html" target="_blank">水木清华铸国魂（图文）</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document水木清华铸国魂（图文）科技日报 2003年6月10日 本报记者 张超1914年冬天，梁启超作名人演讲。他说：君子应该像天宇一样运行不息，即使颠沛流离，也不屈不挠；如果你是君子，接物度量要像大地一样，没有任何东西不能承载。这次演讲化作清华园里的一座石碑———“自强不息，厚德载物”———这便是清华的8字校训。行走于清华大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2002.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231304515202758/20110225231304515202758_.html" target="_blank">清华大学与曙光公司开“水木清华发展”研讨会</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学与曙光公司开“水木清华发展”研讨会（新浪网 2002年06月24日）日前，为庆祝BBS水木清华站建站即将满7周年，曙光公司与清华大学共同举办了一个围绕BBS水木清华站的研讨会，共同商讨BBS水木清华站的应用与发展。曙光公司总裁历军、副总裁孔红满与清华大学党委副书记张再兴、清华网络中心主任吴建平均出席了会议。众......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225626187951977/20110225225626187951977_.html" target="_blank">水木清华BBS助大运会寻找朝鲜语翻译</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document水木清华BBS助大运会寻找朝鲜语翻译8月24日晚8：30分，清华跳水馆里正在激烈的进行女子跳台决赛，朝鲜选手李玉林和崔名花的成绩一直位于前列，大运会跳水项目委员会的翻译组坐不住了：如果朝鲜队员取得奖牌，就要在新闻发布会上亮相，而跳水委员会事先并没有预料到朝鲜队员会取得如此佳绩。紧急，寻找朝鲜语种的翻译！在新闻中心负责......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>朱镕基与清华学子特殊的师生情</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231227500620329&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">朱镕基与清华学子特殊的师生情</h3><p align="center">中国新闻网 2001年5月15日</p><p align="center"> 文／曲力秋　图／戴牟雨</p><p> 　　在担任国家总理后，仍然亲任一个学院的院长，并且一做就是多年，这在世界各国都是少见的。 </p><p align="center">「偏心」的院长</p><p> 　　清华经济管理学院的院长是朱镕基。这是许多人都知道的。</p><p> 　　朱镕基以铁面无私著称。原经管学院副院长董新保教授回忆说，「朱镕基对部下要求非常严格，批评起人来不得了，我和他接触很多，有时他当着我的面批评他的部下，我不好意思听，只好躲到屋外去。」在董新保的记忆中，朱镕基只有和他的学生们在一起的时候，才会有说有笑。</p><p> 　　学生们何以能够得此好运？这很难说是朱镕基的偏心，而是特殊的师生关系让他们之间自然地显现出让人□慕不已的温情。而他的学生<img src="/publish/news/images/upload/zhurongji.jpg" width="227" height="159" align="right" alt="清华经管学院的师生称，朱镕基是个很有感召力的院长。">们也从朱镕基对学生的「非常人待遇」中体会到很多难以言传的感觉。</p><p> 　　他的学生、北京鑫民安科技有限公司总经理李治平说，他第一次听朱镕基做报告，就对他非常地钦佩，「我们大家都很佩服他，不是因为他的官有多大，而是因为他确实是卓越不凡，他讲话非常有条理而且极为敏锐，说起一些重要的统计数字如数家珍、张口就来。老师们都说，你要让朱院长讲话，只要告诉他讲多长时间就行了，不需要让他写讲话稿。他讲话从来不用讲话稿。」 </p><p align="center">办实事的院长</p><p> 　　在李治平的眼里，朱镕基不仅有能力、口才极佳，而且是一位办实事的人。</p><p> 　　「我记得当时干部研究生班有一位来自重庆钟表公司的学生，读的是全脱产在职研究生，按规定原单位应该给他发工资，但他的单位说他是全脱产学习，就不给他发工资。他在万般无奈之下，给朱镕基写了一封信，信中说：『我只是想和您说说这件事，不指望您能帮多大忙，因为您在北京，我在重庆，这事儿您肯定是管不着。』朱镕基看了这封信后在一次大会上说：『这件事我还真是帮得了忙』。后来，他真是找重庆的有关人士协商，把这件事情解决了。」</p><p> 　　作为朱镕基亲自带过的四大弟子之一，杨宏儒接受导师指导的机会比师兄赵平要少了很多，他的毕业论文也是在其他老师的指导下完成的。因为那时朱镕基已调至上海任市长，工作十分繁忙。</p><p> 　　后来，朱镕基曾对学院的老师说：「他（指杨宏儒）的论文我没有看的很深，一看就困，」然后又补充了一句「每一句话都充满了理论」。杨宏儒现在说起这事来，仍面露愧意，「我那时过于追求理论表述的严谨性，文字比较晦涩，有些话的定语也很长，作为一个市长，白天工作了一天，晚上再看这样的东西，确实是一看就困，现在我能理解了，真是很难为他。」</p><p> 　　尽管朱镕基没有时间尽一个导师的职责，但他还是尽力为杨宏儒提供一些增长见闻、锻炼能力的实践机会。杨宏儒回忆说：</p><p> 　　「他在上海的时候，我曾去上海做过一段时间的调研，他把我交给上海市经委研究室主任，让我们一起研究上海市工业状况。那时的情况与现在有很大的不同，现在各种产业、企业应该怎么搞都是很清晰的，那时都还是国有企业，好像怎么做都是一大堆矛盾，我想他可能是希望我能拿出些东西来，对他能有所帮助，但可能是我当时太年轻，不能完全理解他的想法，所以写出的东西比较表面化，有些东西过于抽象或是追求一种模式，不是特别符合实际应用。虽然最后也写出了一大摞的研究报告，我估计他可能也是看不进去。」</p><p> 　　杨宏儒现在重温此事仍不无遗憾地说，「再也不会有这样的机会了。」 </p><p align="center">诲人不倦的院长</p><p> 　　对于美国雷曼兄弟公司中国业务负责人李山来讲，朱镕基对他的教诲则是影响了他的一生。</p><p> 　　1986年7月的一个傍晚，在为经管学院毕业生饯行的宴会上，刚刚考取美国普林斯顿大学邹至庄出国项目的李山，走到朱镕基面前，告诉他自己将去美国留学，朱镕基问：</p><p> 　　「哪一所加州大学？是ＸＸＸ当校长的那所吗？」</p><p> 　　「不是，是戴维斯分校。」李山回答。</p><p> 　　「你学成一定要回来。」朱镕基叮咛道。</p><p> 　　「没问题，我出国是经过严格政审的，一定会回来。」李山说。</p><p> 　　「不是政审问题，国家确实需要人才。」朱镕基加重了语气。</p><p> 　　「那我应该学经济学中的什么专业呢？」李山开始认真求教。</p><p> 　　「什么都要学，不能只学美国的，还要学习日本、欧洲的经验。」朱镕基说，随后，朱镕基在李山的毕业留言薄上赠言：「博采众长，学通中外」，然后又补充道：「我这几个字不是随便写的，你要好好努力。」</p><p> 　　老师一席话，学生一世书。在中国，老师与学生之间的关系就是这样的简单明了。</p><p> 　　李山没有忘记朱院长的话，在美求学期间他先后选修了6个专业（美国博士一般只要求学两个专业），1988年李山又辞去收入丰厚的美国高盛投资公司的职务，回国创建投资银行，此乃后话。   学生和院长的故事永远也说不完。几乎每一个学生都能说出一个这样的故事。 </p><p align="center">他连推迟一下都没有</p><p> 　　朱镕基出任清华大学经济管理学院院长的时候，是国家经济委员会的副主任，这个机构是主管国民经济运行的重要行政部门。1984年，经管学院开始筹办，当时，朱镕基很支持，并指示一定要办成世界一流的管理学院。</p><p> 　　董新保当时是经管系的系主任，他回忆说：「要办成世界一流的管理学院，就一定要请有才能有身份又有名气的人来做院长。我就对当时的刘校长说，有一个很好的人可以做院长，就是朱镕基。刘校长当即说好，就请他。并对我说，你出面去请。我说，这不合适，我是他的小兄弟（董新保是朱镕基电机系的同学，比朱低两届）。请他当院长，应该由校领导出面。后来，刘校长就派朱镕基的同班同学李传信（当时清华大学党委副书记）和吕森（清华大学秘书长）去请他。朱镕基连推迟一下都没有，立刻就答应了。所以，清华经管学院从第一天开始一直到现在就这一任院长。」</p><p> 　　在担任国家总理后，仍担任一个学院的院长，这在世界范围内都是少见的，朱镕基为什么这么关心经管学院呢？改革开放初期，有人提出，中国最缺的不是技术、资金和人才，而是管理。朱镕基非常赞同这种说法，后来他多次在不同的场合强调过，我们最缺的是管理，直到现在他还这么讲。 </p><p align="center">忙中顾及学院的工作</p><p> 　　在通常情况下，朱镕基一个月来经济管理学院一次，主持召开一次院务会议，讨论学院发展工作的重大问题。后来，他奉调到上海出任市长，临行前，他对几位院领导说，以后我没法来了，你们谁也不必专门来上海，到南方出差的时候来找我一趟、和我说说情况就行了。他没有想过要卸任院长，可见他对经济管理学院的感情。后来，院领导并没有去找过他。对他的博士生，他是真正地行指导之责，经济管理学院的具体工作就没法兼顾了。</p><p> 　　1991年，朱镕基奉调回北京，出任国务院副总理，主管全国的经济工作，1998年3月出任总理，也没有提出要辞去院长职务。他公务太忙，很难做到每年来学院一次。如今，他一般是一、两年来学院一次，每次都是以学生的名义请他来。</p><p> 　　学院的重大事情还是要向院长报告的。譬如现在经管学院的大楼是香港恒生银行董事长利国伟资助的，这件事必须请示朱院长。大楼落成典礼的那一天，上午是奠基仪式，朱镕基不来，因为他有个习惯，不参加任何奠基、剪彩仪式，下午他来了，在这里会见了利国伟。 </p><p align="center">他表示只兼清华经济管理学院的院长</p><p> 　　朱镕基当院长，对学院的招生和对外合作有相当大的感召力。他到美国访问，都要表明他是清华的教授、院长。1999年，他在美国访问期间，到MIT（麻省理工学院）讲演时说：「好多地方请我去，哈佛也请我去，我为什么到MIT来呢？因为我是清华经管学院的院长，清华经管学院和MIT管理学院有很密切的联系。所以我就到你们这里来。」</p><p> 　　80年代，清华经管学院和美国德州大学洽谈合作事宜，该校校长回去说，和我们合作的学院，院长朱镕基相当于我们的里甘（美国财政部长），那时朱镕基还是经委副主任。现在的MIT、哈佛这些最有名的学校与经济管理学院之间都有很密切的合作，这当然是朱院长的影响力。</p><p> 　　但很多人说朱镕基给经济管理学院弄了很多钱，这是不准确的。清华经管学院的老教学楼，是花了400万元盖起来的，当时是学校里最好的教学楼，有人以为这笔钱是朱镕基给的，其实不是，经委的钱是能打酱油不能打醋的，就是说经委的钱不能搞基本建设，只有计委的钱才能盖房子，这笔钱是计委批的。 </p><p>朱镕基在上海工作的时候，上海好多大学请他当院长，他表示，只兼清华经济管理学院院长，其他一概免了。 </p><p>摘自《新经济》2001.2 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年05月15日 12:26:47　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231229671896737/20110225231229671896737_.html" target="_blank">朱镕基辞去清华经管学院院长改任荣誉主席</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document朱镕基辞去清华经管学院院长改任荣誉主席中国新闻网 2001年6月7日 09:58中新网北京6月7日消息：兼任母校清华大学经济管理学院院长十多年的国务院总理朱鎔基5日表示，他已经决定辞去院长职务。他也深情寄语清华同学，做一个有骨气的中国人，为学则扎扎实实，脚踏实地，为人则正直廉洁，一身正气。据清华大学校方网站披露，朱镕......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231229687125997/20110225231229687125997_.html" target="_blank">清华留恋“总理院长”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华留恋“总理院长”朱镕基日前辞去清华经管学院院长改任顾问委员会荣誉主席北京青年报 2001年6月8日本报记者杨涛报道　6月5日，原准备听一场朱总理报告会的清华师生没料到， 报告会竟成了朱镕基作为清华大学经济管理学院院长的“告别演出”。会上，朱总   理正式向母校表示：决定辞去经管学院院长职务。不少曾经是朱总理弟子、校友......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231229515226768/20110225231229515226768_.html" target="_blank">永恒的只是追求——献给朱总理和所有清华人</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document永恒的只是追求——献给朱总理和所有清华人学生清华 魏国柱 6/5/2001记得总理的一句话：“人不畏吾严而畏吾廉，人不服吾能而服吾公”。这是在我见到总理以前对总理印象最深的一句话，也不知道为什么，就对总理始终崇敬着，或许，这就是人格魅力所在吧！今天上午，当朱总理走进清华大学的体育馆时，掌声如雷鸣般响起来，是我听到......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231229484451680/20110225231229484451680_.html" target="_blank">朱镕基总理来校为师生作形势报告</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document高屋建瓴纵论天下大事赤子情深共勉母校精神朱镕基总理来校为师生作形势报告【新闻中心讯】6月5日上午，国务院总理朱镕基来我校视察，在综合体育中心为我校师生们作了一场深刻、生动的形势报告，受到热烈的欢迎。在清华人印象中，朱镕基总理的报告总是那么诙谐、幽默、睿智、潇洒。报告一开始，总理对母校拳拳的深情就深深打动了在场的师生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353765546426/20110225225353765546426_.html" target="_blank">朱镕基总理来校为师生作形势报告</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document高屋建瓴纵论天下大事赤子情深共勉母校精神朱镕基总理来校为师生作形势报告【新闻中心讯】6月5日上午，国务院总理朱镕基来我校视察，在综合体育中心为我校师生们作了一场深刻、生动的形势报告，受到热烈的欢迎。在清华人印象中，朱镕基总理的报告总是那么诙谐、幽默、睿智、潇洒。报告一开始，总理对母校拳拳的深情就深深打动了在场的师生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354265372795/20110225225354265372795_.html" target="_blank">朱镕基与清华学子特殊的师生情</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document朱镕基与清华学子特殊的师生情中国新闻网 2001年5月15日文／曲力秋　图／戴牟雨在担任国家总理后，仍然亲任一个学院的院长，并且一做就是多年，这在世界各国都是少见的。「偏心」的院长清华经济管理学院的院长是朱镕基。这是许多人都知道的。朱镕基以铁面无私著称。原经管学院副院长董新保教授回忆说，「朱镕基对部下要求非常严格......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354296817061/20110225225354296817061_.html" target="_blank">朱镕基论清华为学与为人</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document朱镕基论清华为学与为人解放日报 2001年5月13日国务院总理朱镕基毕业于清华大学电机系，１９９２年，在祝贺母系成立６０周年时，他论及对清华为学与为人的理解。他写道：“四十多年前，母校电机系主任章名涛教授在一次会上对我们讲过这样一段话：‘你们来到清华，既要学会怎样为学，更要学会怎样为人。青年人首先要学为人，然后才是为......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231227484668865/20110225231227484668865_.html" target="_blank">朱镕基论清华为学与为人</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document朱镕基论清华为学与为人解放日报 2001年5月13日国务院总理朱镕基毕业于清华大学电机系，１９９２年，在祝贺母系成立６０周年时，他论及对清华为学与为人的理解。他写道：“四十多年前，母校电机系主任章名涛教授在一次会上对我们讲过这样一段话：‘你们来到清华，既要学会怎样为学，更要学会怎样为人。青年人首先要学为人，然后才是为......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231221828379512/20110225231221828379512_.html" target="_blank">朱镕基论清华为学与为人</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document朱镕基论清华为学与为人(2001.04.28 新华网)新华网北京４月２８日电 国务院总理朱镕基毕业于 清华大学电机系，１９９２年，在祝贺母系成立６０周年时，他论及对清华为学与为人的理解。他写道：“四十多年前，母校电机系主任章名涛教授在一次会上对我们讲过这样一段话：‘你们来到清华，既要学会怎样为学，更要学会怎样为人。青......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354953975195/20110225225354953975195_.html" target="_blank">朱镕基在清华的时代</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document朱镕基在清华的时代（光明网 2001年4月28日）曲子茹朱镕基在中共建政之前就读于北京清华大学，本文描述当时清华大学里中共活动的情形。抗战胜利迁返北平后，清华大学工学院除战前原有的土木、机械、电机三系和在昆明时新设的航空工程学系外，又新成立了化学工程学系与建筑工程学系，在和平建设的幻想推动下，学生为谋可靠的出路，大批......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354921870247/20110225225354921870247_.html" target="_blank">朱镕基论清华为学与为人</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document朱镕基论清华为学与为人(2001.04.28 新华网)新华网北京４月２８日电 国务院总理朱镕基毕业于 清华大学电机系，１９９２年，在祝贺母系成立６０周年时，他论及对清华为学与为人的理解。他写道：“四十多年前，母校电机系主任章名涛教授在一次会上对我们讲过这样一段话：‘你们来到清华，既要学会怎样为学，更要学会怎样为人。青......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231220812745402/20110225231220812745402_.html" target="_blank">朱镕基在清华的时代</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document朱镕基在清华的时代（光明网 2001年4月28日）曲子茹朱镕基在中共建政之前就读于北京清华大学，本文描述当时清华大学里中共活动的情形。抗战胜利迁返北平后，清华大学工学院除战前原有的土木、机械、电机三系和在昆明时新设的航空工程学系外，又新成立了化学工程学系与建筑工程学系，在和平建设的幻想推动下，学生为谋可靠的出路，大批......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

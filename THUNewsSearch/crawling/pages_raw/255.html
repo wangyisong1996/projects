@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>国际大体联主席考察我校体育场馆</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225355906592128&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9648/index.html' class='navigation_style'>头条新闻</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">国际大体联主席考察我校体育场馆</h3><p>4月12日下午，国际大体联主席乔治.基里安先生(George E. Killian)、北京市副市长刘敬民率团访问我校。郑燕康副校长陪同来宾参观了我校即将竣工的综合体育中心和跳水馆。</p><p>当日下午，首都高校“大运杯”篮球比赛——首都体育师范学院对清华大学的比赛在我校进行。郑燕康副校长为这场比赛致辞，乔治.基里安先生也到场讲话并为篮球比赛开球，他们还兴致勃勃地观看了比赛。 </p><p>今年8月第二十一届世界大学生运动会将在北京举行，这是我国建国以来举办的第一个世界性综合运动会。本届大运会共设12个项目的比赛，即田径、篮球、跳水、击剑、足球、体操、游泳、网球、排球、水球、乒乓球和柔道。其中，跳水比赛将在我校举行。   为了迎接第二十一届世界大学生运动会的到来，在京的59所大学开展了“大运杯”篮球、足球、排球、乒乓球、游泳和田径6项体育比赛。（宗菁） </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月13日 14:50:28　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120915160543482530528/20120915160543482530528_.html" target="_blank">全国大学生运动会开赛 清华学生已获三枚金牌</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;全国大学生运动会开赛 清华学生已获三枚金牌清华新闻网9月15日电9月8日，第九届全国大学生运动会在天津开幕，校党委常务副书记、校体委主任陈旭出席开幕式。本次比赛清华共有38名学生代表北京参加田径、游泳、男篮、排球、毽球和桥牌6个项目的角逐。9月13日，大运会田径比赛在天津市海河教育园体育中心正式开赛，在已经结束的项目中，我校经管学院201......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120608144856905296827/20120608144856905296827_.html" target="_blank">清华举行田径队总结庆功会暨全国大运会动员会</a></h3>
+              <p class="thnews_jqzy">　　清华举行田径队总结庆功会暨全国大运会动员会清华新闻网6月8日电6月6日下午，&ldquo;2012年田径队总结庆功会暨全国大运会动员会&rdquo;在校理学院报告厅举行，校党委常务副书记、校体委主任陈旭出席动员会并讲话。图为陈旭讲话。陈旭充分肯定了田径队在第50届首都高校田径运动会上取得的成绩，勉励参加全国大学生运动会的队员处理好学习与训练的关系，争......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110823155901857834288/20110823155901857834288_.html" target="_blank">清华学生在深圳大运会上夺得6金3银</a></h3>
+              <p class="thnews_jqzy">　　清华学生在深圳大运会上夺得6金3银清华新闻网8月23日电&nbsp;&nbsp;&nbsp; 深圳大运会将在今晚闭幕，在连日举行的大运会比赛中，清华学生发挥出色，共获得6枚金牌、3枚银牌的好成绩。其中，李佩璟获得女子50米步枪卧射个人金牌、团体金牌，以及女子50米步枪三种姿势比赛的团体金牌；曹逸飞获得男子50米步枪三种姿势比赛的团体金牌，男子10米气......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110823103019046692835/20110823103019046692835_.html" target="_blank">清华学子沈阳夺得大运会国际象棋混合团体金牌</a></h3>
+              <p class="thnews_jqzy">　　清华学子沈阳与队友夺得大运会国际象棋混合团体金牌清华新闻网8月23日电&nbsp;北京时间8月21日，深圳大运会国际象棋赛在深圳会展中心五楼梅花厅展开了最后一轮的角逐，清华学子沈阳与其他7名队友一道，为中国军团夺得了混合团体金牌。&nbsp;</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110822142105493799082/20110822142105493799082_.html" target="_blank">清华学子为中国田径短板带来惊喜</a></h3>
+              <p class="thnews_jqzy">　　清华学子为中国田径短板带来惊喜&nbsp;来源：新华网 2011-08-21 马晓澄 李铮 周慧敏世界大运会男子800米跑亚军！这个中国人不太敢奢望的结果，在21日晚上由一位清华学子完成，他的名字叫滕海宁。18岁的滕海宁赛后激动地说：&ldquo;这是我运动生涯最开心的一刻！&rdquo;幸福源自过硬的实力。男子800米比赛一开始，滕海宁一直采取......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110822101639294511718/20110822101639294511718_.html" target="_blank">清华学子已摘取深圳大运会射击5金2银</a></h3>
+              <p class="thnews_jqzy">　　清华学子已摘取深圳大运会射击5金2银&nbsp;清华新闻网8月22日电&nbsp;截至目前，清华学子李佩璟、曹逸飞和王威暘已在深圳大运会上为中国队摘取了5枚金牌、2枚银牌。除李佩璟摘取女子50米步枪卧射个人冠军、团体冠军和50米三姿团体冠军三枚金牌外，曹逸飞摘取了男子50米步枪三姿团体冠军、10米气步枪团体银牌和男子50米步枪卧射个人银牌，王威暘与队......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110822093757018138199/20110822093757018138199_.html" target="_blank">清华队员李佩璟已斩获大运会三金</a></h3>
+              <p class="thnews_jqzy">　　清华队员李佩璟已斩获大运会三金&nbsp;清华新闻网8月22日电&nbsp; 深圳大运会正如火如荼进行中，截至目前，清华大学经管学院大二学生李佩璟已为中国队摘取三枚金牌。分别是女子50米步枪卧射个人冠军、团体冠军和50米三姿团体冠军。在女子50米步枪卧射的比赛中，由李佩璟、王成意和蓝宇雯组成的中国队以总成绩1780环获得金牌。李佩璟还在个人赛中打出5......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9912/2011/20110822093434957623542/20110822093434957623542_.html" target="_blank">深圳研究生院研发“即拍即传”技术服务大运会</a></h3>
+              <p>大运会期间，由清华大学深圳研究生院研发的下一代互联网无线“即拍即传”系统首次投入使用。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110822091108498793826/20110822091108498793826_.html" target="_blank">清华学子滕海宁夺得世界大运会男子800米...</a></h3>
+              <p class="thnews_jqzy">　　清华学子滕海宁夺得世界大运会男子800米跑银牌新华网深圳８月２１日体育专电（记者马晓澄、李铮、周慧敏）世界大运会男子８００米跑亚军！这个中国人不太敢奢望的结果，在２１日晚上由一位清华学子完成，他的名字叫滕海宁。１８岁的滕海宁赛后激动地说：&ldquo;这是我运动生涯最开心的一刻！&rdquo;幸福源自过硬的实力。男子８００米比赛一开始，滕海宁一直......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110822085104630316181/20110822085104630316181_.html" target="_blank">清华模式让王宇们很快乐 体教结合跻身竞技...</a></h3>
+              <p class="thnews_jqzy">　　清华模式让王宇们很快乐 体教结合跻身竞技赛场新华社记者　马晓澄、李铮、周慧敏中国代表团旗手王宇在深圳大运会上跳出了接近最好成绩的2米24，获得第四名，虽然与奖牌擦肩而过，但正宗&ldquo;清华制造&rdquo;的王宇已和专业运动员水平不相上下。&nbsp;&nbsp;&nbsp; 从胡凯到王宇，体教结合的路上，&ldquo;清华模式&rdquo;已持续......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110815161547316277668/20110815161547316277668_.html" target="_blank">中国代表团“春茧”亮相 清华学生王宇领旗...</a></h3>
+              <p class="thnews_jqzy">　　中国代表团&ldquo;春茧&rdquo;亮相 清华学生王宇领旗受热捧来源：人民网 2011-08-13 张海燕 刘少君 廖玉芳第26届世界大学生夏季运动会今晚20时在深圳湾畔隆重开幕。在富于中国民族特色的音乐伴奏下，152个参赛大学生代表团陆续进场，在&ldquo;春茧&rdquo;中一展青春风采。其中，清华大学参赛运动员王宇擎着中华人民共和国国旗，带......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110814100636950307439/20110814100636950307439_.html" target="_blank">清华师生积极参与深圳大运会 王宇担任中国...</a></h3>
+              <p>8月12日晚，第二十六届世界大学生夏季运动会在广东省深圳市隆重开幕。国家主席胡锦涛出席开幕式并宣布本届大运会开幕。清华大学跳高运动员王宇担任中国代表团旗手。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110426100027316340850/20110426100027316340850_.html" target="_blank">深圳大运会火种在清华点燃</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;深圳大运会火种在清华点燃&nbsp;清华新闻网4月26日电&nbsp;（研通社记者李想蒋中铭） 4月25日上午，第26届世界大学生夏季运动会&ldquo;火种采集仪式&rdquo;在典雅的清华大礼堂前隆重举行。中共中央政治局委员、广东省省委书记汪洋，教育部部长袁贵仁，北京市委副书记、市长郭金龙，广东省委副书记、省长、第26届大运会组委会执行主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2011.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232611843784328/20110225232611843784328_.html" target="_blank">大运圣火采集地拟由北大改清华</a></h3>
+              <p class="thnews_jqzy">　　大运圣火采集地拟由北大改清华恰逢清华百年校庆，包括哈佛牛津在内的全球名校校长或做现场见证来源：南方都市报 2011-1-5&nbsp; 刘勇继开闭幕式场地互相调换后，深圳大运会的圣火采集地和火炬传递第一站也可能互换。南都记者昨日获悉，根据目前的大运会火炬传递方案，大运会圣火采集地拟从北大改到清华，而火炬传递第一棒从清华改到北大。圣火采集时间也将变化。原定......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232417015627735/20110225232417015627735_.html" target="_blank">清华北大学子当大运会义工</a></h3>
+              <p class="thnews_jqzy">　　清华北大学子当大运会义工广州日报 2010-03-08记者昨日获悉，“3&#8226;5”义工节期间，团市委、市义工联在全市范围内集中为2011年深圳大运会吸纳义工。目前清华大学义工队的800名义工及北京大学深圳大运会义工队的1000名义工已在网上报名，全国高校大运会志愿者招募活动也全面启动。有关人员介绍，大运会志愿者将以大学生为主，志愿者招募将延伸......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225609406451499/20110225225609406451499_.html" target="_blank">清华奥运论坛第三场与大运会冠军面对面</a></h3>
+              <p class="thnews_jqzy">　　清华奥运论坛第三场与大运会冠军面对面【新闻中心讯 学生记者杨叶丹）】4月27日晚7时，清华奥运论坛第三场在清华大学经管学院国际报告厅举行。此次论坛主题为“田径人生，别样清华——与大运会冠军面对面”，第23届大运会男子100米冠军胡凯，第23届大运会女子三级跳远冠军王颖以及两名体育代表队田径队队员周慧莲、刘超担任论坛坛主。来自各院系的200多名同学参加了论......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2005.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231639609161266/20110225231639609161266_.html" target="_blank">我校举行世界大运会参赛师生总结会</a></h3>
+              <p class="thnews_jqzy">　　我校举行世界大运会参赛师生总结会【新闻中心讯 记者 张莞昀　摄影　郭海军】8月24日下午，我校第23届世界大学生运动会参赛师生总结会在工字厅东厅举行。校党委书记陈希、副书记杨振斌、学生工作指导委员会副主任陈旭以及有关部处、院系负责人出席了座谈会。会上，我校体育教研部副主任、此次大运会中国代表团田径队领队吴跃健介绍了我校健儿在大运会上的表现以及赛场上的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231558671720630/20110225231558671720630_.html" target="_blank">大运会篮球选拔赛 清华男篮击败湖南男篮获...</a></h3>
+              <p class="thnews_jqzy">　　大运会篮球选拔赛 清华男篮击败湖南男篮获冠军新华网  2005-4-4  单磊&nbsp;&nbsp;&nbsp;新华网北京4月3日电（记者单磊）清华大学队3日经过加时赛以90：87击败湖南大学队，从而以3战全胜的战绩获得世界大学生运动会男篮选拔赛冠军。&nbsp;&nbsp;&nbsp;按照大学生体育联合会的规定，获胜球队的主教练将成为参加世界大学生运动会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231232765411116/20110225231232765411116_.html" target="_blank">紫光支持大运会网络</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document紫光支持大运会网络北京日报 2001年7月4日本报讯　昨天，清华紫光网联公司与21届大学生运动会组委会签订了合作协议，紫光成为大运会指定的惟一网络设备供应商，将为大运会54个场馆、大运村及官员驻地提供庞大的网络应用环境，直接完成信息的采集、处理、打印、公告等工作。作为第一家独立承担国际性大型综合运动会网络技术支持的国内厂......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清华国学研究院何以人才辈出</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225355734220210&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9648/index.html' class='navigation_style'>头条新闻</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">清华国学研究院何以人才辈出</h3><p align="center"> 吕文浩</p><p align="center">（中华读书报 2001年4月18日）</p><p> 　　讨论老清华的人文学术史的人一般都是从清华国学研究院谈起的。 这当然是很对的。在1925年国学研究院成立之前，清华的人文学术研 究大体是零星的、浅陋的，在学术界不占什么重要位置。国学研究院   的学术研究和人才培养才第一次真正地给清华带来学术上的声誉，树 立了清华作为学术重镇之一的地位。</p><p> 　　每每想起国学研究院，我心里总是充满了一种复杂的感情：和大 多数人一样，我羡慕那时师生热心向学的氛围，高度评价他们的研究 工作；另一方面，也许是由于国学研究院的“好景不常”的缘故，我   常常惋惜其未能“尽善尽美”。研究院一直是在校内的重重矛盾下发 展的，最初的主持人吴宓先生因不能实现其设想而引退，后来研究院 的规模大体上是处于不断萎缩的状态，1927年以后王国维自沉、梁启   超因多病不能常川住院继而辞职，研究院失去两大“台柱”，盛况大 不如前。想起梁启超在一次茶话会上说“我院如继续努力，必成国学 重镇无疑”，言犹在耳，国学研究院没过几年就已成为历史的陈迹，   怎能不令人叹惋！</p><p> 　　人生活在一个布满着种种现实利益冲突的世界上，不可能事事 “尽如人意”。以这种眼光来看，过分地停留在惋惜上似乎也不必要。 清华国学研究院虽若昙花一现，但确有足观者在。它只存在了4年（   1925－1929），培养了4届学生，总数70余人，而成材率颇高，其中尤 以高亨、徐中舒、吴其昌、刘盼遂、王力、姜亮夫、陆侃如、戴家祥、 卫聚贤、谢国桢、杨鸿烈、陈守实、刘节、蒋天枢等成就突出。记得   在1995年纪念清华国学研究院70周年国际学术讨论会上，有人呼吁总 结清华国学研究院学术研究与人才培养的经验，颇有反响。当此母校 90周年大庆之际，笔者应约执笔撰写此文，以国学研究院为例略述老   清华人才培养经验之一斑，想必也是读者诸君所乐于一读的。</p><p> 　　国学研究院人才辈出的第一个原因是学生本身素质好。“玉不琢， 不成器”，但前提是你琢的是一块玉，而不是一块普通的石头，如果 琢的是一块普通的石头，任你如何用心雕琢，也成不了一块器。维持   教育品质的第一个因素是提高生源质量。国学研究院的学生中以服务 教育界及学有根底者居多，应届大学毕业生尚不足一半，不少人在入 学前已有著作问世，已经是相当成熟的青年学者，所以能够很快进入   状态，加以名师点拨，很快便脱颖而出。国学研究院的学制只有1年， 但如题目较难，可以申请延续1年或2年。实际的情况是有近一半的人 延长了学习期限，多数是延长1年，也有极少数延长两年的。读过研究   生的人都明白，我们现在上3年研究生时常还觉得时间很紧，1年学制 是很短的，根本不容许你在这一年时间内打基础。国学研究院要求学 生入学两星期内确定论文题目，以自己研究为主，有问题可以向导师   请教。研究院给学生安排的是必修4门普通演讲课，定期和导师见面， 向导师请益。</p><p> 　　研究院起初打算不办学术刊物，理由是：（1）杂志按期出版，内 容材料难得精粹，若以照片祝词等充塞敷衍，于本院名声有损无益； （2）学生研究期限，暂定1年，研究时间已苦无多，若再分心于杂志   之著述及编辑，必荒学业；（3）佳作可刊于丛书，短篇可刊于周刊及 学报中分别刊登，而编印丛书，由教授指导学生为之。也许是由于不 少学生有意于延长学习期限，他们主办了《实学》月刊，不少学生还   参加了北京述学社《国学月报》杂志的编辑和撰述工作，在研究院创 办的《国学论丛》季刊上，学生们也屡有著述发表。这些丰厚的学术 成果充分说明，研究院学生的学术根底与研究能力非同一般。</p><p> 　　清华国学研究院人才辈出的第二个原因是校方眼光很高，慧眼识 英才，物色到一批货真价实的大师或一线学人，为清华人文学科开了 一个好头。研究院章程中对教授（即导师）和讲师的要求是：</p><p> 　　（一）本院聘宏博精深，学有专长之学者数人，为专任教授。常 川住院，任教授及指导之事。</p><p> 　　（二）对于某种学科素有研究之学者得由本院随时聘为特别讲师。</p><p> 　　国学研究院的“四大导师”中，王国维、梁启超成绩卓著当时已 经广为人知，陈寅恪和赵元任则属于潜在的大师，有一定的知名度但 主要著作还没有产生，也被校方延揽到校。他们4位都站在当时学术的   最前沿，是真正的一线学人。而只有在学术的最前沿打过胜仗的才配 得上称大师。任研究院讲师的先后有李济、马衡、林宰平，也都是一 时的绩学之士。王国维辞世、梁启超去职以后，陈寅恪建议校方聘请   的导师是章太炎、罗振玉，也都是当时的大师级人物，可惜他们没有 应聘。</p><p> 　　研究院的几位教授和讲师在普通演讲里讲授的都是当时最前沿的 学问，如王国维的“古史新证”、梁启超的学术文化史、陈寅恪以比 较语言学来证史、赵元任的描写语言学都是非常崭新而且精深的。客   观地说，研究院的学生虽然根底深厚，但他们以前的知识结构与导师 们的学问要想顺利衔接起来也绝非易事，尤其是陈寅恪与赵元任的学 问属于新的领域，常使学生们感到听讲十分费力。姜亮夫在回忆里说，   听陈寅恪的课很吃力，非常苦恼，认真记笔记，课后和同学对笔记， 再加上看书，大约能懂1／3左右。在钻研过程中感到在方法上很有收 获。他坦言，他自己是以旧的为基础，对新的略有所知的“半掉子”。   姜亮夫的情况可能很有代表性。所以，学生们以王国维和梁启超为导 师的居多。研究院的学生中学术境界达到或超过导师的大概还没有， 这不能不说是必然的。但是，从游于大师或一线学者门下，即便不能   得心应手地运用其所指示的路径，至少打开了视野，能明了自己所处 的位置，在题目的选择和方法上得到启迪，也是很值得的。研究院的 制度是分科不分系，以教授个人为主，仿书院制度，期于在教授与学   生的密切接触中使学生掌握治学方法，受导师的人格熏陶，短期内确 有所获。从4年的实践来看，这种办法应该说是成功的。</p><p> 　　叶企孙解放后有一次和人说起老清华办学成功的经验，他认为主 要是两点，一是经费充裕，二是慎选师资、宁缺毋滥。绳之以国学研 究院的经验，经费充裕是一个前提条件，自不必说，国学研究院最为   突出的也许应该是礼聘大师，完全信任他们，放手让他们依照学术研 究和人才成长的规律办事。这当是老清华办学经验里最为宝贵的成分。 </p><p align="center"><img src="/publish/news/images/upload/liangqichao.jpg" width="157" height="213"></p><p align="center">梁启超 </p><p align="center"><img src="/publish/news/images/upload/wangguowei.jpg" width="157" height="218"></p><p align="center">王国维 </p><p align="center"><img src="/publish/news/images/upload/chenzhao.jpg" width="216" height="144"></p><p align="center">陈寅恪 赵元任 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月18日 10:13:11　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141113164106697357001/20141113164106697357001_.html" target="_blank">赵元任钢琴回清华绵延七十年家国情缘</a></h3>
+              <p>　　“教我如何不想他，天上飘着些微云，地上吹着些微风。啊！微风吹动了我的头发，教我如何不想他？”秋日里，这首轻柔的乐曲再次在清华园响起。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130902135837012573175/20130902135837012573175_.html" target="_blank">清华四大导师的父女情</a></h3>
+              <p class="thnews_jqzy">　　清华四大导师的父女情来源：科技日报 2013-8-31 胡一峰20世纪二三十年代的清华园，生活着梁启超、陈寅恪、王国维、赵元任四大导师，他们深谙中国传统文化又不沾染&ldquo;男尊女卑&rdquo;&ldquo;传宗接代&rdquo;等封建思想，对女儿寄托了一份深沉的爱。四大导师脾气秉性各不相同，表达父爱也各有特色。王国维先生内敛、宁静，对待孩子表......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110823141536641209105/20110823141536641209105_.html" target="_blank">清华国学院“四大导师”</a></h3>
+              <p class="thnews_jqzy">　　清华国学院&ldquo;四大导师&rdquo;来源：瞭望东方周刊 2011年第34期在&ldquo;四大&rdquo;之中，只有赵元任一人怀揣美国哈佛大学博士学位证书，而王、梁、陈等三位均无博士、硕士头衔，甚至连学士学位也未拿到盛极一时的清华国学研究院解体已近八十年，岁月的风尘湮没了许多令人怀念的往事，师生们的身影也在朦胧的荷塘月色中渐渐淡出世人的视......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232520468126149/20110225232520468126149_.html" target="_blank">【人才引进】刘东受聘清华教授任国学研究院...</a></h3>
+              <p class="thnews_jqzy">　　刘东受聘清华大学教授任国学研究院副院长【新闻中心讯】刘东，1955年3月生，2009年7月来清华大学工作，任人文学院哲学系教授，并任国学研究院副院长，主持“王国维纪念讲座”。他1981年毕业于南京大学哲学系。1985年考入中国社会科学院，师从著名哲学家李泽厚，1990年获得博士学位。1991年～2000年任中国社会科学院外文所副研究员，2000年～2......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232456187114262/20110225232456187114262_.html" target="_blank">梁启超陈寅恪年谱长编出版学术座谈会举行</a></h3>
+              <p class="thnews_jqzy">　　梁启超陈寅恪年谱长编出版学术座谈会举行【新闻中心讯 通讯员 李丹婕 摄影 崔凯】5月18日，清华国学院与中华书局在北京西郊宾馆，共同举办了《梁任公先生年谱长编（初稿）》、《陈寅恪先生年谱长编（初稿）》两部年谱长编出版学术座谈会，并以此纪念陈寅恪先生诞辰120周年。会议由清华国学院刘东教授主持。清华大学党委常务副书记陈旭、副校长谢维和、清华国学院院长陈来教......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232454406305808/20110225232454406305808_.html" target="_blank">清华四大导师的步态</a></h3>
+              <p class="thnews_jqzy">　　清华四大导师的步态来源：光明日报 2010-05-19梁启超、王国维、陈寅恪、赵元任四位教授，即通常所说的早期“清华国学院”里的四大导师，无论其道德还是文章，都早已成为中国近代学术的象征，曾经鼓舞过一代又一代的后学。而今距离那个神话般的年月，已经过去了八十余载，就连他们那些同样传为佳话的门人，也已悉归道山。不过，到这时反而看得更清了：尽管在国学院的众......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2009.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232348109711699/20110225232348109711699_.html" target="_blank">刘东：时隔80年的香火传承</a></h3>
+              <p class="thnews_jqzy">　　时隔80年的香火传承清华大学国学研究院副院长 刘东编者按：11月1日，清华大学国学研究院成立。于此举措，我们更愿意视之为一种提醒：别忘记，清华还有更丰富的传统。为阐扬那些不仅对清华大学弥足珍贵，更值得当下学界引以为镜鉴的传统，本刊特约请研究院副院长刘东教授撰文。&nbsp;&nbsp;&nbsp; 正如余英时教授在他的贺信中所说，老的清华国学院是1929......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2009.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232344937104770/20110225232344937104770_.html" target="_blank">新国学之路——访清华大学国学研究院院长陈来</a></h3>
+              <p class="thnews_jqzy">　　新国学之路——访清华大学国学研究院院长　陈来要亡一个国，先亡其学，先让你的人民不知道有其民族文化。胡适的说法并不对。不是先有一个“国故学”流行，然后大家省称、简称，才有了国学。陈独秀讲，研究国学、整理国故好像是在大粪里面找香水，而我们现在是要从西方引进香水。作为研究体系的国学才有新旧，作为研究对象的国学没有所谓新旧。时间:　2009年10......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2009.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232344750525272/20110225232344750525272_.html" target="_blank">清华大学成立国学研究院</a></h3>
+              <p class="thnews_jqzy">　　清华大学成立国学研究院【新闻中心讯 记者 崔凯 摄影 郭海军】11月1日上午，清华大学国学研究院（The Tsinghua Academy of Chinese learning，Tsinghua University）成立大会在清华大学主楼接待厅隆重举行。原中共中央政治局常委、国务院副总理李岚清同志为清华国学研究院亲笔题词：“为研究弘扬国学精华做贡献”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2009.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225334000264917/20110225225334000264917_.html" target="_blank">清华大学成立国学研究院</a></h3>
+              <p class="thnews_jqzy">　　清华大学成立国学研究院【新闻中心讯 记者 崔凯 摄影 郭海军】11月1日上午，清华大学国学研究院（The Tsinghua Academy of Chinese learning，Tsinghua University）成立大会在清华大学主楼接待厅隆重举行。原中共中央政治局常委、国务院副总理李岚清同志为清华国学研究院亲笔题词：“为研究弘扬国学精华做贡献”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2009.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232318968942333/20110225232318968942333_.html" target="_blank">缅怀业师李济之先生</a></h3>
+              <p class="thnews_jqzy">　　缅怀业师李济之先生李济（1896.6.2－1979.8.1）,字济之。人类学家、 中国现代考古学家、中国考古学之父。湖北钟祥郢中人。1911年考入留美预科学校清华学堂，1918年官费留美。1922年哈佛大学人类学专业毕业，获哲学博士学位。1925年,29岁的李济任清华大学国学研究院人类学讲师,与著名的四大导师同执教鞭。1926年，李济发掘山西夏县西阴......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232312718576411/20110225232312718576411_.html" target="_blank">生死相随生命相依　陈寅恪与唐筼的别样情缘</a></h3>
+              <p class="thnews_jqzy">　　生死相随生命相依 陈寅恪与唐筼的别样情缘陈寅恪与妻子唐筼和三个女儿　（图片来源：长江日报）陈寅恪是清华国学研究院的四导师之一，以学识渊博著称于世。然而，他的人生却颠沛多难，壮年盲目，暮年膑足。幸运的是一位知书达理的大家之女润泽了他的生命，甚至追随着他渡向生命的彼岸。这位女性就是陈寅恪的妻子唐筼。陈寅恪与唐筼的结合颇有几分传奇色彩。陈寅恪自13岁与兄长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2009.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232259515564426/20110225232259515564426_.html" target="_blank">【百年清华记忆】短暂而辉煌的国学研究院</a></h3>
+              <p class="thnews_jqzy">　　短暂而辉煌的国学研究院●档案馆 朱俊鹏清华学校于1925年成立研究院，只设国学一科，故一般称之为国学研究院，与大学部、留美预备部组成当时学校三个相对独立的教学部分。国学研究院主张用现代学术观念来治理传统中国学问，主要研究中国经史古学，培养各级学校的国学教师以及终身从事学术研究之人才。国学研究院到1929年结束，在短暂四年中，开创出一股研究国学的新风，成为......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2005.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231702421356424/20110225231702421356424_.html" target="_blank">清华学风：值得珍视的一份文化遗产</a></h3>
+              <p class="thnews_jqzy">　　清华学风：值得珍视的一份文化遗产——写在清华国学研究院成立80周年之际光明日报  2005-11-24  谢维和&nbsp;&nbsp;&nbsp;&nbsp;今年是清华国学研究院成立80周年纪念。研究院成立之初的规模之小，与其以后的影响之大，是时人所始料不及的；它所留下的丰富的学术遗产，是20世纪最重要的文化遗产之一，值得我们珍视、总结和继承。为了纪念国学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231656187353937/20110225231656187353937_.html" target="_blank">清华的人文传统</a></h3>
+              <p class="thnews_jqzy">　　清华的人文传统文摘报  2005-10-30  张岂之&nbsp;&nbsp;&nbsp;&nbsp;按照上个世纪30年代清华大学的规定：教授们在校工作五年，就有一年的学术休假，由学校资助去外国访问进修。著名的散文家朱自清为任清华大学中文系教授，于1931年利用学术休假，在英国伦敦皇家学院和伦敦大学注册旁听。据《朱自清日记》于该年记述，他有两次夜梦清华未能继......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2005.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231652578501557/20110225231652578501557_.html" target="_blank">为什么要纪念清华国学研究院？</a></h3>
+              <p class="thnews_jqzy">　　为什么要纪念清华国学研究院？科学网  2005-10-17  张岂之&nbsp;&nbsp;&nbsp;&nbsp;国学研究院的毕业生不授学位，导师不用学位去引导研究生，而是着力培养他们的学术研究兴趣，使他们能掌握独立研究的能力。&nbsp;&nbsp;&nbsp;&nbsp;1925年是从清华学堂到清华大学改制的一年，除留美预备班外，成立了大学部和国学研究......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231648562604930/20110225231648562604930_.html" target="_blank">清华国学研究院与大学人文精神</a></h3>
+              <p class="thnews_jqzy">　　清华国学研究院与大学人文精神科学时报 2005-09-26&nbsp;&nbsp;&nbsp;&nbsp;北京大学中文系温儒敏教授在发言中说："国学是应该认真地研究，应该有后继人才来研究。但是尤其需要对国学研究有批判的眼光，因为时代不一样，社会的要求不一样。"&nbsp;&nbsp;&nbsp;&nbsp;80年前的9月14日，清华国学研究院成立。国学研究院......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231645671450588/20110225231645671450588_.html" target="_blank">弘扬国学:清华纪念国学院成立80周年</a></h3>
+              <p class="thnews_jqzy">　　弘扬国学 清华大学纪念国学研究院成立80周年新华网  2005-09-16  顾淑霞、李江涛&nbsp;&nbsp;&nbsp;&nbsp;新华网北京９月１６日电（顾淑霞、李江涛）以“清华国学研究院与大学人文精神”为主题的纪念清华国学研究成立８０周年大会，日前在清华大学举行。来自海内外的知名专家与学者、各高校和科研机构的师生代表４００多人汇聚一堂，共同分享了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231645062688476/20110225231645062688476_.html" target="_blank">清华大学纪念国学研究院建立八十周年</a></h3>
+              <p class="thnews_jqzy">　　清华大学纪念国学研究院建立八十周年中新社  2005-09-15  周兆军&nbsp;&nbsp;&nbsp;&nbsp;中新社北京九月十四日电(记者周兆军)八十年前，清华大学开办国学研究院，汇聚了“四大导师”王国维、梁启超、陈寅恪、赵元任，研究“中国固有之文化”，培养“以著述为毕生事业”的国学人才。今天，清华大学邀请国内学术界知名人士，纪念国学研究院建立八......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231645156360278/20110225231645156360278_.html" target="_blank">我校纪念清华国学研究院成立80周年</a></h3>
+              <p class="thnews_jqzy">　　我校举行纪念清华国学研究院成立80周年大会　【新闻中心讯 记者 顾淑霞　摄影　郭海军】1925年9月14日，清华国学研究院正式成立。学术薪火相传，清华国学研究院虽然只存在了四年左右，但国学研究院开一时之风气的辉煌及其精神却惠及并继续惠及着中国的学术界。2005年的9月14日上午，以“清华国学研究院与大学人文精神”为主题的纪念清华国学研究成立80周年大会在我......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231606375727775/20110225231606375727775_.html" target="_blank">我校举行清华国学研究院成立八十周年学术讨...</a></h3>
+              <p class="thnews_jqzy">　　追忆清华国学研究院 探讨当今中国国学的发展我校举行清华国学研究院成立八十周年学术讨论会【新闻中心讯 记者 周襄楠 通讯员 王宪明】“纪念清华国学研究院最好的办法是继承他的事业。中国人有责任弘扬国学，使全世界人民都接受他。”4月22日,在我校创新大厦举行的“清华国学研究院与21世纪中国学术——纪念清华国学研究院成立八十周年学术讨论会”上，94岁高龄的著名历......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231220531161745/20110225231220531161745_.html" target="_blank">（清华90年）清华“国学四大导师”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document（清华90年）清华“国学四大导师”(2001.04.28 新华网)新华网北京4月28日电 梁启超、陈寅恪、王国维、赵元任四大国学导师都是我国近代最杰出的学者，清华大学老校长梅贻琦曾说：“所谓大学者，非谓有大楼之谓也，有大师之谓也。”   当年，清华国学研究院正是由于拥有他们，创办两年后，其声望就超过了早于它创立的同类学校......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

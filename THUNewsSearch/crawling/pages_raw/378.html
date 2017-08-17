@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清华同方规范连锁体系</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231216390328063&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9664/index.html' class='navigation_style'>社会服务</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">清华同方规范连锁体系</h3><p align="center">（中国经济时报 2001年4月23日） </p><p>记者许晖4月22日北京报道　清华同方连锁销售公司以建设“百家连锁精品店”作为今年的目标。工作重点将由上一年的渠道拓展转为市场规范。这是记者在今天召开的“同方E战略，塑造新连锁”市场培训会上了解到的。 </p><p>作为国内最早提出高科技产品连锁经营的公司之一，到2000年底，清华同方连锁销售的签约合作伙伴已达到600余家，遍布全国各地，在不到一年的时间内营业额超过5亿元。 </p><p>同方连锁以“同方E战略”作为发展的主线，教育培训、家庭、市政房地产作为主市场，明确IT、数字家庭和教育电子三条主脉，运用电子、数字信息化等技术手段来对产品研发、制造、市场推广进行整合，以创新、灵活的方式掌握拥有的核心技术，发展产业。在同方品牌扩张基础上，为了更深入地规范与支持合作伙伴，开展了“百家连锁精品店”计划，严格遵循“六个统一”原则，进行标准的规范管理，为连锁的下一步发展打下基础。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月23日 11:53:06　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231224578575770/20110225231224578575770_.html" target="_blank">清华同方赠广西460多所高中教学光盘</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方赠广西460多所高中教学光盘2001年04月29日16:21 广西日报本报南宁4月26日讯 清华同方广西办事处4月26—27日向我区460多所普通高中赠送《中小学教师信息技术培训(初级)教程》(光盘版)以及由北京同方文化发展有限公司出品的《清华故事》VCD活动。《中小学教师信息技术培训(初级)教程》(光盘版)......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231219484673783/20110225231219484673783_.html" target="_blank">清华同方为教育信息化助力向全国两万所中学...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方为教育信息化助力向全国两万所中学赠送价值数百万元的教育产品刘一(2001.04.27 经济日报)本报讯　（记者刘一）正值清华大学90周年校庆之际，清华同方昨天宣布，自4月26日至5月26日期间，向全国近2万所普通高等中学，赠送总价值达300万元的教育类产品，为我国基础教育信息化助力，向母校90华诞献礼。来自全......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231219000270145/20110225231219000270145_.html" target="_blank">清华同方捐电脑下乡</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方捐电脑下乡龙新民出席仪式并讲话（北京日报 2001年4月27日）　 本报讯（记者黄秀丽）昨天，清华同方·文明工程电脑教室在密云县冯家峪学校、太师庄中学同时建成，市委副书记、文明工程捐电脑下乡活动组委会主任龙新民出席了建成仪式，并就贫困山区学校如何开展信息化教育等课题进行了调研。冯家峪学校和太师庄中学地处密云水库北......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231218468209366/20110225231218468209366_.html" target="_blank">清华同方高成长之后的“卓越”追求</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方高成长之后的“卓越”追求（2001年04月26日 全景网络证券时报）作为我国高等教育、科学研究和高新技术开发的重要基地，刚刚迎来90周年华诞的清华大学当之无愧；作为高科技股的领头羊，清华同方的地位至今仍无可置疑。是什么在长达近四年的时间里为清华同方“奠定”这样的地位？是什么让市场的投资者获得这样坚定的“认同感......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231218265615244/20110225231218265615244_.html" target="_blank">向全国两万所中学赠送价值数百万元教育产品</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方为教育信息化助力向全国两万所中学赠送价值数百万元教育产品我校90周年校庆之际，清华同方4月26日宣布，将在4月26日至5月26日期间，向全国近2万所普通高等中学赠送总价值达300万元的教育类产品，作为我国基础教育信息化助力的实际举措，向母校90华诞献礼。应我校招生办公室邀请来到北京参加“21世纪中学校长论坛”的全......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231216359874570/20110225231216359874570_.html" target="_blank">清华同方推出数字监控系统</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方推出数字监控系统（中国经济时报 2001年4月17日）记者许晖 邓娟北京报道 日前，清华同方推出新产品——数字监控系统。该系统是同方控制经过多年数字视频方面的技术储备，结合当今最新软硬件技术，推出的有别于传统监控系统的新一代数字化监控系统。该系统主要由摄像、传输、控制、显示、记录五大部分组成，具有监视、录像录......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231212140182927/20110225231212140182927_.html" target="_blank">文化简讯</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document文化简讯（北京晚报 2001年4月5日）清华同方最新推出《2001新高考重难点名师辅导》四种版本，其中由北京四中的特级教师顾德希、北京师范大学实验中学的特级教师储瑞年等近九十位著名特级教师进行讲解，4月7日至8日王府井书店五层特邀请清华同方的技术人员进行现场演示。刘艳位于西三环北路的北京国际书店为支持北京申奥，满足广......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231211859410263/20110225231211859410263_.html" target="_blank">清华同方：集团化战略初显端倪</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方：集团化战略初显端倪(2001.04.04 新华网) 新华网4月4日电 清华同方（６００１００）2000年度的经营业绩仍然保持了前3年的快速增长势头。报告期内实现销售收入33.18亿元，净利润2.35亿元，分别比99年提高了98.92%和46.71%，经营业绩连续四年实现销售收入保持100%左右和净利润保持40......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231211671980981/20110225231211671980981_.html" target="_blank">如何让“数字”落地</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document如何让“数字”落地(2001.04.04 新华网)新华网消息 据光明日报4月4日报道， 当住宅被非法侵入时，智能防范系统不仅能发出警报，还能通过电话通知主人；下班之前，一个电话就可以把家里的空调和热水器打开，到家后就可以在舒适的温度下享受热水浴；用一张IC卡就可以完成各种物业收费，使住户免受工作人员的干扰……这些并不是虚......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231210625479256/20110225231210625479256_.html" target="_blank">清华同方架起广电信息网络“烽火台”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方架起广电信息网络“烽火台”（2001年03月26日 新浪科技）在日前开幕的中国国际广播电视信息网络展览会中，以清华同方超强系列机架式服务器为硬件平台的同方“烽火台”项目作为清华同方高技术的代表参加在北京中国国际展览中心举行的展示，此举再次体现了清华同方在服务器产品领域雄厚的技术和研发实力。据悉，同方“烽火台”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231210656999751/20110225231210656999751_.html" target="_blank">清华同方西北区召开2001年渠道会议</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方西北区召开2001年渠道会议（2001年03月26日 新浪科技）近日，清华同方电脑西北大区2001年度经销商大会在西安东方大酒店隆重举行，本次年会是历届大会规模最大的一次，整个会议大厅座无虚席，来自西北五省200多家同方代理商集聚于此，共勉过去、同畅未来。经过一年来的努力，同方电脑在西北地区销量直线上升，品牌知名......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231210500332937/20110225231210500332937_.html" target="_blank">简讯：清华同方光盘刻录机跌破千元</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document简讯：清华同方光盘刻录机跌破千元（2001.03.23 人民日报 第六版）本报讯 清华同方光盘公司近日开展“科技服务社会，光盘进入家庭”大型活动，其旗下的CDD8432N刻录机以九百九十九元的价位一举突破个人用户的购买心理价位。据了解，CD－RW可擦写刻录机以其良好的兼容性已逐渐取代CD－ROM成为计算机的标准配置，市场......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231210421641560/20110225231210421641560_.html" target="_blank">清华同方启动“现代教育资源全国共享行动计...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方启动“现代教育资源全国共享行动计划”（2001年03月23日 网易新闻）清华同方教育技术研究院率先与全国千名名师共同发起"2001高考名师资源全国共享行动"3月22日，清华同方教育技术研究院、清华同方光盘股份有限公司和中国学术期刊（光盘版）电子杂志社在北京友谊宾馆举行了"现代教育资源全国共享行动计划"启动仪式......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231209234969228/20110225231209234969228_.html" target="_blank">清华同方刻录机千元上市</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方刻录机千元上市（中国教育报 2001年3月18日）本报讯　清华同方光盘公司从3月12号起展开“科技服务社会，光盘进入家庭”大型活动，其旗下的CDD8432N刻录机以999元的价位一举突破个人用户的购买心理价位。这款“智能学习型刻录机”支持8倍速刻录，4倍速擦写，32倍速读取，并具有很强的兼容性。(董晓)</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231209015837854/20110225231209015837854_.html" target="_blank">全国高校毕业生就业网上供需洽谈会将在同方...</a></h3>
+              <p class="thnews_jqzy">　　网上就业——高校毕业生就业的新途径足不出户就能找到好工作全国高校毕业生就业网上供需洽谈会将在同方举行【新闻中心3月15日讯】不管是毕业生还是用人单位，足不出户通过一台电脑，就可以参加“供需见面、双向选择”洽谈会。由教育部高校学生司主办、清华同方股份有限公司承办并开发的中国大学生网的子网全国高校毕业生就业网（http://www.gradnet.edu.c......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231208734416073/20110225231208734416073_.html" target="_blank">高考名师资源共享</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document高考名师资源共享（北京青年报 2001年3月12日）近日，记者在清华同方了解到，清华同方光盘股份有限公司、清华同方教育技 术研究院、中国学术期刊（光盘版）电子杂志社、清华同方网络教育事业部、清华   同方电子商务事业部等拥有教育科研和教育教学资源、知识信息资源、网络教育平 台、网络安全与电子商务技术等各方面优势的产业进行......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231208718944949/20110225231208718944949_.html" target="_blank">2001年高考名师资源全国共享行动开始实施</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document2001年高考名师资源全国共享行动开始实施(2001.03.11 新华网)新华网北京３月１１日电 为适应有关部门对２００１年高考能力与素质考核目标的调整，帮助考生应对新的变化，清华同方教育技术研究院和清华同方光盘股份有限公司近日宣布开始实施“２００１年高考名师资源全国共享行动”。这一行动的主要内容是，组织北京、上海等......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231208687586854/20110225231208687586854_.html" target="_blank">清华同方推出2001年高考资源全国共享行动</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方推出2001年高考资源全国共享行动（2001/03/11 中新社网站）中新网北京三月十日消息：清华同方教育技术研究院和清华同方光盘股份有限公司近日正式推出“二00一年高考名师资源共享活动”。据悉，教育部已对今年高考的能力与素质考核目标进行了重大调整，以有助于高校选拨人才、促进素质教育和高校办学自主权的扩大。清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231208421705993/20110225231208421705993_.html" target="_blank">清华同方探索108亮相863成果展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方探索108亮相863成果展（2001/03/06 新浪科技）在2月26日至3月6日举办的国家863计划十五周年科技成果展中，清华同方探索108集群计算机作为北京市863计划高性能计算机技术的代表参加了在北京展览馆举行的展示，再次体现了清华同方在高端计算机产业领域雄厚的技术及生产实力。15年前，为了迎接全球新技......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

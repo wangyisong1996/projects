@@ -1,0 +1,510 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清华精神讨论会之“紫荆花开忆峥嵘”</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225626968239936&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9654/index.html' class='navigation_style'>校园写意</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>清华精神讨论会之“紫荆花开忆峥嵘”实录</TITLE></HEAD><BODY bgcolor="#FFFFFF"><FONT FACE="宋体" LANG="ZH-CN" SIZE=5><P ALIGN="CENTER">清华精神讨论会之“紫荆花开忆峥嵘”</P></FONT><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN">记者：屠凯</font> 4<FONT FACE="宋体" LANG="ZH-CN">月</FONT>5<FONT FACE="宋体" LANG="ZH-CN">日下午，全校的研究生在我校三教的</FONT>20<FONT FACE="宋体" LANG="ZH-CN">余间教室里进行了关于“清华精神”的讨论，其中核研院的</FONT>40<FONT FACE="宋体" LANG="ZH-CN">余位研究生举行了题为“紫荆花开忆峥嵘”的讨论会。在他们印制的宣传册上有这样一段话：“今天我们将有机会与话剧队主创人员交流对清华精神的理解；有幸聆听‘</FONT>200<FONT FACE="宋体" LANG="ZH-CN">号’的建设者谈那时、那年……”，正是这简单的语言吸引了核研院的同学，也吸引了记者。</font></P><FONT FACE="宋体" LANG="ZH-CN"><P ALIGN="JUSTIFY">我校学生艺术团话剧队日前在大礼堂演出了大型自创话剧《紫荆花开》，讲述了五六十年代一群热血沸腾的青年人为了新中国的核工业不断奋斗的故事。那时的青年人经历了创业之初的“一穷二白”，经历了三年困难时期、“文化大革命”，最终取得了事业的成功。大戏演出的时候，现场许多同学流下了热泪，演出结束之后，掌声经久不息。</P><P ALIGN="JUSTIFY">一段时间过去了，同学们依然对于《紫荆花开》有着不曾减弱的热爱，尤其是核研院的同学，因为专业的缘故，他们邀请来本院的前辈，也是《紫荆花开》中演员的人物原型，并请来话剧队的同学，一起来聊聊当年的故事。</P></FONT><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN">讨论会邀请到中国工程院朱永（贝睿）院士及核研院的部分教师。前辈们谈起当年的情况说，当年搞实验跟现在有很大的不同了，十次实验有九次成功而只有一次不成功，大家就要好好检查研究，把问题找出来；现在大家大概成功率</font>50<FONT FACE="宋体" LANG="ZH-CN">％到</FONT>60<FONT FACE="宋体" LANG="ZH-CN">％就可以了。当年研究人员亲手打磨不锈钢，非常辛苦，哪怕能省下一分钱都要做，哪能雇什么临时工呢。科学工作者努力工作，不求名利。有位老先生讲，“国家强盛了，自己自然就好了”。</font></P><FONT FACE="宋体" LANG="ZH-CN"><P ALIGN="JUSTIFY">有同学问到政治工作和学术进步的关系，老师们谈到，当时政治工作确实比较重要，有很多保密专业，那时候只知道国家爆炸了第一颗原子弹，还是从外电报道中知道的，原子弹要分为钚原子弹和铀原子弹。同学们可能以为政治工作会影响学术，这不对了，我们搞科研都是有目的的，党的十一届三中全会提出工作重心放到经济工作上，我们学校的重心就是科研教学，政治工作首先要促进大家搞科研的积极性，两者要相互促进。</P><P ALIGN="JUSTIFY">老前辈们就“清华精神”谈到，清华的校训是“自强不息，厚德载物”，这两句话出自《易经》，实际上就是中国传统文化中最为精华的部分。“自强不息”讲天体运动不停，清华学生也要不断学习，努力进取，不但自己要强，国家也要强，清华大学从来不是象牙塔，清华和中国历史、中国实际一直是紧密结合的。“厚德载物”讲大地是非常厚重的，清华学生要有大地一样宽广的胸怀。当年前辈们去二机部，和对方好像一家人一样，就是因为清华学生的品德好。“厚德载物”还要求踏实勤奋的精神，要老实，不要怕吃亏。老先生讲，清华学生要不服输，本来外国人是看不起我们的，我们工作好，人家才尊重我们，今天法国同行说要照我们的方法做，美国的不行，是因为我们的成果确实好。</P><P ALIGN="JUSTIFY">有同学讲到时代发展了，情况与以前不太一样了。前辈们说，一来要尊重大家多样的选择，没有代沟社会就不会进步了，二来我们谈论的热爱国家努力工作的精神是一贯的，知识分子在社会上的地位越来越高，作用越来越重要，知识分子也可以是商业人才，也可以担任国家领导人，知识越高作用越大。谈到《紫荆花开》的表演，同学也发表了自己的见解，其中讲到二机部领导许雪峰（杜凡丁饰）的形象有些像周总理，讲到方逸轩（常羽饰）表演非常出色，其他人物如文中（郑晓川饰）、庆瑞（徐毅斐饰）都给人留下了深刻的印象。常羽说，本戏之所以能够有这样大的成功，主要不在于表演如何，而是前辈的人格魅力感染了大家。</P><P ALIGN="JUSTIFY">最后，在讲到清华同学如何选择个人道路的时候，前辈的建议是，首先要看准方向，并要始终想到自力更生。他们说，当年同研究方向的人很多，但是有些人采用美国的技术，没有考虑是否过关，结果美国自己就放弃了，他们的研究也就无果而终，其次，机遇要好好把握，灵感要注意捕捉，要把握机遇就有看准国家的需要，而不是什么商业浪潮，而要捕捉灵感就要有扎实的基础知识，就如同王国维先生关于学习境界的论述一般，到时自然“那人原在灯火阑珊处”了。</P></FONT></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月05日 09:54:58　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150826135335925230714/20150826135335925230714_.html" target="_blank">今夕对比：清华精神的传承</a></h3>
+              <p>　　西南联大时期，艰苦的办学条件让师生们磨练了坚强的意志力。即使校舍简陋，设备不足，环境恶劣，但是西南联大出现了大量的研究成果，培养了一大批优秀人才。汪曾祺认为西南联大是“空前绝后”的大学， 杨振宁曾说西南联大是绝对一流的大学。    　　西南联大的师生中有一大批是清华大学的，作为一名清华大学的学生，这次重走西南联大的道路感触是有不一样的。只要一想到我的老校友们正是在七十多年前走过这段路程，自然就会有一种骄傲，更有一种传承的责任。联大精神让清华人代代相传。随着国富民强，西南联大已经无法复制，但有些东西却永久地留下了。对比西南联大时期的衣食住行，现在清华园中的衣食住行又是如何呢？</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150331134054607375298/20150331134054607375298_.html" target="_blank">访清华大学自动化系1990级校友刘佳晨</a></h3>
+              <p>时下，微信已经成为流行的通讯工具，对于刘佳晨学长也不例外。从发出邀请到最终预约采访，整个流程都以简洁的线上方式完成。从陌生到面对面交谈，我们从几个细节捕捉到了刘佳晨学长对母校母系的深厚感情：当我们向学长发送好友请求时，“清华系友”的署名很快就通过了认证；收到我们的访谈邀请，学长不仅欣然接受，而且认真细致地阅读了访谈文案。毕业多年却愈加浓厚的清华情结，就这样在不经意间流露了出来。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140814151543546594047/20140814151543546594047_.html" target="_blank">胡显章：“自强不息 厚德载物”凝聚清华精神</a></h3>
+              <p>“自强不息，厚德载物”的校训是清华精神的集中体现，是清华精神文化的支柱与灵魂。哲学家张岱年先生认为清华校训的内涵高度概括了中华文化的基本精神，在其自传《通往爱智之门》中指出：“‘自强不息’就是永远努力向前，绝不停止，这句话表现了中华民族奋斗拼搏的精神。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110520103804297701735/20110520103804297701735_.html" target="_blank">谭浩强做客新人文讲座谈清华精神与成功之路</a></h3>
+              <p class="thnews_jqzy">　　谭浩强做客新人文讲座谈清华精神与成功之路清华新闻网5月20日电（学生通讯员高焓） 5月19日，我国计算机普及和高校计算机基础教育的开拓者之一谭浩强教授做客清华新人文讲座，在六教作了题为&ldquo;清华精神使我走上成功之路&rdquo;的精彩演讲，与近350名同学分享了他对清华精神的理解和自己的奋斗经历。&ldquo;什么是清华精神？&rdquo;谭......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232552000873350/20110225232552000873350_.html" target="_blank">钱锡康做客新人文讲座畅谈清华校友和清华精神</a></h3>
+              <p class="thnews_jqzy">　　钱锡康做客新人文讲座畅谈清华校友及清华精神【新闻中心讯 学生通讯员 孙洁琼】11月4日下午，400多名同学齐聚六教6C300，聆听校友总会理事钱锡康题为“清华校友——清华精神的践行者”的讲座。钱锡康以丰富的内容、翔实的事例，为同学们全面展示了清华校友们的成长历程和他们诠释的清华精神。钱锡康老师首先从“自强不息、厚德载物”的校训讲起。他给同学们提出了一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232540078782256/20110225232540078782256_.html" target="_blank">胡显章做客新人文讲座畅谈清华精神</a></h3>
+              <p class="thnews_jqzy">　　胡显章做客新人文讲座畅谈清华精神【新闻中心讯 通讯员 张芸芸】9月25日下午，原清华大学党委副书记、人文社会科学学院院长、清华大学国家大学生文化素质教育基地主任胡显章教授在六教为400余名清华师生作了题为“谈清华精神”的精彩讲座。国家大学生文化素质教育基地副主任曹莉教授主持了本场讲座。胡教授从诠释哲学意义上的“精神”入题，引出对“清华精神”的思考。由......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232446203460863/20110225232446203460863_.html" target="_blank">王振民：清华精神的法学传承</a></h3>
+              <p class="thnews_jqzy">　　清华精神的法学传承——写在清华大学法学院复建15周年之际王振民翻开清华法学院的历史，就会发现它其实是一部与国家民族同呼吸、共命运的历史。　&nbsp;&nbsp;&nbsp; 法学教育绝非仅仅是职业教育，不是一种浅层次的技能教育，而应该是一种理想教育，有其明确的价值取向和价值追求。这包括法律人的道德律、人文关怀、使命感三个层次。编者按　法学院教育是法......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231820906802096/20110225231820906802096_.html" target="_blank">清华精神，我们的宝贵财富</a></h3>
+              <p class="thnews_jqzy">　　清华精神，我们的宝贵财富《中国教育报》2006年11月8日第4版 胡显章抗战时期清华大学领导人，左起施嘉炀、潘光旦、陈岱孙、梅贻琦、吴有训、冯友兰、叶企孙。什么是大学精神？怎样理解它是一所学校最核心、最宝贵的财富?怎样弘扬与发展大学精神？所谓大学精神，应该是一所大学在其成长过程中长期积淀而成的师生员工共同的理想追求、文化传统和行为准则。大学精......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225340062104885/20110225225340062104885_.html" target="_blank">《紫荆花开》感动清华师生</a></h3>
+              <p class="thnews_jqzy">　　《紫荆花开》感动清华师生　【新闻中心讯 通讯员 刘洋 黄文韵 摄影 郭海军】日前，由清华大学学生艺术团话剧队自编自演、表现“两弹一星”精神的五幕话剧《紫荆花开》在校内进行了为期三天的第三次公演。演出场场爆满，使清华的老、中、青不同年龄段的师生都深受感动。　剧照　&nbsp;&nbsp;&nbsp; 大型话剧《紫荆花开》首演于2001年清华大学90周年校庆之......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231752953202723/20110225231752953202723_.html" target="_blank">陈希为研究生干部作“清华传统与清华精神”...</a></h3>
+              <p class="thnews_jqzy">　　陈希为研究生干部作“清华传统与清华精神”专题报告【新闻中心讯 研通社记者 龚维幂】6月23日下午的美术学院报告厅座无虚席，全校300多名研究生干部在这里倾听了校党委书记陈希老师所作的“清华传统与清华精神”专题报告。在两个多小时的时间里，陈希老师结合清华建校和办学的历史，从清华用庚子赔款办学从而打下“明耻”的烙印，到学校发展历程中不断根据国家重大战略需......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225621843947634/20110225225621843947634_.html" target="_blank">温诗铸院士畅谈人生财富——我与大师对话</a></h3>
+              <p class="thnews_jqzy">　　无标题文档温诗铸院士畅谈人生财富——我与大师对话——清华学子财富论坛之“我的清华精神”第三讲6月8日，初夏的周末，校园中多了一分静谧，一分闲适。尽管已近期末，尽管今天天气一直阴沉沉的，仍然有三百多名同学被财富论坛的精品讲演吸引到理学院的草坪广场，分享精仪系温诗铸院士的人生财富。 温诗铸老师首先以简短而颇富魅力的语言讲述了他为科研事业奋斗的一生，讲述他......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225622203109102/20110225225622203109102_.html" target="_blank">普希金与五十年代的清华 徐葆耕教授讲“我...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档普希金与五十年代的清华徐葆耕教授讲“我的清华精神”5月30日，轻风习习的傍晚，绿草茵茵的理学院下沉广场上空回荡着《莫斯科郊外的晚上》的优美旋律，同学们三五成群地散坐在环形阶梯上，等待着与徐葆耕教授一起分享五十年代清华的精神财富。这是清华学子财富论坛之“我的清华精神”第二场。党委研究生工作部、人文学院有关老师也一同来到现场参加活动。“我只想翩......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225622546202857/20110225225622546202857_.html" target="_blank">爱国、求实、追求完美、团队合作</a></h3>
+              <p class="thnews_jqzy">　　无标题文档爱国、求实、追求完美、团队合作——清华学子财富论坛之“我的清华精神” 5月22日上午，虽然“非典”的阴影尚未消散，理学院下沉广场却是一派热闹景象，同学们不顾烈日炎炎，纷纷来到这里，兴致勃勃地与胡显章教授共同探讨清华精神的独特内涵，以及清华学子应该以怎样的精神和行动来面对这个特殊时期。这是校研究生会“清华学子财富论坛”举办的首场“我的清华精神”活......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355609120397/20110225225355609120397_.html" target="_blank">世纪清华：百年不变 “清华精神”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document世纪清华：百年不变 “清华精神”（2001年4月21日 中国新闻网）中新社北京四月二十日电题：百年不变 “清华精神”中新社记者王锦娜同为著名学府，清华与北大有着各自不同的“大学精神”。由于曲折艰难的历史和遭遇，九十年来，清华形成了一种顽强的亲和力和奋斗力，即便是两岸相隔的清华，其校友也都具有一种共同的特征，这就是......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225356187736301/20110225225356187736301_.html" target="_blank">清华精神讨论会之“紫荆花开忆峥嵘”</a></h3>
+              <p class="thnews_jqzy">　　清华精神讨论会之“紫荆花开忆峥嵘”实录清华精神讨论会之“紫荆花开忆峥嵘”记者：屠凯4月5日下午，全校的研究生在我校三教的20余间教室里进行了关于“清华精神”的讨论，其中核研院的40余位研究生举行了题为“紫荆花开忆峥嵘”的讨论会。在他们印制的宣传册上有这样一段话：“今天我们将有机会与话剧队主创人员交流对清华精神的理解；有幸聆听‘200号’的建设者谈那时、那......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225627140220758/20110225225627140220758_.html" target="_blank">老领导与研究生共话“清华精神”</a></h3>
+              <p class="thnews_jqzy">　　我校举行“清华精神”座谈会老领导与研究生共话“清华精神”【新闻中心3月12日讯】3月8日晚，研究生院邀请老领导李传信、方惠坚、张思敬和黄圣伦与学生一起交流座谈，帮助研究生了解学校90年的发展历程，了解清华精神和清华文化，共话清华精神。研究生会代表首先发言。他认为，创新、求真、务实和奉献八个字体现了清华精神。他说，我校经过90年的发展，取得了今天这样高......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

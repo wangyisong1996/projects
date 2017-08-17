@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>企业孵化器有多大发展空间</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231212125793120&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9664/index.html' class='navigation_style'>社会服务</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">企业孵化器有多大发展空间</h3><p align="center">（光明日报 2001年4月6日）</p><p> 　　　企业孵化器是一种新型的社会经济组织，通过为初创小企业提 供基本的商务服务、中介增值服务和资本运作服务等，降低小企业的 创业风险和创业成本，提高企业的成功率和成活率，帮助企业迅速形   成规模进入市场。</p><p> 　　自1987年我国第一个企业孵化器——武汉东湖创业者中心成立后， 企业孵化器在我国得到了快速发展。据科技部火炬中心统计，到 1998年底，全国共有科技企业孵化器（创业中心）110家。其中的77家   创业中心累积毕业1316家企业，其中年总收入超过亿元的企业有30多 家。据专家介绍，目前我国的孵化器有6种类型，其中最具代表性、最 有特色的是学生创业园和国企创办的孵化器。</p><p> 　　 学生创业园：学生老板不是梦</p><p> 　　近年来，学生创业被吵得沸沸扬扬，一批在校学生跨出校门，投 身创新与创业的洪流。俗话说“秀才造反，十年不成”。仅仅有创业 的热情和知识资本、而没有良好的创业外部环境、市场条件，学生创   业很难成功。</p><p> 　　在有关方面的支持下，“学生创业园”应运而生。它通过提供研 发经营场地、各种办公设施和政策、融资、法律、市场推广等方面的 支持，使学生创业风险大大降低。一般来说，一个小企业从申请进入   创业园到开始正常运转只需要10天左右，使小企业的发展少走了不少 弯路。同时，创业园中的众多企业能够互相分享经验和信息，甚至结 成业务伙伴。所以，学生创业园为技术驱动型的小企业成长为成熟的、   市场驱动型的企业，大大提高了成功的机会。目前我国有40多家学生 创业园，清华创业园可以作为其中的代表。</p><p> 　　清华创业园于1999年9月正式开园，目前有在孵企业35家，注册资 金7000多万。据介绍，入园创业的大部分是清华大学校友，技术来源 有自主研发权的企业占1／2。在创业园中成长起来的部分企业经营得   相当成功，其中北京世纪顶点软件有限公司去年销售收入800万元，今 年上半年定单已达1500万元。</p><p> 　　清华大学罗建北教授指出，学生创业园有利于我国有自主知识产 权的高科技产品的开发，这对我国的高科技产业的发展、特别是入世 以后参与国际竞争有重要的意义。同时，创业园中容忍失败、鼓励创   新的创业氛围，还能够造就一批富有开拓精神、既懂技术又懂管理的 新型高级人才。</p><p> 　　 国有企业创办孵化器：国企改革的新途径</p><p> 　　1999年8月，在北京市政府和有关方面的支持下，北京制造业高新 技术产业孵化基地在北内集团总公司正式启动。这是全国首家以国有 大企业为依托的产业孵化基地。孵化基地以创新的科技企业孵化器为   运作模式，目前有在孵企业10家。去年在孵的7家企业创造了工业产值 1700多万，解决了北内集团200多个下岗工人的就业问题。北京太富力 机械传动有限公司是孵化基地中经营比较成功的企业，其三环减速机   项目有广泛的应用前景和市场空间。目前，该企业的年产值已达到一 千多万元。</p><p> 　　如果说学生创业园是应运而生，国企创办孵化器则是被逼出来的。 目前，我国许多国企的厂房、设备大量闲置，大批熟练技术工人下岗。 而另一方面，我国每年有大批小企业诞生，这些小企业势单力薄，完   全可以利用被闲置的国企无效资产创业。北京创业孵育协会秘书长颜 振军博士说，国有企业创建孵化器，是一种以科技创新带动企业发展 的新思路。一方面，孵化器使国企多年闲置的厂房、设备、人力资源   得到充分利用；另一方面国企利用直接或间接、一项或多项参股入孵 企业，顺利进入高新技术产业。这为国企实现产业结构调整提供了新 途径。同时，孵化基地本身及在孵的中小科技企业的灵活机制，为国   企业机制改革也提供了可借鉴的直接经验。</p><p> 　　一位业内人士说，孵化器并不能解决国企中所有的问题，但它无 疑是一个有益的探索，是一个创新。一方面它为民营中小企业的发展 提供了空间，另一方面也有利于国企自身的革新，能够达到双向盘活   的效果。</p><p> 　　 企业孵化器不是只为他人做嫁衣</p><p> 　　企业孵化器不仅为市场培育了一批有活力的中小企业，它本身也 是一种赢利工具。20世纪50年代企业孵化器最先在美国出现。经过几 十年的发展，企业孵化器在西方已经成为一种也成熟的产业，达到了   较高的发展水平。</p><p> 　　颜振军博士介绍说，总体上说，我国的企业孵化器发展时间不长， 仍处于初级发展阶段。大多数孵化基地仍是以政府投入和国家优惠政 策为依托，真正商业意义上的企业孵化器仍为数不多。创业中心比较   注重科技成果的转化和对小企业的培育，讲求社会效益，不强调直接 的经济效益。但企业孵化器发展到多元化阶段后，创业中心的自身创 新能力和自我发展能力将大大提高。因此，企业孵化器的发展空间仍   然很大。</p><p> 　　据业内人士介绍，目前我国企业孵化器领域已出现投资主体的多 元化倾向。除了政府、大学和科研机构以外，许多民营企业、外资企 业和国内、国外的专业投资机构，都已经涉足孵化器领域。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月06日 10:26:18　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2012/20120320140447104323385/20120320140447104323385_.html" target="_blank">童之磊：理想之路不停步</a></h3>
+              <p class="thnews_jqzy">　　童之磊：理想之路不停步来源：中国青年报 2012-03-20 黄丹羽微寄语青春成就梦想，创造改变世界！如果要用一个词来形容自己，童之磊选择&ldquo;理想主义&rdquo;。小时候，他向往&ldquo;推动人类进步&rdquo;；创业后，他誓做&ldquo;世界一流企业&rdquo;。如今，他的&ldquo;中文在线&rdquo;作为国内中文电......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225603468686758/20110225225603468686758_.html" target="_blank">清华创业园主任罗建北做客“计算人生”</a></h3>
+              <p class="thnews_jqzy">　　清华创业园主任罗建北做客“计算人生”【新闻中心讯 研通社通讯员 李晓哲】她是清华大学计算机系1964级系友，曾任连续6年任计算机系党委书记。1994年，她走出校园，全力建设清华创业园。如今，她已是清华创业园主任，启迪创业管理有限公司董事长。她就是清华大学计算机系系友罗建北。11月8日晚罗建北做客由计算机系举办的第19期“计算人生”访谈节目，与众多清华学子......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2006.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231713546900750/20110225231713546900750_.html" target="_blank">留学人员纷纷“情归”清华创业园</a></h3>
+              <p class="thnews_jqzy">　　留学人员纷纷“情归”清华创业园科技日报  2006-01-13  苏龙&nbsp;&nbsp;&nbsp;&nbsp;本报讯 3年来，清华留学人员创业园累计吸引来自13个国家的留学人员273人，其中博士111人，硕士139人，学士23人；高科技企业136家，目前在园孵化企业102家,企业员工总数达到1797人。&nbsp;&nbsp;&nbsp;&nbsp;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231312640692388/20110225231312640692388_.html" target="_blank">首家国际企业孵化器在清华成立</a></h3>
+              <p class="thnews_jqzy">　　无标题文档首家国际企业孵化器在清华成立《国际金融报》 (2002年09月23日第二版)首批20多家日本企业将在年底前进驻清华科技园国际企业孵化器（IBI），这是国内首家专门针对国外企业在中国发展的企业孵化器。9月22日，清华科技园国际企业孵化器在清华大学正式挂牌成立。目前，已有SUN、斯伦贝谢、MIST等全球500强企业和北京工业研究院、城市规划......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2002.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231258546857050/20110225231258546857050_.html" target="_blank">梧桐香榭引凤来</a></h3>
+              <p class="thnews_jqzy">　　无标题文档梧桐香榭引凤来科技日报 2002年5月14日本报记者 晏 燕 实习生 张显峰尽管微软、新浪事件已经平息，但关于东部 C BD商圈与西部中关村商圈的环境之争使得不少企业对投资中关村仍有所犹疑。4月京城，正当花木菁秀，清华创业园却再次迎来了一批诸如   S UN、Schlumberger、M．I．S．T、宝洁等世界500强和世界知名企业。到底是什么......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

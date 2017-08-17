@@ -1,0 +1,1028 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我校图书馆藏焚余古籍的修复工作侧记</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225356296192765&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9648/index.html' class='navigation_style'>头条新闻</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>馆藏焚余古籍的整理修补</TITLE><META NAME="Template" CONTENT="D:\office97\Office\html.dot"></HEAD><BODY LINK="#0000ff" VLINK="#800080" bgcolor="#FFFFFF"><FONT FACE="隶书" LANG="ZH-CN" SIZE=5><P ALIGN="CENTER">“重伤古籍”的新生</P></FONT><FONT FACE="仿宋体,??" LANG="ZH-CN"><P ALIGN="CENTER"><font face="仿宋_GB2312">我校图书馆藏焚余古籍的修复工作侧记</font></P></FONT><FONT FACE="宋体" LANG="ZH-CN"><P ALIGN="JUSTIFY">3月28日下午，记者看到我校图书馆门前正有一箱箱的东西被搬入，眉清目秀的校图书馆科技史暨古文献研究所副研究馆员刘蔷兴奋地告诉记者，这可不是一般的图书，是学校花重金修补的馆藏焚余古籍，它的价值是无法用金钱来计算的。</P><P>我校曾收藏一批价值不菲的线装古籍。抗日战争期间，学校南迁，为了保护好优质馆藏书籍，古籍中的珍善本被挑出随行南下。这批善本共6660种，12764册，其中包括全部宋元版书以及明清刊本中的精善本，是当时馆藏古籍精华，它连同重要设备仪器经汉口、长沙等地舟车辗转，后存放于重庆北碚。1940年6月24日，日本飞机疯狂轰炸北碚，空投的燃烧弹使这批图籍顿时淹没在火海中，校方组织人力抢救，仅于灰烬中获得残卷2000余册，其余10074册珍善本已尽付一炬。这是我校图书馆收藏古籍历史中的一段痛史。 </P><P ALIGN="JUSTIFY">这批历经劫难的古籍在抗战胜利后被运回学校，存放在校图书馆内，由于缺乏资金，一直无法进行修复。图书馆曾于八十年代申请到少量资金，为部分焚余书加装函套，但这种保护措施是远远不够的。这批书经历了火烧，又在抢救时被水浇湿，大多已破损严重，有些甚至支离破碎，烧掉的部分早已焦脆不堪，触手即破；而水湿的部位更是已被虫蛀糟朽，个别书书页已完全粘在一起，形同一个个“书饼子”，要将这样一大批损毁严重的古籍全部修复，需要大量经费和人力，还需要修补者细致耐心及不厌其烦的工作精神，才有可能恢复原有的风貌。学校领导了解了有关情况后，当即指示，这些古籍是清华文化的有机组成部分，是对师生进行爱国主义教育的“活教材”，学校可以拨专款进行修复工作，一定要争取在最短的时间内使这些“重伤员”获得新生。</P><P ALIGN="JUSTIFY">2000年6月，在学校的大力支持下，图书馆科技史暨古文献研究所组成了“焚余古籍修复工作组”，开始了对这批古籍的整理修复工作。当工作人员进入古籍书库着手清点这批古籍时，感慨万千，尘封一个甲子的焚余古籍终于可以重见天日了。</P><P ALIGN="JUSTIFY">修复工作是一项大工程，工组人员首先对这批古籍逐一清点登记，厘清其版本、存佚、残损等情况。为了能够保质保量地完成这项工作，他们不辞辛苦，南下北上，请求国家图书馆、上海图书馆、天津图书馆、辽宁图书馆、北大图书馆和中国书店等目前国内古籍界修补力量较强的单位的支援，以传统工艺开始了修复工作。</P><P ALIGN="JUSTIFY">在那个炎热的夏天，人们避暑还恐来不及，修复者却奋战在散发着霉变的修复室里，为其揭页、去污、去霉、洗净、整补虫蛀痕迹、逐页托裱、装帧成册等，小心翼翼地修补着这些“重伤员”。由于有的古籍霉变严重，使修复者们也受了“轻伤”，手臂、前胸和后背都起了红色的疹子，痒得不行，可没有一个人当“逃兵”。如今，这些“伤残”的古籍三分之二已经被修复完毕，按照古籍修复的行业要求“整旧如旧”，并为其加装了绛红色函套，以喻示这批宝藏曾经六丁之灾的惨痛经历。全部修补工作将在校庆前结束，为我校90年华诞献上一份厚礼。</P><P ALIGN="JUSTIFY">我校斥资修补焚余古籍之举在海内外古籍界产生了一定的反响，被誉为“大手笔”，是一件功德无量的善举。为保存好这些文化遗产，发挥其在教学科研中的学术价值和文物珍藏价值，不惜花重金进行修补，可见我校对传统文化的关注。传统就是历史，历史也是一种经历，经历里必然蕴涵着某种精神，可贵的精神将使事业充满无限生机。我校对传统的关注，实际上也是对清华精神的关注，它必将为清华注入新的精髓，使清华园更加钟灵毓秀。（记者冬梅）</P></FONT></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月28日 12:46:15　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160321155348758824745/20160321155348758824745_.html" target="_blank">清华三亚国际数学论坛·东亚数学典籍研讨会...</a></h3>
+              <p>3月11日至15日，由清华大学丘成桐数学科学中心、清华大学科学技术史暨古文献研究所与中国数学会数学史分会共同举办的东亚数学典籍研讨会（The Mathematical Texts in East Asia Mathematical History Workshop）在清华三亚国际数学论坛召开。本次会议邀请来自国内外16家大专院校、研究机构的30位参会代表，其中包括来自日本、韩国、美国、丹麦、香港等国家或地区的11位学者，共设大会报告28场。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151120114344883717926/20151120114344883717926_.html" target="_blank">校长邱勇到图书馆调研</a></h3>
+              <p>11月17日，校长邱勇一行来到图书馆，就图书馆工作及学校读书活动开展情况与相关负责人交流座谈。认真听取汇报后，邱勇对图书馆建设情况表示肯定，他说，经过多年发展，图书馆在文献资源整合、基础设施建设方面成果显著，随着清华大学建设世界一流大学步伐不断前进，要进一步思考和明确，世界一流大学图书馆的目标定位和发展路径。同时，要将图书馆工作纳入学校整体工作部署，探索图书馆在开展通识教育、推动人文交流，促进文化创新等方面的发展创新举措。邱勇表示，图书馆体现了一个学校的氛围和品味，学校将继续加强对图书馆的支持，推动图书馆各项工作迈上新台阶。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151119101611857486197/20151119101611857486197_.html" target="_blank">清华校友通讯合订本赠送国家图书馆收藏</a></h3>
+              <p>11月17日上午，在国家图书馆原副馆长唐绍明学长的推荐下，《清华校友通讯》主编孙哲到国家图书馆，将《清华校友通讯》（复1期至复71期）、《校友文稿资料选编》（第一辑至19辑）合订本一套共25册、清华校友通讯光盘珍藏版2套赠送国家图书馆收藏。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151103123657521534418/20151103123657521534418_.html" target="_blank">清华读书讲座首讲举行 林炎志畅谈《读书辩...</a></h3>
+              <p>10月29日，由清华大学图书馆主办的“清华读书讲座”在图书馆报告厅正式启动，首讲邀请校友林炎志与清华学子畅谈《读书辩证法》。在讲座中，林炎志从三个角度分析了当下的阅读困境，为学生梳理了读书、专业学习和实践之间的复杂关系。首先，林炎志进行了读物的多与少、缺与溢的辩证分析。他对比了自己中学、大学时期所经历的阅读材料匮乏和当下信息泛滥、阅读方式纷繁的情形，指出年轻学子要净化自己的信息环境，读最优秀的图书。随后，林炎志进行了知识和思维的辩证分析。书本上读到的知识，要在实践生活中转变成思维，才能学以致用。林炎志尤为强调了思维的重要性。以互联网的发展为例，知识是不断地被淘汰的，但思维不会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151020102931201370890/20151020102931201370890_.html" target="_blank">图书馆获首届全国高校图书馆阅读推广案例赛...</a></h3>
+              <p>10月16日，首届全国高校图书馆阅读推广案例大赛全国总决赛在湖北武汉举行，清华大学图书馆“读有故事的人，阅会行走的书——‘学在清华`真人图书馆’交流分享”项目荣获一等奖。大赛于2014年10月启动，今年上半年，全国六个分赛区及港澳台地区组织开展了分赛区的初赛工作，共有456个案例参赛。其中，38个案例进入全国总决赛，118个优秀案例（含单项奖案例）参加决赛现场的海报展示。清华大学图书馆馆长邓景康教授作为教育部高等学校图书馆情报工作指导委员会副主任委员出席了比赛。  张秋现场陈述和答辩。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151009153201779719535/20151009153201779719535_.html" target="_blank">清华专利技术转化医学产品“骼金”进入美国...</a></h3>
+              <p>日，由清华大学专利技术转化实施的矿化胶原人工骨修复产品“骼金”（英文名Bongold, 北京奥精医药科技有限公司）成功获得美国食品和药品管理局（Food and Drug Administration，FDA）市场准入许可（510(k)，许可证号：K141725），从而使该产品具备在美国以及世界其他认可FDA 510(k)的国家和地区进行销售和临床使用的资质。在历经18个月时间的申请、审评和对审查意见的多轮答复后，2015年7月9日，“骼金”（Bongold）人工骨产品获得了FDA 510(k)市场准入许可，被允许在美国市场销售和临床使用。获得美国FDA市场准入许可这一重大突破将促进“骼金”人工骨产品在行业内发挥引领和示范作用，对于提升我国骨科植入物在全球骨科医疗器械产业分工和价值链中的地位产生积极的显著影响。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151008175049647363891/20151008175049647363891_.html" target="_blank">“清华大学图书馆藏稀见方志丛刊”发布</a></h3>
+              <p>　　近日，“清华大学图书馆藏稀见方志丛刊”在京发布。该丛刊共36册，精选清华大学图书馆所藏方志影印出版，是由国家图书馆出版社策划的“著名图书馆藏稀见方志丛刊系列”的第22部成果。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150930120045408230551/20150930120045408230551_.html" target="_blank">数字资源到底应该怎么“存”？</a></h3>
+              <p>　　日前，由国家科技图书文献中心（NSTL）牵头，中科院文献情报中心、中国科技信息研究所、国家图书馆、北京大学图书馆、清华大学图书馆等国内数十个文献信息机构作为发起单位，签署了《数字文献资源长期保存共同声明》（简称《共同声明》）。截至9月29日，签署单位已经增加到79家。    　　目前，数字文献资源已经成为支撑创新驱动发展战略的主流信息资源。所谓数字资源长期保存包含两层含意，一是长期存储，二是长期可获取；而“长期”在这里也有它的特殊含义，即这个资源被社会所需要的时间。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2015/20150918150301840268569/20150918150301840268569_.html" target="_blank">徐贺云做客真人图书馆谈我国周边海洋形势及...</a></h3>
+              <p>9月17日下午，清华大学“学在清华·真人图书馆”活动在人文社科图书馆举行，国家海洋局国际合作司海洋权益处处长徐贺云与清华学子畅谈我国周边海洋形势及发展。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150714141212710293575/20150714141212710293575_.html" target="_blank">《马克思恩格斯全集》历史考证版第一版展出</a></h3>
+              <p>　　清华大学馆藏马克思恩格斯文献展日前开展。罕见的《马克思恩格斯全集》历史考证版第一版等一批马克思恩格斯典籍与读者见面。其中有来自该校“马恩文献特藏文库”的《马克思恩格斯全集》德文版、俄文第二版等；有来自该校马恩文献研究中心的马克思《资本论》第二、三卷原始手稿等；以及来自该校老馆和科恩文库的库存本。三部分形成一个完整的、真正“经典”意义上的马克思主义文库。    ？</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150708153638481375204/20150708153638481375204_.html" target="_blank">清华大学举办清华大学馆藏马克思恩格斯文献展</a></h3>
+              <p>　　清华大学图书馆、清华大学马克思恩格斯文献研究中心、清华大学马克思主义学院日前在清华大学人文社科图书馆举办了清华大学馆藏马克思恩格斯文献展。    　　马克思是人类思想史上的“千年伟人”。由马克思和恩格斯创立的马克思主义学说在其诞生后的170多年时间里，由理论走向实践，极大地推动了无产阶级的解放事业，改变了世界历史的发展进程。然而一百多年来，对马克思主义本身也一直存在不同的理解和解读，不同的人、不同的学派、不同的阶级、不同的政党出于他们各自不同的目的，解读出不同的马克思。对马克思、恩格斯文本的研究是马克思主义理论研究和建设的基础性工作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150630144830797698676/20150630144830797698676_.html" target="_blank">马恩文献展清华开幕</a></h3>
+              <p>　　昨天，清华大学馆藏马克思恩格斯文献展在该校人文社科图书馆开幕，罕见的马克思恩格斯全集历史考证版第一版等一批马克思恩格斯典籍以及颇为珍贵的马克思恩格斯手稿图片和影印件，都在此次文献展上与读者见面。    　　据介绍，此次露面的珍贵藏书中，有《马克思恩格斯全集》德文版、俄文第二版、日文第一版和第二版、英文版，还有德、英、法、俄四个语种的《资本论》共计79种。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150630084223412171221/20150630084223412171221_.html" target="_blank">清华大学馆藏马克思恩格斯文献展举行</a></h3>
+              <p>　　清华大学馆藏马克思恩格斯文献展今日在该校人文社科图书馆开幕。罕见的马克思恩格斯全集历史考证版第一版等一批马克思恩格斯典籍与读者见面。    　　此次露面的珍贵藏书中，有《马克思恩格斯全集》德文版、俄文第二版、日文第一版和第二版、英文版，还有德、英、法、俄四个语种的《资本论》共计79种。1913年倍倍尔和伯恩斯坦编辑出版的4卷本《马克思恩格斯书信集》、1919年考茨基编辑的《剩余价值学说史》、梅林编辑的《马克思、恩格斯和拉萨尔的遗稿》4卷本1902年初版、梁赞诺夫编辑的《马克思恩格斯文库（1852—1862）》2卷本1927年版。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2015/20150526163904142172233/20150526163904142172233_.html" target="_blank">杭州市江干区区委区政府向清华大学图书馆捐...</a></h3>
+              <p>5月24日，杭州市江干区区委区政府向清华大学赠书仪式在清华大学图书馆逸夫馆举行。江干区区委书记盛阅春代表捐赠方致辞，介绍赠书原委，并将图书赠与校图书馆和清华大学公管学院图书馆各一套收藏。清华大学图书馆馆长邓景康发言中感谢了杭州市江干区委区政府的热情捐赠。表示这次捐赠也极大地补充和丰富了图书馆的资源。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150525172948081131756/20150525172948081131756_.html" target="_blank">胡鞍钢做客真人图书馆畅谈读书写书教书</a></h3>
+              <p>5月21日晚七点，“真人图书馆”两周年专场活动在人文社科图书馆举行，此次活动邀请到清华大学国情研究院院长胡鞍钢。胡鞍钢以“我的‘三书’之道——读书、写书、教书”为主题，与到场的“读者”展开了学术问题的讨论与人生阅历的交流。胡鞍钢为中共十八大代表，现任清华大学国情研究院院长，清华大学公共管理学院教授、博士生导师，兼任国家“十一五”、“十二五”、“十三五”规划专家委员会委员、中国经济50人论坛成员等社会职务，共出版著作80余本。  　　活动伊始，主持人介绍了清华大学“真人图书馆”活动。随后，胡鞍钢同大家分享了他的“三书”之道，即读他人之书、写自己之书、教自己之书。“三书”之道互相联系、互相促进。胡鞍钢特别指出，“书”是中国这部天书，“三书”之道具体来说就是他一直以来为国情研究这一开创性事业所进行的知识获取、知识创新、知识传播活动。胡鞍钢从自身经历出发，结合现实国情，深入浅出地阐述了自己的学术人生。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150505103914036699045/20150505103914036699045_.html" target="_blank">丁武将做客“第三届读书在清华主题文化周”...</a></h3>
+              <p>4月28日下午三点，“第三届读书在清华主题文化周——真人图书馆专场”活动在人文社科图书馆举行。国防科工委专家咨询委专家、国防通信学会委员、全国武警专家委专家丁武将博士做客，以“人的生命资产与生命智慧”为题与到场观众零距离交流，分享自己独特的人生经历和生命感悟。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2015.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150213185147793470740/20150213185147793470740_.html" target="_blank">朱文一等在奥巴马总统图书馆竞赛中获建筑大奖</a></h3>
+              <p>日前，芝加哥建筑奖（Chicago Prize）主办方在芝加哥举办的颁奖典礼和获奖作品展览开幕式上，宣布了2014芝加哥建筑奖的两个获奖方案和3个入围作品。清华大学建筑学院朱文一教授及傅隽声、梁迎亚团队提交的“方案O”（Plan O）在竞赛中获得大奖。芝加哥建筑奖（Chicago Prize）由成立于1885年的芝加哥建筑俱乐部和成立于1966年的芝加哥建筑基金会共同举办，每两年一次。2014年芝加哥建筑奖得到了美国建筑师协会芝加哥分会（AIA Chicago）的支持以及SOM事务所的赞助。竞赛题目为奥巴马总统图书馆建筑设计。为探讨这一独特建筑类型的更多可能性，主办方向全球建筑师提出挑战，希望能在芝加哥市中心一处假设地段，对奥巴马总统图书馆进行再思考和再定义。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20141219132044800159968/20141219132044800159968_.html" target="_blank">2014中国最具国际影响力学术期刊发布</a></h3>
+              <p>　　“2014中国最具国际影响力学术期刊暨中国学术期刊国际、国内引证报告”近日发布。该报告由清华大学所属中国学术期刊电子杂志社和清华大学图书馆联合设立的中国学术文献国际评价研究中心研制，是其连续发布的第三个年度报告。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141216142356766585911/20141216142356766585911_.html" target="_blank">冯务中做客真人图书馆漫谈清华文化</a></h3>
+              <p>12月12日晚，“学在清华·真人图书馆”第24期活动在人文社科图书馆未央厅举行。清华大学马克思主义学院副教授、硕士生导师冯务中老师做客清华大学“学在清华？真人图书馆”，与同学们漫谈清华文化。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9665/2014/20141215095429102594270/20141215095429102594270_.html" target="_blank">王守清做客真人图书馆畅谈政府和社会资本合作</a></h3>
+              <p>12月10日晚，清华大学建设管理系教授、博士生导师王守清做客“学在清华·真人图书馆”，与同学们分享关于对PPP的理解和认识，畅谈政府与企业等社会力量的协作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141210171516705499662/20141210171516705499662_.html" target="_blank">谢维和做客真人图书馆畅谈中国教育改革之路</a></h3>
+              <p>12月5日下午，“学在清华·真人图书馆”第18期活动举行。清华大学副校长谢维和教授做客“真人图书馆”，与同学们探讨中国教育改革的现状和未来的发展方向。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141202134539962258070/20141202134539962258070_.html" target="_blank">2014年图书馆服务宣传月闭幕</a></h3>
+              <p>11月28日下午，2014年图书馆服务宣传月闭幕式在图书馆报告厅举行。闭幕式上，还公布了新一届图书馆学生顾问名单。20名顾问通过自愿报名、面试筛选的形式产生。在未来两年聘期中，新一届学生顾问将参与图书馆的建设与管理，为图书馆发展献计出力。土木系潘晨同学代表学生顾问发言，谈到自己时刻不忘学生顾问既是一份荣誉又是一份责任，在参加外校交流项目时还撰写了所在大学的图书馆探访报告作为参考资料。他表示只要保持对图书馆、对书籍的热爱和关注，人人皆可为顾问。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141124093050276510000/20141124093050276510000_.html" target="_blank">秦佑国做客真人图书馆畅谈人文情怀</a></h3>
+              <p>11月20日下午，“学在清华·真人图书馆”第15期活动在人文社科图书馆大同厅举行。清华大学建筑学院秦佑国教授做客本期真人图书馆，与同学们畅谈人文情怀，分享人生感悟和科研经历。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141103101954938380196/20141103101954938380196_.html" target="_blank">2014年清华大学图书馆服务宣传月开幕</a></h3>
+              <p>10月31日下午在逸夫馆二层大厅，2014年清华大学图书馆服务宣传月活动正式启动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9659/2014/20141013110335315683090/20141013110335315683090_.html" target="_blank">清华图书馆举办“鲁迅与仙台”专题报告会</a></h3>
+              <p>10月9日下午，“鲁迅与仙台”专题报告会在清华大学人文社科图书馆大同厅举办，人文学院特邀教授、日本东北大学鲁迅研究专家大村泉教授做讲座。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141008105624062805991/20141008105624062805991_.html" target="_blank">清华大学图书馆荣获“全民阅读示范基地”称号</a></h3>
+              <p>图书馆近日收到了中国图书馆学会颁发的“全民阅读示范基地”的荣誉证书和牌匾，这是清华大学图书馆自2012年和2013年连续两年获得“全民阅读先进单位”之后的又一殊荣，以表彰清华大学图书馆深入持久开展阅读推广活动，在全民阅读活动中富有创意。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140702143822119871654/20140702143822119871654_.html" target="_blank">清华图书馆承办第11届国际学生优秀作品工...</a></h3>
+              <p class="thnews_jqzy">　　清华图书馆承办第11届学生优秀作品工作会议&nbsp;清华新闻网7月2日电6月27－29日，The 11th OAPS Task Force Meeting（第十一届学生优秀作品工作会议）在北京举行。本届会议由清华大学图书馆承办，共有来自中国大陆和港台地区、新加坡、日本等国家和地区的8所高校共20多位代表参会。图为与会代表合影。OAPS（Outsta......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140616181719495160218/20140616181719495160218_.html" target="_blank">“一站到底男神”刘也行做客真人图书馆</a></h3>
+              <p>6月11日下午，全新一期“学在清华？真人图书馆”活动在人文社科图书馆举行。清华大学生命科学专业博士生、“一站到底战神”刘也行作为真人图书馆官方预约平台正式上线之后“第一本”被预约的“真人图书”，与现场同学畅谈“男神背后”的故事。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140603155223618174970/20140603155223618174970_.html" target="_blank">液态金属获证实可用于神经修复</a></h3>
+              <p>　　近日，由中国科学院理化技术研究所与清华大学组成的联合研究小组，首次报道了一种基于全新原理的液态金属神经连接与修复技术，在国际上引起持续广泛的影响。相应成果日前发表于物理学预印本网站。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140527183135722642310/20140527183135722642310_.html" target="_blank">全国高校图书馆流通工作业务研讨会在清华召开</a></h3>
+              <p>5月19至22日，全国高校图书馆流通工作业务研讨会在清华大学图书馆召开。此次会议由清华大学图书馆联合CALIS（中国高等教育文献保障系统）管理中心共同发起，来自全国42家图书馆的96位代表参加会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140522154855491105488/20140522154855491105488_.html" target="_blank">书法家金德年为图书馆与研究生支教团等赠送...</a></h3>
+              <p>“我写的字多是老一辈清华人的名言，这是清华精神的体现，希望新一代清华人能够秉持这种精神克服一切困难。”清华大学老教授、著名书法家金德年先生说。5月18日，由清华大学国学经典文化传播协会为金德年先生八十大寿举办的庆生活动兼金德年先生向文科图书馆及研究生支教团赠字仪式于文科图书馆大同厅举行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140516160744539651429/20140516160744539651429_.html" target="_blank">清华大学举行“胡宝星法律图书馆”命名仪式</a></h3>
+              <p>　　5月8日，清华大学举行“清华大学胡宝星法律图书馆”命名仪式。香港知名资深律师胡宝星先生、清华大学副校长姜胜耀教授、清华大学图书馆邓景康馆长、蒋耘中书记、以及胡宝星先生的亲朋好友出席了命名仪式，法学院师生代表40余人共同参与见证。清华大学法学院院长王振民教授主持仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140509171642329332506/20140509171642329332506_.html" target="_blank">彭林做客清华“真人图书馆”谈读书与人生</a></h3>
+              <p>5月7日晚，清华大学“学在清华·真人图书馆”第10期暨一周年活动在人文社科图书馆举行，清华大学人文学院历史系教授彭林与现场同学畅谈“读书与人生”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2014.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140228152653253314869/20140228152653253314869_.html" target="_blank">杨绛：我爱清华图书馆</a></h3>
+              <p class="thnews_jqzy">　　杨绛：我爱清华图书馆来源：中国新闻周刊网 2014-2-26杨绛先生自述：&ldquo;我曾把读书比作&lsquo;串门儿&rsquo;，借书看，只是要求到某某家去&lsquo;串门儿&rsquo;，而站在图书馆书库的书架前任意翻阅，就好比家家户户都可任意出入，这是唯有身经者才知道的乐趣。我敢肯定，钱钟书最爱的也是清华图书馆。&rdquo;我在许多学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140103091354617550103/20140103091354617550103_.html" target="_blank">清华图书馆刘蔷参与撰写的著作获中国出版政...</a></h3>
+              <p class="thnews_jqzy">　　清华大学图书馆刘蔷参与撰写的著作获&ldquo;中国出版政府奖&rdquo;清华新闻网1月3日电（通讯员林佳） 在日前公布的第三届&ldquo;中国出版政府奖&rdquo;中，清华大学科学技术史暨古文献研究所刘蔷参与合作撰写的《美国哈佛大学哈佛燕京图书馆藏中文善本书志》（沈津主编，广西师范大学出版社，2011年）获得&ldquo;图书奖&rdquo;。　......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131224110116720620206/20131224110116720620206_.html" target="_blank">【群众路线教育实践】图书馆领导班子召开党...</a></h3>
+              <p class="thnews_jqzy">　　图书馆领导班子召开党的群众路线教育实践活动专题民主生活会&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;清华新闻网12月24日电12月18日下午，图书馆领导班子召开党的群众路线教育实践活动专题民主生活会。常务副校长程建平、校纪委副书记单际国出席会议。图书馆党委书记蒋耘中主持会议。&nbsp;&nbsp;&nbsp;&nb......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131219140723787383775/20131219140723787383775_.html" target="_blank">王君超做客清华大学真人图书馆解读微时代</a></h3>
+              <p class="thnews_jqzy">　　王君超做客清华大学真人图书馆解读微时代清华新闻网12月19日电（研通社记者陶一萍 盛阳）12月16日晚，清华大学新闻与传播学院王君超老师做客&ldquo;学在清华&middot;真人图书馆&rdquo;，在人文社科图书馆大同厅与到场的师生畅谈微博不&ldquo;微&rdquo;的微时代，分享微博使用经历和人生感悟。图为王君超老师做客真人图书馆解读微时代。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131125103442927907224/20131125103442927907224_.html" target="_blank">危岩做客真人图书馆畅谈三维生物打印技术</a></h3>
+              <p class="thnews_jqzy">　　危岩做客清华大学真人图书馆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网11月25日电（学生记者&nbsp;闫宇坤）11月21日下午，清华大学化学系教授危岩做客&ldquo;学在清华&middot;真人图书馆&rdquo;，在人文社科图书馆大同厅与到场的师生畅谈三维生物打印技术，分享人生经历、人生感悟。图为危岩......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131122164012469914353/20131122164012469914353_.html" target="_blank">张尧学做客“学在清华·真人图书馆”分享多...</a></h3>
+              <p class="thnews_jqzy">　　张尧学做客&ldquo;学在清华&middot;真人图书馆&rdquo;分享多彩人生清华新闻网11月22日电（学生记者刘明明）11月21日晚，中南大学校长张尧学院士做客&ldquo;学在清华&middot;真人图书馆&rdquo;第七期&ldquo;对话张尧学&rdquo;，在清华大学人文社科图书馆大同厅与到场师生分享多彩人生。活动伊始，主持人在现场......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20131122120950520981843/20131122120950520981843_.html" target="_blank">国图与高校图书馆开通馆际互借服务</a></h3>
+              <p class="thnews_jqzy">　　国图与高校图书馆开通馆际互借服务来源：人民日报 2013-11-22 赵婀娜记者从今日举办的&ldquo;2013高校图书馆服务与技术发展研讨会&rdquo;获悉：CALIS（中国高等教育文献保障系统）与国家图书馆今日开通馆际互借与文献传递服务。据介绍，CALIS&mdash;国家图书馆馆际互借与文献传递服务是基于CALIS建设的&ldquo;高等教......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9667/2013/20131028095457025447966/20131028095457025447966_.html" target="_blank">著名古典音乐普及人刘岠渭作客图书馆导赏经...</a></h3>
+              <p class="thnews_jqzy">　　著名古典音乐普及人刘岠渭作客图书馆 导赏经典歌剧《茶花女》清华新闻网10月28日电10月24日晚，台湾艺术大学教授、&ldquo;财团法人乐赏音乐教育基金会&rdquo;音乐总监刘岠渭先生作客清华大学图书馆，为清华师生带来&ldquo;新乐赏主义&rdquo;讲座，并引导爱乐朋友们欣赏威尔第（Giuseppe Verdi）经典歌剧《茶花女》。图为讲座现场......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131024134647966731509/20131024134647966731509_.html" target="_blank">向隆万做客真人图书馆畅谈唐诗格律与公理化...</a></h3>
+              <p class="thnews_jqzy">　　向隆万做客真人图书馆畅谈唐诗格律与公理化体系清华新闻网10月24日电（研通社记者刘明明）10月23日下午，&ldquo;学在清华&middot;真人图书馆&rdquo;第五期活动&ldquo;公理化体系的思考&mdash;&mdash;唐诗格律的形式体系&rdquo;在清华大学人文社科图书馆未央厅举行。本期活动嘉宾是上海交通大学数学系向隆万教授。&nbs......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131021085831457680793/20131021085831457680793_.html" target="_blank">戚学民作客清华真人图书馆畅谈民国风云</a></h3>
+              <p class="thnews_jqzy">　　戚学民作客&ldquo;学在清华&middot;真人图书馆&rdquo;&nbsp; 畅谈民国风云清华新闻网10月21日电（研通社记者焦洁 陈苏）10月18日晚，&ldquo;学在清华&middot;真人图书馆&rdquo;第四期：民国杂谈&mdash;&mdash;与戚学民老师共话乱世风云在清华大学人文社科图书馆举行。本期活动嘉宾是清华大学人文学院历史......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130925154107041448279/20130925154107041448279_.html" target="_blank">戴琼海团队做客真人图书馆畅讲空中机器人</a></h3>
+              <p class="thnews_jqzy">　　戴琼海团队做客&ldquo;学在清华&middot;真人图书馆&rdquo;畅讲空中机器人清华新闻网9月25日电（研通社记者陶一萍）9月24日晚，&ldquo;学在清华&middot;真人图书馆&rdquo;第三期活动在清华大学人文社科图书馆未央厅举行。国家长江学者特聘教授、国家科学技术发明一等奖获得者、清华大学自动化系博士生导师戴琼海和他指导的在今年8......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130913160349795138279/20130913160349795138279_.html" target="_blank">一砖一瓦总关情</a></h3>
+              <p class="thnews_jqzy">　　杨绛在《我爱清华图书馆》中写道：&ldquo;我在许多学校上过学，最爱的是清华大学；清华大学里，最爱清华图书馆。&rdquo;建筑的生命力出自设计者和使用者跨越时空的交流。而杨廷宝设计扩建的清华图书馆，被认为是一项扩建工程杰作。一砖一瓦总关情来源：中国科学报 2013-9-13 北绛杨廷宝（1901年10月2日~1982年12月23日）建筑学家。河南南阳......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130905142649488888527/20130905142649488888527_.html" target="_blank">清华图书馆举办蒋南翔校长诞辰百年纪念资料展</a></h3>
+              <p>在清华大学原校长蒋南翔百年诞辰之际，由清华图书馆特藏部主办的“斯人斯文·蒋南翔校长诞辰百年纪念资料展”于9月1日至10月1日在清华文库阅览室正式展出，与此同时，在清华大学图书馆主页“网上展厅”也一并推出。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2013/20130829152841109507827/20130829152841109507827_.html" target="_blank">邓景康：大数据环境下清华大学图书馆的实践</a></h3>
+              <p>目前清华大学图书馆馆藏纸质书达300多万种，电子书600多万种、近7万种电子期刊、几亿篇文章，并采用专业的资源发现系统为用户提供纸质书和电子资源的整合检索。资源发现系统自带的知识库包含7亿多条高品质的文章级元数据，是庞大的元数据仓储；此外，清华大学图书馆还在发现系统平台汇集融合了从维基百科下载的开放数据，以及由图书馆员收集整理的清华教工的学术简介等。基于上述数据基础，清华大学图书馆在以下两方面进行了探索和实践。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2013/20130829095100875986075/20130829095100875986075_.html" target="_blank">梁启超与中国的图书馆学</a></h3>
+              <p class="thnews_jqzy">　　梁启超与中国的图书馆学来源：中国社会科学报&nbsp;2013-08-26&nbsp;刁勇梁启超（1873&mdash;1929），广东新会人，中国近代著名改良主义政治、思想、教育家和学者，一生著述涉及文、史等诸多领域，成就卓著。梁启超也是我国近现代图书馆事业和理论的开创者，并为此进行了大量的亲身实践和不懈的理论探索，对中国近现代图书馆事业和图书馆理论的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130625163802988564719/20130625163802988564719_.html" target="_blank">清华图书馆举办林家翘先生资料展</a></h3>
+              <p class="thnews_jqzy">　　清华图书馆举办林家翘先生资料展清华新闻网6月25日电（通讯员袁欣 王琦频）为配合清华大学近日举办的&ldquo;林家翘先生追思会&rdquo;以及周培源应用数学研究中心举办的&ldquo;林&mdash;徐星系螺旋结构密度波理论创立50周年国际研讨学术会&rdquo;，清华图书馆特藏部特举办了&ldquo;林家翘先生资料展&rdquo;，展览于6月24至......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130530133321408729134/20130530133321408729134_.html" target="_blank">民盟清华大学委员会向校图书馆捐赠《清华盟...</a></h3>
+              <p class="thnews_jqzy">　　民盟清华大学委员会向校图书馆捐赠《清华盟讯》清华新闻网5月30日电（通讯员王蓉 袁欣）5月28日，民盟清华大学委员会向清华图书馆捐赠《清华盟讯》（以下简称《盟讯》）仪式在图书馆逸夫馆举行。民盟清华大学委员会主委何福胜代表民盟清华大学委员会向校图书馆捐赠已出版到108期的《盟讯》，校图书馆将《盟讯》作为特藏永久保留，并继续收藏以后出版的《盟讯》。图为何福胜......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130522144646364504576/20130522144646364504576_.html" target="_blank">薛其坤院士做客“学在清华·真人图书馆”交...</a></h3>
+              <p class="thnews_jqzy">　　读书读人读其坤 成长成功成学问薛其坤做客&ldquo;学在清华&middot;真人图书馆&rdquo;交流活动清华新闻网5月23日电（学生通讯员　陈平）5月21日晚，清华大学理学院院长、物理系主任、中国科学院院士薛其坤教授做客&ldquo;学在清华&middot;真人图书馆&rdquo;活动，与到场的20余位读者零距离交流，分享人生经历和感悟。图为&ld......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130522093324135850058/20130522093324135850058_.html" target="_blank">傅璇琮先生向清华图书馆捐赠中国古典文献丛书</a></h3>
+              <p class="thnews_jqzy">　　傅璇琮先生向清华图书馆捐赠中国古典文献丛书清华新闻网5月22日电(记者王冰冰) 5月21日上午，清华大学中国古典文献中心主任、中文系教授傅璇琮先生赠书仪式在清华图书馆逸夫馆举行。清华大学副校长谢维和出席仪式并讲话。图为谢维和与傅璇琮先生亲切交谈。学生记者王涵摄仪式上，傅璇琮先生向清华大学图书馆捐赠其担纲主编的《中国华北文献丛书》共计201册。清华大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130513092631078640641/20130513092631078640641_.html" target="_blank">“学在清华·真人图书馆”项目启动</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;学在清华&middot;真人图书馆&rdquo;项目启动首场活动同期举行清华新闻网5月13日电5月9日，&ldquo;学在清华&middot;真人图书馆&rdquo;项目正式启动，首场活动同期在清华人文社科图书馆举行。图为活动现场。王迪摄&ldquo;学在清华&middot;真人图书馆&rdquo;是指通过预约的方式，约定老师、学者、校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130429135609903770838/20130429135609903770838_.html" target="_blank">清华图书馆举办“李政道先生影像展”</a></h3>
+              <p class="thnews_jqzy">　　清华图书馆举办&ldquo;李政道先生影像展&rdquo;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;清华新闻网4月29日电（通讯员袁 欣）为迎接清华大学102周年校庆，4月27日，图书馆举办了&ldquo;李政道先生影像展&rdquo;，吸引了众多校友、师生前来参观。不久前，李政道先生将自己的部分著作和各个时期......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130329134723275264223/20130329134723275264223_.html" target="_blank">上海交大筹办李政道图书馆</a></h3>
+              <p class="thnews_jqzy">　　上海交大筹办李政道图书馆来源：文汇报 2013-3-29 姜澎上海交通大学钱学森图书馆昨天主办&ldquo;新时期人物纪念馆基本陈列内容设计研讨会&rdquo;，主办方透露，上海交通大学正在筹办李政道图书馆。人物纪念馆陈列内容设计是人物纪念馆工作中的一个关键环节，也是一项集学术研究、知识传播、创意构思于一体的系统工程。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130305163359784782096/20130305163359784782096_.html" target="_blank">清华金融图书馆建成开馆</a></h3>
+              <p class="thnews_jqzy">　　清华金融图书馆建成开馆来源：京华时报 2013-3-5 张晓鸽 晏凌近日，清华图书馆第7个专业分馆&mdash;&mdash;金融图书馆开馆。据悉，金融图书馆的前身是成立于1981年的人民银行研究生部图书馆。金融图书馆馆藏以经济、金融类为主，总量8.7万余册，致力于金融学专业相关的文献资源建设和收藏。金融图书馆面向清华大学全校师生和金融学院校友开放。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2013.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130227163508068125472/20130227163508068125472_.html" target="_blank">清华大学金融图书馆开馆</a></h3>
+              <p class="thnews_jqzy">　　清华大学金融图书馆开馆清华新闻网2月27日电（通讯员晏凌）2月25日上午，清华图书馆第7个专业分馆&mdash;&mdash;金融图书馆开馆。当日清晨，校图书馆馆长邓景康，总务部、系统部等几位老师一早就来到金融图书馆，查看开馆前的各项准备工作；工作人员也都早早到达岗位，准备好迎接读者。8点整，金融图书馆迎来了第一位读者，随后，读者们陆续进馆。图为金融......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2013.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130218214738150470539/20130218214738150470539_.html" target="_blank">机器人当起清华图书咨询员</a></h3>
+              <p class="thnews_jqzy">　　机器人当起清华图书咨询员&nbsp;来源： 人民日报海外版 2013-02-16&nbsp; 张东妮置之&ldquo;死&rdquo;地而后&ldquo;生&rdquo;从纸质阅读到电子书阅读，再到手机阅读甚至是云阅读。随着人们阅读方式的演进，服务人们阅读需求的各种服务应运而生。清华大学图书馆有自动学习功能的机器人&ldquo;小图&rdquo;就是一个......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121123161648574528684/20121123161648574528684_.html" target="_blank">2012年清华大学图书馆服务宣传月落幕</a></h3>
+              <p class="thnews_jqzy">　　2012年清华大学图书馆服务宣传月落幕清华新闻网11月23日电11月22日，2012年清华大学图书馆服务宣传月闭幕式在图书馆逸夫馆举行。本届宣传月活动中，图书馆根据图书借阅、馆际互借、推荐购买等系统数据，统计出了积极使用图书馆资源和服务的读者，共有45位师生以及1个团体获得&ldquo;读者之星&rdquo;荣誉；22名同学通过自愿报名、面试筛选的方式受......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121105203846929832226/20121105203846929832226_.html" target="_blank">清华大学图书馆迎来百年华诞</a></h3>
+              <p>2012年，清华大学图书馆迎来了自己的百年华诞。11月2日上午，清华大学图书馆建馆100周年庆典在清华大学蒙民伟音乐厅举行。北京市委常委、宣传部长、副市长鲁炜，校长陈吉宁，副校长谢维和、程建平出席庆典活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121105171744283744551/20121105171744283744551_.html" target="_blank">清华大学图书馆迎来百年华诞</a></h3>
+              <p class="thnews_jqzy">　　清华大学图书馆迎来百年华诞来源：新华网 2012-11-3 李江涛 季萌清华大学图书馆百年馆庆庆典2日举行，著名科学家、诺贝尔物理学奖获得者杨振宁回忆了80多年前见到清华图书馆的情形，对图书馆未来的发展寄予期望。清华大学图书馆馆长邓景康在致辞中简要回顾了清华图书馆自1912年建立以来的发展历程，介绍了图书馆在人才培养、科学研究、服务社会和文化传承创新......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121105143641237891944/20121105143641237891944_.html" target="_blank">杨振宁出席清华大学图书馆百岁纪念</a></h3>
+              <p class="thnews_jqzy">　　杨振宁出席清华大学图书馆百岁纪念来源：中国新闻网 2012-11-2 马海燕清华大学图书馆今日迎来百岁生日。90岁的诺贝尔物理奖获得者杨振宁出席，对图书馆未来发展寄予期望。作为清华大学图书馆最早的见证人之一，杨振宁还记得自己7岁住进清华园见到老清华图书馆的情形。&ldquo;1929年我随父母住进清华园，那时每次有外地朋友来都要去图书馆看，软地板、玻......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121026091506102622433/20121026091506102622433_.html" target="_blank">2012年清华大学图书馆服务宣传月正式启动</a></h3>
+              <p class="thnews_jqzy">　　2012年清华大学图书馆服务宣传月正式启动清华新闻网10月26日电（通讯员　胡 冉）10月25日下午，2012年清华大学图书馆服务宣传月活动正式启动，开幕仪式在逸夫馆二层大厅隆重举行。清华大学副校长谢维和、图书馆馆长邓景康出席开幕式并致辞。开幕式上，谢维和为到场的新一届教师顾问颁发荣誉聘书。他在致辞中表示，希望教师顾问们积极协助图书馆，在目前海量信息......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121025152548962907412/20121025152548962907412_.html" target="_blank">梁启超档案特展 即将在清华举行</a></h3>
+              <p class="thnews_jqzy">　　梁启超档案特展 即将在清华举行来源：深圳商报 2012-10-24 聂灿记者昨日获悉，由清华大学国学院主办，清华大学图书馆、中华书局、北京匡时国际拍卖有限公司协办的&ldquo;南长街54号&rdquo;藏梁氏重要档案特展将于10月25日在清华大学人文社科图书馆举行开幕仪式。本次特展以&ldquo;弘扬中华传统，传承任公精神&rdquo;为题，精心遴......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120910162144116231339/20120910162144116231339_.html" target="_blank">《朱镕基讲话实录》（线装本）首发式举行</a></h3>
+              <p class="thnews_jqzy">　　《朱镕基讲话实录》（线装本）首发式举行来源：人民日报 2012-09-09 颜珂《朱镕基讲话实录》（线装本）首发式8日上午在长沙举行。《朱镕基讲话实录》（线装本）由中南传媒岳麓书社出版，一盒四函，每函四册，每册约95简页（190面），繁体竖排，全手工装订，内容与人民出版社2011年9月出版的《朱镕基讲话实录》一至四卷相一致，是继平装本、精装本之后，出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120905141328219731787/20120905141328219731787_.html" target="_blank">图书馆召开学术资源发现与获取系统发展研讨会</a></h3>
+              <p class="thnews_jqzy">　　图书馆召开&ldquo;学术资源发现与获取系统发展与应用研讨会&rdquo;&nbsp;&nbsp;清华新闻网9月5日电9月4日，由清华大学图书馆和艾利贝斯有限公司（Ex libris）共同举办的&ldquo;学术资源发现与获取系统发展与应用研讨会&rdquo;在清华图书馆逸夫馆报告厅召开。清华图书馆副馆长姜爱蓉主持会议。图为研讨会现场。Ex Lib......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120903134938358685275/20120903134938358685275_.html" target="_blank">清华召开“移动图书馆技术创新与服务拓展”...</a></h3>
+              <p class="thnews_jqzy">　　清华召开&ldquo;移动图书馆技术创新与服务拓展&rdquo;研讨会清华新闻网9月3日电（通讯员张 蓓）8月30日上午，&ldquo;移动图书馆技术创新与服务拓展&rdquo;研讨会在清华大学信息科学技术大楼召开。清华大学图书馆馆长邓景康、北京大学图书馆馆长朱强分别致辞，他们对与会代表的到来表示欢迎，并对各界图书馆同仁共同致力于移动图书馆的研究和发......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2012.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120821145404521459797/20120821145404521459797_.html" target="_blank">清华新生体验手机图书馆新技术</a></h3>
+              <p class="thnews_jqzy">　　清华新生体验手机图书馆新技术清华新闻网8月21日电（通讯员范爱红）8月17和18日，清华大学图书馆接待3300余名2012级本科新生参观校图书馆。新技术体验是今年图书馆新生参观培训的亮点之一。图书馆推出智能手机二维码应用，新生可通过智能手机聆听馆长致辞、查看馆舍地图。调查问卷显示：新生全部持有手机，90.8%的手机可以上网，61.5%的新生体验了二维......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120506143527411134513/20120506143527411134513_.html" target="_blank">《最美北京》图片展亮相清华百年图书馆</a></h3>
+              <p class="thnews_jqzy">　　《最美北京》图片展亮相清华百年图书馆来源：千龙网 2012-04-294月29日下午，&ldquo;感受百年清华 关注北京卫视&rdquo;《最美北京》图片展在清华图书馆开展。图片展集中展示北京卫视&ldquo;最美北京&rdquo;摄制组在工作过程中留存下来的视觉记忆，从多个侧面反映北京既古老又年轻的精神风貌。《最美北京》摄制组负责北京卫视频道宣传......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120429190933254847596/20120429190933254847596_.html" target="_blank">《最美北京》图片展开幕式在清华图书馆举行</a></h3>
+              <p class="thnews_jqzy">　　感受百年清华 关注北京卫视《最美北京》图片展开幕式在图书馆举行清华新闻网4月29日电4月29日下午，在清华大学庆祝101年校庆的日子里，&ldquo;感受百年清华，关注北京卫视&mdash;&mdash;《最美北京》图片展&rdquo;开幕式在清华大学图书馆逸夫馆大厅举行。图为张桐胜致辞。北京卫视记者吴 笛摄中国摄影家协会副主席张桐胜、朱宪民，北京电......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120406150007764617219/20120406150007764617219_.html" target="_blank">大学图书馆：不应在“边缘”</a></h3>
+              <p class="thnews_jqzy">　　大学图书馆：不应在&ldquo;边缘&rdquo;来源：人民日报 2012-04-06 赵婀娜美国斯坦福大学第一任校长戴维&bull;乔丹说：&ldquo;一个伟大的图书馆是建立一所伟大的学府的必然要素。&rdquo;从本期开始，文教周刊推出&ldquo;关注高校图书馆&rdquo;系列报道，分别从我国高校图书馆的现状、高校图书馆资源如何更好实现共享......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120327133548364769738/20120327133548364769738_.html" target="_blank">清华“爱上图书馆视频及排架游戏”获国际营...</a></h3>
+              <p class="thnews_jqzy">　　清华图书馆&ldquo;爱上图书馆视频及排架游戏&rdquo;获第10届IFLA国际营销大奖&nbsp;清华新闻网3月27日电日前，我校图书馆的&ldquo;爱上图书馆视频及排架游戏&rdquo;获2012年第10届国际图书馆协会联合会（IFLA）国际营销奖第一名。这也是该奖项设立10年来国内图书馆首次获此殊荣。图为《爱上图书馆》系列短剧片头。图为《清华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120323130653277306979/20120323130653277306979_.html" target="_blank">大学图书馆对公众开放需谨慎</a></h3>
+              <p class="thnews_jqzy">　　大学图书馆对公众开放需谨慎来源：中国青年报 2012-03-23 何威据《法制晚报》报道，中国人民大学图书馆上自习需要提前占座一事尚未平息，近日首都图书馆联盟成立，34所加盟高校图书馆决定向社会公众开放&mdash;&mdash;这一新闻再次挑动了首都高校学生敏感的神经，一名人大学生抱怨道：&ldquo;现在要提前一天占座，如果校外的人来了，恐怕提前3天......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20120313142640791860546/20120313142640791860546_.html" target="_blank">北京63家图书馆将可通借通还</a></h3>
+              <p class="thnews_jqzy">　　北京63家图书馆将可通借通还&ldquo;首都图书馆联盟&rdquo;正式成立，推出十大惠民措施；国图首图将实现&ldquo;一卡通&rdquo;来源：新京报 2012-03-13&nbsp; 王佳琳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今后，北京读者有望仅凭一张读者卡，实现同城63家......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2011.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20111107090731727480352/20111107090731727480352_.html" target="_blank">大学图书馆 未来什么样？</a></h3>
+              <p class="thnews_jqzy">　　大学图书馆 未来什么样？来源：中国青年报 2011-11-4 吴奕 张明平 李润文&ldquo;能想象么？未来的图书馆里将看不到书？&rdquo;日前，北京大学图书馆馆长朱强在参加&ldquo;江苏大学高校图书馆服务与管理创新学术论坛&rdquo;时，描绘了大学图书馆的发展蓝图，引起了与会专家和师生的热议。今年8月，朱强去美国埃默里大学、哈佛大学等高......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2011.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110929093419166479620/20110929093419166479620_.html" target="_blank">第五届中国科技典籍国际会议在清华召开</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;第五届中国科技典籍国际会议在清华召开&nbsp;清华新闻网9月29日电&nbsp;（通讯员邓 亮）9月23~25日，第五届中国科技典籍国际会议在清华大学人文社科图书馆成功召开。&nbsp;中国科技典籍国际会议是中国科学史研究领域重要的系列性会议之一。本次会议的主题包括中国科技典籍的内容和版本研究、技术典籍与技术的传播、汉译科技典籍及其传播......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110525151559320909763/20110525151559320909763_.html" target="_blank">清华图书馆贴“反占座”广告</a></h3>
+              <p class="thnews_jqzy">　　清华图书馆贴&ldquo;反占座&rdquo;广告来源：北京青年报 2011-05-25&nbsp;&nbsp;&nbsp;雷嘉 陈晓婉清华大学的学生近日发现，学校新建成的人文社科图书馆的每个座位上都贴上了一张&ldquo;反占座&rdquo;广告。馆长赵熊表示，尽管挨个桌子贴广告的工作量巨大，但对占座的行为不能放任自流，图书馆还在研究行之有效的管理办法......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110425093307322604259/20110425093307322604259_.html" target="_blank">清华大学人文社科图书馆正式开馆</a></h3>
+              <p class="thnews_jqzy">　　百年清华 人文日新清华大学人文社科图书馆正式开馆清华新闻网4月25日电4月23日，在庆祝清华大学建校一百周年之际，清华大学人文社科图书馆开馆典礼在新人文馆日新大厅隆重举行，人文社科图书馆正式开馆接待读者。瑞士国家联邦委员、内政部部长布尔克哈尔特（Didier Burkhalter），人文社科图书馆建筑设计师马里奥&middot;博塔，人文社科图书馆捐......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110422212322294502862/20110422212322294502862_.html" target="_blank">清华大学人文社科图书馆·方志馆揭牌</a></h3>
+              <p class="thnews_jqzy">　　清华大学人文社科图书馆&middot;方志馆揭牌清华新闻网4月22日电&nbsp; 4月21日上午，清华大学人文社科图书馆&middot;方志馆揭牌仪式在馆址隆重举行。宁夏自治区党委副秘书长刘桓、方志办副主任范宗兴，浙江省方志办主任潘捷军，北京市方志办副主任侯宏兴，内蒙古自治区方志办主任杨泽荣，江苏省方志办副主任蔡金良，清华大学党委书记胡和平、副校长谢维......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110422201611224248344/20110422201611224248344_.html" target="_blank">清华大学凯风人文社科图书馆落成典礼举行</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;清华大学凯风人文社科图书馆落成典礼举行清华新闻网4月22日电&nbsp; 4月21日上午，清华大学凯风人文社科图书馆落成典礼在馆址西侧广场隆重举行。新馆建筑捐赠方凯风公益基金会理事长段伟红，图书馆的策划者、领导者、组织者和实施者&mdash;&mdash;辽宁省委副书记、清华大学原党委书记陈希教授，清华大学党委书记胡和平教授、副校长张凤昌教授......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2011.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110301135722058161698/20110301135722058161698_.html" target="_blank">清华人文图书馆将设“小单间”</a></h3>
+              <p class="thnews_jqzy">　　清华人文图书馆将设&ldquo;小单间&rdquo;师生都可预约 没有身份限制&nbsp;来源：北京青年报 2011-03-01&nbsp;&nbsp;雷嘉&nbsp;&ldquo;人文图书馆会提供好多间个人研修间，大家都知道吧？&rdquo;昨天，清华大学图书馆的官方微博主动&ldquo;爆料&rdquo;，并号召同学们去参加在线预约系统的测试。记者随......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232607000712472/20110225232607000712472_.html" target="_blank">2010清华图书馆服务宣传月活动圆满落幕</a></h3>
+              <p class="thnews_jqzy">　　悦读畅享 书香百年2010清华图书馆服务宣传月活动圆满落幕【新闻中心讯 通讯员 王平】12月16日下午，清华大学 2010年图书馆服务宣传月闭幕式在图书馆报告厅隆重举行。“图书馆，我想对你说”有奖征言活动获奖者及馆员共计80余人参加会议。闭幕式上，图书馆馆长邓景康作了题为“推送资源、传播服务——图书馆资源服务宣传推广实践”的报告，介绍近年来图书馆推介......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232606359489964/20110225232606359489964_.html" target="_blank">校党委书记胡和平调研图书馆工作</a></h3>
+              <p class="thnews_jqzy">　　营造良好校园文化 服务学生成长成才校党委书记胡和平调研图书馆工作【新闻中心讯 记者 崔凯】12月17日，校党委书记胡和平来到人文社科图书馆工地现场检查工程进度情况，来到图书馆阅览室与学生亲切交谈，并听取了图书馆负责人工作汇报。胡和平指出，清华图书馆要在清华大学建设世界一流大学和营造良好校园文化方面做出自己应有的贡献。副校长程建平一同调研。图书馆馆长邓景康......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232605828381443/20110225232605828381443_.html" target="_blank">《中国学术期刊影响因子年报》首发</a></h3>
+              <p class="thnews_jqzy">　　《中国学术期刊影响因子年报》首发来源：人民日报 2010-12-17 张贺《中国学术期刊影响因子年报》系列数据库今天在京首发。该数据库由清华大学图书馆、中国科学文献计量评价研究中心等单位共同研制，是新闻出版总署批准出版的电子期刊。有关专家认为，我国此前一直缺乏客观、透明、规范的学术期刊评价指标，单纯地看重发表论文的数量和期刊的名气，往往出现“以数论刊......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232604250756351/20110225232604250756351_.html" target="_blank">清华新建图书馆明年将开放</a></h3>
+              <p class="thnews_jqzy">　　清华新建图书馆明年将开放来源：法制晚报 2010-12-12 张昕 徐天清华大学的人文社科类藏书量将达到120万册，其中包括引进9万余册的英文原版图书，这标志着该校文科学科建设进入一个新阶段。近日，在清华举办的人文社科图书馆介绍会上，记者获悉，这一即将建成的图书馆将从康奈尔大学引进9万余册的英文原版图书，人文社科类藏书量将达到120万册，以弥补清华在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232556984565580/20110225232556984565580_.html" target="_blank">悦读畅享 书香百年——清华图书馆开启服务...</a></h3>
+              <p class="thnews_jqzy">　　悦读畅享 书香百年——清华图书馆开启服务宣传月【新闻中心讯 通讯员 武丽娜】11月18日下午，“悦读畅享、书香百年”2010年清华大学图书馆服务宣传月开幕式在图书馆报告厅举行。清华大学副校长程建平、图书馆馆长邓景康出席会议并讲话。图书馆教师顾问、学生顾问、本届宣传月活动评选的“读者之星”以及部分馆员和读者100余人参加会议。此次宣传月从11月15日起......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232552593134156/20110225232552593134156_.html" target="_blank">清华联手建工 修复污染场地</a></h3>
+              <p class="thnews_jqzy">　　清华联手建工 修复污染场地来源：北京晚报 2010-11-09昨日，清华大学与北京建工集团联合成立污染场地修复联合研究中心。随着我国城市化进程的加快，污染企业搬迁、土地用途变迁等，场地修复需求日益增长。但我国目前污染土壤修复技术和装备研发薄弱，缺乏适应中国国情的污染场地修复的技术、设备体系。据悉，上世纪90年代初，清华大学率先开始进行修复技术研究，并......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232551343758937/20110225232551343758937_.html" target="_blank">广东省向清华大学捐赠大批地方志</a></h3>
+              <p class="thnews_jqzy">　　广东省向清华大学捐赠大批地方志【新闻中心讯】11月2日，广东省政府地方志办公室党组书记陈强带团来访清华大学，向图书馆捐赠《广东历代方志集成》276册。 至此，广东省成为第21个向清华捐赠大宗地方志的省份。清华大学党委副书记韩景阳出席捐赠仪式并与陈强进行了交谈。捐赠仪式捐赠仪式上，陈强介绍了该套旧志整理类大型丛书的多年搜集编纂过程。韩景阳代表学校向......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232539000403986/20110225232539000403986_.html" target="_blank">清华举行座谈会纪念曹禺百年诞辰</a></h3>
+              <p class="thnews_jqzy">　　清华举行座谈会纪念曹禺百年诞辰【新闻中心讯 记者 程曦 摄影 郭海军】9月21日下午，雨后初晴，阳光透过绿叶簇拥的玻璃窗照在清华大学图书馆老馆第一阅览室一张普通的书桌前。近20名清华师生围坐在这里，只空出一把椅子——清华大学纪念曹禺先生百年诞辰座谈会在这里举行。77年前，正是在这扇窗前、这个座位上，曹禺先生写出了代表作《雷雨》。纪念曹禺先生百年诞辰座谈会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232458578278991/20110225232458578278991_.html" target="_blank">图书馆获北京高校图书馆田径运动会团体冠军</a></h3>
+              <p class="thnews_jqzy">　　图书馆获北京高校图书馆田径运动会团体冠军　&nbsp;&nbsp; 【新闻中心讯】5月22日，北京地区高校图书馆第八届田径运动会在北京交通大学举行，清华大学图书馆代表队近40名运动员参加了运动会的全部比赛并获得了团体总分第一名，同时因为全体队员团结协作、奋力拼搏的精神获得大会颁发的“体育道德风尚奖”。清华大学图书馆代表队在运动会开幕式上进场运动会后全体代表队......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

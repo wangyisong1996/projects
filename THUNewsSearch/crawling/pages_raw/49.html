@@ -1,0 +1,580 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>据传——清华紫光医药保健产品也形成品牌</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231208812252205&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9664/index.html' class='navigation_style'>社会服务</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">据传——清华紫光医药保健产品也形成品牌 </h3><p align="center">（2001年03月13日 中国银河证券网）</p><p> 　　从信息技术领域起步的清华紫光(0938)公司，在实施了一系列科研、合作、购并等大宗项目之后，其医药保健产品也形成了清华紫光品牌的重要环节，并专门组建了紫光药业公司，形成了包括200多个品种在内的医疗产品和保健产品系列。   企业已经形成跨中、西药、生化制品多个领域的品种结构。清华紫光于去年8月入主古汉集团后，将清华的科研精神与实力带到企业之中。日前，清华紫光古汉公司又在京推出女性保健专用的“保春栓”产品，清华紫光药业从“三八”妇女节开始，展开了一系列以“关爱女性健康”为主题的公众活动。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月13日 08:24:26　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150922110221275442814/20150922110221275442814_.html" target="_blank">中国医药产业创新生态系统建设高峰论坛在清...</a></h3>
+              <p>由清华大学全球产业4.5研究院主办、清华经管学院医疗管理研究中心协办的“中国医药产业创新生态系统建设高峰论坛”于9月15日在清华大学举行。论坛副秘书长、清华大学技术转移研究院院长、产研院常务副院长金勤献在致辞中详细介绍了学校在医药学科建设、医药科技和产业研究的最新进展，提出产研院要建设一个开放的跨学科研究平台，通过广泛合作与交流，组织精干力量开展深度研究，探索全球和中国医药产业的发展规律，并希望产研院借此论坛机会，与政企各界共同探讨我国医药产业创新生态系统的现状、机遇、挑战、发展前景，以及如何建设一个充满活力的中国医药创新生态系统，以推动我国医药产业的发展，促进国家创新体系建设。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141119180740344444352/20141119180740344444352_.html" target="_blank">华尔街日报报道清华李梢等中医药系统生物学...</a></h3>
+              <p>11月4日，美国《华尔街日报》以“古老疗法的新资料（New data on ancient remedies）”为题，用两个版面刊发了一则关于中医药科学研究的长篇报道，并在报纸头条位置对该报道作了题为“实验室中的东西方交融（East Meets West in the Lab）”的推荐。该报道重点介绍了自动化系、信息国家实验室生物信息研究部李梢教授课题组的研究成果。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2013/20130904131059615491216/20130904131059615491216_.html" target="_blank">程京：加快培育生物医药产业</a></h3>
+              <p>国务院办公厅2009年颁布的《促进生物产业加快发展的若干政策》明确指出：“加快培育生物产业，是我国在新世纪把握新科技革命战略机遇、全面建设创新型国家的重大举措。”</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130429172348163976826/20130429172348163976826_.html" target="_blank">清华第二届医药健康管理论坛举办</a></h3>
+              <p class="thnews_jqzy">　　医药生物科技的产业化之路&mdash;&mdash;清华第二届医药健康管理论坛举办清华新闻网4月29日电（学生通讯员王研）4月28日下午，清华第二届医药健康管理论坛在清华大学医学楼举办。论坛主题为&ldquo;医药生物科技如何实现产业化&rdquo;，来自清华大学生命学院、经管学院、医学院的优秀校友，以自身的真实经历作为医药生物科技技术产业化的案例，分享......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130111144306646520664/20130111144306646520664_.html" target="_blank">清华教授写英文书介绍中医</a></h3>
+              <p class="thnews_jqzy">　　清华教授写英文书介绍中医来源：北京日报 2013-1-11 任敏清华大学化学系教授罗国安撰写的英文著作《中医药系统生物学》日前出版，该书以详实的数据、指标向外国人系统地介绍我国传统中医，中医和西医之间的&ldquo;误会&rdquo;有望逐步化解。《中医药系统生物学》是我国首部中医药系统生物学英文著作，全书515页，汇集了300多篇SCI（科学引文索......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130110150739510177674/20130110150739510177674_.html" target="_blank">我国首部中药 现代化研究英文专著出版</a></h3>
+              <p class="thnews_jqzy">　　我国首部中药 现代化研究英文专著出版来源：科技日报 2013-1-10 林莉君被很多人熟知的电影《刮痧》，透露出中医药因为说不清化学成分和作用机理所面临的尴尬。由清华大学化学系罗国安教授撰写的英文专著《中医药系统生物学》有望改变这一尴尬局面。作为我国首部中医药系统生物学英文著作，罗国安创新性地提出&ldquo;系统&mdash;系统&rdquo;的研......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130110150611334859757/20130110150611334859757_.html" target="_blank">清华学者出版首部中医药系统生物学英文著作</a></h3>
+              <p class="thnews_jqzy">　　清华学者出版首部中医药系统生物学英文著作来源：中国新闻网 2013-1-9 董子畅 马海燕清华大学化学系教授罗国安历经20年完成的首部中医药系统生物学英文专著面世后，引起国内外同行高度评价。该专著的国外出版对于中医走出去具有意义。今日该校特意举行成果发布会，介绍这部长达515页的专著得到所有国际专家匿名评审一致好评的原因。《中医药系统生物学》用科学的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121225103750517698181/20121225103750517698181_.html" target="_blank">【人物】罗国安：传承与创新 做21世纪的...</a></h3>
+              <p>罗国安撰写的英文专著《中医药系统生物学》突破西药研究的“点-点”传统研究模式，首次提出“系统-系统”的研究模式、方法与技术。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121018113027869688909/20121018113027869688909_.html" target="_blank">清华罗国安出版第一部中医药系统生物学英文...</a></h3>
+              <p>这是我国自1996年开展中药现代化研究以来在国际上出版的第一部中药现代化研究英文专著。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120628145641924236253/20120628145641924236253_.html" target="_blank">清华经管学院与医学院研讨“管理与医药融合”</a></h3>
+              <p class="thnews_jqzy">　　清华经管学院与医学院研讨&ldquo;管理与医药融合&rdquo;清华新闻网6月28日电6月26日，&ldquo;管理学走出商学院：管理与医药融合&rdquo;研讨会在清华经管学院举行。研讨会集中讨论了管理与医药教育的融合。经管学院院长钱颖一教授和清华医学院常务副院长施一公教授出席论坛并分别致辞。图为钱颖一致辞。钱颖一表示，经管学院举办&ldqu......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120525142804204504901/20120525142804204504901_.html" target="_blank">清华-拜耳创新医药联合研讨会举行</a></h3>
+              <p class="thnews_jqzy">　　清华-拜耳创新医药联合研讨会在清华举行清华新闻网5月25日电5月22日，第三届清华-拜耳创新医药联合研讨会在清华大学医学科学楼召开。拜耳公司的Helmut Haning博士, Hanno Wild博士和 Anette Sommer博士，分别结合拜耳新药研发途径成功研制的实例，在学术报告中着重探讨小分子药物、生物药物的研发问题。北京义翘神州生物技术有限......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120327154002137287702/20120327154002137287702_.html" target="_blank">清华大学与拜耳医药保健拓展创新药物研发合作</a></h3>
+              <p class="thnews_jqzy">　　清华大学与拜耳医药保健拓展创新药物研发合作清华新闻网3月27日电（通讯员李 慧）清华大学与拜耳医药保健有限公司本周共同签署新的战略合作协议，扩展&ldquo;清华－拜耳创新药物联合研究中心&rdquo;（简称 &ldquo;拜耳研究中心&rdquo;）项目研究工作，将在今后3年内开展在生物医学领域研究合作。清华大学生命科学学院院长、医学院常务副院长施一公......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232505843309975/20110225232505843309975_.html" target="_blank">2010清华大学—拜耳医药学术研讨会召开</a></h3>
+              <p class="thnews_jqzy">　　2010清华大学—拜耳医药学术研讨会召开【新闻中心讯】6月10日上午，“2010清华大学—拜耳医药学术研讨会”在清华大学医学科学楼召开，清华大学副校长邱勇代表学校致欢迎辞。德国驻华大使馆科技参赞Matthias Hack 博士应邀出席研讨会。研讨会上还为获得第二批“Bayer Investigator”荣誉称号的11名生命学院、医学院、化学系的教授们颁发......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2010.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232413859588564/20110225232413859588564_.html" target="_blank">中国黑龙江中医药大学将在匈牙利建分校</a></h3>
+              <p class="thnews_jqzy">　　中国黑龙江中医药大学将在匈牙利建分校新华网 2010-02-232月22日，中国黑龙江中医药大学和匈牙利泽梅尔魏斯医科大学在布达佩斯签署合作协议，商定将在泽梅尔魏斯医科大学建立黑龙江中医药大学的匈牙利分校。黑龙江中医药大学理事长田文媛和泽梅尔魏斯医科大学校长图洛绍伊·蒂沃道尔在合作协议上签字。根据协议，这个分校将培养5年制本科学历的中医药相关专业......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2007.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225605140408740/20110225225605140408740_.html" target="_blank">“中医药高校行”高校巡回健康服务活动进清华</a></h3>
+              <p class="thnews_jqzy">　　“中医药高校行”高校巡回健康服务活动进清华【新闻中心讯 研通社记者 熊永】5月20日，“中医药高校行”——高校巡回健康服务活动在清华紫荆学生公寓举行。本次活动是校研究生会“了解我，关爱我——我爱我”身心健康周系列活动的第一场，也是“健康生活”系列活动总第12期。来自北京中医药大学岐黄爱心社的成员充分利用自身所学，为清华师生带来了细致周到的健康服务。北......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231556343722337/20110225231556343722337_.html" target="_blank">清华大学研制的纳米医药产品获美国专利</a></h3>
+              <p class="thnews_jqzy">　　清华大学研制的纳米医药产品获美国专利慧聪网  2005-3-28&nbsp;&nbsp;&nbsp;经过近两年的审核和考察，由清华大学材料系崔福斋教授课题组研究的纳米人工骨，日前获得美国专利局颁发的专利批准通知，这为拓展海外市场奠定了基础。&nbsp;&nbsp;&nbsp;据介绍，纳米人工骨（NB系列纳米晶胶原基骨材料）研究是国家“863”、“973”计划......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2004.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231440109787878/20110225231440109787878_.html" target="_blank">我国第一项纳米医药产品在清华大学诞生</a></h3>
+              <p class="thnews_jqzy">　　我国第一项纳米医药产品在清华大学诞生新华网  2004-5-25&nbsp;&nbsp;&nbsp;新华网北京5月25日电（周襄楠、李江涛）经过1年4个月、近300例的人体临床实验，由清华大学材料系崔福斋教授课题组研制成功的纳米人工骨日前获得国家食品药品监督管理局的三类植入产品试生产注册证，成为我国首个可以在市场上公开销售和应用的纳米医药产品。&nbsp;&......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231239031256326/20110225231239031256326_.html" target="_blank">清华紫光为条件薄弱小学建电脑教室</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华紫光为条件薄弱小学建电脑教室科技日报 2001年10月18日本报讯（记者袁文芝）10月16日上午，在崇文区上三条小学清华紫光股份有限公司向学校捐献一批新型电脑，使这个胡同小学改变了简陋的办学条件。北京市市委副书记龙新民出席了捐赠仪式并讲话。崇文区上三条小学是一所庭院式小学，学校条件比较简陋，全校300多师生只有2......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231238968508598/20110225231238968508598_.html" target="_blank">北京胡同中的小学建成现代化电脑教室</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document北京胡同中的小学建成现代化电脑教室新华网 2001年10月17日新华网北京10月16日电（吴晶、李婕）这里是位于北京市崇文区一条狭长胡同深处的上三条小学，四十多位教师和二百六十多名学生曾经排队使用两台电脑。今天，全校三百多名师生和社会各界人士共同庆祝由清华紫光捐建的“文明工程电脑教室”建成。据首都文明工程基金会负责人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2001.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231235125180683/20110225231235125180683_.html" target="_blank">清华紫光笔记本电脑夺国内品牌第二名</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华紫光笔记本电脑夺国内品牌第二名2001年08月27日 16:12 新浪科技根据赛迪资讯(CCID)公布的最新调查统计报告——《2001年上半年中国笔记本电脑市场研究半年度报告》的数据显示，清华紫光的笔记本电脑产品以1.4万台的销售量，跻身笔记本电脑品牌市场前8名，国内品牌排名第二名，仅次于联想。这表明笔记本电脑国产品......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231213968949901/20110225231213968949901_.html" target="_blank">清华紫光推出高分辨率智能扫描仪</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华紫光推出高分辨率智能扫描仪（东方网 2001年4月14日）东方网4月14日消息：清华紫光近日推出一款扫描仪新品紫光Uniscan 3100k，这款光学分辨率为600×1200dpi的扫描仪的最大特点是扫描速度快、超薄、噪音小，并配置了智能化操作按键，可方便地实现扫描、传真、复印及发送E-mail等功能，再配备上“我行......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231211968213693/20110225231211968213693_.html" target="_blank">清华紫光等8家企业赞助北京申奥</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华紫光等8家企业赞助北京申奥（科技日报 2001年4月5日）本报讯记者袁文芝报道：4月3日上午北京奥申委接受热心赞助商及环保示范工程企业赞助、捐赠仪式在北京奥申委举行。捐赠仪式上，珠海卓夫集团、蓝带啤酒销售有限公司、北京丹纳通精细化工有限公司3家企业被北京奥申委授予“北京2008年奥运会申办委员会热心赞助商”的荣誉......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231211171201958/20110225231211171201958_.html" target="_blank">院企互动开发新品</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document院企互动开发新品（北京日报 2001年3月30日）本报讯（实习生孙毅）以清华紫光、北大维信、交大昂立为代表的高等院校大型企业，依靠学院科研力量和企业力量互相推动，强化了科技与生产紧密结合，使产品日趋完备合理。据了解，院校力量引入企业产品开发后，加快了吸收消化国外先进技术、自主开发和技术创新的速度，提高了企业的产品开发能力......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231210468634421/20110225231210468634421_.html" target="_blank">清华紫光推出“挑战终结者”活动</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华紫光推出“挑战终结者”活动(2001.03.25 新华网)新华网北京３月２５日电（记者张景勇）从现在起到４月３０日，消费者可以参加清华紫光在全国开展的紫光电脑手写笔“挑战终结者”行动。紫光笔在北京、上海、广州、沈阳、成都等城市的１００家商场和电脑城设立了演示点，用户可以在各演示点试用配备了“紫光手写输入法”的紫光......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231209171786285/20110225231209171786285_.html" target="_blank">清华紫光推出新概念新产品</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华紫光推出新概念新产品（千龙新闻网 2001年3月16日）以清华紫光，北大方正，交大昂立等为代表的中国高等院校大型企业，正随着当代科技与国际商业格局的发展，使原有的产业结构和市场领域发生重大的变革，特别是清华紫光这家著名企业在医药保健产品方面的突破性进展，尤其为公众关注。从信息技术领域起步的清华紫光公司，在向都门类......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>1999.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231208578650737/20110225231208578650737_.html" target="_blank">“清华紫光创投研究基金”成立</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“清华紫光创投研究基金”成立（东方网 2001年3月8日）东方网3月8日消息：由清华紫光科技创新投资有限公司（简称“紫光创投”）与清华大学中国创业研究中心联合发起的“清华紫光创投研究基金”于昨日正式成立。据中国计算机报报道，根据双方达成的协议，从2001年起，在连续的五年内，紫光创投每年向清华大学中国创业研究中心资助......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

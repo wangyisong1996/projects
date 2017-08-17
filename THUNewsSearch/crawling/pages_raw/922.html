@@ -1,0 +1,419 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>推动资源—能源—环境协调发展新模式</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231226968389754&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">推动资源—能源—环境协调发展新模式</h3><p align="center">——记清华大学“过程工程与生态工业研究中心” </p><p align="center">光明日报 2001年5月11日</p><p align="center">桓静</p><p> 　　在清华大学建校90周年之际，清华大学化工科学与技术研究院成立“过程工程与生态工业研究中心”。生态工业是仿效自然生态过程中在太阳能的驱动下物质在动物—植物—微生物之间循环的发展模式，从而改变传统产业的“资源开采—生产加工—消费使用—废物丢弃”的物质单向运动的模型，使工业生产的发展能与自然生态系统相容纳相协调。过程工程与生态工业中心的目标是实现生态工业建立关键技术支撑体系；并将过程工程与产品工程结合提出解决现代社会“资源紧缺—能源浪费—环境污染”三大基本问题的综合方案，生态工业由理想变为实践的过程将成为现代过程工程科学和技术的发展的重要的推动力；而该中心的建立也为清华大学在多学科融合交叉的基础上实施学科发展与技术创新提供了广阔的发展空间。</p><p> 　　清华大学是综合性研究型大学，许多院系的学术领域涉及化工、冶金、能源、材料、环境等过程工业。这些工业是国民经济的支柱行业。然而过程工业的飞速发展，在不断促进人类生产和生活水平提高的同时，也愈来愈严重地造成了对环境的污染。例如：2000年我国工业废弃物已近10亿吨，其中80％属于化学品污染。化石燃料能源转化过程的SO   2，NOx和CO 2的污染排放分别达2000余万吨，1000余万吨和20余亿吨。全球每年化石燃料燃烧造成的硫排放已超过自然界生态过程硫循环量的四倍，严重破坏了自然生态系统硫的循环平衡。CO   2的排放造成的温室效应也是世人关注的焦点。</p><p> 　　如何解决过程工业“发展与污染”这一对矛盾，是摆在过程工业领域内国内外众多学者面前的重大问题。</p><p> 　　审视20世纪过程工业的发展历程，人们开始认识到现有的“消耗资源能源，制造产品，排放废物”这一单向性生产模式已无法持续下去，而应当代之以仿效自然生态过程物质循环的模式，建立废物能在不同生产过程中循环，多产品共生的工业体系，即生态工业。生态工业构成的经济模式称之为循环经济。循环经济与知识经济并称为世界未来经济发展的两大模式。生态工业的发展模式将取代现有传统工业的模式而成为21世纪工业发展的新模式。正是在这样的背景下，清华大学成立了过程工业与生态工业研究中心，旨在倡导生态工业的理念，构建支持生态工业的关键技术平台，形成循环经济的新模式。</p><p> 　　生态过程工业学具有典型的多学科交叉性和挑战性，实用性和学科前瞻性，相关的学术研究目前已引起多国政府、大学、大公司的高度重视，有关的学术研究已在一些著名大学展开。如美国麻省理工学院（MIT）在全美首先开设了生态工业学的课程，设立了跨院系的研究项目，致力于生态工业可持续发展的研究，并组织相关领域的各种定期和不定期会议，促进学术界、政府、公司之间合作网络的建立；耶鲁大学1997年建立了生态工业研究中心并出版了世界第一份生态工业学杂志，合作伙伴除包括本校相关院系外，尚有澳大利亚、荷兰等国研究机构；普林斯顿大学的能量与环境研究中心在生态工业学研究中也取得较好成果，如铅的工业生态代谢分析等；而康奈尔大学完成了Brow   n－Sv ille生态工业园区的规划工作。目前美国已有20多个城市当局与大公司合作规划建立生态工业园区。而丹麦的Ka lundb o rg工业园区则早在80年代开始发展，它以发电厂、炼油厂为核心，还包括生物制药、水泥厂、地区农业及居民区域。园区内成员间实行废物、废热的有偿供给和交换，实现了物质的部分循环和能源的逐级利用，不仅改善了区域环境，在经济上也取得了很大的效益。</p><p> 　　清华大学成立过程工业和生态工业研究中心是有其雄厚学术基础和长期工作积累的，目前有包括两院院士3名，教授32名，副教授43名在内的研究队伍。其相关学科始建于1947年，并于1956年恢复，研究内容和方向始终瞄准改善资源利用效率，强化生产过程，提高目的产物的收率和选择性，充分的能源利用，节能工艺及设备的研发。60年代发展了萃取法核燃料后处理工艺和设备的研究，为我国原子能工业的发展做出了历史性贡献。80年代以石油化工为主战场，并向生化工程领域发展，在节能、降耗、强化生产过程，提高选择和污染防治等领域进行大量研究工作，特别是在流态化反应工程用于多种合成反应工艺，萃取分离工艺，用于炼油过程、镍钴分离等和新型萃取设备开发（离心萃取器，分散—凝聚型脉冲萃取塔和扁环填料塔等）、大型精馏和特殊精馏设备，高放射废液处理和核燃料循环，化工系统工程用于常减压、催化裂化在线优化等方面取得多项成果，获得国家级自然科学、发明、科技进步奖共17项，获部委和省市级奖励共87项，与数百家生产企业保持着密切的合作关系。</p><p> 　　10年来，清华大学在溶液微扰理论，多分散体系的分子模拟，超短接触裂解反应工程，膜分离工程，超临界技术，亚微米及纳米粉体的工业制备与改性，代谢及基因工程改造发酵菌种和动植物细胞大规模培养等多个学科领域取得显著进展，在国内外著名期刊发表论文2900余篇，其中数百篇为国外SCI、EI、ISTP收录。上述研究成果为进一步建立生态工业技术支持体系奠定了坚实的基础。</p><p> 　　建立生态过程工业首先要求生产中的每一个环节和每一个单元都是清洁的，要用环境友好的清洁生产工艺取代污染工艺，以实现从源头上减少废物的产生；其次是研究易污染原料、催化剂、溶剂、产品的清洁替代品，使产品生命周期全过程均为环境友好；第三是实施过程强化和集成以提高物质和能源的利用率，实现各过程之间的物质循环利用和能源的高效利用，从而降低环境污染负荷。</p><p> 　　清华大学化工科学与技术研究院在生态技术支持体系及产品工程研究方面，已经进行了大量的工作，例如：在催化反应方面用对环境无污染的固体酸（分子筛）催化剂代替污染严重的氢氟酸催化剂用于合成十二烷基苯清洁工艺，取得了显著成果。该工艺不但可以消除生产过程的环境污染，而且还可改变产品中的异构体分布，使得由该工艺合成的十二烷基苯磺酸洗涤剂更容易降解。又如，目前钾肥和冷冻剂生产中，在大量消耗氯气的同时大量产生副产物氯化氢，针对氯元素的工业循环问题提出的氯化氢氧化制氯气的新方法已进入工厂的中试。此外，与美国空气产品公司合作研究用浆态床一步法合成二甲醚作为清洁代替车用柴油的研究，也获得显著进展，该工艺可以大幅度地提高反应的单程转化率和降低产品的成本，而且工艺特别适用于大型化生产，目前正在进行千吨级中试研发。二甲醚作为车用或民用燃料，不仅可以缓解柴油的紧缺，也可以减少柴油车辆易产生的污染。</p><p> 　　生物质能源及生物质化工的研究也是其重点方向。生物质作为可再生资源，通过发酵或裂解用来生产能源和化工原料，对于环境友好和可持续发展有重要意义。清华大学化工系在生物质快速裂解生成生物质油和生物制发酵制乙醇关键技术研究方面，取得显著的进展，正积极推动工业化的实施。此外，用生物技术制备可降解塑料的研究，在“九·五”攻关成果基础上，正进行大规模产业化。用生物法生产1—3丙二醇等化学品的研究也在积极进行中。</p><p> 　　清华大学核研院工程化学研究所在清洁化学工艺方面也取得了多方面的成果。如用萃取法纯化嘌呤类药物（如咖啡因，茶碱，可可碱），黄金冶炼含氰废液回收利用，咖啡因生产氯仿回收，锌矿浸出液锗回收等清洁生产技术都已成功地用于工业生产。</p><p> 　　清洁能源的广泛使用，是实现社会可持续发展的重要条件，核能是可以大规模取代化石燃料的清洁能源，正在开展的先进核燃料循环技术研究，将为提高铀资源的利用率和从根本上解决核电运行产生的长寿命放射性废物问题提供理想可行的途径。近年来在高效镍氢电池和锂离子电池材料研究、在燃料电池等清洁能源研究方面也获得显著进展，部分成果已用于工业生产。</p><p> 　　“生态工业园区”是实施生态工业的系统工程基础。其目标是通过多种产业的综合协调发展，使某一产业的副产物或废料成为另一企业的原料资源加以利用，进而形成物流的“生态产业链”或“生产产业网”，而能流形成多次梯级利用，使在一定界区内的多行业、多产品联合发展，不仅可使资源在产业链中得到充分或循环利用，而且使能量资源和信息资源同时得到充分使用。清华大学化工系已经开展了生态工业系统理论与方法的研究，并与浙江省衢州市合作进行了我国第一个生态工业园区的规划和建设，工作初见成效。</p><p> 　　在生态工业园区规划的过程中，会发现许多“网”、“链”的断点，这为“中心”的实验研究和工业开发指明了方向。如近年来国内开发成功的数十万吨级用于磷石膏分解成二氧化硫和氧化钙的工业技术，就可以把磷肥厂、水泥厂、高硫煤矿、硫酸厂联合形成“生产产业网”，有效地解决磷石膏污染问题，而且使资源得到充分的利用，这种“粘合”技术的优先开发无疑是发展生态工业的重要途径。</p><p> 　　上述实践表明，过程工程与生态工业研究中心的成立无疑将会大大地促进清华大学与过程工业有关各学科的发展。研究中心近期将重点组织若干前沿领域的基础理论研究及其工程应用转化。首先是细微尺度化学工程、分子设计、分子剪裁、纳米制备等；其次是过程强化的热力学和动力学基础理论和技术，包括超临界、等离子体、电场、毫秒接触反应、反应—分离耦合、反应—反应耦合等；第三是清洁能源中的化学工程问题，包括清洁燃料油高效生产过程的超短接触裂解新工艺与工程，大型生物质能源生产的工程问题（高效发酵设备，无水酒精生产技术）；第四是新材料中的化学工程问题，包括粉体工程和亚微米、纳米材料工业制备技术等；最后是生态工业方法论，它着眼于过程工业资源—能源—环境综合考虑，一体化解决，使得工业生态过程与自然生态相容纳，相协调。</p><p>　　20世纪是工程工业飞速发展的100年，在给人类带来繁荣的物质产品的同时，也造成能源的巨大消耗及严重的环境污染。生态工业的目标是取代传统的原料—产品—污染的单向性工业生产模式，实现物质循环、能源的最小消耗和最大程度降低环境污染。我们的理想是使工业生态系统发展成为自然生态系统中的一个子系统与其相容相协调。过程工程与生态工业研究中心的建立，将有力地促进相关学科建设和技术创新，最终建立符合人类可持续发展要求的工业生态系统。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年05月11日 10:25:53　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2012.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120829143909241368313/20120829143909241368313_.html" target="_blank">清华大学环境学院主办生态工业园建设发展论坛</a></h3>
+              <p class="thnews_jqzy">　　清华大学环境学院主办生态工业园建设发展论坛清华新闻网8月29日电（通讯员卢琬莹）8月20日，由清华大学环境学院与北京经济技术开发区共同主办的&ldquo;聚焦高端产业，建设生态文明&mdash;&mdash;北京经济技术开发区建设二十周年暨生态工业园建设发展论坛&rdquo;在北京经济技术开发区召开。商务部外资司副司长邱丽新、环保部科技标准司副司长刘......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2002.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231324828485631/20110225231324828485631_.html" target="_blank">以“资源利用生态化和生态工业系统”为主题...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档以“资源利用生态化和生态工业系统”为主题的香山科学会议召开以“资源利用生态化和生态工业系统”为主题的香山科学会议第198次学术研讨会于12月10－12日在北京香山饭店召开。包括10位两院院士在内的40余位国内外专家出席了本次会议。我校化工系汪家鼎院士、金涌院士、系主任刘铮教授、百人引进计划林章凛教授和生态工程研究中心主任李有润教授作为正式代表参......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231226953158043/20110225231226953158043_.html" target="_blank">清华“过程工程与生态工业研究中心”成立</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华“过程工程与生态工业研究中心”成立光明日报 2001年5月11日记者　宋晓梦　通讯员　刘冬梅本报讯　在清华大学庆祝90周年校庆之际，致力于“循环经济”研究与“生态工业”的清华大学工科学与技术研究院宣布成立“过程工程与生态工业研究中心”，并举行了学术报告会。“循环经济”是国内外学者针对工业发展导致能源与资源过度消耗......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

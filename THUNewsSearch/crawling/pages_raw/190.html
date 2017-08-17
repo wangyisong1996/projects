@@ -1,0 +1,601 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清华大学成为我国第一专利大户</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231212390158882&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><TITLE>Untitled Document</TITLE> <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312"> </HEAD><BODY BGCOLOR="#FFFFFF"><H3 ALIGN="CENTER">清华大学成为我国第一专利大户</H3><P ALIGN="CENTER"> (2001.04.06 新华网) </P><P>新华网北京４月６日电　据《人民日报》（海外版）报道，中国著名高等学府清华大学坚持基础研究与科技攻关并重，跟踪世界科技先进水平，科研成果骄人。 </P><P>一九七八年至二０００年，清华大学共获国家自然科学奖、国家发明奖、国家科技进步奖、国家级星火奖等国家级科技奖励二百七十九项，居全国高校第一；从一九八五年中国实行专利制度以来，累计申请专利一千九百二十九项，授权专利一千一百一十六项，成为中国第一专利大户；设立在该校的国家重点实验室占全国的十分之一。 </P><P>过去五年，清华大学围绕信息、生物、新材料、能源、航天、先进制造、环境等高新技术领域，组织全校力量攻关，取得了一批重大成果并已投入使用。由该校牵头的中国教育科研网已经遍布一百五十个城市，连接了七百所大学，上网用户逾五百万；在汉字识别、语音识别技术方面，ＴＨ━ＯＣＲ综合集成汉字识别系统已在国内拥有百分之六十五的市场占有率，同时还出口国外；“航天清华一号” 微小卫星于二０００年六月二十八日发射成功，已发回世界各地有价值的遥感照片数百张。 </P></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月07日 09:46:26　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2016.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2016/20160406083520024535767/20160406083520024535767_.html" target="_blank">李锋亮：评价科研成果要注重“影响”</a></h3>
+              <p>随着我国高等教育机构的数量与类型越来越多、多样化越来越明显，对高等教育机构及其科研水平进行评价也就显得越来越重要。他山之石，可以攻玉。因此，非常有必要借鉴高等教育强国科研评价的经验与教训，提高我国科研评价的水平，更好地推动我国科研水平的提高。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150525174724591987806/20150525174724591987806_.html" target="_blank">多项“接地气”科研成果有望服务百姓生活</a></h3>
+              <p>　　老年痴呆症有望治愈？裸眼3D成像瓶颈有望克服？哪类恒星是人类宜居行星？近日，多项由北京地区高校探索研究的科技成果在我国多个领域取得重要突破，不仅显现出我国科学家日益强大的自主创新实力，同时更加“接地气”的学术成果也有望更有针对性地服务于百姓生活。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140626152520218798536/20140626152520218798536_.html" target="_blank">“京科九条”试行科研成果公开交易</a></h3>
+              <p>　　6月24日，记者从北京市科委获悉，为全面盘活人、财、物，最大限度激发科技创新活力，北京市科委牵头起草了《加快推进科研机构科技成果转化和产业化的若干意见（试行）》（以下简称“京科九条”）。目前，“京科九条”已获北京市政府审议通过。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20121227122251721192555/20121227122251721192555_.html" target="_blank">我国数百种科技期刊已具有相当的国际影响力</a></h3>
+              <p class="thnews_jqzy">　　我国数百种科技期刊已具有相当的国际影响力专家指出，不应把SCI、SSCI作为判断评价科研成果的唯一标准来源：科技日报 2012-12-27 陈磊今天，《中国学术期刊国际引证报告（2012版）》（简称《CAJ-IJCR》）对外公布，同时2012年度&ldquo;中国最具国际影响力学术期刊&rdquo;和&ldquo;中国国际影响力优秀学术期刊&rdquo;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2011.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110324145632651706986/20110324145632651706986_.html" target="_blank">习近平副主席考察清华文字识别成果应用基地</a></h3>
+              <p>3月22日上午，中共中央政治局常委、中央书记处书记、国家副主席习近平在湖南省长沙市考察了清华TH-OCR文字识别科研成果应用基地——湖南省青苹果数据中心有限公司</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232028765792521/20110225232028765792521_.html" target="_blank">司马义&#8226;艾买提为清华科研成果...</a></h3>
+              <p class="thnews_jqzy">　　司马义&#8226;艾买提为清华科研成果少数民族文字识别系统题词【新闻中心讯】3月19日，全国人大常委会前副委员长司马义&#8226;艾买提在中南海办公室亲切接见了清华电子工程系教师彭良瑞和新疆大学信息学院副院长吐尔根&#8226;依布拉音教授。彭良瑞和吐尔根&#8226;依布拉音汇报了统一平台少数民族文字（蒙藏维哈柯朝）文档识别系统的研制及推广应用情况......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231955140577341/20110225231955140577341_.html" target="_blank">清华科研成果参展中国少数民族语文工作成就...</a></h3>
+              <p class="thnews_jqzy">　　清华科研成果参展中国少数民族语文工作成就展受好评&nbsp;&nbsp;&nbsp; 【新闻中心讯】在11月24-28日举行的中国少数民族语文工作成就展暨民族语文国际学术研讨会上，清华大学电子系丁晓青教授研究组研制成功的“统一平台少数民族文字（蒙藏维哈柯朝）文档识别系统”参展并受到了与会者的一致好评。&nbsp;&nbsp;&nbsp; 此次会议在中央民族大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231735484784879/20110225231735484784879_.html" target="_blank">【校庆专稿】面向国家需求加强科技创新</a></h3>
+              <p class="thnews_jqzy">　　面向国家需求 加强科技创新清华大学“十五”科研成果卓著●郑永平 周襄楠以跻身世界一流大学为目标，根据学校在第二个九年实现重点突破的方针，“十五”期间，面向国家需求，围绕科技创新和高层次人才培养的紧密结合，清华大学科技工作跃上了新台阶、开创了新局面。从数字看“十五”清华科研发展“十五”期间，学校科研经费继续保持快速增长。2005年全校科研经......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2006.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231712656418209/20110225231712656418209_.html" target="_blank">我校4件作品被评为优秀高教科研成果</a></h3>
+              <p class="thnews_jqzy">　　我校4件作品被评为全国优秀高教科研成果中国高等教育学会举办的第六次全国优秀高教科研成果评选年前揭晓。我校4件成果获奖，包括一等奖1部、二等奖1篇、三等奖2篇。这一评选旨在推动群众性的高等教育科研活动，提高教育科学研究的质量与水平，促进教育决策的科学化、民主化。参评范围是2001～2004年发表的论文和出版的专著。23个省、自治区、直辖市高教学会和中国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231603625736754/20110225231603625736754_.html" target="_blank">清华附中教师荣获全国教育科研成果评审一等奖</a></h3>
+              <p class="thnews_jqzy">　　清华附中教师荣获全国教育科研成果评审一等奖【新闻中心讯】近日，清华附中化学特级教师阎梦醒撰写的论文《明星分子对中学化学教学的启示》参加全国教育科研成果评审，被评为一等奖，并获得中央教育科学研究所、全国教育科研成果评审委员会颁发的成果证书。同时，在全国教育科研成果评比中，阎梦醒老师被中央教育科学研究所授予“教育科研先进个人”荣誉称号。阎梦醒在26年的中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2004.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231426671317985/20110225231426671317985_.html" target="_blank">我校知识产权工作获国家认可</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校知识产权工作获国家认可近5年专利申请量累计达2315项、专利授权累计达1108项、申请量年平均增长39％近日，我校以出色的知识产权工作获得了“第一批全国企事业专利试点工作先进单位”称号，我校科研院成果与知识产权办公室主任郑永平副教授获得了“第一批全国企事业专利试点工作先进个人”称号。两项称号由国家知识产权局授予。我校知识产权工作一直......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2004.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225346109905255/20110225225346109905255_.html" target="_blank">我校知识产权工作获国家认可</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校知识产权工作获国家认可近5年专利申请量累计达2315项、专利授权累计达1108项、申请量年平均增长39％近日，我校以出色的知识产权工作获得了“第一批全国企事业专利试点工作先进单位”称号，我校科研院成果与知识产权办公室主任郑永平副教授获得了“第一批全国企事业专利试点工作先进个人”称号。两项称号由国家知识产权局授予。我校知识产权工作一直......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2004.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231424109218339/20110225231424109218339_.html" target="_blank">我校荣获第八届中国专利金奖2项，中国专利...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校荣获第八届中国专利金奖2项，中国专利优秀奖4项第八届中国专利奖评选结果近日颁布。我校工物系康克军教授等发明的“一种可组合移动的集装箱检测系统”专利和微电子所魏少军教授等发明的“采用闪速存储器作内存的智能卡集成电路”专利荣获中国专利金奖；电子系曾烈光教授等发明的“双自法频率预测恢复收端支路时钟的方法及装置”专利、精仪系冯冠平教授等发明的“一种......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2003.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231416765720811/20110225231416765720811_.html" target="_blank">我校上半年专利申请未受“非典”影响</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校上半年专利申请未受“非典”影响今年上半年，北京市虽然受“非典”疫情影响，但我校专利工作依旧稳步发展。截至6月底，全校今年累计申请专利330项，较去年同时期增长了81.3％，其中科技含量较高的发明专利申请为297项，较去年同期增长了62.3％。   尤其在4－6月份，面对突如其来的SARS，我校科技处成果与知识产权办公室的同志克服各种困难，在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231330625377192/20110225231330625377192_.html" target="_blank">清华同方中央空调新技术获专利</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方中央空调新技术获专利北京现代商报 2003年03月11日清华同方人工环境有限公司将清华大学的一项最新技术应用在空气源热泵中央空调产品中，使该产品过去只能在-8度至7度之间工作，一跃扩大到-15度至45度的范围。从而使过去只适合在我国南方使用的这种空调，可以在北方地区大范围推广。这项技术是利用带辅助进气口的涡旋压缩......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231330171408527/20110225231330171408527_.html" target="_blank">我校专利申请继续保持较高增长速度</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我校专利申请继续保持较高增长速度 据统计，2002年我校专利申请量又有较大幅度增长，专利申请总数为583项，其中，发明专利为477项，占总申请数约82%，实用新型106项。申请总数比2001年的441项增长约32%。截至2002年年底，学校累计申请专利数2953项,   其中，发明专利数1970项，实用新型959项，外观......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2002.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231325515525549/20110225231325515525549_.html" target="_blank">国家首次公布专利排名 清华大学名列榜首</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document国家首次公布专利排名 清华大学名列榜首中央人民广播电台 2002-12-18 中国科学技术信息研究所将其在国内首次收集整理的国内发明专利数据于近日正式向社会公布，清华大学（334件）、上海交大（169件）、复旦大学（158件）分获前三名；第4-10名的高校是：浙江大学（136件）、武汉大学（79件）、华南理工大学（73件......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2002.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231305687521299/20110225231305687521299_.html" target="_blank">纳米银令细菌无处藏身</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document纳米银令细菌无处藏身(人民日报 2002年07月09日)李琴华很久以前，人类就发现银具有广谱杀菌作用。古罗马、古波斯甚至更早的时代，人们就开始使用银器来存放液体以免腐败。近代最有名的应用，莫过于沿用至今的Crede预防法，也就是将硝酸银溶液滴入新生儿眼中，预防结膜炎导致的失明。合成抗生素出现以后，由于它们比普通银制剂......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2002.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231300281615509/20110225231300281615509_.html" target="_blank">我校奖励授权专利发明设计人</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校奖励授权专利发明设计人今年，为了落实相关政策，鼓励我校科研人员进行职务发明创造，学校拨专款对2001年授权专利的发明人或设计人进行奖励。授权专利奖励金已于本周全部发放到所涉及的19个院系的教师手中。2001年以清华大学为专利权人的授权专利共有163项（不含公司），其中发明专利99项，实用新型专利64项。发明专利所占比例较高，约占授权专利......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2002.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231259765734496/20110225231259765734496_.html" target="_blank">清华学生项目进了863计划</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document申请四项国家专利一项美国发明专利清华学生项目进了863计划(北京晚报 2002年5月27日)&nbsp;&nbsp;&nbsp;&nbsp;几名清华学生“折腾”出的点子，已被列为国家863重点研究项目，并申请4项国家专利、1项美国发明专利。这个项目将给全国300多万骨缺损患者带来福音。这种与真正的骨骼成份类似的骨修复材料消化......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2002.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231246921159757/20110225231246921159757_.html" target="_blank">2001年我校专利申请量大幅度增长</a></h3>
+              <p class="thnews_jqzy">　　无标题文档2001年我校专利申请量大幅度增长2001年是我国全面实施新专利法的第一年，我校专利申请量大幅度增长，专利申请总数达441项，比2000年的344项增长约29%，其中，发明专利为342项，占总申请数的77.6%，实用新型85项，外观设计14项。在2001年441项专利申请总数中，我校为专利权人的专利申请数为393项，占总申请数的89%，其余......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2002.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231246796974425/20110225231246796974425_.html" target="_blank">我校约400项专利申请获北京市专利基金资助</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校约400项专利申请获北京市专利基金资助为落实《关于加强技术创新，发展高科技，实现产业化》的号召，鼓励北京市单位和个人申请专利，扶持有自主知识产权和市场前景的高新技术产品，加强知识产权保护，推动首都科技进步和经济建设，北京市政府决定自2000年6月起设立专利申请专项基金，重点支持北京地区重点发展的技术领域和行业，如电子、信息、光机电一体化、生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2002.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231246234176151/20110225231246234176151_.html" target="_blank">我校3项专利获中国专利优秀奖</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校3项专利获中国专利优秀奖国家知识产权局近日公布了第七届中国专利奖评选结果。我校有3项发明专利获中国专利优秀奖：计算机系蔡莲红、魏华武发明的&quot;基于波形编辑的汉语文字-语音转换方法及系统&quot;；核研院安继刚、周立业等7人发明的&quot;移动式γ数字辐射成像无损检测方法与装置&quot;；工物系王经瑾、康克军等11人发明的&qu......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2001.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231245000765378/20110225231245000765378_.html" target="_blank">学校《关于加强专利工作的若干意见》出台</a></h3>
+              <p class="thnews_jqzy">　　无标题文档学校《关于加强专利工作的若干意见》出台最近，根据新修改的《中华人民共和国专利法》和我校对知识产权工作的&quot;十五&quot;规划，科技处起草的《清华大学关于加强专利工作的若干意见》，已在校务会上讨论通过。《意见》强调，学校要对每项授予专利权的发明创造给予不同程度的奖励，对转化实施后经济效益显著的专利技术授予&quot;专利金奖&quo......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2001.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225350984678482/20110225225350984678482_.html" target="_blank">学校《关于加强专利工作的若干意见》出台</a></h3>
+              <p class="thnews_jqzy">　　无标题文档学校《关于加强专利工作的若干意见》出台最近，根据新修改的《中华人民共和国专利法》和我校对知识产权工作的&quot;十五&quot;规划，科技处起草的《清华大学关于加强专利工作的若干意见》，已在校务会上讨论通过。《意见》强调，学校要对每项授予专利权的发明创造给予不同程度的奖励，对转化实施后经济效益显著的专利技术授予&quot;专利金奖&quo......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225351578350327/20110225225351578350327_.html" target="_blank">我校被确定为第一批全国企事业专利工作试点单</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校被确定为第一批全国企事业专利工作试点单位为适应我国加入WTO的新形势，大力推进企事业知识产权和技术创新工作，国家知识产权局、国家经贸委联合下发了《关于开展全国企（事）业专利试点工作的通知》，经各省、自治区、直辖市知识产权管理局组织择优推荐、申报，并经国家知识产权局、国家经贸委审查后，全国共批准60家单位为第一批全国企事业专利工作试点单位，其......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2001.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231241343743779/20110225231241343743779_.html" target="_blank">我校被确定为第一批全国企事业专利工作试点单</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校被确定为第一批全国企事业专利工作试点单位为适应我国加入WTO的新形势，大力推进企事业知识产权和技术创新工作，国家知识产权局、国家经贸委联合下发了《关于开展全国企（事）业专利试点工作的通知》，经各省、自治区、直辖市知识产权管理局组织择优推荐、申报，并经国家知识产权局、国家经贸委审查后，全国共批准60家单位为第一批全国企事业专利工作试点单位，其......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231216671717169/20110225231216671717169_.html" target="_blank">清华大学“九五”期间教学科研成果扫描（风...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学“九五”期间教学科研成果扫描（风雨九十载 水木湛清华）(人民日报 2001年04月24日第十版)五年攻坚 五年跨越回顾清华大学90年的发展历程，“九五”期间是清华历史上发展最迅速的时期。在科教兴国战略引领下，清华大学各方面的事业取得巨大进展，迈入世界高水平大学的行列。这些最新的教学、科研成就，反复证明着一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231212406168498/20110225231212406168498_.html" target="_blank">清华大学科研成果骄人</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document面向国民经济建设 跟踪世界尖端科技清华大学科研成果骄人(人民日报海外版 2001年04月06日第一版)本报北京4月5日讯 记者傅振国、王君超报道：建高温气冷反应堆、发射卫星、建设高速信息网络、领先纳米基础研究……过去曾被称为“红色工程师的摇篮”的清华大学，今日正以骄人的科技实力和优势，向着“建设综合性、研究型、开放式的世......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

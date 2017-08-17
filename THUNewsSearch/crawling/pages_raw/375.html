@@ -1,0 +1,1091 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>光波长550至770纳米视觉最好</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231216281767323&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><p align="center">“白纸黑字”不能常看</p><h3 align="center"> 光波长550至770纳米视觉最好</h3><p align="center">（北京晚报 2001年4月22日）</p><p> 　　本报讯（记者郑勇）人们已经习惯了“白纸黑字”，但是“白纸黑字”可能就是造成近视的原因。日前，清华慧石微量子项目部公布了研究结果，波长550至770纳米的光频率是人眼视网膜感受最好的微光量子环境。</p><p> 　　据介绍，光是由高速运动的光量子组成，视网膜接受光量子消耗一定能量产生刺激，刺激传递到视觉中枢就形成了视觉。在这个过程中，光量子的刺激程度是形成视觉环境舒适的关键。常用书本为“白纸黑字”，这样构成了一个强光弱色的视觉环境：反射光很强，却没有什么色彩。眼睛受的刺激很强，但色觉功能受到抑制，致使视觉能力降低，出于本能，读者会把书本拉近。这样，眼睛受刺激更强，而眼睫状肌也被迫处于过度收缩状态，眼睛特别容易感到疲劳，时间长了就会形成功能调节性近视。</p><p> 　　清华慧石科技有限公司总经理胡向明告诉记者，人眼辨别物体靠两种视觉能力，一是亮觉，即利用物体间明暗差别来辨认；另一种是色觉，即利用物体间色彩差别来辨认。当两种功能充分协调发挥作用时，眼睛辨别东西才会轻松、有效。但是，只注意光照的明度，而不考虑色彩等方面的协调，成为当前视觉环境污染的“症结”所在。</p><p> 　　据悉，美国科学家曾经做过一个实验，对不同颜色的光对人眼的刺激深度进行对比，测定恢复时间。结果恢复时间最短的是红色，其次是橙色和黄色。白色为全频光，全反射，对人眼睛刺激程度最深。上海眼科专家研究表明，黄底色的薄本能使眼疲劳减缓60．9％；英国艾塞克斯大学研究发现，用浅红等颜色的薄膜覆盖书本，能克服一定阅读障碍，并使阅读效果提高25％。</p><p> 　　据了解，微量子视觉环境属于边缘学科，涉及微观物理学、光量子学、视觉生理学等领域。清华慧石微量子项目部集中了清华大学光学、电子、电脑、视觉等相关专业的研究人员。主要课题是研究什么是最适合人眼视觉环境以及如何改善现有视觉环境，创造良好的新视觉环境。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月23日 08:31:07　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151110152639933789913/20151110152639933789913_.html" target="_blank">首届水和污水处理纳米技术国际论坛在深圳研...</a></h3>
+              <p>11月5日至6日，第一届水和污水处理纳米技术国际论坛（深圳）在深圳研究生院召开。此次会议由清华-康达环境纳米工程技术研究院和美国纳米系统工程研究中心（US Nanosystems Engineering Research Center）联合举办。来自美国、澳大利亚、日本、香港以及大陆的顶尖高校，环保行业龙头企业等单位的水和污水处理纳米技术的学术和产业领军人才共聚一堂，交流最新成果，探讨水和污水处理纳米技术的发展方向以及产学研合作机制。深圳研究生院院长康飞宇亲切会见了参会嘉宾，并为论坛致开幕词。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151030151533796678711/20151030151533796678711_.html" target="_blank">化学系王训等发现无机单壁纳米管通用的合成...</a></h3>
+              <p>2015年10月29日，清华大学化学系王训课题组在《自然·通讯》(Nature Communications)在线发表题为《无机单壁纳米管的通用合成方法》(General synthesis of inorganic single-walled nanotubes)的研究论文，报道了无机单壁纳米管的通用合成体系及其生长原理和规律。研究发现当无机纳米材料的尺寸被限制在亚纳米尺度的时候，可以产生类似高分子的柔性，并因此能够演化成为单壁纳米管。这一成果不仅在相似的体系中合成了四种全新种类的单壁纳米管，并有望用于指导其它无机单壁纳米管的合成。该论文由化学系博士生倪兵、刘慧玲，毕业生王鹏鹏、何杰共同完成。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150921171217361816570/20150921171217361816570_.html" target="_blank">自然科学基金委主任杨卫调研微纳米力学中心</a></h3>
+              <p>9月16日下午，国家自然科学基金委员会主任杨卫一行六人来清华大学微纳米力学与多学科交叉创新研究中心考察调研。清华大学副校长尤政陪同调研。杨卫首先实地考察了微纳米力学中心实验平台。分别参观了结构超滑与器件实验室、纳米新材料实验室、微纳流动实验室、微纳米生物技术实验等。中心实验室汇集了力学、机械、材料、化学、生物以及微纳米加工的常用中小型设备，兼具综合性与开放性，对进行多学科交叉创新研究提供了便利的条件。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150917110234832412622/20150917110234832412622_.html" target="_blank">清华微纳米力学与多学科团队在石墨层间解离...</a></h3>
+              <p>近日，清华大学微纳米力学与多学科交叉研究中心（简称CNMM）郑泉水教授与美国宾夕法尼亚大学David J. Srolovitz教授的联合研究团队在石墨层间解理能研究上取得重大进展，相关工作以“Measurement of the cleavage energy of graphite”（石墨层间解离能的测量）为标题发表在国际著名期刊《自然通讯》（Nature Communications）上。文章的第一作者为清华大学CNMM暨航天航空学院的博士生王稳。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150707155958287750681/20150707155958287750681_.html" target="_blank">郑泉水等在《自然-纳米技术》发文阐述水在...</a></h3>
+              <p>7月6日，清华大学微纳力学中心暨XIN中心郑泉水教授课题组在《自然-纳米技术》（Nature Nanotechnology）上在线发表题为《由声子调制的水在碳纳米管内的输运》(Water transport inside carbon nanotubes mediated by phonon-induced oscillating friction) 的研究论文，阐述了水在碳纳米管中流动的新机制。清华大学航天航空学院工程力学系2004级博士生（2010年毕业，后在英国伦敦纳米技术中心和以色列特拉维夫大学做博士后） 马明是该论文的第一作者，郑泉水和瑞士日内瓦大学教授Francois Grey（2010-2013为清华微纳力学中心教授）为论文通讯作者，清华大学工程力学系为论文的第一单位。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2015.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150227104448901154910/20150227104448901154910_.html" target="_blank">深圳研究生院与康达公司签约成立环境纳米工...</a></h3>
+              <p>近日，清华大学深圳研究生院与康达国际环保有限公司举行签约仪式，联合成立“环境纳米工程技术研究院”。康达国际环保公司将在5年期间投入5000万元，在清华大学深圳研究生院能源与环境大楼建立先进的环境纳米技术研发平台，发展新型的水污染控制理论体系，培养高层次人才，研发和应用先进技术及装备。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2015.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150216170442758709448/20150216170442758709448_.html" target="_blank">清华—康达环境纳米工程技术研究院成立</a></h3>
+              <p>清华大学深圳研究生院和康达国际环保有限公司联合成立“环境纳米工程技术研究院”，10日上午，双方举行签约仪式并为该研究院揭牌。据悉，康达国际环保公司将在5年期间投入5000万元，在清华大学深研院新近封顶的能源与环境技术创新基地，建立世界一流的环境纳米工程技术研发平台，培养高层次的研发人才，持续研发系列化的技术和装备，建立适应纳米技术特点的新型理论体系。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140424164528135704246/20140424164528135704246_.html" target="_blank">交叉创新中心沙龙第二场聚焦纳米尺度前沿探究</a></h3>
+              <p class="thnews_jqzy">　　交叉创新中心沙龙系列活动第二场聚焦纳米尺度前沿探究清华新闻网4月24日电XIN中心沙龙系列活动第二场于4月16日在信息技术科学大楼举行。沙龙特邀来自麻省理工学院的巴旺迪教授、北京大学生物动态光学成像中心副研究员孙育杰以及电子工程系助理教授鲍捷作为本次沙龙的主讲人，共同探讨了纳米尺度的前沿探究。本场沙龙以量子点技术为契机，围绕该领域内全球最新进展与动向......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140408161650244807953/20140408161650244807953_.html" target="_blank">纳米比亚总理根哥布访问清华并演讲</a></h3>
+              <p>根哥布总理访问清华大学，发表了题为“坚持信念，永不言弃”的演讲，讲述自己的传奇经历，介绍非洲新变化。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140219140350605686855/20140219140350605686855_.html" target="_blank">单原子层纳米金属材料在清华研制成功</a></h3>
+              <p class="thnews_jqzy">　　单原子层纳米金属材料研制成功来源：人民网 2014-02-18 赵竹青据科技部网站报道，近日，清华大学李亚栋院士团队在世界上首次成功制备出单原子层纳米铑片，相关成果发表在国际权威学术期刊《自然－通讯》上。自石墨烯发现以来，科学界对含离域大P键的单层材料的研究集中在具有层状结构相关材料体系方面。由于金属键无方向性而易于形成三维的紧密堆积结构，迄今为止具......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131203085931838232403/20131203085931838232403_.html" target="_blank">清华举行纳米材料科学的跨学科发展博士生专...</a></h3>
+              <p class="thnews_jqzy">　　清华举行&ldquo;纳米材料科学的跨学科发展&rdquo;博士生学术论坛专题论坛清华新闻网12月3日电（研通社记者黄承焕 唐啸 刘明明）12月1日，清华大学&ldquo;纳米材料科学的跨学科发展&rdquo;博士生学术论坛专题论坛在文科馆大同厅和新水利馆举行。论坛由主论坛和两个分论坛组成，主论坛包括2场专家特邀报告和1场学生特邀报告，分论坛包括3场教师......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131010145835776985916/20131010145835776985916_.html" target="_blank">清华科技园举办纳米专场发布会</a></h3>
+              <p class="thnews_jqzy">　　清华科技园举办纳米专场发布会来源：中国科学报 2013-10-10 沈春蕾日前，北京市战略性新兴产业孵育基地新产品发布会纳米专场在清华科技园举行。2012年，北京市提出了&ldquo;北京纳米科技产业跃升工程&rdquo;，同年4月份由北京市科委与怀柔区政府联合成立了北京纳米科技产业园。今年初，清华科技园启迪创业孵化器开始在北京市科委的指导下开展纳米......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130926160057796867001/20130926160057796867001_.html" target="_blank">清华科技园举办纳米专业孵化器展示活动</a></h3>
+              <p class="thnews_jqzy">　　清华科技园举办纳米专业孵化器展示活动来源：科技日报 2013-9-26 杨靖近日，由北京高技术创业服务中心、北京创业孵育协会主办，清华科技园启迪创业孵化器承办的北京市战略性新兴产业孵育基地新产品发布会纳米专场在清华科技园成功举行，来自北京市科委、中关村海淀园管委会、纳米行业企业代表、纳米研究机构、投融资机构、创业服务机构、科技园及孵化器等单位的代表近10......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130910152542664653387/20130910152542664653387_.html" target="_blank">中英博士生设计搭建低成本原子力显微镜</a></h3>
+              <p class="thnews_jqzy">　　中英博士生设计搭建低成本原子力显微镜来源：科技日报 2013-9-10 林莉君近日，清华大学暑期学校《从乐高到纳米显微镜》课程成果展示上，来自牛津大学、伦敦大学学院、清华大学和北京大学的中英两国博士生，展示了他们历时五天、用乐高积木和其他电子元件设计、搭建的原子力显微镜，并探究其应用于中国中学教育的可能性。据介绍，原子力显微镜是一种可用来研究包括绝缘......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130815152333754225397/20130815152333754225397_.html" target="_blank">【人物】张如范：志在制备出世界最长的碳纳...</a></h3>
+              <p>张如范，清华大学化学工程系直博四年级学生，师从魏飞教授。在攻读博士期间，在导师的指导和与科研团队其他科研人员的通力协作下张如范成功制备出世界上最长的碳纳米管，实现了单根碳纳米管的光学可视化及宏观尺度下的可控操纵，首次发现了宏观尺度碳纳米管结构超润滑现象。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130730173856396147713/20130730173856396147713_.html" target="_blank">碳纳米管杂化材料工程中心落户泾河新城</a></h3>
+              <p class="thnews_jqzy">　　强度：钢的100倍 重量：钢的1/6碳纳米管杂化材料工程中心落户泾河新城量产后将形成百亿级产值规模来源：三秦都市 2013-07-30 杨勇7月26日，西咸新区泾河新城石墨烯&mdash;碳纳米管杂化材料工程中心项目签约仪式在西安香格里拉大酒店举行，该项目由西咸新区泾河新城管委会与陕西国能锂业有限公司联合清华大学组建，将有力促进中国锂产业的深度转化和升级......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130722151035403818354/20130722151035403818354_.html" target="_blank">清华大学制备出世界最长碳纳米管</a></h3>
+              <p class="thnews_jqzy">　　清华大学制备出世界最长碳纳米管来源：CCTV《新闻联播》2013-07-21日前，清华大学成功制备出单根长度达半米以上的碳纳米管，创造了新的世界纪录。碳纳米管由碳原子组成，直径仅为人头发的千分之一，重量轻、韧性强，单位质量上的拉伸强度更是钢的276倍，可以制造出&ldquo;拉不断&rdquo;的绳子、&ldquo;扯不破&rdquo;的纤维布、&l......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130722113303553471015/20130722113303553471015_.html" target="_blank">我国制备出世界最长碳纳米管</a></h3>
+              <p class="thnews_jqzy">　　我国制备出世界最长碳纳米管来源：人民日报　2013-07-19 赵永新在北京市科委支持下，清华大学魏飞教授团队成功制备出单根长度达半米以上的碳纳米管，创造了新世界纪录。相关文章近日发表在国际著名期刊《美国化学会纳米》上，得到国际同行的高度评价。碳纳米管单位质量的拉伸强度是钢铁的276倍，其力学性能远超过其他材料。魏飞团队在制造设备、制备工艺方面进行大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130718131910879460107/20130718131910879460107_.html" target="_blank">清华教授制最长碳纳米管</a></h3>
+              <p class="thnews_jqzy">　　清华教授制最长碳纳米管赶超美国 天梯登月圆梦在望来源：大公报 2013-7-18坐着&ldquo;电梯&rdquo;去月球？在中国科学家成功制备出世界最长碳纳米管后，这些科幻的场景将有可能成为现实。值得注意的是，美国太空近年来亦相当重视&ldquo;月球天梯&rdquo;计划，并设立奖项鼓励科学家研究有关技术。中国科学家后发先至攻破技术难关，别具象征意义......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130718122338220586521/20130718122338220586521_.html" target="_blank">世界最长碳纳米管在京造出</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;太空天梯&rdquo;之梦又近一步世界最长碳纳米管在京造出来源：北京日报 2013-7-18 童曙泉十几年前，《科学美国人》杂志曾提出一个梦想，在地球和月球之间搭建一座&ldquo;太空天梯&rdquo;，如今这个梦想又近了一步。近日，市科委支持的科研项目取得世界性突破&mdash;&mdash;成功制备出世界上最长的、单根长度达半米以上的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130717151628803108996/20130717151628803108996_.html" target="_blank">我成功制备出世界最长碳纳米管</a></h3>
+              <p class="thnews_jqzy">　　乘坐&ldquo;电梯&rdquo;登月或成现实我成功制备出世界最长碳纳米管来源：科技日报 2013-7-17 申明爬上&ldquo;梯子&rdquo;摘星星，坐着&ldquo;电梯&rdquo;去月亮，这些科幻的场景，将有可能成为现实。近日，在北京市科委支持下，清华大学魏飞教授团队成功制备出单根长度达半米以上的碳纳米管，创造了新世界纪录，这也是目前所有......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130716141023548659357/20130716141023548659357_.html" target="_blank">清华魏飞教授团队制备出世界最长碳纳米管</a></h3>
+              <p>近日，清华魏飞团队成功制备出世界上最长的、单根长度达半米以上的碳纳米管，这也是目前所有一维纳米材料长度的最高值。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9659/2013/20130711112555588907256/20130711112555588907256_.html" target="_blank">超润滑实验速度：从蜗牛爬飙至时速90公里</a></h3>
+              <p class="thnews_jqzy">　　超润滑实验速度：从蜗牛爬飙至时速90公里来源：科技日报 2013-7-11 林莉君清华大学和以色列特拉维夫大学的研究人员合作发现，原本仅限于学术领域的超润滑现象可以让微器件以每小时90公里的速度发生相对滑动。未来可能的应用包括小型化的硬盘读写磁头、用于无线通讯的高频振荡器以及其他依赖高速运动的微器件。清华大学微纳米力学中心主任郑泉水教授课题组的这一研......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2013/20130626141439350814111/20130626141439350814111_.html" target="_blank">中丹科学家合作开发出纳米书写技术</a></h3>
+              <p class="thnews_jqzy">　　电子束为&ldquo;墨&rdquo; 石墨烯当&ldquo;纸&rdquo;中丹科学家合作开发出纳米书写技术来源：科技日报 2013-6-26 常丽君据物理学家组织网6月24日报道，中国清华大学和丹麦理工大学科学家合作，演示了一种简单而有效的方法：用电子束有选择地打破石墨烯单分子层的碳原子键，可实现在纳米尺度上书写。这种纳米书写技术为将来以极高分辨率记......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130620114343903965402/20130620114343903965402_.html" target="_blank">超顺排碳纳米管将大规模生产</a></h3>
+              <p class="thnews_jqzy">　　超顺排碳纳米管将大规模生产来源：中国科学报 2013-6-20 郑金武6月18日，由中科院院士、清华大学教授范守善带领团队研发的超顺排碳纳米管阵列产业化项目，正式签约入驻北京纳米科技产业园。据悉，该成果历经10余年，实现了从原创性基础研究到大规模生产应用的全过程，目前已推出碳纳米管薄膜手机触摸屏等产品，年内产能将达到300万片/月。超顺排碳纳米管阵列......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130426143206492831122/20130426143206492831122_.html" target="_blank">重大研究计划项目纳米界面超润滑检测技术与...</a></h3>
+              <p class="thnews_jqzy">　　重大研究计划项目&ldquo;纳米界面超润滑检测技术与机理研究&rdquo;启动&nbsp;清华新闻网4月26日电（通讯员赵炜） 4月11日至12日，以清华大学为项目第一承担单位、郑泉水教授为首席科学家的&ldquo;纳米界面超润滑检测技术与机理研究&rdquo;重大研究计划项目启动会在清华紫光国际交流中心召开。教育部科技司基础处副处长邹晖、科技部基础研......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130422111043800732055/20130422111043800732055_.html" target="_blank">清华魏飞等《自然》子刊报碳纳米管光学可视化</a></h3>
+              <p>清华大学化工系魏飞团队在Nature Communications 发文，报道了通过在单根超长碳纳米管上沉积二氧化钛纳米颗粒，实现单根碳纳米管的光学可视化观察。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130304112420224751790/20130304112420224751790_.html" target="_blank">清华牵头承担纳米生物机器的可控组装项目启动</a></h3>
+              <p class="thnews_jqzy">　　清华牵头承担国家重大科学研究计划项目&ldquo;纳米生物机器的可控组装与多功能集成&rdquo;启动&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网3月4日电2月28日，由清华大学牵头承担的国家重大科学研究计划项目&ldquo;纳米生物机器的可控组装与多功能集成&rdquo;在清华大学召开启动会。&nbsp;&nbsp;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121210112343047635574/20121210112343047635574_.html" target="_blank">清华大学—莱斯大学纳米材料学术研讨会召开</a></h3>
+              <p class="thnews_jqzy">　　清华大学&mdash;莱斯大学纳米材料学术研讨会召开清华新闻网12月10日电12月3-4日，清华大学-莱斯大学纳米材料学术研讨会在美国莱斯大学举行。研讨会主题为&ldquo;纳米材料&rdquo;，这是清华大学材料系第2次对莱斯大学进行学术交流访问，也是两校师生之间第4次展开学术交流活动。清华大学材料系4名教师及9名学生一行13人参加了学术研讨会。图为参......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120913145739244999750/20120913145739244999750_.html" target="_blank">清华《纳米研究》影响因子达6.970</a></h3>
+              <p class="thnews_jqzy">　　清华《纳米研究》影响因子达6.970来源：科技日报 2012-09-13 铁铮9月7日，清华大学出版社组织开展了高水平国际期刊研讨，邀请有关专家为进一步办好《纳米研究》期刊出谋划策。据介绍，汤森路透公司6月28日公布了2011年SCI期刊的影响因子。清华大学《纳米研究》期刊的影响因子达6.970。据悉，该期刊不仅在中国大陆被SCI收录的期刊中位于第三......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120911145017859979695/20120911145017859979695_.html" target="_blank">《纳米研究》跻身一流期刊</a></h3>
+              <p class="thnews_jqzy">　　《纳米研究》跻身一流期刊来源：中国科学报 2012-09-11 郑金武 铁铮记者近日从清华大学获悉，汤森路透公司前不久公布了2011年SCI期刊的影响因子，该校《纳米研究》期刊的影响因子达6.970。该期刊影响因子在中国大陆被SCI收录期刊中位列第三，为教育部主管期刊中影响因子最高。2008年7月创刊的这份期刊，集中发表纳米研究领域世界一流科研机构原......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120604111353271132559/20120604111353271132559_.html" target="_blank">戈钧等在《自然·纳米技术》报道新型含酶微...</a></h3>
+              <p>该成果提出了一种合成含酶杂化纳米花的新方法，并结合生物催化实验证实了纳米花结构能够有效提高酶分子的体外催化活性和催化稳定性。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110531145737992903649/20110531145737992903649_.html" target="_blank">清华外籍教授在《科学》发表材料纳米级新测...</a></h3>
+              <p>清华英国籍教授安迪联合其他科学家开发出一种利用透射电子显微镜对纳米材料进行直接三维定量表征的新方法。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232604421201754/20110225232604421201754_.html" target="_blank">深圳清华-斯坦福-伯克利生物与纳米医药论...</a></h3>
+              <p class="thnews_jqzy">　　深圳清华-斯坦福-伯克利生物与纳米医药论坛举行【新闻中心讯 通讯员 黄敏】12月7日，深圳清华-斯坦福-伯克利生物与纳米医药论坛在深圳大学城图书馆举行。来自美国斯坦福大学的马克&#8226;凯伊（Mark Kay）教授、伯克利加州大学的杰拉德&#8226;马瑞奥特（Gerard Marriott）教授、清华大学生命学院罗永章教授以及清华大学深圳研究生院黄......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232603015380002/20110225232603015380002_.html" target="_blank">【校友访谈】范守善：中国纳米科技的领军人</a></h3>
+              <p class="thnews_jqzy">　　范守善：中国纳米科技的领军人——访清华大学1965级校友范守善■ 谢塞恩 沈非若 韩亦沫范守善，男，1965年以优异的成绩考入清华大学物理系并于1970年取得理学学士学位，1973-1975年在清华大学固体物理研究班学习。1978年，作为中国恢复研究生招生制度的第一批学生入选清华大学研究生院，并于1981年获得理学硕士学位。其后一直在清华大学任教。曾在M......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232511187173743/20110225232511187173743_.html" target="_blank">欧盟国际合作成员国纳米网络年会首次在中国...</a></h3>
+              <p class="thnews_jqzy">　　欧盟国际合作成员国纳米网络年会首次在中国召开【新闻中心讯】6月14日，由欧盟委员会主办，中国微米纳米技术学会（CSMNT）承办的2010欧盟国际合作成员国纳米网络（ICPC NanoNet）年会在北京清华紫光国际交流中心召开。这是ICPC NanoNet的第二届年会，也是该年会第一次在中国举办。共有来自全世界4个大洲、28个国家的超过80位代表，包括政府......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225232453500957951/20110225232453500957951_.html" target="_blank">清华东大学者共同关注生物工程与纳米生物技术</a></h3>
+              <p class="thnews_jqzy">　　清华东大学者共同关注生物工程与纳米生物技术【新闻中心讯 通讯员 蒋国强】“东大-清华周”生物工程与纳米生物技术研讨会于5月14日下午在东京大学工学部举行。来自清华大学化工系和医学院的学者与来自东京大学工学部生物工程系、材料工程系以及生产技术研究所的学者就医药生物工程及生物工程与纳米生物技术领域的前沿、热点问题进行热烈和充分学术交流与讨论，清华大学关于生物......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232311875435478/20110225232311875435478_.html" target="_blank">迄今规模最大的国际纳米管科学与应用会议在...</a></h3>
+              <p class="thnews_jqzy">　　迄今规模最大的国际纳米管科学与应用会议在清华举行【新闻中心讯 通讯员 骞伟中】6月26日，第十届国际纳米管科学与应用会议（Tenth International Conference on the Science and Application of Nanotubes，NT09）在清华大学大礼堂闭幕。会议正式出席的注册代表共612人，另外有北京各高校科......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2009.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232311062284175/20110225232311062284175_.html" target="_blank">摩擦学国家重点实验室：开启纳米抛光应用之门</a></h3>
+              <p class="thnews_jqzy">　　雒建斌教授带领团队研发的“超精表面抛光、改性和测试技术及其应用”获国家科技进步二等奖开启纳米抛光应用之门●学生记者　苏鹏霁 俞理晓温诗铸院士和雒建斌教授（右）在实验室里&nbsp; 摄影/路新春先进电子制造是制造技术的最前沿，它的水平代表着一个国家制造水平的高低。而我国却面临着这样的困境：一方面电子产品市场蓬勃发展；另一方面，作为“世界第一制造大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2009.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232309109354877/20110225232309109354877_.html" target="_blank">碳纳米管发现者饭岛澄男受聘为清华名誉教授</a></h3>
+              <p class="thnews_jqzy">　　碳纳米管发现者饭岛澄男受聘为清华名誉教授【新闻中心讯 通讯员 隆晓菊】6月21日下午，碳纳米管的发现者、日本名城大学教授饭岛澄男受聘清华大学名誉教授，聘任仪式暨学术报告会在主楼报告厅举行。校党委常务副书记、副校长陈旭出席并为饭岛澄男教授颁发了名誉教授聘书。材料系主任张政军主持了仪式。受聘仪式后，饭岛澄男发表了题为《碳纳米管和电子显微学》的演讲。随后，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2009.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232249687618711/20110225232249687618711_.html" target="_blank">李亚栋：向纳米材料研究的高峰不懈攀登</a></h3>
+              <p class="thnews_jqzy">　　李亚栋教授带领团队完成的“功能纳米材料的合成、结构、性能及其应用探索研究”获国家自然科学二等奖向纳米材料研究的高峰不懈攀登●新闻中心实习记者 刘蔚如李亚栋教授（前排右）和团队成员一起讨论（刘煜原　摄影）十年磨一剑，以此来形容李亚栋教授和团队这些年来的研究工作也许再合适不过。从1999年初调入清华，李亚栋就开始组建科研团队，并选择功能纳米材料的合成......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232241828302186/20110225232241828302186_.html" target="_blank">破译人骨组装“密码”“断骨再生”梦想成真</a></h3>
+              <p class="thnews_jqzy">　　破译人骨组装“密码”“断骨再生”梦想成真——崔福斋教授带领团队研发的“纳米晶磷酸钙胶原基骨修复材料”获国家技术发明奖二等奖●新闻中心学生记者 吴婷婷骨作为人体最大的组织器官，承担着生命活动的重要职责，却最容易引起缺损，每年有数百万的骨组织缺损患者需要接受手术治疗。在我国这样一个人口大国，据估计，每年因交通事故和生产安全事故所致创伤骨折、脊柱退行性疾病及骨......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232158984994222/20110225232158984994222_.html" target="_blank">清华教授研制出碳纳米管薄膜“扬声器”</a></h3>
+              <p class="thnews_jqzy">　　清华教授研制出碳纳米管薄膜“扬声器”【新闻中心讯】清华大学物理系范守善院士、姜开利副研究员领导的科研小组的一项最新研究发现，碳纳米管薄膜在有音频电流通过时，会具有类似“扬声器”的功能。这些“扬声器”的厚度只有几十纳米，而且是透明、柔软和可伸长的，它们可以被裁剪为任意形状和大小。相关论文发表在《纳米快报》（Nano Letters）上。研究表明，向非常......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232156484253331/20110225232156484253331_.html" target="_blank">两岸清华大学举行纳米科技学术研讨会</a></h3>
+              <p class="thnews_jqzy">　　两岸清华大学举行纳米科技学术研讨会【新闻中心讯】10月27－28日，“2008年两岸清华大学纳米科技学术研讨会”在清华-富士康纳米技术中心举行，这是继去年在台湾新竹清华大学召开的纳米科技研讨会之后的第二届以纳米科技为主题的两岸专题学术研讨会。大会由本届研讨会组委会主席、中科院院士、北京清华大学范守善教授主持。大会主席北京清华大学的陈旭副校长和台湾新竹......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2007.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231905906105034/20110225231905906105034_.html" target="_blank">多学科携手 共探纳米未来——2007清华...</a></h3>
+              <p class="thnews_jqzy">　　多学科携手 共探纳米未来——2007清华博士生专题学术论坛聚焦纳米科技【新闻中心讯 研通社通讯员 刘果】6月9日来自清华材料系、化学系、精仪系、航院、物理系、微电子所、化学工程系、机械系8个院（系、所），以及中国科学院、北京航空航天大学、北京化工大学、石家庄铁道学院等高校的博士生与纳米科学领域的专家学者近200人，参加了在清华－富士康纳米科技研究中心举......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2007.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231842625814233/20110225231842625814233_.html" target="_blank">"妙手"连通纳米材料与宏观世界--记清华...</a></h3>
+              <p class="thnews_jqzy">　　“碳纳米管宏观体的研究”获国家自然科学奖二等奖“妙手”连通纳米材料与宏观世界●新闻中心记者 程曦　在奇妙而又神秘的纳米世界里，碳纳米管是最具代表性的材料之一。它由石墨层片按一定螺旋角卷曲而成，具有独特的结构、优异的性能和广阔的应用前景。然而自从1991年被日本电镜学家发现后，碳纳米管大多只能以微米量级的“娇小身躯”存在着，这影响了人们对其性能和应用的认......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2006.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231812875570311/20110225231812875570311_.html" target="_blank">2006清华―康奈尔纳米科学与技术研讨会...</a></h3>
+              <p class="thnews_jqzy">　　2006清华―康奈尔纳米科学与技术研讨会在清华举行【新闻中心讯 记者 李 含】10月9日至10日，清华―康奈尔纳米科学与技术研讨会在清华－富士康纳米科技研究中心报告厅举行。来自清华大学和康奈尔大学相关领域的专家学者，在为期两天的研讨会中，就纳米科学技术中的物理学、化学和工程学以及纳米生物技术等领域中的新方法和新发展做了主题报告，并进行了交流。根据......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231750000633339/20110225231750000633339_.html" target="_blank">寻找纳米技术工程化的通路-—记清华大学“...</a></h3>
+              <p class="thnews_jqzy">　　寻找纳米技术工程化的通路—记清华大学“微/纳米尺度力学与智能材料的力学”创新研究群体群体档案清华大学“微/纳米尺度力学与智能材料的力学”创新群体主要依托于工程力学系。自2001年以来，群体成员在微/纳米尺度力学、智能材料和结构力学、超高速断裂研究三个方向取得了具有较大国际影响的创新性成果。群体成员包括：杨卫、郑泉水、方岱宁、黄克智、余寿文、庄茁、冯西......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231745734668468/20110225231745734668468_.html" target="_blank">清华研制的纳米人工骨即将出口越南</a></h3>
+              <p class="thnews_jqzy">　　清华研制的纳米人工骨即将出口越南【新闻中心讯】由清华大学材料系崔福斋教授课题组研发的纳米晶胶原基骨移植材料,自2005年获得美国专利局颁发的专利批准后，美国、巴西、越南等国家的相关部门和医疗器械公司纷纷表示了洽谈合作的意愿，目前，合作在越南获得实质性进展。据运作该项目的越南长生公司总经理潘俊勇介绍，一个在越南从南到北的推广胶原基纳米人工骨的计划已开始实施......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231745250541100/20110225231745250541100_.html" target="_blank">国内外知名学者与清华博士后共话纳米</a></h3>
+              <p class="thnews_jqzy">　　国内外知名学者与清华博士后共话纳米【新闻中心讯 研通社通讯员 孙咏梅 龚向前】5月12日下午，我校第三期博士后经世科技论坛“纳米科技—微尺度展现大视野”在纳米科技楼报告厅举行。在材料系朱静院士的介绍后，美国佐治亚理工学院终身教授、国家纳米科学中心海外主任王中林，以“基于均衡纳米电线/纳米皮带的压电微尺度发电机”为题，向广大博士后分析了这一前沿科学领域......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231726140227976/20110225231726140227976_.html" target="_blank">清华碳纳米管储氢技术研究获新突破</a></h3>
+              <p class="thnews_jqzy">　　清华大学碳纳米管储氢技术研究获新突破中创网  2006-03-31&nbsp;&nbsp;&nbsp;&nbsp;清华大学碳纳米材料研究小组近日发现一种经处理后表现出显著储氢性能的碳纳米管，它有望成为新的清洁能源——氢能电池的制造材料。&nbsp;&nbsp;&nbsp;&nbsp;研究小组的科技人员对定向碳纳米管的电化学储氢特性进行了系统研究，发现这种碳纳......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2005.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104126437139867/20110226104126437139867_.html" target="_blank">李亚栋：智慧，在纳米方寸间闪耀</a></h3>
+              <p class="thnews_jqzy">　　智慧，在纳米方寸间闪耀——记李亚栋教授和他的研究小组●研通社记者 徐竹&nbsp;&nbsp;&nbsp; 深秋的一个傍晚，在何添楼201室，终于见到了化学系李亚栋教授。不认识他的人或许会猜想，这位带领他的研究小组在Nature上发表了纳米领域论文的教授一定是个博学的长者，两鬓斑白，不苟言笑。然而那时迎面而来的却是一位头发乌黑的中年人，中等个儿，一袭黑色的运......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2005.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231659703485112/20110225231659703485112_.html" target="_blank">李亚栋：智慧，在纳米方寸间闪耀</a></h3>
+              <p class="thnews_jqzy">　　智慧，在纳米方寸间闪耀——记李亚栋教授和他的研究小组●研通社记者 徐竹&nbsp;&nbsp;&nbsp; 深秋的一个傍晚，在何添楼201室，终于见到了化学系李亚栋教授。不认识他的人或许会猜想，这位带领他的研究小组在Nature上发表了纳米领域论文的教授一定是个博学的长者，两鬓斑白，不苟言笑。然而那时迎面而来的却是一位头发乌黑的中年人，中等个儿，一袭黑色的运......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2005.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231623937302701/20110225231623937302701_.html" target="_blank">我校专家出席2005年中国国际纳米科学技...</a></h3>
+              <p class="thnews_jqzy">　　我校专家出席2005年中国国际纳米科学技术会议【新闻中心讯 记者 文清】 6月9日，2005年中国国际纳米科学技术会议（ChinaNano2005）在北京国际会议中心召开。会议由国家纳米科技指导协调委员会主办，国家纳米科学中心（中科院、北大和我校共同组建）承办。会议为期3天，将于6月11日结束。来自40多个国家和地区的大学、研究机构的海内外代表800......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231601843764437/20110225231601843764437_.html" target="_blank">中国微米纳米技术学会成立 大会在北京清华...</a></h3>
+              <p class="thnews_jqzy">　　中国微米纳米技术学会成立 大会在北京清华大学举行中国化工报  2005-4-14  王丹红&nbsp;&nbsp;&nbsp;本报讯 中国微米纳米技术学会成立大会日前在北京清华大学举行。清华大学校长顾秉林院士将担任该学会理事长，丁衡高院士、白春礼院士将担任名誉理事长。&nbsp;&nbsp;&nbsp;白春礼指出，微米纳米技术是新兴的高技术和基础研究紧密结合......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231600406154015/20110225231600406154015_.html" target="_blank">中国微米纳米技术学会在清华大学成立</a></h3>
+              <p class="thnews_jqzy">　　中国微米纳米技术学会在清华大学成立科技日报  2005-4-7  赵凤华 薛建团&nbsp;&nbsp;&nbsp;本报讯（记者赵凤华通讯员薛建团）4月5日，中国微米纳米技术学会在清华大学正式成立。来自全国各地的200多名专家、学者参加了成立大会。&nbsp;&nbsp;&nbsp;中国微米纳米技术学会是全国从事微米纳米技术的科技工作者和在微米纳米技术及其他......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231559890995462/20110225231559890995462_.html" target="_blank">顾秉林校长当选中国微米纳米技术学会理事长</a></h3>
+              <p class="thnews_jqzy">　　顾秉林校长当选中国微米纳米技术学会理事长【新闻中心讯 记者 薛建团】4月5日，中国微米纳米技术学会在我校举行成立大会。在6日举行的学会第一届理事会会议上，我校校长顾秉林院士当选为学会理事长。会议还表决通过了名誉理事长、名誉副理事长、名誉理事名单和专家委员会名单。总装备部丁衡高院士、中科院白春礼院士任学会名誉理事长。我校精密仪器与机械学系尤政教授当选......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231559437993633/20110225231559437993633_.html" target="_blank">清华纳米人工骨获准美国专利</a></h3>
+              <p class="thnews_jqzy">　　清华纳米人工骨获准美国专利科学时报  2005-4-5  周襄楠&nbsp;&nbsp;&nbsp;本报讯　经过近两年的审核和考察，由清华大学材料系崔福斋教授课题组研究的纳米人工骨，于3月份获得美国专利局颁发的专利批准通知。专利授权证书将纳米人工骨的专利名称定为“纳米磷酸钙胶原基骨修复材料”（Nano-Calcium Phosphates/Collagen ......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231559000707512/20110225231559000707512_.html" target="_blank">中国微米纳米技术学会在我校成立</a></h3>
+              <p class="thnews_jqzy">　　中国微米纳米技术学会在我校成立【新闻中心讯 记者 薛建团 摄影 郭海军】4月5日上午，来自全国各地的200多名专家、学者相聚清华园，共同庆祝中国微米纳米技术学会的正式成立。顾秉林校长、总装备部丁衡高院士、中科院副院长白春礼院士、科技部、北京市科委和兄弟院校的代表等35人组成的大会主席团参加会议。副校长康克军主持了成立大会。我校周兆英教授在大会上汇报了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231557750548360/20110225231557750548360_.html" target="_blank">清华纳米人工骨获准美国专利</a></h3>
+              <p class="thnews_jqzy">　　清华纳米人工骨获准美国专利科技日报  2005-3-31  周襄楠 仇方迎&nbsp;&nbsp;&nbsp;本报讯（周襄楠仇方迎）由清华大学材料系崔福斋教授课题组研究的纳米人工骨，3月份获得美国专利局颁发的专利批准通知。专利授权证书将纳米人工骨的专利名称定为“纳米磷酸钙胶原基骨修复材料”（美国专利号:09/845,724）。&nbsp;&nbsp;&nbs......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231556343722337/20110225231556343722337_.html" target="_blank">清华大学研制的纳米医药产品获美国专利</a></h3>
+              <p class="thnews_jqzy">　　清华大学研制的纳米医药产品获美国专利慧聪网  2005-3-28&nbsp;&nbsp;&nbsp;经过近两年的审核和考察，由清华大学材料系崔福斋教授课题组研究的纳米人工骨，日前获得美国专利局颁发的专利批准通知，这为拓展海外市场奠定了基础。&nbsp;&nbsp;&nbsp;据介绍，纳米人工骨（NB系列纳米晶胶原基骨材料）研究是国家“863”、“973”计划......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231555687701536/20110225231555687701536_.html" target="_blank">中国纳米人工骨获美国专利</a></h3>
+              <p class="thnews_jqzy">　　中国纳米人工骨获美国专利新华社 2005-3-25 周襄楠 李江涛&nbsp;&nbsp;&nbsp;新华社北京３月２５日电（周襄楠 李江涛）经过近两年的审核和考察，由清华大学材料系崔福斋教授课题组研究的纳米人工骨，日前获得美国专利局颁发的专利批准通知，这为拓展海外市场奠定了基础。&nbsp;&nbsp;&nbsp;纳米人工骨（ＮＢ系列纳米晶胶原基骨材料）研......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231554890662344/20110225231554890662344_.html" target="_blank">我校教师研制的纳米人工骨获准美国专利</a></h3>
+              <p class="thnews_jqzy">　　我校教师研制的纳米人工骨获准美国专利【新闻中心讯 记者 周襄楠】记者刚刚从我校材料系获悉，经过近两年的审核和考察，由材料系崔福斋教授课题组研究的纳米人工骨，于今年3月份获得美国专利局（United States Patent and Trademark Office）颁发的专利批准通知。专利授权证书将纳米人工骨的专利名称定为“纳米磷酸钙胶原基骨修复材......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231447546855644/20110225231447546855644_.html" target="_blank">我国首个纳米医药产品诞生</a></h3>
+              <p class="thnews_jqzy">　　我国首个纳米医药产品诞生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231447375339587/20110225231447375339587_.html" target="_blank">国内纳米人骨通过认证 使用后与人体骨完全...</a></h3>
+              <p class="thnews_jqzy">　　国内纳米人骨通过认证 使用后与人体骨完全一样北京晨报  2004-6-21&nbsp;&nbsp;&nbsp;近日，清华大学材料系研制成功的纳米人骨获得国家药品监督局的试生产注册证，成为我国首例可以在市场上公开销售和应用的纳米医药产品。据介绍，纳米骨与原有传统人工骨材料相比，使用后的骨头与人体骨完全一样，且不会在体内留下钢板、螺钉之类的植入物。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225345093830271/20110225225345093830271_.html" target="_blank">我校召开“瑞福”纳米人工骨新产品上市发布会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校召开“瑞福”纳米人工骨新产品上市发布会【新闻中心讯 记者 周襄楠】6月16日，近期获得中国上市许可的由我校材料系崔福斋教授课题组研制的“瑞福”纳米人工骨在我校纳米科技楼召开了新产品发布会。来自协和医院、积水潭医院、北医三院、解放军301医院、空军总医院等20多所医院的骨科专家以及北京市科委等有关单位的嘉宾会聚一堂，倾听了来自北京中医药大学附......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231446984956448/20110225231446984956448_.html" target="_blank">我校召开“瑞福”纳米人工骨新产品上市发布会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校召开“瑞福”纳米人工骨新产品上市发布会【新闻中心讯 记者 周襄楠】6月16日，近期获得中国上市许可的由我校材料系崔福斋教授课题组研制的“瑞福”纳米人工骨在我校纳米科技楼召开了新产品发布会。来自协和医院、积水潭医院、北医三院、解放军301医院、空军总医院等20多所医院的骨科专家以及北京市科委等有关单位的嘉宾会聚一堂，倾听了来自北京中医药大学附......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2004.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231440359436061/20110225231440359436061_.html" target="_blank">清华大学宣布纳米骨在同类产品首获市场准入</a></h3>
+              <p class="thnews_jqzy">　　清华大学宣布纳米骨在同类产品首获市场准入央视国际  2004-5-26&nbsp;&nbsp;&nbsp;北京晚报消息：每年，我国仅因骨肿瘤切除手术后需要进行骨修复的病例就有25万左右，采用自体骨移植难以满足大段骨移植的要求，而异体骨移植又易存在传播疾病、排斥反应以及并发症等风险。清华大学今天宣布，在经过1年零4个月、近300例的人体临床实验之后，由清华材料......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2004.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231440171583396/20110225231440171583396_.html" target="_blank">我国第一项纳米医药产品在清华诞生</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我国第一项纳米医药产品在清华诞生——纳米人工骨获得国家试产注册证走向市场【新闻中心讯 记者 周襄楠】经过1年零4个月、近三百例的人体临床实验，由我校材料系崔福斋教授课题组研制成功的“纳米人工骨”日前获得国家食品药品监督管理局的三类植入产品试生产注册证，成为我国首个可以在市场上公开销售和应用的纳米医药产品。   纳米人工骨（NB系列纳米晶胶原......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2004.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231440109787878/20110225231440109787878_.html" target="_blank">我国第一项纳米医药产品在清华大学诞生</a></h3>
+              <p class="thnews_jqzy">　　我国第一项纳米医药产品在清华大学诞生新华网  2004-5-25&nbsp;&nbsp;&nbsp;新华网北京5月25日电（周襄楠、李江涛）经过1年4个月、近300例的人体临床实验，由清华大学材料系崔福斋教授课题组研制成功的纳米人工骨日前获得国家食品药品监督管理局的三类植入产品试生产注册证，成为我国首个可以在市场上公开销售和应用的纳米医药产品。&nbsp;&......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2004.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231437453137891/20110225231437453137891_.html" target="_blank">清华—日经ＢＰ社共论纳米技术</a></h3>
+              <p class="thnews_jqzy">　　清华—日经ＢＰ社共论纳米技术科学时报  2004-5-11本报讯 “纳米技术的科学研究已经使传统研究领域的界限不复存在。更重要的是，由于纳米领域的研究横跨多个学术领域，所以只进行某个特定领域的研究已经不够了，需要促进不同领域之间以及不同领域的学者之间的融合，构筑研究人员和研究机构之间的网络。”２０００年诺贝尔化学奖得主白川英树先生日前在“清华大学—日经ＢＰ社......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2004.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231430593118582/20110225231430593118582_.html" target="_blank">清华—日经BP社共论纳米技术 诺贝尔化学...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华—日经BP社共论纳米技术诺贝尔化学奖得主白川英树到场讲演【新闻中心讯 记者 周襄楠】“纳米技术的科学研究已经使得传统的研究领域的界限不复存在。更重要的是，由于纳米领域的研究横跨多个学术领域，所以只能进行某个特定领域的研究已经不够了，需要促进不同领域之间以及不同领域的学者之间的融合，构筑研究人员和研究机构之间的网络。”2000年诺贝尔化学奖得......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2003.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225346562667987/20110225225346562667987_.html" target="_blank">我校建成启用开放式纳米科技研究中心</a></h3>
+              <p class="thnews_jqzy">　　无标题文档为抢占21世纪战略科技制高点我校建成启用开放式纳米科技研究中心我校校长顾秉林等有关领导和嘉宾在新启用的纳米科技研究中心前合影。“清华-富士康纳米科技研究中心”启用仪式现场。（摄影 海军） 【新闻中心讯 记者 冬梅】抢占21世纪战略科技制高点，是我校科技发展战略之一。12月8日上午，以落实该战略而建成的“清华-富士康纳米科技研究中心”启用仪式在拔......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2003.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231421171746182/20110225231421171746182_.html" target="_blank">我校建成启用开放式纳米科技研究中心</a></h3>
+              <p class="thnews_jqzy">　　无标题文档为抢占21世纪战略科技制高点我校建成启用开放式纳米科技研究中心我校校长顾秉林等有关领导和嘉宾在新启用的纳米科技研究中心前合影。“清华-富士康纳米科技研究中心”启用仪式现场。（摄影 海军） 【新闻中心讯 记者 冬梅】抢占21世纪战略科技制高点，是我校科技发展战略之一。12月8日上午，以落实该战略而建成的“清华-富士康纳米科技研究中心”启用仪式在拔......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231404718529254/20110225231404718529254_.html" target="_blank">矿物粉体表面纳米化修饰技术成果通过鉴定</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校原创性技术发明——矿物粉体表面纳米化修饰技术成果通过鉴定【新闻中心讯 记者冬梅】7月22日上午，由我校材料系和辽宁海城福海高档滑石公司合作完成的“矿物粉体表面纳米化修饰技术” 研究成果通过专家鉴定，为国内外对矿物资源的深加工和纳米修饰技术应用领域送去了福音。 据了解，该技术是由我校材料系粉体工程研究室和辽宁海城福海高档滑石公司合作经过3......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231403812470502/20110225231403812470502_.html" target="_blank">一项世界原创性发明在清华大学诞生</a></h3>
+              <p class="thnews_jqzy">　　一项世界原创性发明在清华大学诞生光明日报 2003-7-17 宋晓梦　周襄楠首批纳米量级精度激光器测尺，日前在清华大学诞生。这是我国在世界光学领域和精密计量领域的一项原创性发明。现代工业对机械零部件的精密度要求越来越高，对桥梁、水坝以及民用建筑安全性保障也更为迫切。这就要求研制出品种更多，性能更优越，成本更低，使用更方便的检测仪器。纳米激光器测尺就是......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231401687179337/20110225231401687179337_.html" target="_blank">世界首批纳米激光器测尺在清华诞生</a></h3>
+              <p class="thnews_jqzy">　　世界首批纳米激光器测尺在清华诞生科技日报 2003-7-9 周襄楠细微的红光和伟岸的大桥、雄伟的高坝、精密的机床之间有什么联系？纳米激光器测尺把看似风马牛不相及的它们紧密联系在一起：在激光器内部，把红光波长的1／8———79纳米作为一个单位来测量物体尺寸或位置的微小变化，大桥、高坝、精密机床加工工件这种庞然大物，哪怕纳米量级上的一个微小的变形、微小移动都......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231401671427879/20110225231401671427879_.html" target="_blank">世界首批纳米激光尺诞生清华</a></h3>
+              <p class="thnews_jqzy">　　世界首批纳米激光尺诞生清华北京日报 2003-7-8 周襄楠本报讯（通讯员周襄楠）世界首批纳米激光器测量尺在清华大学研制成功并经中国计量科学研究院严格测试。这一发明可广泛应用于热膨胀系数、机械零部件的位移测量，量块标定，桥梁、水坝、建筑物的变形测量等。未来可能代替现在广泛使用的电感测微仪。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225347593524119/20110225225347593524119_.html" target="_blank">世界首批纳米激光器测尺在清华诞生</a></h3>
+              <p class="thnews_jqzy">　　无标题文档世界首批纳米激光器测尺在清华诞生●新闻中心记者 周襄楠细微的红光和伟岸的大桥、雄伟的高坝、精密的机床之间有什么联系？纳米激光器测尺把看似风马牛不相及的它们紧密联系在一起：在激光器内部，把红光波长的1/8——79纳米作为一个单位来测量物体尺寸或位置的微小变化，大桥、高坝、精密机床加工工件这种庞然大物，哪怕纳米量级上的一个微小的变形、微小移动都能被......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231401359973500/20110225231401359973500_.html" target="_blank">世界首批纳米激光器测尺在清华诞生</a></h3>
+              <p class="thnews_jqzy">　　无标题文档世界首批纳米激光器测尺在清华诞生●新闻中心记者 周襄楠细微的红光和伟岸的大桥、雄伟的高坝、精密的机床之间有什么联系？纳米激光器测尺把看似风马牛不相及的它们紧密联系在一起：在激光器内部，把红光波长的1/8——79纳米作为一个单位来测量物体尺寸或位置的微小变化，大桥、高坝、精密机床加工工件这种庞然大物，哪怕纳米量级上的一个微小的变形、微小移动都能被......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231401281129208/20110225231401281129208_.html" target="_blank">纳米激光器测尺研制成功</a></h3>
+              <p class="thnews_jqzy">　　纳米激光器测尺研制成功解放日报 2003-7-7 周襄楠  李江涛新华社北京７月７日电（周襄楠  李江涛）经过中国计量科学研究院严格测试，纳米激光器测尺日前由清华大学宣告研制完成。纳米激光器测尺外观结构很简单，看上去就是一个两端封闭、直径３０毫米的石英玻璃管，只比人的手掌稍长一些。它的神奇之处在于振荡的激光束自身就能感知外界物体移动大小，一旦推动圆筒......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231353453408751/20110225231353453408751_.html" target="_blank">首创纳米公司新型空气净化机问世</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document首创纳米公司新型空气净化机问世光明日报 2003年6月2日 记者　宋喜群本报北京6月1日电　北京首创纳米科技公司日前研制成功新型空气净化机，这种净化机利用纳米技术可有效洁净室内空气。几年以前，北京首创纳米科技公司与清华大学分析中心的专家们通力合作，独家承担了北京市重大科技创新项目——“有机污染物光催化降解和光催化杀菌......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231349718503003/20110225231349718503003_.html" target="_blank">基于纳米技术的新型空气净化产品问世</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document基于纳米技术的新型空气净化产品问世新华网 2003-05-19 17:34:57新华网北京５月１９日电（记者孙玉遐）非典袭来之后，人们更加关注自己工作、生活环境的空气质量。一种利用光催化技术，采用金属基纳米孔材料二氧化钛研制而成的空气净化机日前通过中国疾病预防控制中心、中国预防医学科学院等单位的技术鉴定并在内地投入使用，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231349656412399/20110225231349656412399_.html" target="_blank">纳米净化空气技术借势创新登场</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document夏季即将来临空调使用受限纳米净化空气技术借势创新登场北京日报 2003年5月20日王军不可否认，伴随人们生活水准的日益攀升，现代人对居室、办公场地及娱乐场所的装修越发重视，与此同时对室内的空气质量亦有了更高的要求。谁不愿意在安全、环保的室内生活或办公？谁不愿意在空气清新、远离病毒的室内休息或娱乐？纳米净化空气技术应运而生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231331984538951/20110225231331984538951_.html" target="_blank">国家纳米科学中心揭牌</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document国家纳米科学中心揭牌光明日报 2003-03-23记者　薛冬本报北京3月22日电　由中国科学院、北京大学、清华大学等单位发起组建的“国家纳米科学中心”今天在京揭牌，全国人大常委会副委员长、中科院院长路甬祥及教育部、科技部、北京市、国家自然科学基金委等有关负责人出席揭牌仪式。据国家纳米科学中心筹备小组负责人、中科院副院......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231331750810866/20110225231331750810866_.html" target="_blank">来自纳米人工骨临床实验第一线的报告</a></h3>
+              <p class="thnews_jqzy">　　无标题文档骨头自己长起来不是传说 纳米人工骨给你健康生活来自纳米人工骨临床实验第一线的报告●新闻中心记者 周襄楠听说不用取自己的髂骨（腰部下面腹部两侧的骨）来植骨了，刘俊起，这位家住北京东四十三条的70岁老人选择了植入纳米人工骨。 在北京中医药大学东直门医院（以下简称东直门医院）中西医结合骨科中心病房，我们见到了他。老人坐起来接受了我们的采访。刘......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231331796738629/20110225231331796738629_.html" target="_blank">中国纳米人工骨进入临床用</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document断骨再生不再是梦想 中国纳米人工骨进入临床用新华社 2003-3-20新华社北京3月20日电（李江涛 周襄楠）人类骨缺损甚至断骨可以生长愈合、修复如初，今天已不再是梦想，由清华大学研制成功的纳米人工骨已被植入18位患者的体内，为他们解除了痛苦。纳米人工骨是国家“863”、“973”支持的攻关项目，是清华大学材料系崔福......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2003.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231328000536716/20110225231328000536716_.html" target="_blank">我国首例纳米骨植入术成功完成</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我国首例纳米骨植入术成功完成中国医药报 2003年02月11日2003年1月15日，对于北京中医药大学东直门医院骨科的徐林教授和俞兴博士后来说，是一个不平常的日子，因为这天他们主刀完成了我国首例纳米骨植入手术。接受手术的是一位重度腰椎管狭窄、腰椎滑脱的60多岁的女患者。在术中，他们为患者进行了腰椎间板切除减压，脊柱内固定......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2003.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231328046858608/20110225231328046858608_.html" target="_blank">中国高校2002年十大科技进展揭晓 我校...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档中国高校2002年十大科技进展揭晓我校“连续碳纳米管长线及其应用”榜上有名由教育部科学技术委员会负责组织评选的2002年度“中国高等学校十大科技进展”日前揭晓。我校物理系姜开利、李群庆及范守善等完成的“连续碳纳米管长线及其应用”成果入选。据悉，入选此次中国高校十大科技进展的项目包括：吉林大学原始被子植物新类群“古果科”的建立；清华大学连续碳......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2002.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231322734283169/20110225231322734283169_.html" target="_blank">人工纳米骨能与人骨融为一体且无排异反应</a></h3>
+              <p class="thnews_jqzy">　　无标题文档人工纳米骨能与人骨融为一体且无排异反应四川新闻网 2002年11月30日四川新闻网科教11月30日讯 人骨有了高科技“替身”，由清华大学材料系崔福斋教授领衔研制的人工纳米骨，力学性能和生理功能堪与天然人骨媲美，并于日前获得国家药品监督管理局允许进入临床的批文，这将给数十万骨病患者带来福音。据悉，目前临床上大多使用以金属、陶瓷或高分子制造的人工骨......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231322421880013/20110225231322421880013_.html" target="_blank">纳米骨获准临床使用 断骨再生将成现实</a></h3>
+              <p class="thnews_jqzy">　　无标题文档纳米骨获准临床使用 断骨再生将成现实北京日报 2002年11月29日本报讯（通讯员周襄楠）清华大学研究的纳米骨26日获国家级临床使用许可。从此，人类骨缺损、断骨，便可以植入这种“纳米晶胶原基骨材料”，“断骨再生”不再是梦想。纳米骨最初在国家自然科学基金支持下进行研究，后成为国家“863”、“973”支持项目。目前已在兔子和狗身上完成了长骨、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231322484277130/20110225231322484277130_.html" target="_blank">清华大学“纳米骨”获准临床</a></h3>
+              <p class="thnews_jqzy">　　无标题文档断骨再生不是梦清华大学“纳米骨”获准临床北京晚报 2002年11月28日本报讯（通讯员周襄楠）今后，骨缺损甚至断骨的病人在一种新型人工纳米骨的帮助下，其缺损部位可以生长愈合，修复如初。由清华大学材料系崔福斋教授课题组研制的NB系列纳米晶胶原基骨材料，目前已经获得国家药品监督管理局医疗器械司批文，允许进入临床使用，这意味着这种纳米骨可以在人的身上......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231322453629046/20110225231322453629046_.html" target="_blank">能与人骨融为一体且无排异反应 人工纳米骨...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档能与人骨融为一体且无排异反应 人工纳米骨进入临床文汇报 2002年11月29日■驻京记者王勇报道本报北京11月28日专电人骨有了高科技“替身”，由清华大学材料系崔福斋教授领衔研制的人工纳米骨，力学性能和生理功能堪与天然人骨媲美，并于日前获得国家药品监督管理局允许进入临床的批文，这将给数十万骨病患者带来福音。据悉，目前临床上大多使用以金属、陶......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231322093317457/20110225231322093317457_.html" target="_blank">纳米骨被允临床使用 "断骨再生"有望成现...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document纳米骨被允临床使用 &quot;断骨再生&quot;有望成现实(图)2002年11月27日纳米晶胶原基骨材料成品中新社北京十一月二十七日电(周襄楠姜知然)人类骨缺损甚至断骨在一种新型人工纳米骨的帮助下生长愈合，修复如初，这种在清华大学诞生的NB系列纳米晶胶原基骨材料，日前获国家药品监督管理局允许进入临床使用，这意味着这种......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231321984446532/20110225231321984446532_.html" target="_blank">纳米骨研制成功并获准临床使用</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document纳米骨研制成功并获准临床使用 断骨再生将成现实江淮晨报 2002年11月28日晨报讯 北京消息 人类骨缺损甚至断骨在一种新型人工纳米骨的帮助下生长愈合，修复如初，这种在清华大学诞生的NB系列纳米晶胶原基骨材料，日前获国家药品监督管理局允许进入临床使用，这意味着这种纳米骨可以在人的身上进行植入，从而在不久的将来真正使“断骨......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231321828471636/20110225231321828471636_.html" target="_blank">“断骨再生”不再是梦想</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“断骨再生”不再是梦想我校纳米晶胶原基骨材料获国家级临床使用许可●新闻中心记者 周襄楠 崔丽娜纳米晶胶原基骨在犬桡骨20mm节段性骨缺损实验：无纳米仿生骨结构材料在植入12周后骨缺损无明显改变纳米仿生骨材料在植入12周后既有大量骨痂形成，骨皮质基本连续，新生骨组织随时间推移逐渐塑性 人类骨缺损甚至断骨在一种新型人工纳米骨的帮助下可以生长愈合，修......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225349140847649/20110225225349140847649_.html" target="_blank">“断骨再生”不再是梦想</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“断骨再生”不再是梦想我校纳米晶胶原基骨材料获国家级临床使用许可●新闻中心记者 周襄楠 崔丽娜纳米晶胶原基骨在犬桡骨20mm节段性骨缺损实验：无纳米仿生骨结构材料在植入12周后骨缺损无明显改变纳米仿生骨材料在植入12周后既有大量骨痂形成，骨皮质基本连续，新生骨组织随时间推移逐渐塑性 人类骨缺损甚至断骨在一种新型人工纳米骨的帮助下可以生长愈合，修......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231320109451810/20110225231320109451810_.html" target="_blank">清华博士生上台“讲学”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华博士生上台“讲学”科技日报 2002年11月20日11月13日晚，清华大学理学院报告厅的报告会给清华学子带来一个不小的惊喜―――“碳纳米管长线的制备以及应用”、“碳纳米管－碳范式的转换”、“过渡金属氧化物一维纳米结构液相合成及表征”、“碳纳米管的大规模制备及过程研究”、“多种一维纳米异质结的制备”―――见到这一个个追......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231319796191107/20110225231319796191107_.html" target="_blank">中国纳米技术专利增长迅猛 仅次美日排名第三</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document中国纳米技术专利增长迅猛 仅次美日排名第三中新网 2002年11月18日中新网11月18日电 中国和韩国在纳米技术发明数量方面增长迅猛。按不同国家统计的专利申报数量结果显示，2000年至今，第1位为美国，第2位为日本，中国排名第3。紧随其后德国和韩国。据日经BP社的报道，这项结果由以全球专利信息等为研究对象的调查公司......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

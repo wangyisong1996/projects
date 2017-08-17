@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>历史系朱育和教授等著《辛亥革命史》出版</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231216437126847&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">历史系朱育和教授等著《辛亥革命史》出版</h3><p> 由我校历史系主任朱育和教授、欧阳军喜副教授、舒文副教授共同撰写的《辛亥革命史》已于今年3月由人民出版社正式出版发行。 </p><p>该书从维新与革命、文化与社会的互动关系来考察辛亥革命，对这一20世纪中国发生的第一次具有划时代意义的深远历史变革作了深入细致的描述，在辛亥革命的起源、清王朝的覆灭及袁世凯的帝制活动等问题上提出了新的看法。该书认为，1911年的辛亥革命是晚清最后十几年间，特别是甲午战争以后维新运动、社会化趋势与民族主义建国思潮相激荡的产物，这三种因素的相互作用又规定和影响了辛亥革命的结局。 </p><p>全书41万字，资料丰富、观点新颖、文笔流畅、可读性强，是辛亥革命研究的一部创新之作。今年欣逢辛亥革命90周年和我校建校90周年纪念，此书的出版，无疑为这两个纪念献上了一份厚礼。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月23日 11:41:56　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2015/20150528154232607687749/20150528154232607687749_.html" target="_blank">李学勤：学者应更多考虑社会</a></h3>
+              <p>　　研究学术工作从接手题目确定一个课题开始，进行复杂的长时间的研究工作，把它写成文章、写成书。最后总要出版。如果没有出版这个环节，这个工作是没有完成的。任何一个学术研究工作都不能说交了课题结题以后就算结束，应该把出版这个环？节纳入进来。没有出版界给我们提供帮助，继续我们的工作，我们就不能跟公众见面，也就是学术工作没有尽到义务和责任。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2015/20150507195625825706911/20150507195625825706911_.html" target="_blank">李学勤：民心是政治的根本</a></h3>
+              <p>　　“我的中国梦，就是中国成为礼乐之邦、和谐之国”，“民心是政治的根本”。6日，中央纪委监察部网站推出“聆听大家”系列访谈第八期，专访著名历史学家李学勤。    　　李学勤是我国著名历史学家、古文字学家、考古学家，现任清华大学历史系教授、博士生导师、出土文献研究与保护中心主任。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2015/20150417165709636880627/20150417165709636880627_.html" target="_blank">方朝晖：今日中国文化的出路</a></h3>
+              <p>　　我们今天读儒家经典，很容易发现儒家学说注重“关系”“处境”及“相互依赖”的特点。首先，在儒家思想史上，人伦关系是天下治乱之根本。孔子曾强调为政之先在于“正名”，尤其要确定君臣、父子关系。其次，儒家的核心范畴如仁、义、礼、智、信、忠、孝等就是处理人伦关系的最高价值。“忠”、“孝”分别对应于君臣、父子关系。“仁”本来就是指人与人的关系。“义”是指对待朋友、亲人及社会事物的态度。“礼”与“信”毫无疑问针对人际关系而言；“智”与“义”都体现了人在具体的处境中行为的能力。由此出发，今天中国文化的方向和根本出路，具体有以下几个方面：</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150107133214862696118/20150107133214862696118_.html" target="_blank">清华传递有温度的传统文化</a></h3>
+              <p>　　“起立，老师好！”“同学们好！”能容纳300人的阶梯教室挤得满满当当，穿一件黑色对襟唐装的清华大学历史系教授彭林与学生互行90度的鞠躬礼。即使在百年清华园，如此师慈徒恭的上课礼节也不多见。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2014/20140513153914380100923/20140513153914380100923_.html" target="_blank">彭林：嫁接西方文化最终会失去根</a></h3>
+              <p>　　彭林：清华大学人文学院历史系（思想文化研究所）教授、博士生导师，国际儒学联合会理事，中国社会科学院古代文明研究中心客座研究员。主要从事先秦史等历史文献学和中国古代学术思想史的教学和研究，尤其注重对儒家经典《三礼》（《周礼》、《仪礼》、《礼记》）以及中国古代礼乐文化的研究。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2014/20140506132946203532329/20140506132946203532329_.html" target="_blank">彭林：礼，文明古流不可弃</a></h3>
+              <p>　　礼的核心思想是敬，对人、对己、对家庭、对社会、对国家，都要有一种恭敬心，这是立身的根基</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2014/20140429133703227243093/20140429133703227243093_.html" target="_blank">中日学者合作完成百余万字《汉镜文化研究》</a></h3>
+              <p>　　由中日两国32位专家学者合作完成的百余万字《汉镜文化研究》25日在京与公众见面。这部全面系统研究汉镜的集大成之作，为研究历史文化提供了新的视角。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2014/20140331170712437269845/20140331170712437269845_.html" target="_blank">彭林：品味《颜氏家训》的人生智慧</a></h3>
+              <p class="thnews_jqzy">　　品味《颜氏家训》的人生智慧来源：光明日报 2014-3-31 彭林北齐颜之推的《颜氏家训》八卷二十篇，是中华的&ldquo;家训之祖&rdquo;，内容质朴明快，说理深刻，有&ldquo;篇篇药石，字字龟鉴&rdquo;之誉。颜之推生逢乱离之世，目睹许多大家族宦海沉浮。颜氏以长辈身份，将自己的见闻及对人生的体悟，夹叙夹议，与晚辈娓娓道来，没有丝毫说教的色......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140107143615081922419/20140107143615081922419_.html" target="_blank">追索中华文明的根脉——记“清华简”研究保...</a></h3>
+              <p>有这样一群人，他们以毕生之力追索历史的真相，在历史的“碎片”中还原历史，用每一个对古老文明的最新发现告诉世界：中华民族，如此骄傲地一路走来。第四辑整理报告即将面世，第五辑释读工作已经开始，接连为中华文明增添可靠注脚的清华简研究保护团队，继续为历史学、古文字学等领域的研究提供第一手资料。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131023141638555420380/20131023141638555420380_.html" target="_blank">清华教授获帕西奥利奖</a></h3>
+              <p class="thnews_jqzy">　　清华教授获帕西奥利奖来源：人民日报海外版 2013-10-23 赵晓霞从清华大学获悉，当地时间10月20日，在意大利威尼斯卡福斯卡里大学开学典礼上，清华大学人文学院中文系、历史系双聘教授汪晖被授予卢卡&bull;帕西奥利奖。2013年，该奖首次授予两位非意大利裔学者，和汪晖同时获奖的是德国哲学家于尔根&bull;哈贝马斯。据悉，汪晖在中国思想史、中国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2013/20130930105951777572993/20130930105951777572993_.html" target="_blank">彭林：“礼”的本质是尊重</a></h3>
+              <p>“礼”是精神上的，而不是物质上的。这也是中国传统“礼尚往来”真正的意义。今天的中国社会，送礼不再是发自内心情感、自觉自愿的行为，而变成了利益交换的手段。围绕这个话题，《中国科学报》记者专访了清华大学历史系教授彭林。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121210174207290744971/20121210174207290744971_.html" target="_blank">夏鼐的学术之路</a></h3>
+              <p class="thnews_jqzy">　　夏鼐的学术之路来源：科技日报 2012-12-8 韩石山怎样在学术上成就一番事业，有通例，也有特例，相比较而言，特例给人的启示更大些。近读十卷本的《夏鼐日记》，对此深有感悟。未读之前就知道，夏鼐先生（1910&mdash;1985）是中国考古界的泰斗级人物，解放后长期担任中国科学院考古研究所所长，晚年曾出任中国社会科学院副院长。同时知道，他是个有留学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2012.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120829152157402483331/20120829152157402483331_.html" target="_blank">清华大学教授彭林给光明日报编辑记者作讲座</a></h3>
+              <p class="thnews_jqzy">　　清华大学教授彭林给本报编辑记者作讲座：民族文化是民族存亡之根来源：光明日报 2012-08-29 周华 柴如瑾今天下午，清华大学历史系教授彭林应邀以《民族文化与民族命运》为题，为光明日报编辑记者作了专题讲座。彭林教授引经据典，通过大量史实反思近代以来的文化之争和西方人的文化战略，认为以美国为代表的文化霸权主义正在对中华文化产生强烈的冲击，而&ldqu......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120611152514150300887/20120611152514150300887_.html" target="_blank">著名史学家何炳棣去世</a></h3>
+              <p class="thnews_jqzy">　　著名史学家何炳棣去世来源：光明日报 2012-06-10 丰捷著名史学家何炳棣于美国当地时间2012年6月7日去世。他被公认为用近代方法研究中国史的世界第一人。何炳棣，浙江金华人，1917年生。1934年入清华大学历史系就读，师从蒋廷黻、刘崇铉、雷海宗、陈寅恪、冯友兰等著名教授，1938年毕业，旋任西南联合大学历史系助教及教员。1944年考取第六届庚......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232313625182690/20110225232313625182690_.html" target="_blank">清华大学历史系李伯重教授在法兰西学院讲演</a></h3>
+              <p class="thnews_jqzy">　　清华大学历史系李伯重教授在法兰西学院讲演【新闻中心讯 通讯员 周琳】应法兰西学院之邀，清华大学历史系李伯重教授于6月16日在该院作了题为“Water and Unity of China”（水与中国的统一）的学术讲演。法兰西学院（Collège de France，又译为法兰西学士院&#8206;或法兰西公学）成立于1530年，是法国最高的学术机构。该学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232011296576445/20110225232011296576445_.html" target="_blank">清华历史系举办首届“清华青年史学论坛”</a></h3>
+              <p class="thnews_jqzy">　　清华历史系举办首届“清华青年史学论坛”【新闻中心讯】12月22日，首届“清华青年史学论坛”开幕式在清华大学图书馆报告厅举办。此次论坛由清华大学历史系学术委员会主办。清华大学历史系资深导师何兆武先生、清华大学历史系主任张国刚教授到会庆贺并发言。来自清华大学、北京大学、南开大学、北京师范大学、首都师范大学等高等院校的青年史学工作者以论文介绍、点评等方式进......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2007.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231837953145232/20110225231837953145232_.html" target="_blank">校党委书记陈希等与历史系教师座谈</a></h3>
+              <p class="thnews_jqzy">　　校党委书记陈希等与历史系教师座谈&nbsp;&nbsp;&nbsp; 【新闻中心讯 记者 文清】1月26日下午，校党委书记陈希、副书记韩景阳、校务委员会副主任张再兴等到历史系调研，就历史系的学科发展、队伍建设、学生培养等问题与历史系教授进行了座谈。&nbsp;&nbsp;&nbsp; 历史系系主任张国刚教授详细介绍了历史系的学科发展目标，分析了清华历史系的发......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231724734348449/20110225231724734348449_.html" target="_blank">清华举行历史教学与历史教材编纂座谈会</a></h3>
+              <p class="thnews_jqzy">　　清华举行历史教学与历史教材编纂座谈会&nbsp;　【新闻中心讯】3月25日，由清华大学历史系和清华大学出版社联合举办的历史教学与历史教材编纂座谈会在清华大学出版社举行。来自中国社会科学院、北京大学、北京师范大学、中国人民大学等单位的近40位学者，围绕新近出版的三卷本《中国思想史资料参考集》及《中国古代社会与文化十讲就》，就历史教学及教科书的编纂等问题进行了热......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231601453957130/20110225231601453957130_.html" target="_blank">“行修言道，礼之质也”——访清华大学彭林...</a></h3>
+              <p class="thnews_jqzy">　　“行修言道，礼之质也”——访清华大学彭林教授光明日报  2005-4-13  宋晓梦　姜玮&nbsp;&nbsp;&nbsp;彭林：清华大学人文学院历史系教授、国际儒学联合会理事、中国社科院古代文明研究中心客座研究员 　&nbsp;&nbsp;&nbsp;教育周刊：在讲课中您曾说，在保留或借鉴中国传统文化比较好的地区和国家，由于有“礼”，人和人之间就更能相互......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

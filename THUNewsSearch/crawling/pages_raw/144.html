@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>公共管理学院召开发展战略研讨会</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231211531136927&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>   清华大学公共管理学院</TITLE></HEAD><BODY bgcolor="#FFFFFF"><h3 ALIGN="CENTER"><font face="宋体" lang="ZH-CN">公共管理学院召开发展战略研讨会</font></h3><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN">4月1日, 公共管理学院在近春园招待所会议室召开了建院以来第一次“公共管理学院发展战略研讨会”。参加会议的有院领导、各所所长及方惠坚、何晋秋教授等。这次会议大家畅所欲言，对公共管理学院未来发展的五年、十年规划的重要问题作了认真的探讨。通过讨论，交流了思想沟通了感情，明确了方向和目标，鼓舞了奋斗的热情。</font></P><P ALIGN="JUSTIFY"><font face="宋体" lang="ZH-CN">据悉，公共管理学院今后将会继续举行这样的研讨会。</font></P></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月03日 12:28:59　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130710115655550212323/20130710115655550212323_.html" target="_blank">破解“碳”难题多点耐心</a></h3>
+              <p class="thnews_jqzy">　　中国要把西方国家200年的工业化进程浓缩在几十年内完成，面临的环境问题会更加突出。对于当下的节能减排，专家认为&mdash;&mdash;破解&ldquo;碳&rdquo;难题多点耐心来源：中国科学报 2013-7-10 张林 陈畅尽管中国在碳排放问题上一直在努力，但仍然不时被发达国家指责&ldquo;不作为&rdquo;或者&ldquo;努力得不够&r......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130621132757837774418/20130621132757837774418_.html" target="_blank">薛澜：实现中国梦迫切需要加快国家创新体系...</a></h3>
+              <p class="thnews_jqzy">　　清华大学公共管理学院院长薛澜&mdash;&mdash;实现&ldquo;中国梦&rdquo;迫切需要加快国家创新体系建设来源：重庆日报 2013-6-21 张亦筑人物简介薛澜，清华大学公共管理学院院长，清华大学21世纪发展研究院常务副院长，清华大学中国科技政策研究中心主任，美国卡内基梅隆大学兼职教授。主要研究方向包括公共政策与管理、科技政策与创新管理、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2013/20130617135035261880711/20130617135035261880711_.html" target="_blank">薛澜：应急管理体系的建设要“多管齐下”</a></h3>
+              <p class="thnews_jqzy">　　清华大学公共管理学院院长薛澜：应急管理体系的建设要&ldquo;多管齐下&rdquo;来源：中国科学报 2013-6-17SARS在中国公共管理应急管理体系的建设方面可以说是一个里程碑的事件，SARS之后，中国的应急管理体系取得了历史性的飞跃。我们有《突发事件应对法》，还有很多相关的法律，同时也有各种预案。但是，这个体系里还存在一些问题。首先，可能我......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130508120859612219790/20130508120859612219790_.html" target="_blank">联想清华联合发布智能移动教学解决方案</a></h3>
+              <p class="thnews_jqzy">　　联想清华联合发布智能移动教学解决方案来源：科技日报 2013-5-8 向阳4月23日，联想集团与清华大学公共管理学院联手举办了主题为&ldquo;明德e学&rdquo;的智能移动教学解决方案新品发布会，并签署战略合作协议。根据协议，双方将基于领先的移动互联技术，整合清华大学各学科优势，和联想创新、高品质的移动互联产品，共同打造&ldquo;明德e学&rd......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2013/20130429115543809897521/20130429115543809897521_.html" target="_blank">清华大学公共管理学院教授邓国胜：尚未走出...</a></h3>
+              <p class="thnews_jqzy">　　雅安地震发生以来短短几天的情况提醒我们，一些在5年前汶川地震时就暴露出的问题，至今没有解决；一些5年前困扰我们的问题，还在继续。尚未走出的困境来源：中国科学报 2013-4-29 洪蔚【核心阅读】从汶川地震到玉树地震，从舟曲泥石流再到芦山地震，在一次又一次的灾难之后，我们学会了什么？我们懂得了在突如其来的灾难面前，不必惊慌失措，而应代之以理性、冷静的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2013/20130412161057478138193/20130412161057478138193_.html" target="_blank">薛澜：SARS促进公共管理变革</a></h3>
+              <p class="thnews_jqzy">　　SARS提醒我们，在快速发展过程中，如果对经济社会发展的其他环节没有给予应有的关注，都有可能给社会带来危机与动荡。这应该是政府思维模式从速度发展到科学发展的一个重要考虑。SARS促进公共管理变革来源：中国科学报 2013-4-12 洪蔚2003年，SARS席卷全国，就在人们为这场突如其来的社会危机寻找理性解释与反思支点的时候，清华大学教授薛澜的《危机管理......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130326111643861898837/20130326111643861898837_.html" target="_blank">清华研讨创新与产权保护</a></h3>
+              <p class="thnews_jqzy">　　清华研讨创新与产权保护来源：京华时报 2013-3-26 张晓鸽近日，&ldquo;中国创新政策与知识产权保护&rdquo;国际研讨会在清华大学公共管理学院举办。该研讨会由清华大学与加州大学伯克利分校共同发起，清华大学公共管理学院、加州大学伯克利分校和美国专利商标局联合主办。研讨会上，来自中国、美国、欧洲、日本等国家的知名学者共同研讨中国以及全球科技创新......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2013.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2013/20130227144022916376182/20130227144022916376182_.html" target="_blank">薛澜：深度行政体制改革可先行</a></h3>
+              <p class="thnews_jqzy">　　深度行政体制改革可先行薛澜 清华大学公共管理学院院长来源：经济参考报 2013-2-27在需要改革的各个领域中，包括经济改革、政治改革、社会改革、法制建设等等，特别需要做的而且比较可行的方案是以深度的行政体制改革作为突破，辅之以一定程度的政治体制改革和法制建设。同时，把很多经济体制改革没有完成的具体措施进一步推进落实。行政体制改革应当是整体系统改革行......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2013/20130114144834471600717/20130114144834471600717_.html" target="_blank">清华公管学院杨永恒：文化融入生活才具有生...</a></h3>
+              <p class="thnews_jqzy">　　文化融入生活才具有生命力来源：中国科学报 2013-1-14 姜天海文化的作用在于&ldquo;以文化人&rdquo;，公共文化资源与服务主要是满足人民群众的基本文化需求；文化的作用不仅是满足人们娱乐休闲的需求，更重要的是解决人们思想和精神层面的需求。国家公共文化服务体系建设专家委员会秘书长、清华大学公共管理学院副教授杨永恒说，文化的作用在于&l......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2012/20121122115857905228587/20121122115857905228587_.html" target="_blank">胡鞍钢：21世纪头20年的头等大事</a></h3>
+              <p class="thnews_jqzy">　　胡鞍钢：21世纪头20年的头等大事来源：人民日报海外版 2012-11-2221世纪头20年，对中国而言，最大事情是什么？最核心的目标是什么？这就是中共中央和中国政府领导13亿人民，正在做并要做成的&ldquo;全面建成小康社会&rdquo;。从中共十六大、十七大，到十八大，党代会报告先后三次围绕这一核心目标进行专题研究、阶段评估、经验总结、精心设计......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121122115035718660384/20121122115035718660384_.html" target="_blank">胡鞍钢：十八大实现新老交替制度化</a></h3>
+              <p class="thnews_jqzy">　　胡鞍钢：十八大实现新老交替制度化来源：香港文汇报 2012-11-22 莫丰齐十八大代表、清华大学公共管理学院教授胡鞍钢11月20日在清华大学大礼堂与学生&ldquo;畅谈十八大&rdquo;时表示，中国政治家集团的成员构成，质量水平及团结，是中国创新社会主义现代化道路、实现伟大民族复兴的决定性因素，十八大已实现新老交替的制度化、规范化、程序化，把由毛泽......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2012/20121108153739393731125/20121108153739393731125_.html" target="_blank">胡鞍钢：中国责任越来越大</a></h3>
+              <p class="thnews_jqzy">　　胡鞍钢：中国责任越来越大来源：大公报 2012-11-8据中新社北京七日消息：中共十八大代表、清华大学公共管理学院教授胡鞍钢认为，中国将很快成为世界第一大贸易体，实现经济平稳较快发展，在2020年前成为世界最大经济体。经济发展方式也会得到根本性改变，从要素驱动转变为创新驱动，中国将发展成为世界人力资源强国、人才强国、科技强国，成为绿色发展创新国、引领国和......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232547203772096/20110225232547203772096_.html" target="_blank">清华大学公共管理学院庆祝建院十周年</a></h3>
+              <p class="thnews_jqzy">　　清华大学公共管理学院庆祝建院十周年全国人大常委会副委员长华建敏出席并讲话【新闻中心讯 记者 刘蔚如 摄影 侯晓军】10月24日上午，清华大学主楼后厅里济济一堂、掌声阵阵。清华大学公共管理学院建院十周年庆祝大会在这里隆重举行，全国人大常委会副委员长华建敏出席大会并讲话。清华大学党委常务副书记陈旭代表学校向公管学院的全体师生员工和校友表示诚挚的祝贺，公管学院......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231803453954672/20110225231803453954672_.html" target="_blank">【师德】教书育人是天职 科学研究为祖国</a></h3>
+              <p class="thnews_jqzy">　　教书育人是天职 科学研究为祖国教学科研两不误，使教学和科研相互结合、相互促进，薛澜教授用实际行动证明这一点。公共管理学院常务副院长薛澜教授的科研、管理、决策咨询任务非常繁重，但是，他始终把教学工作放在第一位，主动承担了教学工作。以2005年春季学期为例，薛老师以第一负责人承担的课程就包括为博士生开设的《公共政策分析Ⅱ》和为全校同学开设的《公共......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231754468362373/20110225231754468362373_.html" target="_blank">清华大学中国发展规划研究中心成立</a></h3>
+              <p class="thnews_jqzy">　　清华大学中国发展规划研究中心成立【新闻中心讯】6月29日下午，清华大学中国发展规划研究中心成立大会在清华大学主楼报告厅隆重举行。国家发展和改革委员会主任马凯、副主任朱之鑫，教育部副部长赵沁平，国务院研究室党组成员宁吉喆，国家发展改革委员会副秘书长杨伟民，联合国开发计划署驻华代表、联合国驻华系统协调员马和励，清华大学党委书记陈希等出席了大会。马凯和陈希共......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231729781472309/20110225231729781472309_.html" target="_blank">于安：行政管理体制改革应告别运动式</a></h3>
+              <p class="thnews_jqzy">　　行政管理体制改革应告别运动式于安行政管理体制改革，是“十一五”期间我国体制改革的中心任务。在积累了二十多年各类体制改革经验的基础上，我们现在已经有条件经过严密规划和分类部署，进行一次反映体制发展规律和高度规范化的行政管理体制改革。行政职能调整的长期性和改革的战略规划在科技高速发展和经济全球化条件下，决定国家行政管......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2005.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231651765755527/20110225231651765755527_.html" target="_blank">顾秉林校长和公共管理学院教授座谈</a></h3>
+              <p class="thnews_jqzy">　　顾秉林校长和公共管理学院教授座谈【新闻中心讯记者文华 摄影郭海军 】10月13日下午，校长顾秉林、副校长谢维和来到公共管理学院，与学院负责人和教授们举行座谈，听取大家对学院和学校的学科发展、人才培养、体制机制改革等方面的意见和建议。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2004.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231514500778715/20110225231514500778715_.html" target="_blank">清华两栋新楼落成</a></h3>
+              <p class="thnews_jqzy">　　清华两栋新楼落成北京娱乐信报  2004-10-12  郑超&nbsp;&nbsp;&nbsp;信报讯（记者郑 超）昨天，清华大学公共管理学院的伍舜德楼和清华大学高企培训中心的舜德楼同时举行落成启用典礼。这两栋楼的建设都得到了香港实业家伍舜德先生的大力资助，所以分别被命名为“伍舜德楼”和“舜德楼”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231209203147932/20110225231209203147932_.html" target="_blank">“21世纪中国反腐败战略”研讨会在我校举行</a></h3>
+              <p class="thnews_jqzy">　　200专家学者探讨新世纪反腐良策“21世纪中国反腐败战略”研讨会在我校举行【新闻中心讯】3月16日，由我校公共管理学院主办、最高人民检察院职务犯罪预防厅协办、我校公共管理学院廉政研究室承办的“21世纪中国反腐败战略”研讨会在学研大厦举行，约200位专家学者和反腐败实际工作者共同探讨了我国在新世纪的反腐败战略。研讨会开幕式上，最高人民检察院副检察长张穹......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

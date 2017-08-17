@@ -1,0 +1,1098 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清华与甘肃签订合作项目</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231214703709146&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><TITLE>Untitled Document</TITLE> <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312"> </HEAD><BODY BGCOLOR="#FFFFFF"><H3 ALIGN="CENTER">清华与甘肃签订合作项目</H3><P ALIGN="CENTER"> 记者　马振华</P><P ALIGN="CENTER">（光明日报 2001年4月17日）</P><P> 　　本报讯　日前，由清华大学、清华紫光股份有限公司和甘肃省高 等级公路建设开发有限公司联合成立的甘肃紫光智能交通与控制技术 有限公司在兰州举行了挂牌仪式。与此同时，清华大学同甘肃省人民 政府签订了一批科技开发和人才培养等方面的省校合作项目。 </P></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月17日 10:31:22　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160331111450845138795/20160331111450845138795_.html" target="_blank">刘延东见证清华大学和特拉维夫大学签署全面...</a></h3>
+              <p>以色列当地时间3月29日下午，由以色列高等教育委员会、中国教育部、清华大学主办的首届中以大学校长论坛在耶路撒冷举行。中国国务院副总理刘延东出席论坛并发表主旨演讲，同时见证了清华大学和特拉维夫大学签署关于全面深化创新创业教育与研究合作协议。清华大学校长邱勇和特拉维夫大学校长约瑟夫·克拉夫特出席协议签署仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160315163648850204289/20160315163648850204289_.html" target="_blank">清华大学与浙江省签署战略合作协议</a></h3>
+              <p>3月14日下午，浙江省委书记、省人大常委会主任夏宝龙，浙江省委副书记、省长李强一行访问清华大学。来访期间，省校双方签署了新一轮的《浙江省人民政府——清华大学战略合作协议》。清华大学校长邱勇，校党委书记陈旭出席签约仪式。签约仪式前，双方在主楼接待厅进行了座谈。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2016/20160315140801568386288/20160315140801568386288_.html" target="_blank">浙江省与清华大学签署战略合作协议</a></h3>
+              <p>省领导夏宝龙、李强、陈金彪、郑继伟和杭州市市长张鸿铭，清华大学校长邱勇、党委书记陈旭、党委副书记史宗恺、副校长尤政出席签约仪式。李强与邱勇签署合作协议。签约仪式前，省领导考察了清华大学美术学院、航空航天学院和校史馆，并与校领导进行了座谈。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2016/20160314163338380518560/20160314163338380518560_.html" target="_blank">无锡市与清华大学签署深化市校合作协议</a></h3>
+              <p>3月12日，我市与清华大学在北京签署深化市校合作协议，双方将建立长期全面合作伙伴关系，共同建设无锡超算中心，设立总额160亿元的无锡清华新兴产业投资基金。省委常委、市委书记李小敏，清华大学校长、中科院院士邱勇分别致辞，原科技部部长、中科院院士徐冠华出席签约仪式，清华大学副校长、中国工程院院士尤政与市长汪泉签署合作协议，市领导黄钦、曹佳中，市政府秘书长叶勤良参加签约仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160314112748335450312/20160314112748335450312_.html" target="_blank">清华与无锡市签署深化合作协议</a></h3>
+              <p>3月12日，清华大学与无锡市人民政府深化合作签约仪式在清华大学工字厅举行。江苏省委常委、无锡市委书记李小敏、清华大学校长邱勇出席签约仪式并致辞。科技部原部长、清华大学地学中心科学指导委员会主任徐冠华出席签约仪式。无锡市委副书记、市长汪泉与清华大学副校长尤政共同签署市校深化合作框架协议。无锡市委常委、常务副市长黄钦，副市长曹佳中、市政府秘书长叶勤良等出席签约仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160314114935090796554/20160314114935090796554_.html" target="_blank">清华大学与江苏省签署新一轮战略合作协议</a></h3>
+              <p>3月12日，江苏省人民政府与清华大学战略合作协议签约仪式在主楼接待厅举行。江苏省委书记、省人大常委会主任罗志军，省委副书记、省长石泰峰，清华大学校长邱勇、校党委书记陈旭，科技部原部长、清华大学地学中心科学指导委员会主任徐冠华出席签约仪式。省校双方签署了新一轮战略协议及6份子协议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160309105644336245286/20160309105644336245286_.html" target="_blank">中国航天科技集团公司与清华签署战略合作协议</a></h3>
+              <p>3月4日上午，中国航天科技集团公司在工字厅与清华大学签署战略合作协议。航天科技集团公司董事长雷凡培、总经理吴燕生、副总经理杨保华，校长邱勇、党委书记陈旭、副校长尤政等出席仪式。杨保华与尤政代表双方在协议书上签字。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2016/20160304115151991838290/20160304115151991838290_.html" target="_blank">深度推进校地合作 共谋发展实现双赢</a></h3>
+              <p>为深化与清华大学战略合作关系，3月1日下午，市长张庆军赴北京清华大学考察，并与清华大学副校长姜胜耀座谈交流，商讨清华附中、“健康合肥”建设合作等事宜。合肥经开区及市发改委、卫计委、规划局等市直相关部门负责人陪同考察。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2016/20160302165810898242914/20160302165810898242914_.html" target="_blank">海尔与清华大学合作再升级 打造智能制造生...</a></h3>
+              <p>　　依托国内一流的学科、人才以及技术优势，清华大学始终在诸多科技领域处于国内领先地位。而面对着全球“再工业化”技术革命与产业变革的浪潮，清华大学也适时创新研究方向，进行了包括机器人与自动化、先进制造等在内的多个领域的研究，并通过多方合作促进优秀成果转化、落地。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160120153843792626154/20160120153843792626154_.html" target="_blank">清华大学与西藏自治区党委组织部、山南地区...</a></h3>
+              <p>1月14日下午，西藏自治区党委常委、组织部部长曾万明带队访问清华大学，与清华签署合作协议，并举行引进清华大学毕业生宣讲座谈会。签约仪式前，校党委书记陈旭在工字厅会见曾万明一行。校党委副书记史宗恺出席签约仪式和宣讲座谈会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2016/20160115110711269420253/20160115110711269420253_.html" target="_blank">西藏自治区与清华大学签署干部人才交流合作...</a></h3>
+              <p>　　今天，自治区党委常委、组织部部长曾万明率队前往清华大学，就深化干部人才培养交流合作与清华大学进行座谈，并签署了干部人才交流合作协议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20151228165723652479256/20151228165723652479256_.html" target="_blank">芜湖市政府与清华大学签订战略合作协议</a></h3>
+              <p>　　12月25日，市政府与清华大学在北京签订战略合作协议，围绕中小型通用航空动力合作开发；安徽航瑞航空动力装备有限公司与清华大学特种动力中心签约，围绕《中小型航空动力装备关键技术》科技开发等进行合作。清华大学副校长、中国工程院院士尤政，市委副书记、市长潘朝晖，市政府秘书长孙跃进出席。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20151223144048590898043/20151223144048590898043_.html" target="_blank">菏泽与清华大学签订全面合作协议</a></h3>
+              <p>　　菏泽“科学赶超、后来居上”再添新动力。21日下午，菏泽市人民政府与清华大学签订全面合作协议。清华大学党委原书记贺美英，副校长薛其坤，市委书记孙爱军出席签约仪式并致辞。薛其坤和市委副书记、市长解维俊代表双方签订全面合作协议。    　　根据协议，双方将按照“资源共享、优势互补、互惠互利、共同发展”的原则，在提供战略咨询、加强产学研合作、加强人才引进及培养等方面进行深度全面合作，积极探索创新合作模式，不断扩大合作领域、提高合作水平。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151202115159284750347/20151202115159284750347_.html" target="_blank">大众汽车集团（中国）与清华苏世民学者项目...</a></h3>
+              <p>12月1日，大众汽车集团（中国）与清华大学苏世民学者项目合作签约仪式在清华大学举行。清华大学副校长杨斌，德国大众汽车集团管理董事会成员、大众汽车集团（中国）总裁兼CEO海·兹曼（Prof. Dr. Jochem Heizmann），清华大学副秘书长、教育基金会秘书长李家强，大众汽车集团（中国）总经办、企业战略及商用车执行副总裁穆乐岳（Joerg Mueller）共同签署了合作协议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20151113151338552913781/20151113151338552913781_.html" target="_blank">中国在高质量科研合作中表现优异</a></h3>
+              <p>　　今天发布的“2015自然指数-科研合作”显示，中国正崛起为国际科研合作的中心，相关指数在全球位列第五，仅次于美国、德国、英国和法国。2014年，在纳入自然指数的高质量科研期刊中，中国大陆的科学家与全球其它94个国家的科研同行合作发表了论文。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2015/20151105165221390430350/20151105165221390430350_.html" target="_blank">清华学生在丽江市宁蒗县跑马乡建公益桥</a></h3>
+              <p>此次公益建桥项目由清华大学“心一桥”实践支队发起，支队由来自清华土木工程系、建筑学院、经管学院、新闻学院的13名同学组成。项目源起一次乡村调研，2014年10月部分团队同学前往当地进行调研活动，发现有一处吊桥地处村民往来、学生上学的必经之路，然而桥体年久失修已经摇摇欲坠。发现此情况后清华土木系同学决定成立实践支队，为当地村民建一座桥。回到学校后同学们开始对桥梁进行初步设计，另一方面为工程筹措资金，2015年2月同学们与北京广东企业商会佛山分会取得联系，并得到商会爱心人士的大力支持。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2015/20151023141353127201905/20151023141353127201905_.html" target="_blank">中英重大项目签约 清华、英国BRE、恒大...</a></h3>
+              <p>　　伦敦时间10月21日下午，中英工商峰会在伦敦金融城举行，国家主席习近平和英国首相卡梅伦共同出席。    　　据了解，峰会当天，清华大学校务委员会主任陈旭、英国建筑研究院（简称BRE）首席执行官Peter Bonfield及恒大集团董事局主席许家印代表三方共同签署了《中英可持续城镇化研究平台协议》。这是中英工商峰会期间签署的多项中英合作项目之一。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151020123446445859100/20151020123446445859100_.html" target="_blank">清华汽车工程系与广汽传祺签署战略合作协议</a></h3>
+              <p>10月15日，汽车工程系与广汽传祺签署了校企战略合作协议，双方将本着“优势互补、合作共赢”的原则，在人才培养、新技术研发、工程技术与管理等多个方面建立长期稳定的战略合作关系。广汽集团执行董事、广汽传祺总经理吴松与清华大学汽车工程系主任李克强教授代表双方在协议书上签字。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2015/20150925145310395688332/20150925145310395688332_.html" target="_blank">清华携手四川开启校地多边国际合作模式</a></h3>
+              <p>　　记者今日从清华大学获悉，清华大学、四川省、华盛顿大学、华盛顿州于美国当地时间9月22日在华盛顿州西雅图举行合作协议签署仪式，宣布共同开展“气候智慧型/低碳城市”2+2合作。    　　据介绍，此次校地多边国际合作模式将深度整合四方优势资源，推进相关科学研究与产业发展，推动中美两国“气候智慧型/低碳城市倡议”的实施落地，并将对促进我国中西部地区深化改革开放、转变经济发展方式起到积极引领作用。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2015/20150924162305017617486/20150924162305017617486_.html" target="_blank">“2+2”合作推动“低碳城市”发展</a></h3>
+              <p>　　记者从清华大学获悉，北京时间9月23日，清华大学、四川省、华盛顿大学、华盛顿州“2+2”合作协议签署仪式在华盛顿州西雅图举行。这一全新的校地多边国际合作模式将深度整合四方优势资源，推进相关科学研究与产业发展，推动中美两国“气候智慧型/低碳城市倡议”的实施落地。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2015/20150924162110484862462/20150924162110484862462_.html" target="_blank">清华携手四川与美国高校“打包”合作</a></h3>
+              <p>　　记者今天从清华大学获悉，北京时间9月23日，清华大学携手四川省与美国华盛顿大学、华盛顿州在西雅图签署开展“气候智慧型/低碳城市”2+2合作协议。“2+2”合作模式的构建，为校地联合开展高水平、深层次国际合作开拓了新路，这也是国内大学携手地方首次开展的深层次国际合作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2015/20150924161931239299779/20150924161931239299779_.html" target="_blank">中美“2+2”开启校地多边合作</a></h3>
+              <p>　　记者从清华大学获悉，美国当地时间9月22日，清华大学、四川省、华盛顿大学、华盛顿州“2+2”合作协议签署仪式在美国华盛顿州西雅图市举行。    　　据介绍，这一全新的校地多边国际合作模式将整合四方优势资源，有力推进相关科学研究与产业发展，推动中美两国“气候智慧型/低碳城市倡议”的实施落地，并对促进我国中西部地区深化改革开放、转变经济发展方式起到积极的引领作用。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150924111950694773800/20150924111950694773800_.html" target="_blank">清华和新疆签署新一轮战略合作协议</a></h3>
+              <p>在新疆维吾尔自治区迎来成立60周年之际，9月20日至22日，清华大学党委书记陈旭、党委副书记史宗恺率团赴新疆访问，在乌鲁木齐出席了对口支援新疆大学2015年度工作会议，同自治区人民政府签署新一轮区校战略合作协议，并与新疆生产建设兵团领导会见交流。中共中央政治局委员、新疆维吾尔自治区党委书记张春贤会见陈旭、史宗恺和对口支援新疆大学的各高校负责人。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150922160505873230754/20150922160505873230754_.html" target="_blank">自治区人民政府与清华大学签署战略合作协议</a></h3>
+              <p>　　21日，自治区人民政府与清华大学签署新一轮战略合作协议。此次合作，双方确定在4个领域、14个方面进一步加强合作：    　　战略咨询服务。利用清华大学的人才、教育、人文社会科学和科技等综合优势，为自治区经济、社会和人才、科技发展的中长期规划、产业结构调整、科技创新、人才培养、重点工程项目等提供决策咨询等服务；</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150919203643196734667/20150919203643196734667_.html" target="_blank">清华大学与上海市签署战略合作协议深化校市...</a></h3>
+              <p>9月18日，为深入贯彻习近平总书记对上海提出的“加快向具有全球影响力的科技创新中心进军”的要求，清华大学和上海市在沪签署《战略合作框架协议》。校长邱勇、校党委书记陈旭出席签字仪式，并与中共中央政治局委员、上海市委书记韩正，上海市委副书记、市长杨雄交流探讨进一步深化校市合作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2015.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150918190812541956250/20150918190812541956250_.html" target="_blank">清华与四川省联合代表团访美 推进“2+2...</a></h3>
+              <p>当地时间9月14日，四川省副省长甘霖和清华大学副校长杨斌一行抵达美国华盛顿州，同华盛顿州长特别代表、州清洁技术与经济发展首脑布莱恩·杨(Brian Young)先生以及华盛顿大学代表进行会谈，共同商讨推进《中美气候智慧型/低碳城市合作备忘录》签署事宜。四方代表就清华大学、四川省和华盛顿大学、华盛顿州的“2+2”合作模式表示了强烈的意愿，并就合作备忘录的签署以及后续行动计划进行了深入的讨论，对于未来的合作前景充满信心。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150831100158667800329/20150831100158667800329_.html" target="_blank">副校长姜胜耀访德推动中德重大国际合作项目...</a></h3>
+              <p>8月25-26日，清华大学副校长姜胜耀访问德国汉堡大学，旨在推动中国自然科学基金委（NSFC）和德国科学基金会（DFG）的重大国际合作项目“跨模态学习的自适应、预测和交互”申请。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150817102653241199876/20150817102653241199876_.html" target="_blank">清华大学与开封市市校合作座谈会举行</a></h3>
+              <p>8月13日，清华大学与开封市市校合作座谈会在工字厅举行。清华大学副校长薛其坤、开封市委书记吉炳伟出席座谈会，就进一步推动市校合作展开交流。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150715152457974320490/20150715152457974320490_.html" target="_blank">贵港市与清华大学举行校地合作座谈会</a></h3>
+              <p>　　7月10日上午，我市与清华大学举行校地合作座谈会暨签约授牌仪式。市委常委、组织部部长张壮，清华大学党委研究生工作部副部长、自动化系党委副书记杨帆出席座谈会。    　　张壮指出，我市一向重视人才的培养、引进，目前全市共有57名“985”工程高校选调生在我市各级党政机关工作，其中清华大学毕业的有6名。张壮要求，组织部门要牵头抓总，全程跟踪，在干部交流方面要提前谋划、提前介入，及早确定挂职单位及岗位需求、人数等，做好与清华大学的对接工作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150715144741345578492/20150715144741345578492_.html" target="_blank">清华大学与肇庆市签署全面合作协议</a></h3>
+              <p>7月14日下午，清华大学与肇庆市全面合作协议签约仪式在工字厅东厅举行。清华大学副校长薛其坤，肇庆市委副书记、市长赖泽华出席仪式，并代表双方在合作协议上签字。签约仪式上，薛其坤代表清华大学对赖泽华一行来访清华表示欢迎，对肇庆市长期以来关注、支持清华大学发展表示感谢。他说，肇庆市作为历史文化名城，区位优势明显，经济社会发展快速。近年来，清华大学与肇庆市在科技、人才等多领域展开了密切合作，取得了一系列丰硕成果，希望以本次续签全面合作协议为契机，将肇庆的区位、资源、产业和政策优势同清华大学的学科、人才、信息优势密切结合，实现互惠共赢，开创市校合作新局面。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150709141638057553037/20150709141638057553037_.html" target="_blank">中国船舶重工集团公司与清华签署战略合作框...</a></h3>
+              <p>7月7日上午，清华大学与中国船舶重工集团在工字厅签署战略合作框架协议书。中国船舶重工集团公司董事长胡问鸣、副总经理杜刚，清华大学校长邱勇、校长助理尤政出席仪式，杜刚与尤政代表双方在协议书上签字。根据协议，双方将围绕国家海洋发展战略及相关的国家重大需求，本着“优势互补、共同发展”的原则，进一步推进和深化双方合作，创新合作机制，共建合作平台，推动双方在科学研究、成果转化、人才培养、学术交流等方面的深度合作，增强高校成果转化和企业创新能力，为国防建设和国民经济建设贡献力量。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150708135320971178547/20150708135320971178547_.html" target="_blank">清华与新加坡南洋理工在人民大会堂签署合作...</a></h3>
+              <p>7月3日，国家主席习近平在人民大会堂同新加坡总统陈庆炎举行会谈。两国元首同意双方要总结经验，规划未来，进一步增强政治互信，保持高层密切交往势头，深化经贸和金融领域合作，扩大人文交流合作，一道推动中新关系上升到新高度。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150619160944211117691/20150619160944211117691_.html" target="_blank">北京消防总队与清华大学、中国科技大学达成...</a></h3>
+              <p>　　北京消防总队与清华大学公共安全研究院、中国科技大学火灾科学国家重点实验室今天签署了消防科技战略合作伙伴框架协议。此举标志着北京消防总队与地方高校紧密合作、共谋发展的新阶段，是北京消防总队加快提升消防科技创新能力的重要举措，是鼓励、支持消防科技创新的重大转变。中国工程院院士、清华大学公共安全研究院院长范维澄，中国科技大学火灾科学国家重点实验室主任张和平，北京市公安消防总队总队长吴志强等参加协议签订仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150617114341225362882/20150617114341225362882_.html" target="_blank">清华大学与开封市签署全面合作协议</a></h3>
+              <p>6月16日下午，清华大学与开封市全面合作协议签约仪式在丙所会议室举行。签约仪式前，清华大学副校长薛其坤在工字厅会见了来访的开封市委副书记、市长侯红一行。会谈中，薛其坤代表清华大学对侯红一行到访表示欢迎。他说，开封一直以来非常关心支持清华大学的发展，双方在科技、人才等领域开展了卓有成效的合作。开封作为中原经济区核心城市之一、郑州航空港经济综合实验区的重要组成部分和郑汴一体化发展的重要一翼，必将迎来新的发展机遇，清华大学将以务实的态度推动双方合作深入发展，为开封输送更多优秀人才。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150610120329206749097/20150610120329206749097_.html" target="_blank">清华大学-俄克拉荷马大学签署合作意向书</a></h3>
+              <p>6月9日，“俄克拉荷马日——清华大学-俄克拉荷马大学合作意向签字仪式暨学术研讨会”在清华大学环境学院举行。副校长杨斌，俄克拉荷马大学副校长开尔文·德罗格梅尔（Kelvin K. Droegemeier）出席签字仪式并签署合作意向书。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150603135857762454917/20150603135857762454917_.html" target="_blank">中美决定促进清洁能源科技合作</a></h3>
+              <p>　　中美清洁能源联合研究中心（CERC）指导委员会第七次会议今天在美国首都华盛顿召开。本次会议旨在落实2014年11月习近平主席与奥巴马总统达成的《中美两国元首北京会晤主要共识和成果》和《中美气候变化联合声明》，进一步促进两国在清洁能源领域的科技合作，共同应对全球气候变化。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150531202427790298782/20150531202427790298782_.html" target="_blank">清华大学国际合作与交流战略规划研讨启动会...</a></h3>
+              <p>5月27日下午，清华大学国际合作与交流战略规划研讨启动会在主楼接待厅召开。校长邱勇出席会议并讲话。校长助理施一公参加了会议。邱勇在讲话中分析了现阶段加强国际合作与交流工作的重要性和必要性。他指出，大国的崛起一定伴随着科技中心的转移和教育文化事业的崛起，因此清华的国际化与国家战略发展紧密相连。清华需要进一步提升国际影响力，在国际化与全球化背景下参与全球优质办学资源的竞争。目前，清华正在深化综合改革、推进世界一流大学建设、制定新百年发展战略，其核心是“中国特色、世界一流”，这两者不可分割。我们要坚持世界一流的标准，扎根中国办大学、培养中国所需要的人才、支撑中国社会经济发展。同时，要积极探索世界教育新思想，为世界教育作贡献。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150522162210566960982/20150522162210566960982_.html" target="_blank">清华射击队人才基地落户杭城</a></h3>
+              <p>　　杭州市射击射箭运动中心与清华大学射击队合作培养射击运动员签约仪式日前在杭州市射击射箭运动中心举行，同时，“清华大学射击队后备人才基地”亦落户市射击射箭运动中心。    　　射击运动是杭州的传统强项，培养出了中国第一位女子奥运冠军吴小璇、世界冠军王娴；清华大学射击队是国内射击专业队中的佼佼者。此次市射击射箭运动中心与清华大学射击队双双联手，更是打通了杭州射击项目发展的人才培养路径，为优秀运动员继续发展搭建了桥梁，提供给学生和家长更为宽广的选择途径。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150521144128794730316/20150521144128794730316_.html" target="_blank">美国艺术与科学院院士阿利斯教授做客海外名...</a></h3>
+              <p>5月18日下午，美国国家科学院、美国艺术与科学院院士查尔斯·戴维·阿利斯教授（Charles David Allis）做客清华海外名师讲堂，以《超越双螺旋》为题，向500余位校内外听众详细阐述了表观遗传学的基本概念和最新研究发现。阿利斯教授首先从人类基因组计划切入，明确了表观遗传学概念。随后他从历史层面系统介绍了组蛋白修饰中的三类关键因子以及它们在癌症的发生发展中发挥的重要作用。阿利斯教授还提出了“癌症组蛋白”（onco-histone）的概念，以儿童脑瘤研究为例分析了疾病发生的原因。最后，阿利斯教授综合探讨了表观遗传学的各个分支，并以时代杂志的一期封面《为什么DNA并不能决定你的命运》结束了演讲。  　　  报告结束后，阿利斯教授与在座师生进行了真诚热烈的互动交流，并回答了现场同学的提问。  　　  　　阿利斯教授现为美国洛克菲勒大学染色质生物学及表观遗传学实验室主任，是在表观遗传领域里享有崇高声誉的科学家。1996年，他在Cell杂志发表文章，首次揭示组蛋白乙酰基转移酶是一类重要转录共激活物。这一突破性的发现标志着表观遗传学的兴起。阿利斯教授曾获2003 Massry奖、2004 生物医学Wiley奖、 2014年日本奖、2015年生命科学突破奖等多项国际大奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150519102726279723892/20150519102726279723892_.html" target="_blank">清华与中国五洲工程设计集团签署人才合作协议</a></h3>
+              <p>5月15日，中国五洲工程设计集团有限公司与清华大学学生职业发展指导中心人才合作签约仪式在清华大学举行。清华大学党委副书记史宗恺，中国兵器工业集团总经理助理、中国五洲工程设计集团公司董事长刘志刚出席签约仪式并分别致辞。史宗恺肯定了双方在人才交流、人才合作方面取得的成果，并指出，国防军工是清华大学就业引导的重要方向，双方在人才战略合作上要充分发挥各自优势，构建校企合作共赢、协调创新的长效机制，为高素质复合型人才的教育、培养做出贡献。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150512091303497386200/20150512091303497386200_.html" target="_blank">杨斌会见美国华盛顿大学和微软公司代表团</a></h3>
+              <p>5月11日下午，清华大学副校长杨斌在工字厅会见了到访的美国华盛顿大学副教务长杰弗里·瑞丁格（Jeffrey Riedinger）、副教务长韦克瑞姆·詹德雅拉（Vikram Jandhyala）、微软公司政府事务总管德丽·舒玫可（Delee Shoemaker）等一行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150506092441060732804/20150506092441060732804_.html" target="_blank">陈旭一行访问山西推进校地合作</a></h3>
+              <p>4月28-29日，清华大学党委书记陈旭带队到山西省访问，同山西省委书记王儒林和省委副书记、省长李小鹏等省领导就推进省校合作交换了意见。山西省委常委、秘书长王伟中、副省长张复明和清华大学党委副书记史宗恺、校务委员会副主任张凤昌参加会见。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150429151642020473606/20150429151642020473606_.html" target="_blank">新闻学院与国务院国资委新闻中心签署合作协议</a></h3>
+              <p>4月25日，在清华大学104周年校庆之际，新闻与传播学院与国务院国资委新闻中心签署合作协议。根据合作协议，国资委新闻中心在清华清华新闻学院设立“国资小新”奖学金，用于奖励新闻学院在媒体融合理论研究或新媒体运用实践等方面取得突出创新成果的优秀学子。奖学金每年评审一次，包括理论创新奖5名、实践创新奖5名。奖学金评审委员会由双方共同成立，根据学生撰写的理论文章或新媒体帐号，从其专业性、创新性、可操作性等角度进行评定，从中评选出获奖学生。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150319100658560584494/20150319100658560584494_.html" target="_blank">清华大学与青海省签署省校战略合作协议</a></h3>
+              <p>3月16日，青海省委书记骆惠宁，省长郝鹏，省委常委、副省长马顺清等一行访问清华大学。来访期间，省校双方签署了《青海省人民政府——清华大学战略合作协议》。清华大学党委书记陈旭，常务副书记、副校长邱勇，副校长薛其坤出席签约仪式并陪同参观考察。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150318163517280528426/20150318163517280528426_.html" target="_blank">青海省与清华大学签署省校战略合作协议</a></h3>
+              <p>　　3月16日，青海省委书记骆惠宁、青海省省长郝鹏一行专程来到清华大学参观考察，并出席青海省与清华大学省校战略合作座谈会暨签约仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150317144717778638142/20150317144717778638142_.html" target="_blank">四川省与清华大学深度推进战略合作</a></h3>
+              <p>　　3月15日下午，全国两会刚刚闭幕，省委书记王东明，省委副书记、省长魏宏，马不停蹄地奔赴清华大学考察，与清华大学党委书记陈旭一道，出席四川省-清华大学深化战略合作座谈会暨签约仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150317133524084140296/20150317133524084140296_.html" target="_blank">四川省—清华大学深化战略合作座谈会暨签约...</a></h3>
+              <p>3月15日下午，四川省—清华大学深化战略合作座谈会暨签约仪式在清华大学主楼接待厅举行。四川省委书记王东明，省委副书记、省长魏宏，省委常委、秘书长陈光志，省委常委、组织部部长范锐平，副省长王宁，副省长刘捷出席座谈会暨签约仪式。清华大学党委书记陈旭、常务副校长程建平、常务副书记邱勇、党委副书记史宗恺、副校长薛其坤出席活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150313095035456321918/20150313095035456321918_.html" target="_blank">深圳市市长许勤一行访问清华</a></h3>
+              <p>3月11日下午，深圳市市长许勤一行访问清华大学，清华大学党委书记陈旭、常务副校长程建平在工字厅会见了许勤，双方就进一步深化市校合作进行了深入交流。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150122151605095480290/20150122151605095480290_.html" target="_blank">佛山市委常委、南海区委书记梁维东一行到访...</a></h3>
+              <p>1月22日，佛山市委常委、南海区委书记梁维东一行来到清华大学，就进一步加强清华大学与佛山市合作展开交流。清华大学常务副校长程建平出席座谈会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141225101337583847986/20141225101337583847986_.html" target="_blank">建筑学院与福建省住建厅签署人才合作框架协议</a></h3>
+              <p>12月23日下午，清华大学建筑学院与福建省住房和城乡建设厅签署了规划与建筑专业人才合作框架协议，双方将在人才培养、教师挂职、研究生实践、干部培训等方面展开深度合作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141224083956488559249/20141224083956488559249_.html" target="_blank">校企合作经验交流会在清华大学召开</a></h3>
+              <p>12月18日，由清华大学继续教育学院举办的“校企合作经验交流会暨大学与企业继续教育联盟建设工作会”在清华大学召开。清华大学党委常务副书记、副校长、大学与企业继续教育联盟理事长邱勇出席大会并致辞。来自42所高校和49家企业的代表齐聚一堂，总结经验、分享智慧、共谋发展。大学与企业继续教育联盟是在教育部推动和指导下，由大学、企业、行业协会和相关媒体自愿组成，旨在深化产教融合、探索校企合作人才培养模式创新，推进学习型组织与终身学习体系的建设。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141222103739315954488/20141222103739315954488_.html" target="_blank">清华大学与海南天然橡胶集团签署战略合作协议</a></h3>
+              <p>近日，清华大学与海南天然橡胶集团（以下简称“海胶集团”）在海口签订战略合作协议。清华大学党委书记陈旭、海南省副省长陈志荣等出席签约仪式。根据协议，双方将本着“优势互补、互利互惠、平等自愿、共赢发展”的原则，充分发挥各自的技术、人才和资源优势，在科技研发、成果转化、人才培养、产业联盟等方面进行长期稳定的合作，建立校企战略合作长效机制。与此同时，海南橡胶正式加入清华大学企业合作委员会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141217140059929327154/20141217140059929327154_.html" target="_blank">清华与雅砻江流域水电开发有限公司签订战略...</a></h3>
+              <p>12月12日上午，“清华大学-雅砻江流域水电开发有限公司战略合作协议”签字仪式在国家开发投资公司签约厅举行。清华大学党委书记陈旭，国家开发投资公司董事长、党组书记、雅砻江流域水电开发有限公司董事长王会生出席了签约仪式。清华大学常务副校长程建平与雅砻江流域水电开发有限公司总经理陈云华代表双方签订战略合作协议。签约仪式由雅砻江流域水电开发有限公司副总经理吴世勇主持。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141211103031842818682/20141211103031842818682_.html" target="_blank">清华与爱尔兰国立大学签署合作框架协议</a></h3>
+              <p>12月9日，校务委员会主任陈旭与爱尔兰国立大学（高威）校长布朗，在国家主席习近平和来华进行国事访问的爱尔兰总统希金斯的共同见证下，在人民大会堂签署了两校合作框架协议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141209110432168967276/20141209110432168967276_.html" target="_blank">体育部与北京世纪鼎点软件有限公司签署合作...</a></h3>
+              <p>12月3日，清华大学体育部足球发展研究中心与北京世纪鼎点软件有限公司在射击馆举行签约仪式，双方签署了以足球领域科研合作为目的的合作协议；同时世纪鼎点公司向足球发展中心捐赠资金用于支持中心开展工作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20141204145314879380186/20141204145314879380186_.html" target="_blank">“四川—清华活动周”：省校合作如何推进更...</a></h3>
+              <p>　　省校合作该怎么办？清华大学和四川省的活动为不少学校提供了经验。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141203165807703486623/20141203165807703486623_.html" target="_blank">康克军做客人民日报，讲述暗物质的找寻之旅</a></h3>
+              <p>　　近日，中国暗物质实验合作组新的实验结果非常明确地排除了美国CoGeNT实验组给出的暗物质区域，并且排除了意大利和美国两家权威暗物质实验组的大部分区域，这代表我国科学家在暗物质探测方面取得了一个国际前沿水平的实验结果，为全世界的科学家指出了下一步找寻暗物质的范围和方向。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141202095110245206303/20141202095110245206303_.html" target="_blank">清华大学与淮安市深化全面合作座谈会举行</a></h3>
+              <p>11月28日下午，“淮安市—清华大学深化全面合作座谈会”在清华大学医学院会议室举行。江苏省淮安市委副书记、市长曲福田出席座谈会。在此之前，清华大学校长陈吉宁会见了曲福田一行。校党委副书记史宗恺参加了座谈会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141120111038888134507/20141120111038888134507_.html" target="_blank">清华大学与四川省召开战略合作座谈会</a></h3>
+              <p>11月18日下午，清华大学与四川省战略合作座谈会在工字厅举行。清华大学校长陈吉宁、校党委书记陈旭会见了四川省委常委、组织部部长范锐平和副省长刘捷。清华大学党委常务副书记、副校长邱勇和副校长薛其坤出席座谈会，党委副书记史宗恺参加有关活动。此次座谈会是11月17日至21日在清华大学举办的“四川-清华活动周”的重要内容。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141119164846610896813/20141119164846610896813_.html" target="_blank">清华与四川省甘孜州、四川省国资委签署合作...</a></h3>
+              <p>11月18日下午，清华与四川省甘孜州、四川省国资委合作协议签字仪式在主楼会议室举行。清华大学党委副书记史宗恺、副校长薛其坤，四川省委常、组织部部长范锐平，副省长刘捷出席签字仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141118174505381888566/20141118174505381888566_.html" target="_blank">清华环境学院与山东省环境保护厅签署合作协议</a></h3>
+              <p>11月14日，生态山东建设高层论坛暨第六届绿色产业国际博览会在青岛开幕，博览会上举行了清华大学环境学院—山东省环境保护厅战略合作签约仪式。韩国环境部长官尹成奎，山东省委常委、副省长孙伟等见证签约，清华大学环境学院院长贺克斌、山东省环保厅厅长张波在合作协议上签字。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141106173104794478216/20141106173104794478216_.html" target="_blank">社会科学学院与巴中市人民政府签署合作框架...</a></h3>
+              <p>10月31日上午，清华大学社会科学学院与四川省巴中市人民政府战略合作框架协议签约仪式在丙所举行。清华大学党委副书记史宗恺，巴中市委副书记、市长周喜安，清华大学社会科学学院党委书记史志钦等出席签约仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141102165331512936534/20141102165331512936534_.html" target="_blank">清华大学与新疆阿克苏地区签署合作协议</a></h3>
+              <p>10月31日下午，清华大学与新疆阿克苏地区智力、人才合作协议签字仪式在工字厅举行。清华大学党委副书记史宗恺，阿克苏地委委员、组织部长刘新利出席签字仪式。史宗恺代表清华大学对刘新利一行的到访表示欢迎，对阿克苏地委、行署长期以来关心支持清华大学发展建设表示感谢。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141010104534572822663/20141010104534572822663_.html" target="_blank">陈吉宁会见国际应用分析研究所所长</a></h3>
+              <p>10月9日，国际应用系统分析研究所（International Institute for Applied Systems Analysis, IIASA）所长帕维尔·卡巴特（Pavel Kabat）博士访问清华大学。清华大学校长陈吉宁会见了卡巴特博士一行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140930110547788943451/20140930110547788943451_.html" target="_blank">四川与清华大学召开省校战略合作实施工作会议</a></h3>
+              <p>　　为推动我省与清华大学战略合作协议落到实处，9月29日，我省与清华大学在成都召开省校战略合作实施工作会议，就双方干部人才交流、科技产业、干部培训等方面重点任务开展全面深入对接会谈。省委常委、组织部部长范锐平出席会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140926140349117302270/20140926140349117302270_.html" target="_blank">清华五道口金融学院与中国人寿开启战略合作</a></h3>
+              <p>9月25日，清华大学五道口金融学院与中国人寿保险（集团）公司战略合作框架协议签字仪式在人寿广场举行。五道口金融学院副院长康以同、中国人寿副总裁崔兰琴代表双方签署了协议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140905100743980157404/20140905100743980157404_.html" target="_blank">清华大学与天津市签署战略合作协议</a></h3>
+              <p>9月1日上午，清华大学校长陈吉宁、党委书记陈旭、副校长邱勇等一行应邀来到天津，出席“天津市人民政府与清华大学市校战略合作协议签约仪式”，与天津市政府签署了多项科研与人才合作协议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2014/20140902143214454764309/20140902143214454764309_.html" target="_blank">傅涛：政企合作权责需划清</a></h3>
+              <p>　　供水服务是政府和企业权责界限纠结不清的公共服务领域之一。由此也导致了一系列问题，例如水价调整、供水安全等问题。随着城市环境基础设施建设、公共服务领域市场化的不断深化，PPP（公私合营伙伴关系）不仅受到地方政府的重视，也吸引着企业的目光。然而，在这些领域，政府与企业要高效合作，其前提是厘清权责，这其中首先需要明确的就是公共服务和社会管理的关系。本期专家将以供水服务为例进行分析。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140829115447494492800/20140829115447494492800_.html" target="_blank">庆祝清华科技园创建20周年 第六届启迪创...</a></h3>
+              <p>为庆祝清华科技园创建20周年，8月28日，第六届启迪创新论坛暨第二届全球科技园区领导者圆桌会议在清华科技园科技大厦隆重开幕。第十一届全国人大常委会副委员长、清华大学启迪创新研究院院长华建敏，第十一届全国人大常委会副委员长陈至立，全国政协常委、科技部原部长徐冠华院士出席开幕式。清华大学党委书记陈旭、常务副校长程建平，以及学校老领导方惠坚、王大中、贺美英、顾秉林、梁尤能、孙继铭等出席开幕式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2014.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140821092803873309440/20140821092803873309440_.html" target="_blank">四川省与清华大学签署战略合作协议</a></h3>
+              <p>8月15日上午，四川省与清华大学在成都签署省校战略合作协议。四川省委书记王东明，省委副书记、省长魏宏，清华大学党委书记陈旭出席签约仪式，共同见证合作协议签署。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9660/2014/20140714152946022343298/20140714152946022343298_.html" target="_blank">清华继续教育学院与法学院签署战略合作协议</a></h3>
+              <p>7月11日上午，清华大学继续教育学院与清华大学法学院培训工作全面合作签约仪式在清华科技园创新大厦举行。根据协议，两院将充分利用优势教育培训资源，就国内司法、政法系统干部委托培训等项目展开合作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140710174559031965269/20140710174559031965269_.html" target="_blank">中美低碳城市发展暑期学校在清华大学开幕</a></h3>
+              <p>7月8日，由美国国家科学基金会支持的国际合作教育与研究项目（PIRE）暑期学校在清华大学环境节能楼开幕。暑期学校的研讨主题是“可持续城市发展和低碳基础设施建设”，重点针对亚洲工业化、城镇化转型城市与美国服务型城市进行比较研究。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140707155655401146091/20140707155655401146091_.html" target="_blank">清华大学与广东省签署战略合作协议</a></h3>
+              <p>7月4日下午，广东省省长朱小丹、副省长陈云贤等一行访问清华大学。来访期间，省校双方签署了《广东省人民政府——清华大学战略合作协议》及5份子协议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140707145735210803760/20140707145735210803760_.html" target="_blank">广东与清华签署新一轮合作协议</a></h3>
+              <p>　4日下午，广东省政府与清华大学在北京签署新一轮战略合作协议。签约仪式前，广东省省长朱小丹与清华大学校长陈吉宁进行了会见。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140702135356753251342/20140702135356753251342_.html" target="_blank">清华与河北签署合作协议 推动省校合作纵深...</a></h3>
+              <p>6月30日，河北省委书记周本顺，省长张庆伟，省委常委、省委秘书长景春华，副省长许宁等一行访问清华大学。来访期间，省校双方签署了《河北省人民政府、清华大学进一步深化扩大合作的协议》和《河北省人民政府、清华大学共建清华大学重大科技项目（固安）中试孵化基地协议》。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140611163155514311573/20140611163155514311573_.html" target="_blank">清华大学与蚌埠市签署合作协议</a></h3>
+              <p>6月11日，清华大学与蚌埠市全面合作协议签约仪式在工字厅东厅举行。蚌埠市委书记周春雨，蚌埠市委常委、组织部长周勇，清华大学常务副校长程建平出席签约仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2014/20140606140618819873083/20140606140618819873083_.html" target="_blank">中俄学者共著学术著作 50万字谋两国战略...</a></h3>
+              <p>　　由中俄两国学者共同撰写的50余万字学术著作《中俄战略伙伴对话：现状、问题、建议》（中、俄文版）今日在京首发。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140516143448854857980/20140516143448854857980_.html" target="_blank">清华附中与美国阿什维尔中学签署合作协议</a></h3>
+              <p>5月14日，清华大学附属中学与美国阿什维尔中学（Asheville School）友好合作签字仪式在工字厅举行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140509151410092773565/20140509151410092773565_.html" target="_blank">清华与加拿大阿尔伯塔大学续签合作协议</a></h3>
+              <p>5月9日，加拿大阿尔伯塔大学教务长卡尔·阿姆雷恩(Carl Amrhein)一行到访清华大学。清华大学副校长袁驷会见了来宾。双方进一步商议了两校能源战略合作项目的启动经费、执行管理委员会构成及运作模式等细节内容，并就在能源项目合作的基础上开展研究生联合培养的可能性交换意见。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140508094626123809813/20140508094626123809813_.html" target="_blank">清华15位外国专家入选2014年“高端外...</a></h3>
+              <p>2014年度国家外国专家局“高端外国专家项目”审批结果日前公布，清华大学申报的15位外国专家全部入选，受资助资金额度和项目数量均名列部属高校第一位。这标志着清华在高层次外国专家引进方面实现了新突破，对促进清华的人才培养、学科建设和国际间科研合作具有重要意义。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140426095117586727926/20140426095117586727926_.html" target="_blank">【校庆特稿】国际合作 促进共赢</a></h3>
+              <p>我校坚持开放式办学，国际合作持续加强，派出渠道逐步拓展，学生国际化培养力度不断加大。2013年，全校共派出学生4754人次，比上年又增加了16%，其中本科生1703人次、硕士生995人次、博士生2056人次。截至2013年底，我校已与境外127所合作院校签署了校际学生交换协议，每年交换名额约700人。在国家留学基金委优秀本科生国际交流项目中，我校134名本科交换生获得批准；在国家留学基金委高水平研究生交流项目中，我校被录取258人，其中联合培养博士生224人，录取人数为全国高校之首。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140420141056223597804/20140420141056223597804_.html" target="_blank">清华与厦门市签署全面合作协议</a></h3>
+              <p>4月17日，清华大学与厦门市全面合作协议签约仪式在工字厅东厅举行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140414164348841450891/20140414164348841450891_.html" target="_blank">清华大学与潍坊市签署合作协议</a></h3>
+              <p>4月10日下午，潍坊市人民政府与清华大学合作协议签约仪式在工字厅西厅举行。潍坊市委副书记、高新区党工委书记王献玲，副市长张望军，清华大学副校长薛其坤出席签约仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140327141636191957975/20140327141636191957975_.html" target="_blank">现代医院管理人才奇缺现“短板”</a></h3>
+              <p class="thnews_jqzy">　　现代医院管理人才奇缺现&ldquo;短板&rdquo;来源：科技日报 2014-3-27 李颖&ldquo;医院管理者是医疗改革最重要的实践者。&rdquo;在清华大学医院管理研究院召开的&ldquo;清华-罗氏医院管理合作项目&rdquo;启动仪式上，全国政协常委、清华大学医院管理研究院院长黄洁夫强调，中国的医疗改革需要更多懂得中国国情及世界最先进的医......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140320153553119609223/20140320153553119609223_.html" target="_blank">清华与中国核建签署深化高温气冷堆技术产业...</a></h3>
+              <p class="thnews_jqzy">　　清华与中国核建签署深化高温气冷堆技术产业推广合作协议清华新闻网3月20日电（记者李 含）3月19日，清华大学与中国核工业建设集团公司深化高温气冷堆技术产业推广合作协议的签约仪式在清华大学工字厅东厅举行。中国核工业建设集团公司党组书记、总经理王寿君，公司党组成员、副总经理祖斌等出席签约仪式。清华大学校长陈吉宁、副校长薛其坤出席签约仪式。协议的签署，将推动清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140307140454409622811/20140307140454409622811_.html" target="_blank">青岛市政府与清华大学签全面合作协议</a></h3>
+              <p class="thnews_jqzy">　　青岛市政府与清华大学签全面合作协议陈旭在北京会见李群来源：青岛日报 2014-3-7 杨晓星根据协议，清华大学将组织院士、专家学者及研究人员为青岛提供决策咨询服务；双方将在高端装备制造、海洋、机器人、3D打印等领域，开展产学研合作和协同创新；同时在干部交流、人才培养、毕业生就业创业等方面开展全面合作昨日下午，青岛市人民政府与清华大学在北京签署全面合作......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140307130144482118897/20140307130144482118897_.html" target="_blank">清华与青岛市签署全面合作协议</a></h3>
+              <p class="thnews_jqzy">　　清华与青岛市签署全面合作协议清华新闻网3月7日电（记者李 含）3月6日，清华大学与青岛市全面合作协议签约仪式在学校丙所举行。签约仪式前，清华大学校党委书记陈旭在工字厅会见了来访的山东省委常委、青岛市委书记李群一行。青岛市委常委、副市长王广正，市委常委、秘书长王鲁明，市委常委、红岛经济区（高新区）党工委书记、管委会主任陈飞陪同来访。清华大学党委副书记史宗恺......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131223172707923844450/20131223172707923844450_.html" target="_blank">清华大学与吉林省人民政府签署战略合作框架...</a></h3>
+              <p>12月18日上午，清华大学副校长姜胜耀出席吉林省企业创新大会暨省校战略合作协议签约仪式，并代表学校签署《清华大学－吉林省人民政府战略合作框架协议》。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131220155154867471824/20131220155154867471824_.html" target="_blank">中国气象局与清华大学签署战略合作协议</a></h3>
+              <p>12月17日下午，中国气象局党组书记、局长郑国光一行专程来到清华大学，与清华大学校长陈吉宁签署了战略合作协议。根据协议，双方将在气象现代化建设、人才培养、科学研究与学科发展、科技产业和资源共享等方面开展全面合作。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131216140144351771051/20131216140144351771051_.html" target="_blank">北海与清华签署全面合作协议</a></h3>
+              <p class="thnews_jqzy">　　北海与清华签署全面合作协议在海洋产业、科技发展、人才培养以及产业转换等方面开展合作来源：广西日报 2013-12-16 曾俊峰12月12日，在清华大学主楼，北海市政府与清华大学共同签署全面合作协议，在海洋产业、科技发展、人才培养以及产业转换等方面开展合作。根据该协议，北海市将与清华大学加强战略咨询、促进产学研、推动人才培养与交流方面的合作。清华大学将......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131216135753225122563/20131216135753225122563_.html" target="_blank">淮安市与清华大学续签人才交流合作协议</a></h3>
+              <p class="thnews_jqzy">　　我市与清华大学续签人才交流合作协议来源：淮安日报 2013-12-16 叶列 赵纪辉13日，我市与清华大学续签人才交流合作协议签约仪式在市区举行，清华大学党委组织部副部长、研究生工作部部长张小平，市委常委、组织部长张彤等出席签约仪式。张彤表示，我市与清华大学开展全面合作取得了积极成果，对加深双方合作共赢，推动淮安跨越发展产生积极影响。此次续签意味着一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131210111638244375357/20131210111638244375357_.html" target="_blank">清华大学与中国电子签署战略合作协议</a></h3>
+              <p>12月7日下午，清华大学与中国电子信息产业集团有限公司（简称“中国电子”）战略合作协议签约仪式在工字厅东厅举行。中国电子总经理刘烈宏、副总经理陈旭，清华大学校长陈吉宁、常务副校长程建平出席签约仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131205163940398531965/20131205163940398531965_.html" target="_blank">清华大学与宁德市签署校市全面合作协议</a></h3>
+              <p class="thnews_jqzy">　　清华大学与宁德市签署校市全面合作协议&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网12月5日电12月4日上午，宁德市委副书记、市长隋军，宁德市副市长周秋琦，政协主席郑民生一行访问清华大学，并与清华签署市校全面合作协议。校党委副书记史宗恺，副校长薛其坤等出席签约仪式。&nbsp;&nbsp;&nbsp;&nbs......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131030132607008717201/20131030132607008717201_.html" target="_blank">清华大学与宜昌市签署校市全面合作协议</a></h3>
+              <p class="thnews_jqzy">　　清华大学与宜昌市签署校市全面合作协议清华新闻网10月30日电10月28日下午，清华大学党委书记胡和平在主楼接待厅会见了到访的湖北省委常委、宜昌市委书记黄楚平，市长马旭明一行。会见前，清华大学与宜昌市人民政府全面合作协议签约仪式在清华大学主楼会议室举行，清华大学副校长薛其坤与马旭明代表双方签署了《宜昌市人民政府-清华大学全面合作协议》。图为胡和平会见黄楚平......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131021101525559947670/20131021101525559947670_.html" target="_blank">清华大学与三明市签署全面合作协议</a></h3>
+              <p class="thnews_jqzy">　　清华大学与三明市签署全面合作协议清华新闻网10月21日电&nbsp; （记者王冰冰）10月18日上午，清华大学与福建省三明市人民政府全面合作协议签约仪式在主楼327会议室举行。清华大学副校长薛其坤，福建省科协党组书记、副主席梁晋阳，三明市委副书记、市长杜源生出席签约仪式。签约前，薛其坤会见了杜源生一行。图为薛其坤讲话。记者智 斐摄薛其坤代表清华大学对......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2013/20131018150440511673621/20131018150440511673621_.html" target="_blank">清华与成都龙泉驿区签署人才合作协议</a></h3>
+              <p class="thnews_jqzy">　　清华大学与成都经济技术开发区（龙泉驿区）签署人才合作协议清华新闻网10月18日电10月16日下午，成都市龙泉驿区区委常委、组织部长曾新一行访问清华大学，校党委副书记史宗恺会见了曾新一行，双方就进一步加强校地合作事宜进行座谈。校党委组织部副部长、研究生工作部部长张小平主持座谈会并代表校党委组织部与曾新共同签署了人才合作协议。座谈会上，史宗恺代表学校对曾......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130925141018714603578/20130925141018714603578_.html" target="_blank">清华大学与福建海峡银行开展银校合作</a></h3>
+              <p class="thnews_jqzy">　　清华大学与福建海峡银行开展银校合作来源：新华网 2013-9-24 康淼清华大学五道口金融学院与福建海峡银行24日签署战略合作协议，双方将开展多层次的银校合作。7月以来，清华大学已相继与福建省政府、福州市政府签署合作协议，此次银校合作表明清华大学支持海西建设的方式又进一步拓展。据福建海峡银行董事长郭运濂介绍，双方将充分发挥各自资源及专业优势，在高......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2013/20130717152316309524098/20130717152316309524098_.html" target="_blank">清华大学与麻省理工学院合作培养MBA学生</a></h3>
+              <p class="thnews_jqzy">　　清华大学与麻省理工学院合作培养MBA学生来源：新华网 2013-7-17 郝海盟清华&mdash;MIT（美国麻省理工学院）全球MBA项目16日正式启动，双方将在研究、课程等方面进一步深化战略合作，力争为每位全球MBA学生提供赴MIT校园短期学习的机会。清华&mdash;MIT全球MBA项目（简称&ldquo;清华全球MBA项目&rdquo;）新闻发......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130712113007974391413/20130712113007974391413_.html" target="_blank">兰州军区与清华大学签订人才战略合作协议</a></h3>
+              <p class="thnews_jqzy">　　兰州军区与清华大学签订人才战略合作协议来源：解放军报 2013-7-12 吴益 贾保华7月8日，兰州军区与清华大学在北京举行军民融合培养新型军事人才战略合作签约仪式。为深化军民融合式发展，大力培养新型军事人才，加速推进兰州军区部队建设转型发展，从去年开始，兰州军区与清华大学开办了首期高级软件研发员培训班，以基础理论、专业知识和实训项目为重点，对遴选的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130710164300906206101/20130710164300906206101_.html" target="_blank">清华大学与中国建设银行签署战略合作协议</a></h3>
+              <p class="thnews_jqzy">　　清华大学与中国建设银行签署战略合作协议清华新闻网7月10日电（记者王冰冰）7月9日下午，中国建设银行董事长王洪章、行长张建国等一行到访清华大学，双方在主楼接待厅签署《清华大学-中国建设银行战略合作协议》。签约前，清华校长陈吉宁、常务副校长程建平、副校长姜胜耀等会见了王洪章、张建国一行。签约仪式由姜胜耀主持。图为陈吉宁讲话。记者智 斐摄签约仪式上，陈吉......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

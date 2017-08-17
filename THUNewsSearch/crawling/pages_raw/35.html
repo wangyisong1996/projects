@@ -1,0 +1,1098 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>2000年度“清华神龙富康奖学金”有得主</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225627171818610&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9654/index.html' class='navigation_style'>校园写意</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>神龙汽车有限公司在清华大学设立“清华――神龙富康奖学金”</TITLE><META NAME="Template" CONTENT="C:\MICROSOFT OFFICE97\OFFICE\html.dot"></HEAD><BODY LINK="#0000ff" VLINK="#800080" BGCOLOR="#FFFFFF"><H3 ALIGN="CENTER"><FONT FACE="楷体_GB2312" LANG="ZH-CN">2000年度“清华——神龙富康奖学金”有得主</FONT></H3><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>【新闻中心3月7日讯】近日，</FONT><FONT FACE="System" LANG="ZH-CN" SIZE=4>2000</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>年度“清华——神龙富康奖学金”评审活动结束，我校机械工程学院</FONT><FONT FACE="System" LANG="ZH-CN" SIZE=4>7</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>名博士生每人获得</FONT><FONT FACE="System" LANG="ZH-CN" SIZE=4>5000</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>元的资助。神龙汽车有限公司将专门派人前来学校，举行颁奖典礼。</FONT></P><P ALIGN="JUSTIFY"> <FONT FACE="宋体" LANG="ZH-CN" SIZE=4>神龙汽车有限公司是我国著名的汽车生产企业，去年</FONT><FONT FACE="System" LANG="ZH-CN" SIZE=4>10</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>月，我校机械工程学院柳百成院士应公司中方总经理张世端的邀请，专程前往武汉参观访问了神龙汽车公司，并与神龙汽车有限公司达成了在清华大学设立“清华——神龙富康奖学金”的协议。</FONT></P><P ALIGN="JUSTIFY"> <FONT FACE="宋体" LANG="ZH-CN" SIZE=4>为鼓励我校学生勤奋学习，加强学校与神龙汽车有限公司的联系和合作，扩大企业形象，促进汽车工业技术进步，推动我国汽车工业的高级科研与开发人才的培养，神龙汽车有限公司决定在我校机械工程学院专门设立“清华——神龙富康奖学金”，用于资助从事与我国汽车工业的设计、制造及测试理论与技术有关的博士论文研究。该奖学金从</FONT><FONT FACE="System" LANG="ZH-CN" SIZE=4>2000</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>年开始，每年资助</FONT><FONT FACE="System" LANG="ZH-CN" SIZE=4>5</FONT><FONT FACE="宋体" LANG="ZH-CN" SIZE=4>万元，连续资助五年。“清华——神龙富康奖学金”管理委员会由神龙汽车有限公司总经理担任主任，我校机械工程学院柳百成院士担任常务副主任。<FONT FACE="黑体">（张光跃）</FONT></FONT></P> </BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月07日 14:16:46　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9660/2016/20160322162059197157063/20160322162059197157063_.html" target="_blank">经管学院魏杰经济学优秀论文奖学金颁奖</a></h3>
+              <p>3月17日，2015年度“清华经管学院魏杰经济学优秀论文奖学金”颁奖仪式在学院举行。奖学金的设立者、清华经管学院清华同方讲席教授、创新创业与战略系魏杰教授参加活动并为获奖同学颁奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160115110312021627413/20160115110312021627413_.html" target="_blank">矣晓沅：轮椅不是我躲在象牙塔里的理由</a></h3>
+              <p>　　清华大学特等奖学金是清华学生的最高荣誉，每年分别只授予10位本科生和10位研究生。在2015年12月17日举行的清华学生奖励大会上，清华校长邱勇弯下腰将2014-2015学年度的特等奖学金证书颁发给一位坐在轮椅上的青年。这位青年名叫矣晓沅，三年前考入清华园时曾引发媒体关注。入校后他凭借远远超过他人的努力和勤奋，获得了同学、老师的认可。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160112101812637796671/20160112101812637796671_.html" target="_blank">【研究生特奖】丁文伯：执着，让梦想开花</a></h3>
+              <p>他是科研道路上敢于挑战难题的开拓者,勇敢地沿着人迹罕至的道路前行，他是坚持做本科生奖学金改革的带班辅导员,不到尽善尽美绝不放弃，他作为清华腰鼓队的队长，从完全没有舞蹈基础到能够带领腰鼓队参与大型表演，丁文伯实现了自我超越的华丽转身。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9660/2015/20151223170436762506111/20151223170436762506111_.html" target="_blank">“清华之友-轩辕奖学金”续捐协议书签字举行</a></h3>
+              <p>12月21日下午，“清华之友-轩辕奖学金”续捐协议书签字暨2015年颁奖仪式在工物系报告厅举行。轩辕国际集团副总裁王辉女士、清华大学基金会副会长王丹和工物系系主任陈怀璧共同在“清华之友-轩辕奖学金”续捐协议书上签字。仪式由工物系党委副书记曾鸣主持。签字仪式前，陈怀璧在致辞中对轩辕集团长期以来对清华学子成长的关心表达了深深感谢。王丹介绍了“轩辕奖学金”设立十年来的运作发展情况。王辉阐述了轩辕集团资助教育事业的爱心，以及在清华大学设立奖学金的发展历程，表达了愿意与清华大学“世世代代”合作的愿望。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151220205034868755772/20151220205034868755772_.html" target="_blank">2015年清华大学学生奖励大会举行20名...</a></h3>
+              <p>12月17日，2014-2015学年度清华大学学生奖励大会在清华大学主楼接待厅举行。清华大学校长邱勇，校党委副书记史宗恺，副校长、教务长杨斌出席大会。大会在庄严的国歌声中开幕。史宗恺宣读了先进班集体获奖名单。杨斌宣读了“清华大学特等奖学金”、“蒋南翔奖学金”和“一二·九奖学金”获奖者名单。2014-2015学年度，清华大学共有10名本科生、10名研究生获得“特等奖学金”，20名同学获得“蒋南翔奖学金”，46名同学获得“一二·九奖学金”，35个集体获得“先进班集体”称号。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151217204238721355784/20151217204238721355784_.html" target="_blank">研究生特等奖学金获得者分享研究与生活点滴</a></h3>
+              <p>12月14日晚，2015年清华大学研究生特等奖学金获得者分享交流会在主楼后厅举行。经过院系推荐或自荐、专家评审评议、校务会议审议等环节，共有10名同学获得2015年研究生特等奖学金，其中博士生7名，硕士生3名。作为整个评选工作的组成部分，分享交流会具有重要的榜样作用与示范效应。此次，8位特奖获得者在交流会现场，分享了他们在科研与生活中的点滴感悟。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9665/2015/20151113163834241359078/20151113163834241359078_.html" target="_blank">清华大学2015年度特高压电网奖学金颁奖</a></h3>
+              <p>11月12日，清华大学2015年度“特高压电网奖学金”颁奖仪式暨“全球能源互联网”讲座在清华大学举行。清华大学副校长杨斌、国家电网公司副总经理王敏共同为15名清华学子颁奖。清华大学副校长杨斌在致辞中说，清华大学和国家电网公司分别是能源行业在学界和产业界的领头羊，双方一直以来有着密切的合作与联系。构建全球能源互联网，是顺应世界能源变革趋势和电网发展客观规律的重大战略构想。清华大学也十分期待能够和国家电网公司在创新研究、学生培养等方面开展更深入的合作，共同面对能源互联网所带来的挑战与机遇。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151111170330860163555/20151111170330860163555_.html" target="_blank">又是一年膜拜时-清华本科特等奖学金答辩结束</a></h3>
+              <p>1989年设立的清华大学特等奖学金，旨在表彰全面发展或是在某一方面具有突出特长或贡献的优秀学生。对清华学生而言，特等奖学金是最高荣誉。11月8日下午，经过院系推荐、校奖助学金管理委员会办公室审核、初评等环节，15位本科同学在主楼后厅进行2015年度特等奖学金答辩。最终，憨家豪、矣晓沅、沈汇涛、商宇航、王瀚森、沈奇舱、张贶恩、蔡泽洲、杨韵芳、侯时雨得票获前10名。让我们一起领略他们的风采。我们也期待正式结果早日到来。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151110105523744811813/20151110105523744811813_.html" target="_blank">本科生特等奖学金答辩展现清华学子风采</a></h3>
+              <p>“清华三年，给了我太多成长与改变。在这片足够大的舞台上，我一次次开拓着自己梦想的边界，一次次从出发与到达中收获着自信。清华三年，也有很多事情从未改变，我始终明白，自己是一个平凡的人，即便没有天分，但只要认真对待生活，我也可以用坚持与汗水换来它的鼓励与嘉奖。我会一直在路上，永不止步。”水利系本科生特等奖学金候选人侯时雨同学在台上分享自己一路走来的感受，赢得满堂掌声。11月8日下午，2015年清华大学本科生特等奖学金答辩会在主楼后厅举行，来自航空航天学院的苏雷、建筑系的商宇航、水利系的侯时雨、机械系的杨韵芳等15位候选人先后分享了自己各具特色的学习成长经历和感受。校党委副书记、奖助学金管理委员会主任史宗恺出席答辩会。今年本科生特奖共有院系推荐、部门推荐和学生自荐三种方式，本次特等奖学金评选共收到48名优秀同学的申报材料，经过校奖助学金管理委员会办公室材料审核、初评会议两个环节，共有15位同学入围答辩环节。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9659/2015/20151030095816778876709/20151030095816778876709_.html" target="_blank">柳百成获中国机械工程学会中国铸造终身成就奖</a></h3>
+              <p>近日，中国机械工程学会铸造分会在长沙召开，会上向柳百成院士颁发了“中国铸造终身成就奖”。“中国铸造终身成就奖”是表彰在当代铸造科学前沿取得重大突破、在铸造行业发展过程中做出卓越贡献的我国铸造工作者。清华大学柳百成院士是唯一先后（2011-及2015年）获得“中国铸造杰出贡献奖”及“中国铸造终身成就奖”二个奖项的获得者。颁奖仪式结束后，柳百成应邀作了题为“发展先进工艺、建设制造强国”大会主题报告。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151029161032928756175/20151029161032928756175_.html" target="_blank">清华大学教授捐工资设奖学金鼓励生态研究</a></h3>
+              <p>　　28日上午，清华大学环境学院5名学生成为首届“周集中－石小娅”奖学金的获得者。该奖学金由清华大学“千人计划”教授周集中捐赠出自己工资而设立，用于奖励生态、环境科学和工程专业的学生。    　　此次获奖的2名本科生、1名硕士研究生和2名博士研究生，均在环境科学与工程的研究中成绩突出，并将分别获得5000元、6000元及7000元的现金奖励。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150810161028205723282/20150810161028205723282_.html" target="_blank">清华设立高额奖学金培养高端涉外法律人才</a></h3>
+              <p>近日，2015年清华大学明伦奖学金颁奖仪式在京举行。中植企业集团董事局主席刘洋先生、清华大学法学院院长王振民教授以及部分获奖学生代表出席了颁奖典礼。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150612142104988791990/20150612142104988791990_.html" target="_blank">清华大学设立航天奖学金</a></h3>
+              <p>　　清华大学8日在京设立航天奖学金。中国航天基金会、四季沐歌集团、清华大学有关领导出席设立仪式。    　　据介绍，清华大学“航天奖学金”是中国新能源光热领域在全国高校设立的唯一一个航天奖学金，旨在鼓励清华优秀学子、帮助清华贫困学生更好地完成学业，培养更多航天领域的杰出人才。此次捐款方，四季沐歌集团共向清华大学航空航天学院捐赠人民币90万元用于奖学金的设置。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150609143452299444330/20150609143452299444330_.html" target="_blank">受益航天技术民用化 新能源企业清华设航天...</a></h3>
+              <p>　　借助航天太空船饮用水处理技术在民用净水领域获得突破的新能源企业四季沐歌8日携手中国航天基金会，在清华大学航天学院设立奖学金，帮助航天学子迈出人生中重要一步。    　　中国人民解放军总装备部原副部长，中国航天基金会理事长张建启，中国航天基金会秘书长张玉江，清华大学航天航空学院党委书李俊峰，清华大学基金会项目部主任王旭光，中国人民解放军航天员大队英雄航天员刘旺、张晓光出席了当天的启动仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150605154845318589528/20150605154845318589528_.html" target="_blank">清华-哈希水质奖学金“六·五环境日”颁奖</a></h3>
+              <p>6月5日，2014-2015学年度“清华-哈希水质奖学金”颁奖仪式在环境节能楼举行。此次环境学院共有15名同学获得此项奖学金。颁奖仪式上为同学颁发了荣誉证书。方舟代表获奖学生发言，他对哈希公司和学院的鼓励表示感谢，并分享了自己读研期间的成长经历。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150505201001101180058/20150505201001101180058_.html" target="_blank">孙鹏展：科研就是一场足球比赛</a></h3>
+              <p>　　和所有“隐秘而伟大”的清华大学研究生特等奖学金获得者一样，孙鹏展拥有不少令人“羡慕嫉妒恨”的成绩。    　　他以第一作者身份在国际知名期刊上发表16篇SCI收录论文，总影响因子大于94；他的研究成果曾受到2010年诺贝尔物理学奖得主Geim教授的高度好评；他先后获得波音奖学金、GE基金会科技创新奖、材料领域原创性研究成果奖、清华大学博士研究生新生奖学金、连续两年获得国家奖学金……</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150426183647212933595/20150426183647212933595_.html" target="_blank">国资委新闻中心在清华设立“国资小新”奖学...</a></h3>
+              <p>　　今天下午，正值清华大学建校104年之际，国务院国资委新闻中心和清华大学新闻与传播学院签署合作协议，设立“国资小新”奖学金，建立创新实践基地，鼓励清华学子深入开展新媒体运营和媒体融合的理论研究。该合作协议的签署，开启了新闻传播研究领域的政学合作新模式，是一次优势互补、强强联手。据中国经济网文化产业频道记者了解，接下来，国资委新闻中心还将陆续在北京大学、中国人民大学、中国传媒大学、中山大学等其他国内知名高校设立“国资小新”奖学金，加强新闻传播人才培养，帮助新闻学子开拓学术视野、提升实践能力；充实新媒体运营和媒体融合方面等理论研究成果，为国资央企改革发展提供智力支持。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2015.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150417142715745528576/20150417142715745528576_.html" target="_blank">【校庆报道】柳百成：爱国奉献 顽强拼搏</a></h3>
+              <p>对我来说，2015年是非常值得纪念和庆贺的一年。我从清华毕业，并在清华工作已60周年了, 连同大学4年，我在清华已度过64 个年头。回忆在清华所经历的漫长岁月，真是记忆犹新，感慨万千。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150331154113025554815/20150331154113025554815_.html" target="_blank">罗德中国奖学金成立</a></h3>
+              <p>　　3月30日，牛津大学罗德奖学金基金会在京宣布，正式将中国纳入罗德奖学金拓展计划，建立并资助罗德中国奖学金。中国内地公民将首次有机会获得罗德中国奖学金前往牛津大学深造。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2015/20150326190916462229505/20150326190916462229505_.html" target="_blank">美院本科生获得中国嘉德徐邦达艺术教育奖学金</a></h3>
+              <p>3月20日，中国嘉德徐邦达艺术教育奖学金2014年度颁奖大会举行，美术学院雕塑系本科四年级学生何鑫、陶瓷系本科生三年级学生许钰涵获得此项奖励，中国嘉德国际拍卖有限公司副总裁王辉、故宫博物院单霁翔院长、南京大学校领导为获奖学生颁奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150320165150307807862/20150320165150307807862_.html" target="_blank">柳百成：“中国制造2025”建设制造强国...</a></h3>
+              <p>　　要实施“中国制造2025”，坚持创新驱动、智能转型、强化基础、绿色发展，加快从制造大国转向制造强国。——政府工作报告</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150306140755870490627/20150306140755870490627_.html" target="_blank">建筑学院研究生首获美国暖通空调工程师协会...</a></h3>
+              <p>近日，清华大学建筑学院2011级直博生施珊珊获得了由美国暖通空调工程师协会颁发的2015-2016年度Grant-in-Aid国际奖学金。这是清华研究生首次获此殊荣，也是本年度唯一一名获得此项荣誉的中国大陆高校的研究生。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150126132656327974415/20150126132656327974415_.html" target="_blank">【特等奖学金】吴陈沭：双肩挑路上结出“笨...</a></h3>
+              <p>他是20余篇高水平论文的作者，拥有10余项专利的博士生；他是两个几乎囊括了北京市和清华所有集体荣誉的本科班级的带班辅导员；获评特奖时他说感到有些意外，因为自己只是一名普通的清华学生，只是做了一些不辜负清华的事。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150126161937235518608/20150126161937235518608_.html" target="_blank">【特等奖学金】刁军翔：至真至善的艺术修行者</a></h3>
+              <p>众多雕塑作品背后，他矢志不渝的求索之路也默默的诠释着艺术的追求。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150123165109493164079/20150123165109493164079_.html" target="_blank">【特等奖学金】韩金池：成就，只因热爱</a></h3>
+              <p>在他看来，做科研失败是常态，成功才是偶然，不能因为害怕失败而不去尝试，能从失败中总结经验，那么就是在一步步的靠近成功。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150123163215663102614/20150123163215663102614_.html" target="_blank">【特等奖学金】刘丹：科学与艺术交织的美妙...</a></h3>
+              <p>一直朝着“为人类健康奋斗”的道路前进，刘丹进入了清华大学攻读博士学位，师从祁海教授，从事获得性免疫相关机制的研究。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150123161848223446284/20150123161848223446284_.html" target="_blank">【特等奖学金】孙鹏展：两次战胜命运的力量</a></h3>
+              <p>他最常说的一句话就是“知识是没有错的，没准儿哪天就能用上。”然而，这位学术“小牛”的科研路并不平坦，失败是常有的事儿。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150123105711687449728/20150123105711687449728_.html" target="_blank">黄斐：从乡土到国际，清华女孩的“外交梦”</a></h3>
+              <p>　　2014年的秋冬，在华府的四个月，见了世面，耐得了孤独，经得起打击，当然也要更加成熟，忍受前路成长带来的阵痛，消化小成功催生的傲气。    　　这是黄斐对于过去四个月的总结，也是新的开始。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150122155531620470519/20150122155531620470519_.html" target="_blank">我国提高来华留学生政府奖学金资助标准</a></h3>
+              <p>　　财政部、教育部21日发布通知，决定完善中国政府奖学金资助体系，提高资助标准，本科生、硕士研究生、博士研究生每人每年资助标准最高档分别为66200元、79200元和99800元。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150121223859905465796/20150121223859905465796_.html" target="_blank">【特等奖学金】元喆：谦虚的精彩</a></h3>
+              <p>在采访中，元喆一直在静静的聆听，也在静静的叙述，“其实我并没有做什么特别厉害的事情”、“这些都是大家的功劳，不是我一个人的”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150115145133647431829/20150115145133647431829_.html" target="_blank">【特等奖学金】蔡鹏：一个双肩挑的修炼之道</a></h3>
+              <p>本科毕业设计的时候，蔡鹏喜欢上了实验室生活，在园子里，有了另一个家。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150114161340032179101/20150114161340032179101_.html" target="_blank">【特等奖学金】王佳明：坚定初心在命运风暴...</a></h3>
+              <p>汶川地震那年，他和63名同学废墟中走出，因为他要和乡亲们一起从灾难中走出来，重建家园。在清华园读书时，他参加了9次无偿献血。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150114133020372747587/20150114133020372747587_.html" target="_blank">【特等奖学金】朱俊儿：科研赛道上的追风少年</a></h3>
+              <p>他，在老队员全部退出后重建车队，驰骋赛场；他，为了赛道上的梦想在材料力学研究中探索。朱俊儿，一个科研赛道上的追风少年。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150105171903121200914/20150105171903121200914_.html" target="_blank">祖充：每周科研80小时 清华能否胜哈佛</a></h3>
+              <p>　　为在清华做出属于中国的、甚至是世界的第一台量子计算机留在国内。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150104103807911184535/20150104103807911184535_.html" target="_blank">2014年清华研究生特奖获得者分享交流会...</a></h3>
+              <p>12月29日晚，2014年清华大学研究生特等奖学金获得者分享交流会在主楼后厅举行。校党委副书记史宗恺，副校长、教务长、研究生院院长杨斌出席了分享交流会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141227093002937166045/20141227093002937166045_.html" target="_blank">2014年清华大学学生奖励大会举行19名...</a></h3>
+              <p>12月26日下午，2014年清华大学学生奖励大会在主楼后厅举行。校长陈吉宁，校党委副书记、纪委书记韩景阳，副校长、教务长、研究生院院长杨斌出席大会。大会由校党委副书记史宗恺主持。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141226131742327414086/20141226131742327414086_.html" target="_blank">【特等奖学金】韩衍隽：通向科研之巅的平凡...</a></h3>
+              <p>斯坦福大学教授的一段评价，连同被网络疯狂转载的几乎全满分的成绩单照片，让清华大学电子系2010级本科生韩衍隽成为校园内外关注的焦点。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141219175451994252921/20141219175451994252921_.html" target="_blank">2014人民网奖学金在清华揭晓 新闻学院...</a></h3>
+              <p>12月17日下午，人民网“最具潜质新闻人大赛”研究论文奖总决赛暨人民网奖学金颁奖典礼在清华大学主楼接待厅举行。来自清华大学、北京大学、中国人民大学、中国传媒大学、复旦大学、华中科技大学、武汉大学、南京大学等全国高校新闻学院的50名同学获颁“最具潜质新闻人大赛”研究论文奖或人民网奖学金。清华大学新闻与传播学院5名同学获此殊荣。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20141105142631898178271/20141105142631898178271_.html" target="_blank">清华学霸：逆袭的县城少年</a></h3>
+              <p>　　“15门满分100分，4门99分，1门98分。”这张列在幻灯片上的清华大学基础学科成绩单，出自今年清华大学本科生特等奖学金答辩会，答辩人便是这份成绩单的创造者——清华大学电子工程系2011级学生韩衍隽。该幻灯片引来众多网友围观和膜拜。（《南方都市报》11月4日）</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141104170758970524492/20141104170758970524492_.html" target="_blank">清华大学2014年本科生特等奖学金答辩会...</a></h3>
+              <p>11月2日下午，2014年清华大学本科生特等奖学金答辩会在主楼后厅举行。来自数学系的邱聪灵、计算机系的杨植麟、电子系的韩衍隽、法学院的李若愚、美术学院的唐韬然等15位候选人先后展示了各自独具特色的成长故事。校党委副书记、奖助学金管理委员会主任史宗恺出席答辩会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20141104143654731623494/20141104143654731623494_.html" target="_blank">韩衍隽：20岁潜山男孩，清华学神！</a></h3>
+              <p>　　11月2日下午，象征清华最高荣誉的 2014本科生特等奖学金答辩会在清华大学上演，一名大四学生展示的成绩单震惊四座，赢得一阵掌声，20门学科，除了1门98分、4门99分之外，其他学科都是满分。成绩单被传到网上后引起轰动，网友们纷纷膜拜，称这位大四学生是“清华学神”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20141104143530302700354/20141104143530302700354_.html" target="_blank">韩衍隽：成绩好，能力强，他“独步”清华</a></h3>
+              <p>　　这不是“学霸”，是“学神”啊！昨日，当韩衍隽的清华大学特等奖学金推荐审核表（本科生）在网上曝光之后，这个来自安庆的小伙子立马引起了无数关注，大家纷纷对他发出“学神”的惊叹。而为人低调的韩衍隽则一直用阳光的笑声，配上“过奖”二字来回应。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9652/2014/20141103101259524544538/20141103101259524544538_.html" target="_blank">直击2014本科特奖答辩现场</a></h3>
+              <p>11月2日，在清华大学主楼后厅，进行了令人瞩目的2014年本科生特等奖学金答辩会。各位“学神”、“学霸”，指点江山，激扬文字，各显神通。清华新闻网特派学生摄影记者，在现场记录下这令人激动的瞬间。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141017173428283525880/20141017173428283525880_.html" target="_blank">英“百万英镑奖学金”计划启动</a></h3>
+              <p>　　英国北方大学联合会（NCUK）15日在京宣布正式启动“百万英镑奖学金”计划。该奖学金计划包括英国北方大学联合会年度奖学金和英国北方大学联合会领导力培训项目。其中，年度奖学金提供57个名额，面向中国、韩国等3国的学生。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140714144150423804331/20140714144150423804331_.html" target="_blank">奖励艺术研究生 昌新艺术奖学金揭晓</a></h3>
+              <p>　　面向两岸三地美术院校研究生的“最具潜力艺术家”暨“昌新艺术奖学金”评选结果昨天在清华美院揭晓。历年获奖的56位研究生的百余件作品同时在清华美院开始展出。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140530151936329636135/20140530151936329636135_.html" target="_blank">研究生国家奖学金评审将侧重发展潜力</a></h3>
+              <p>　　新一轮研究生国家奖学金评审工作即将于9月开始。教育部、财政部29日联合发布《普通高等学校研究生国家奖学金评审办法》。其中规定，新入学研究生可以参评国家奖学金，评审侧重其“发展潜力”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140528195537444301795/20140528195537444301795_.html" target="_blank">陈吉宁会见罗德奖学金CEO查尔斯·康恩</a></h3>
+              <p>5月26日，罗德奖学金首席执行官查尔斯·康恩（Charles Conn）访问清华大学。清华大学校长陈吉宁在工字厅与康恩先生进行了会谈。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140320110729159857638/20140320110729159857638_.html" target="_blank">【特等奖学金】翟上：心系冷暖 清风华梦</a></h3>
+              <p>这个不断追求“科研梦”的大男孩，心怀着“兼济天下冷暖”的信念，正一步步迈向自己理想中的人生之路。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140312110211248539347/20140312110211248539347_.html" target="_blank">【特等奖学金】吴佳俊：科研之路 执着前行</a></h3>
+              <p>吴佳俊，交叉信息研究院2010级本科生。2013年本科生特等奖学金得主。多篇论文发表于世界顶级会议与期刊，如IEEE国际计算机视觉与模式识别会议（IEEE CVPR）、《美国医学信息学会刊》（JAMIA）等。连续三年学分绩全年级第一。“思源”计划第十期学员。“星火”计划第六期学员。清华大学学生对外交流协会信息部部长，曾领导组织“地球村”国际文化交流活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140120101912655569202/20140120101912655569202_.html" target="_blank">【特等奖学金】张帼玮：孜孜以求 塑造完美</a></h3>
+              <p>“全面发展”，看过张帼玮简历的人们都不免这样想。从学术到科研，从社工到志愿工作，似乎没有什么是张帼玮缺少的。“追求卓越”是他对自己的目标，而在朋友眼中，把喜欢的事和有意义的事“精益求精”是他的特点。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140120095609394626768/20140120095609394626768_.html" target="_blank">【特等奖学金】季者：手心里的“化学梦”</a></h3>
+              <p>“我们追求对微观世界的极致认识，更渴望用化学改变人类的生活。我坚信，化学让生活更美好。”在2013年本科生特等奖学金的答辩舞台上，化学系的季者曾以这样一句话博得了满场热烈的掌声。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140114101704648969061/20140114101704648969061_.html" target="_blank">【特等奖学金】任东生：不积跬步，无以“驶...</a></h3>
+              <p>一身红色卫衣，高高瘦瘦，架副黑框眼镜，交流起来侃侃而谈，时不时地笑眯了眼睛，面前的这位特等奖学金得主——汽车系的任东生，不但有着工科男的细致严谨，也有邻家哥哥的开朗风趣。“踏实”、“平和”、“性格特别好”，这些都是与他认识三年的同伴对他的评价。和许多男孩一样，任东生也爱汽车，但更爱发动机。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140114093515476315790/20140114093515476315790_.html" target="_blank">【特等奖学金】孙洪枫：执著追梦 乐在学中</a></h3>
+              <p>孙洪枫出生于中国的高考大省河南，家住虞城县。高中时喜欢上了画画。“我开始并不知道通过画画也可以考学，只是纯粹地喜欢而已”，他坦言。学文的他高一、高二成绩都不错，享受着免学费和补助生活费的待遇。到了高三，他花了更多的时间来画画，无暇顾及文化课，于是成绩一落千丈。鱼和熊掌不可兼得，孙洪枫认为，画画是他的爱好，既然选择了就要坚持，谁知道，为了这一坚持，他经历了许多……</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140109161117694105720/20140109161117694105720_.html" target="_blank">【特等奖学金】赵华凯：早立携笔从戎志 渐...</a></h3>
+              <p>3年前的夏天，搭上从山东老家开往北京的火车，赵华凯开始了他的大学生活。来清华读书，已经实现了赵华凯多年以来的梦想；然而，身为一名清华国防生，一个更大的梦想开始在他的脑海中萌芽。“我有一个强军强国的梦想。”赵华凯这样说道。身为清华国防生，清华人的身份让他不断进取、脚踏实地，而作为未来军人的使命感和荣誉感则赋予了赵华凯更多的坚毅和执着。为了这个梦想，赵华凯付出了多少汗水，大概只有他自己才知道。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140102095356660163461/20140102095356660163461_.html" target="_blank">【特等奖学金】徐俊：平和无畏 一路向前</a></h3>
+              <p>记者眼中的徐俊，谦和、友善，面对荣誉，他都会泰然处之。他喜欢把自己比作始终向前奔跑的“阿甘”，他相信，“生活就像跑步一样，不敢说自己比别人跑得快，不敢说永远不跌倒，但只要一直坚持下去，终会到达终点。”在生活中保持平常心，平和而又坚定地做好自己的事，正视挫折，不断地前进——这或许就是徐俊取得成绩的奥秘所在。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140103085538205947910/20140103085538205947910_.html" target="_blank">【特等奖学金】张同宝：学以致用 用以促学</a></h3>
+              <p>张同宝是安徽人，本科就读于离家不远的合肥工业大学的化学工程与工艺专业，2011年以同专业第一的成绩被保送至清华大学化学工程系攻读硕士学位。在此之前，其所在学院尚没有学生保送清华大学的先例。他回忆说，参加保研面试时，他走在清华园里，看着偌大的校园、宏伟的建筑，穿梭的人群，这让他非常兴奋，但又倍感紧张。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140102100930215490829/20140102100930215490829_.html" target="_blank">【特等奖学金】吴宇恩：科研是一份事业</a></h3>
+              <p>2005年，吴宇恩考入清华大学化学系。刚进入清华园的头一年，吴宇恩学业成绩不是很理想。大三时，吴宇恩曾在李亚栋院士的实验室体验一年，自己对李老师的研究领域产生了浓厚的兴趣。但李亚栋院士所承担课题前沿性强、难度大，对学生要求非常高。但就是凭着刻苦钻研和“天不怕，地不怕”的精神，他以后来居上的成绩和稳扎稳打的实验成果获得了免试推荐攻读化学系博士研究生的机会，成为李老师门下的学生，研究方向为无机化学。读博期间，他攻破许多科研难题，在化学领域国际顶尖期刊上发表了多篇论文。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131226103549232598223/20131226103549232598223_.html" target="_blank">【特等奖学金】李国轩：一步一步踏出的精彩...</a></h3>
+              <p>李国轩，清华大学机械系2011级硕士生，师从张文增副教授。主要研究耦合与自适应复合欠驱动拟人机器人手，提出了“复合欠驱动”功能，该技术将成为高自适应、高灵巧、低成本的下一代机器人手技术趋势，针对非结构化环境，应用于航空航天、医疗康复、抗震救灾、核辐射环境等。现已发表论文共3篇（SCI检索2篇，E1检索1篇），其中第一作者2篇，另有1篇国际会议论文获得最佳论文奖；获得发明专利3项（授权2项，公开1项）</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131226150455840458367/20131226150455840458367_.html" target="_blank">【特等奖学金】喻丰：天赋异禀，还是天道酬...</a></h3>
+              <p>喻丰，清华大学社科学院2010级博士生，研究方向为社会心理学。在清华期间以第一作者身份发表CSSCI论文10篇，其中在《中国社会科学》上发表论文2篇。2012-2013年受国家留学基金委建设高水平大学公派研究生项目资助赴加州大学伯克利分校访学。曾获2012年教育部博士研究生学术新人奖、2012年度国家奖学金等奖励或荣誉。他倡导用实验方法研究哲学、伦理学问题，提出基于社会认知观的美德理论，并首先用思维系统来解释人格特质与伦理美德，同时阐明了微小情境对道德判断与道德行为的影响。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131227093307439240681/20131227093307439240681_.html" target="_blank">【特等奖学金】田禾：要用整个生命的长度做...</a></h3>
+              <p>田禾，男，1988年3月出生于湖北省孝感市，中共党员，本科毕业于合肥工业大学。现为清华大学微纳电子系2010级博士生，主要研究方向为新型石墨烯电子器件，首次将石墨烯引入到阻变存储器中，使得器件功耗降低47倍，论文发表在国际电子器件领域最顶级学术会议IEDM（国际电子器件会议）上。以第一作者发表SCI 论文17篇(总影响因子为90.627)，申请2项国家发明专利和1项PCT国际专利。 曾获2013 IEEE EDS PhD Student Fellowship（2013年IEEE电子器件学会博士生奖学金） （全球每年仅3-4人可获奖），教育部博士生学术新人奖，研究生国家奖学金，清华大学“学术新秀”，清华大学综合优秀一等奖学金，清华大学优秀共产党员，清华大学一二九辅导员奖，清华大学优秀党支书等荣誉。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131226101952184615665/20131226101952184615665_.html" target="_blank">【特等奖学金】哈米德：清华实验室就是我的家</a></h3>
+              <p>哈米德(Hamidreza Arandiyan)，男，来自伊朗，清华大学环境学院2010级博士研究生，师从李俊华教授，研究方向为工业催化与纳米科学。攻读博士期间,学分绩在同专业方向排名第二。他以第一作者发表SCI论文9篇，参加过多次国际学术会议，发表国际会议论文7篇。他所研制的结构可控的三维大孔催化剂，表现出良好的净化甲烷的性能，能有效解决汽车尾气排放带来的环境污染问题；曾获中国政府奖学金、博士生优秀出版物奖、清华大学研究生综合奖学金等共计9项奖励和荣誉。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131224111423662750678/20131224111423662750678_.html" target="_blank">【特等奖学金】冯硝：感谢坚持 感谢幸运</a></h3>
+              <p>冯硝，女，清华大学物理系2008级博士生，师从薛其坤院士，主要从事磁性掺杂拓扑绝缘体薄膜的生长和电子质研究。冯硝所在的团队制备出世界上第一个具有量子反常霍尔效应的磁性拓扑绝缘体样品，在量子反常霍尔效应的实验发现中起到关键作用。此项工作发表在国际顶尖学术期刊《科学》，被认为是“凝聚态物理学一项非常重要的成就”，“一篇里程碑式的文章”。目前冯硝已发表SCI文章7篇，其中2篇发表于《科学》期刊，一篇发表于《自然》子刊，曾获“清华之友-光华奖学金”二等奖、清华大学物理系“任之恭”奖学金及清华大学“一二&middot;九”奖学金等奖励。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131223170015427809387/20131223170015427809387_.html" target="_blank">【特等奖学金】李津津：科研之路 “津津”...</a></h3>
+              <p>李津津，这位享受思考乐趣而不厌于重复工作的“研究生学术小牛”，迈着稳健而坚定的步伐，向着有更广阔学术空间的未来前进。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131223112832578939429/20131223112832578939429_.html" target="_blank">【特等奖学金】张如范：从菜鸟到特奖的成长</a></h3>
+              <p>张如范从自己口中的研究生“菜鸟”，一步步走来，成为同学们交口称赞的研究生特等奖学金获得者。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131220143440910206139/20131220143440910206139_.html" target="_blank">留学生首获清华特奖 国际化人才培养取得新...</a></h3>
+              <p>12月19日，2013年清华大学学生奖励大会在主楼后厅举行。颁奖台上，有一位外国学生格外引人注目，他就是2013-2014学年清华大学研究生特等奖学金获得者、清华大学环境学院2011级博士生哈米德（Hamidreza Arandiyan）。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131220142458715492206/20131220142458715492206_.html" target="_blank">清华举行2013年学生奖励大会 20名学...</a></h3>
+              <p>12月19日下午，2013年清华大学学生奖励大会在主楼后厅举行。校领导陈吉宁、袁驷、史宗恺、姜胜耀出席大会并为获奖同学颁奖。20名清华学子获得特等奖学金，1名外国留学生首次摘得清华学生最高荣誉。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131202135521092682197/20131202135521092682197_.html" target="_blank">2013年清华研究生特奖获得者分享成长故事</a></h3>
+              <p class="thnews_jqzy">　　2013年清华大学研究生特等奖学金获得者分享交流会举行清华新闻网12月2日电（研通社记者张卓）11月28日晚，2013年清华大学研究生特等奖学金获得者经验分享交流会在主楼后厅举行。校长陈吉宁、校党委副书记史宗恺出席了分享交流会。2013年研究生特等奖学金评选经过院系推荐、专家评审评议、校务会审议等环节，共有10名同学获得本年度清华大学特等奖学金，其中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131202102644944516901/20131202102644944516901_.html" target="_blank">2013年清华大学研究生特等奖学金获得者...</a></h3>
+              <p>11月28日晚，2013年清华大学研究生特等奖学金获得者经验分享交流会在主楼后厅举行。校长陈吉宁、校党委副书记史宗恺出席了分享交流会。10名同学获得本年度清华大学特等奖学金。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131113140636890289602/20131113140636890289602_.html" target="_blank">十个“学神”，河南学子占了仨</a></h3>
+              <p class="thnews_jqzy">　　清华&ldquo;最高荣誉&rdquo;&mdash;&mdash;特等奖学金，获得者被称为&ldquo;学神&rdquo;十个&ldquo;学神&rdquo;，河南学子占了仨想做教师的孙洪枫 喜欢科研专注学术的翟上 梦想成为女外交官的杨元辰来源：大河报 2013-11-13 谭萍阅读提示| 深秋的清华校园，银杏叶黄透。微风吹过，摇落满地金黄。这金黄......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131106145925114882739/20131106145925114882739_.html" target="_blank">站着听 陈吉宁被赞“没架子”</a></h3>
+              <p class="thnews_jqzy">　　清华一答辩会 校长站后排照片网上流传站着听 陈吉宁被赞&ldquo;没架子&rdquo;来源：法制晚报 2013-11-5 王贺健清华大学校长陈吉宁在最后一排站着听答辩会，这一幕被学生拍下，照片近日在网上疯传，陈吉宁的校长头衔前获得了新的定语：&ldquo;没架子&rdquo;。在人人网流传的这张照片上，能看到陈校长靠在一排栏杆旁，看着台上的答辩情景......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131104115249959826991/20131104115249959826991_.html" target="_blank">清华大学举行2013年本科生特等奖学金答...</a></h3>
+              <p class="thnews_jqzy">　　清华大学举行2013年本科生特等奖学金答辩会清华新闻网11月4日电 （记者刘蔚如）10月31日下午，2013年清华大学本科生特等奖学金答辩会在主楼后厅举行。经过院系推荐、校奖助学金管理委员会办公室审核、初评等环节，共有15位候选人入围当天的答辩展示环节。校长陈吉宁，校党委副书记、奖助学金管理委员会主任史宗恺出席答辩会。图为答辩会现场。学生记者王皓冉摄......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130929083044144376510/20130929083044144376510_.html" target="_blank">【特等奖学金】史欣未：梦想在清华启航</a></h3>
+              <p>史欣未，生物医学工程系2009级本科生。2012年本科生特等奖学金得主。三年学分绩专业第一，连续两年素质测评第一。曾任医学院学生科协主席。多篇论文在国际期刊与会议上发表。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130927095335292957552/20130927095335292957552_.html" target="_blank">【特等奖学金】唐海达：心系冷暖 执着追梦</a></h3>
+              <p>唐海达，清华大学建筑学院建环9班本科生，大学三年学分绩专业第一。曾获得第20届人工环境工程学科奖学金一等奖，第四届“爱立信”杯热创新设计大赛一等奖，第六届中国制冷空调行业大学生科技竞赛一等奖，美国大学生数学建模竞赛（MCM/ICM）二等奖，绿色建筑创意全国邀请赛全国四强。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130927093856258393350/20130927093856258393350_.html" target="_blank">【特等奖学金】方展鹏：追求卓越 铭记责任</a></h3>
+              <p>方展鹏，2009年保送进入清华大学计算机系。入学三年来，他的学业成绩和素质测评一直名列前茅，现任计九第二党支部书记，并于2012年被评为清华大学优秀共产党员。方展鹏不仅获得了6块ACM国际大学生程序设计竞赛亚洲赛金牌，还发表了多篇学术论文；运动场上，他不仅夺得了马杯4×400米接力冠军，还作为队长带领计93班篮球队在系里的比赛中上夺冠。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130617110722597883042/20130617110722597883042_.html" target="_blank">【特等奖学金】屠环宇：做最好的自己</a></h3>
+              <p>他并没有想象中工科男的木讷，没有学霸的刻板，也没有凌人的气场，而是活泼随和。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130617103046069945851/20130617103046069945851_.html" target="_blank">【特等奖学金】冀东星：守土有责</a></h3>
+              <p>从大一时的成绩不理想、竞选班长失败，到特等奖学金、“社工达人”，冀东星在成长的路上付出了许多努力。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130604132723592713599/20130604132723592713599_.html" target="_blank">【特等奖学金】江汉臣：责任是前进的动力</a></h3>
+              <p>同学眼中的江汉臣是一个责任感和执行力都很强，又很有亲和力的人。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130603162237305754976/20130603162237305754976_.html" target="_blank">【特等奖学金】杨知方：找到最适合自己的路</a></h3>
+              <p>也正是这样的坚定信念，他才走出了一条“清华工科男非典型之路”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130415103820865598004/20130415103820865598004_.html" target="_blank">【特等奖学金】刘凯：勇往直前的创新者</a></h3>
+              <p>为了一个预期的检测结果，刘凯常常需要不辞劳苦，反复试验。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130415095442652339285/20130415095442652339285_.html" target="_blank">【特等奖学金】魏鲲鹏：一切从遇见开始</a></h3>
+              <p>若要用一句话来描绘他点滴的清华时光，那便是：遇见了，抓住了，就是成功。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130401111903646401347/20130401111903646401347_.html" target="_blank">【特等奖学金】周斌：守护空气的精灵</a></h3>
+              <p>周斌喜欢看柯南，读福尔摩斯，听五月天。得空时，他会钻进清华园子里的一间教室，去听些关于经济、政策、历史的讲座。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130401114348851451122/20130401114348851451122_.html" target="_blank">【特等奖学金】刘晓东：仰望星空 坚定脚步</a></h3>
+              <p>热爱科研，用心投入，懂得感恩；独立思考，追求自由，学会分享—这就是刘晓东。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130401105850591301816/20130401105850591301816_.html" target="_blank">【特等奖学金】王萌：学术的抢跑者快乐的志...</a></h3>
+              <p>真正让王萌下定决心走上科研之路的，则是一种作为清华土木人心怀祖国、肩负责任的情怀。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130125171050080309382/20130125171050080309382_.html" target="_blank">柳百成院士八十周岁寿辰会举行设立励学金</a></h3>
+              <p class="thnews_jqzy">　　柳百成院士八十周岁寿辰会举行&ldquo;清华校友-柳百成院士励学金&rdquo;设立清华新闻网1月25日电（通讯员陈瑞、张航）1月19日，柳百成院士八十寿辰庆祝会暨《风雨沧桑八十载》影集首发式会议举行。清华大学副校长姜胜耀、中国工程院机械及运载学部副主任王玉明院士、清华大学机械工程学院院长尤政、材料学院常务副院长庄大明等出席活动。来自海内外50余位柳百......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130109105418182952175/20130109105418182952175_.html" target="_blank">【特等奖学金】陈熹：梦想尚在远方</a></h3>
+              <p>她说，她是用一件件平凡的事情，去书写略带惊喜的青春。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121227163047976129014/20121227163047976129014_.html" target="_blank">【特等奖学金】胡泽：生活像战斗一样精彩</a></h3>
+              <p>胡泽说自己是从一个“差生”做起的，就好像许三多是从“孬兵”做起的一样。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20121227121447090799633/20121227121447090799633_.html" target="_blank">中国高校首设博士生校长奖学金</a></h3>
+              <p class="thnews_jqzy">　　中国高校首设博士生校长奖学金来源：中国新闻网 2012-12-26 刘双双有着千年学府之称的湖南大学26日宣布，研究生奖助学体系实施重大改革，设立博士生校长奖学金，全面提高奖助学力度，助推高等院校科研水平的提升。据悉，这是中国高等院校首次设立以&ldquo;校长&rdquo;命名的博士生奖学金。资助额度为1.5万元人民币/年，并配套提供1万元/年的科......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121227101212465139964/20121227101212465139964_.html" target="_blank">【特等奖学金】姚璐：要为平凡人做不平凡的...</a></h3>
+              <p>采访中她三句不离本行：“选择景观设计专业，就是选择充满爱与美的环境。”</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121226141509589330131/20121226141509589330131_.html" target="_blank">成绩好不一定能得清华奖学金</a></h3>
+              <p class="thnews_jqzy">　　成绩好不一定能得清华奖学金高校奖学金向&ldquo;综合测评&rdquo;转变来源：北京晚报 2012-12-25 张航随着各院系相继启动奖学金改革，清华大学已不再把学习成绩作为学校表彰优秀生的唯一标准。电子系是清华的第一大系，光2011级学生就有11个班。该系负责老师介绍，清华传统的院系奖学金只有两项：综合优秀奖、学业优秀奖。电子系在近几年逐渐增添......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121225115703387237641/20121225115703387237641_.html" target="_blank">清华发奖学金 不再单纯看成绩</a></h3>
+              <p class="thnews_jqzy">　　清华发奖学金 不再单纯看成绩来源：北京青年报 2012-12-25 雷嘉&ldquo;凭我的学分绩排名，以前对奖学金是想都别想。&rdquo;清华大学电子系的大二学生方天华在系里刚刚结束的奖学金评定中获得了&ldquo;体育优秀&rdquo;单项奖，高兴地领到了2000元。上学年，他的学分绩在年级260多人里排100名左右，按以前的评定规则，他基本与奖学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121220104716211786465/20121220104716211786465_.html" target="_blank">清华—哈希水质奖学金颁奖</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;清华&mdash;哈希水质奖学金&rdquo;颁奖先进水质监测技术与设备研讨会同期举行清华新闻网12月20日电（通讯员刘 曼） 12月14日，先进水质监测技术与设备研讨会暨&ldquo;清华&mdash;哈希水质奖学金&rdquo;颁奖典礼在清华大学环境学院举行。清华大学环境学院院长余刚和丹纳赫集团中国总裁约翰逊&middot;克拉克（......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121218104224472570564/20121218104224472570564_.html" target="_blank">【特等奖学金】胡嘉冕：学术演讲台上的“发...</a></h3>
+              <p>他是首位获得美国材料研究学会“优秀研究生”金奖的中国在校生。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121214113856411176385/20121214113856411176385_.html" target="_blank">20名学子获得特奖 2012年清华学生奖...</a></h3>
+              <p>12月13日下午，2012年清华大学学生奖励大会在主楼后厅隆重举行。校长陈吉宁，副校长、教务长袁驷，副校长姜胜耀出席大会并为获奖班级和同学颁奖。大会由校党委副书记史宗恺主持。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121123163633084923484/20121123163633084923484_.html" target="_blank">2011-2012学年度清华大学光华奖学...</a></h3>
+              <p class="thnews_jqzy">　　2011-2012学年度清华大学光华奖学金颁奖会召开清华新闻网11月23日电11月22日下午，2011-2012学年度清华大学光华奖学金颁奖会在罗姆电子工程馆报告厅举行。光华教育基金会颁奖代表、台湾南山人寿保险股份有限公司上海代表处首席代表贾宁先生，校党委副书记史宗恺出席活动并致辞。贾宁对获奖学生表示祝贺，并勉励同学们做事三思而后行，谋定而后动；追求......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121120170540493932844/20121120170540493932844_.html" target="_blank">方展鹏：不追求完美，只求做得更好</a></h3>
+              <p class="thnews_jqzy">　　3年前，这位中山学子保送入读清华；如今，他更成为该校特等奖学金候选人方展鹏：不追求完美，只求做得更好来源：南方日报 2012-11-20 孙嘉琳 胡明 尹习梅2012年清华大学特等奖学金的评选已经进入最后一个阶段，这是全国最顶尖学府、最顶尖人才的一次综合素质集中比拼。在今年的候选人当中，有一名特别引人注目的中山学子，他就是2009年从中山一中保送至清华大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2012.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20121114162830115565306/20121114162830115565306_.html" target="_blank">中央财政下拨10亿元研究生国家奖学金</a></h3>
+              <p class="thnews_jqzy">　　中央财政下拨10亿元研究生国家奖学金来源：人民日报 2012-11-14 李丽辉中央财政近日下拨2012至2013学年度普通高等学校全日制在读研究生国家奖学金10亿元，其中：博士研究生国家奖学金奖励名额1万名，奖励标准为每生每年3万元，奖励金额合计3亿元；硕士研究生国家奖学金奖励名额3.5万名，奖励标准为每生每年2万元，奖励金额合计7亿元。财政部要求各地......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121025153753592798566/20121025153753592798566_.html" target="_blank">清华2011-2012学年度研究生特等奖...</a></h3>
+              <p class="thnews_jqzy">　　清华大学2011-2012学年度研究生特等奖学金答辩会举行清华新闻网10月25日电（研通社记者侯京娅 胡月）10月24日下午，2011-2012学年清华大学研究生特等奖学金答辩会在六教举行。孟德川等来自各院系的15名研究生候选人参加了此次答辩。清华大学党委副书记史宗恺出席答辩会。答辩会上，清华大学党委副书记史宗恺讲话。史宗恺对候选人和全体研究生深切寄......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2012/20121023152801924794283/20121023152801924794283_.html" target="_blank">我国出资十亿设立研究生奖学金</a></h3>
+              <p class="thnews_jqzy">　　我国出资十亿设立研究生奖学金每年奖励4.5万名在读研究生来源：中国青年报 2012-10-23 原春琳今天来自财政部的消息说，中央财政出资设立研究生国家奖学金，每年将拿出10亿元，奖励4.5万名表现优异的在读研究生。其中，博士研究生1万名，硕士研究生3.5万名。博士研究生国家奖学金奖励标准为每生每年3万元；硕士研究生国家奖学金奖励标准为每生每年两万元。　......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121022092510155304985/20121022092510155304985_.html" target="_blank">清华举办2011-2012学年本科生特等...</a></h3>
+              <p class="thnews_jqzy">　　清华大学举办2011-2012学年本科生特等奖学金答辩会清华新闻网10月22日电(学通社记者王泰华 魏 阳)10月18日下午，2011-2012学年清华大学本科生特等奖学金答辩会在清华大学主楼后厅举行，来自建筑学院、水利系、生命学院等院系的14位候选人分别展示了自己在学习、科研、社工、体育等方面的表现，由清华大学&ldquo;关心下一代委员会&rdquo......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2012/20120903154056378346092/20120903154056378346092_.html" target="_blank">汪洋：左手事业右手家庭</a></h3>
+              <p class="thnews_jqzy">　　汪洋：左手事业右手家庭来源：中国青年报 2012-09-03 朱国庆 于楠 樊未晨&ldquo;我未来的目标是：做一个清华培养的、具有国际视野的、对国家和人民作出大贡献的、快乐的女科学家。&rdquo;汪洋在清华大学特等奖学金答辩会上说了这段豪言壮语。在那次答辩会上，汪洋以全票获得清华大学奖学金最高荣誉&mdash;&mdash;特等奖学金，成为5名博士......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新疆加快构建统一的信息平台</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231208671913477&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">新疆加快构建统一的信息平台</h3><p align="center"> (2001.03.09 新华网) </p><p>新华网乌鲁木齐专电（记者赵春晖）记者从新疆有关部门获悉，新疆正在着手建立覆盖全疆的综合信息平台，以便把各级政府、各部门和各行业原先分散的信息工作纳入网络化、信息化轨道。 </p><p>据了解，这项总投资为１．３亿元的工程由<font color="#FF3333">清华大学</font>与新疆信息产业有限责任公司共同承建。工程包括建立在首府乌鲁木齐市的“全疆综合信息服务中心平台”和设立在各地州市的１６个地区级“二级综合信息服务平台”。 </p><p>目前，１６个“二级综合信息服务平台”已基本建成。据有关人士预测，该信息平台将于明年年初最终建成并投入运行。 </p><p>业内人士分析，该信息服务平台的建成将极大地改善新疆的投资环境，提高政府、企业的快速反应能力，同时也将为世界和全国其他省区了解新疆构筑一个顺畅的通道。（完） </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月11日 13:32:36　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2013/20130624162902429315823/20130624162902429315823_.html" target="_blank">“一体两翼”信息平台提供精细化就业指导</a></h3>
+              <p class="thnews_jqzy">　　清华大学&ldquo;一体两翼&rdquo;信息平台提供精细化就业指导来源：人民日报 2013-6-24 邓宇 刘鑫鑫为实现&ldquo;推动实现更高质量就业&rdquo;，清华大学充分挖掘各类媒体的信息传播特点，着力打造出以毕业生就业信息网为基础、移动平台和社交网络为拓展的&ldquo;一体两翼&rdquo;信息平台。通过更加精细化的就业指导和职业辅导......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232522593488968/20110225232522593488968_.html" target="_blank">秦冬晖：愿作西部天空的一片朝晖</a></h3>
+              <p class="thnews_jqzy">　　愿作西部天空的一片朝晖来源：科技日报 2010-07-20秦冬晖，清华大学法学院2007级法律硕士。临近毕业时，他选择投身西部，到新疆自治区党委政策研究室工作。秦冬晖去新疆工作并不是一时的决定。早在去年10月，秦冬晖就向学校党委写了一封信。在这封信中，秦冬晖写道：“我决定到祖国和人民最需要的地方去工作已很长时间了。我认为，作为一名清华学子不应......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232519109737999/20110225232519109737999_.html" target="_blank">清华大学博士生暑期实践新疆巴州支队抵疆</a></h3>
+              <p class="thnews_jqzy">　　清华大学博士生暑期实践新疆巴州支队抵疆【新闻中心讯 学生通讯员 李阳子】七月的巴州，瓜果飘香，花团锦簇，经过近三天四夜的旅程，携群山的巍峨、大漠的苍茫，清华大学博士生社会实践新疆巴州支队一行16人抵达新疆巴音郭楞蒙古族自治州首府库尔勒。受到了自治州党委组织部、科技局以及各个县区接受单位的热烈欢迎。在欢迎会上，自治州党委组织部常务副部长贺兴利致辞对社会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232427984498777/20110225232427984498777_.html" target="_blank">清华又有11名毕业生正式签约前往新疆工作</a></h3>
+              <p class="thnews_jqzy">　　清华又有11名毕业生正式签约前往新疆工作【新闻中心讯 通讯员 蔡甄 王丹】日前，经过为加强校地合作，2009年3月14日我校与新疆维吾尔自治区签订战略合作协议，引导更多毕业生赴新疆地区就业。根据协议，自治区每年拿出一定数量的岗位面向我校毕业生定向招录公务员。2009年，共有6名毕业生通过定向招录前往新疆地区就业。今年，经过严格的笔试、面试、体检等环节，清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2009.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232252968194764/20110225232252968194764_.html" target="_blank">【启航】艾里肯江·阿布来提：回到新疆实现...</a></h3>
+              <p class="thnews_jqzy">　　实现最初的梦想——访清华大学建设管理系硕士毕业生艾里肯江&#8226;阿布来提■研通社通讯员 傅爱华即将毕业的艾里肯江·阿布来提将赴乌鲁木齐经济技术开发区工作。初见艾里，感觉他和其他清华人没什么不一样。他说回到家乡新疆工作是他一直以来的梦想，而今在经历了就业这一人生重要的选择后，他的梦想终于成为了现实。清华六年受益匪浅艾里是2003年清华在新......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225232234171365925/20110225232234171365925_.html" target="_blank">新疆重点单位“打包”来清华招聘</a></h3>
+              <p class="thnews_jqzy">　　新疆重点单位“打包”来清华招聘【新闻中心讯 学生记者 连慧阳】3月14日上午，新疆维吾尔自治区重点单位清华大学专场招聘会在清华就业指导中心拉开帷幕。这是近年来新疆区委、区政府首次带队来校招聘，也是清华面向2009届毕业生举办的第18场地区“打包”专场招聘会。来自自治区科技系统、乌鲁木齐市、昌吉州和自治区部分企业和高校的60家单位参加招聘，提供了近500个......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232233937615812/20110225232233937615812_.html" target="_blank">清华与新疆签署战略合作协议和科技合作协议</a></h3>
+              <p class="thnews_jqzy">　　清华与新疆签署战略合作协议和科技合作协议【新闻中心讯 记者 程曦 摄影 郭海军】3月14日上午，新疆维吾尔自治区党委副书记、自治区主席努尔&#8226;白克力率领自治区党政代表团一行访问清华大学。双方签署了《新疆维吾尔自治区人民政府——清华大学战略合作协议》和《新疆维吾尔自治区科技厅——清华大学科研院科技合作协议书》。双方在人才培养、科技合作、毕业生选派......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232233953449103/20110225232233953449103_.html" target="_blank">新疆自治区主席努尔·白克力在清华发表演讲</a></h3>
+              <p class="thnews_jqzy">　　“共和国六分之一的国土就是你施展才华的舞台”新疆自治区主席努尔·白克力在清华发表演讲【新闻中心讯 记者 程曦 摄影 郭海军】3月14日上午，新疆维吾尔自治区党委副书记、自治区主席努尔·白克力做客清华“人才战略与科学发展论坛”，发表了题为《造福新疆各族人民 共创祖国美好未来》的专场演讲。“我是土生土长的新疆人，在我心中始终流淌着一首歌——我们新疆好地方......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2007.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231919421363932/20110225231919421363932_.html" target="_blank">清华在新疆录取工作结束理工类671分</a></h3>
+              <p class="thnews_jqzy">　　清华在新疆录取工作结束理工类671分&nbsp;&nbsp;&nbsp; &nbsp;【新闻中心讯 通讯员 杨悦】日前，清华大学在新疆的高考录取工作已经结束。2007年，清华在新疆的理工类录取分数线为671分。新疆高考理科实考分第一名、投档分第一名、民考汉第一名均被清华录取。新疆理科前8名中7人被清华录取。&nbsp;&nbsp;&nbsp; 为方便考生及时......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2006.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231757484829077/20110225231757484829077_.html" target="_blank">清华新疆统招最低录取分668</a></h3>
+              <p class="thnews_jqzy">　　清华新疆统招最低录取分668【新闻中心讯 通讯员 杨悦】清华大学在新疆的本科招生录取工作已经结束。2006年，清华大学在新疆的统招最低录取分为668分。新疆的理科第一名和民考汉第一名均被清华大学录取，理科前10名中有7人被清华大学录取。被录取的考生可通过清华大学本科招生网首页左上角的“录取查询”服务查询或直接输入网址：http://join-tsi......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2005.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231655750214902/20110225231655750214902_.html" target="_blank">名家论坛：新疆企业发展高峰论坛召开</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华大学终身学习名家论坛——新疆企业发展高峰论坛召开【新闻中心讯】10月21日至24日，由我校和新疆维吾尔自治区人民政府共同主办的“2005’清华大学终身学习名家论坛——新疆企业发展高峰论坛”在乌鲁木齐市隆重召开。此次论坛是第二届清华大学终身学习名家论坛，以期给学员搭建一个“沟通、交流、共享、服务”的平台，同时利用清华大学数万学员资源服务于地方......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2005.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231629421845028/20110225231629421845028_.html" target="_blank">我校与新疆大学签署实施教育部“援疆学科建...</a></h3>
+              <p class="thnews_jqzy">　　我校与新疆大学签署实施教育部“援疆学科建设计划”合作协议书　【新闻中心讯】6月23－24日，教育部和新疆自治区政府在新疆乌鲁木齐市联合召开实施“援疆学科建设计划”工作会议。教育部部长周济、新疆自治区党委书记王乐泉、教育部学位管理与研究生教育司司长杨卫分别在会上作了重要讲话，并举行了对口支援的签字仪式。实施“援疆学科建设计划”是教育部在新的历史时期贯彻......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2005.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231628312786184/20110225231628312786184_.html" target="_blank">教育部“援疆学科建设计划”全面启动</a></h3>
+              <p class="thnews_jqzy">　　教育部“援疆学科建设计划”全面启动新华社  2005-6-23  高峰&nbsp;&nbsp;&nbsp;新华社乌鲁木齐６月２３日电（记者高峰）在教育部和新疆维吾尔自治区２３日共同召开的“援疆学科建设计划”工作会议上，北京大学、清华大学等４０所国内重点高校与新疆１１所高校签订协议，确立对口支援８２个一级学科建设的计划。&nbsp;&nbsp;&nbsp;教育......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2004.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231450906642205/20110225231450906642205_.html" target="_blank">清华每年百万培养新疆干部 合作期限５年</a></h3>
+              <p class="thnews_jqzy">　　清华每年百万培养新疆干部　合作期限５年天山网  2004-7-12&nbsp;&nbsp;&nbsp;天山网讯（记者陈贵军 实习生赵晓辉）　7月11日上午，自治区、乌鲁木齐市分别与清华大学达成中青年干部培养合作协议。清华同方股份有限公司将负责每年提供２００万元专项资金，用于选派干部的学习及清华大学教授来疆支教，合作期限暂定５年。&nbsp;&nbsp;&nb......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2004.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231449656637081/20110225231449656637081_.html" target="_blank">清华大学为兵团提供智力支持</a></h3>
+              <p class="thnews_jqzy">　　清华大学为兵团提供智力支持天山网  2004-7-2&nbsp;&nbsp;&nbsp;天山网乌鲁木齐7月2日讯（记者 孙卫东）6月30日，清华大学博士生实践服务团来到兵团，拉开了清华大学青年学子智力支持兵团的序幕。&nbsp;&nbsp;&nbsp;为发挥清华大学人才优势，共同搭建清华大学学生服务兵团建设兵团的平台，清华大学团委与兵团团委结为“手拉手”友好......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2003.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231402125158884/20110225231402125158884_.html" target="_blank"><font color=red>新疆理科...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档新疆理科第一名和民考汉考生理科第一名双双被清华录取7月9日上午，清华大学在新疆自治区的招生录取工作全面结束。今年清华在新疆的生源质量继续保持较好的水平，高分段考生报考清华大学踊跃，前10名考生中有7名被清华录取。共录取30名优秀理科考生，最低录取分数线达到597分。 新疆理科第一名和民考汉理科第一名分别被清华大学数理基础科学班和土木工程专业......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231229843401807/20110225231229843401807_.html" target="_blank">洁净能源在新疆广泛应用</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document洁净能源在新疆广泛应用(新华网 2001.06.11 10:42:20)新华网乌鲁木齐６月１１日电（记者张鸿墀）太阳能和风能等洁净可再生能源正在新疆得到大规模的推广应用。目前，新疆风电装机容量已居中国首位；在偏远无电地区，人们利用太阳能构筑局域性的电网用于农业生产和日常生活。中国第一座风力发电场－－达坂城风电一场于１......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353750104447/20110225225353750104447_.html" target="_blank">为新疆皮山人民做一件实事——“太阳能沙漠...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我校为新疆皮山人民做的一件实事"太阳能沙漠绿洲生态系统"示范工程在奥村竣工【新闻中心讯】5月28日，对于新疆和田地区皮山县奥依吐格拉克村（简称奥村）的1300多名村民来说是一个值得纪念的日子。从这一天起，他们告别了点煤油灯、喝"涝坝水"（人畜共用的蓄水池）的历史，开始了"晚上灯火辉煌，日间清水流淌"的新生活。因为就在这一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231229531339375/20110225231229531339375_.html" target="_blank">为新疆皮山人民做一件实事——“太阳能沙漠...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我校为新疆皮山人民做的一件实事"太阳能沙漠绿洲生态系统"示范工程在奥村竣工【新闻中心讯】5月28日，对于新疆和田地区皮山县奥依吐格拉克村（简称奥村）的1300多名村民来说是一个值得纪念的日子。从这一天起，他们告别了点煤油灯、喝"涝坝水"（人畜共用的蓄水池）的历史，开始了"晚上灯火辉煌，日间清水流淌"的新生活。因为就在这一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231229312875883/20110225231229312875883_.html" target="_blank">新疆利用太阳能改变偏远地区落后生活</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document新疆利用太阳能改变偏远地区落后生活(新华网 2001.06.04 18:53:33)新华网新疆皮山６月４日电（记者张鸿墀）“这个煤油灯和我一个岁数，不过以后它再也不会亮了”，电灯光下，６４岁的维吾尔老人阿不都拉·库尔班向记者展示煤油灯这种“老古董”。长期以来，新疆皮山县巴西兰干乡奥依吐格拉克村的１３９０名村民夜间只能......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

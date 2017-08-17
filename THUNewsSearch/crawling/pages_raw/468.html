@@ -1,0 +1,412 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>华诞90清华打造股海舰队</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231218109198071&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9664/index.html' class='navigation_style'>社会服务</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><p align="center">4月22日ST金马被清华大学收到麾下</p><h3 align="center">华诞90清华打造股海舰队</h3><p align="center">（北京晚报 2001年4月26日）</p><p align="center"><img src="/publish/news/images/upload/qiye1.jpg" width="283" height="182"> </p><p align="center"><img src="/publish/news/images/upload/qiye2.jpg" width="271" height="174"></p><p align="center">记者梁彦军 雁宁</p><p> 　　4月22日，90华诞的清华又收到一份“厚礼”，深圳清华同方正式入主ST金马，又一次把证券市场的目光吸引向了“清华概念”。清华同方、清华紫光、诚志股份、紫光生物，再加上粤华电、ST海洋、ST金马，清华大学在证券市场上已经隐隐然拥有了一支“清华舰队”。</p><p> 　　清华爱吃股市“臭豆腐”</p><p> 　　4月22日，在ST金马临时股东大会上，ST金马董、监事成员“大换血”，深圳清华同方股份有限公司推荐的9名候选董事以及2名候选监事全部高票当选，公司新一届经营班子完全由深圳清华同方掌控。新任董事会随即推选深圳清华同方公司总经理王良海出任ST金马董事长，副总经理邸灵出任ST金马总经理。此举表明清华同方入主ST金马的意愿已基本实现，尽管根据最新公告，深圳清华同方仅持有ST金马6．065％的股份，为ST金马第三大股东。</p><p> 　　从投票结果来看，清华方面显然赢得了更多中小股东的支持，共有30家股东单位（代表）出席了本次股东大会，所代表股份占ST金马股本总额的31．65％。公司新任董事长王良海在会后接受记者采访时称，深圳清华同方虽然成立时间不长，但作为清华同方的一分子，目前已建立起很好的产业基础，对于ST金马的重组，公司方面将会有计划、有步骤地实施。</p><p> 　　尽管目前入主ST金马的基本障碍已经消除，但接下来方方面面还有许多的困难需要克服。资料显示，截至2000年中期，ST金马负债及担保总额已达4亿余元，由于ST金马已经发布预亏公告，所以公司连续二年亏损的可能性亦相当大。根据有关规定，公司余下的重组时间已经相当紧迫。尤其在资产剥离及重组方面还有很多工作要做。</p><p> 　　今年3月，厦门海洋实业集团股份有限公司（ST海洋）重组半年后再起波澜，北京清华高科技园发展中心以每股2．206元的价格受让西安飞天手中持有的2000多万股法人股，成了ST海洋的第二大股东。</p><p> 　　据了解，北京清华科技园是由清华大学独家出资设立的，代表清华大学组织并实施清华大学科技园的规划，建设开发，经营与管理。是国家正式选定的15个大学科技园试点之一。</p><p> 　　科技园发展中心负责人在接受记者采访时表示，对于ST海洋的现状有一定的了解，他们认为ST海洋现在经营状况不好的原因有很多，比如公司所处行业是一个夕阳行业。在ST海洋无法如期扭亏的情况下，对该公司股权价值的预期也是最低的时候，科技园投资所花费的资金也会是最少的。有关人士介绍说，清华科技园经过几年的发展，其战略重点已转向投资学校科技成果使之商品化、产业化方向，因而科技园将现有的人才、项目、企业上的优势与上市公司的资金及融资能力相结合，这对于双方的长远发展都是十分有益的。现在虽然不是第一大股东，但会积极参与公司的运营，引导ST海洋走向高新技术领域。</p><p> 　　去年12月，深圳清华科技开发公司、北京清华园发展中心联合受让珠海电力开发集团所持20％的粤华电股权。据悉，深圳清华科技是深圳清华大学研究院的全资公司，是代表研究院进行投资的企业主体，目前持有多家创新企业股权。</p><p> 　　据知，粤华电重组的最终目标是要使其从亏损电力股变成高新技术的孵化器和加速器。这也不难理解其股价为何从年初5元多一度涨至21元多，近几天收盘仍高居16元以上。   　　清华打造股市“金招牌”</p><p> 　　当东大阿派、天大天财称雄资本市场的时候，很少有投资者认为他们出色的市场表现与其拥有的高校背景有深刻的联系；当1998年证券市场突然出现了方正科技、青鸟天桥、华资实业、明天科技等一批与北京大学息息相关的个股之后，投资者开始意识到“北大”背景的价值；当证券市场进入1999年之后，清华同方、清华紫光的崛起使投资者又一次意识到“清华”的品牌效应。</p><p> 　　“科技兴国”的战略性口号的提出，进一步激发了资本市场对高校概念板块的想像力。这是因为高校集教育、科研和校办产业于一身，融知识的生产、传播和转移于一体，只要有适当的机制和充足的资金输入，那么高校的创新能力或科技产业化的能力将充分显现。于是高校概念逐渐成为证券市场中一道独特的风景线，为民族的强盛和文化昌明做出丰硕贡献的清华也成为证券市场中最具价值的“金字招牌”之一。不少上市公司试图通过与清华签订合作协议或双方共同出资建立新的控股公司，从而实现上市公司产业的升级和业绩的增长或者制造所谓的“炒点”。</p><p> 　　清华概念股市受宠，这已是不争的事实。清华大学入主的任何一只股票都有过惊人的涨幅。这其中既包括直接上市的清华同方、清华紫光，也包括控股或借壳的诚志股份和紫光生物，ST金马和ST海洋也已经都有两倍以上的升幅。</p><p> 　　清华琢磨风险投资</p><p> 　　2000年的一季度，清华大学企业集团与首钢总公司在京宣布：由双方作为主要发起人，联合国内其他实力企业，共同设立清华科技创业投资公司。此举开创了我国著名学校与大型企业优势互补，携手推进高科技风险投资事业的先河。</p><p> 　　据介绍，成立后的清华创投，将通过风险投资，立足于清华大学与中关村地区，并辐射全国乃至世界。清华大学聚合优质资源，向清华创投提供全面支持，把清华大学的高新技术研发中心、高新技术信息中心、高新技术创业孵化中心和高新技术项目投资中心充分调动起来，在项目选择、方案论证、投资管理和运作服务诸方面发挥重要作用。而首钢总公司的加入，则旨在充分发挥其国家特大型企业在科技产业化方面的实践优势，加速清华大学高科技成果向现实生产力的转化，促进我国高新技术产业的发展。</p><p> 　　今年3月，由清华紫光等11家上市公司参股的清华紫光科技创新投资有限公司，与清华大学中国创业研究中心联合发起成立“清华紫光创投研究基金”。</p><p> 　　据了解，该基金将借鉴国外成功经验，开展在创业投资领域的研究，推动中国创业投资事业的发展。“清华紫光创投研究基金”面向全社会，国内外有志于创业投资领域研究的人士均可申请。</p><p> 　　另外，清华紫光科技创新投资有限公司还宣布，过去近一年中，公司已在新材料、生物医药和IT领域投资了8个项目。为了进一步推动中国创业投资事业的发展，支持创业投资领域的研究，紫光创投将从2001年起，连续五年，每年向清华大学中国创业研究中心资助人民币30万元研究经费，全部用于中国创业投资领域的专项研究。</p><p> 　　为何组建“清华舰队”</p><p> 　　为什么清华大学要组建这样一支股市舰队？昨日，记者就此采访了清华有关负责人。</p><p> 　　清华大学有关负责人表示，首先，最关键的出发点是国情不同。在美国等技术先进的国家，他们的大公司具有很强的科研实力，研究投入十分巨大，而国内企业一般来说技术力量较为薄弱，能够投入研发的资金也十分有限。因此，在我们这样一个科技发展不均衡的国家，如何集高校、企业各方的力量、优势加快高新技术的发展和成果转化就是一个新的课题，而高校办企业、利用资本市场重组上市公司就成为其中一个重要的选择。</p><p> 　　第二，这也是高校发展自身的需要。国内高校科研成果比较丰富，但是这些成果的转化率较低。这些有着很好发展前景的科研成果面临一个出路的问题，全部靠转让靠社会也不行，因此高校也完全可以择其优、选其强，自己来实现科研成果的产业化、市场化。</p><p> 　　第三，清华大学还十分希望通过旗下这些企业提供的舞台，让学生能够学以致用，加强国内学生所普遍缺乏的知识应用能力，尤其是在经营管理和适合市场的技术创新上，努力培养复合型人才。</p><p> 　　最后，该负责人表示，他非常希望借此机会做一点澄清，清华大学仅仅是很少的一部分人出来搞市场、办企业。</p><p> 　　的确，高校实际上横跨了知识创新、技术创新、知识传播和知识应用的国家创新体系的四大系统，只要有资金的不断输入以及教育体制、投资体制的不断改革和完善，那么高校的知识创新能力将重新焕发青春。不论是高校产业直接上市，还是借壳上市，它们都将给证券市场注入新的活力。</p><p> 　　但是有业内人士不无顾虑地说，随着资本运作的经验不断增加，高校借壳上市的现象越来越多，而且有泛滥的趋势。只怕“玩虚拟经济”的多了，毁了资本市场的资源，也毁了学校的金招牌。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月26日 12:32:48　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232424046552505/20110225232424046552505_.html" target="_blank">李稻葵：今年是股市和房地产调整年</a></h3>
+              <p class="thnews_jqzy">　　李稻葵：今年是股市和房地产调整年第一财经日报：经过这次危机之后，美联储过去所奉行的货币政策不管资产价格的逻辑，被证明有很大的问题。中国资产价格近几年的大幅波动，也引起了关于这个问题的讨论。你认为，中国央行货币政策的范式和目标，是否要更多考虑资产价格因素?李稻葵：关于货币政策范式的讨论，现在国际上有三派观点。一派是继续以通货膨胀为控制目标;第二派要将资......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231217937484071/20110225231217937484071_.html" target="_blank">清华打造校企航母股市热炒清华概念</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华打造校企航母股市热炒清华概念（科学时报 2001年4月26日）资本运作制造“清华股系”股市上打“清华概念”的股票数不胜数，因此不少公司都和清华沾亲带故，而且股市上还活跃着一个“清华股系”：1997年，清华同方上市。1999年底，清华紫光上市。2000年年中，清华紫光入主湖南古汉集团，重组后一支名为“......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

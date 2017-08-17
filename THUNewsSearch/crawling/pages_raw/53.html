@@ -1,0 +1,587 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我校2000年度科学与技术奖励大会召开</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231208890513431&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>我校2000年度科学与技术奖励大会召开</TITLE><META NAME="Template" CONTENT="D:\office97\Office\html.dot"></HEAD><BODY LINK="#0000ff" VLINK="#800080" bgcolor="#FFFFFF"><h3 ALIGN="CENTER"><font face="楷体_GB2312" lang="ZH-CN">我校2000年度科学与技术奖励大会召开</font></h3><P ALIGN="JUSTIFY"> <FONT FACE="宋体" LANG="ZH-CN" SIZE=4></font><FONT FACE="宋体" LANG="ZH-CN">【新闻中心讯】</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">3</FONT><FONT FACE="宋体" LANG="ZH-CN">月</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">9</FONT><FONT FACE="宋体" LANG="ZH-CN">日，我校</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2000</FONT><FONT FACE="宋体" LANG="ZH-CN">年度科学与技术奖励大会在蒙民伟楼多功能厅举行，校长王大中、校党委书记贺美英等校领导出席了大会并为获奖单位和个人颁发了奖杯和证书，副校长龚克介绍了我校去年的科技工作情况。</font></P><P ALIGN="JUSTIFY"> <FONT FACE="宋体" LANG="ZH-CN"></font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2000</FONT><FONT FACE="宋体" LANG="ZH-CN">年度，我校共受到各类科研成果奖励</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">191</FONT><FONT FACE="宋体" LANG="ZH-CN">项，其中国家级科技奖励</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">7</FONT><FONT FACE="宋体" LANG="ZH-CN">项（自然科学奖二等奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，技术发明奖二等奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">3</FONT><FONT FACE="宋体" LANG="ZH-CN">项，科技进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">3</FONT><FONT FACE="宋体" LANG="ZH-CN">项），部委级科技奖励</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">53</FONT><FONT FACE="宋体" LANG="ZH-CN">项，省市级科技奖励</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">30</FONT><FONT FACE="宋体" LANG="ZH-CN">项，其它各类专项奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">101</FONT><FONT FACE="宋体" LANG="ZH-CN">项。另外，去年我校通过科技成果鉴定的项目</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">88</FONT><FONT FACE="宋体" LANG="ZH-CN">项，申请专利项目</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">344</FONT><FONT FACE="宋体" LANG="ZH-CN">项，授权专利项目</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">135</FONT><FONT FACE="宋体" LANG="ZH-CN">项。</font></P><P ALIGN="JUSTIFY"> <FONT FACE="宋体" LANG="ZH-CN">除了</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">7</FONT><FONT FACE="宋体" LANG="ZH-CN">项国家级科技奖励，去年我校还获得教育部科技进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">30</FONT><FONT FACE="宋体" LANG="ZH-CN">项，国防科学技术奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">13</FONT><FONT FACE="宋体" LANG="ZH-CN">项，国家科学技术部科技进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，国家机械工业局科技进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，人民防空科学技术进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2</FONT><FONT FACE="宋体" LANG="ZH-CN">项，水利科学技术进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，中国汽车工业科技进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2</FONT><FONT FACE="宋体" LANG="ZH-CN">项，建设部科技进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，北京市科技进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">26</FONT><FONT FACE="宋体" LANG="ZH-CN">项，北京市第六届哲学社会科学优秀成果奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">14</FONT><FONT FACE="宋体" LANG="ZH-CN">项，云南省科学技术进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，黑龙江省科学技术进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，新疆维吾尔自治区科技进步奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2</FONT><FONT FACE="宋体" LANG="ZH-CN">项，</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2000</FONT><FONT FACE="宋体" LANG="ZH-CN">年香港国际发明展览会奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">10</FONT><FONT FACE="宋体" LANG="ZH-CN">项，</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2000</FONT><FONT FACE="宋体" LANG="ZH-CN">年中国十大科技新闻</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2000</FONT><FONT FACE="宋体" LANG="ZH-CN">年中国十大科技进展</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2000</FONT><FONT FACE="宋体" LANG="ZH-CN">年中国高校十大科技进展</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，“全国优秀科技图书奖”暨“科技进步奖”</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2</FONT><FONT FACE="宋体" LANG="ZH-CN">项，教育部优秀设计奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">5</FONT><FONT FACE="宋体" LANG="ZH-CN">项，教育部优秀科技期刊奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，第十一届“国际科学与和平周”中华世纪龙大型系列活动获奖项目</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，中国工程科技奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">3</FONT><FONT FACE="宋体" LANG="ZH-CN">名，何梁何利“科学与技术进步奖”</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2</FONT><FONT FACE="宋体" LANG="ZH-CN">名，</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">GM</FONT><FONT FACE="宋体" LANG="ZH-CN">中国科技成就奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">名，首届梁思成建筑奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2</FONT><FONT FACE="宋体" LANG="ZH-CN">名，中国工程设计大师称号</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">名，英国电气工程师协会科学、教育和技术奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">项，</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">SCI</FONT><FONT FACE="宋体" LANG="ZH-CN">收录论文数生物学类全国个人第一名</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">名，</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2000</FONT><FONT FACE="宋体" LANG="ZH-CN">年紫荆花杯杰出企业家成就奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">名，第五届北京市技术市场金桥奖</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">名，全国专利系统先进集体</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">个，北京市哲学社会科学九五规划项目管理工作成绩显著先进集体</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">个，全国学校艺术教育工作先进单位</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">个。另外，还有</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">19</FONT><FONT FACE="宋体" LANG="ZH-CN">项获得我校科研成果推广应用效益显著专项奖，</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">12</FONT><FONT FACE="宋体" LANG="ZH-CN">人获得清华大学纪念梅贻琦学术论文奖，</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1</FONT><FONT FACE="宋体" LANG="ZH-CN">篇论文获得清华大学学报（自然科学版）优秀论文奖。</font></P><P ALIGN="JUSTIFY"> <FONT FACE="宋体" LANG="ZH-CN">据龚克副校长介绍，去年我校的科研经费（到款额）达到</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">7.3</FONT><FONT FACE="宋体" LANG="ZH-CN">亿元（不含教育振兴行动计划专项），比</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1999</FONT><FONT FACE="宋体" LANG="ZH-CN">年的</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">5.5</FONT><FONT FACE="宋体" LANG="ZH-CN">亿元增长</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">33</FONT><FONT FACE="宋体" LANG="ZH-CN">％，专利申请比</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1999</FONT><FONT FACE="宋体" LANG="ZH-CN">年增加</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">82</FONT><FONT FACE="宋体" LANG="ZH-CN">％，其中发明专利增长</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">126</FONT><FONT FACE="宋体" LANG="ZH-CN">％；我校国际科技合作大幅增长，去年我校的国际合作经费达</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">6800</FONT><FONT FACE="宋体" LANG="ZH-CN">万元，比</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1999</FONT><FONT FACE="宋体" LANG="ZH-CN">年增长</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">54</FONT><FONT FACE="宋体" LANG="ZH-CN">％；我校参与国防建设得到明显的加强，去年我校承接的国防项目经费达到</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2432</FONT><FONT FACE="宋体" LANG="ZH-CN">万元，比</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1999</FONT><FONT FACE="宋体" LANG="ZH-CN">年的</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">1480</FONT><FONT FACE="宋体" LANG="ZH-CN">万元增长</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">64</FONT><FONT FACE="宋体" LANG="ZH-CN">％。他说，在过去的一年里，我校的基础研究取得明显进步，技术攻关实现了新的突破，科技服务与成果转化跃上了新的台阶，文科科研呈现出新的局面，国防科技摆上了重要位置，国际合作发展趋势喜人。但龚克也强调，在取得巨大进步的同时，我们也应清醒地认识到我校科研工作中存在的不足和隐患，应该更加注重前瞻性、基础性、战略性、创新性、交叉性和国际化，重点支持前瞻性的学科交叉（包括跨学科部类、领域）的基础研究，重点支持发展自主产权的学科综合的战略高技术攻关，重点支持面向改革与社会发展重大问题的社会科学研究，重点支持国防科技和西部开发，重点支持前沿性的国际科技合作研究。</font></P><P ALIGN="JUSTIFY"> <FONT FACE="宋体" LANG="ZH-CN">王大中校长在讲话中谈到，去年我校的科技工作取得了历史上最好的成绩，这和全校师生的努力是分不开的。他强调，今后，要抓好“十五”规划，推动我校的科技工作迈上一个新的台阶；要努力克服各方面存在的不足。王校长指出，“十五”规划是我校进入新的世纪、学校到</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">2011</FONT><FONT FACE="宋体" LANG="ZH-CN">年建成世界一流大学的一个非常重要的时期，能不能在新的</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">5</FONT><FONT FACE="宋体" LANG="ZH-CN">～</FONT><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">10</FONT><FONT FACE="宋体" LANG="ZH-CN">年把我们的各项工作向一个新的目标推进，关键在于“十五”规划做的好坏。就科技工作而言，“十五”期间要上一个新的台阶，主要在于由注重“量”到注重“质”的转变。要克服不足，就要注意交叉学科的发展，要加强基础研究，要加强科技与经济的结合，促进学校与地区、企业的科技合作，要加强队伍的建设，建设一支教学科研结合的、一流的师资队伍。</FONT><FONT FACE="黑体" LANG="ZH-CN">（聿才）</font></P></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月13日 10:18:33　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2016.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2016/20160222162125966798735/20160222162125966798735_.html" target="_blank">我国脑起搏器应用技术获得重大突破</a></h3>
+              <p>　　从19日召开的2015年度北京市科学技术奖励大会上获悉，我国脑起搏器应用技术获得重大突破：由清华大学、首都医科大学附属北京天坛医院等单位共同完成的“脑起搏器关键技术、系统与临床应用”项目获得2015年度北京市科学技术奖一等奖，打破了国外公司的技术垄断，取得了推广应用和产业化的新突破，标志着我国在脑神经调控技术领域已经步入“全球领跑者”行列，为广大功能性神经疾病患者低价治疗带来了希望。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2016.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2016/20160108155359146138130/20160108155359146138130_.html" target="_blank">特稿：国际科技合作奖映射中国科技新时代</a></h3>
+              <p>　　“我们正在庆祝中国科学的新时代，我很荣幸能够参与这个时代。”美国哥伦比亚大学教授维尔特·伊恩·利普金在得知自己获得中华人民共和国国际科学技术合作奖之后，激动地向新华社记者表达了自己的感受。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150112131732074900665/20150112131732074900665_.html" target="_blank">我国有望领跑“下一个计算时代”</a></h3>
+              <p>　　跨地区、跨医院看病时，患者不必再抱着一大摞病历档案，直接通过手机访问之前就诊医院的大数据中心，就可以查询历史量测数据，获得方便快捷的医疗信息服务。以透明计算理论为基础的健康信息推送系统，正将这一愿景变为现实。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141227093002937166045/20141227093002937166045_.html" target="_blank">2014年清华大学学生奖励大会举行19名...</a></h3>
+              <p>12月26日下午，2014年清华大学学生奖励大会在主楼后厅举行。校长陈吉宁，校党委副书记、纪委书记韩景阳，副校长、教务长、研究生院院长杨斌出席大会。大会由校党委副书记史宗恺主持。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131220142458715492206/20131220142458715492206_.html" target="_blank">清华举行2013年学生奖励大会 20名学...</a></h3>
+              <p>12月19日下午，2013年清华大学学生奖励大会在主楼后厅举行。校领导陈吉宁、袁驷、史宗恺、姜胜耀出席大会并为获奖同学颁奖。20名清华学子获得特等奖学金，1名外国留学生首次摘得清华学生最高荣誉。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121214113856411176385/20121214113856411176385_.html" target="_blank">20名学子获得特奖 2012年清华学生奖...</a></h3>
+              <p>12月13日下午，2012年清华大学学生奖励大会在主楼后厅隆重举行。校长陈吉宁，副校长、教务长袁驷，副校长姜胜耀出席大会并为获奖班级和同学颁奖。大会由校党委副书记史宗恺主持。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225332984386090/20110225225332984386090_.html" target="_blank">清华大学召开2009年度教学科研奖励大会</a></h3>
+              <p class="thnews_jqzy">　　清华大学召开2009年度教学科研奖励大会【新闻中心讯 通讯员 孟宪飞 摄影 郭海军】6月25日，清华大学在主楼接待厅召开2009年度教学科研奖励大会，对2009年在教学科研岗位上做出突出成绩，荣获重大奖励的教师和科研人员进行了表彰。校长顾秉林代表学校向所有获奖者表示热烈的祝贺，向辛勤工作在教学、科研领域的全校师生和管理人员表示亲切的问候。副校长谢维和主持......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232511812972085/20110225232511812972085_.html" target="_blank">清华大学召开2009年度教学科研奖励大会</a></h3>
+              <p class="thnews_jqzy">　　清华大学召开2009年度教学科研奖励大会【新闻中心讯 通讯员 孟宪飞 摄影 郭海军】6月25日，清华大学在主楼接待厅召开2009年度教学科研奖励大会，对2009年在教学科研岗位上做出突出成绩，荣获重大奖励的教师和科研人员进行了表彰。校长顾秉林代表学校向所有获奖者表示热烈的祝贺，向辛勤工作在教学、科研领域的全校师生和管理人员表示亲切的问候。副校长谢维和主持......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2008.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225337015999922/20110225225337015999922_.html" target="_blank">清华大学召开2007年度教学科研奖励大会</a></h3>
+              <p class="thnews_jqzy">　　清华大学召开2007年度教学科研奖励大会第16次科研工作讨论会开幕【新闻中心讯 记者 周襄楠 摄影 郭海军】清华大学2007年度教学科研奖励大会暨第16次科研工作讨论会开幕式，4月10日下午在主楼举行。来自全校的2007年度教学科研主要获奖者代表、获奖项目完成人代表，院系（所）科研教学相关负责人，重点科研项目、大型科研项目负责人，教代会代表组长等近400......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2008.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232037500871087/20110225232037500871087_.html" target="_blank">清华大学召开2007年度教学科研奖励大会</a></h3>
+              <p class="thnews_jqzy">　　清华大学召开2007年度教学科研奖励大会第16次科研工作讨论会开幕【新闻中心讯 记者 周襄楠 摄影 郭海军】清华大学2007年度教学科研奖励大会暨第16次科研工作讨论会开幕式，4月10日下午在主楼举行。来自全校的2007年度教学科研主要获奖者代表、获奖项目完成人代表，院系（所）科研教学相关负责人，重点科研项目、大型科研项目负责人，教代会代表组长等近400......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231806031631726/20110225231806031631726_.html" target="_blank">清华大学量子信息科学与技术研究中心成立</a></h3>
+              <p class="thnews_jqzy">　　清华大学量子信息科学与技术研究中心成立【新闻中心讯 通讯员 杨卫】 9月9日，“清华大学量子信息科学与技术研究中心”（简称“清华量子信息中心”）成立大会暨量子信息学术研讨会在清华大学信息科学技术大楼多功能厅召开。全国政协原副主席、中国工程院主席团名誉主席宋健，中国科协副主席、书记处第一书记邓楠，校党委书记陈希、副校长康克军以及国家自然科学基金委、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231732437665599/20110225231732437665599_.html" target="_blank">顾秉林：育高质量创新人才 出高水平创新成果</a></h3>
+              <p class="thnews_jqzy">　　育高质量创新人才 出高水平创新成果──在教学科研奖励大会上的讲话（2006年4月20日）校长 顾秉林老师们、同志们：今天，我们召开一年一度的教学科研奖励大会，隆重表彰2005年在教学和科研方面取得突出成绩、获得重大奖励的教师。他们获得的崇高荣誉，是国家和社会对广大教师和科研工作者辛勤工作的高度肯定，也为我们学校向着跻身世界一流大学的宏伟目标努力奋进增......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231722640450029/20110225231722640450029_.html" target="_blank">超级计算平台“清华探索3号”建成并向社会...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档超级计算平台“清华探索3号”建成并向社会开放【新闻中心讯 记者 周襄楠】 最高计算速度可达每秒1.33万亿次的超级计算“清华探索3号”，经过半年的测试和初步运行，日前已经进入良好的运转状态并正式向社会开放。作为清华信息科学与技术国家实验室重大公共技术平台之一，“清华探索3号”的开放旨在面向校内外用户提供高水平的高性能计算服务。如果不是从事......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225341140931370/20110225225341140931370_.html" target="_blank">超级计算平台“清华探索3号”建成并向社会...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档超级计算平台“清华探索3号”建成并向社会开放【新闻中心讯 记者 周襄楠】 最高计算速度可达每秒1.33万亿次的超级计算“清华探索3号”，经过半年的测试和初步运行，日前已经进入良好的运转状态并正式向社会开放。作为清华信息科学与技术国家实验室重大公共技术平台之一，“清华探索3号”的开放旨在面向校内外用户提供高水平的高性能计算服务。如果不是从事......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231718531314302/20110225231718531314302_.html" target="_blank">清华成功研发世界首颗3G手机核心芯片</a></h3>
+              <p class="thnews_jqzy">　　清华成功自主研发世界首颗3G手机核心芯片千龙网  2006-02-23  于振华3G手机核心芯片&nbsp;&nbsp;&nbsp;&nbsp;千龙网北京2月23日讯（记者 于振华）今天下午，记者从清华大学信息科学与技术国家实验室筹建工作新闻通气会上获悉，清华大学与展讯通信（上海）有限公司合作，成功研发世界首颗3G（TD-SCDMA）手机核心芯片。&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231717609425478/20110225231717609425478_.html" target="_blank">清华信息科学与技术国家实验室筹建工作取得...</a></h3>
+              <p class="thnews_jqzy">　　清华信息科学与技术国家实验室筹建工作取得积极进展【新闻中心讯 记者 顾淑霞 通讯员 杨卫 摄影 郭海军】2月22～23日，科技部基础研究司组织以金怡廉院士为组长的 15 名专家对清华信息科学与技术国家实验室（筹）的建设计划进行了可行性论证。　专家观看展览专家组听取了我校校长、清华信息科学与技术国家实验室（筹）理事长顾秉林院士代表依托单位清华大学所做的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231717578743527/20110225231717578743527_.html" target="_blank">高校科技创新体制和机制的新探索</a></h3>
+              <p class="thnews_jqzy">　　高校科技创新体制和机制的新探索——访清华大学副校长、清华信息科学与技术国家实验室主任龚克【新闻中心讯 记者 清欣】 2月22-23日，国家科技部基础研究司组织专家组对清华信息科学与技术国家实验室（筹）的建设计划进行了可行性论证，清华信息科学与国家实验室的建设进入了加快发展的新阶段。为此，新闻中心记者专访了信息科学与技术国家实验室主任、我校副校长龚克，请他......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225341265875285/20110225225341265875285_.html" target="_blank">清华信息科学与技术国家实验室筹建工作取得...</a></h3>
+              <p class="thnews_jqzy">　　清华信息科学与技术国家实验室筹建工作取得积极进展【新闻中心讯 记者 顾淑霞 通讯员 杨卫 摄影 郭海军】2月22～23日，科技部基础研究司组织以金怡廉院士为组长的 15 名专家对清华信息科学与技术国家实验室（筹）的建设计划进行了可行性论证。　专家观看展览专家组听取了我校校长、清华信息科学与技术国家实验室（筹）理事长顾秉林院士代表依托单位清华大学所做的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2006.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231718453769385/20110225231718453769385_.html" target="_blank">清华信息科学与技术国家实验室筹建工作取得...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华信息科学与技术国家实验室筹建工作取得积极进展《光明日报》 2006-02-24 靳晓燕　2006年2月22-23日,国家科技部基础研究司组织专家组对清华信息科学与技术国家实验室(筹)的建设计划进行了可行性论证,论证专家组由以金怡廉院士为组长的15位专家组成。清华信息科学与技术国家实验室是2003年11月25日由国家科技部批准建设的第一批......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2005.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231700515360062/20110225231700515360062_.html" target="_blank">首届清华－康奈尔大学联合研讨会开幕</a></h3>
+              <p class="thnews_jqzy">　　首届清华－康奈尔大学联合研讨会开幕康奈尔大学校长访问我校 两校合作进一步加强&nbsp;&nbsp;&nbsp; 【新闻中心讯 记者 李 含 摄影 郭海军】11月17日，首届清华－康奈尔大学联合研讨会在我校主楼接待厅开幕。本次研讨会为期两天，研讨领域主要为信息科学与技术，由我校计算机科学与技术系主办。来自国内外信息科学与技术领域的专家、学者以及部分我校师生参......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225342906181456/20110225225342906181456_.html" target="_blank">我校召开2004年度教学科研奖励大会</a></h3>
+              <p class="thnews_jqzy">　　加强自主创新 实现跨越发展我校召开2004年度教学科研奖励大会图片说明：2004年度国家科学技术获奖者代表【新闻中心讯 记者 王玉杰 摄影 郭海军】4月13日，我校2004年度教学科研奖励大会在主楼后厅召开。会上对我校获得2004年国家级教学与科研奖的单位和个人进行了表彰。表彰大会由常务副校长何建坤主持，副校长汪劲松宣读了教学获奖项目名单，副校长康克......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231601656375141/20110225231601656375141_.html" target="_blank">我校召开2004年度教学科研奖励大会</a></h3>
+              <p class="thnews_jqzy">　　加强自主创新 实现跨越发展我校召开2004年度教学科研奖励大会图片说明：2004年度国家科学技术获奖者代表【新闻中心讯 记者 王玉杰 摄影 郭海军】4月13日，我校2004年度教学科研奖励大会在主楼后厅召开。会上对我校获得2004年国家级教学与科研奖的单位和个人进行了表彰。表彰大会由常务副校长何建坤主持，副校长汪劲松宣读了教学获奖项目名单，副校长康克......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2005.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231601031834566/20110225231601031834566_.html" target="_blank">清华信息科学与技术国家实验室（筹）理事会...</a></h3>
+              <p class="thnews_jqzy">　　清华信息科学与技术国家实验室（筹）理事会成立图片说明：理事会成立大会现场&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 摄影 魏磊【新闻中心讯 记者 魏磊 通讯员 刘佳】4月12日上午，清华信息科学与技术国家实验室（筹）理事会成立大会在我校信息科技大楼召开。科技部、教育部及我校相关单位负责人出席了成立大会。教育部基础司副司长雷......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2004.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231526500487423/20110225231526500487423_.html" target="_blank">49位优秀科学家获“科学与技术进步奖”</a></h3>
+              <p class="thnews_jqzy">　　49位优秀科学家获“科学与技术进步奖”人民日报  2004-11-11  杨健&nbsp;&nbsp;&nbsp;本报北京11月10日讯　记者杨健报道：今天在京举行的何梁何利基金2004年度颁奖典礼暨基金成立十周年纪念大会上，49位优秀科学家荣获本年度“科学与技术进步奖”。全国人大常委会副委员长许嘉璐、国务委员陈至立、全国政协副主席周铁农等出席会议并向获奖人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2004.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231433734239338/20110225231433734239338_.html" target="_blank">我校生物科学与技术系庆祝复系二十周年</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校生物科学与技术系庆祝复系二十周年【新闻中心讯 记者 魏磊】4月24日，生物科学与技术系复系二十周年庆典在我校蒙民伟楼举行。国家自然基金委副主任朱作言院士、原教育部副部长周远清及教育部、科技部、国家发展与改革委员会、国家自然基金委等部委的有关领导，我校校务委员会名誉主任王大中院士、常务副校长何建坤、副校长龚克、岑章志、康克军，老领导李传信、滕......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2002.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231250671872672/20110225231250671872672_.html" target="_blank">我校2001年度科学与技术奖励大会召开</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校2001年度科学与技术奖励大会召开我校2001年度科学与技术奖励大会前不久在主楼后厅召开。教育部高教司司长张尧学，校领导王大中、陈希、贺美英、何建坤、王明旨、张再兴、胡东成、龚克、顾秉林、杨振斌等出席大会并为获奖代表颁奖。全校70余个基层单位的科技工作者和各系、院、所、部处约400名代表出席大会。2001年度我校共获得各类科研成果奖励3......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231225406305642/20110225231225406305642_.html" target="_blank">我校化工科学与技术研究院挂牌</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我校化工科学与技术研究院挂牌【新闻中心讯】记者 冬梅 4月30日上午，我校化工科学与技术研究院成立大会暨"过程工程与生态工业"学术报告会在建筑馆王泽生报告厅隆重举行，校常务副校长何建坤和校党委副书记陈希教授以及化工、核能、环境等领域的专家、学者约百余人出现了会议，副校长何建坤和中国生态经济学会会长滕藤教授为研究院揭牌。......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

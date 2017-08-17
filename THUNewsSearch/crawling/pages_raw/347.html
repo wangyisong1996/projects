@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>王贻良教授评说“数字电视”风波</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231215812169339&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><TITLE>Untitled Document</TITLE> <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312"> </HEAD><BODY BGCOLOR="#FFFFFF"><P ALIGN="CENTER">预支数字概念　贻笑国际大方</P><H3 ALIGN="CENTER"> 王贻良教授评说“数字电视”风波</H3><P ALIGN="CENTER">（中国青年报 2001年4月20日）</P><P ALIGN="CENTER"> 本报记者 郁进东</P><P> 　 清华大学教授王贻良是较早站出来揭露和戳穿我国家电市场数字电视骗局的专家之一。不久前，记者在北京采访了这位著名的多媒体技术研究专家。</P><P> 　 王教授说，严格地讲，我国到目前为止还没有一台真正意义上的数字电视。我国电视广播的体制是PAL－D制，是一种模拟式信号广播，整个过程都是以模拟信号方式处理的，因此称为模拟电视系统。随着数字技术的发展，一些电视接收机中采用了数字技术，改善了电视机的某些性能，并能够增加一些新的功能，如图文接收、画中画等。这类产品比普通电视机在质量上和功能上均有改善和提高，但因为电视台仍是模拟制式电视广播，所以它仍属于模拟式电视机。</P><P> 　 真正的数字电视，不仅是电视接收机，而且包含了发送、传输和接收的全过程。它与模拟电视系统在传输体制上是完全不同的，因此用模拟电视机或者上述具有一些数字处理功能的电视机是不能接收数字电视节目的。</P><P> 　 然而，大约从1998年开始，一些彩电厂家开始宣传自己已生产出了数字电视。个别厂家甚至宣称生产出了全数字电视、全媒体电视。一时间，数字电视席卷家电市场，连农民进城买电视都指着要买数字的。王教授说，这些所谓的数字电视最多只是采用了一些数字化技术，改进了图像和声音，其他都是模拟电视系统，与真正意义上的数字电视风马牛不相及。王教授说，全媒体电视从概念上讲就是不科学的，没有依据的，是在误导消费。</P><P> 　 1999年，数字电视风波升级。第一个给自己的产品贴上数字电视称号的企业，遭到了专家和同行的广泛谴责，官司最后甚至打到了信息产业部。专家和家电行业内部一些有责任感和职业道德的企业，对狂炒数字电视也表示忧虑。他们认为，如果把模拟电视硬说成是数字电视，既是在欺骗消费者，同时也是在提前预支数字概念，将来生产出了真正的数字电视，该叫什么呢？最后，在信息产业部的干预和协调下，数字电视、全数字电视、全媒体电视等不规范、容易误导消费者的概念开始被禁止使用。此后，一些厂家广告宣传上使用得比较多的叫法是数字化电视、高清晰度电视或者HD电视等。</P><P> 　 王贻良教授说，如果当时不及时将数字电视的概念说清楚，揭露一些企业用新概念或伪概念（如全媒体电视）欺骗消费者，则很可能使恶炒概念的风气更盛，消费者受害更大，还要贻笑国际家电业。因为在美国、日本等西方发达国家，数字电视至今也还只是处在试验阶段。</P><P> 　 王贻良教授很不客气地说，数字电视之所以得以出笼并甚嚣尘上，媒体的责任是很大的。现在一些家电企业开新闻发布会，规格很高，动不动就到人民大会堂这样的地方举行，邀请记者前去采访报道。记者也分不清是非，吃人家一顿饭，拿一个红包，什么稿子都发出来了。</P><P> 　 谈到炒作风时，王贻良教授说，数字电视炒完后，一些企业又开始炒健康电视。其实，健康是任何消费类产品的基本要求。如果产品不健康，对身体有害，它还能上市卖吗？因此，戒除炒作风，扎扎实实地做事，仍是我国家电业应该具备的基本职业道德。 </P></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月21日 13:15:41　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2005.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225342687249350/20110225225342687249350_.html" target="_blank">清华数字电视的创新之路</a></h3>
+              <p class="thnews_jqzy">　　清华数字电视的创新之路●新闻中心讯记者 顾淑霞村民耒玉明一家高兴地观看清晰的电视画面。纪粤鸣摄2005年2月4日，对于广州增城市正果镇畲族村榕树冚村这个7户人家的小山村来说，是个大喜的日子。增城市地面数字电视广播站的建立和清华数字电视地面传输系统的应用，使村民们不仅结束了看电视“雪花飘”的现状，节目内容也由原来的1套增至6套。利用我校研制的地面数字电视传......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2004.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231514187794817/20110225231514187794817_.html" target="_blank">清华大学取得移动数字电视核心技术突破</a></h3>
+              <p class="thnews_jqzy">　　清华大学取得移动数字电视核心技术突破新华网  2004-10-12&nbsp;&nbsp;&nbsp;深圳清华大学研究院10月10日宣布已经取得移动数字电视核心技术新突破，并开始进入产业化阶段，到2006年底将完成移动数字电视对整个泛珠三角重要城市的覆盖。&nbsp;&nbsp;&nbsp;据报道，清华大学研发的地面数字多媒体电视广播传输方案DMB-T目前已......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2003.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231408031748796/20110225231408031748796_.html" target="_blank">清华同方：数字电视产业基地落户鞍山</a></h3>
+              <p class="thnews_jqzy">　　清华同方：数字电视产业基地落户鞍山证券时报 2003-9-2 刘杨清华同方（600100）与辽宁省鞍山高新技术产业开发区联合组建的清华同方（鞍山）产业基地昨日在鞍山挂牌。该基地将首先作为清华同方数字广播电视发射设备的生产基地，标志着清华同方的数字电视产业已初步完成业务布局，开始进入实质性发展阶段。据悉，清华同方（鞍山）产业基地于2002年10月开始前......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231336234586232/20110225231336234586232_.html" target="_blank">清华大学在深圳进行数字电视（地面）移动接...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学在深圳进行数字电视（地面）移动接收实验科讯网2003年4月21日4月18日，清华大学数字电视传输技术研发中心与深圳市广播电视传输中心联合在深圳进行了数字电视（地面）移动接收实验，目的在于测试DMB-T信道编码算法的效果。《世界广播电视》编辑部一行5人，有幸应邀搭乘实验车，参观了这个实验。我们在一路上看到，在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231332250829066/20110225231332250829066_.html" target="_blank">清华同方诠释数字电视技术发展趋势</a></h3>
+              <p class="thnews_jqzy">　　无标题文档数字、宽带、无线、移动清华同方诠释数字电视技术发展趋势3月21日，在数字电视技术领域蓄势已久的清华同方亮相中国国际广播电视信息网络展览会（CCBN），展出最新研发完成的数字电视发射系统和数字电视接收终端。作为国内为数不多的拥有数字电视传输全过程综合技术的厂商，清华同方诠释出新一代数字电视技术发展趋势：数字、宽带、无线、移动。清华同方此次展出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231256015772180/20110225231256015772180_.html" target="_blank">彩电企业联手清华数字电视前景看好</a></h3>
+              <p class="thnews_jqzy">　　无标题文档彩电企业联手清华数字电视前景看好(经济日报 2002.04.26)本报北京4月25日讯　记者许红洲报道　由国家信息产业部支持启动的电子生产发展基金“数模兼容彩色电视机研发及产业化”项目，日前迈出坚实一步：我国长虹、熊猫、TCL、康佳、创维、海信、赛格、牡丹八大彩电骨干企业，与握有完整自主知识产权的地面数字电视广播传输标准候选方案、并自主开发了专......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231245734332385/20110225231245734332385_.html" target="_blank">清华同方欲做数字电视产业龙头老大</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华同方欲做数字电视产业龙头老大科学时报 2001年12月27日本报讯 近日，清华同方与北京清华大学企业集团、香港清华永新高科技投资控股有限公司就参股清华永新信息工程公司签署增资扩股协议，成立北京永新同方信息工程公司，其中清华同方持股30％，为第一大股东。新成立的永新同方公司将专注于有线电视行业，为有线电视的数字化各个阶段提供技术、设备和系统集......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231245328871156/20110225231245328871156_.html" target="_blank">清华同方：合资发展数字电视</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华同方：合资发展数字电视2001年12月20日 CCTV《证券时间》清华同方日前宣布，与清华大学企业集团和清华永新(控股)合资成立北京永新同方信息工程公司，其中清华同方持股30%，为第一大股东。新公司将专注于有线电视数字化技术的开发和应用。而1999年清华同方已经开始进入这一领域的研究，为了解有关情况，本栏目记者采访了这家公司。北京清华同......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2001.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231244609891902/20110225231244609891902_.html" target="_blank">公司追踪：清华同方进入数字电视领域</a></h3>
+              <p class="thnews_jqzy">　　无标题文档公司追踪：清华同方进入数字电视领域2001年12月11日 全景网络证券时报记者 刘杨清华同方(600100)近日对外宣布，公司与北京清华大学企业集团、香港清华永新高科技投资控股有限公司等就参股清华永新信息工程公司(清华永新)签署增资扩股协议，扩股后成立新的北京永新同方信息工程公司，其中清华同方持股30%，为第一大股东。新成立的永新同方将专注......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2001.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231234546369082/20110225231234546369082_.html" target="_blank">数字电视标准 京沪各有方案</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document数字电视标准 京沪各有方案文汇报 2001年8月16日■文／本报记者张懿 距离10月份中国数字高清晰度电视（HDTV）标准的大比武只有2 个月的时间了，这场号称“四国演义”的大战，在经历了前期轰轰烈   烈的炒作，目前反倒是有一种大战前的宁静。目前，4家单位（上海交大、清华、广电总局广科院、成都电子 科技大学）总共提......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2001.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231234578250424/20110225231234578250424_.html" target="_blank">中国数字高清晰度电视标准将落谁手 四院校...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document中国数字高清晰度电视标准将落谁手 四院校争夺市场发言权文汇报 2001年8月16日■记者张懿报道本报讯　记者获悉：备受关注的中国数字高清晰度电视（HDTV） 标准测试，将于今年10月正式开始，于2003年最终确定。目前，共有 上海交大、清华、广电总局广科院和成都电子科技大学四家参与比试，   被有的媒体称为“四国演义......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231231062307261/20110225231231062307261_.html" target="_blank">同方HDTV遭遇标准之争:清华方案处境尴尬</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document同方HDTV遭遇标准之争清华方案处境尴尬北京青年报 2001年6月25日　一个月前还在向媒体兴致勃勃地描述“tongfang inside（每一台电视机都装 上一块同方的数字电视芯片）”动人前景的清华同方如今出人意料地沉默了。　5月16日，清华同方（600100）对外界宣布：清华大学数字电视传输技术研究 中心经过自主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231230500641090/20110225231230500641090_.html" target="_blank">清华研制出数字电视传输系统</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华研制出数字电视传输系统《中国教育报》2001年6月18日第4版本报记者　蔡继乐一套具有我国完整自主知识产权的地面数字多媒体广播传输系统(DMB-T)，日前在清华大学诞生。清华大学数字电视传输技术研发中心还与清华同方合作，研制出用于数字电视发射和接收的集成电路芯片。目前，有关政府部门正组织包括清华大学在内的各方技术力量......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231228203504514/20110225231228203504514_.html" target="_blank">数字电视走近我们</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我国数字电视广播传输技术获突破数字电视走近我们科学时报 2001年5月22日本报讯 刚刚度过九十华诞的清华大学近日传出喜讯，该校数字电视传输技术研发中心经过自主创新，提出一套具有完整自主知识产权的地面数字多媒体/电视广播传输系统(DMB－T)，并与清华同方合作，同步实施发射端和接收端的专用集成电路芯片设计工作。清华大学现......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231228093757122/20110225231228093757122_.html" target="_blank">用普通电视看数字节目</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方研制成功数字电视地面传输芯片用普通电视看数字节目北京日报 2001年5月22日本报讯（记者杜鹃）记者日前在清华同方看到了目前国内最清晰的数字电视机。从本周开始，清华同方将与国内六大彩电企业共同商讨其产业化问题。今后，普通电视机只要增加一个内含有数字电视接收芯片的辅助装置，就可以收看到数字电视节目了。数字电视（......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231227859515490/20110225231227859515490_.html" target="_blank">我国数字电视广播传输技术获突破</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我国数字电视广播传输技术获突破(新华网 2001.05.17 08:20:50)新华网北京５月１６日电（记者李斌）刚刚度过９０华诞的清华大学今天传出喜讯，经过自主创新，清华大学数字电视传输技术研发中心提出一套具有完整自主知识产权的地面数字多媒体电视广播传输系统，并与清华同方合作，同步实施发射端和接收端的专用集成电路芯片设......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231227796112165/20110225231227796112165_.html" target="_blank">清华同方进入数字电视核心领域</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方进入数字电视核心领域2001年05月17日 12:57 上海证券报网络版昨日,清华大学数字电视传输技术研究中心经过自主创新,提出一套具有完整自主知识产权的地面数字多媒体/电视广播传输系统（DMB-T）,并与清华同方合作,同步实施发射端和接收端的专用集成电路芯片设计工作。清华大学现已向中国专利局申请了职务发明专利,......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231227593611674/20110225231227593611674_.html" target="_blank">我校多载波地面数字多媒体/电视广播传输系...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我国数字电视广播传输技术获突破我校多载波地面数字多媒体/电视广播传输系统“亮相”【新闻中心讯】记者 薛建团 5月16日，刚刚度过九十华诞的我校又传出喜讯，在国家计委、信息产业部、广电总局等有关领导部门和相关各企业的大力支持下，我校数字电视传输技术研发中心经过自主创新，提出一套具有完整自主知识产权的地面数字多媒体/电视广播......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354234196848/20110225225354234196848_.html" target="_blank">我校多载波地面数字多媒体/电视广播传输系...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我国数字电视广播传输技术获突破我校多载波地面数字多媒体/电视广播传输系统“亮相”【新闻中心讯】记者 薛建团 5月16日，刚刚度过九十华诞的我校又传出喜讯，在国家计委、信息产业部、广电总局等有关领导部门和相关各企业的大力支持下，我校数字电视传输技术研发中心经过自主创新，提出一套具有完整自主知识产权的地面数字多媒体/电视广播......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

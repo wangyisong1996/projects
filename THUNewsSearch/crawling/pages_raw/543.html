@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>著名应用数学家、力学家林家翘在清华作报告</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231219437181151&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">著名应用数学家、力学家林家翘在清华作报告</h3><p align="center"> （2001年4月27日 中国新闻网） </p><p align="center"><img src="/publish/news/images/upload/linjiaqiao1.jpg" width="210" height="135"></p><p align="center">著名应用数学家、力学家、美国科学院院士林家翘先生，二十七日在北京清华大学理学院作《数学科学中的某些新趋势——计算分子学》专题报告，受到热烈欢迎。中新社记者   张勤 摄 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月28日 12:42:14　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110707112232808464320/20110707112232808464320_.html" target="_blank">顾秉林看望林家翘 贺先生九十五岁寿辰</a></h3>
+              <p class="thnews_jqzy">　　顾秉林看望林家翘 贺先生九十五岁寿辰清华新闻网7月7日电&nbsp; （记者吕露英）今天是国际应用数学和力学大师、清华大学周培源应用数学研究中心名誉主任林家翘先生九十五岁寿辰，清华大学校长顾秉林来到林家翘先生位于清华园的家中，恭贺先生寿比南山。图为顾秉林校长（左）亲切看望林家翘先生。 记者崔 凯摄顾秉林向这位1937年毕业于清华物理系的老学长敬献花篮......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110506135634286255284/20110506135634286255284_.html" target="_blank">《我与清华》——林家翘：回忆初入清华</a></h3>
+              <p class="thnews_jqzy">　　《我与清华》&mdash;&mdash;林家翘：回忆初入清华来源：光明日报 2011-05-06&nbsp;我是1933年入学的。那时候，虽然华北一带的政局，已经很不稳定，可是初入校时，清华园中的一切，还是给人一种&ldquo;世外桃园&rdquo;之感。美丽的校园、草地、建筑、设备，都是富有国际风味的；与那时候北京城内的旧式房屋，颇为不同。许多同学，都......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232506000784112/20110225232506000784112_.html" target="_blank">林家翘：“老清华人”的愿望</a></h3>
+              <p class="thnews_jqzy">　　林家翘教授是国际公认的力学和应用数学权威。从上世纪40年代开始，他在流体力学的流动稳定性和湍流理论方面的工作带动了一代人的研究和探索——林家翘：“老清华人”的愿望来源：人民日报海外版 2010-06-11林家翘，1916年7月7日生于北京。1937年毕业于清华大学物理系，随即留校担任助教。1940年赴加拿大多伦多大学深造，1941年获多伦多大学硕士学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232456953735007/20110225232456953735007_.html" target="_blank">林家翘讲述数理学术人生</a></h3>
+              <p class="thnews_jqzy">　　林家翘讲述数理学术人生【新闻中心讯 研通社记者 柴利慧 张逢 摄影 柴利慧】5月20日上午在理学院郑裕彤讲堂，中国科学院外籍院士，清华大学周培源应用数学研究中心名誉主任林家翘教授做客“学术人生”，与同学们分享了自己的治学之路和90多年来的人生经历，并对青年学生的发展提出了自己的希望。林家翘1937年毕业于清华大学物理系，随即留校担任助教。二十世纪中期......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104115671579325/20110226104115671579325_.html" target="_blank">【人物】林家翘：大师之忧</a></h3>
+              <p class="thnews_jqzy">　　林家翘：大师之忧■刘文嘉林家翘，1916年7月7日生于北京。1937年毕业于清华大学物理系，随即留校担任助教。1940年赴加拿大多伦多大学深造，1941年获多伦多大学硕士学位，1944年获美国加州理工学院博士学位。从1947年起，历任麻省理工学院副教授、数学教授、学院教授、荣誉退休教授。自1951年起成为美国国家艺术和科学院院士，1962年起成为美国国家......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232447062653654/20110225232447062653654_.html" target="_blank">【人物】林家翘：大师之忧</a></h3>
+              <p class="thnews_jqzy">　　林家翘：大师之忧■刘文嘉林家翘，1916年7月7日生于北京。1937年毕业于清华大学物理系，随即留校担任助教。1940年赴加拿大多伦多大学深造，1941年获多伦多大学硕士学位，1944年获美国加州理工学院博士学位。从1947年起，历任麻省理工学院副教授、数学教授、学院教授、荣誉退休教授。自1951年起成为美国国家艺术和科学院院士，1962年起成为美国国家......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232440890107951/20110225232440890107951_.html" target="_blank">林家翘寄语母校：真正的人才培养要靠百年的...</a></h3>
+              <p class="thnews_jqzy">　　林家翘先生寄语母校：真正的人才培养要靠百年的积累【新闻中心讯 学生记者 徐雯　摄影　郭海军】4月25日一大早，工字厅东厅迎来了一位特殊的客人——94岁高龄的林家翘先生前来参加在此举办的1937届校友聚会。一到东厅的门口，林先生就迫不及待地要从轮椅上下来，在陪同人员的帮助下，他慢慢地走进了会议室。见到久未谋面的两位老同学彭德一、王世真，林先生特别激动，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2007.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231839625616160/20110225231839625616160_.html" target="_blank">林家翘：彭桓武培养的人都很能干</a></h3>
+              <p class="thnews_jqzy">　　林家翘：彭桓武培养的人都很能干3月4日上午，当记者将电话打到清华大学教授林家翘家里时，他才吃惊地得知彭桓武先生逝世的消息：“他怎么就走了呢？”在详细询问了彭桓武生病住院的情况和追悼会的安排后，他说：“如果身体许可，我将到八宝山参加追悼会。”林家翘是美国麻省理工学院荣誉退休教授、学院教授，清华大学教授，国际公认的力学和应用数学权威。他和彭桓武同是清华大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225340640899889/20110225225340640899889_.html" target="_blank">清华举办第二届应用数学前沿问题国际研讨会...</a></h3>
+              <p class="thnews_jqzy">　　弘扬科学精神 促进国际交流清华举办第二届应用数学前沿问题国际研讨会暨林家翘教授90华诞庆祝会【新闻中心讯 记者 顾淑霞 摄影 郭海军】6月8日上午，第二届应用数学前沿问题国际研讨会暨林家翘教授90华诞庆祝会在我校主楼接待厅开幕。来自美国、意大利、日本、港台地区及大陆等地的著名科学家和友好人士参加研讨会并共庆林家翘先生90岁生日。国务委员陈至立出席研讨会并......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231749500894133/20110225231749500894133_.html" target="_blank">清华举办第二届应用数学前沿问题国际研讨会...</a></h3>
+              <p class="thnews_jqzy">　　弘扬科学精神 促进国际交流清华举办第二届应用数学前沿问题国际研讨会暨林家翘教授90华诞庆祝会【新闻中心讯 记者 顾淑霞 摄影 郭海军】6月8日上午，第二届应用数学前沿问题国际研讨会暨林家翘教授90华诞庆祝会在我校主楼接待厅开幕。来自美国、意大利、日本、港台地区及大陆等地的著名科学家和友好人士参加研讨会并共庆林家翘先生90岁生日。国务委员陈至立出席研讨会并......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231749687844811/20110225231749687844811_.html" target="_blank">生命之树常青 学术精神永存--海内外嘉宾...</a></h3>
+              <p class="thnews_jqzy">　　生命之树常青 学术精神永存－－海内外嘉宾共聚清华园庆祝林家翘先生90华诞【新闻中心讯 记者 顾淑霞 摄影 郭海军】“让我们一起举杯，庆祝林家翘教授九十华诞！”随着清华大学周培源应用数学研究中心主任谢定裕教授的倡议，大家端起手中的酒杯，共祝林家翘教授九十岁生日快乐。6月8日晚，前来参加第二届应用数学前沿问题国际研讨会的海内外专家、学者，与专程赶来参加林......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2006.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231714328728188/20110225231714328728188_.html" target="_blank">林家翘：基础科学应成为一个交流重点</a></h3>
+              <p class="thnews_jqzy">　　林家翘：基础科学应成为一个交流重点 【新闻中心讯 记者 程曦】2005年岁末，我们踏雪来到我校周培源应用数学研究中心名誉主任林家翘先生的住所。眼前的林先生目光清亮、声音明晰，思维敏捷深邃，还不时起身查找相关资料，很难想像这是一位已有89岁高龄的耄耋老人。访谈从美国麻省理工学院（以下简称MIT）院长Susan Hockfield女士访问清华开始。林先生自......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2005.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231647046411170/20110225231647046411170_.html" target="_blank">新竹清华大学校长徐遐生一行访问我校</a></h3>
+              <p class="thnews_jqzy">　　台湾新竹清华大学校长徐遐生一行访问我校　【新闻中心讯 记者 淑霞　摄影　郭海军　】9月19日至20日，台湾新竹清华大学校长徐遐生一行10余人访问我校。双方就科研合作、交换学生、教师互换等议题进行了广泛深入的交流。9月19日，校长顾秉林院士等与徐遐生校长一行在工字厅东厅进行了亲切的会谈。徐遐生校长说，两校有共同的名字，有着共同美好的发展目标，他希望两校在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2005.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231547843299410/20110225231547843299410_.html" target="_blank">陈至立同志来我校看望林家翘先生</a></h3>
+              <p class="thnews_jqzy">　　无标题文档陈至立同志来我校看望林家翘先生【新闻中心讯 记者:邵默 摄影:郭海军】2月5日下午，国务委员陈至立来到清华园，亲切看望了著名数学家、我校教授林家翘先生，向他赠送了花篮，衷心祝愿他新春愉快，健康长寿。国务院副秘书长陈进玉，教育部常务副部长张保庆，我校校长顾秉林、党委书记陈希、党委常务副书记庄丽君等也陪同前往看望。 陈至立同志和林家翘先生进行了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231511562608531/20110225231511562608531_.html" target="_blank">与大师面对面：听林家翘先生谈“为人为学”</a></h3>
+              <p class="thnews_jqzy">　　无标题文档与大师面对面：听林家翘先生谈“为人为学”学通社记者 马倩  9月23日下午，“著名数学家林家翘先生谈为人为学”报告会在主楼接待厅举行。来自我校各院系的200多位同学聆听了学术大师林家翘先生漫谈自己的个人经历及在学术研究、教育、学习等方面的感悟。这次活动是我校物理系组织的“与大师面对面”系列活动中的一场。  林家翘先生早年毕业于清华物理系，后......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2002.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231308281480764/20110225231308281480764_.html" target="_blank">应用数学对中国科技未来的发展举足轻重</a></h3>
+              <p class="thnews_jqzy">　　无标题文档应用数学对中国科技未来的发展举足轻重——就清华大学成立周培源应用数学研究中心访林家翘教授和谢定裕教授●新闻中心记者 刘冬梅１９３７年毕业于清华大学物理系的林家翘教授在成为国际公认的力学和应用数学权威之后，于２００１年１１月回返母校工作，被正式聘为清华大学教授。在去年１１月至今年１月这段时间里，他结合自己的经历，亲自与清华大学数学、生物、生医、物......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2002.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225349546465642/20110225225349546465642_.html" target="_blank">应用数学对中国科技未来的发展举足轻重</a></h3>
+              <p class="thnews_jqzy">　　无标题文档应用数学对中国科技未来的发展举足轻重——就清华大学成立周培源应用数学研究中心访林家翘教授和谢定裕教授●新闻中心记者 刘冬梅１９３７年毕业于清华大学物理系的林家翘教授在成为国际公认的力学和应用数学权威之后，于２００１年１１月回返母校工作，被正式聘为清华大学教授。在去年１１月至今年１月这段时间里，他结合自己的经历，亲自与清华大学数学、生物、生医、物......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225626734334616/20110225225626734334616_.html" target="_blank">杨振宁、林家翘等来校做精彩报告</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华90周年校庆杨振宁、林家翘等来校做精彩报告【新闻中心讯】作为我校建校90周年校庆学术活动的一部分，4月27日上午，著名学者杨振宁、林家翘受邀为我校师生作了精彩的学术报告，在师生中引起热烈响应。上午的报告会在我校理学院报告厅举行。我校校友、诺贝尔物理学奖获得者杨振宁教授，以"量子化、对称、相位因子--20世纪理论物......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355062440649/20110225225355062440649_.html" target="_blank">杨振宁、林家翘等来校做精彩报告</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华90周年校庆杨振宁、林家翘等来校做精彩报告【新闻中心讯】作为我校建校90周年校庆学术活动的一部分，4月27日上午，著名学者杨振宁、林家翘受邀为我校师生作了精彩的学术报告，在师生中引起热烈响应。上午的报告会在我校理学院报告厅举行。我校校友、诺贝尔物理学奖获得者杨振宁教授，以"量子化、对称、相位因子--20世纪理论物......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

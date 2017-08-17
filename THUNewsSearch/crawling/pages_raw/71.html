@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我校召开“非全日制教育及数字化教学环境”专题研讨会</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231209328596962&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9655/index.html' class='navigation_style'>专题新闻</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9709/index.html' class='navigation_style'>清华第21次教育工作讨论会</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>我校举行“非全日制教育及数字化教学环境”专题研讨会</TITLE></HEAD><BODY bgcolor="#FFFFFF"><FONT FACE="宋体" LANG="ZH-CN"> <h2 ALIGN="CENTER"><font face="楷体_GB2312">非全日制教育和网络教学环境建设不容忽视</font></h2><h4 ALIGN="CENTER">我校召开“非全日制教育及数字化教学环境”专题研讨会</h4><P ALIGN="CENTER"></P><P ALIGN="JUSTIFY"> 【新闻中心讯】 记者 刘冬梅 在信息技术飞速发展的今天，非全日制教育和数字化教学环境在我校创建世界一流大学中占有怎样的位置，3月16日我校举行“非全日制教育及数字化教学环境”专题研讨会，8位专家从不同角度阐述了各自的观点，一致认为非全日制教育及数字化教学环境建设不容忽视。</P><P ALIGN="JUSTIFY">我校传播系副系主任熊澄宇教授以《对现代教育发展趋势的思考》为题，从现代远程教育发展战略角度出发，提出在已经进入信息社会的今天，我校要建世界一流大学就要建立起与发展相适应的网络和宽带环境，要在网上建设起内容充分的学习资源，使所有学习者和工作者建立起积极利用该环境进行学习和工作的观念，并学会有效地使用。他说，据美国教育部统计，该国从幼儿园到高等学府已经有63％的教室上网，内容已经成为信息革命的命脉。他强调，要使我校在高校长期保持领先优势，就要进行体制改革，在积极开展教育技术的同时，必须花大量时间进行理论研究，力争在理论上有所突破和创新，在全球化情况下研究沟通问题，思考如何在网络情况下提供一种校园文化，如何把授课变成主持人？</P><P ALIGN="JUSTIFY">计算机与信息管理中心主任沈培华教授则认为，要建设数字校园，构筑现代教育环境，就要理顺机制，调整体制，处理好“路、车、货”之间的关系，即网络、应用与资源建设的关系。她说，我校网络应用系统建设经历了综合管理信息系统建设、信息系统建设和数字化清华建设三个阶段，目前已经形成了数字校园体系结构，校园网主干网千兆到楼，实验网接入美国Internet   2，光纤通达140座楼，铺设近100公里，入网计算机2.4万台，学生入网人数达100% ；教职工达85%，使学生成长与信息技术发展同步，促进了完全学分制的推行和教学观念的更新，提高了教室资源利用率，推动了教学质量的提高，提高了学校管理工作水平。她认为，信息化建设必须管理与技术结合，观念是前提、管理是关键、技术是保障。</P><P ALIGN="JUSTIFY">图书馆馆长刘桂林教授在发言中指出，师资、实验室和图书资料是办好大学的主要支柱条件，建设一流大学图书馆文献资源的深度、系统性和知识性如何至关重要。为了解决供需矛盾，我校积极向电子和数字化图书馆方向发展，目前已有120种数据库，其中74种是外文，   90%以上采用电子版， 90%以上是Web版，已经涵盖学校90％以上的学科，并最大限度地开放给学校师生使用。同时保持了最必需的印刷本外文期刊，积极、慎重地扩大电子全文资源，大力发展馆际互借和文献传递，全文电子期刊10,500种，两倍于纸本期刊；全文会议录600余种,   全文标准近900种。目前图书馆数字资源总量达3TB，其中 5/6是全文，1/3放在本地，1/3通过专线（DI）。去年我校师生平均每月对Web of Science的访问量为3万次。根据ISI公司的统计，我校的访问量与美国哈佛、耶鲁、MIT、加州理工4所大学相比不相上下，原因是师生素质好，基础设施条件好。为了做好我校图书资料建设，图书馆下大力气深化服务工作，精选资源、广泛试用、不断培训学科馆员，通过镜像专线方式集结大量资源，建立网络导航、期刊导航，馆际互借补贴，在理工类资源扩充与深化的同时，大力度地建设非理工类数字资源，总量约占全部资源的1/2，对学校从以前“以学生为中心”教育模式转变为学生更多的自主地学习，使学生的知识结构向全面化及个性化发展的教育改革产生了积极影响。他呼吁全校上下通力合作，发展数字型指定教参，重视、落实数字资源的知识产权，积极开展网上教学。</P><P ALIGN="JUSTIFY">我校网上教学的开拓者、计算机系林福宗教授结合自己在网上开设《多媒体技术基础与应用》课程的经历，畅谈了网上教学体会。他说，最艰难的是教学内容的开发和组织，最担心的是网上教学模式能否被接受，值得注意的是对远程学生也要满腔热情，感受最深的是需要更多的牺牲，一个小小的愿望是多给点教学经费。他说，我相信网上教学是一次伟大的教学革命。在教师的指导下，学生可在想学习的时间、想学习的地方向任何人或者利用任何资源进行学习。问卷调查显示，与传统教学相比，84.7%的校内研究生和64.5%的校外进修生反映学习更主动，91.8%的校内研究生和77.8%的校外进修生反映学习更方便。同时，远程学生大多数是校外进修生，他们立足于国内的建设，是建设我们家园的一支重要力量。搞教学本身地位就低，开拓网上教学需教师更多的付出，教师不仅要专注于教学内容的开发和更新，还要做半个站点管理员，但网上教学对科研促进很大。 </P><P ALIGN="JUSTIFY"> 继续教育学院孙学伟教授从美国大学远程教育发展状况谈起，提出了我校远程教育的定位及思考。他说，我校自1996年起开展远程教育，已经历了4个年头。目前我校远程教育已进入发展的一个关键阶段，马里兰大学校长唐纳德·兰根伯格教授曾提到：“信息技术革命将使得很多大学要么进行根本性的自我革新，要么接受自动消亡的命运”，网络的出现为实现“以更低的代价获得更高质量的教育”提供了可能。他说，目前我校遵循教育部“统筹规划，需求推动，扩大开放，提高质量”的指导方针，校内设有远程教育建设委员会，负责指导该项工作和作出有关重要决定。校外内地除西藏自治区外，所有省、自治区、直辖市都有我校的远程教育校外教学站，目前共有96个。办学层次涉及研究生课程进修、专科起点的本科教育及培训教育等各个方面。为了科学、高质量地发展我校远程教育，胡东成副校长提出我校远程教育主要应定位于大学后的继续教育，应以“二不，三为主”原则，即“不挤占校内资源，不损害学校声誉”、“以非学历学位教育为主，以非脱产学习方式为主，以远程教学方式为主”，通过“一个主体，两个侧翼”之间的互动推进我校的全面发展。一个主体即指学校本部的本科生、研究生教育和高水平的科研。两个侧翼一是科技产业，包括科技成果转化、校办产业；另一个即为教育产业，主要指的是非学历非学位的培训教育。他强调，搞好一个主体，两个侧翼才有发展的基础和依托；搞好两个侧翼，反过来又能支持和推动主体的发展，扩大学校的社会影响，为社会各类人员的终身学习、素质提高做出贡献。同时办学规模要考虑到学校的承受能力，保有为社会上少数优秀人员获取我校学历和学位的通道，以“苦练内功，整顿站点，完善服务，提高质量”整合校内资源，对培训教育要探索产业化的运作机制，明确我校在全国高校远程教育试点中的领头地位。 </P><P ALIGN="JUSTIFY"> 电教中心、现代教育技术研究所张建伟博士则通过对远程教学调研分析，从国外远程教育的研究与发展、我校远程教育的课程资源状况、远程学生学习状况的调查分析入手，提出了我校远程教育发展的若干建议。他说，世界一流大学的建设不能缺少继续教育，只有建立起高质量的远程课程资源、有效的学习支持服务系统、远程教育质量监控保障系统和加强对网络与远程教育的研究是使我校非全日制教育得以健康发展的可靠保证。</P><P ALIGN="JUSTIFY">研究生院综合办公室主任康飞宇副教授通过对工程硕士培养和研究生课程进修班等工作的总结，认为由于工程硕士专业学位是与工学硕士属于同一学术层次的不同培养模式，生源主要是国有大中型企业、重点工程建设单位、国防科研生产部门等部门的在职人员，这一“进校不离岗”的培养模式，为国有大中型企业留住了人才，提高了企业技术创新能力和真刀真枪地解决企业和工程问题的能力，为国有大中型企业科技创新注入了活力；为国防部门和西部地区培养和输送了一批“清华人”，增强了国防实力，推动了国民经济建设和科技文化进步。同时校外办学增加了学校的收入，促进了产学研合作，是一支为国家培养人才的不可缺少的力量。</P><P ALIGN="JUSTIFY">经管学院副院长陈章武教授在题为《十年MBA教育的回顾与思考》专题报告中指出，从1997年MBA入学实行全国联考以来，报考我校MBA考生四门联考总成绩在各试点院校中，四年第一，一年第二。据不完全统计，1998年底前从我校毕业的257名MBA毕业生中，已有深沪A股上市公司董事长、总经理5人；国有大中型企业董事长、总经理3人；知名国际企业副总裁1人；14名担任局级及局级以上领导职务。</P><P> 他说，该院之所以取得这样的成绩，是高起点、入主流 ，按国际规范办一流管理学院和抓质量、保基础，全面改革持续创新作市场先行以及大规模、多系列开展第二课堂活动的结果。自1991年作为国内九家学校的领头学校开始试办MBA以来，该系就按国际规范设置课程，开展广泛而富有实效的国际合作，利用大规模的海外师资培训、交流，设立讲席教授引进学术带头人等多种手段建设一流的师资队伍。贴近市场，面向需求，探索MBA办学模式改革，定期教学评估，健全教学管理规定，加强教学服务支持力度。1997年8月至今，已经有200多次活动。邀请知名企业家或著名业界人士来校演讲并与MBA学生交流；学生积极参加创业计划竞赛，参加国际企业管理挑战赛；开拓学生暑期工作环节，目前已与美国通用汽车、摩托罗拉公司、联想集团等70多家企业签定了接收MBA学生进行暑期工作的协议。</P><P> 副校长兼继续教育学院院长胡东成教授主持会议，副校长杨家庆教授、顾秉林院士出现会议。顾秉林副校长在讲话中指出，非全日制教育和网络环境是学校今后发展的重要组成部分，校外成员需要继续教育，在保证学校教育主体不断向世界一流冲击的同时，应扩大远程教育各方面的工作。目前远程教育应以非学位学历教育为主，数字校园、数字清华、数字图书馆建设应加强。同时，在坚持正确的办学方向的情况下积极探讨教育产业发展思路，使我校的培养质量更上一层楼。</P></FONT> </BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月19日 14:27:18　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

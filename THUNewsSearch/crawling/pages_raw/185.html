@@ -1,0 +1,608 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清华阳光--太阳能应用的先锋</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231212328266337&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9664/index.html' class='navigation_style'>社会服务</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">清华阳光--太阳能应用的先锋</h3><p align="center"> 田炜华 </p><p align="center">(2001.04.05 经济日报)</p><p align="left">　　作为“世界上最大的全玻璃集热管和集热器生产企业”的领导者，薛祖庆和殷自强这两位创业者现在所担心的，竟然是找不到接班人、后继者。</p><p> 　　已经拥有了1.2亿元净资产，年销售额2.9亿元的清华阳光能源开发公司的总部，今天依然坐落在清华大学一栋3层旧式楼房里。总经理薛祖庆只有一间几平米的办公室。64岁的薛祖庆提起清华阳光的历史很感慨，说是走了不少的弯路，但不管怎样，清华阳光还是在国内开辟了太阳能应用的新天地。</p><p> 　　早在1979年，清华大学电子工程系的殷自强教授就开始了全玻璃真空太阳集热管及太阳能集热器的研究。1985年，他成功研制出吸收太阳能极强的太阳膜，太阳能转民用迈出了重要的一步。但是当时，他的研究成果并没有受到重视，反而遭到很多非议。到1989年，在中关村大办企业的影响下，清华阳光才应运而生，但是大家仍旧认为搞太阳能开发没有前景，于是拿着300万元启动资金去搞所谓的贸易，这些没有从商经验的知识分子很快就被人骗光了钱。反省的结果就是还是要干自己的本行，搞太阳能开发。再次得到一笔300万元的投资后，殷自强、薛祖庆和另一个教授，3个人开始建厂搞太阳能集热管的开发。“后来，又来了几个清华的毕业生，我们最初创业就只有17个人。”</p><p> 　　薛祖庆说，他们一开始生产太阳能集热管，等到产品出来后才发现根本就卖不出去，因为国内还没有人生产太阳能热水器。无奈，大家只好又从头开始研发热水器，重新培育一个热水器市场。“我们在清华大学里办了一个有200名个体老板参加的太阳能热水器培训班”，这些学员回去后开始办起了一些生产太阳能热水器的工厂。他们的产品从这时开始有了销路，到1992年年产量达到了20万只，并有了几百万的收入。随后的形势是国内涌现了大大小小的几十家太阳能热水器的生产厂，清华阳光的产品供不应求。让薛和他的同事们感到自豪的是：“到目前为止，清华阳光已经成为世界上最大的全玻璃集热管和集热器生产企业，集热管年产1000万支、真空太阳能热水器30万台的生产能力。产品质量在通行中首家通过ISO9002及英国皇家质量认证委员会质量认证的企业。”</p><p> 　　1999年，清华阳光也开始自己生产热水器，年产量达到了4万台，去年的产量达8万台，年产值达2.5亿元。“事实上，太阳能热水器的市场前景是无限的。从能源危机和环保的角度来看，太阳能的应用是最好的出路。中国有4亿个家庭，能够供热水的家庭只有5%，这个市场很大。还有一大块就是出口，老外的环保意识很强，产品的需求量很大。重要的是太阳能不仅可以提供热水，而且还可以用于采暖和空调等能源，而我们已经研发出了相应的产品。”</p><p> 　　在技术储备方面，薛很得意的就是在他们背后有清华大学这个大树。“这就是我们的总部依旧设在学校里的原因。一旦，我们的研发和生产中遇到技术问题，我就可以找到国内最权威的各方面的专家，这是其他竞争对手无法与我相比的。另外，我们也为专家们提供了一个实践的舞台，有的专家今天研究出来的成果，到了清华阳光第二天就可以转化成成果。”</p><p> 　　薛说，企业在经过了前两个时期的发展后，迎来了第三个发展阶段，他们的目标是5年后产值达到30亿元，甚至更多。“但是，我们需要好的融资渠道，而不是等银行和外面单纯有限的投资。”</p><p> 　　其实，这些年最让薛担忧的就是后继人才的培养问题，他说现在电子工程系的学生大多都去搞软件开发了，太阳能应用方面的人才很少，每年进入企业的毕业生他们都要花2-3年自己培养。“你看，我都64了，殷教授也66了，我们还没有找到接班人。”这无疑是薛祖庆最大的遗憾了。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月06日 09:11:07　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2016/20160329163051198750475/20160329163051198750475_.html" target="_blank">太阳能热利用科学技术杰出贡献奖颁奖</a></h3>
+              <p>近日，2015太阳能热利用科学技术杰出贡献奖在清华大学电子工程系罗姆楼进行了颁奖典礼。国家太阳能光热联盟专家委员会主任、中国科学院院士徐建中向获奖者——清华大学教授殷志强颁发了奖牌和奖金。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150826135953193699223/20150826135953193699223_.html" target="_blank">清华大学师生帮助新卫村搭建太阳能微电网</a></h3>
+              <p>　　8月18日下午13时，雨后天晴。在四川省甘孜藏族自治州雅江县木绒乡新卫村，60多位藏族村民等待着，他们将要参加在该村村小举行的简短的低电压改造竣工仪式。    　　当屋里的45瓦节能灯再次亮起时，村小的孩子们欢呼雀跃，村小老师德吉和清华大学“梦之网”支队的成员们都非常地激动和感慨。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130704101414632728798/20130704101414632728798_.html" target="_blank">陈吉宁看望清华国际太阳能十项全能竞赛团队</a></h3>
+              <p class="thnews_jqzy">　　陈吉宁看望清华大学国际太阳能十项全能竞赛团队清华新闻网7月4日电（记者刘蔚如）7月2日下午，校长陈吉宁来到清华大学游泳馆东侧施工场地，看望了清华大学国际太阳能十项全能竞赛团队的同学们，并详细了解了团队的参赛方案O-House&ldquo;零能耗&rdquo;住宅的情况。校党委副书记邓卫陪同看望。图为陈吉宁等听取学生汇报。记者智斐摄陈吉宁参观了已经完成......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130528114431866191891/20130528114431866191891_.html" target="_blank">清华大学积极备战国际太阳能全能赛</a></h3>
+              <p class="thnews_jqzy">　　清华大学积极备战国际太阳能全能赛来源：中国教育报 2013-5-28 薛晨 李凌日前，清华大学参加太阳能十项全能竞赛的学生正在建一所真正意义上的&ldquo;零能耗&rdquo;住宅。据了解，这栋建筑具有四大特色：文化内涵的&ldquo;园林式&rdquo;住宅，组合自由的&ldquo;模块化&rdquo;住宅，环保可持续的&ldquo;零能耗&rdqu......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130524121028757710103/20130524121028757710103_.html" target="_blank">清华建小房 生活零能耗</a></h3>
+              <p class="thnews_jqzy">　　供电供热实现自给自足 生活用水八成能再利用清华建小房 生活零能耗来源：法制晚报 2013-5-23 王贺健太阳能发电自给自足，八成生活用水可以重复利用&hellip;&hellip;清华大学建筑学院设计的参赛作品&ldquo;0-House&rdquo;已经落成，正在进行最后的装修。今天上午，记者在清华大学游泳馆东侧看到，围挡圈出一片200多平方米的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130510141130663582856/20130510141130663582856_.html" target="_blank">清华学生展示未来绿色新住宅</a></h3>
+              <p class="thnews_jqzy">　　清华学生展示未来绿色新住宅来源：中国建设报 2013-5-8 马海燕一个名叫&ldquo;O-House&rdquo;的绿色新住宅正在清华学生的研发中变成现实，并有望代表中国参加2013国际太阳能十项全能竞赛。清华大学国际太阳能十项全能竞赛阶段成果交流会日前在该校游泳馆东侧施工场地举行。&ldquo;O-House&rdquo;正在紧张有序的搭建过程......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130424132338448186264/20130424132338448186264_.html" target="_blank">清华“零耗能”住宅主体基本完工</a></h3>
+              <p class="thnews_jqzy">　　清华&ldquo;零耗能&rdquo;住宅主体基本完工来源：北京日报 2013-4-24 任敏经过近5个月紧张施工，昨天，在清华大学的&ldquo;最牛工地&rdquo;上，&ldquo;零耗能&rdquo;住宅的主体基本完工。未来，在这所智能房子里，iPhone手机就能控制所有的家用电器，它采用的光热、光电系统还有望用于地震灾后安置。材料回收利用率超9......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130424132148280283113/20130424132148280283113_.html" target="_blank">清华学生展示未来绿色新住宅</a></h3>
+              <p class="thnews_jqzy">　　清华学生展示未来绿色新住宅来源：中国新闻网 2013-4-24 马海燕一种使用面积高达80%的绿色新住宅正在清华学生的研发中变成现实。这个名叫&ldquo;O-House&rdquo;有望代表中国参加2013国际太阳能十项全能竞赛，并最终被建筑商们所采纳。清华大学国际太阳能十项全能竞赛阶段成果交流会23日在该校游泳馆东侧施工场地举行。&ldquo;O......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130110150858739597211/20130110150858739597211_.html" target="_blank">清华出现“最牛工地”</a></h3>
+              <p class="thnews_jqzy">　　清华出现&ldquo;最牛工地&rdquo;20教授50学生合建零能耗住宅来源：北京晨报 2013-1-10 施剑松从现在起到今年4月15日，在清华大学游泳馆东侧的一小片空地上将出现一处特别的工地。20名清华教授和50名学生将亲手建造一所60-100平方米的房子，房子的唯一能源将来自太阳能，并且可满足苛刻的环境控制标准并满足舒适的居住功能。清华大学建筑学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121227123017205976086/20121227123017205976086_.html" target="_blank">清华“零能耗”住宅参加国际太阳能全能竞赛</a></h3>
+              <p class="thnews_jqzy">　　清华&ldquo;零能耗&rdquo;住宅参加国际太阳能全能竞赛来源：光明日报 2012-12-27 邓晖零能耗、建造迅速、充分使用新能源、模块组合自由，还具有微电网系统和智能控制功能&mdash;&mdash;在日前举行的清华大学国际太阳能十项全能竞赛（Solar Decathlon，简称SD）团队合作签约仪式上，清华团队以&ldquo;O-House......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121225115831995311657/20121225115831995311657_.html" target="_blank">清华O-House角逐国际太阳能十项全能...</a></h3>
+              <p class="thnews_jqzy">　　清华O-House角逐国际太阳能十项全能竞赛来源：科技日报 2012-12-25 林莉君近日，清华大学国际太阳能十项全能竞赛（Solar Decathlon，简称SD）团队合作签约仪式举行。国际太阳能十项全能竞赛作为2011年胡锦涛主席访美期间与奥巴马总统签署的第一个中美能源合作项目，将于2013年首次落户中国，正式定名为&ldquo;SDC2013......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121224171303953986118/20121224171303953986118_.html" target="_blank">清华学生建“零能耗”小屋</a></h3>
+              <p class="thnews_jqzy">　　清华学生建&ldquo;零能耗&rdquo;小屋来源：北京青年报 2012-12-22 雷嘉一个多月后，清华校园里将出现一座建筑面积78平方米的小屋，屋内家电齐全，能住人，却没有任何外部电力输入，用电完全依靠太阳能，是一座真正意义上的&ldquo;零能耗&rdquo;住宅。这座被命名为&ldquo;O-House&rdquo;的小屋由一群清华学生设计和亲......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121224103434158724584/20121224103434158724584_.html" target="_blank">清华国际太阳能十项全能竞赛团队合作签约仪...</a></h3>
+              <p class="thnews_jqzy">　　清华国际太阳能十项全能竞赛团队合作签约仪式新闻发布会举行清华新闻网12月24日电12月20日下午，清华大学国际太阳能十项全能竞赛(Solar Decathlon，简称SD）团队（以下简称清华团队）合作签约仪式新闻发布会在清华大学建筑馆举行。校党委副书记邓卫出席发布会并致辞。图为邓卫致辞。记者智 斐摄邓卫表示，此次赛事为在校大学生提供了一个全面了解新能......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121221160139725727288/20121221160139725727288_.html" target="_blank">国际太阳能十项全能竞赛首次落户中国</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;太阳能建筑领域的奥运会&rdquo;&mdash;&mdash;国际太阳能十项全能竞赛首次落户中国清华大学进入决赛来源：人民网 2012-12-20 赵婀娜由中国国家能源局和美国能源部主办的&ldquo;国际太阳能十项全能竞赛&rdquo;将于2013年首次落户中国，该竞赛被喻为&ldquo;太阳能建筑领域的奥运会&rdquo;。有来自13......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120522082551782367575/20120522082551782367575_.html" target="_blank">清华学生的阳光团队收集阳光的故事</a></h3>
+              <p>他们根据SD大赛对于参赛房屋的用电要求，设计并完成了一套收集太阳能并利用其给住宅供电的高智能化电气系统。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120510114405346540026/20120510114405346540026_.html" target="_blank">清华举行国际太阳能十项全能竞赛参赛启动仪式</a></h3>
+              <p class="thnews_jqzy">　　清华举行国际太阳能十项全能竞赛参赛启动仪式清华新闻网5月10日电（通讯员刘 凯） 5月9日，清华大学国际太阳能十项全能竞赛（SDC）参赛启动仪式在清华大学建筑学院举行。清华大学党委副书记邓卫出席会议并讲话。邓卫充分肯定了清华参赛团队的前期成果，对团队的发展提出建议和希望，并与相关赞助商签订合作协议。清华建筑学院党委书记边兰春教授，团队总顾问、清华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231443640930909/20110225231443640930909_.html" target="_blank">“拯救气候――清洁电力”在行动</a></h3>
+              <p class="thnews_jqzy">　　“拯救气候――清洁电力”在行动人民网  2004-6-7北京东四九条小学五年级学生王培袆在清华大学观摩风力发电模型6月5日，工作人员在演示天津春化小学学生制作的太阳能电池车模型世界自然基金会、环境与发展研究所等单位在清华大学举办“拯救气候——清洁电力行动”公益演出和展示活动。该行动提倡人类开发太阳能、风能等清洁能源，并使用节能电器，节约能源。（邢广利摄）</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231345671371275/20110225231345671371275_.html" target="_blank">太阳能供电照明在清华示范成功</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document太阳能供电照明在清华示范成功北京晚报 周襄楠 2003-05-12清华大学日前在校内建成了太阳能光伏供电照明系统示范工程。这一由清华材料科学与工程系研发成功并拥有自主知识产权的太阳能光伏供电照明系统，可以直接点燃高压钠灯、金卤灯，这在全国尚属首次。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348140530851/20110225225348140530851_.html" target="_blank">太阳能光伏供电照明系统在清华示范成功</a></h3>
+              <p class="thnews_jqzy">　　无标题文档太阳能光伏供电照明系统在清华示范成功【新闻中心讯 记者 周襄楠】太阳能光伏供电照明系统示范一期工程4月18日在我校落成。太阳能光伏供电照明系统是我校材料科学与工程系长期研发成功的，并拥有该系统的自主知识产权，该系统可以直接点燃高压钠灯、金卤灯，这在全国尚属首次。自从该示范工程一期2002年10月在我校综合体育馆东侧建成后，八个采用太阳能......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231336765748576/20110225231336765748576_.html" target="_blank">太阳能光伏供电照明系统在清华示范成功</a></h3>
+              <p class="thnews_jqzy">　　无标题文档太阳能光伏供电照明系统在清华示范成功【新闻中心讯 记者 周襄楠】太阳能光伏供电照明系统示范一期工程4月18日在我校落成。太阳能光伏供电照明系统是我校材料科学与工程系长期研发成功的，并拥有该系统的自主知识产权，该系统可以直接点燃高压钠灯、金卤灯，这在全国尚属首次。自从该示范工程一期2002年10月在我校综合体育馆东侧建成后，八个采用太阳能......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2002.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231306562202924/20110225231306562202924_.html" target="_blank">太阳能汽车离我们有多远？</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document太阳能汽车离我们有多远？(新华网 2002.08.14 10:59:00)8月11日，中国科技馆。“车体带电，请勿触摸”，使许多本来想和太阳能汽车“亲热”的手缩了回去，许多参观者看着这3辆光怪陆离、形状怪异的“未来汽车”，除了欣喜，还有几分畏惧。清华大学太阳能汽车小组成员梁伟铭说，由于太阳能汽车属实验阶段，其表层的电......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2002.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231306140396231/20110225231306140396231_.html" target="_blank">开动太阳能汽车</a></h3>
+              <p class="thnews_jqzy">　　无标题文档开动太阳能汽车北京青年报 2002年08月13日本报记者曾伟、牛金荣摄影报道昨天，清华大学主楼前，三辆大甲壳虫似的“怪车”排成一线，在校园内鱼贯而行，惹得清华师生们纷纷驻足观看，原来，三辆分别来自清华大学和两所美国大学的太阳能电动汽车在清华大学正上演一场“告别赛”，宣告我国举行的第一个太阳能电动车比赛——“2002中国太阳能电动车友谊赛暨巡回展......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2002.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231305781946130/20110225231305781946130_.html" target="_blank">太阳能电动车友谊赛下月巡展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document太阳能电动车友谊赛下月巡展(经济日报 2002.07.10)本报讯“2002中国太阳能电动车友谊赛暨巡回展”将在8月3日至12日举行。届时将分别在上海、南京、天津、北京四地组织技术研讨会、象征性比赛、太阳能车辆展示以及中美高校学生交流等一系列活动。参赛的三支队伍是：中国清华大学代表队、美国密苏里—罗拉大学代表队、美国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231256093413906/20110225231256093413906_.html" target="_blank">我国太阳能热利用技术国际领先</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我国太阳能热利用技术国际领先(新华网 2002.04.25 14:08:12)日前，国内太阳能热水器龙头企业———北京清华阳光公司推出了其产品定型后的第一款紧凑式全玻璃真空管太阳能热水器。这是世界上第一款同类型的定型产品，它标志着中国太阳能热利用产品走到了世界前列。清华阳光公司是我国研制、开发太阳能光热利用产品的先行者，1985年即生产出我......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231251718749746/20110225231251718749746_.html" target="_blank">首钢注资清华阳光</a></h3>
+              <p class="thnews_jqzy">　　无标题文档首钢注资清华阳光北京晨报 2002年4月18日晨报讯（记者 修宇）清华阳光公司昨天宣布，首钢股份正式加盟清华阳光，使清华阳光注册资金达到１．５３５亿元人民币。清华阳光公司董事长荣泳霖认为，除了资金上的支持，首钢的加盟无疑会在怎样管理大型企业以及如何营建有效的销售网络等方面给清华阳光带来经验。首钢总公司总会计师、清华阳光公司监事长方建一则认为......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231251750851947/20110225231251750851947_.html" target="_blank">我国真空管太阳热水器实现大规模生产</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我国真空管太阳热水器实现大规模生产(新华网 2002.04.17 20:56:40)　 新华网北京４月１７日电（记者杨青）北京清华阳光公司今天宣布，我国拥有核心技术全部知识产权的紧凑式全玻璃真空管太阳热水器经过十年的研制、生产、推广，目前已在世界上率先完成产品定型。它标志着我国太阳能热利用产品具有国际领先水平，也表明这项产品开始进入大规模生产阶段。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2001.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231239828476086/20110225231239828476086_.html" target="_blank">朝阳产业——太阳能热水器</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document朝阳产业——太阳能热水器科学时报 2001年10月25日近来，仿佛一夜之间，各种品牌的太阳能热水器的电视广告纷纷从天而降，争抢人们的眼球。这是否预示着一场太阳能热水器大战即将开始？或预示着一个太阳能大规模利用的时代即将来临？太阳能——万千宠爱集一身太阳能作为一种能源，具有一些其他能源无可比拟的优点，例如： 广泛存在，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353750104447/20110225225353750104447_.html" target="_blank">为新疆皮山人民做一件实事——“太阳能沙漠...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我校为新疆皮山人民做的一件实事"太阳能沙漠绿洲生态系统"示范工程在奥村竣工【新闻中心讯】5月28日，对于新疆和田地区皮山县奥依吐格拉克村（简称奥村）的1300多名村民来说是一个值得纪念的日子。从这一天起，他们告别了点煤油灯、喝"涝坝水"（人畜共用的蓄水池）的历史，开始了"晚上灯火辉煌，日间清水流淌"的新生活。因为就在这一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231229531339375/20110225231229531339375_.html" target="_blank">为新疆皮山人民做一件实事——“太阳能沙漠...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我校为新疆皮山人民做的一件实事"太阳能沙漠绿洲生态系统"示范工程在奥村竣工【新闻中心讯】5月28日，对于新疆和田地区皮山县奥依吐格拉克村（简称奥村）的1300多名村民来说是一个值得纪念的日子。从这一天起，他们告别了点煤油灯、喝"涝坝水"（人畜共用的蓄水池）的历史，开始了"晚上灯火辉煌，日间清水流淌"的新生活。因为就在这一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231229312875883/20110225231229312875883_.html" target="_blank">新疆利用太阳能改变偏远地区落后生活</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document新疆利用太阳能改变偏远地区落后生活(新华网 2001.06.04 18:53:33)新华网新疆皮山６月４日电（记者张鸿墀）“这个煤油灯和我一个岁数，不过以后它再也不会亮了”，电灯光下，６４岁的维吾尔老人阿不都拉·库尔班向记者展示煤油灯这种“老古董”。长期以来，新疆皮山县巴西兰干乡奥依吐格拉克村的１３９０名村民夜间只能......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

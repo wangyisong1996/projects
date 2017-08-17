@@ -1,0 +1,1070 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清华同方着手加大环保产业的技术投入</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231208546694017&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9664/index.html' class='navigation_style'>社会服务</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">清华同方着手加大环保产业的技术投入 </h3><p align="center"> （2001年03月08日 全景网络证券时报）</p><p> 　　据有关资料显示，目前全球性产业结构调整出现了向资源利用合理化、废物产生减量化和无害化方向发展的新趋势，许多国家都把环保产业列为优先发展或重点发展的支柱产业，给予政策和资金等多方面的支持。即使八十年代后期发展起来的韩国环保产业，目前已达到60亿美元左右产业规模。我国环保总局颁布的《国家重点环保实用技术推广管理办法》的环保高技术发展指南中，也明确指出了今后我国环保产业发展的重中之重的领域是城市污水处理、城市垃圾处理、燃煤脱硫。</p><p> 　　针对上述市场发展特征，公司已着手加大环保产业的技术投入，并参与大中型项目的承接业务，如在污水处理方面完成了福建三农集团和杭州农药厂的农药废水处理项目，承接了河南白云造纸3万吨废水处理工程，其中采用生物技术处理农药废水解决方案居国内领先水平。在燃煤脱硫方面，先后完成了沈阳化肥总厂新型液柱烟气脱硫除尘集成技术工业示范项目和南宁冶炼厂技术改造项目，其中公司重点推出的湿法石灰石—石膏法烟气脱硫技术已成功地在南宁冶炼厂技术改造项目中得到应用，经治理的烟气二氧化硫含量由治理前的11500吨/年减少到治理后的575吨/年，使得南宁市的大气环境得到明显改善，带来巨大的社会效益。这标志着我国拥有的自主知识产权的烟气脱硫技术已趋成熟，同时为我国燃煤锅炉烟气、冶炼废气中二氧化硫的治理提供了可靠而有效的技术，从而打破了我国大中型锅炉烟气脱硫只能依靠国外技术的窘迫局面。   <font face="黑体">(董秘 孙 岷) </font></p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月08日 11:04:38　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9666/2015/20151027223840352101792/20151027223840352101792_.html" target="_blank">清华大学“3S”环保社会实践论坛举办</a></h3>
+              <p>10月24日下午，2015年清华大学“3S”（Support the Sustainability Strategy）环保社会实践论坛举办。中国工程院院士、环境学院教授钱易参加了论坛。论坛邀请实践支队进行成果展示和交流，支队与嘉宾及同学们分享实践过程中的收获与思考，深化暑期实践的认识与成果。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2015/20150304140341680632259/20150304140341680632259_.html" target="_blank">经济学家李稻葵：环保可成为经济增长点</a></h3>
+              <p>　　2015年，中国经济下行的压力大不大？转型的关键点在哪里？昨天，全国政协委员、著名经济学家、清华大学经济学教授李稻葵遭遇了众多记者的“围堵”。李稻葵表示，中国经济发展的关键问题是能不能找到新的增长亮点，基础设施建设和环境治理可以成为两个增长亮点。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2015/20150112155659746870548/20150112155659746870548_.html" target="_blank">清华大学牵手河南发展环保产业</a></h3>
+              <p>　　近日，清华大学与河南宏立源环保集团签订《合作发展河南生物环保产业推动生态文明建设战略合作协议》，以生物环保技术和生物环保装备的交易、投资和引导“官、产、学、研、资、用”为主的对接平台正式建立。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150112092632662300568/20150112092632662300568_.html" target="_blank">卢风做客新人文讲座漫谈环保、消费与幸福</a></h3>
+              <p>1月8日下午，清华大学哲学系教授卢风做客新人文系列讲座，在六教为260余名师生带来了题为“环保、消费与幸福”的讲座。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141030135152180502045/20141030135152180502045_.html" target="_blank">首届大学生环保科普公益宣传活动在清华举行</a></h3>
+              <p>　　10月25日，由资源强制回收产业技术创新战略联盟、清华大学环境学院、北京再生资源和旧货行业协会、再生至尚大学生环保联盟、中国发展网等共同主办的“‘打破坚冰、赢在前端！’——再生资源回收利用渠道建设路径探索暨首届大学生环保科普公益宣传”活动在清华大学举行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9665/2014/20141021103852967108869/20141021103852967108869_.html" target="_blank">清华绿色环保重点主题实践论坛举办</a></h3>
+              <p>10月19日下午，2014年清华大学社会实践年会分论坛绿色环保专场在人文社科图书馆致知会议室举办。环境学院教授、中国工程院院士钱易，绿色大学办公室副主任梁立军，校团委副书记林正航，以及来自绿色环保重点主题支队的学生出席论坛。论坛邀请生态文明建设相关主题的优秀暑期实践支队进行成果展示和交流，并由嘉宾与同学们近距离分享感受和想法，深化暑期实践的认识与成果。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140829095809952547415/20140829095809952547415_.html" target="_blank">中美环境研究联合工作组会在清华大学召开</a></h3>
+              <p>8月26-27日，由科技部和美国环保署联合主办的“中美环境研究联合工作组会”在清华大学环境学院召开。科技部社会发展科技司司长马燕合和美国环保署助理署长卡德里（Lek Kadeli）共同主持开幕式及主题报告。美国环境领域专家团队与科技部代表及中方专家学者共60余人，就水、大气、土壤和固废等环境领域多个问题进行了交流会谈，全面梳理了环境合作框架，共谋合作未来。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140714105210834133212/20140714105210834133212_.html" target="_blank">清华绿色环保重点主题社会实践座谈会举行</a></h3>
+              <p>7月10日下午，2014年清华大学“绿色环保”重点主题社会实践座谈会在校团委会议室举行。环境学院教授、中国工程院院士钱易，校绿色大学办公室副主任梁立军，国观智库环保事业部经理王慧军等参加座谈会，并对重点主题实践支队进行了指导。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140606154806635698089/20140606154806635698089_.html" target="_blank">清华开展绿色大学低碳出行再生自行车发放活动</a></h3>
+              <p>6月5日下午，清华大学“绿色大学 低碳出行”再生自行车发放活动在西区篮球场举行。该活动由学校绿色大学办公室与保卫处以迎接“世界环境日”为契机联合举办，旨在呼吁清华人在校内多骑车、少开车、节约资源、减少污染，共建绿色校园。首批500辆再生自行车免费发放给提出申领的校内单位，作为“校内公车”使用。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9666/2013/20131029110024143892878/20131029110024143892878_.html" target="_blank">清华大学第二届“绿色嘉年华”活动举行</a></h3>
+              <p class="thnews_jqzy">　　彩绿校园 环保先行清华大学第二届 &ldquo;绿色嘉年华&rdquo;活动举行清华新闻网10月29日电（学生记者李亚东 陆欣然 王学雯 潘正道 向小雨）布袋作画DIY、叶子压成明信片、废纸能换再生纸、废旧耳机做手镯&hellip;&hellip;10月26号中午在清华大学紫荆学生综合服务楼前，清华大学第二届&ldquo;彩绿校园&rdquo;绿色嘉年华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9665/2013/20130403093440039705169/20130403093440039705169_.html" target="_blank">回收快递纸箱为环保尽一份力</a></h3>
+              <p class="thnews_jqzy">　　回收快递纸箱为环保尽一份力清华新闻网4月3日3月30日中午，在清华大学绿色协会推行的&ldquo;绿周日记&rdquo;宣传周系列活动的第6天，学生绿色协会开展了快递纸箱回收活动。他们在2号楼和三教教材中心取快递地点设立小站，不仅为前来取快递的人们拆快递，也帮忙同学们处理这些用于保护快递物品的纸箱。图为绿协同学为前来取快递的师生拆箱。图为回收现场。很......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9666/2013/20130401095300077275217/20130401095300077275217_.html" target="_blank">环保购物袋DIY 绿色时尚你来做</a></h3>
+              <p class="thnews_jqzy">　　环保购物袋DIY　绿色时尚你来做清华新闻网4月1日电3月25日，清华大学绿色协会推行的&ldquo;绿周日记&rdquo;宣传周由&ldquo;环保购物袋DIY&rdquo;活动拉开了序幕。图为同学们自己动手绘制购物袋。在本次绿色环保活动中，来自绿协各部门的干部干事及志愿者汇集于紫荆、桃李学校人流最为密集的两大食堂门前，摆开展位，不仅展示出了去年&l......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130329095843654705658/20130329095843654705658_.html" target="_blank">转环保微博送口罩清华学生关注环保公益</a></h3>
+              <p class="thnews_jqzy">　　转环保微博送口罩清华学生关注环保公益清华新闻网3月29日电3月26日，由清华大学研究生会主办，&ldquo;导航犬&rdquo;软件团队赞助的&ldquo;环保清春，任我导航&rdquo;大型公益活动在清华紫荆园、桃李园、观畴园食堂门口举行，活动通过转发环保相关微博，赠送口罩的方式进行，现场吸引了大批学生前来参与。活动结束时，主办方共派发口罩一千余个。图......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130326101731484256336/20130326101731484256336_.html" target="_blank">环保部贾峰做客新人文讲座阐释建设生态文明</a></h3>
+              <p class="thnews_jqzy">　　环境保护部贾峰做客新人文讲座 阐释建设生态文明与实现永续发展&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网3月26日电(学生通讯员罗天苹)3月21日下午，环境保护部宣教中心主任贾峰做客清华大学新人文讲座，在大礼堂为到场的近500名师生带来题为《建设生态文明，实现永续发展》的精彩演讲。图为贾峰发表演讲。&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20121008160000111463601/20121008160000111463601_.html" target="_blank">环保公益性行业科研专项通过验收</a></h3>
+              <p class="thnews_jqzy">　　工业减排潜力在哪里？环保公益性行业科研专项通过验收来源：中国环境报 2012-10-06 樊德龙2008年度环保公益性行业科研专项项目&ldquo;工业（化工）COD减排潜力分析及技术选择研究&rdquo;，日前在京顺利通过环境保护部科技标准司组织的项目验收。验收专家组认为，项目针对煤制甲醇行业减排潜力分析及污染防治最佳可行技术（BAT）选择的问题，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120924163733312876952/20120924163733312876952_.html" target="_blank">“百团大战” 绿色招新</a></h3>
+              <p class="thnews_jqzy">　　清华大学社团摆摊 一协会打出环保牌&ldquo;百团大战&rdquo; 绿色招新来源：法制晚报 2012-09-21 徐天&ldquo;请将不要的传单放进回收箱里！&rdquo;三个来自清华大学绿色协会的男生捧着纸箱子，在紫荆公寓宿舍楼前100多米长的路上来回走着。这是昨天下午清华大学&ldquo;百团大战&rdquo;时的情景。数十家社团在各自三五......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120924092904866299226/20120924092904866299226_.html" target="_blank">清华环境学院承担环保公益项目通过验收</a></h3>
+              <p class="thnews_jqzy">　　清华环境学院承担环保公益项目通过验收清华新闻网9月24日电日前，清华环境学院承担的2008年度环保公益性行业科研专项项目&ldquo;工业（化工）COD减排潜力分析及技术选择研究&rdquo;，顺利通过环境保护部科技标准司组织的项目验收。来自环境保护部科技委、中国科学院生态中心、北京林业大学等院校的9位专家，听取了项目负责人清华环境学院副教授温宗国代......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120904133218180891146/20120904133218180891146_.html" target="_blank">空客与清华合作研发替代燃料</a></h3>
+              <p class="thnews_jqzy">　　空客与清华合作研发替代燃料来源：经济日报 2012-09-04 梁图强空中客车公司日前与清华大学签署协议，双方将合作开展环保型航空替代燃料研究，包括替代燃料原料的选定、产业链的建立以及商业化模式的推广等，旨在促进环保型生物燃料在中国的生产、推广与应用。据悉，双方将在研究第一阶段对符合生态环境、经济利益和可持续发展要求的生物燃料原料展开分析研究。这项研......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2012/20120514142607277849889/20120514142607277849889_.html" target="_blank">清华绿协学生参加2012“海峡两岸青年环...</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;清华绿协学生参加2012&ldquo;海峡两岸青年环保对话&rdquo;活动清华新闻网5月14日电近日，清华大学学生绿色协会&ldquo;海峡两岸青年环保对话&rdquo;团队赴台湾学习交流。台湾垃圾分类回收经验一直为公众所称道，其垃圾分类回收模式也是大陆许多城市的学习蓝本。绿协此次活动涵盖了围绕垃圾分类处理的交流学习，同时就校园环保社团......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120419142528188669276/20120419142528188669276_.html" target="_blank">清华大学和深蓝环保共建生物质燃气技术中心</a></h3>
+              <p class="thnews_jqzy">　　清华大学和深蓝环保共建生物质燃气技术中心来源：中国科学报 2012-04-19 陈欢欢4月18日，清华大学环境学院&mdash;四川深蓝环保科技股份有限公司生物质燃气技术联合研究中心在北京启动。我国废弃物产生量巨大、处理率偏低，成为环境污染的主要负荷。但是，各类废弃物中却含有大量潜在资源，尤其是生物质废物中蕴藏了丰富的生物质能，因此也成为各国关注的热......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120401143114272579262/20120401143114272579262_.html" target="_blank">清华环境学院获评“十一五”全国环保科技先...</a></h3>
+              <p class="thnews_jqzy">　　清华环境学院获评&ldquo;十一五&rdquo;全国环保科技先进集体清华新闻网4月1日电（通讯员苏珍爱）在今天闭幕的第二次全国环保科技大会上，清华大学环境学院被评为&ldquo;十一五&rdquo;全国环保科技先进集体，环境学院郝吉明院士、王凯军教授和温宗国副教授荣获&ldquo;十一五&rdquo;全国环保科技先进个人荣誉称号。这次大会由国家环境......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2011.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20111122132416945274953/20111122132416945274953_.html" target="_blank">清华教授张晓健获评2011中国经济十大领...</a></h3>
+              <p class="thnews_jqzy">　　清华教授张晓健获评2011中国经济十大领军人物清华新闻网11月22日电（通讯员苏珍爱） 由新华社下属九家主流媒体联合主办的经济界&ldquo;2011中国经济十大领军人物、企业、城市&rdquo;评选活动颁奖仪式于11月19日在人民大会堂举行。此次评选活动的主题是&ldquo;绿动&rdquo;，即&mdash;&mdash;绿色行动，树立中国绿色发展的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2011.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20111121111036604911597/20111121111036604911597_.html" target="_blank">【人物】清华“环保女孩”：让奥运火炬传递...</a></h3>
+              <p>周慧是中国大陆首位在社会上公开选拔的伦敦奥运会火炬手。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110530161118461235712/20110530161118461235712_.html" target="_blank">丰田联手清华大学等机构开展大气环保研究</a></h3>
+              <p class="thnews_jqzy">　　丰田联手清华大学等机构开展大气环保研究来源：广州日报 2011-05-30&nbsp; 陈鑫欣日前，丰田汽车公司与丰田中央研究所株式会社联手清华大学、印度能源与资源研究所、奥地利国际应用系统分析研究所，开展东亚、南亚全域对流层臭氧浓度的模拟分析研究。上述举措将有利于东亚及南亚各国家和地区控制能源消耗量、降低导致全球变暖的温室气体和大气污染物排放量的相关研......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110525141240236807916/20110525141240236807916_.html" target="_blank">“环保新技术应用联合研究中心”在清华揭牌</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;环保新技术应用联合研究中心&rdquo;在清华揭牌清华新闻网5月25日电（通讯员王芳）5月24日上午，由清华大学环境学院、中国宜兴环保科技工业园和江苏一环集团有限公司联合成立的&ldquo;环保新技术应用联合研究中心&rdquo;接牌仪式在清华大学中意环境节能楼举行。清华大学校务委员会副主任岑章志和宜兴市环科园管委会主任朱旭峰共同为中心揭牌......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2011.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110314105018792938195/20110314105018792938195_.html" target="_blank">清华与东江环保携手阻击重金属污染</a></h3>
+              <p class="thnews_jqzy">　　城市矿产与重金属污染控制战略高级论坛召开清华与东江环保公司成立联合研究中心&nbsp;【新闻中心讯】3月13日下午，清华大学环境学院主办的城市矿产与重金属污染控制战略高级论坛在在中意环境节能楼隆重召开。国家发展和改革委员会副主任解振华、环境保护部副部长周建，清华大学常务副校长陈吉宁出席会议并致辞。中国科学院过程工程研究所研究员张懿院士作主题报告，清华大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232611015517207/20110225232611015517207_.html" target="_blank">清华在全国大学生志愿者环保科普行动中获表彰</a></h3>
+              <p class="thnews_jqzy">　　清华大学在全国大学生志愿者千乡万村环保科普行动中获多项表彰【新闻中心讯】日前，2010年全国大学生志愿者千乡万村环保科普行动经验交流暨表彰会举行，清华大学获得“优秀组织奖”，法学院赴张家口环境普及法律科普活动支队获得“优秀小分队”称号，该支队队长刘青尚获得“优秀志愿者”称号。大学生志愿者千乡万村环保科普行动是由中国环境科学学会发起、全国部分高校联合组......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232554671950430/20110225232554671950430_.html" target="_blank">七省官员清华学习垃圾处理</a></h3>
+              <p class="thnews_jqzy">　　七省官员清华学习垃圾处理来源：北京青年报 2010-11-14从昨天起，北京等七个省市环保部门负责人来到清华大学，参加清华-威立雅环境与城市管理高级研修项目。他们将学习的重要课程之一，是时下全民关注的垃圾焚烧处理及发电。据清华环境科学与工程系主任余刚教授介绍，中国的环境问题在世界范围内都是最复杂的，发达国家在上百年工业化进程中遇到并逐一解决的问题，中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232534828643784/20110225232534828643784_.html" target="_blank">清华环境友好科技竞赛展现大学生环保创意</a></h3>
+              <p class="thnews_jqzy">　　第五届清华环境友好科技竞赛展现大学生环保创意【新闻中心讯】9月7日晚，由清华大学环境系主办，面向全国高等院校的第五届清华大学环境友好科技竞赛在中意清华环境节能楼报告厅落幕。清华大学自动化系朱望江同学设计的《二次通电断路式节电安全开关》获得实物类一等奖，南京大学郭飞宏同学的作品《新农村建设污水处理新模式探讨》与清华大学环境系孙昊天同学的作品《利用污水资源运......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232534000922868/20110225232534000922868_.html" target="_blank">清华学生获青年博士生杰出环保人才奖学金</a></h3>
+              <p class="thnews_jqzy">　　清华学生获青年博士生杰出环保人才奖学金【新闻中心讯】9月4日上午，上海同济高廷耀环保科技发展基金会2010年“青年博士生杰出环保人才奖学金”在江苏盐城环保产业园举行颁奖仪式，清华大学环境系博士生张潇源（导师为黄霞教授）等来自全国13所重点高校的19名博士生荣获本年度“青年博士生杰出环保人才奖学金”，其中5名博士生被推荐将赴德国进修。高廷耀老师与张潇源合影......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225556718677991/20110225225556718677991_.html" target="_blank">清华学生“超市减袋”特别行动</a></h3>
+              <p class="thnews_jqzy">　　清华学生“超市减袋”特别行动【新闻中心讯】让超市顾客减少使用塑料袋，提倡循环使用环保购物袋——5月22日晚，清华大学学生绿色协会的同学们来到紫荆学生综合服务楼的清风湛影超市，展开了“超市减袋”的活动，共计发放了300余个环保购物袋，环境系93班“校内塑料袋使用情况”调研小组的同学也参与其中。晚上7点半，绿协的同学们就来到现场开始进行布置，将环保袋分发......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232430046792988/20110225232430046792988_.html" target="_blank">低碳——环保之路使“绿色”绽放清华园</a></h3>
+              <p class="thnews_jqzy">　　低碳——环保之路使“绿色”绽放清华园有近百年历史的北京清华大学是中国闻名遐迩的高等学府之一。上世纪90年代，清华大学率先提出建设“绿色大学”的创意。经过十几年的努力，清华大学培养了一批又一批怀揣绿色梦想的人才，四处展现的绿色智慧也让历史悠久的清华园绽放出现代蓬勃的朝气。今天记者就带您走进这个“绿色校园”，了解清华大学所追逐的低碳、环保之路。清华大学地......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232420890731369/20110225232420890731369_.html" target="_blank">国家环保技术与评估技术中心通过可行性论证</a></h3>
+              <p class="thnews_jqzy">　　国家环保技术与评估技术中心通过可行性论证【新闻中心讯】3月17日上午，清华大学环境系申请的“国家环境保护技术管理与评估工程技术中心”（以下简称“中心”）的建设可行性论证会在环境节能楼召开，国家环境保护部科技司主持会议，以中科院生态环境研究中心曲久辉院士为组长的专家组一致通过了中心的建立。专家组认为，中心的建设符合《国家环境保护工程技术中心“十一五”专项规......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2009.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232346609279763/20110225232346609279763_.html" target="_blank">清华联手法国威立雅为地方政府官员进行环保...</a></h3>
+              <p class="thnews_jqzy">　　清华联手法国威立雅为地方政府官员进行环保培训【新闻中心讯】清华大学环境系与法国威立雅环境集团日前联手为全国各省市主管环境和市政的地方政府负责人打造了“清华－威立雅环境与城市管理高级研修项目”（以下简称EUMAP项目），11月7日上午，该项目在清华大学环境节能楼宣布启动。EUMAP项目为期五年，每年将组织来自全国各省市主管环境和市政的地方官员进行为期......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232332390724442/20110225232332390724442_.html" target="_blank">我国将建32个国家环保重点实验室</a></h3>
+              <p class="thnews_jqzy">　　我国将建32个国家环保重点实验室《科技日报》2009-9-28（记者　李禾）“‘十一五’期间，环境保护部将在水、大气等12个领域内，择优建成32个国家环境保护重点实验室。”环保部科技司副司长刘志全在9月25日结束的“2009年国家环境保护重点实验室座谈会”上透露。据悉，截至2008年10月，环境保护部已授牌命名的国家环保重点实验室11个，批准在建9个......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232327031645677/20110225232327031645677_.html" target="_blank">第四届清华大学环境友好科技竞赛落幕</a></h3>
+              <p class="thnews_jqzy">　　第四届清华大学环境友好科技竞赛落幕【新闻中心讯】9月13日下午在中意清华环境节能楼，由清华大学环境系主办的第四届清华大学环境友好科技竞赛落幕。清华环境系学生陈熹和刘寒分别凭借作品《基于微生物燃料电池的水污染事件预警系统》和《高效吸附剂的制备及其在饮用水除氟中的应用》获得实物类和理念类的一等奖。第四届环境友好科技竞赛自2008年11月底启动，至2009......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232326796134917/20110225232326796134917_.html" target="_blank">【人物】钱易：在人间传播绿色</a></h3>
+              <p class="thnews_jqzy">　　在人间传播绿色——记清华大学突出贡献奖获得者钱易●学生记者 王仙茅 吴婷婷钱易　学生记者　司徒哲阳　摄影钱易，环境科学与工程系教授，中国工程院院士，我国著名的环境工程专家和环境教育家，清华大学学术委员会主任。数十年来致力于研究开发适合我国国情的高效、低耗废水处理新技术，为水资源开发与可持续利用贡献了新理论与方法，为中国水污染防治作出了重要贡献。参与并推动......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104116812938881/20110226104116812938881_.html" target="_blank">【人物】钱易：在人间传播绿色</a></h3>
+              <p class="thnews_jqzy">　　在人间传播绿色——记清华大学突出贡献奖获得者钱易●学生记者 王仙茅 吴婷婷钱易　学生记者　司徒哲阳　摄影钱易，环境科学与工程系教授，中国工程院院士，我国著名的环境工程专家和环境教育家，清华大学学术委员会主任。数十年来致力于研究开发适合我国国情的高效、低耗废水处理新技术，为水资源开发与可持续利用贡献了新理论与方法，为中国水污染防治作出了重要贡献。参与并推动......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232325843622799/20110225232325843622799_.html" target="_blank">清华共同主办中国（苏州）国际节能环保产品...</a></h3>
+              <p class="thnews_jqzy">　　清华共同主办中国（苏州）国际节能环保产品与技术展览会【新闻中心讯】9月10日，为期3天的第三届中国（苏州）国际节能环保产品与技术展览会在苏州高新国际会展中心开幕。苏州市副市长周伟强、清华大学常务副校长陈吉宁、国家发展与改革委资环司副司长李静等多位负责同志与专家出席了本次展会并剪彩。中国（苏州）国际节能环保产品与技术展览会每年兴办一届，旨在促进苏州地区......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2009.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232306515824025/20110225232306515824025_.html" target="_blank">清华庆祝曲格平先生八十华诞暨从事环保工作...</a></h3>
+              <p class="thnews_jqzy">　　清华庆祝曲格平先生八十华诞暨从事环保工作四十年【新闻中心讯 摄影 郭海军】6月13日上午，由清华大学环境系和北京东方环境研究院共同主办的曲格平先生八十华诞暨从事环境保护工作四十年庆贺会在清华环境节能楼举行。清华大学校长顾秉林院士代表清华大学致辞，对曲先生的八十华诞以及从事环境保护工作四十年表示热烈祝贺，并对曲老多年来为我国环境保护事业的发展和清华大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2009.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232303062132735/20110225232303062132735_.html" target="_blank">清华大学研究生志愿者水立方前倡环保</a></h3>
+              <p class="thnews_jqzy">　　清华大学研究生志愿者水立方前倡环保【新闻中心讯 学生通讯员 官福海】6月5日是“世界环境日”，当天，清华大学13名研究生环保志愿者前往水立方，进行了主题为“你的地球需要你：团结起来应对气候变化”（Your Planet Needs You-UNite to Combat Climate Change）的环保宣传活动。与小朋友共画环保志愿者们通过招......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2009.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232302125269419/20110225232302125269419_.html" target="_blank">清华学生将环保课堂送到中小学</a></h3>
+              <p class="thnews_jqzy">　　清华学生将环保课堂送到中小学【新闻中心讯 学生通讯员 官福海】为了迎接6月5日世界环境日的到来，6月3日、4日，清华大学9名研究生环保志愿者为昌平区振兴小学和石景山区树仁学校的中小学生们送去了一堂内容丰富、形式多样的环保课。全体志愿者在校门口合影志愿者们克服了路途远、学校教学设备简陋等困难，通过精心准备环保图片、手工绘画、抄写“环保三字经”等教具......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232214343335762/20110225232214343335762_.html" target="_blank">中国绿色跨越倡议国际研讨会在清华大学举办</a></h3>
+              <p class="thnews_jqzy">　　中国绿色跨越倡议国际研讨会在清华大学举办【新闻中心讯】12月8日下午，由清华大学技术创新研究中心、密歇根大学William Davidson研究院和康奈尔大学Johnson管理学院联合主办的“中国绿色跨越倡议国际研讨会”在清华大学经济管理学院举行。40多位来自政府相关部门、高校和研究机构、企业以及NGO组织（不以营利为目的的非政府组织）的代表与会。密......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232214062242777/20110225232214062242777_.html" target="_blank">余刚：大学教育与环境保护</a></h3>
+              <p class="thnews_jqzy">　　余刚：大学教育与环境保护人民网发起并主办的“回顾与展望&#8226;改革开放30年中国环保事业”论坛，今天上午在北京隆重举行。清华大学环境科学与工程系主任余刚教授在论坛上发表演讲。全文如下：女士们、先生们：谢谢人民网邀请我来参加这样一个论坛。高等环境教育是我们国家环境保护的重要力量，30年的时间里，我们国家的高等环境教育发生了很大的变化，我想利用这个......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232207781300365/20110225232207781300365_.html" target="_blank">清华郝吉明院士入围2008绿色中国年度人物</a></h3>
+              <p class="thnews_jqzy">　　清华郝吉明院士入围2008绿色中国年度人物【新闻中心讯 记者 崔凯】12月2日，由中宣部、全国人大环资委、全国政协人资环委、环境保护部等七部委联合主办，中国环境文化促进会承办的“2008绿色中国年度人物”年度评选活动进入候选人公示和投票阶段。清华大学环境系郝吉明院士等24人以及凤凰卫视《江河水》节目组和社会组织救灾信息服务中心成功入围。为保证奥运期间......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232205093869716/20110225232205093869716_.html" target="_blank">走近“第二代生物燃料” 中国是燃料的最佳...</a></h3>
+              <p class="thnews_jqzy">　　编者按：刚刚当选新一届美国总统的巴拉克·奥巴马将发展新能源，“摆脱石油依赖”作为应对经济危机、重振汽车业的重要药方。巧的是，不久前，在中国清华大学举办的一场国际生物燃料会议和奥巴马新能源政策不谋而合：奥巴马提出必须投资的“下一代高级生物燃料”恰好是这届会议的主要话题。有评论指出，美国新一届总统新能源政策的变化将直接反映在全球整个能源资源市场上，有可能......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232202687280747/20110225232202687280747_.html" target="_blank">固废：潜力无穷的循环经济</a></h3>
+              <p class="thnews_jqzy">　　固废：潜力无穷的循环经济正如硬币都有正反两面，所有垃圾不应只看其废弃物污染的一面，更应看到其可利用的一面。我国每年产生数十亿吨建筑垃圾、生活垃圾、电子垃圾，如果将其循环利用，将成为资源金矿。11月5至7日，第三届固体废物管理与技术国际会议在清华大学环境科学与工程系举办，来自23个国家和地区的239位代表参加了此次会议。会议为促进国际社会和亚太地区从事......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232200953189457/20110225232200953189457_.html" target="_blank">清华大学与昆山市签约联手进行环境保护</a></h3>
+              <p class="thnews_jqzy">　　清华大学与昆山市签约联手进行环境保护【新闻中心讯】11月11日上午在昆山，昆山市人民政府秘书长莫全明与清华大学环境系党委书记杜鹏飞分别代表双方在环境保护合作协议上签字。签约仪式后，昆山市副市长韩卫正式宣布国家重大水专项课题“高新城区水环境质量保障技术与综合示范”工作正式启动，由此揭开清华大学与昆山市在环境保护领域全面合作的序幕。签字仪式在签约仪式上，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225600000905292/20110225225600000905292_.html" target="_blank">原国家环保局局长曲格平与清华学子面对面谈...</a></h3>
+              <p class="thnews_jqzy">　　原国家环保局局长曲格平与清华学子面对面谈环保【新闻中心讯 研通社通讯员 吕淼】10月31日下午，原国家环保局局长、全国人大环资委主任委员曲格平先生作客清华环境论坛，在中意清华环境节能楼报告厅向现场师生深入浅出地讲述了改革开放三十年来的中国环境保护历程。曲格平先生结合自身几十年的工作经历，系统论述了我国环境保护的五大变化，深入分析了我国环境问题的八大症......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2008.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232138312681343/20110225232138312681343_.html" target="_blank">清华承担的我国环保公益性行业科研专项启动</a></h3>
+              <p class="thnews_jqzy">　　清华承担的我国环保公益性行业科研专项启动【新闻中心讯】近日，2008年环保公益性行业科研专项“氯碱、煤化工行业技术减排潜力分析研究”项目得到国家财政部和环保部的批复，正式启动。该项目由清华大学作为承担单位，清华环境系教师温宗国博士担任课题技术负责人，石油和化学工业规划院及北京思路创新科技有限公司作为协作单位。该项目围绕我国氯碱和煤化工行业污染物减排和......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2008.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225600562423523/20110225225600562423523_.html" target="_blank">资源再利用 爱心在传递 清华举办毕业二手...</a></h3>
+              <p class="thnews_jqzy">　　资源再利用 爱心在传递清华举办毕业二手市场【新闻中心讯 学生通讯员 黄韵铮】7月2日，清华大学学生紫荆公寓前分外热闹——来自十多个院系的百余名毕业生在这里设摊举办“2008毕业二手市场”，吸引了众多的在校生前来参与交易。此次二手市场由清华大学学生会举办。毕业生们出售的物品以书籍为主，专业课本、文学读物、杂志动漫、工具词典，各类书籍应有尽有，价格一般定......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2008.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232109859846570/20110225232109859846570_.html" target="_blank">清华大学又一环保高新项目落户盐城</a></h3>
+              <p class="thnews_jqzy">　　清华大学又一环保高新项目落户盐城日前记者从国家知识产权局了解到，清华大学高灵敏度生物传感器BOD快速测定仪将落户盐城，该项目相关研究成果先后荣获“国家科学技术进步奖二等奖”，“中国科学院自然科学奖一等奖”，“北京市科学技术奖一等奖”。并获得国家自然科学基金和科技部国际科技合作计划的支持。技术负责人王建龙教授是国家杰出青年科学基金获得者，长期从事水污染控制......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225601406565090/20110225225601406565090_.html" target="_blank">清华研究生参与“五一”环保西山行</a></h3>
+              <p class="thnews_jqzy">　　清华研究生参与“五一”环保西山行【新闻中心讯 研通社通讯员 梁爽 苏文娟】北京2008奥运会的脚步越来越近，为了更好的落实国家提出的限制使用塑料包装袋的政策，宣传绿色奥运的理念，5月1日，来自首都高校的一百四十余名同学参加了“减塑节能，绿色奥运”五一环保西山行活动，清华大学精仪系，电子系等院系也组织了十多名研究生同学参与了此次活动。同学们向路人宣传绿色奥......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232046953715253/20110225232046953715253_.html" target="_blank">清华美院起草的建筑装饰装修环保行业标准通...</a></h3>
+              <p class="thnews_jqzy">　　清华美院起草的建筑装饰装修环保行业标准通过环保部评审【新闻中心讯】4月28日，由清华大学美术学院负责起草的“中华人民共和国环境保护行业标准——《环境标志产品技术要求 绿色建筑装饰装修工程》通过环境保护部的评审。美术学院副院长郑曙旸担任了本标准编制的专家组组长，美院师生经过认真的起草和实际验证环节，共历时两年完成了编制工作。制定《环境标志产品技术要求 ......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2008.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232016312884388/20110225232016312884388_.html" target="_blank">陈国强:剩下那三分之一的环保出路从废除免...</a></h3>
+              <p class="thnews_jqzy">　　剩下那三分之一的环保出路 从废除免费塑料袋谈起陈国强 清华大学生物系教授、博士生导师，长期从事“环境友好材料—生物塑料”的研究。从2003年9月起，受李嘉诚基金会邀请，在汕头大学组建以生物塑料研究和开发为主的“多学科研究中心”。最近，国务院办公厅下发通知要求，从今年6月1日起，所有超市、商场、集贸市场等商品零售场所一律不得免费提供塑料购物袋。这个消息......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2008.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232013015556407/20110225232013015556407_.html" target="_blank">清华奥运示范项目“燃料电池客车动力系统技...</a></h3>
+              <p class="thnews_jqzy">　　清华奥运示范项目"燃料电池客车动力系统技术平台"通过年度节点检查【新闻中心讯】2007年12月25～27日，作为奥运示范项目，清华大学承担的“十一五”国家“863”计划“节能与新能源汽车”重大项目“燃料电池客车动力系统技术平台研究开发”课题通过了中国国际工程咨询公司“节能与新能源汽车”监理部受科技部委托组织的2007年度节点检查。“燃料电池客车动力系......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232007328668061/20110225232007328668061_.html" target="_blank">清华首个公共单车租赁站揭牌投入使用</a></h3>
+              <p class="thnews_jqzy">　　清华率先推广绿色出行方式清华首个公共单车租赁站揭牌投入使用【新闻中心讯 学生记者 刘晓菲】数十辆崭新的自行车在靠近紫荆学生宿舍区的清华东北校门内排开，12月16日下午，作为北京人民广播电台公共单车推广系列活动之一，清华大学首个公共单车租赁站在这里揭牌并投入使用。针对大学生这一特殊群体，租赁站共建单位贝科蓝图公司将100元的年租金优惠为50元，并实施特......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232006609155981/20110225232006609155981_.html" target="_blank">第九届清华大学机械创新设计大赛倡导环保设...</a></h3>
+              <p class="thnews_jqzy">　　第九届清华大学机械创新设计大赛倡导环保设计理念【新闻中心讯】近日，以设计“环保机械”为倡导方向的第九届清华大学机械创新设计大赛决赛在三教举行。来自精仪、机械、汽车、热能等院系的14支通过初赛的队伍汇聚于此，决战绿色机械之巅。第九届机械创新设计大赛早在春季学期就开始策划并启动。为紧跟时代发展的需求，提高作品实用性、创新性与市场性，本次机设大赛的题目进行......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232004765913560/20110225232004765913560_.html" target="_blank">【节能减排进校园】环保节约从我做起，社团...</a></h3>
+              <p class="thnews_jqzy">　　环保节约从我做起，社团协会行动在先长期以来，清华的学生社团协会中一直有多家协会活跃在倡导节约、关注环保的第一线上。目前，全校协会中共有学生绿色协会、学生爱心公益协会、学生新能源发展协会、学生生态协会、学生笃行社、学生三农问题学习研究协会、学生治安服务队、学生科技教育交流等多家社团协会在该领域中活跃着。他们通过发放宣传资料、举办图片展、旧书废纸回收、捐衣捐......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232002703247742/20110225232002703247742_.html" target="_blank">【节能减排进校园】加强节能环保意识教育，...</a></h3>
+              <p class="thnews_jqzy">　　加强节能环保意识教育　清华学子践行节能减排节能减排是深入贯彻落实科学发展观，构建社会主义和谐社会的重大举措。我国各级各类学校在校学生有2.6亿多人，占全国总人口的五分之一。搞好“节能减排学校行动”，不但直接的节约环保效益巨大，而且帮助青少年学生树立节能环保意识，养成珍惜能源、爱护环境的行为习惯，意义重大、影响深远。2007年9月，《教育部关于开展节能减排......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232002843933962/20110225232002843933962_.html" target="_blank">【节能减排进校园】铭记青年职责，深入农村...</a></h3>
+              <p class="thnews_jqzy">　　铭记青年职责，深入农村调研——清华学子参与首次中国南方农村能源调研2006-2007年度学生社会实践工作告一段落，但各项实践成果仍旧发挥着积极的作用。在暑期实践中，180多名清华学生奔赴上海、浙江、江苏、安徽、江西、湖南、湖北、重庆、四川等南方9个省市的62个县级行政区，开展农村建筑、能源与环境调研实践活动（以下简称“调研实践活动”），撰写了专业的调......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232002937927879/20110225232002937927879_.html" target="_blank">【节能减排进校园】清华学子积极投身“千乡...</a></h3>
+              <p class="thnews_jqzy">　　清华学子积极投身“千乡万村环保科普行动”经济的发展是社会进步的重要标志，然而很长一段时间以来，伴随中国社会经济发展的是与之付出的环境污染与破坏的惨重代价，近几年，环保意识开始越来越受到人们的重视，如何开展环保科普宣传，尤其是在中国广大的农村地区开展环保科普宣传活动就被提上了议事日程。2007年，在中国环境科学学会的发起下，以清华大学为首的首都十所高校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232003031412202/20110225232003031412202_.html" target="_blank">【节能减排进校园】专业实践关注民生，节能...</a></h3>
+              <p class="thnews_jqzy">　　专业实践关注民生，节能减排深入调研清华大学积极利用学生社会实践这一载体，围绕着“节能减排”这一主题，组织了一些列的实践队伍，除了中国农村能源、建筑和环境专项调研以及千乡万村环保科普行动这类集中活动之外，各院系发挥专业特长，使得实践队伍的精品成果在很长一段时期内都发挥着积极的作用，针对能源环境问题和各类相关的社会问题，把实践成果的教育转化、科技转化作为......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225602984201398/20110225225602984201398_.html" target="_blank">垃圾分类宣传活动吸引众多清华学子参与</a></h3>
+              <p class="thnews_jqzy">　　垃圾分类宣传活动吸引众多清华学子参与【新闻中心讯 学生通讯员 黄菁菁】11月29日和30日在紫荆学生公寓区，一场别开生面的垃圾分类知识宣传活动吸引了不少清华学子参加。工作人员向同学讲解2007年10月，北京市市政管理委员会等九个部门联合发出通知，北京市将全面推广垃圾分类，各级党政机关及窗口单位将在奥运会前全部实现垃圾分类收集、运输和处理。作为响应，近......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231951562724573/20110225231951562724573_.html" target="_blank">清华校园超市开通“绿色通道”日均减少2千...</a></h3>
+              <p class="thnews_jqzy">　　清华校园超市开通“绿色通道”日均减少2千塑料袋【新闻中心讯 学通社记者 李扬帆】为保护环境，共建节约型校园，从2007年8月起，清华校内学生区紫荆地下超市开通“绿色通道”收银台，同学们通过“绿色通道”结帐时超市不提供塑料袋。“绿色通道”开通几个月来，超市平均每天减少使用塑料袋约2千个。超市“绿色通道”由校勤工助学大队超市分队和物业管理中心商贸部共同策......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2007.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231914671650843/20110225231914671650843_.html" target="_blank">周立：“治污”为何常常赶不上“排污”？</a></h3>
+              <p class="thnews_jqzy">　　“治污”为何常常赶不上“排污”？周 立●环保需要提供公共产品服务 ●产品缺失凸显补偿机制缺位●改变投资方式发展集中治污●有效配置资源增加环保产品太湖蓝藻暴发，周边城市百姓饮用水发生困难，全社会为之震惊，政府也采取了积极有效的措施，化解了饮水危机，并将太湖环保问题的解决再次提到更紧迫的地位。翻看媒体报道，思考诸如湖边化工厂排污的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231819312448652/20110225231819312448652_.html" target="_blank">2006年中华环保民间组织可持续发展年会...</a></h3>
+              <p class="thnews_jqzy">　　2006年中华环保民间组织可持续发展年会在清华举办【新闻中心讯 研通社通讯员 王莉莉】10月28日，“2006年中华环保民间组织可持续发展年会”在清华大学主楼后厅开幕，年会主题为“环保民间组织的作用与发展”。清华大学校长、中华环保联合会副主席顾秉林院士主持了研讨会。 国家环境保护总局副局长祝光耀做了题为“发挥环保民间组织作用，推动环保历史性转变”的演......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231749875297393/20110225231749875297393_.html" target="_blank">清华环境影响评价室获国家环保总局表彰</a></h3>
+              <p class="thnews_jqzy">　　清华大学环境影响评价室获国家环保总局表彰　【新闻中心讯】日前，在国家环保总局召开的“全国环境影响评价管理工作会议”上，清华大学环境影响评价室 被授予“全国建设项目环境影响评价优秀甲级单位”称号。会议表彰了包括清华大学环境影响评价室在内的全国10家荣获“优秀甲级建设项目环境影响评价单位”称号的评价机构。清华大学环境影响评价室作为获奖单位的唯一高校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231749796511434/20110225231749796511434_.html" target="_blank">“AEON教育与环保基金”与公管学院续签...</a></h3>
+              <p class="thnews_jqzy">　　“AEON教育与环保基金”与公管学院续签捐赠协议【新闻中心讯】6月10日下午，“AEON教育与环保基金”与公共管理学院/21世纪发展研究院续签捐赠协议仪式暨“清华－AEON教育及环保基金奖学金”颁奖典礼在公共管理学院举行。AEON教育及环保基金主席林文钿先生，香港各界妇女联合协进会主席、AEON教育及环保基金顾问林贝聿嘉太平绅士等嘉宾，原21世纪发展......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225609140593649/20110225225609140593649_.html" target="_blank">环保材料现场服饰比赛展现环境与美</a></h3>
+              <p class="thnews_jqzy">　　环保材料现场服饰比赛展现环境与美【新闻中心讯】一角废报纸、一块旧桌布、一张过期的海报，在同学们灵巧的手中都会变成漂亮的衣服和首饰——5月13日下午，在清华大学紫荆学生公寓一号楼前，清华学子们用环保材料现场制作美丽的服饰展现“环保与美”。全部作品展示专注　作为校学生会主办的校园服饰文化节的一个重要组成部分，共有9组同学参加了环保材料现场服饰比赛，所有选......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2005.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231707015292310/20110225231707015292310_.html" target="_blank">博士生实践服务团开展太原环保行活动</a></h3>
+              <p class="thnews_jqzy">　　博士生实践服务团开展“太原环保行”活动【新闻中心讯】12月7日至9日，我校博士生实践服务团赴山西太原市，对太原市环保局及其相关企业进行参观访问，并开展了社会实践和服务活动。此次活动由校研团委相关负责老师带队，以环境系的博士生实践服务团团员为主进行组队。在为期3天的实践服务活动中，同学们针对当地环保工作的需求做了两场科技专题报告，并先后参观了太原市钢铁......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2005.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231649843465298/20110225231649843465298_.html" target="_blank">清华展示氢能环保大巴 造价近千万</a></h3>
+              <p class="thnews_jqzy">　　清华展示氢能环保大巴 造价近千万京华时报  2005-10-07  夏命群&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本报讯（记者夏命群）昨天，一辆由清华新能源汽车工程中心研制的国产氢能大巴开进了中国科技馆，向观众展示了其作为环保客车所具有的能源优势。&nbsp;&nbsp;&nbsp;&nbsp;这辆氢能......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2005.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231624953747517/20110225231624953747517_.html" target="_blank">我国首座超低能耗示范楼日前在清华落成</a></h3>
+              <p class="thnews_jqzy">　　我国首座超低能耗示范楼日前在清华落成新华社  2005-6-15  姚润丰&nbsp;&nbsp;&nbsp;新华社北京６月１５日专电（记者姚润丰） 在能源日趋紧张的背景下，空调生产厂家将注意力转移到节能技术上来，引导市场从价格竞争向技术竞争转变。近日面世的溶液式热回收技术，对废热的回收效率最高可超过８０％，在中央空调领域技术领先国际。&nbsp;&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231534859224475/20110225231534859224475_.html" target="_blank">意大利总统访问清华“坐”环保大公共</a></h3>
+              <p class="thnews_jqzy">　　意大利总统访问清华“坐”北京环保大公共北京青年报  2004-12-8  周春林 周襄楠&nbsp;&nbsp;&nbsp;12月7日下午，意大利总统卡洛·阿泽利奥·钱皮访问了清华，并在主楼做了题为《意大利、欧盟和中国：共同面向和平的未来》的演讲。&nbsp;&nbsp;&nbsp;清华大学校长顾秉林院士迎接了钱皮总统夫妇一行，并陪同他在主楼前观看了北京市的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2004.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231445015209353/20110225231445015209353_.html" target="_blank">我国建筑物能耗过高 生态环保型建筑彰显节...</a></h3>
+              <p class="thnews_jqzy">　　我国建筑物能耗过高 生态环保型建筑彰显节能新径新华网  2004-6-9&nbsp;&nbsp;&nbsp;新华网北京６月８日电（记者　邹声文）我国和意大利在环境领域的重要合作项目——清华大学环境节能楼８日在清华校园奠基。作为智能化、生态环保型和能源高效率的新型办公楼，清华大学环境节能楼将成为我国下一代节能建筑的典范。&nbsp;&nbsp;&nbsp;采暖......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231354140368755/20110225231354140368755_.html" target="_blank">同方领跑医疗垃圾处理市场</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document同方领跑医疗垃圾处理市场《中国高新技术产业导报》 2003年06月04日非典的突然来袭，打了台商徐先生一个措手不及。已近50岁的他，眼看着年初达成意向的医疗垃圾焚烧炉项目渐渐失去希望，心里异常憋闷。因为同样处于重灾区台湾要将各种大型机器设备、组装人员运送到大陆，已经越来越不现实。然而生性倔强的性格，使这位“硬汉”仍旧四处......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231353421140635/20110225231353421140635_.html" target="_blank">专家认为清华全密闭处理装置可彻底杀菌</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document非典污水处理该走什么技术路线专家认为清华全密闭处理装置可彻底杀菌科技日报 2003年6月2日 实习生 范少淳当前，众多医院正在全面开展非典防治，但是大部分医院污水处理设施在实际运用中还存在相当大的问题。由于没有考虑公共防疫，很多局限性便在眼下处理非典污水中集中地显现出来。如何打破这些局限？清华大学环境科学与工程系5月20......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231351718662767/20110225231351718662767_.html" target="_blank">医疗垃圾无害化焚烧“问题”水井臭氧消毒</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document医疗垃圾无害化焚烧“问题”水井臭氧消毒北京日报 2003-5-27一种新型的医疗垃圾无害化焚烧处理设备和医疗污水处理设备即将在北京安装使用。清华大学与清华同方合力攻关推出的这套设备，将更好地对非典医疗垃圾实现彻底焚烧。另外， 清华同方还开发研制了“医院污水专用消毒装置”，该设备结合二氧化氯。消毒器和次氯酸钠消毒器的技......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231349609168155/20110225231349609168155_.html" target="_blank">特别环保清除疫病温床</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document特别环保清除疫病温床科技日报 2003年5月20日本报实习记者 范少淳公共环境的卫生清洁怎样达到“非典”时期的特殊要求？医院的“非典”医疗废水流向哪里，大面积使用消毒剂会不会对地下水环境产生影响？“非典”医疗垃圾是通过什么途径处理的，会不会造成二次污染？北京、上海、杭州等地对随地吐痰、大小便，乱扔果皮、纸屑、烟蒂等废......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231330078866813/20110225231330078866813_.html" target="_blank">新型空气能环保空调研制成功</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document新型空气能环保空调研制成功解放军报 2003年03月05日空气中存在着取之不尽的能量。多少年来，世界上许多科技人员梦想着能直接用空气作能量制造空调，如今这一愿望已得到实现，清华大学等科研单位奋力攻关，取得了具有国际先进水平的可喜成果，日前这一拥有自主知识产权的新产品已作为示范工程通过技术检测和验收，并引起国内外同行关注。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2002.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348843751005/20110225225348843751005_.html" target="_blank">清华人：在世界高科技舞台竞技</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华人：在世界高科技舞台竞技清华大学“同方威视”集装箱检查设备走向世界纪实●新闻中心记者 刘冬梅曾在中国取得巨大成功的清华大学“同方威视”大型集装箱检查系统经过几年的努力，在世界五大洲都圈下了自己的“领地”，最近又因澳大利亚总理霍华德亲自出席该系统在墨尔本正式启用仪式而在海外媒体“频频露脸”，让世界看到了中国高科技发展的实力并赢得了属于发达国家......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2002.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231306203919049/20110225231306203919049_.html" target="_blank">“中国环保基金2002”成立</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“中国环保基金2002”成立风险资本开始规模进入环保产业(市场报 2002年08月12日)本报讯　由国际知名财团出资，清华创业投资管理有限公司（简称清华创投）作为基金管理人管理的“中国环保基金2002”（Chi-na Environment   Fund 2002）于日前在英属开曼群岛注册成立。这是国内第一支采用国际风险......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2002.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231300843362088/20110225231300843362088_.html" target="_blank">“WTO与环保产业发展研讨会”举行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“2002清华环境与发展论坛”又一讲“WTO与环保产业发展研讨会”举行&quot;WTO与环保产业发展研讨会&quot;于6月2日在我校举行。常务副校长何建坤到会并发表了讲话。本次研讨会由北京清华永新双益环保有限公司承办，作为&quot;2002清华环境与发展论坛&quot;的重要部分，受到来自政府与企业界的热切关注。会上，来自政府机构的领......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354000428118/20110225225354000428118_.html" target="_blank">“同方威视”签约澳大利亚 高科技产品冲出...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“同方威视”签约澳大利亚 高科技产品冲出国门(新华网 2001.05.30 19:25:14)新华网北京５月３０日电（记者曲志红、朱治德）清华同方核技术股份有限公司向澳大利亚海关出口“同方威视”集装箱检查系统的签约仪式今天在京举行。此举首开我国核技术应用领域成套高科技产品出口到发达国家的纪录。“同方威视”集装箱检查系......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231219109659923/20110225231219109659923_.html" target="_blank">清华老校友骑环保摩托返校</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document花了四天，行程1200公里；武汉到北京，千里走单骑清华老校友骑环保摩托返校（北京青年报 2001年4月28日）本报记者牛金荣报道　明天才是清华校庆的日子，而这两天，清华校园内到处 可见不同届别的学子。记者昨天在清华二校门外发现了一位六旬老人，骑着一辆摩   托车神采奕奕地在和同学们一起合影留念。这位63岁的殷志华老人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231210625479256/20110225231210625479256_.html" target="_blank">清华同方架起广电信息网络“烽火台”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方架起广电信息网络“烽火台”（2001年03月26日 新浪科技）在日前开幕的中国国际广播电视信息网络展览会中，以清华同方超强系列机架式服务器为硬件平台的同方“烽火台”项目作为清华同方高技术的代表参加在北京中国国际展览中心举行的展示，此举再次体现了清华同方在服务器产品领域雄厚的技术和研发实力。据悉，同方“烽火台”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231210500332937/20110225231210500332937_.html" target="_blank">简讯：清华同方光盘刻录机跌破千元</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document简讯：清华同方光盘刻录机跌破千元（2001.03.23 人民日报 第六版）本报讯 清华同方光盘公司近日开展“科技服务社会，光盘进入家庭”大型活动，其旗下的CDD8432N刻录机以九百九十九元的价位一举突破个人用户的购买心理价位。据了解，CD－RW可擦写刻录机以其良好的兼容性已逐渐取代CD－ROM成为计算机的标准配置，市场......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231210421641560/20110225231210421641560_.html" target="_blank">清华同方启动“现代教育资源全国共享行动计...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方启动“现代教育资源全国共享行动计划”（2001年03月23日 网易新闻）清华同方教育技术研究院率先与全国千名名师共同发起"2001高考名师资源全国共享行动"3月22日，清华同方教育技术研究院、清华同方光盘股份有限公司和中国学术期刊（光盘版）电子杂志社在北京友谊宾馆举行了"现代教育资源全国共享行动计划"启动仪式......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231210250152774/20110225231210250152774_.html" target="_blank">蚯蚓当上京城“环保员”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document蚯蚓当上京城“环保员”（京报网 2001年3月21日）京报网讯　包括北京在内的世界各大城市里，每天产生的大量城市垃圾已成为全社会挠头的事情。今天上午记者获知，如今清华大学环境系和北京朝阳花园养殖场的研究人员想出了个好点子：让蚯蚓当上“环保员”，这个方法正在北京大力推广。目前，北京已建蚯蚓场10余处，总面积达500余亩，现......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231209234969228/20110225231209234969228_.html" target="_blank">清华同方刻录机千元上市</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方刻录机千元上市（中国教育报 2001年3月18日）本报讯　清华同方光盘公司从3月12号起展开“科技服务社会，光盘进入家庭”大型活动，其旗下的CDD8432N刻录机以999元的价位一举突破个人用户的购买心理价位。这款“智能学习型刻录机”支持8倍速刻录，4倍速擦写，32倍速读取，并具有很强的兼容性。(董晓)</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231209078855120/20110225231209078855120_.html" target="_blank">大学生"网上供需洽谈会"将举行</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document大学生"网上供需洽谈会"将举行(2001.03.16 新华网)新华网北京３月１６日电（记者李斌）不管是毕业生还是用人单位，足不出户通过一台电脑，就可以参加“供需见面、双向选择”洽谈会。由教育部学生司主办，清华   同方股份有限公司承办并开发的全国高校毕业生就业网（ www.gradnet.edu.cn）将于３月１８日举行......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231209015837854/20110225231209015837854_.html" target="_blank">全国高校毕业生就业网上供需洽谈会将在同方...</a></h3>
+              <p class="thnews_jqzy">　　网上就业——高校毕业生就业的新途径足不出户就能找到好工作全国高校毕业生就业网上供需洽谈会将在同方举行【新闻中心3月15日讯】不管是毕业生还是用人单位，足不出户通过一台电脑，就可以参加“供需见面、双向选择”洽谈会。由教育部高校学生司主办、清华同方股份有限公司承办并开发的中国大学生网的子网全国高校毕业生就业网（http://www.gradnet.edu.c......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231208734416073/20110225231208734416073_.html" target="_blank">高考名师资源共享</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document高考名师资源共享（北京青年报 2001年3月12日）近日，记者在清华同方了解到，清华同方光盘股份有限公司、清华同方教育技 术研究院、中国学术期刊（光盘版）电子杂志社、清华同方网络教育事业部、清华   同方电子商务事业部等拥有教育科研和教育教学资源、知识信息资源、网络教育平 台、网络安全与电子商务技术等各方面优势的产业进行......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231208718944949/20110225231208718944949_.html" target="_blank">2001年高考名师资源全国共享行动开始实施</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document2001年高考名师资源全国共享行动开始实施(2001.03.11 新华网)新华网北京３月１１日电 为适应有关部门对２００１年高考能力与素质考核目标的调整，帮助考生应对新的变化，清华同方教育技术研究院和清华同方光盘股份有限公司近日宣布开始实施“２００１年高考名师资源全国共享行动”。这一行动的主要内容是，组织北京、上海等......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231208687586854/20110225231208687586854_.html" target="_blank">清华同方推出2001年高考资源全国共享行动</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方推出2001年高考资源全国共享行动（2001/03/11 中新社网站）中新网北京三月十日消息：清华同方教育技术研究院和清华同方光盘股份有限公司近日正式推出“二00一年高考名师资源共享活动”。据悉，教育部已对今年高考的能力与素质考核目标进行了重大调整，以有助于高校选拨人才、促进素质教育和高校办学自主权的扩大。清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231208421705993/20110225231208421705993_.html" target="_blank">清华同方探索108亮相863成果展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华同方探索108亮相863成果展（2001/03/06 新浪科技）在2月26日至3月6日举办的国家863计划十五周年科技成果展中，清华同方探索108集群计算机作为北京市863计划高性能计算机技术的代表参加了在北京展览馆举行的展示，再次体现了清华同方在高端计算机产业领域雄厚的技术及生产实力。15年前，为了迎接全球新技......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

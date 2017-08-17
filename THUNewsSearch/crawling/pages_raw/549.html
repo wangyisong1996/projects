@@ -1,0 +1,573 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>邓文中博士受聘我校名誉教授</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231219562832988&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">邓文中博士受聘我校名誉教授</h3><p> 4月27日上午，邓文中博士成为我校名誉教授受聘仪式在甲所举行。</p><p> 邓文中先生1938年2月21日出生于广东肇庆，1959年获香港珠海学院学士，1965年获德国达姆斯塔德工业大学（Technishe Hochschule   Darmstardt）工学博士和国家工程师，现任美国林同棪国际公司（T. Y. Lin International）及美国达士工程顾问有限公司（DRC   Consulyants, Inc.）董事长兼总工程师，美国哥伦比亚大学兼任教授，1995年入选美国国家工程院院士，并获美国土木工程师学会（ASCE）'荣誉会员'，1995年获美国总统奖、美国土木工程师学会Roebling奖（美国土木工程界最高奖项），1995年获美国哥伦比亚大学'兼任教授奖'，1995年获香港珠海大学'杰出校友奖'，2000年经潘家铮和十余位院士推荐全票入选中国工程院院士，所获各种奖，包括工程奖、设计奖、荣誉奖，难以计数，1999年国际建筑工程界最具权威的Engineering   News Recording杂志选出近125年（1874-1999）中对建筑工程界最有贡献的125位人物中，4位华裔入选（贝聿铭、林同棪、邓文中、林作砥），邓文中是其中最年轻的一个（其他三人已过80岁），1979年该杂志还选他为'Man   who made marks in the construction industry'。</p><p> 邓文中在世界五大洲设计的桥已超过100座，全世界十分之一、北美洲五分之一的斜拉桥是他设计的，著名的Road and Bridges杂志称邓文中的桥为'日不落桥'（The   sun never sets on a Man-Chung Tang bridge），其中多项工程创造过世界桥梁之最，去年他中标美国最大的两个桥梁工程--金门桥加固和东旧金山湾大桥工程。</p><p> 邓文中非常关心祖国的发展，大纽约地区的香港回归庆祝会上他和杨振宁共同担任荣誉主席，他是中国旅美科技协会的荣誉顾问、华人运输协会副主席。他认为中国现在建设事业的大发展，必须吸取别国的经验、避免重犯别人的错误。为此，他在中国大力介绍别国的先进的桥梁规划、设计及建造方法。应铁道部、交通部邀请，他先后参加了南浦桥、杨浦桥、虎门桥、武汉长江二桥、铜陵长江大桥、南京长江二桥、厦门海仓大桥、广州鹤洞大桥、武汉长江三桥、芜湖长江大桥、零汀洋大桥、海口世纪大桥等多座大跨桥的决策、咨询、设计、审核工作，并参加过宁波招宝山大桥等桥梁工程事故处理的咨询工作。交通部总工程师凤懋润称他为对中国大跨桥建设贡献最大的外籍专家。他与铁道部、交通部和武汉市关系密切，每年都多次访华。他对清华大学有着深厚的感情，这次是第五次来我校访问并讲学（也是第三次谐夫人冯仪人女士访问我校），他与土木系的合作研究项目'大跨度桥的抗震设计和桥梁损伤识别'已于1998年列入'国家建设部与美国国家科学基金会地震合作议定书'。铁道部、交通部、武汉市以及人民日报社熟悉他的人一致认为邓文中是个谦虚、谨慎、不求名利而又实干的人。凡是请他做顾问的单位都认为他是真正尽职尽责的。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月28日 10:19:14　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151106170921349217193/20151106170921349217193_.html" target="_blank">诺奖得主巴里·夏普莱斯受聘清华大学名誉教授</a></h3>
+              <p>11月4日下午，2001年诺贝尔化学奖得主巴里`夏普莱斯（Karl Barry Sharpless）受聘为清华大学名誉教授仪式暨主题演讲会举行。化学系主任、教育部“长江学者”特聘教授王训为夏普莱斯颁发了“清华大学名誉教授”聘书及海外名师讲堂纪念牌。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20141208160233248135332/20141208160233248135332_.html" target="_blank">祖马清华演讲：欢迎中国企业投资 助南非经...</a></h3>
+              <p>　　南非共和国总统祖马5日在清华大学受聘担任名誉教授并发表主题演讲。他表示欢迎中国企业前往南非投资，帮助南非经济转型。这也是祖马今年5月连任南非总统以来对中国进行的首次国事访问。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141114103934247745954/20141114103934247745954_.html" target="_blank">诺奖得主天野浩受聘清华大学名誉教授</a></h3>
+              <p>11月6日晚，诺贝尔物理学奖获得者天野浩教授受聘为清华大学名誉教授仪式暨主题演讲会在主楼接待厅举行。副校长薛其坤出席仪式并为天野浩颁发聘书。天野浩于1989年在日本名古屋大学取得工学博士学位，先后执教于名城大学和名古屋大学，是著名的电子工程学专家。因发明高亮度蓝色发光二极管，他与赤崎勇和中村修二共同获得了2014年诺贝尔物理学奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120409132448160753953/20120409132448160753953_.html" target="_blank">钱煦院士受聘清华大学名誉教授</a></h3>
+              <p class="thnews_jqzy">　　钱煦院士受聘清华大学名誉教授同期举行生物力学与医学工程研讨会清华新闻网4月9日电3月30日上午，钱煦院士的名誉教授聘任仪式暨生物力学与医学工程研讨会在清华技术科学楼举行。杰出华裔科学家、美国科学院院士、中国科学院外籍院士钱煦教授受聘清华大学名誉教授，并作了题为《动力方向对血管內皮细胞功能的调控》学术报告。清华大学副校长邱勇参加会议并为钱煦院士颁发清华大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225232515296816296/20110225232515296816296_.html" target="_blank">诺贝尔经济学奖获得者威廉姆森受聘清华名誉...</a></h3>
+              <p class="thnews_jqzy">　　诺贝尔经济学奖获得者奥利弗·威廉姆森受聘清华名誉教授【新闻中心讯】6月29日上午，诺贝尔经济学奖获得者奥利弗·伊顿·威廉姆森（Oliver Eaton Williamson）清华大学名誉教授授予仪式在经管学院伟伦国际报告厅举行。副校长袁驷为威廉姆森颁发聘书并致贺词。经管学院院长钱颖一主持仪式。仪式前，袁驷还与威廉姆森进行了会谈。副校长袁驷为威廉姆森颁发聘......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225232512281721070/20110225232512281721070_.html" target="_blank">诺奖得主威廉姆森受聘清华</a></h3>
+              <p class="thnews_jqzy">　　诺奖得主威廉姆森受聘清华大学名誉教授来源：腾讯网 2010-06-296月29日2009年诺贝尔经济学奖获得者奥立弗&#8226;威廉姆森在清华大学发表演讲，并受聘清华大学名誉教授。腾讯财经现场直播此次活动。清华大学副校长袁驷表示，“奥立弗&#8226;威廉姆森教授的加盟不仅有助于促进我校经济学相关学科的发展，同时也将会在清华大学发展的过程中提供重要......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225232453203999557/20110225232453203999557_.html" target="_blank">清华大学授予池田大作名誉教授称号</a></h3>
+              <p class="thnews_jqzy">　　清华大学授予池田大作名誉教授称号【新闻中心讯 通讯员 刘清伶】5月13日下午，清华大学校长顾秉林正式授予日本创价学会名誉会长、国际创价学会会长池田大作先生为清华大学名誉教授并颁发聘书。在创价学会国际友好会馆举行的授予仪式友好而庄严&mdash;&mdash;主席台上悬挂中日两国国旗和&ldquo;清华大学名誉教授授予仪式&rdquo;的横幅，一千多人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232158781715396/20110225232158781715396_.html" target="_blank">诺奖得主戴维·格罗斯受聘清华名誉教授</a></h3>
+              <p class="thnews_jqzy">　　诺奖得主戴维·格罗斯受聘清华名誉教授【新闻中心讯 记者 李含 摄影 郭海军】11月12日，来参加2008诺贝尔奖获得者北京论坛的美国著名科学家、2004年诺贝尔物理学奖获得者戴维·格罗斯教授访问清华大学，受聘为清华大学名誉教授，并为清华师生带来一场题为“基础物理学即将到来的革命”的精彩学术演讲。此次演讲也是清华大学海外名师讲堂第28讲。清华大学校务委......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232154218154425/20110225232154218154425_.html" target="_blank">DNA之父詹姆斯·沃森受聘清华名誉教授做...</a></h3>
+              <p class="thnews_jqzy">　　学涯六十载 求知重重路DNA之父詹姆斯·沃森受聘清华名誉教授做客清华论坛【新闻中心讯 记者 李含 摄影 郭海军】10月27日，ＤＮＡ双螺旋结构提出者之一、1962年诺贝尔生理学或医学奖得主、美国冷泉港实验室名誉主席、著名科学家詹姆斯·沃森（James D.Watson）访问清华，受聘为清华大学名誉教授，并做客清华论坛，发表了题为“学涯六十载，求知重重路”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225335828320325/20110225225335828320325_.html" target="_blank">DNA之父詹姆斯·沃森受聘清华名誉教授做...</a></h3>
+              <p class="thnews_jqzy">　　学涯六十载 求知重重路DNA之父詹姆斯·沃森受聘清华名誉教授做客清华论坛【新闻中心讯 记者 李含 摄影 郭海军】10月27日，ＤＮＡ双螺旋结构提出者之一、1962年诺贝尔生理学或医学奖得主、美国冷泉港实验室名誉主席、著名科学家詹姆斯·沃森（James D.Watson）访问清华，受聘为清华大学名誉教授，并做客清华论坛，发表了题为“学涯六十载，求知重重路”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2008.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232105468758588/20110225232105468758588_.html" target="_blank">碰撞生物力学著名专家金?V平（Alber...</a></h3>
+              <p class="thnews_jqzy">　　碰撞生物力学著名专家金廣平（Albert King）院士受聘清华名誉教授【新闻中心讯 记者 李含 摄影 郭海军】6月6日，美国韦恩州立大学杰出教授、碰撞生物力学世界著名专家金廣平（Albert King）院士受聘为清华大学名誉教授。清华大学副校长汪劲松出席授予仪式并为金教授颁发了聘书。金教授现为美国韦恩州立大学杰出教授，美国工程院院士。从事人体碰撞损......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232029218886272/20110225232029218886272_.html" target="_blank">诺奖得主斯蒂格利茨受聘清华大学名誉教授</a></h3>
+              <p class="thnews_jqzy">　　斯蒂格利茨受聘清华大学名誉教授诺贝尔经济学奖得主清华演讲【新闻中心讯 记者 李含 摄影 郭海军】3月21日，世界著名经济学家、2001年诺贝尔经济学奖得主约瑟夫·斯蒂格利茨（Joseph E. Stiglitz）受聘为清华大学名誉教授，并做客清华大学海外名师讲堂，带来一场题为“美国金融危机：中国可以得到的借鉴”的精彩演讲。聘请斯蒂格利茨名誉教授清华大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232003937303030/20110225232003937303030_.html" target="_blank">张信刚：文化素质教育培养创新人才</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;文化素质教育培养创新人才----访香港城市大学前校长张信刚教授新闻中心记者 李含2007年秋，原香港城市大学校长张信刚教授来到清华大学，为本科一年级新生开设了一门文化素质核心课程：“游走于文明之间”。为此，新闻中心记者就大学文化素质培养、西方大学素质教育传统、办学理念等相关问题对张信刚教授进行了专访。记者：清华大学的文化素质教育，经历了一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232003859566054/20110225232003859566054_.html" target="_blank">原香港城市大学校长张信刚受聘清华大学名誉...</a></h3>
+              <p class="thnews_jqzy">　　原香港城市大学校长张信刚受聘清华大学名誉教授【新闻中心讯 记者李含 通讯员 曹莉 摄影 郭海军】 12月7日下午，原香港城市大学校长张信刚清华大学名誉教授受聘仪式暨学术报告会在清华大学主楼接待厅举行。校长顾秉林院士为张信刚教授颁发清华大学名誉教授聘书并致贺辞。校文科工作委员会副主任、原校国家大学生文化素质基地主任胡显章教授主持了受聘仪式。受聘仪式后张信刚......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232003906122130/20110225232003906122130_.html" target="_blank">“文化校长”张信刚清华开课引领学生“游走...</a></h3>
+              <p class="thnews_jqzy">　　“文化校长”张信刚清华开课引领学生“游走文明之间”【新闻中心讯 记者 李含】2007年秋，清华园里多了一位儒雅教授的身影，他就是在教育界颇有声望的原香港城市大学校长张信刚教授。不同于以往的校际访问，张信刚教授此次以一名学者的身份，执教清华，为大一新生开设一门文化素质教育核心课程：《游走于文明之间》（Voyages through Civilization......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225232000703282645/20110225232000703282645_.html" target="_blank">诺奖得主Craig Mello博士受聘清...</a></h3>
+              <p class="thnews_jqzy">　　美国马萨诸塞州州长一行访问清华诺奖得主Craig Mello博士受聘清华名誉教授并演讲【新闻中心讯 记者 李含 摄影 郭海军】12月3日，马萨诸塞州州长Deval Patrick先生、马萨诸塞州立大学校长Jack M. Wilson博士，以及马萨诸塞州立大学教授、2006年诺贝尔医学奖得主Craig C. Mello博士一行访问清华大学。Mello博士在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231948703882324/20110225231948703882324_.html" target="_blank">2007年诺贝尔经济学奖获得者埃里克·马...</a></h3>
+              <p class="thnews_jqzy">　　2007年诺贝尔经济学奖获得者埃里克·马斯金受聘清华大学名誉教授【新闻中心讯 记者 李含 摄影 郭海军】11月8日，普林斯顿高等研究院讲席教授、2007年诺贝尔经济学奖获得者埃里克&#8226;马斯金教授受聘为清华大学名誉教授，并在清华主楼接待厅发表了题为“我们为何拖延”的精彩学术演讲。清华大学党委常务副书记、副校长胡和平在演讲前会见了马斯金教授，并......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2007.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231926031418145/20110225231926031418145_.html" target="_blank">哈佛大学教授John W. Hutchi...</a></h3>
+              <p class="thnews_jqzy">　　哈佛大学教授John W. Hutchinson受聘清华名誉教授【新闻中心讯 记者 李含 摄影 崔凯】8月24日，美国科学院院士、美国工程院院士、美国艺术与科学研究院院士、哈佛大学教授John W. Hutchinson受聘为清华大学名誉教授。副校长谢维和参加了当天上午在清华大学逸夫科技楼举行的名誉教授授予仪式,并为Hutchinson教授颁发了证书......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2007.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231838921785960/20110225231838921785960_.html" target="_blank">“互联网之父”盛赞我下一代互联网研究</a></h3>
+              <p class="thnews_jqzy">　　短短数年跃入世界前列——“互联网之父”盛赞我下一代互联网研究《人民日报》 2007-03-02本报北京３月１日讯&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 记者杨健报道：“中国在下一代互联网研究方面的进步给我留下了非常深刻的印象。短短数年中，你们取得了别的国家需要很长时间才能取得的成绩。”“互联网之父”温顿·瑟夫今天这样评价我国下一代互......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2007.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231838843798653/20110225231838843798653_.html" target="_blank">“互联网之父”Vint Cerf博士受聘...</a></h3>
+              <p class="thnews_jqzy">　　“互联网之父”Vint Cerf博士受聘为清华大学名誉教授【新闻中心讯 记者 李含 通讯员 吴茜 李荣洁 摄影 郭海军】3月1日上午,在清华大学中央主楼网络中心报告厅举行的受聘仪式上，图灵奖获得者、现任Google公司副总裁兼首席互联网专家Vint&nbsp; Cerf博士从副校长谢维和手中接过聘书，受聘为清华大学名誉教授。谢维和副校长代表学校对......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231822156145881/20110225231822156145881_.html" target="_blank">美国丹佛大学校董会主席Daniel Ri...</a></h3>
+              <p class="thnews_jqzy">　　美国丹佛大学校董会主席Daniel Ritchie受聘清华名誉教授【新闻中心讯 记者 李 含 摄影 崔凯】11月11日，美国丹佛大学校董会主席Daniel Ritchie教授受聘清华大学名誉教授仪式在主楼接待厅举行。清华大学校长顾秉林为Ritchie教授颁发了聘书。受聘仪式前， 顾秉林校长与Daniel Ritchie教授及丹佛大学校长Bob Co......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231723875461998/20110225231723875461998_.html" target="_blank">清华授予联合国副秘书长特普费尔博士名誉教...</a></h3>
+              <p class="thnews_jqzy">　　清华授予联合国副秘书长特普费尔博士名誉教授称号【新闻中心讯】3月17日上午，中国驻肯尼亚使馆和常驻联合国环境署代表处在内罗毕联合国环境署总部举行仪式，由中国常驻联合国环境署代表郭崇立大使代表中国政府和清华大学向联合国副秘书长兼联合国内罗毕办事处总干事、环境署执行主任特普费尔博士颁发清华大学名誉教授聘书。郭崇立大使宣读了清华大学校长顾秉林院士的致函。顾......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344468990277/20110225225344468990277_.html" target="_blank">诺贝尔医学奖获得者利兰·哈特韦尔教授受聘...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档诺贝尔医学奖获得者利兰·哈特韦尔教授受聘为我校名誉教授【新闻中心讯 记者 李含 摄影 郭海军】8月30日上午, 2001年诺贝尔生理或医学奖获得者、美国华盛顿大学弗雷德·哈钦森癌症研究中心的利兰·哈特韦尔   ( Leland H. Hartwell) 教授从校长顾秉林院士手中接过了聘书，受聘为我校名誉教授。 哈特韦尔教授首先在我校理学院报......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2004.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231430734508668/20110225231430734508668_.html" target="_blank">我校聘请刘遵义教授为清华大学名誉教授</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校聘请刘遵义教授为清华大学名誉教授【新闻中心讯 摄影 郭海军】2004年4月17日上午，在经济管理学院成立二十周年庆祝大会上，我校校长顾秉林院士向刘遵义教授颁发聘书，正式聘请刘遵义教授为清华大学名誉教授。刘遵义教授1944年12月出生于贵州遵义，1969年毕业于美国加州大学伯克莱分校，获经济学博士学位，曾任斯坦福大学经济系副主任、经济政策......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231319109451169/20110225231319109451169_.html" target="_blank">哈佛大学利伯教授受聘我校名誉教授</a></h3>
+              <p class="thnews_jqzy">　　无标题文档哈佛大学利伯教授受聘我校名誉教授 11月8日下午，国际著名的化学家、哈佛大学查尔斯·利伯（Charles M. Lieber）教授面带微笑地从我校王大中校长的手中接过聘书，成为清华大学名誉教授。聘任仪式是在我校蒙民伟楼多功能厅举行的。因为在此之后查尔斯·利伯教授将要在这里举行一场学术演讲，闻讯而来的学生早早就将报告厅坐了个满满当当，就连过道里和......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

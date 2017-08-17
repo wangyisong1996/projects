@@ -1,0 +1,1098 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>科技部副部长呈津培视察我校物理系</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231213046791911&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>报道</TITLE><META NAME="Template" CONTENT="D:\office97\Office\html.dot"></HEAD><BODY LINK="#0000ff" VLINK="#800080" bgcolor="#FFFFFF"><FONT FACE="宋体" LANG="ZH-CN" SIZE=4> <h3 ALIGN="CENTER">科技部副部长呈津培视察我校物理系</h3><P ALIGN="JUSTIFY">4月4日下午，为深入考察研究我校基础研究的状况和发展设想与规划，科技部副部长呈津培、科技部基础司司长杨启文、科技部基础司基地处处长彭以祺、教育部科技司基础处处长陈冬生一行四人专程视察了我校物理系“原子分子纳米科学教育部重点实验室”（原“单原子分子测控教育部重点实验室”）。</P><P ALIGN="JUSTIFY">在我校建设世界一流大学的进程中，振兴发展理科是重要战略举措之一，而物理系在这一战略举措中肩负重任。在我校副校长、研究生院院长顾秉林院士、原子分子纳米科学中心主任李家明院士、实验室学术委员会主任杜祥琬院士、科技处符松处长等校系领导的陪同下，呈副部长逐项了解了实验室正在进行的研究课题，并听取了实验室主任马万云教授所做的工作汇报。呈副部长谈到，通过这次考察，对我校基础研究的现状有了比较清楚的了解。他对我校物理系多年来取得的成绩予以积极的评价和肯定，并鼓励实验室抓住机遇，争取在纳米科技以及生物物理等交叉学科领域做出一流的工作。（党小梅）</P></FONT> </BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月10日 12:12:54　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151230140137006953133/20151230140137006953133_.html" target="_blank">物理系超导滤波器项目获2015年教育部技...</a></h3>
+              <p>12月1日，教育部发布“2015年度高等学校科学研究优秀成果奖（科学技术）授奖项目公告”，清华大学物理系通信装备用超导滤波器项目获得2015年教育部技术发明一等奖，完成人为曹必松、魏斌、郭旭波和张晓平。项目组经过长期研究，在设计理论、器件结构、工艺技术和系统集成等方面完成了多项发明创新，攻克了大量关键技术难关，首次研制成功通信装备用超导滤波系统，通过产、学、研、用结合，实现了超导滤波器从基础研究到通信装备上批量应用的重要突破。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151124093912729726377/20151124093912729726377_.html" target="_blank">物理系肖志刚研究组发文首次揭示氘核的同位...</a></h3>
+              <p>物理系肖志刚研究小组和广西师范大学欧立教授等人合作，在物理学国际权威杂志《物理评论快报》 （Physical Review Letters）上发表《氘核的动力学同位旋矢量取向与核对称能探针》（Dynamic Isovector Reorientation of Deuteron as a Probe to Nuclear Symmetry Energy），首次揭示氘原子核与重靶核散射中一种新的可观测极化效应，即同位旋矢量极化效应。这一新效应的提出，为人们观测核力对质子和中子作用的轻微差异提供一种新的敏感探针，将有助于解决一直以来悬而未决的、亚饱和密度区核物质对称能的密度依赖问题。物理系肖志刚为本文通讯作者。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151120162608195398815/20151120162608195398815_.html" target="_blank">清华大学成立“黄祖洽基金”</a></h3>
+              <p>11月17日，“黄祖洽基金”捐赠仪式暨纪念会在清华大学工字厅东厅举行。黄祖洽先生的夫人张蕴珍、女儿黄萌、女婿杨平平，清华大学副校长兼教育基金会理事长杨斌，诺贝尔奖获得者杨振宁，教育基金会秘书长李家强，以及来自清华大学、北京大学、北京师范大学、北京航空航天大学、中国工程物理研究院、中国原子能科学研究院、北京应用物理与计算数学研究所、中国科学院理论物理研究所等单位的领导、嘉宾和黄祖洽先生的同事、友人、学生等30余人参加了活动。该基金为纪念清华物理系杰出系友黄祖洽院士而设立，以黄祖洽先生及亲属的捐款为种子，鼓励社会各界人士的后续投入。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151008174608738913542/20151008174608738913542_.html" target="_blank">清华“军人”逐梦 中哈边境一线向国旗敬礼</a></h3>
+              <p>　　10月6日下午，在地处中哈边境一线、有“西北边境第一团”之称的新疆生产建设兵团第十师一八五团西北之北国旗下，有一个身姿挺拔、精神饱满、气宇轩昂、看起来有几分军人风范的小伙正在神态庄重地向国旗敬礼，并高呼：“祖国在我心中，中国万岁！”。    　　这个小伙叫袁苏苏，甘肃华亭人，2012年考入清华大学工程物理系。在这个水清木华、钟灵毓秀的清华园里的一年，他从来没有放下内心深处的“报国志”和“军人梦”。于是大一结束，便志愿参军入伍服兵役，今年9月份，刚从中国海军训练舰某支队退出现役重返校园。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150717154108011274702/20150717154108011274702_.html" target="_blank">【启航计划】张权权：核能人的报国梦</a></h3>
+              <p>张权权，男，汉族，中共党员，2009年考入清华大学工程物理系核工程与核技术专业，2013年免试推荐工物系核能与核技术工程专业硕士。先后担任工物系学生会主席、核91班团支书、校学生会文化交流部副部长、工物系研究生团委志愿副书记、清华大学跆拳道代表队队员。曾获清华大学优秀学生干部、清华大学优秀共青团员、清华之友——轩辕社会工作一等奖学金、清华大学研究生综合三等奖学金、北京市普通高等学校优秀毕业生等荣誉。2015年硕士毕业签约中核集团四川红华实业有限公司。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150626120318203961600/20150626120318203961600_.html" target="_blank">“黄金人”汤凯：做个安静的核电“美男子”</a></h3>
+              <p>　　要成为掌握核电厂的金牌运行人员，有多难？对中核集团三门核电的汤凯来说，这个过程可以量化为大大小小100多场的考试，以及从见习值班员到主控室值长长达11年的历练。    　　核电操纵人员有着“黄金人”之说，意思是要培养一名技术全面、素质过硬的优秀高级操纵员，“需要耗费的成本，如果兑成黄金，差不多和我一样重。”大个子汤凯比划着说。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150604144951129100023/20150604144951129100023_.html" target="_blank">物理系教授楼宇庆诠释宇宙间的绝超质量黑洞</a></h3>
+              <p>5月21日，物理系教授楼宇庆在理科楼郑裕彤大讲堂以“绝超质量黑洞惊艳童年宇宙——理论预言到观测证据”为题，向清华师生阐释了自己2013年12月20日在英国《皇家天文学会月刊》公开发表的前瞻性理论预言。楼宇庆在演讲中表示，这一理论分析预言，足够庞大的物质库在自引力作用下的广义多方径向流体动力塌缩，能够相当快地在宇宙包括早期宇宙间形成百万到几十亿太阳质量的超大质量黑洞，乃至百亿到超过几万亿太阳质量的绝超质量黑洞。他表示，2015年3月初报道的宇宙9亿年时的超亮类星体中的120亿太阳质量黑洞，位于理论预言的绝超质量黑洞低端（宇宙年龄为137亿年），而今年5月中旬在线发表、即将刊登于6月份《天体物理杂志》(The Astrophysical Journal)上最新发现的宇宙12亿年时的极亮红外星系中的数十亿太阳质量黑洞，则位于理论预言的超大质量黑洞高端。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150106194911029460875/20150106194911029460875_.html" target="_blank">张礼先生从教68周年暨90华诞座谈会举行</a></h3>
+              <p>1月3日下午，清华大学工程物理系、物理系和高等研究院在科学馆联合举办了“张礼先生从教68周年暨90华诞座谈会”。张礼先生和夫人刘益清，清华大学党委书记陈旭，前校长、高等研究院院长顾秉林院士以及张礼先生的同事、朋友、学生等近百人参加了庆祝会。    张礼先生1925年1月生于天津。1942年进入辅仁大学物理系学习。1948年到美国康奈尔大学读研究生。1953-1956年在苏联列宁格勒大学读研究生。1957年回国后开始在清华大学任教。曾任工物系核物理教研组主任、副系主任、主任；物理系1982年复系之后的首位系主任。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141229163758718748500/20141229163758718748500_.html" target="_blank">于“最深最黑”处趋近暗物质</a></h3>
+              <p>　　暗物质和暗能量被并称为21世纪现代物理学和天文学晴朗天空中的“两朵乌云”。在宇宙构成中，人类已知物质占宇宙的组份不到5%，而暗物质的比例几乎是已知物质的5倍多。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141102115632738578692/20141102115632738578692_.html" target="_blank">清华物理系人事制度改革正式启动</a></h3>
+              <p>10月30日下午，物理系人事制度改革启动会在理学院报告厅举行。校党委常务副书记、副校长邱勇出席会议并讲话，副校长薛其坤在会上宣读了学校《关于物理系人事制度改革若干问题的回复》。启动仪式由物理系党委书记庄鹏飞主持。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9659/2014/20140912141843259965324/20140912141843259965324_.html" target="_blank">2014年量子物质科学协同创新中心博士生...</a></h3>
+              <p>9月4日-5日，由清华大学物理系主办的量子物质科学协同创新中心博士生交流会暨清华大学物理系国家奖学金答辩会举行。交流会邀请到了与清华大学物理系共同参与量子物质科学协同创新中心（即“2011计划”）工作的另外两个单位北京大学和中科院物理所参加，以期增进学术交流，促进学术争鸣。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140627174901370920621/20140627174901370920621_.html" target="_blank">物理系党委：筑就坚强战斗堡垒 创建一流学...</a></h3>
+              <p>清华大学物理系建系近90年来，秉承“自强不息、厚德载物”的清华校训和“爱国奉献、追求卓越”的清华精神，共培养了10位“两弹一星”元勋，有85位两院院士曾在物理系学习或工作过，他们在不同历史时期为国家富强和民族复兴作出了卓越贡献。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140619135401463332569/20140619135401463332569_.html" target="_blank">物理系三位本科生获得微软小学者奖学金</a></h3>
+              <p>近日，微软亚洲研究向物理系发来喜报，祝贺物理系2011级本科生高凡、陈源、郑诚获得“微软小学者”称号。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140530150249741854999/20140530150249741854999_.html" target="_blank">物理系承办第十二届全国博士生学术年会物理...</a></h3>
+              <p>2014年5月23日-至25日，第十二届全国博士生学术年会在云南昆明举行。中国物理学会和清华大学物理系共同承办了物理学分会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140519121237001409646/20140519121237001409646_.html" target="_blank">清华承办拓扑绝缘体与未来信息技术科技前沿...</a></h3>
+              <p>5月15日至16日，由中国科学院学部主办，清华大学低维量子物理国家重点实验室承办的“拓扑绝缘体与未来信息技术”科学与技术前沿论坛在中国科学院学术会堂举行。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140429182615673579502/20140429182615673579502_.html" target="_blank">物理系举行向涛系友院士墙挂牌仪式暨学术报...</a></h3>
+              <p>4月27日下午，清华大学物理系为1984届系友向涛举行了院士墙挂牌仪式暨学术报告会。挂牌仪式在理科楼三楼院士墙前举行，由物理系副系主任龙桂鲁主持，物理系主任陈曦、副系主任吴健、前系主任朱邦芬院士以及物理系多位师生参加了挂牌仪式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2014/20140418135321932363835/20140418135321932363835_.html" target="_blank">昔日清华神童 基因创业成翘楚</a></h3>
+              <p>　昔日14岁的清华生盛司潼身上，仿佛有着永远辐射不完的正能量。他一路向前奔跑，从科研到创业，一直走在大多数人的前面。而成功的秘诀，无非“努力”二字。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140416084915180819166/20140416084915180819166_.html" target="_blank">怀念清华工科物理教学奠基人之一夏学江先生</a></h3>
+              <p>清华大学工科物理教学奠基人之一，清华大学物理系教授夏学江先生因病于2014年2月10日在北京逝世，享年88岁。夏学江先生毕生心血都倾注在了培养人材的事业上，在清华大学工科物理教学和课程建设上发挥了中流砥柱的作用。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140403160815720326560/20140403160815720326560_.html" target="_blank">清华物理系举办夏学江先生纪念活动</a></h3>
+              <p class="thnews_jqzy">　　清华物理系举办夏学江先生纪念活动清华新闻网4月3日电清华大学工科物理教学奠基人之一、清华大学物理系教授夏学江先生因病于2014年2月10日在北京逝世，享年88岁。为缅怀夏学江先生，学习他的杰出事迹，3月29日，清华大学物理系在理科楼举行了夏学江先生纪念活动。活动分两部分：&ldquo;大学物理教学研讨会&rdquo;和&ldquo;夏学江先生追思会&rd......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2014.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140228151635160739440/20140228151635160739440_.html" target="_blank">百年泽慧</a></h3>
+              <p class="thnews_jqzy">　　百年泽慧来源：中国科学报 2014-2-28 刘晓何泽慧（1914~2011），中国核物理、高能物理与高能天体物理学的奠基人之一。1914年3月5日生于江苏苏州市，1920年起就读振华女校，1932年考入清华大学物理系。1936~1940年在德国柏林高等工业大学攻读弹道学，获工程博士学位。毕业后进入德国西门子工厂弱电流实验室工作。1943年到海德堡威廉皇......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2014.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140220150526481997184/20140220150526481997184_.html" target="_blank">多校联合举办“寻梦西南联大2014物理营”</a></h3>
+              <p class="thnews_jqzy">　　多校联合举办&ldquo;寻梦西南联大2014物理营&rdquo;来源：中国科学报 2014-2-20 吴强日前，南开大学物理科学学院联合北京大学物理学院、清华大学物理系和云南师范大学物理与电子信息学院，在西南联大旧址举办了&ldquo;寻梦西南联大2014物理营&rdquo;。来自三校的60余名&ldquo;基础学科拔尖学生培养试验计划&rdquo;学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140113142959917235177/20140113142959917235177_.html" target="_blank">清华斩获国家科技奖“创新团队奖”</a></h3>
+              <p class="thnews_jqzy">　　清华斩获国家科技奖&ldquo;创新团队奖&rdquo;来源：光明日报 2014-1-11 邓晖在刚刚揭晓的2013年度国家科学技术奖中，清华大学工程物理系康克军教授率领的&ldquo;辐射成像创新团队&rdquo;获得国家科学技术进步奖（创新团队）。该奖项于2012年设立，旨在激励联合攻关、协同创新，弘扬团结协作精神，发挥科技奖励在推动科技进步、人才聚......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20131217110851608660963/20131217110851608660963_.html" target="_blank">99位青年科技工作者获第十三届中国青年科...</a></h3>
+              <p class="thnews_jqzy">　　99位青年科技工作者获第十三届中国青年科技奖来源：新华网 2013-12-16 隋笑飞 余晓洁中国科协会员日暨第十三届中国青年科技奖颁奖大会16日在京举行，99位青年科技工作者荣获第十三届中国青年科技奖。中国青年科技奖是1987年由钱学森、朱光亚等老一辈科学家提议设立的，由中组部、人力资源和社会保障部、中国科协共同举办，每两年评选一次，每届获奖者不超......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131212164220749439894/20131212164220749439894_.html" target="_blank">薛其坤：在量子世界实现“中国梦”</a></h3>
+              <p>“科学前沿的重要问题往往都是世界性难题，既要靠智力，也要靠专心。”中科院院士、清华大学教授薛其坤和他的团队正是用足4年时间，解决了一世界性难题。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131122120825115358185/20131122120825115358185_.html" target="_blank">让超级计算机变平板电脑成为可能——量子反...</a></h3>
+              <p>量子反常霍尔效应，对普通人来说，拗口而晦涩。但在物理学家眼中，它“神奇”又“美妙”。因为它的发现可能带来下一次信息技术革命。采用这种技术设计集成电路和元器件，千亿次的超级计算机有望做成平板电脑那么大，智能手机的内存可能会提高上千倍。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131119133529565612049/20131119133529565612049_.html" target="_blank">薛其坤——实验物理领域的“领航人”</a></h3>
+              <p>在2013年3月举行的美国物理学会年会上，中国科学院院士、清华大学副校长薛其坤成了焦点人物。由他领衔的清华大学物理系和中科院物理所联合组成的实验团队，首次在实验中发现量子反常霍尔效应，这是我国科学家从实验上独立观测到的一个重要物理现象，也是世界基础研究领域的一项重要科学发现。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131115115435698869559/20131115115435698869559_.html" target="_blank">薛其坤：三个秘诀攻克量子制高点</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;万人计划&rdquo;人才典型薛其坤：三个秘诀攻克量子制高点来源：光明日报 2013-11-15 邓晖50岁这年，攻克量子世界制高点的重大发现，让院士薛其坤名声在外。时隔半年，又有好消息传来，在首批公布的&ldquo;万人计划&rdquo;6名杰出人才中，薛其坤名列其中。成功的滋味大抵如此。可面对纷至沓来的鲜花和掌声，这位总是在和时间赛跑的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131115115317284543704/20131115115317284543704_.html" target="_blank">清华教授薛其坤：发现量子反常霍尔效应之后</a></h3>
+              <p class="thnews_jqzy">　　清华教授薛其坤：发现量子反常霍尔效应之后来源：中国新闻网 2013-11-14 马海燕清华大学教授薛其坤这半年比以往更忙。从实验上首次发现量子反常霍尔效应让他一下子成为舆论的焦点，采访媒体多起来，会议、演讲也更多了，他深感&ldquo;压力山大&rdquo;。今年3月15日《科学》杂志在线发文，宣布由清华大学教授薛其坤领衔、清华大学物理系和中科院物理......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130922153716106329449/20130922153716106329449_.html" target="_blank">“学霸”的科研梦</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;学霸&rdquo;的科研梦来源：中国青年报 2013-9-19 黄丹羽今天，第八十六期&ldquo;劳动&bull;创造&bull;奋斗&mdash;&mdash;我的中国梦&rdquo;嘉宾访谈在中青在线举行。清华大学物理系2008级博士研究生张金松，四川大学华西临床医学院2011级博士研究生周圣涛来到演播室。这两位第八届&ldquo;中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130918141150106238668/20130918141150106238668_.html" target="_blank">张金松：从“科研小白”到“学术牛人”</a></h3>
+              <p class="thnews_jqzy">　　从&ldquo;科研小白&rdquo;到&ldquo;学术牛人&rdquo;&mdash;&mdash;记第八届中国青少年科技创新奖获得者、清华大学物理系博士生张金松来源：中国教育报 2013-9-18 高毅哲在大学物理专业的课堂上坐了一段时间后，张金松开始有点后悔。那是2004年，19岁的张金松正在清华大学物理学专业就读。他的动摇来自于物理专业的就......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130917141105507891623/20130917141105507891623_.html" target="_blank">张金松：工作乐趣须“精细测量”</a></h3>
+              <p>直到现在，张金松也说不清自己到底为什么学了物理，但他并不后悔。在他看来，既然学了，就要学好，一不小心，他还参与了“诺贝尔奖级别”的研究，并以第一作者的身份在美国《科学》杂志上发表了文章。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130909140304500762331/20130909140304500762331_.html" target="_blank">张金松：用了不起的成果表达崇高敬意</a></h3>
+              <p>我是来自清华大学物理系的一名博士生。能够获得“中国青少年科技创新奖”这么崇高的荣誉，我感到非常荣幸。同时我也深深感受到邓小平同志对我们青少年的高度重视和殷切希望，在此，请允许我向这位伟大的“中国改革开放的总设计师”表示最崇高的敬意。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2013/20130903141644359231329/20130903141644359231329_.html" target="_blank">沈憧棐：逆境中保持梦想热度</a></h3>
+              <p>最初，沈憧棐觉得，出于兴趣的创业只是“一个人的事”。但公司成立5年来，他感到自己身上多了沉甸甸的责任。“你要对投资人、团队、客户以及所有帮助和支持公司的人负责。”沈憧棐说。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2013.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130827141832835114490/20130827141832835114490_.html" target="_blank">中国青少年科技创新奖评选表彰纪实</a></h3>
+              <p class="thnews_jqzy">　　科技创新梦属于每个青年&mdash;&mdash;中国青少年科技创新奖评选表彰纪实来源：中国青年报 2013-8-27 朱小雨 陈凤莉8月22日，第八届中国青少年科技创新奖颁奖大会在北京人民大会堂隆重举行。国务院副总理刘延东出席、国家副主席李源潮出席并讲话。一同参加颁奖大会的还有相关部委领导及来自全国各地的200多名候选和获奖青年。中国青少年科技创新......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2013.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130624085749008991141/20130624085749008991141_.html" target="_blank">清华物理系三位本科生获得微软小学者奖</a></h3>
+              <p class="thnews_jqzy">　　清华物理系三位本科生获得微软小学者奖清华新闻网6月24日电近日，清华大学物理系2010级本科生高鹏飞、胡琦、戴澄宇获微软亚洲研究&ldquo;微软小学者&rdquo;称号。3位同学学业优秀，科研工作突出，在微软亚洲研究院组织的面试中表现突出获得该奖励。&nbsp;&ldquo;微软小学者奖学金&rdquo;计划是微软亚洲研究院为配合和支持目前各高校正......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130427144317252176176/20130427144317252176176_.html" target="_blank">《何东昌与清华大学工程物理系》首发仪式举行</a></h3>
+              <p class="thnews_jqzy">　　《筚路蓝缕 铸就辉煌&mdash;何东昌与清华大学工程物理系》首发仪式举行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网4月27日电（记者范 丽）4月27日上午，近百位清华大学工程物理系老校友聚首工物系报告厅，庆祝工程物理系首任系主任何东昌九十寿辰，并同时参加《筚路蓝缕 铸就辉煌-何东昌与清华大学工程物理系》首......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130425133051230670552/20130425133051230670552_.html" target="_blank">静心读书 不负学子担当</a></h3>
+              <p class="thnews_jqzy">　　静心读书 不负学子担当来源：光明日报 2013-4-25 刘梦 邓晖讲述人：冯 硝 职业：清华大学物理系博士、&ldquo;量子反常霍尔效应&rdquo;实验团队成员我于1985年生于黑龙江农垦总局那片广袤的土地，夏天一碧千里，冬天白雪皑皑。我的父母都是勤劳朴实的农民，他们年复一年在黑土地上辛勤耕作，只盼望着自己的女儿能够走出这片天地，奔向广阔的未来......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9935/2013/20130419131749101826898/20130419131749101826898_.html" target="_blank">揭秘量子反常霍尔效应实验团队的85后</a></h3>
+              <p class="thnews_jqzy">　　揭秘量子反常霍尔效应实验团队的85后来源：中国青年报 2013-4-19 陈竹 邱晨辉至今，凝聚态物理学界还处在&ldquo;兴奋&rdquo;之中。从那篇载着&ldquo;中国科研团队首次实现&lsquo;量子反常霍尔效应&rsquo;&rdquo;成果的论文3月14日在线发表于美国《科学》杂志后，消息便从不同渠道被报道出来，其中最为吸引外界眼光的是有......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130417134703542158093/20130417134703542158093_.html" target="_blank">诺奖级成果带来什么</a></h3>
+              <p class="thnews_jqzy">　　诺奖级成果带来什么来源：浙江日报 2013-4-17 文敏中国科学家最新诺贝尔级科研成果量子反常霍尔效应（Anomalous Quantum Hall Effect）让众媒体与读者们着实犯了一把迷糊。这其中每一个单词都涉及数个尖端物理理念：量子、霍尔效应、反常（或称异常），延伸开去的基本概念涉及：凝聚态、自旋、洛伦兹力&hellip;&hellip;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130415164652968398743/20130415164652968398743_.html" target="_blank">[焦点访谈]奇迹是怎样诞生的</a></h3>
+              <p class="thnews_jqzy">　　[焦点访谈]奇迹是怎样诞生的来源：焦点访谈 2013-4-14中国科学家在实验中首次观测到量子反常霍尔效应，这个&ldquo;很可能引发一次信息技术革命&rdquo;的发现被称为是创造了奇迹。那么这个奇迹是怎么发生的？为什么是中国科学家团队拔得头筹呢？记者在清华大学物理系采访时，薛其坤院士在实验室向记者展示了一个亮晶晶的小薄片。清华大学物理系主任......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130415164246095951114/20130415164246095951114_.html" target="_blank">[焦点访谈]“反常”的奇迹</a></h3>
+              <p class="thnews_jqzy">　　[焦点访谈]&ldquo;反常&rdquo;的奇迹来源：焦点访谈 2013-4-13最近在科学界有个大事值得和大家分享，这就是我国科学家在实验中首次观测到量子反常霍尔效应。这是个什么样的发现呢？著名的诺贝尔物理学奖曾经三次颁给这个研究领域的科学家，所以杨振宁评价这是一个&ldquo;诺贝尔奖级别&rdquo;的科学成果。这么一个相当专业的研究，和我们的生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130412162448070907162/20130412162448070907162_.html" target="_blank">奇迹为什么出现在中国</a></h3>
+              <p class="thnews_jqzy">　　奇迹为什么出现在中国&mdash;&mdash;记首次在实验上发现量子反常霍尔效应的中国科学家团队来源：光明日报 2013-4-12 丰捷 齐芳 邓晖编者按用科技托举中国梦，中国科学家团队用实干为我们树立了实现梦想的榜样。一则深奥的科技新闻近来备受瞩目&mdash;&mdash;中国科学家首次从实验上观测到量子反常霍尔效应。3月16日，本报率先对这一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9935/2013/20130412162329790161384/20130412162329790161384_.html" target="_blank">清华大学薛其坤院士团队获“诺贝尔奖级”重...</a></h3>
+              <p class="thnews_jqzy">　　清华大学薛其坤院士团队获&ldquo;诺贝尔奖级&rdquo;重大科研发现来源：新华网 2013-4-12 李江涛 吴晶晶初春时节，北京传出喜讯：清华大学物理系和中科院物理所联合组成的团队在实验中首次发现量子反常霍尔效应，这被著名物理学家杨振宁称之为&ldquo;诺贝尔奖级&rdquo;的科研成果。在凝聚态物理中，量子霍尔效应占据着极其重要的地位。整......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9935/2013/20130411155437555794898/20130411155437555794898_.html" target="_blank">我国科学家发现量子反常霍尔效应背后的故事</a></h3>
+              <p class="thnews_jqzy">　　攻克量子世界的制高点&mdash;&mdash;我国科学家发现量子反常霍尔效应背后的故事来源：中国教育报 2013-4-11 唐景莉3月18日，在规模宏大的美国物理学会年会上，清华大学薛其坤院士成了焦点人物&mdash;&mdash;很多华人科学家和相熟的外国学者纷纷走到他面前向他表示祝贺。这些都源于今年3月15日《科学》（Science）杂志在线发表文......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9935/2013/20130411155324596665773/20130411155324596665773_.html" target="_blank">我国科学家发现量子反常霍尔效应</a></h3>
+              <p class="thnews_jqzy">　　我国科学家发现量子反常霍尔效应清华大学薛其坤院士领衔的科研团队获凝聚态物理领域重大突破来源：中国教育报 2013-4-11 唐景莉历时近4年，20多名学生参与，尝试了1000多个样品，终于解决微电子学、集成电路发展的一个瓶颈。清华大学和中科院物理所今天在北京联合宣布，他们组成的团队从实验上首次观测到量子反常霍尔效应。这一重大科技发现，是凝聚态物理领域的重......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9935/2013/20130411155152698353737/20130411155152698353737_.html" target="_blank">“这是一个诺奖级的发现”</a></h3>
+              <p class="thnews_jqzy">　　清华大学物理系和中科院物理研究所联合组成的实验团队，从实验上首次观测到量子反常霍尔效应&ldquo;这是一个诺奖级的发现&rdquo;来源：光明日报 2013-4-11 邓晖 齐芳6个月前的一天，学生的一条短信，让清华大学薛其坤院士经历了人生中最为激动的一刻。3天后，与薛其坤在美国的碰面，也让斯坦福大学教授、清华大学&ldquo;千人计划&rdquo;教......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9935/2013/20130411154946504544785/20130411154946504544785_.html" target="_blank">开启下一次信息革命</a></h3>
+              <p class="thnews_jqzy">　　我科学家发现量子反常霍尔效应开启下一次信息革命来源：人民日报 2013-4-11 赵婀娜&ldquo;这是一个&lsquo;诺贝尔奖级&rsquo;的科研成果。&rdquo;10日，诺贝尔物理学奖获得者、清华大学高等研究院名誉院长杨振宁教授这样评价中国科学家首次发现量子反常霍尔效应的科研成果。这个成果由清华大学薛其坤院士领衔、清华大学物理系和中科院物理所......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9935/2013/20130411154850823707378/20130411154850823707378_.html" target="_blank">我科学家首次发现量子反常霍尔效应</a></h3>
+              <p class="thnews_jqzy">　　我科学家首次发现量子反常霍尔效应将来可用于研制极低能耗电子器件，超级计算机可&ldquo;瘦身&rdquo;成平板电脑大小来源：人民日报 2013-4-11 赵婀娜清华大学和中国科学院物理研究所今天在京联合宣布：由清华大学薛其坤院士领衔，清华大学物理系和中科院物理研究所联合组成的实验团队最近取得重大科研突破，在磁性掺杂的拓扑绝缘体薄膜中，从实验上首次观测......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9935/2013/20130411154722031611266/20130411154722031611266_.html" target="_blank">杨振宁：中国科学家获诺贝尔奖级科研成果</a></h3>
+              <p class="thnews_jqzy">　　杨振宁：中国科学家获诺贝尔奖级科研成果来源：新华网 2013-4-11 李江涛 吴晶晶清华大学和中科院物理所10日在北京宣布，他们组成的团队从实验中首次观测到量子反常霍尔效应。这一重大发现将可能加速推进信息技术革命，在未来研制出极低能耗的电子器件。诺贝尔物理学奖获得者、清华大学高等研究院名誉院长杨振宁在新闻发布会上说，这项成果堪称诺贝尔奖级科研成果。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9935/2013/20130411154548779799984/20130411154548779799984_.html" target="_blank">新闻联播：在实验中发现“量子反常霍尔效应”</a></h3>
+              <p class="thnews_jqzy">　　[视频]在实验中发现&ldquo;量子反常霍尔效应&rdquo;来源：CCTV新闻联播 2013-4-10 白央 闫乃之 高晨源 李墨白 李峻由清华大学、中国科学院物理所联合组成的研究团队今天上午在北京宣布，我国科学家首次从实验中观测到&ldquo;量子反常霍尔效应&rdquo;，这项重大基础物理学成果被诺贝尔物理奖获得者杨振宁称为&ldquo;中国实验......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9935/2013/20130410160929042231841/20130410160929042231841_.html" target="_blank">我国科学家最新研究成果登上《科学》杂志</a></h3>
+              <p class="thnews_jqzy">　　我国科学家最新研究成果登上《科学》杂志千亿次计算机有望浓缩成Pad来源：北京晚报 2013-4-10 张航每秒运算上千亿次的超级计算机，只有迷你Pad般大小。不发热，充一次电使用时间可达数月甚至数年。你可以随时在掌中开展工作，或者远程控制家里的电器，而不用担心&ldquo;性能不够、电量不够&rdquo;。这是量子反常霍尔效应今后可能给我们带来的生活改变......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9935/2013/20130410160650222457072/20130410160650222457072_.html" target="_blank">中国科学家首次在实验中发现量子反常霍尔效应</a></h3>
+              <p class="thnews_jqzy">　　中国科学家首次在实验中发现量子反常霍尔效应来源：中国新闻网 2013-4-10 马海燕中国科学家首次在实验中发现量子反常霍尔效应引起国际物理学界巨大反响，著名物理学家、诺贝尔奖得主杨振宁10日称赞其是诺贝尔奖级的成绩。清华大学和中国科学院物理研究所10日在北京联合宣布：由清华大学教授、中国科学院院士薛其坤领衔，清华大学物理系和中科院物理研究所联合组成......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130329085100645500425/20130329085100645500425_.html" target="_blank">清华物理系《科学》发文揭示拓扑诱导的磁性...</a></h3>
+              <p>清华大学物理系的研究人员与合作者在拓扑绝缘体的研究中取得重要进展，发现了磁性掺杂拓扑绝缘体中由能带拓扑量子相变而导致的磁性量子相变，相关成果发表在《科学》杂志上。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121227152455563570660/20121227152455563570660_.html" target="_blank">清华大学物理系博士生学术交流总结会召开</a></h3>
+              <p class="thnews_jqzy">　　2012年度清华大学物理系博士生学术交流总结会召开清华新闻网12月27日电12月22至23日，2012年度清华大学物理系博士生学术交流总结会在昌平举办。图为论坛各分会场。大会共分4个分会场，涉及凝聚态物理、原子分子物理、光学、高能物理、核物理和天体物理等多个学科方向。三年级以上以及部分一、二年级的研究生共做学术报告130场。从夸克到恒星，从电子输运到......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2012.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121204162835200295296/20121204162835200295296_.html" target="_blank">精仪系等四系联合博士生服务团共学十八大</a></h3>
+              <p class="thnews_jqzy">　　四系携手共学十八大精神精仪系、汽车系、自动化系、物理系联合博士生服务团举行党组织生活会清华新闻网12月4日电11月29日晚，清华大学精仪系、汽车系、自动化系和物理系联合博士生服务团，在精仪系馆共同举办关于十八大的专题报告会和学习交流会。图为报告会后同学们合影。刘淑娓摄&nbsp;在报告会上，社科学院国际关系学系博士刘若楠做了关于十八大后中国对外政策走......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121024165135505810577/20121024165135505810577_.html" target="_blank">高温超导滤波系统实现规模商业应用</a></h3>
+              <p class="thnews_jqzy">　　我国高温超导应用研究取得重大突破高温超导滤波系统实现规模商业应用来源：科技日报 2012-10-24 左常睿记者10月22日从在清华大学召开的高温超导滤波技术成果鉴定会上获悉，我国自主研制、拥有完全自主知识产权的高温超导滤波系统首批产品订货已完成生产并交付用户使用，在全国16个省市区的通信装备上投入长期实际应用。这是我国高温超导应用研究的重大突破，标志着......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121019091527542423965/20121019091527542423965_.html" target="_blank">清华2012年全国优秀中学生物理营举办</a></h3>
+              <p class="thnews_jqzy">　　清华2012年全国优秀中学生物理营举办清华新闻网10月19日电（通讯员阮东）10月12日-14日，&ldquo;清华大学2012年全国优秀中学生物理营&rdquo;在物理系举办，来自全国15个省40所重点中学的80多名优秀中学生和教师参加了本次物理营活动。这是清华物理系近年来第一次举办全国范围的物理营。图为参加物理营的师生代表合影。10月12日晚上，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121001211234394810182/20121001211234394810182_.html" target="_blank">中组部干部三局与低维量子物理实验室开展交...</a></h3>
+              <p class="thnews_jqzy">　　中组部干部三局与低维量子物理国家重点实验室开展创先争优交流活动清华新闻网10月1日电9月26日下午，中央组织部干部三局局长喻云林、副局长、局党支部书记赵凡等20余名同志到物理系低维量子物理国家重点实验室开展创先争优交流活动。中组部干部三局一直关心和支持我校发展，在创先争优活动中与物理系低维量子物理国家重点实验室结成对子，这是第二次来校开展交流活动。&nb......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2012.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20121001210315088654544/20121001210315088654544_.html" target="_blank">中组部干部三局捐助物理系家庭经济困难学生</a></h3>
+              <p class="thnews_jqzy">　　中组部干部三局捐助物理系家庭经济困难学生清华新闻网10月1日电9月26日，中央组织部干部三局捐助物理系家庭经济困难学生仪式在物理系会议室举行。&nbsp;图为中组部干部三局捐助清华大学物理系经济困难学生仪式。中组部干部三局局长喻云林、副局长、局党支部书记赵凡等20余名同志，校党委书记胡和平，校党委常委、组织部部长李一兵，物理系主任薛其坤，5名受助同学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2012.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120827115101784854774/20120827115101784854774_.html" target="_blank">中国物理学会成立八十周年纪念大会在清华举行</a></h3>
+              <p>8月25日，来自全国各高校和科研院所的物理学工作者们，以及学生代表、其他国家和地区物理学会的代表等500余人齐聚清华园，共同祝贺中国物理学会成立八十周年。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120628145114504288929/20120628145114504288929_.html" target="_blank">他回来 穿着学士服毕业</a></h3>
+              <p class="thnews_jqzy">　　清华物理系学生 一年半前查出 如今同窗即将毕业 室友期盼&mdash;&mdash;他回来 穿着学士服毕业来源：法制晚报 2012-06-27 徐天熊伟和何冠男曾以为，这会是一场最普通的毕业旅行。目的地是安徽铜陵&mdash;&mdash;同室好友王冲的老家。一屋四人，曾相约毕业后去彼此家乡一游。如今，两人却不得不悄悄南下，瞒着哥们儿王冲去看他。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2011.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20111209135322127864748/20111209135322127864748_.html" target="_blank">《自然·物理学》报道物理系铁基超导研究最...</a></h3>
+              <p>该研究成果是铁基超导薄膜材料方面的一个重要突破。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2011.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20111202105343391843209/20111202105343391843209_.html" target="_blank">物理系龙桂鲁教授和两位系友当选美国物理学...</a></h3>
+              <p class="thnews_jqzy">　　物理系龙桂鲁教授和两位系友当选美国物理学会会士清华新闻网12月2日电近日，2011年美国物理学会会士（APS Fellow）增选结果揭晓，清华大学物理系教授龙桂鲁因其在量子信息领域的突出贡献以及他对国际物理学界合作所做的努力而当选。同时当选的还有物理系1984届本科生系友、中科院物理所研究员向涛和1984级研究生系友、美国犹他大学材料系教授刘锋。20......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2011.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20111111084759369801776/20111111084759369801776_.html" target="_blank">【人才工作会系列报道】清华物理系：ten...</a></h3>
+              <p class="thnews_jqzy">　　清华物理系：tenure-track制度激活教师队伍●新闻中心记者 程曦2010年1月，清华物理系tenure-track系列助理教授陈曦准备接受一次对他学术生涯影响重大的&ldquo;裁决&rdquo;：物理系全体教授会将投票决定他是否能转为tenure（终身职）。如果通过，他将获得终身教授的职位，并从此享有学术研究的较大自由；如果不 通过，他将不得不......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2011.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110920133919876846761/20110920133919876846761_.html" target="_blank">清华教师荣获“叶企孙物理奖”与“吴有训物...</a></h3>
+              <p class="thnews_jqzy">　　清华教师张广铭、庄鹏飞分获&ldquo;叶企孙物理奖&rdquo;与&ldquo;吴有训物理奖&rdquo;清华新闻网9月20日电9月16～18日，2011年中国物理学会秋季学术会议在浙江大学召开。中科院院士、浙江大学校长杨卫出席开幕式并致辞。中科院院士、清华大学物理系主任薛其坤主持大会报告。开幕式上，&ldquo;2010～2011年度中国物理学会物理......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110718162739547709874/20110718162739547709874_.html" target="_blank">清华大学低维量子物理国家重点实验室揭牌仪...</a></h3>
+              <p class="thnews_jqzy">　　清华大学低维量子物理国家重点实验室揭牌仪式举行清华新闻网7月18日电7月15日，清华大学低维量子物理国家重点实验室揭牌仪式在理科楼举行。来自教育部、科技部、国家自然科学基金委员会的领导和嘉宾，低维量子物理实验室学术委员会成员，清华大学校长顾秉林以及物理系重点实验室成员出席揭牌仪式。副校长邱勇和实验室学术委员会副主任张泽共同为实验室揭牌。揭牌仪式由物理系党......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110627111806883673868/20110627111806883673868_.html" target="_blank">清华物理系系友李怀新捐赠“天行”基金</a></h3>
+              <p class="thnews_jqzy">　　清华物理系系友李怀新捐赠&ldquo;天行&rdquo;基金清华新闻网6月27日电清华大学物理系1983级系友、北京天行九州投资有限公司董事长李怀新为推动清华大学新百年的人才培养，支持人才的全面发展而出资200万元在清华大学设立&ldquo;天行&rdquo;基金。6月24日，&ldquo;天行&rdquo;基金捐赠仪式在物理系举行。清华大学教育基金......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110621135828492328832/20110621135828492328832_.html" target="_blank">顾秉林胡和平发唁电悼念何泽慧学长</a></h3>
+              <p class="thnews_jqzy">　　顾秉林胡和平发唁电悼念何泽慧学长清华新闻网6月21日电（记者崔 凯）我国著名物理学家，中科院高能物理研究所原副所长、中科院资深院士、清华大学校友何泽慧先生，因病于2011年6月20日7时39分在北京逝世，享年97岁。得知何泽慧先生逝世的消息后，清华大学校长顾秉林、党委书记胡和平给何泽慧先生亲属发去唁电，表示哀悼。顾秉林、胡和平在唁电中表示，何泽慧先生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2011.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110617105409340718163/20110617105409340718163_.html" target="_blank">物理系师生在Science发表铁基超导研...</a></h3>
+              <p>由薛其坤院士和陈曦教授指导的清华物理系2005级博士生宋灿立作为第一作者在6月17日出版的Science上发表了有关铁基超导研究的论文，这是我国科学家首次在Science杂志上刊登这个领域的研究成果。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110421123630153438466/20110421123630153438466_.html" target="_blank">香港创律集团捐资清华2亿元援建物理实验大楼</a></h3>
+              <p class="thnews_jqzy">　　香港创律集团捐资清华2亿元援建物理实验大楼清华新闻网4月21日电香港创律集团有限公司捐资清华2亿元设立创律科学基金，其中部分资金将用于建造面积约2万平方米的现代化实验大楼，支持清华物理系的建设。这是4月18日下午，在工字厅举行的创律科学基金捐赠仪式上宣布的消息。图为顾秉林校长向创律集团主席徐增平先生颁发捐赠纪念牌。井建军摄校长顾秉林在仪式前亲切会见了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110411164633197720532/20110411164633197720532_.html" target="_blank">“居里研究所与清华人”展览在清华开展</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;&ldquo;居里研究所与清华人&rdquo;展览在清华开展清华新闻网4月11日电（通讯员骆洁）4月11日上午，由法国居里研究所与清华大学联合主办的&ldquo;居里研究所与清华人&rdquo;展览在清华图书馆新馆二层大厅举行了开展仪式。此次展览是为了庆祝清华大学建校100周年和纪念居里夫人获得诺贝尔化学奖100周年而举行的。图为清华大学党委......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110401163650172289792/20110401163650172289792_.html" target="_blank">【人物】王向斌：追随党的脚步 20年矢志...</a></h3>
+              <p>王向斌借用《钢铁是怎样炼成的》一书中主人公保尔·柯察金的话，表达了自己对加入党组织的坚定信念。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2011.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232616437632094/20110225232616437632094_.html" target="_blank">物理系系友高海燕当选杜克大学物理系系主任</a></h3>
+              <p class="thnews_jqzy">　　物理系系友高海燕当选杜克大学物理系系主任【新闻中心讯】日前，物理系系友高海燕当选杜克大学新一任物理系系主任。高海燕教授为清华大学物理系长江讲座教授、杜克大学物理系终身正教授，全球华人物理学会主席，美国物理学会理事（APS General Councilor）。她于1966年出生于上海，1988年获清华大学物理学学士学位, 1994年获加州理工学院物理......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2011.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232615109799678/20110225232615109799678_.html" target="_blank">清华合作科研成果名列“中国科学十大进展”...</a></h3>
+              <p class="thnews_jqzy">　　清华合作科研成果名列“中国科学十大进展”之首【新闻中心讯】1月18日上午，科技部公布了2010年度“中国科学十大进展”，清华大学物理系薛其坤院士、陈曦教授与中国科学院物理研究所科研人员在拓扑绝缘体领域实验和理论两方面取得的系列研究在国际学术界引起广泛影响，以总选票排名第一入选“2010年度中国科学十大进展”。薛其坤院士、陈曦教授与中科院物理所马旭村研......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232600515370992/20110225232600515370992_.html" target="_blank">【特等奖学金】胡嘉仲：志做中国的牛顿</a></h3>
+              <p class="thnews_jqzy">　　胡嘉仲：志做中国的牛顿■学通社记者 祝小霖 傅杨挺胡嘉仲，2007年自上海保送清华大学物理系，大学3年学业成绩名列班级前茅。大一时就已经开始跳级选课，三年内提前完成了培养方案所有的专业课程。从大二开始选修研究生的专业课程和学位课。大一下学期加入物理系王向斌教授的量子信息研究组，已经发表SCI论文3篇。2010年入选了微软亚洲研究院的“学术之星”计划。获得......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104114609369658/20110226104114609369658_.html" target="_blank">【特等奖学金】胡嘉仲：志做中国的牛顿</a></h3>
+              <p class="thnews_jqzy">　　胡嘉仲：志做中国的牛顿■学通社记者 祝小霖 傅杨挺胡嘉仲，2007年自上海保送清华大学物理系，大学3年学业成绩名列班级前茅。大一时就已经开始跳级选课，三年内提前完成了培养方案所有的专业课程。从大二开始选修研究生的专业课程和学位课。大一下学期加入物理系王向斌教授的量子信息研究组，已经发表SCI论文3篇。2010年入选了微软亚洲研究院的“学术之星”计划。获得......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232548265346953/20110225232548265346953_.html" target="_blank">范守善当选TWAS院士 薛其坤获该院物理奖</a></h3>
+              <p class="thnews_jqzy">　　范守善当选TWAS院士 薛其坤获该院物理奖【新闻中心讯】10月19日，发展中国家科学院第二十一届院士大会在印度海得拉巴市举行，来自全世界40多个国家和地区的发展中国家科学院（TWAS）院士、获奖科学家和特邀代表等400多人出席了大会。在本次大会上，中国科学院院士、清华大学物理系范守善教授因其在纳米碳管的生长机理、控制合成和应用研究方面的突出贡献被增选为发......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225232451203188706/20110225232451203188706_.html" target="_blank">凝聚态物理学与纳米科学前沿研讨会在东京大...</a></h3>
+              <p class="thnews_jqzy">　　凝聚态物理学与纳米科学前沿研讨会在东京大学召开【新闻中心讯 通讯员 王亚愚 摄影 袁洪涛】5月13日，东京大学物理系和应用物理系与清华大学物理系在东京大学理学部一号馆小柴报告厅举行了“凝聚态物理学与纳米科学前沿研讨会”。此次研讨会的宗旨是加深清华大学和东京大学在物理学研究，特别是凝聚态物理和纳米科学方面的相互了解，并促进将来更加广泛而深入的合作。清华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225557171604006/20110225225557171604006_.html" target="_blank">【新生导引】葛惟昆：全心全意投入到新生导...</a></h3>
+              <p class="thnews_jqzy">　　全心全意投入到新生导引项目中——记清华大学物理系新生导引项目教师葛惟昆■物理系 任鹤义葛惟昆，1942年生于北京，1965年毕业于北京大学物理系，1983年在英国曼彻斯特（Manchester）大学获博士学位。曾任中国科学院半导体研究所副所长,中国科学院凝聚态物理中心副主任,美国达幕思（Dartmouth）大学副教授,香港科技大学高级讲师、教授。现任......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232421343856169/20110225232421343856169_.html" target="_blank">清华校友祁晓亮获得2010年美国斯隆研究奖</a></h3>
+              <p class="thnews_jqzy">　　清华校友祁晓亮获得2010年美国斯隆研究奖【新闻中心讯】日前，美国斯隆基金会（Alfred P. Sloan Foundation）公布了2010年获得斯隆研究奖的青年学者名单，清华大学物理系1999级基科班校友祁晓亮榜上有名。祁晓亮1999年考入清华物理系，2003年本科毕业后师从清华高等研究中心翁征宇教授攻读博士学位，毕业后到美国斯坦福大学物理系......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232403484251234/20110225232403484251234_.html" target="_blank">清华超导滤波器技术入选2009年“中国高...</a></h3>
+              <p class="thnews_jqzy">　　清华超导滤波器技术入选2009年“中国高等学校十大科技进展”【新闻中心讯】清华大学物理系“微波通信用高温超导前端”技术入选2009年“中国高等学校十大科技进展”。12月23日，教育部在铁道大厦举行了颁奖仪式。教育部副部长陈希，教育部科技委主任、清华大学热能系教授倪维斗院士出席了颁奖仪式。物理系魏斌副教授代表课题组接受了奖状。中国高校十大科技进展已举行......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2009.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104116250503268/20110226104116250503268_.html" target="_blank">【特等奖学金】房超：醉心学术 享受生活</a></h3>
+              <p class="thnews_jqzy">　　醉心学术 享受生活——访2009年清华大学特等奖学金获得者房超■研通社记者 张宁房超他被被大伙儿昵称为 “超导”，他酷爱话剧，喜好做饭，他说要享受生活的每一刻感动。他在博士期间发表9篇SCI论文，同时被评为“一二九优秀辅导员”。他就是2009-2009年度特等奖学金获得者、物理系博士生房超。“我为什么不出国”房超在清华读完本科后，没有像他......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2009.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232402937974252/20110225232402937974252_.html" target="_blank">【特等奖学金】房超：醉心学术 享受生活</a></h3>
+              <p class="thnews_jqzy">　　醉心学术 享受生活——访2009年清华大学特等奖学金获得者房超■研通社记者 张宁房超他被被大伙儿昵称为 “超导”，他酷爱话剧，喜好做饭，他说要享受生活的每一刻感动。他在博士期间发表9篇SCI论文，同时被评为“一二九优秀辅导员”。他就是2009-2009年度特等奖学金获得者、物理系博士生房超。“我为什么不出国”房超在清华读完本科后，没有像他......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232158984994222/20110225232158984994222_.html" target="_blank">清华教授研制出碳纳米管薄膜“扬声器”</a></h3>
+              <p class="thnews_jqzy">　　清华教授研制出碳纳米管薄膜“扬声器”【新闻中心讯】清华大学物理系范守善院士、姜开利副研究员领导的科研小组的一项最新研究发现，碳纳米管薄膜在有音频电流通过时，会具有类似“扬声器”的功能。这些“扬声器”的厚度只有几十纳米，而且是透明、柔软和可伸长的，它们可以被裁剪为任意形状和大小。相关论文发表在《纳米快报》（Nano Letters）上。研究表明，向非常......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2008.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232120031278260/20110225232120031278260_.html" target="_blank">美国物理学会主编访问清华大学物理系</a></h3>
+              <p class="thnews_jqzy">　　美国物理学会主编访问清华大学物理系【新闻中心讯】2008年是美国著名学术期刊《物理评论快报》（Physical Review Letters）创刊50周年。7月7日下午，美国物理学会主编Gene D. Sprouse教授、Physical Review E编辑Dirk Jan Bukman博士、《物理评论快报）编辑Ling Miao博士和Sami Mit......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2008.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232016296903669/20110225232016296903669_.html" target="_blank">顾秉林校长:出高水平成果要有“十年磨一剑...</a></h3>
+              <p class="thnews_jqzy">　　出高水平成果要有“十年磨一剑”的精神校长顾秉林院士到高温超导滤波器研究组调研【新闻中心讯 记者 贾朋俭 摄影 郭海军】1月11日上午，校长顾秉林、副校长康克军以及校办、宣传部、科研院的负责人来到清华物理系调研，与物理系曹必松教授领导的高温超导滤波器研究小组有关人员进行了座谈，并参观了超导实验室。曹必松教授简明扼要地从超导滤波器的研制概况及其重大应用的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2007.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225605062339787/20110225225605062339787_.html" target="_blank">清华物理系系友夏小禹博士回母校与同学交流</a></h3>
+              <p class="thnews_jqzy">　　清华物理系系友夏小禹博士回母校与同学交流【新闻中心讯 研通社记者 文浩】5月24日晚，理学院郑裕彤讲堂迎来了清华物理系青年系友夏小禹博士和母校同学们见面交流。夏小禹博士1994年本科毕业于清华大学物理系，本科阶段曾荣获清华大学特等奖学金、首届“清华十杰”和校园十大歌手，并担任物理系团委书记。他在中科院理论物理所获得硕士学位后，前往美国UIUC大学深造并获......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2007.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231839296297581/20110225231839296297581_.html" target="_blank">“多谢了，生命只魂在耳”——彭桓武先生最...</a></h3>
+              <p class="thnews_jqzy">　　“多谢了，生命只魂在耳”——彭桓武先生最后的时日《科学时报》2007-3-2（记者　陈欢欢 张巧玲 王丹红 ）2月28日上午，在北京医院，医生告诉中国科学院理论物理研究所所长欧阳钟灿院士：彭先生的情况不是很好。晚9：30左右，与吴岳良、牟克雄两位副所长碰完彭桓武先生的情况后，刚回到家中，欧阳钟灿就接到医生的电话：彭先生的血压下去了。欧阳钟灿立即赶到医院，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2007.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231839328189633/20110225231839328189633_.html" target="_blank">清华大学发唁电悼念彭桓武院士</a></h3>
+              <p class="thnews_jqzy">　　清华大学发唁电悼念彭桓武院士　【新闻中心讯】2007年2月28日21时40分，我国著名理论物理学家，中国理论物理学奠基人之一，“两弹一星功勋奖章”获得者，清华杰出校友彭桓武院士在北京逝世,享年92岁。3月2日，清华大学、清华大学校友总会向彭桓武院士治丧委员会发唁电。清华大学校长顾秉林、清华大学党委书记陈希敬送花圈。彭桓武院士生于1915年,19......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2007.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104123703440584/20110226104123703440584_.html" target="_blank">【人物】常保良：要勇于承担时代的责任</a></h3>
+              <p class="thnews_jqzy">　　常保良：要勇于承担时代的责任张 瑜常保良，1979年考入清华大学工程物理系。1984年毕业后到洛阳轴承研究所工作。20多年来，他从基层做起，一步一个脚印，虚心求教，积极进取，现为国家重点大型企业——洛阳轴承集团有限公司董事长兼党委书记、教授级高工。班长和业务骨干常保良在清华五年求学期间，不但学习刻苦，成绩优秀，而且积极参加各种社会活动。作为班长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2007.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231833765375645/20110225231833765375645_.html" target="_blank">【人物】常保良：要勇于承担时代的责任</a></h3>
+              <p class="thnews_jqzy">　　常保良：要勇于承担时代的责任张 瑜常保良，1979年考入清华大学工程物理系。1984年毕业后到洛阳轴承研究所工作。20多年来，他从基层做起，一步一个脚印，虚心求教，积极进取，现为国家重点大型企业——洛阳轴承集团有限公司董事长兼党委书记、教授级高工。班长和业务骨干常保良在清华五年求学期间，不但学习刻苦，成绩优秀，而且积极参加各种社会活动。作为班长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231824843161732/20110225231824843161732_.html" target="_blank">物理系举办高能碰撞中的重味产生国际研讨会</a></h3>
+              <p class="thnews_jqzy">　　物理系举办高能碰撞中的重味产生国际研讨会 【新闻中心讯】11月22～23日，由清华物理系主办的高能碰撞中的重味产生国际研讨会（Selected Topics on Heavy Flavor Production in High-Energy Collision）在清华物理系举行。来自11个国家的50多名高能核物理领域专家出席了会议。物理系系主任......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2006.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104124375784055/20110226104124375784055_.html" target="_blank">【人物】何红建：探索始于兴趣 知识源于创新</a></h3>
+              <p class="thnews_jqzy">　　探索始于兴趣 知识源于创新● 新闻中心记者 张莞昀在英国物理学家斯蒂芬·霍金眼中，描述宇宙物质根本结构的物理定律就像“上帝的思想”，让人难以捉摸。何红建却偏偏是一个喜欢在寻访“上帝思想”的道路上探索的人。“我总是着迷于揭示物质结构本质的研究，兴趣与好奇激发了我的探索，而创新则是研究的根本、知识的源泉。”何红建这样说。创新精神在“毕设”中尽显......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2006.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231818109955880/20110225231818109955880_.html" target="_blank">【人物】何红建：探索始于兴趣 知识源于创新</a></h3>
+              <p class="thnews_jqzy">　　探索始于兴趣 知识源于创新● 新闻中心记者 张莞昀在英国物理学家斯蒂芬·霍金眼中，描述宇宙物质根本结构的物理定律就像“上帝的思想”，让人难以捉摸。何红建却偏偏是一个喜欢在寻访“上帝思想”的道路上探索的人。“我总是着迷于揭示物质结构本质的研究，兴趣与好奇激发了我的探索，而创新则是研究的根本、知识的源泉。”何红建这样说。创新精神在“毕设”中尽显......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231803859781112/20110225231803859781112_.html" target="_blank">西门子向清华捐赠高温超导技术科研设备</a></h3>
+              <p class="thnews_jqzy">　　西门子向清华捐赠高温超导技术科研设备【新闻中心讯】9月1日，西门子有限公司向清华大学物理系捐赠了一台具有世界先进水平的离子束辅助沉积（IBAD）设备，该设备主要用于高温超导技术研发。这是迄今为止中国在该领域唯一一台离子束辅助沉积设备。　清华大学副校长陈吉宁教授和西门子（中国）有限公司总裁兼首席执行官郝睿强博士出席了在清华物理系应用超导研究中心举行......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231803375541958/20110225231803375541958_.html" target="_blank">【师德】身边小事显情操　课前课后来育人</a></h3>
+              <p class="thnews_jqzy">　　身边小事显情操 课前课后来育人　在一般人看来，物理与政治是完全不相干的两件事。但是，邓新元老师却把这样两件事都放进了自己的课堂。因为在他看来，这样两件事都与学生的成长相关。邓新元老师就是这样一个有心人。“每次答疑后要对老师说‘谢谢’，面对长辈要称呼‘您’，握手的次序是上级对下级、男士对女士，母亲节记得给妈妈打个电话问候一下……”这些内容不是出现在礼仪讲......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231751750417476/20110225231751750417476_.html" target="_blank">【聚焦自主创新】王崇愚院士：勤奋科研 淡...</a></h3>
+              <p class="thnews_jqzy">　　王崇愚院士：勤奋科研 淡泊名利 激发学生科研兴趣●新闻中心实习记者 程曦 记者 张莞昀　在6月5日召开的中国科学院第13次院士大会、中国工程院第8次院士大会上，胡锦涛总书记的讲话引起了与会院士的热烈反响和深入思考。 大会结束后，新闻中心记者专访了王崇愚院士，请他对自主创新和创新型人才培养谈了自己的感受与体会。国家的核心竞争力是智力资源和智慧成......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104125125384295/20110226104125125384295_.html" target="_blank">【人物】张广铭：他的世界静水流深</a></h3>
+              <p class="thnews_jqzy">　　张广铭：他的世界静水流深●新闻中心实习记者 程曦■学者档案张广铭，1963年10月生于北京，1991年获上海交通大学固体物理专业博士学位，此后曾先后在意大利国际理论物理中心和伦敦帝国理工大学等国际著名学术机构担任博士后研究员。1997年底回国，任我校高等研究中心客座研究员，1998年3月起任研究员。1999年9月和2001年9月，张广铭先后获得香港求......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231750046684009/20110225231750046684009_.html" target="_blank">【人物】张广铭：他的世界静水流深</a></h3>
+              <p class="thnews_jqzy">　　张广铭：他的世界静水流深●新闻中心实习记者 程曦■学者档案张广铭，1963年10月生于北京，1991年获上海交通大学固体物理专业博士学位，此后曾先后在意大利国际理论物理中心和伦敦帝国理工大学等国际著名学术机构担任博士后研究员。1997年底回国，任我校高等研究中心客座研究员，1998年3月起任研究员。1999年9月和2001年9月，张广铭先后获得香港求......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231749109942805/20110225231749109942805_.html" target="_blank">物理系“八十周年铸辉煌”博士生论坛举行</a></h3>
+              <p class="thnews_jqzy">　　物理系“八十周年铸辉煌”博士生论坛举行 【新闻中心讯】清华第120期博士生论坛暨物理系“八十周年铸辉煌”专题博士生论坛于6月3～4日在清华学术基地（石门山庄）举行。物理系党委书记王青、副书记薛平、副系主任吴念乐、张留碗以及各学科的责任教授和博士生导师参加了论坛的报告点评。校研究生院副院长陈皓明致开幕辞。此次论坛共有学术报告35个，博士生导师......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

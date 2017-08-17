@@ -1,0 +1,748 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>“大师与新秀”清华对话</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225626765194323&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9654/index.html' class='navigation_style'>校园写意</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">“大师与新秀”清华对话</h3><p> 4月25日上午，我校90周年校庆系列学术报告之一——“世纪碰撞——‘大师与新秀’对话活动”在理学院学术报告厅举行。吴文俊院士、顾秉林院士、钱易院士，我校本年度研究生学术水平最高奖——研究生第六届“学术新秀”和“学术新秀提名奖”获得者22人以及其他嘉宾、观众约200人参加了报告。本次活动是校庆学术报告中唯一一场由研究生自己举办的学术活动。 </p><p>对话活动由我校公共管理学院副院长傅军教授主持，钱易院士首先宣布活动开始并介绍了到场嘉宾，顾秉林副校长致开幕辞。会上，宣布了我校研究生第六届“学术新秀”和“学术新秀提名奖”获得者名单及其主要研究成果，并举行了简短颁奖仪式。 </p><p>活动的主要环节是学术大师与学术新秀之间的对话。在交流中，各位大师和新秀就一些热点问题发表了自己的看法，话题涉及世界一流大学的标准、清华大学目前与世界一流大学的差距以及未来努力的方向、国内学术水平提高并进一步与世界接轨的问题、以及“诺贝尔奖和中国”等众多领域；各位大师根据自己的成长经历和科研体会，回答了新秀们提出的有关如何把握科学的灵感、如何进行科技创新等困扰大家的难题。在场的同学也积极参与了现场讨论。 </p><p>大师们殷切希望各位同学能够把握清华学术精神，不断提高自身素养，踏实学习，奋发进取，为国家的建设事业奉献自己的青春和智慧。 </p><p>大家反映，本次活动形式新颖，现场气氛热烈，对于许多问题的讨论都取得了深刻的认识和建设性的意见；极大开阔了广大研究生同学的视野，增进了同学对于科学研究思想和方法的认识，激发了广大研究生投身科研和献身学术的热情，为我校的九十周年校庆献上了一份特殊的礼物。（许翼） </p><p>&nbsp;</p><p><font face="黑体">新闻背景：大师简介</font></p><p> <font face="黑体">吴文俊院士</font>：中国科学院数学与系统科学研究院系统科学研究所研究员，中国科学院院士。曾任中国数学会理事长，中国科学院数理学部主任。研究工作涉及拓扑学、数学史、数学机械化、代数几何学及对策论等众多学术领域，尤其对拓扑学做出了奠基性贡献。吴文俊院士2000年荣获首届国家最高科学技术奖。 </p><p><font face="黑体">顾秉林院士</font>：凝聚态物理与计算材料学专家，中国科学院院士，现任清华大学副校长、校学术评定委员会主席、校研究生院院长。顾秉林教授在材料微观结构设计，特别是功能材料的组分、结构与性能关系的研究上，居国际先进水平。其理论受到国内外专家的高度评价。 </p><p><font face="黑体">钱易院士</font>：环境工程系教授，中国工程院院士。现任环境模拟与污染控制国家重点联合实验室主任，兼任全国人大常委会环境与资源委员会委员，中国环境与发展国际合作委员会委员等职。主要研究方向为水污染防治技术及机理。曾主持“城市废水的处理及回用”，“高浓度有机工业废水的厌氧生物处理技术”等多项各界科技攻关课题。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月25日 08:33:27　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2016/20160326095853934675095/20160326095853934675095_.html" target="_blank">中西方大学校长探讨未来高等教育</a></h3>
+              <p>以“东西方教育思想的差异”为主题的大学校长对话会23日下午在博鳌国际会议中心举行。西悉尼大学校长格罗佛、麻省理工学院执行校长格里姆逊、上海交通大学校务委员会主任姜斯宪、北京大学清华大学生命科学联合中心主任饶毅、耶鲁大学校长萨洛韦、清华大学副校长杨斌，围绕“拥有数千年悠久传统的东方教育，有哪些独特的价值和传承”“西方教育思想的精髓”“西学东渐，还是东学西渐”等话题展开深入讨论。本次对话会由凤凰卫视主持人陈鲁豫主持。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2015.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20151103113237289393383/20151103113237289393383_.html" target="_blank">图灵奖得主莱斯利·兰波特作客巅峰对话</a></h3>
+              <p>10月29日晚，第16期“巅峰对话”举行。分布式计算领域专家、2013年图灵奖得主莱斯利·兰波特和清华大学软件学院院长刘云浩组成的专家团队以及来自不同专业的清华学子组成的挑战团队就大数据、分布式计算等计算机领域的进行讨论。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2015.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20151030141948540273303/20151030141948540273303_.html" target="_blank">清华大学举行“巅峰对话” 图灵奖得主畅谈...</a></h3>
+              <p>　　29日，2013年图灵奖得主莱斯利·兰伯特在清华大学人文图书馆报告厅，与清华大学软件学院院长刘云浩等专家进行“巅峰对话”，就大数据、分布式计算等计算机领域热点话题展开讨论，内容还包括未来人工智能在市场经济领域的应用、大数据如何改变经济社会发展等话题。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150629111859207493413/20150629111859207493413_.html" target="_blank">印度尼西亚前总统苏希洛先生与清华学子交流...</a></h3>
+              <p>6月28日上午，印度尼西亚前总统苏希洛先生做客清华大学“对话世界”活动并发表演讲，与来自中国和印度尼西亚的60余名学生亲切交流。演讲中，苏希洛先生为学生们介绍了印度尼西亚在经济、军事等方面的发展情况，重点介绍了与中国交流合作的情况，并对中国和印尼两国关系进行了积极的展望。面对在场的年轻人，他提出了殷切希望，强调要开放思想、包容差异、坚持梦想、适应变化并且有实干精神。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2015.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150603164942144368896/20150603164942144368896_.html" target="_blank">诺贝尔化学奖得主根岸英一做客清华“巅峰对...</a></h3>
+              <p>6月1日下午，清华大学2015年第三场“巅峰对话”在人文社科图书馆大同厅举行。2010年诺贝尔化学奖得主根岸英一（Ei-ichi Negishi）做客本期活动，与清华学子开展了以“过渡金属的魔力（Magic Power of Transition Metals）”为主题的对话。根岸英一现就职于美国普渡大学化学系，此次到访主要为“巅峰对话”的观众讲述过渡金属催化的有机分子偶联反应。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150508111029703664750/20150508111029703664750_.html" target="_blank">诺贝尔生理学或医学奖得主做客清华“巅峰对...</a></h3>
+              <p>5月7日下午，清华大学2015年第二场“巅峰对话”在人文社科图书馆大同厅举行。2009年诺贝尔生理学或医学获得者杰克·绍斯塔克（Jack·Szostak）做客本期活动，与清华学子开展了以“细胞生命的起源（The Origin of Cellular Life）”为主题的对话。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150507110635798366324/20150507110635798366324_.html" target="_blank">【网络直播】巅峰对话：诺贝尔医学奖得主J...</a></h3>
+              <p>2009年诺贝尔生理学或医学奖得主杰克·绍斯塔克，1952年生于伦敦。他曾先后就读于加拿大麦基尔大学和美国康奈尔大学，并于1977年在康奈尔大学获得博士学位。绍斯塔克自1979年开始在哈佛大学医学院任教，并同时任职于美国霍华德·休斯医学研究所。曾获艾伯特·拉斯克基础医学研究奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150331141231779818764/20150331141231779818764_.html" target="_blank">诺奖得主詹姆斯·莫里斯做客清华“巅峰对话”</a></h3>
+              <p>诺贝尔经济学奖获得者詹姆斯·莫里做客2015年首场“巅峰对话”，与清华学子开展“创建绿色经济”主题对话。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2015.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2015/20150128115750512468453/20150128115750512468453_.html" target="_blank">全国马克思哲学青年对话会（2014）在京...</a></h3>
+              <p>　　由中国社会科学院哲学研究所与清华大学哲学系联合主办的“全国马克思哲学青年对话会”（2014）近日在清华大学举行。来自中国社会科学院、清华大学、中国人民大学、南京大学、吉林大学、南开大学、东北师范大学、中央党校等单位的16位青年学者就马克思与黑格尔哲学中的3个经典问题展开讨论。会议试图扩展传统的思存关系视角，从而对黑格尔的经济学、历史理论与辩证法作出更为公正的评价，同时也肯定从哲学史脉络中考察马克思哲学的必要性。而论争的焦点则集中在黑格尔与马克思在历史与现实的问题上是否存在本质差异，以及黑格尔的神秘主义在马克思哲学中是否有残留以及如何被消解等问题。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141230095120911117370/20141230095120911117370_.html" target="_blank">首届全国青年马克思哲学对话会在清华大学举行</a></h3>
+              <p>12月27-28日，由中国社会科学院哲学研究所与清华大学哲学系主办的全国青年马克思哲学对话会在清华大学举行。来自中国社会科学院、清华大学、人民大学、南京大学、吉林大学、南开大学、东北师范大学、中央党校等多所高校和科研机构的16名青年学者，围绕马克思与黑格尔哲学之关系中的三个问题展开讨论。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141222093555153839375/20141222093555153839375_.html" target="_blank">中法人文高峰论坛在清华举行</a></h3>
+              <p>12月18日至19日，由清华大学和法国巴黎索邦大学共同主办的“新世纪的文化对话：欧洲与中国的人文主义暨中法人文高峰论坛”在清华大学举行。本次论坛是为了纪念中国和法国建交五十周年而举行的高规格人文学术论坛。清华大学副校长谢维和出席论坛。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2014.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141215161759893816275/20141215161759893816275_.html" target="_blank">图灵奖得主姚期智做客“巅峰对话”</a></h3>
+              <p>12月12日下午，清华大学第十二期“巅峰对话”在人文图书馆举行。2000年图灵奖得主、清华大学交叉信息学院院长姚期智做客“巅峰对话”，计算机系教授杨士强作为特邀嘉宾一同到场，与清华学子展开一场主题为“创意无界”的对话。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141113123824317292900/20141113123824317292900_.html" target="_blank">诺奖得主科比尔卡、生命学院院长施一公做客...</a></h3>
+              <p>11月8日下午，清华大学2014-2015学年首场“巅峰对话”在人文图书馆大同厅举行。斯坦福教授、2012年诺贝尔化学奖得主布莱恩·克比尔卡（Brain Kobilka）及中科院院士、清华大学生命科学学院院长施一公做客本期“巅峰对话”，与清华学子展开了一场以结构之美为主题的对话。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140929094745197469510/20140929094745197469510_.html" target="_blank">联合国教科文组织全球媒介素养与跨文化对话...</a></h3>
+              <p>9月27日上午，在优美的草原歌声中，联合国教科文组织-联合国文明联盟全球媒介素养与跨文化对话教席大会拉开了帷幕。全国人大教育科学文化卫生委员会主任、清华大学新闻与传播学院院长柳斌杰致开幕词，中华全国新闻工作者协会党组书记翟惠生，联合国教科文组织驻华代办代表Andrea Cairola，仁川亚组委执行委员会主席宋永吉，西南政法大学全球新闻与传播学院院长李珮，新华社对外新闻编辑部主任严文斌等出席会议并致辞。来自美国、加拿大、日本、瑞典、芬兰、巴西、埃及、摩洛哥等15个国家的一百多名媒介教育工作者和学生代表参加大会。此次大会由教席“清华大学国际传播研究中心”主办，为期两天。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140625135304803625229/20140625135304803625229_.html" target="_blank">清华有个“巅峰对话”</a></h3>
+              <p>　　清华大学人文图书馆报告厅，现场变得越来越有火药味。一边坐的是白发苍苍的老者，离他几步之遥的几名学生正在等待他的回答。    　　其中一个学生把质疑的观点重述了一遍：“我认为您经济理论背后所支撑的逻辑并不全面……”</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140624173355762265003/20140624173355762265003_.html" target="_blank">【对话世界】俄罗斯前外长伊万诺夫做客清华</a></h3>
+              <p>6月22日上午，俄罗斯前外交部长伊戈尔·伊万诺夫在清华大学参加了“对话世界”活动。清华大学校务委员会副主任邓卫在活动前会见了伊万诺夫。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140624171356604880865/20140624171356604880865_.html" target="_blank">【对话世界】索拉纳做客清华园与学生面对面</a></h3>
+              <p>第三届世界和平论坛召开期间，专程来到北京参会的欧欧盟前共同外交与安全政策高级代表索拉纳做客清华大学“对话世界”（Dialogue with the world）活动，与清华学生进行了面对面的对话交流。清华大学校务委员会副主任史宗恺参加了活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140624165208829213725/20140624165208829213725_.html" target="_blank">【对话世界】美国前国家安全顾问哈德利做客...</a></h3>
+              <p>6月22日下午，美国前国家安全顾问哈德利做客清华大学“对话世界”活动，与清华学生共同畅谈世界和平与发展。清华大学校务委员会副主任史宗恺在活动后会见了哈德利先生。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140624093237416400464/20140624093237416400464_.html" target="_blank">【对话世界】法国前总理德维尔潘对话清华学子</a></h3>
+              <p>6月22日下午，法国前总理德维尔潘做客清华大学“对话世界”（Dialogue with the world）活动，在人文图书馆大同厅与清华学生进行了面对面的对话交流。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2014.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140623174257408582910/20140623174257408582910_.html" target="_blank">【对话世界】巴基斯坦前总理阿齐兹做客清华</a></h3>
+              <p>6月21日下午，巴基斯坦前总理阿齐兹做客清华大学“对话世界”（Dialogue with the world）活动，与清华学生面对面交流。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140529161806508665795/20140529161806508665795_.html" target="_blank">诺奖得主安东尼·莱格特与清华学子巅峰对话</a></h3>
+              <p>在清华大学“巅峰对话”一周年之际，迎来了量子物理学大师主安东尼·莱格特。他与同学们就量子物理领域的“超导性”和“超流态”等问题进行了探讨。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140424145210824169056/20140424145210824169056_.html" target="_blank">清华举行“中英青年领袖对话”活动</a></h3>
+              <p>月22日，由英国大使馆文化教育处、清华大学和中英青年联合会共同举办的2014年“中英青年领袖对话”活动在清华大学主楼接待厅举行。英国高等教育与科技国务大臣戴维？威列茨（David Willetts）、教育部副部长郝平、清华大学校务委员会主任陈旭出席论坛开幕式。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140414180507796777089/20140414180507796777089_.html" target="_blank">诺贝尔物理学奖得主罗伊·格劳伯做客“巅峰...</a></h3>
+              <p>4月12日哈佛大学物理学教授、2005年诺贝尔物理学奖获得者罗伊·格劳伯做客巅峰对话，与同学们就光学相干的量子理论进行了探讨分享。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2014.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140411180249910698464/20140411180249910698464_.html" target="_blank">美联储达拉斯分行主席费舍尔做客清华巅峰对话</a></h3>
+              <p>4月8日，2014年度清华大学“巅峰对话”活动第三场在人文图书馆举行，做客嘉宾美联储达拉斯分行主席理查德·费舍尔与同学们畅谈金融之道。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2014/20140327142514495964439/20140327142514495964439_.html" target="_blank">“与信仰对话” 报告会在清华举行</a></h3>
+              <p class="thnews_jqzy">　　&ldquo;与信仰对话&rdquo; 报告会在清华举行来源：科技日报 2014-3-27 贾婧由团中央、中国电信集团联合举办的2014年&ldquo;与信仰对话&bull;飞Young中国梦&rdquo;精品报告进校园活动启动仪式暨首场报告会日前在清华大学举行。据悉，作为团中央和中国电信集团的重点战略合作项目，2013年，双方在全国高校组织开展了&......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140324145117640650830/20140324145117640650830_.html" target="_blank">诺奖经济学得主埃里克·马斯金做客“巅峰对...</a></h3>
+              <p class="thnews_jqzy">　　与诺奖得主畅谈经济之道诺奖经济学得主埃里克&bull;马斯金做客&ldquo;巅峰对话&rdquo;清华新闻网3月25日电（研通社记者梁 潇 刘明明）3月22日上午，2014年度清华大学第二场&ldquo;巅峰对话&rdquo;活动在人文图书馆大同厅举行。哈佛大学经济学教授、&ldquo;机制设计理论&rdquo;创立与发展者、2007年诺贝尔经济学奖得......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140324113731494922044/20140324113731494922044_.html" target="_blank">与信仰对话·飞Young中国梦精品报告进...</a></h3>
+              <p class="thnews_jqzy">　　2014年&ldquo;与信仰对话&bull;飞Young中国梦&rdquo;精品报告进校园启动首场报告会由胡鞍钢教授在清华主讲清华新闻网3月25日电3月20日晚，大礼堂青春洋溢，座无虚席，由团中央、中国电信集团主办，清华大学团委承办的2014年&ldquo;与信仰对话&bull;飞Young中国梦&rdquo;精品报告进校园活动启动仪式暨首场报告会在这......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2014.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140317135052660857571/20140317135052660857571_.html" target="_blank">诺奖得主埃德蒙·费尔普斯与清华学子“巅峰...</a></h3>
+              <p>2014年度清华大学首场“巅峰对话”中，埃德蒙·费尔普斯与清华学子展开了一场关于世界经济与社会发展的对话。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20131213152943324306581/20131213152943324306581_.html" target="_blank">清华大学“巅峰对话”：学生与大师对话科学...</a></h3>
+              <p class="thnews_jqzy">　　清华大学&ldquo;巅峰对话&rdquo;：学生与大师对话科学人生来源：新华网 2013-12-12 周劼人诺贝尔化学奖获得者夏普莱斯日前做客清华大学&ldquo;巅峰对话&rdquo;，作了题为&ldquo;未来化学十年&rdquo;的讲座，并就许多生物化学前沿问题和同学们深入讨论。这已是2013年以来造访&ldquo;巅峰对话&rdquo;的第三位......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131115142608217726061/20131115142608217726061_.html" target="_blank">诺奖得主点评清华学子学术报告 面对面交流</a></h3>
+              <p class="thnews_jqzy">　　诺奖得主点评清华学子学术报告 面对面交流清华大学&ldquo;巅峰对话&rdquo;之挑战大师暨化学化工学术沙龙举行清华新闻网11月15日电（研通社记者盛 阳）11月14日上午，在清华大学人文社科图书馆的大同厅，数十位来自化工系、化学系的师生正在进行着一次别开生面的学术交流活动。活动中，化学系的蔡尚军、化学系的杨斌、化工系的张一飞3位博士生分别作了主题学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2013.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131115135947174893382/20131115135947174893382_.html" target="_blank">诺奖得主夏普莱斯做客“巅峰对话”畅谈未来...</a></h3>
+              <p class="thnews_jqzy">　　大师畅谈&ldquo;未来化学十年&rdquo; 清华学子巅峰挑战诺奖得主巴里&middot;夏普莱斯做客&ldquo;巅峰对话&rdquo;清华新闻网11月15日电（研通社记者陈俊杰 陈志方 孙煦）11月13日下午，清华大学&ldquo;巅峰对话&rdquo;之对话大师活动在人文社科图书馆大同厅举行，2001年诺贝尔化学奖得主巴里&middot;夏普莱......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2013.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130923085140411138421/20130923085140411138421_.html" target="_blank">国际数学大师丘成桐做客“巅峰对话”</a></h3>
+              <p>9月18日下午，清华大学“巅峰对话”活动第四场在人文图书馆大同厅举行，国际数学大师、哈佛大学终身教授、清华大学数学科学中心主任丘成桐做客清华“巅峰对话”，与清华学子展开了一场主题为“几何与自然”的对话。著名数学家、清华大学教授郑绍远作为对话嘉宾受邀参加对话。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2013.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130719162800497898580/20130719162800497898580_.html" target="_blank">巅峰对话：挑战权威 与学术大师对话科学人生</a></h3>
+              <p class="thnews_jqzy">　　挑战权威 走独特的学术之路清华大学推出&ldquo;巅峰对话&rdquo; 与学术大师对话科学人生研通社记者&nbsp;陈陆淼&nbsp;李寅 冯珂 马湘雲 崔恬大学期间，学生基本会形成较为成熟的价值观、人生观、世界观。因此，在这个时期，训练敢于挑战，勇于说不的科研意识是最佳的。研究生阶段，学生对学习自主选择性增强。无论是课程性质，学习时间还是课余活......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130522144523673915129/20130522144523673915129_.html" target="_blank">杨振宁薛其坤做客清华“巅峰对话”</a></h3>
+              <p class="thnews_jqzy">　　清华学子面对面之&ldquo;理论对话实验&rdquo;诺贝尔物理学奖获得者杨振宁 物理系院士薛其坤做客清华&ldquo;巅峰对话&rdquo;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清华新闻网5月22日电（学生记者冯珂 陈陆淼 马湘雲 马逸昕 杨伶媛）5月18日下午，清华大学&ldquo;巅峰对话&rdquo;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130428085036744460841/20130428085036744460841_.html" target="_blank">清华学子对话图灵获得者爱德蒙·克拉克</a></h3>
+              <p class="thnews_jqzy">　　清华学子面对面对话学术大师之图灵获得者爱德蒙&middot;克拉克做客&ldquo;巅峰对话&rdquo;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清华新闻网4月28日电（研通社记者方 文 彭智轩 杜林霏）&nbsp;&nbsp; 4月25日下午，清华大学&ldquo;巅峰对话&rdquo;活动第二场在信息科学技术大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130425145340634274379/20130425145340634274379_.html" target="_blank">诺奖得主埃尔文·内尔做客清华与学生“巅峰...</a></h3>
+              <p>埃尔文·内尔做客“巅峰对话”，与来自清华生命科学院、医学院等多学院的百余名学子对话科学人生。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130412151149436840324/20130412151149436840324_.html" target="_blank">美国加州州长访问清华参加中美能源对话</a></h3>
+              <p>4月11日，美国加州州长杰里·布朗访问清华大学，并参加当天在清华大学举行的中美能源对话活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2013.02</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130227155639694537741/20130227155639694537741_.html" target="_blank">清华教师代表参加“中法法治对话”学术研讨会</a></h3>
+              <p>“中法法治对话”活动是由巴黎政治学院与清华大学法学院联合发起的民间法学学术交流活动。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2012.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120709173149860731696/20120709173149860731696_.html" target="_blank">清华大学获得“与世界对话”活动优秀支持高...</a></h3>
+              <p class="thnews_jqzy">　　清华大学获得&ldquo;与世界对话&rdquo;活动优秀支持高校称号清华新闻网7月9日电近日，在由全国青联主办的&ldquo;首届高校国际交流社团负责人和骨干培训班开班仪式暨&lsquo;与世界对话&rsquo;优秀个人和优秀支持高校表彰大会&rdquo;上，清华大学荣获&ldquo;优秀支持高校&rdquo;称号，清华学生邓喆和李燕茜同学荣获&ldq......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2012/20120514142607277849889/20120514142607277849889_.html" target="_blank">清华绿协学生参加2012“海峡两岸青年环...</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;清华绿协学生参加2012&ldquo;海峡两岸青年环保对话&rdquo;活动清华新闻网5月14日电近日，清华大学学生绿色协会&ldquo;海峡两岸青年环保对话&rdquo;团队赴台湾学习交流。台湾垃圾分类回收经验一直为公众所称道，其垃圾分类回收模式也是大陆许多城市的学习蓝本。绿协此次活动涵盖了围绕垃圾分类处理的交流学习，同时就校园环保社团......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110527155347170553110/20110527155347170553110_.html" target="_blank">欧盟科研与创新委员：努力推进中欧青年的交流</a></h3>
+              <p class="thnews_jqzy">　　2011年&ldquo;与世界对话&rdquo;系列活动在清华开场&nbsp;欧盟科研与创新委员：努力推进中欧青年科学与人文交流清华新闻网5月27日电（学通社记者贾思雪）5月25日上午，欧盟委员会科研与创新委员梅尔&middot;乔戈凎-昆（Maire Geoghegan-Quinn）女士来到清华大学，与现场100多名来自清华大学和北京其他高校的中国青年......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110526143054274898399/20110526143054274898399_.html" target="_blank">2011年首场“与世界对话”在清华大学举行</a></h3>
+              <p class="thnews_jqzy">　　全国青联、中国青年报社与中国高校传媒联盟主办2011年首场&ldquo;与世界对话&rdquo;在清华大学举行欧盟科研与创新委员：全球合作才是正途来源：中国青年报 2011-05-26 陶果玉 沈梦菲今天上午，欧盟科研与创新委员梅尔&middot;乔戈凎-昆女士莅临清华大学，与100多名北京各高校大学生记者面对面交流。这是今年&ldquo;与世界对话&r......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2011.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110328151154601922913/20110328151154601922913_.html" target="_blank">斯诺克世界冠军对话清华学子</a></h3>
+              <p class="thnews_jqzy">　　&nbsp;斯诺克世界冠军对话清华学子清华新闻网3月28日电 （学生通讯员 梁馨文）3月27日晚，&ldquo;2011世界斯诺克中国公开赛清华校园行&rdquo;在清华大学旧经管报告厅举行，世界冠军约翰&bull;希金斯及斯诺克顶尖名将斯图亚特&bull;宾汉姆、马丁&bull;古尔德，北京斯诺克商业总监兼北京代表处首席代表迈尔斯&bull;皮尔斯、世......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225609546201105/20110225225609546201105_.html" target="_blank">甘阳清华主讲新人文讲座</a></h3>
+              <p class="thnews_jqzy">　　甘阳清华主讲新人文讲座&nbsp;&nbsp;&nbsp; 【新闻中心讯】4月20日下午，香港大学亚洲研究中心研究员甘阳做客清华园，主讲新人文讲座系列之三“文明的对话与梦想”的第四讲“文明的对话：为什么？说什么？怎么说？”。&nbsp;&nbsp;&nbsp; 讲座在图书馆报告厅举行。讲座一开始，甘阳先生就直截了当地提出他独特的观点。他认为，当前中国学术界很......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231554937524104/20110225231554937524104_.html" target="_blank">胡鞍钢教授与越南驻华大使陈文律对话“中越...</a></h3>
+              <p class="thnews_jqzy">　　胡鞍钢教授与越南驻华大使陈文律对话“中越两国改革开放的比较”【新闻中心讯 记者 顾淑霞】3月23日中午，我校公共管理学院胡鞍钢教授和越南社会主义共和国驻我国大使陈文律先生受邀来到“清华环球国际对话”活动，围绕“中越两国改革开放的比较”的主题举行了国际对话，就苏联模式的反思、中越两国改革开放的进程与特点以及面临的问题与挑战等话题进行了充分的交流与探讨。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231505046391805/20110225231505046391805_.html" target="_blank">英国剑桥大学校长和清华大学校长对话 大学...</a></h3>
+              <p class="thnews_jqzy">　　英国剑桥大学校长和清华大学校长对话 大学要培养治国之才（附图）环球时报  2004-9-8&nbsp;&nbsp;&nbsp;第二届中外大学校长论坛2004年8月在北京召开，与会的中外各著名高校的校长就“大学发展战略规划”等话题进行交流。其间我们邀请到了英国剑桥大学校长爱莉森·理查德教授和中国清华大学校长顾秉林教授，请两位校长就世界一流大学的建设、当前需要培......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231504203666082/20110225231504203666082_.html" target="_blank">“中法历史学家对话”学术研讨会在我校举行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档“中法历史学家对话”学术研讨会在我校举行 9月4日，我校历史系与法国人文社会科学中心联合主办的“中法历史学家对话”学术研讨会在我校举行。此次会议主题为“世界历史新视角”，中法双方各3名历史学家就“时间与历史”、“苏联社会史”、“物质文化史”等3个专题作了6场主题报告。来自法国国家社会科学高等研究院、法国远东学院的法国学者和清华大学、北京大学、中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2004.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231455640711951/20110225231455640711951_.html" target="_blank">对话北大清华校长：高校人事制度改革执行难</a></h3>
+              <p class="thnews_jqzy">　　对话北大清华校长：高校人事制度改革执行难文汇报  2004-8-8  吴筠&nbsp;&nbsp;&nbsp;文/本报驻京记者 吴筠&nbsp;&nbsp;&nbsp;北京大学校长许智宏：&nbsp;&nbsp;&nbsp;关于媒体报道北大研究生入学要取消笔试的说法，是记者曲解了我的意思。至少在目前阶段，笔试还具有相对的公正性。&nbsp;&nbsp;&nb......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2002.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231304703347689/20110225231304703347689_.html" target="_blank">北电网络CTO对话清华“未来CXO”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document北电网络CTO对话清华“未来CXO”（新浪网 2002年06月25日）6月21日晚上，清华大学理学楼礼堂举行了一场别开生面的对话。北电网络首席技术官(CTO)马福德(Greg Mumford)先生在这里与众多志向远大的清华学子—未来的CXO们一起探讨未来高科技的发展前景和青年学生职业发展的机遇。马福德首先向清华学子介......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355390862658/20110225225355390862658_.html" target="_blank">“大师与新秀”清华对话</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“大师与新秀”清华对话4月25日上午，我校90周年校庆系列学术报告之一——“世纪碰撞——‘大师与新秀’对话活动”在理学院学术报告厅举行。吴文俊院士、顾秉林院士、钱易院士，我校本年度研究生学术水平最高奖——研究生第六届“学术新秀”和“学术新秀提名奖”获得者22人以及其他嘉宾、观众约200人参加了报告。本次活动是校庆学术报告......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

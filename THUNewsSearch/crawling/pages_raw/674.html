@@ -1,0 +1,1098 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>江泽民：在庆祝清华大学建校90周年大会上的讲话</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225354687788197&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9648/index.html' class='navigation_style'>头条新闻</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">江泽民：在庆祝清华大学建校90周年大会上的讲话</h3><p align="center"> (新华网 2001.04.29 20:13:30) </p><p align="center">江泽民 </p><p>老师们，同学们，同志们，朋友们： </p><p>今天，清华大学校园里春光明媚，万物更新，充满着蓬勃朝气。来到你们中间，我仿佛年轻了许多，心情特别高兴。 </p><p>首先，我代表党中央、国务院，并以我个人的名义，向清华大学全体师生员工和海内外校友，表示热烈的祝贺！向参加庆典的海内外嘉宾，表示诚挚的欢迎！向全国高等院校的师生员工和广大从事教育工作的同志们，致以亲切的问候！ </p><p>清华大学建校九十年来，随着时代的步伐前进，发扬 “自强不息，厚德载物”校训的精神，为祖国培养了一批又一批人才。清华的广大师生心系祖国和人民，为祖国科学教育事业的发展，为中华民族的解放和振兴作出了重要贡献。 </p><p>清华大学有着光荣的历史，涌现了许多可歌可泣的杰出人物。闻一多先生横眉冷对反动派，宁死不屈，表现了 “生当作人杰，死亦为鬼雄”的高风亮节。朱自清先生写出了《荷塘月色》、《背影》等清新淡雅的著名文章，他铁骨铮铮，一身正气，宁肯饿死，也不领美国的救济粮。毛泽东同志说：“我们应当写闻一多颂，写朱自清颂，他们表现了我们民族的英雄气概。”新中国成立后，清华大学更是人才辈出。国家表彰的为“两弹一星”作出突出贡献的二十三名科学家，其中有十四名曾在清华大学学习和工作过。他们隐姓埋名，顽强拼搏，以自己的智慧、热血和生命谱写了一曲曲感人的爱国主义之歌。在我国革命、建设和改革的各个历史时期，许许多多的清华人，响应党和人民的召唤，在各条战线上艰苦奋斗，为祖国和人民建功立业。他们是清华大学的光荣，也是中国知识分子的骄傲！ </p><p>实践证明，牢固树立为祖国和人民而奋斗的理想，并坚韧不拔地为实现这种理想而奋斗，不仅不会限制优秀人才的个性和才能的发展，而且恰恰相反，只有在这种火热的奋斗中，优秀人才的聪明才智才能更加充分地发挥出来，他们的生命价值才能更加完美地展现出来。一切有志的青年，只有走这条道路，才能对祖国和人民大有作为。 </p><p>纵观世界，经济全球化正在深入发展，科技进步日新月异，综合国力竞争日益激烈。科学技术的重要性从来没有像现在这样突出。科学技术越来越显示出第一生产力的巨大作用。我们必须坚持实施科教兴国战略，不断提高全民族的思想道德素质和科学文化水平。 </p><p>到本世纪中叶，我们要基本实现社会主义现代化，实现中华民族的伟大复兴。离开科学教育事业的发展，离开全民族科学文化水平的提高，这一光荣而艰巨的任务是不可能完成的。大学应该成为科教兴国的强大生力军。要继续提高高等教育的质量，加快高等教育事业的发展，努力在全国建设若干所具有世界先进水平的一流大学。清华大学提出要建设成世界一流大学。希望你们向着这个目标不懈努力。 </p><p>一流大学应该坚持正确的办学思想，注重形成优秀的办学传统，形成鲜明的办学风格，发展优势学科，努力建设一支高素质、高水平的教师队伍，为国家和民族的兴旺发达作出贡献。 </p><p>一流大学应该站在国际学术的最前沿，紧密结合先进生产力的发展要求，依托多学科的交叉优势，努力进行理论创新、制度创新、科技创新，特别要抓好科技的源头创新，并推动科技成果加速转化为现实生产力。 </p><p>一流大学应该成为继承传播民族优秀文化的重要场所和交流借鉴世界进步文化的重要窗口，成为新知识、新思想、新理论的重要摇篮，努力创造和传播新知识、新理论、新思想，不断促进社会主义文化的发展。 </p><p>一流大学应该成为培养人才的重要基地，不断为祖国为人民培养出具有正确的世界观、人生观、价值观，具有创造精神和实践能力的全面发展的人才。 </p><p>一个国家的大学水平如何，从一个方面反映着这个国家科技文化发展的水平，也是这个国家综合国力的重要体现。我国建设具有世界水平的一流大学，需要党和政府以及全社会的大力支持，需要优化配置和充分利用教育资源，更需要广大大学师生员工的艰苦努力。 </p><p>中国要实现繁荣富强，中华民族要实现伟大复兴，中国人民要对人类作出更大贡献，必须培养和造就千千万万的人才。要做到这一点，教育战线上的同志们责任尤为重大啊！党和国家殷切希望你们履行好这一光荣的责任。 </p><p>这里，我想向在座的大学生，并通过你们向全国的大学生提出几点希望。 </p><p>从二十世纪进入二十一世纪，你们是承前启后、继往开来的重要一代。我国现代化建设的第三步战略目标将在你们这一代手中实现。你们树立什么样的理想，学到什么样的知识，具有什么样的能力，对于祖国和民族的未来关系重大。你们要成为祖国和人民需要的人才，既要靠老师们的辛勤培育，更要靠自己的刻苦努力。 </p><p>希望你们成为理想远大、热爱祖国的人。始终以国家富强和人民幸福为己任，坚定建设有中国特色社会主义的信念。闻一多先生说：“诗人主要的天赋是‘爱’，爱他的祖国，爱他的人民。”要成为一个有志和有为的青年，爱祖国、爱人民是首要的要求。 </p><p>希望你们成为追求真理、勇于创新的人。马克思说过，在科学上没有平坦的大道，只有不畏劳苦沿着陡峭山路攀登的人，才有希望达到光辉的顶点。要热爱科学，崇尚科学精神，特别要善于从马克思主义理论中汲取营养，树立科学的世界观，把握正确的方法论，努力做科学探索和创新的先锋。 </p><p>希望你们成为德才兼备、全面发展的人。要努力使自己既具有优良的思想政治素质，又具有过硬的科学文化本领，既有强健的体魄，又有健全的心智。全面认识自己、提高自己，不断在学习中增长知识，不断在人生旅途中陶冶情操，不断在社会实践中磨炼意志，为承担起建设祖国的神圣职责做好一切准备。 </p><p>希望你们成为视野开阔、胸怀宽广的人。要学会以宽广的眼光观察中国，观察世界，善于用中华文明的优秀传统和世界文明的先进成果来丰富自己。要坚持向历史和现实学习，向人民和社会学习，既勇于开拓，又谦虚谨慎，善于在集体的奋斗中开创新的事业。</p><p> 希望你们成为知行统一、脚踏实地的人。认知只有赋之实践，才具有彻底的意义。古人说：“道虽迩，不行不至；事虽小，不为不成。”你们一定要发扬从自己做起、从现在做起的精神，既富于崇高理想，又始终脚踏实地，诚诚恳恳地为祖国和人民做好每一件有意义的事情。 </p><p>“长江后浪推前浪，世上新人换旧人。”这是一条不可抗拒的客观规律。我相信，在祖国改革开放和现代化建设的广阔舞台上，年轻一代一定会干得很好，一定能创造出无愧于时代和人民的业绩。 </p><p>中华民族的未来是美好的！</p><p> 中国青年的未来也是美好的！ </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月29日 13:42:58　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150713170030172928261/20150713170030172928261_.html" target="_blank">邱勇：追逐远大梦想 肩负时代使命</a></h3>
+              <p>　　这些天，我总能看见你们在校园的各个角落拍照留影，你们也一定在回忆这四年难忘的时光。每一届学生都有特殊的校园经历，在你们的回忆中一定有这样的一幕——你们在新清华学堂观看话剧《马兰花开》时，很多人都落泪了，你们都被“两弹元勋”邓稼先学长以身许国的精神所感动，并真切地感受到了责任的含义和分量。    　　在这里，我想告诉大家与飞行有关的另一位校友——1928年考入清华土木系的沈崇诲学长。毕业后，他投笔从戎，成为一名战斗机飞行员。1937年8月18日淞沪会战中，在战机突发故障后，他毅然驾机撞向日军旗舰，壮烈捐躯，用26岁的年轻生命践行了抗日救亡的崇高使命。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150326093951361475472/20150326093951361475472_.html" target="_blank">邱勇在清华大学教师干部大会上的讲话</a></h3>
+              <p>刚才，组织上宣布了中央的决定，让我接任清华大学校长。潘立刚副部长、袁贵仁部长、姜志刚部长都作了重要讲话，提出了希望和要求。我衷心感谢各级领导、全校师生员工和老领导老同志的信任与支持！我深知清华校长这副担子责任重大，虽然个人的学识能力有限，但必定全心全力而为，不负重托、不辱使命，和全校师生员工一起，为清华大学新百年的发展而不懈奋斗。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141118152141676380587/20141118152141676380587_.html" target="_blank">清华举行习近平系列重要讲话精神辅导员学习...</a></h3>
+              <p>11月16日，清华大学习近平总书记系列重要讲话精神辅导员学习班总结大会在大礼堂举行。校党委副书记史宗恺在会上作了总结报告，全校学生辅导员、研究生德育工作助理和学生系统青年教师，以及学生部、研究生工作部、校团委等部处负责人等500余人参加了总结大会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2014.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20141114191529858983604/20141114191529858983604_.html" target="_blank">清华举办干部学习班学习四中全会和习近平系...</a></h3>
+              <p>11月5日至6日，清华大学举办全校干部学习班，深入学习党的十八届四中全会精神和习近平总书记系列重要讲话精神，这是我校继5月份举办习近平总书记系列重要讲话精神全校干部专题学习班之后举办的又一次全校干部集中学习活动。校党委书记陈旭作开班动员和总结讲话，校长陈吉宁在学习班总结会上讲话，校党委常务副书记、副校长邱勇主持学习班总结会，校党委副书记史宗恺主持有关学习辅导报告会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2014.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20141017173341035209306/20141017173341035209306_.html" target="_blank">北京高校学习贯彻习近平总书记讲话精神</a></h3>
+              <p>　　日前，北京高校学习贯彻“习近平总书记在党的群众路线教育实践活动总结大会上的讲话精神”座谈会召开。市委常委、教育工委书记苟仲文出席并讲话。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140911135140928711049/20140911135140928711049_.html" target="_blank">争做学生喜欢和敬佩的好老师</a></h3>
+              <p>　　9月9日，习近平总书记在北京师范大学与师生座谈时的重要讲话发表后，在全国教育系统广大师生中引起强烈反响。师生们表示，深刻领会讲话精神，争做党和人民满意的好老师。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140904084450879750331/20140904084450879750331_.html" target="_blank">校长陈吉宁在2014级研究生开学典礼上的...</a></h3>
+              <p>同学们，在今后几年的校园生活中，你们的人生之舟将驶入一段全新的旅程，探索创造新知，培育职业素养，在这里完成青春的再一次蜕变。你们的思想将更加成熟，羽翼会更加丰满。你们将不再只是既有思想、知识、技能的学习者、接受者，更将成为新思想、新知识、新技能的创造者、贡献者。同学们，今后几年也可能是你们人生最后一个阶段的系统学习，你们自然会更多地思考自己未来的工作和职业的选择，更现实地考虑自身的发展方向和人生目标，这可能会让你们更加关注身边的、眼前的、局部的事物。这是一个迷茫、探索和“作茧”的过程。我希望你们在这一过程中，勇于突破自己，超越自己，化茧成蝶，收获新的成长。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2014.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140903153730075181660/20140903153730075181660_.html" target="_blank">大学校长的“开学激励”：戒骄戒躁 争做“...</a></h3>
+              <p>　　近日，各高校陆续迎来2014年新生报到。作为开学第一课，校长讲话多被看作是学校精神与个性的体现。盘点今年各大高校的校长寄语，风格不一，或引经据典，藏言古诗辞赋中；或激昂鼓舞，灌注人生箴言；或风趣幽默，用大白话阐述观点。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2014/20140526161249534891124/20140526161249534891124_.html" target="_blank">高校深入学习贯彻习近平总书记五四重要讲话...</a></h3>
+              <p>　　5月4日上午，习近平总书记在参加北京大学师生座谈时发表重要讲话，对传承五四精神、培育和践行社会主义核心价值观、创建一流大学等一系列问题做了深刻论述，在高校中引起强烈反响。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2014.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140506104237444693057/20140506104237444693057_.html" target="_blank">清华大学团委师生学习习近平“五四”重要讲...</a></h3>
+              <p>5月5日上午，校团委召开学习习近平总书记“五四”重要讲话精神座谈会，校团委书记赵博主持会议，校团委教师及各部门学生骨干30余人参会。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2014.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2014/20140121142521009437875/20140121142521009437875_.html" target="_blank">陈吉宁在2014年第一次研究生毕业典礼上...</a></h3>
+              <p>今天，是冬日清华园里最喜庆的日子。我们在这里举行仪式，庆祝1291名同学圆满完成学业。首先，我要向获得博士、硕士学位的各位同学表示衷心的祝贺，向精心指导你们的老师、向坚定支持你们的亲友致以诚挚的感谢！</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130829091723147689657/20130829091723147689657_.html" target="_blank">清华经管学院师生学习《朱镕基上海讲话实录》</a></h3>
+              <p class="thnews_jqzy">　　清华经管学院举行师生学习《朱镕基上海讲话实录》座谈会清华新闻网8月29日电8月23日，作为清华经管学院30年院庆系列活动之一，清华经管学院组织召开了师生学习《朱镕基上海讲话实录》座谈会，清华大学副校长谢维和出席座谈会。座谈会上，与会师生纷纷交流读书感想和体会，气氛隆重热烈。谢维和充分肯定了经管学院在《朱镕基上海讲话实录》出版之际，召集院里领导、骨......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2013.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2013/20130828121237773120366/20130828121237773120366_.html" target="_blank">清华师生集中学习《朱镕基上海讲话实录》</a></h3>
+              <p class="thnews_jqzy">　　清华师生集中学习《朱镕基上海讲话实录》来源：光明网 2013-8-27 邓晖清华师生学习《朱镕基上海讲话实录》座谈会日前在该校经济管理学院举行，本次座谈会也是清华经管学院30年院庆系列活动之一。清华大学副校长谢维和、清华经管学院院长钱颖一、党委书记杨斌以及学院师生和校友代表参加会议并发言。钱颖一指出，从1984年经管学院建院朱镕基教授担任首任院长的近......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130514090056810987068/20130514090056810987068_.html" target="_blank">清华党委中心组学习习近平总书记五四重要讲...</a></h3>
+              <p class="thnews_jqzy">　　清华党委中心组专题学习习近平总书记五四重要讲话精神清华新闻网5月14日电（记者黄岩）5月9日，校党委理论学习中心组集体学习习近平总书记在今年五四青年节同各界优秀青年代表座谈时并发表的重要讲话精神。校党委书记胡和平、校长陈吉宁等校党委理论学习中心组成员参加学习。图为胡和平讲话。记者苑 洁摄胡和平指出，总书记的讲话深入阐述了中国梦的深刻内涵和中国梦与青年......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2013.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130510151150440976276/20130510151150440976276_.html" target="_blank">清华师生学习习近平总书记五四讲话精神</a></h3>
+              <p class="thnews_jqzy">　　清华师生学习习近平总书记五四讲话精神清华新闻网5月10日电（通讯员李娴婧）5月9日上午，清华师生学习习近平总书记五四讲话精神座谈会在校团委大会议室举行。在场师生结合自身实际畅谈&ldquo;中国梦&rdquo;，从不同角度分享各自的学习心得。校党委研工部副部长黄晟认为，在实现中华民族伟大复兴的进程中，是否能意识到自己在历史进程中担负的使命和责任，是否......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2012.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120910162144116231339/20120910162144116231339_.html" target="_blank">《朱镕基讲话实录》（线装本）首发式举行</a></h3>
+              <p class="thnews_jqzy">　　《朱镕基讲话实录》（线装本）首发式举行来源：人民日报 2012-09-09 颜珂《朱镕基讲话实录》（线装本）首发式8日上午在长沙举行。《朱镕基讲话实录》（线装本）由中南传媒岳麓书社出版，一盒四函，每函四册，每册约95简页（190面），繁体竖排，全手工装订，内容与人民出版社2011年9月出版的《朱镕基讲话实录》一至四卷相一致，是继平装本、精装本之后，出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2012.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120629143452256668971/20120629143452256668971_.html" target="_blank">化工系举行学习习近平回系视察讲话精神座谈会</a></h3>
+              <p class="thnews_jqzy">　　化工系举行学习习近平副主席回系视察讲话精神座谈会清华新闻网6月29日电（通讯员张 翀)6月26日下午，化工系在工物馆举行学习中共中央政治局常委、国家副主席习近平回系视察时的重要讲话精神座谈会。费维扬院士、陈丙珍院士和化工系教师代表20余人参加座谈会。与会教师共同回顾了习近平副主席回化工系视察工作时向教师代表发表的讲话和与教师们交流的点点滴滴，畅谈了学习习......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2012.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120521153529258724089/20120521153529258724089_.html" target="_blank">首都高校师生深入学习贯彻胡总书记“五四”...</a></h3>
+              <p class="thnews_jqzy">　　首都高校师生深入学习贯彻胡锦涛总书记&ldquo;五四&rdquo;讲话来源：北京日报 2012-05-20 王东亮胡锦涛总书记在纪念中国共青团成立90周年大会上的讲话，为广大青年指明了奋斗的方向，在高校师生中引起强烈反响。18日，首都高校召开学习贯彻胡锦涛总书记讲话精神座谈会，交流学习心得和体会，共同探讨服务祖国、服务人民的具体行动。清华大学党委副......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120425140246491474079/20120425140246491474079_.html" target="_blank">清华举行胡锦涛总书记清华百年校庆重要讲话...</a></h3>
+              <p class="thnews_jqzy">　　清华大学举行胡锦涛总书记清华百年校庆重要讲话发表一周年座谈会来源：人民网 2012-04-24 赵婀娜胡锦涛总书记在庆祝清华大学建校100周年大会上的重要讲话发表一周年之际，清华大学举行座谈会，重温胡锦涛总书记的重要讲话，交流全校师生学习贯彻胡锦涛总书记重要讲话的经验和体会，进一步推动全校师生贯彻落实胡锦涛总书记重要讲话精神。清华大学校长陈吉宁在座谈......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2012.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2012/20120425135558402646380/20120425135558402646380_.html" target="_blank">不负使命 争创世界一流高校</a></h3>
+              <p class="thnews_jqzy">　　不负使命 争创世界一流高校清华大学纪念胡锦涛总书记在清华百年校庆重要讲话发表一周年来源：中国教育报 2012-04-25 柴葳 翁小平今年4月24日，是胡锦涛总书记在清华大学百年校庆上发表重要讲话一周年。为了贯彻落实胡锦涛总书记的重要讲话精神，清华大学今天下午召开座谈会，纪念胡锦涛总书记重要讲话发表一周年。&ldquo;胡锦涛总书记的重要讲话是今后一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110826154539286255615/20110826154539286255615_.html" target="_blank">顾秉林校长在2011级研究生新生开学典礼...</a></h3>
+              <p class="thnews_jqzy">　　树立学术理想 恪守学术道德──在清华大学2011级研究生新生开学典礼上的讲话（2011年8月26日）清华大学校长 顾秉林同学们：雨后的清华园，美丽而清新。今天，我们在这里隆重举行2011级研究生新生开学典礼，迎接清华大学跨入新百年的第一届研究生。首先，请允许我代表学校，向各位同学表示热烈的欢迎！同时，向一直支持和帮助大家学习进步的师长和亲友们，表示诚......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2011.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110825093231086244953/20110825093231086244953_.html" target="_blank">顾秉林在清华2011级本科生新生开学典礼...</a></h3>
+              <p class="thnews_jqzy">　　弘扬清华精神 践行人文日新──在清华大学2011级本科生新生开学典礼上的讲话（2011年8月18日）清华大学校长 顾秉林亲爱的同学们：在清华刚刚欢度百年华诞之后，你们作为清华跨入新百年的第一届本科生，即将开始大学学习生活。首先，请允许我代表学校，向刚刚入学的全体新同学，表示衷心的祝贺和热烈的欢迎！同时，也向培育同学们成长的中小学老师和信任清华、支持清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110704134423158259817/20110704134423158259817_.html" target="_blank">首都高校师生表示 总书记的讲话精神为我们...</a></h3>
+              <p class="thnews_jqzy">　　首都高校师生表示 总书记的讲话精神为我们指明了方向来源：光明日报 2011-07-02激动和振奋之情今天在首都高校师生间传递。在以各种方式收听、收看了庆祝中国共产党成立90周年大会实况直播后，胡锦涛总书记的重要讲话立即在高校掀起了一股学习的热潮。中国人民大学师生集体收看了庆祝中国共产党成立90周年大会的电视直播。看完直播，大家抑制不住心中的激动，热烈......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2011.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110701141101234113726/20110701141101234113726_.html" target="_blank">清华党委常委扩大会学习李长春同志重要讲话...</a></h3>
+              <p class="thnews_jqzy">　　清华召开党委常委扩大会学习李长春同志重要讲话精神清华新闻网7月1日电&nbsp; 6月30日，中共中央政治局常委李长春来到清华大学，与师生们亲切交谈，共同庆祝党的生日，并发表了重要讲话。7月1日上午，清华大学召开党委常委扩大会，集中学习李长春同志来校视察时的重要讲话精神。图为党委常委扩大会现场。 记者苑 洁摄校党委书记胡和平在出席6月30日下午举行的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110517125959592346555/20110517125959592346555_.html" target="_blank">袁驷：科学选才 公平公正 全面提高高等教...</a></h3>
+              <p class="thnews_jqzy">　　科学选才 公平公正全面提高高等教育质量&mdash;&mdash;在北京市招生工作电视电话会议上的讲话清华大学副校长 袁驷2011年5月12日尊敬的各位领导、同志们：《国家中长期教育改革和发展规划纲要（2010-2020年）》中指出，要&ldquo;以考试招生制度改革为突破口，克服一考定终身的弊端，推进素质教育实施和创新人才培养。按照有利于科学选拔人才、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110509144953043663746/20110509144953043663746_.html" target="_blank">邓卫：提高高等教育质量的动员令</a></h3>
+              <p class="thnews_jqzy">　　提高高等教育质量的动员令来源：光明日报 2011-05-09胡锦涛总书记在庆祝清华大学建校100周年大会上发表的重要讲话，是指导新时期我国教育事业科学发展特别是高等教育改革发展的一篇纲领性文献。讲话站在国家现代化建设的战略高度，发出了全面提高高等教育质量的动员令。一、不断提高质量是高等教育的生命线新中国成立60多年特别是改革开放30多年来，我国发......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110505161528068689646/20110505161528068689646_.html" target="_blank">王希：把创新思维与社会实践紧密结合</a></h3>
+              <p class="thnews_jqzy">　　清华大学热能工程系博士生王希：把创新思维与社会实践紧密结合来源：中国教育报 2011-05-04在清华园学习了9年之后，我有幸成为了新百年的第一届毕业生，在毕业前夕参加了在人民大会堂举行的庆祝清华大学建校100周年大会。胡总书记在讲话中对我们和全国青年学生提出了三点希望。这三点希望，与我们的发展息息相关，并为我们指明了青年学生干事创业的方向，必将成为......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2011.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110505161319688879273/20110505161319688879273_.html" target="_blank">吴海军：我要在实践中磨炼自己</a></h3>
+              <p class="thnews_jqzy">　　清华大学水利水电工程系本科生吴海军：我要在实践中磨炼自己来源：中国教育报 2011-05-044月24日，我有幸参加了在人民大会堂举行的庆祝清华大学建校100周年大会。会上，胡锦涛总书记发表了重要讲话，让我备受鼓舞，也异常振奋。胡总书记对清华学生和全国青年学生提出了三点希望，这让我深切感受到了自己身上的责任和使命，而其中一点是希望我们把创新思维和社会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110427095333771474798/20110427095333771474798_.html" target="_blank">清华举行学习胡锦涛总书记重要讲话精神学生...</a></h3>
+              <p class="thnews_jqzy">　　清华举行学习胡锦涛总书记重要讲话精神学生座谈会清华新闻网4月27日电&nbsp; 4月24日下午，清华大学学生学习胡锦涛总书记在庆祝清华大学建校100周年上的重要讲话精神座谈会在校团委大会议室召开。校党委学生部部长、校团委书记过勇，研究生工作部部长张小平及三十余位各院（系）学生代表参加座谈会。会上，同学们纷纷发言，畅谈学习体会。在庆祝大会上作为学生代......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10244/2011/20110425173448919612021/20110425173448919612021_.html" target="_blank">清华师生学习胡锦涛在庆祝清华建校100周...</a></h3>
+              <p class="thnews_jqzy">　　在伟大的时代里大有作为清华师生学习胡锦涛在庆祝清华建校100周年大会上的讲话精神来源：中国教育报 2011-04-25&nbsp;&ldquo;我觉得备受鼓舞，现在心情依然很激动。&rdquo;在人民大会堂聆听胡锦涛总书记的讲话并作为学生代表发言，清华大学汽车工程系研究生齐兴达深深地感受到总书记对青年学生的嘱托，&ldquo;作为清华学子，我们责任重大。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232522734828493/20110225232522734828493_.html" target="_blank">顾秉林在2010年夏季研究生毕业典礼上的...</a></h3>
+              <p class="thnews_jqzy">　　面向世界 不懈创新──在清华大学2010年夏季研究生毕业典礼暨学位授予仪式上的讲话（2010年7月20日）清华大学校长、学位评定委员会主席 顾秉林老师们、同学们：今天，我们在这里隆重举行清华大学2010年夏季研究生毕业典礼暨学位授予仪式。这是一个欢庆的日子，更是一个庄严而值得纪念的时刻。从今天起，你们将跨入人生的一个崭新阶段。请允许我代表学校，向各位毕业......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232322984321887/20110225232322984321887_.html" target="_blank">顾秉林校长在清华大学2009级研究生新生...</a></h3>
+              <p class="thnews_jqzy">　　志向远大 视野开阔 学风严谨──在清华大学2009级研究生新生开学典礼上的讲话（2009年9月4日）校长 顾秉林同学们：在国庆60周年前夕，2009级研究生新同学从四面八方走进清华园。首先，请允许我代表学校，对各位同学表示热烈的欢迎和衷心的祝贺！作为研究型大学的重要特点之一，我校每年招收研究生的规模已大大超过本科生。今年我校共录取各类研究生4700余......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232316062752072/20110225232316062752072_.html" target="_blank">顾秉林在清华大学2009年本科生毕业典礼...</a></h3>
+              <p class="thnews_jqzy">　　牢记责任 独立思考 诚信为人──在清华大学2009年本科生毕业典礼暨学位授予仪式上的讲话（2009年7月15日）清华大学校长&nbsp; 顾秉林同学们：毕业的钟声已经响起，你们即将告别大学本科生活，走入新的学习或工作岗位。在此，我首先代表学校，对同学们顺利完成学业，表示热烈的祝贺！向多年来为同学们的成长付出辛勤劳动的教职员工，表示衷心的感谢！也向支持学校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2009.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232226593642543/20110225232226593642543_.html" target="_blank">校长顾秉林：一生践行清华精神</a></h3>
+              <p class="thnews_jqzy">　　一生践行清华精神──在2009年春季研究生毕业典礼暨学位授予仪式上的讲话（2009年1月19日）校长、学位委员会主席 顾秉林老师们、同学们：再过一周，就是牛年春节了。此时此刻，我们举行2009年春季研究生毕业典礼暨学位授予仪式，尤其感到温馨和快乐。首先，请允许我代表学校，向各位即将毕业的研究生，致以最热烈的祝贺！向悉心指导你们的全体导师，以及为研究生培养......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232147859552997/20110225232147859552997_.html" target="_blank">顾秉林：学习叶企孙先生办学思想 培养新时...</a></h3>
+              <p class="thnews_jqzy">　　学习叶企孙先生办学思想 培养新时代拔尖创新人才——在叶企孙先生诞辰110周年纪念大会上的讲话2008年10月11日清华大学校长、中国科学院院士 顾秉林尊敬的各位来宾，老师们、同学们，今天，我们隆重集会，纪念我国现代科学技术的奠基人之一、杰出的教育家和伟大的爱国者叶企孙先生110周年诞辰。首先，请允许我代表清华大学，向光临纪念大会的各位领导、各位来宾和叶企......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2008.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232130796957803/20110225232130796957803_.html" target="_blank">校长顾秉林：记住2008：更快、更高、更强</a></h3>
+              <p class="thnews_jqzy">　　记住2008：更快、更高、更强──在2008级本科生新生开学典礼上的讲话（2008年8月29日）清华大学校长 顾秉林同学们：在欢庆奥运成功的喜庆气氛中，来自全国各地的新同学，带着美好憧憬走入清华园，开始一段新的人生历程。对于同学们来讲，以前是“清华在梦中”，现在是“梦在清华里”。在此，我首先代表学校，向大家经过多年的刻苦攻读终于梦圆清华，表示衷心的祝贺和......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2008.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232117109221306/20110225232117109221306_.html" target="_blank">校友陈国诚：服务人民群众 实现人生价值</a></h3>
+              <p class="thnews_jqzy">　　服务人民群众 实现人生价值——在2008年清华大学本科生毕业典礼暨学位授予仪式上的讲话2008年7月5日陈国诚陈国诚，海南黎族人，1991年毕业于我校土木系，现任海南省五指山市副市长，海南省政协委员，民主建国会海南省委常委，第十一届全国人大代表。尊敬的各位老师、亲爱的同学们：我刚从祖国的天涯海角——海南赶来，荣幸地参加今天同学们的毕业典礼，在这激......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2008.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232117078564674/20110225232117078564674_.html" target="_blank">校长顾秉林：做可堪时代大任的清华人</a></h3>
+              <p class="thnews_jqzy">　　做可堪时代大任的清华人──在清华大学2008年本科生毕业典礼暨学位授予仪式上的讲话（2008年7月5日）校长 　顾秉林同学们：七月的清华园，果实盈盈，别情依依。四年前，你们步入清华园时，奥运圣火正在雅典熊熊燃烧；弹指一挥间，北京即将迎来世人瞩目的奥运盛会，你们也将踏上新的征程。在此之际，请允许我代表学校，向同学们表示热烈的祝贺！向多年来为同学们的成长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2008.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232116937951138/20110225232116937951138_.html" target="_blank">校长顾秉林：坚定信念，勇担重任</a></h3>
+              <p class="thnews_jqzy">　　坚定信念 勇担重任──在2008年夏季研究生毕业典礼暨学位授予仪式上的讲话（2008年7月5日）校长、学位委员会主席 顾秉林老师们、同学们：在举世瞩目的北京奥运会即将召开之际，同学们圆满完成了研究生学业，将要踏上新的学习或工作征程。首先，请允许我代表学校，向大家表示最热烈的祝贺！同时，向悉心指导研究生的全体导师，以及为学位与研究生教育工作做出贡献的广......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225336906982266/20110225225336906982266_.html" target="_blank">清华师生学习贯彻胡锦涛总书记讲话精神</a></h3>
+              <p class="thnews_jqzy">　　清华师生学习贯彻胡锦涛总书记讲话精神【新闻中心讯】5月3日，在北京大学110周年校庆之际，胡锦涛总书记考察北京大学，并在师生代表座谈会上发表重要讲话。总书记的讲话在清华师生中引起强烈反响，大家通过多种形式深入学习讲话精神。师生们表示，胡锦涛总书记的讲话充分体现了党和国家对教育事业的高度重视，体现了党和国家对广大教育工作者和青年学生的亲切关怀和殷切期望，作......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232047687453125/20110225232047687453125_.html" target="_blank">清华师生学习贯彻胡锦涛总书记讲话精神</a></h3>
+              <p class="thnews_jqzy">　　清华师生学习贯彻胡锦涛总书记讲话精神【新闻中心讯】5月3日，在北京大学110周年校庆之际，胡锦涛总书记考察北京大学，并在师生代表座谈会上发表重要讲话。总书记的讲话在清华师生中引起强烈反响，大家通过多种形式深入学习讲话精神。师生们表示，胡锦涛总书记的讲话充分体现了党和国家对教育事业的高度重视，体现了党和国家对广大教育工作者和青年学生的亲切关怀和殷切期望，作......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232048093885459/20110225232048093885459_.html" target="_blank">首都高校师生深入学习胡锦涛总书记北大讲话...</a></h3>
+              <p class="thnews_jqzy">　　首都高校师生深入学习胡锦涛总书记北大讲话精神5月3日，中共中央总书记胡锦涛到北京大学考察，与师生代表座谈并发表重要讲话，在高校师生中引起强烈反响。日前，教育部党组向各地教育行政部门和高校发出通知，要求教育战线要紧密结合学习贯彻党的十七大精神、深入贯彻落实科学发展观，认真学习贯彻胡锦涛总书记重要讲话精神。按照胡锦涛总书记提出的“四点希望”，提高各级各类学校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232048328718660/20110225232048328718660_.html" target="_blank">牢记嘱托、发奋图强--清华研团委研会召开...</a></h3>
+              <p class="thnews_jqzy">　　牢记嘱托、发奋图强清华研团委研会召开座谈会学习胡锦涛总书记讲话【新闻中心讯 研通社记者 李忠义】5月5号下午，清华大学研究生团委、研会召开座谈会，学习讨论胡锦涛总书记在北京大学师生代表座谈会上的讲话。校党委副书记韩景阳出席会议。来自校研究生团委的苗韧同学说：“总书记的讲话对全国高校的发展提出了整体性的要求。我国现在的人才培养和社会需求还存在差距，校研......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232009484835590/20110225232009484835590_.html" target="_blank">顾秉林：坚定不移地推进世界一流大学建设</a></h3>
+              <p class="thnews_jqzy">　　坚定不移地推进世界一流大学建设－－在清华大学行政领导班子换届干部大会上的讲话2007年12月20日校长 顾秉林同志们：刚才，胡和平同志宣读了国务院和教育部关于我校行政领导班子换届的任免通知。首先让我代表新老班子成员对诸位给予我们的肯定与帮助，向上级领导对我们的信任与支持表示衷心的感谢。下面，我先简要总结上届领导班子的工作。我从2003年抗击非......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232007265680201/20110225232007265680201_.html" target="_blank">清华召开辅导员、德育工作助理就业动员大会</a></h3>
+              <p class="thnews_jqzy">　　清华召开辅导员、德育工作助理就业动员大会【新闻中心讯 摄影 郭海军】12月13日下午，清华大学辅导员、德育工作助理就业动员大会在西阶召开，校党委书记陈希出席并讲话。会议由校党委副书记陈旭主持，学生部、研究生部、校团委、就业指导中心的负责同志以及即将毕业的本科生辅导员、研究生德育工作助理150余人参加会议，各院系党委副书记、学生组组长、研究生组组长也到场参......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232005671469916/20110225232005671469916_.html" target="_blank">党委书记陈希、副校长岑章志等到烟台大学考察</a></h3>
+              <p class="thnews_jqzy">　　党委书记陈希、副校长岑章志等到烟台大学考察【新闻中心讯】12月7日，校党委书记陈希、副校长岑章志一行到烟台大学考察访问。烟台大学是清华大学与北京大学从1984年起联合援助建设的高等学校，现在已经发展成为一所在校生3万多人、学科门类齐全、研究生教育快速发展、科研实力不断增强的省属重点综合性大学。陈希一行参观考察了烟台大学海洋学院、法学院、外语学院、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2007.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231938031377398/20110225231938031377398_.html" target="_blank">陈希：坚持育人为本德育为先</a></h3>
+              <p class="thnews_jqzy">　　坚持育人为本德育为先陈希&nbsp;&nbsp;&nbsp; 在今年教师节前夕，胡锦涛总书记亲切接见了出席全国优秀教师代表座谈会的代表，并发表了重要讲话。胡锦涛总书记的讲话高屋建瓴，内涵深刻，对于推进新时期教育事业的改革发展，具有极其重要的现实意义和深远的历史意义。&nbsp;&nbsp;&nbsp; 胡锦涛总书记在讲话中，再次强调了教育的基础性、先导性、全......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2007.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231931406253826/20110225231931406253826_.html" target="_blank">任革学：教师的天赋在于爱－－在清华大学庆...</a></h3>
+              <p class="thnews_jqzy">　　教师的天赋在于爱－－在清华大学庆祝2007年教师节大会上的发言任革学尊敬的各位领导和老师：大家好！非常荣幸有机会与大家分享航院力33班国防生的成长故事。作为这个班的班主任，我与他们一同成长了四年并经历了许多感动。今年7月17日下午，学校为这一届国防生在庄严的国歌、军歌声中举行了隆重的出征仪式，第二天力33班就有5位同学踏上征程、去遥远的部队报......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2007.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225338046768874/20110225225338046768874_.html" target="_blank">校党委常委扩大会学习胡锦涛总书记的重要讲...</a></h3>
+              <p class="thnews_jqzy">　　校党委常委扩大会学习胡锦涛总书记的重要讲话精神【新闻中心讯 记者 云仲 】9月4日上午，校党委召开常委扩大会，集中学习8月31日胡锦涛总书记在全国优秀教师代表座谈会上的重要讲话精神。校党委书记陈希主持了会议。会上，与会同志认真学习了胡锦涛总书记的讲话，并结合我国教育改革与发展以及学校建设的实际，进行了热烈的讨论。大家一致认为，胡锦涛总书记的讲话是对......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2007.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231928781139639/20110225231928781139639_.html" target="_blank">校党委常委扩大会学习胡锦涛总书记的重要讲...</a></h3>
+              <p class="thnews_jqzy">　　校党委常委扩大会学习胡锦涛总书记的重要讲话精神【新闻中心讯 记者 云仲 】9月4日上午，校党委召开常委扩大会，集中学习8月31日胡锦涛总书记在全国优秀教师代表座谈会上的重要讲话精神。校党委书记陈希主持了会议。会上，与会同志认真学习了胡锦涛总书记的讲话，并结合我国教育改革与发展以及学校建设的实际，进行了热烈的讨论。大家一致认为，胡锦涛总书记的讲话是对......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2007.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231927921436317/20110225231927921436317_.html" target="_blank">顾秉林:清华研究生应努力成为国家需要的拔...</a></h3>
+              <p class="thnews_jqzy">　　努力成为国家需要的拔尖创新人才──在2007级研究生新生开学典礼上的讲话（2007年8月30日）●校长 顾秉林&nbsp;同学们：每年的开学典礼，都是我们最为高兴的时候。一大批新同学来到清华园，开始新的学习生活，使我们感到青春的魅力。今天，2007级的4000多名研究生开始了人生新的征程。首先，我代表全校师生员工，向大家表示热烈的欢迎！研究生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2007.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231925937504877/20110225231925937504877_.html" target="_blank">顾秉林：立志成才 为跻身世界一流大学贡献...</a></h3>
+              <p class="thnews_jqzy">　　立志成才 为跻身世界一流大学贡献力量——在2007级本科新生开学典礼上的讲话2007年8月23日清华大学校长 顾秉林同学们：你们好！今天我们在这里集会，举行庄严隆重的开学典礼，在这标志着你们经过刻苦学习、奋力拼搏，终于成为清华大学新成员的难忘时刻，我代表全校师生员工向你们表示衷心的祝贺和热烈的欢迎！也借此机会，向培育你们健康成长的中学老师和广大家长们......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2007.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231922859531394/20110225231922859531394_.html" target="_blank">校长顾秉林：澹泊明志 宁静致远</a></h3>
+              <p class="thnews_jqzy">　　澹泊明志 宁静致远──在清华大学2007年夏季研究生毕业典礼暨学位授予仪式上的讲话校长 顾秉林2007年7月18日老师们、同学们：每年的夏季，都是一个令人高兴、令人振奋的季节。因为看到一批批学子学有所成，从清华园走向社会，这是我们作为老师最为幸福的时刻。今天，又有四千多名研究生毕业，获得硕士、博士学位。在这个隆重的典礼上，我首先代表学校，向圆满完......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231807687543854/20110225231807687543854_.html" target="_blank">我校党委做出决定认真组织学习《江泽民文选》</a></h3>
+              <p class="thnews_jqzy">　　我校党委做出决定认真组织学习《江泽民文选》【新闻中心讯 记者 云仲】根据中共中央关于学习《江泽民文选》的决定和胡锦涛同志重要讲话精神，近日，我校党委做出决定，要求学校各级党组织和全体共产党员按照党中央的部署，认真学习《江泽民文选》，推动我校党的先进性建设和世界一流大学建设的各项工作。 今年8月，由中共中央文献编辑委员会编辑的《江泽民文选》出版发......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231730734719981/20110225231730734719981_.html" target="_blank">陈希:在清华体育工作会议闭幕式上的讲话</a></h3>
+              <p class="thnews_jqzy">　　在清华大学体育工作会议闭幕式上的讲话● 陈 希历时20天的全校体育工作会议今天即将闭幕，通过师生参与的广泛交流和深入讨论，总结了成绩，看到了差距，形成了共识，明确了方向，基本达到了预期的目的。这次会议必将对促进今后我校的体育教育和体育工作起到很大的推动作用。利用今天的机会，我就学校体育谈几点意见。一、继承和发扬清华体育的优良传统清华大学是一所......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231507687551196/20110225231507687551196_.html" target="_blank">清华大学51名首届国防生致信江泽民的前后</a></h3>
+              <p class="thnews_jqzy">　　清华大学51名首届国防生致信江泽民的前后中国国防报  2004-9-14  孙栋廷 江宛柳 胡春华&nbsp;&nbsp;&nbsp;●也许我们以后的生活中没有大都市的繁华，更不可能腰缠万贯，但享乐安逸不属于我们，无私奉献才是我们的责任。&nbsp;&nbsp;&nbsp;●献身国防，是实现我们报国理想和个人成才的最佳选择。&nbsp;&nbsp;&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504687894434/20110225231504687894434_.html" target="_blank">江主席勉励清华大学毕业国防生为国防建设建...</a></h3>
+              <p class="thnews_jqzy">　　江主席勉励清华大学毕业国防生为国防建设建功立业解放军报  2004-9-3  孙栋廷 江宛柳&nbsp;&nbsp;&nbsp;本报北京9月2日讯　孙栋廷、记者江宛柳报道：清华大学首届国防生今年暑期毕业分配到部队。毕业前夕，清华大学全体毕业国防生给中央军委江泽民主席写信，表达他们投身军队现代化建设事业的决心和信心。7月15日，江主席致信清华大学毕业国防生，对......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504906657013/20110225231504906657013_.html" target="_blank">清华大学师生举行座谈会</a></h3>
+              <p class="thnews_jqzy">　　清华大学师生举行座谈会&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504875570502/20110225231504875570502_.html" target="_blank">清华要有100个这样的班就好了</a></h3>
+              <p class="thnews_jqzy">　　清华要有100个这样的班就好了中国青年报  2004-9-4  潘婷&nbsp;&nbsp;&nbsp;昨天，全国各大媒体都报道了中央军委江泽民主席给清华大学首届国防定向班全体同学回信的新闻，在全国各高校的国防生中引起了强烈反响。为什么一群普通的大学生会引起如此高度的关注？他们为什么要给江主席写信？他们又向江主席说了些什么？记者走进了清华园。&nbsp;&n......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504843932034/20110225231504843932034_.html" target="_blank">江泽民复信国防班震动清华 执笔人透露原委...</a></h3>
+              <p class="thnews_jqzy">　　江泽民复信国防班震动清华 执笔人透露原委 (组图)东方网  2004-9-7&nbsp;&nbsp;&nbsp;9月3日上午，清华大学师生在校园内举行了学习贯彻中央军委主席江泽民同志复信的座谈会，作为信件主要执笔人、电子系无011班党支部书记钟山在会上向记者披露了写这封信的来龙去脉，原来写信的想法是国防班的学生们在毕业前夕的一次班会上偶然碰撞出来的“火花”…......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504765872433/20110225231504765872433_.html" target="_blank">清华大学师生座谈学习江泽民主席给国防生的...</a></h3>
+              <p class="thnews_jqzy">　　清华大学师生座谈学习江泽民主席给国防生的复信新华网  2004-9-3  李江涛、周襄楠&nbsp;&nbsp;&nbsp;新华网北京９月３日电（李江涛、周襄楠）中央军委主席江泽民给清华大学首届国防生的复信在清华园里引起了师生们的强烈反响，他们表示，不辜负党和人民的期望，为祖国的国防事业奉献聪明才智。&nbsp;&nbsp;&nbsp;作为去信的主要执笔人，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231504718252714/20110225231504718252714_.html" target="_blank">清华师生学习贯彻江泽民主席给毕业国防生的...</a></h3>
+              <p class="thnews_jqzy">　　清华师生学习贯彻江泽民主席给毕业国防生的复信人民网  2004-9-3  施芳&nbsp;&nbsp;&nbsp;人民网北京9月3日讯 记者施芳报道：清华大学师生今天举行座谈会，学习贯彻中央军委主席江泽民给清华大学毕业国防生的复信。师生们纷纷表示，江主席的回信是对国防生的莫大鼓励，也是对清华师生的莫大鼓励，激励着大家发扬清华大学爱国奉献的光荣传统，把个人追求......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231502921540898/20110225231502921540898_.html" target="_blank">陈希：在清华大学师生学习贯彻中央军委主席...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在清华大学师生学习贯彻中央军委主席江泽民同志复信座谈会上的讲话清华大学党委书记 陈希各位同学、各位老师：  今天参加这个座谈会，我非常高兴，也很感动。首先是我们首届国防定向班的全体同学顺利完成学业，在政治思想、业务素质以及身心等各方面都有了全面的提高。在毕业前夕，同学们给中央军委主席江泽民同志写了一封信，表达了自己参军报国的心情，汇报了在学校的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344437647515/20110225225344437647515_.html" target="_blank">江泽民主席致信我校国防毕业生</a></h3>
+              <p class="thnews_jqzy">　　无标题文档江泽民主席致信我校国防毕业生</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225344406386481/20110225225344406386481_.html" target="_blank">我校举行学习贯彻中央军委主席江泽民同志复...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档学习江泽民主席的复信 做好国防人才培养工作我校举行学习贯彻中央军委主席江泽民同志复信座谈会【新闻中心讯 记者 周襄楠摄影 邵默】中央军委主席江泽民给清华首届国防生的复信在校园里引起了师生们的强烈反响。9月3日上午，我校在主楼327会议室召开座谈会学习江泽民主席的复信。校党委书记陈希、党委副书记杨振斌、副校长汪劲松及总政干部部、解放军驻我校后备......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231502890362261/20110225231502890362261_.html" target="_blank">我校举行学习贯彻中央军委主席江泽民同志复...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档学习江泽民主席的复信 做好国防人才培养工作我校举行学习贯彻中央军委主席江泽民同志复信座谈会【新闻中心讯 记者 周襄楠摄影 邵默】中央军委主席江泽民给清华首届国防生的复信在校园里引起了师生们的强烈反响。9月3日上午，我校在主楼327会议室召开座谈会学习江泽民主席的复信。校党委书记陈希、党委副书记杨振斌、副校长汪劲松及总政干部部、解放军驻我校后备......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231502781142001/20110225231502781142001_.html" target="_blank">我校首届国防生给江泽民主席的信（摘登）</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校首届国防生给江泽民主席的信（摘登）敬爱的江泽民主席：您好！我们是即将毕业的清华大学首届国防定向班——电子工程系无０１１班和精密仪器与机械学系机０７班的５１名同学。在我们就要走出清华园，踏上从军报国之路时，特向您汇报一下４年来的成长历程。自２０００年９月入校至今，在部队各级首长和学校老师的亲切关怀、辛勤培育下，我们刻苦学习科学文化知识，不......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231502765407592/20110225231502765407592_.html" target="_blank">江泽民主席致信我校国防毕业生</a></h3>
+              <p class="thnews_jqzy">　　无标题文档江泽民主席致信我校国防毕业生</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231502703966995/20110225231502703966995_.html" target="_blank">清华大学首届国防生给江泽民主席的信（摘发）</a></h3>
+              <p class="thnews_jqzy">　　清华大学首届国防生给江泽民主席的信（摘发）新华网  2004-9-2&nbsp;&nbsp;&nbsp;新华网北京９月２日电&nbsp;&nbsp;&nbsp;敬爱的江泽民主席：&nbsp;&nbsp;&nbsp;您好！我们是即将毕业的清华大学首届国防定向班——电子工程系无０１１班和精密仪器与机械学系机０７班的５１名同学。在我们就要走出清华园，踏上从军报国之......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2004.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231502734311752/20110225231502734311752_.html" target="_blank">江泽民主席致信清华大学毕业国防生</a></h3>
+              <p class="thnews_jqzy">　　江泽民主席致信清华大学毕业国防生新华网  2004-9-2&nbsp;&nbsp;&nbsp;新华网北京９月２日电&nbsp;&nbsp;&nbsp;清华大学首届国防生今年暑期毕业分配到部队。毕业前夕，清华大学全体毕业国防生给中央军委主席江泽民写信，表达他们投身军队现代化建设事业的决心和信心。７月１５日，江主席致信清华大学毕业国防生，对他们积极投身国防事业予......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225231400296846134/20110225231400296846134_.html" target="_blank">陈希：在清华大学庆祝中国共产党建党82周...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在清华大学庆祝中国共产党建党82周年大会上的讲话陈希（2003年6月30日）同志们： 今天我们纪念建党82周年具有特别的意义，因为我们刚刚进行了一场与传染性非典型肺炎的生死搏斗。突如其来的“非典”疫情肆虐北京、侵袭各地，形成了对整个中国社会的巨大威胁，党和政府以及全中国人民面临着严峻的考验。在危急时刻，以胡锦涛同志为总书记的党中央，从最广大人民......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231339171554774/20110225231339171554774_.html" target="_blank">领导讲话</a></h3>
+              <p class="thnews_jqzy">　　无标题文档领导讲话沈跃跃：在清华大学党政干部会上的讲话周济：在清华大学党政干部会上的讲话龙新民：在清华大学党政干部会上的讲话王大中：在清华大学党政干部会上的讲话顾秉林：在清华大学党政干部会上的讲话陈希：在清华大学党政干部会上的讲话</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231311296596518/20110225231311296596518_.html" target="_blank">我校师生学习江泽民总书记在北师大百年校庆...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校师生学习江泽民总书记在北师大百年校庆大会上的讲话江泽民总书记9月8日在庆祝北京师范大学建校100周年大会上的讲话发表后，在我校师生中引起热烈反响。9月10日下午，我校师生在工字厅东厅举行座谈会，畅谈学习江总书记重要讲话的体会。与会师生围绕江总书记的重要讲话展开了热烈的讨论。大家一致认为，江总书记在几所重点大学发表的重要讲话体现了党中央对......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231311265368937/20110225231311265368937_.html" target="_blank">我校学生学习江泽民总书记在北师大百年校庆...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校学生学习江泽民总书记在北师大百年校庆大会上的讲话学通社 波涛 2002-9-9 9月8日上午，北京师范大学纪念建校一百周年庆祝大会在人民大会堂隆重举行，中共中央总书记、国家主席江泽民在庆祝大会上发表了重要讲话。9月9日，我校团委组织部分学生进行了学习座谈。 参加座谈会的同学们说，这次北京师范大学建校一百周年的庆祝大会在人民大会堂举行，党......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231310421171179/20110225231310421171179_.html" target="_blank">王大中：在2002级本科生开学典礼上的讲话</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在2002级本科生开学典礼上的讲话清华大学校长 王大中同学们：今天我们在这里隆重集会，召开2002级本科新生开学典礼。我代表全校师生员工向全体新同学表示衷心的祝贺和热烈的欢迎！ 我校今年从全国各省、市、自治区共招收本科新生3411人，第二学位学生113人。同学们经过艰苦的努力，脱颖而出成为了清华学子，学校在为你们曾取得的成绩感到高兴的同时，也要......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231310593428239/20110225231310593428239_.html" target="_blank">在庆祝北京师范大学建校100周年大会上的...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在庆祝北京师范大学建校100周年大会上的讲话江泽民(2002年9月8日)老师们，同学们，同志们，朋友们：在美好的金秋时节，在又一个教师节到来之际，我们来参加北京师范大学百年校庆的隆重集会，感到十分高兴。党中央、国务院对我国教育事业的改革和发展是高度重视的，对全国广大教师和教育工作者是十分关心的。在这里，我代表党中央、国务院，向北师大的全体师......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231310484647307/20110225231310484647307_.html" target="_blank">王大中：在2002级研究生开学典礼上的讲话</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在2002级研究生开学典礼上的讲话清华大学校长 王大中各位老师，各位同学： 今天，我们在这里隆重召开2002级研究生开学典礼，首先请允许我代表全校师生员工向今年新入学的970名博士研究生和2713名硕士生研究生表示衷心的祝贺和热烈的欢迎！ 清华大学自1911年建校，至今已走过91个春秋。自九十年代中期，我校提出了综合性、研究型、开放式的办学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2002.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225349906483748/20110225225349906483748_.html" target="_blank">清华大学举行学习江泽民总书记视察中国人民...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华大学举行学习江泽民总书记视察中国人民大学的重要讲话座谈会5月1日下午，清华大学党委召开座谈会，学习贯彻江泽民总书记4月28日在视察中国人民大学与师生座谈时的重要讲话。校党委常委、清华大学常务副校长何建坤、党委副书记张再兴、杨振斌、校务委员会副主任胡显章，以及学校党委办公室、政策研究室、党委宣传部、文科建设处、经管学院、人文学院、美术学院......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225350046436451/20110225225350046436451_.html" target="_blank">实践“三个代表”重要思想 推进世界一流大...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档实践“三个代表”重要思想 推进世界一流大学建设——清华大学举行学习江泽民同志在庆祝清华大学建校90周年大会上的讲话座谈会4月26日下午，校党委在主楼会议厅举行师生员工座谈会，学习江泽民总书记在庆祝清华大学建校90周年大会上的讲话，畅谈实践&quot;三个代表&quot;重要思想，推进世界一流大学建设的收获和体会。校党委书记陈希同志主持座谈会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2002.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225350625147742/20110225225350625147742_.html" target="_blank">陈至立：在清华大学第十一次党代会开幕大会...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在清华大学第十一次党代会开幕大会上的讲话(摘要)陈至立（2002年1月14日）各位代表，同志们：值此清华大学第十一次党的代表大会隆重召开之际，我谨代表教育部党组向大会表示热烈的祝贺！清华大学第十次党代会是1995年召开的。六年来，清华大学作为中国高等学校的排头兵，抓住机遇，锐意进取，为国家经济建设和社会发展做出了重要的贡献。清华大学党委坚持......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2001.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225352531315113/20110225225352531315113_.html" target="_blank">首都高校领导干部带头学好“七一”讲话</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document精读原文 把握实质 联系实际首都高校领导干部带头学好“七一”讲话光明日报 2001年9月16日本报讯（记者 李家杰、宋晓梦）北京市委教育工委近日组织高校领导干部认真学习江泽民总书记“七一”重要讲话。首都高校党委书记、校长一致表示，要坚定不移地把思想和行动统一到《讲话》精神上来，进一步解放思想，提高认识，紧跟时代前进的步伐......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2001.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225352828868936/20110225225352828868936_.html" target="_blank">“七一”讲话具有强大的理论感召力——来自...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“七一”讲话具有强大的理论感召力——来自教育界的声音光明日报 2001年8月27日连日来，全国教育系统广大党员干部通过座谈、研讨等方式，继续深入学习贯彻江泽民总书记“七一”重要讲话精神，决心努力实践“三个代表”重要思想，把讲话精神落实到实际工作中去。大家认为，江泽民同志“七一”讲话体现了马克思主义与时俱进的理论品质，反映......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2001.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231232640345794/20110225231232640345794_.html" target="_blank">以高尚的思想道德要求和鞭策自己</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document以高尚的思想道德要求和鞭策自己我校企业集团党委学习江泽民总书记“七一讲话”7月3日下午，我校企业集团党委召开了学习江总书记"七一"讲话座谈会，企业集团先进党支部代表、优秀党员20余人参加了座谈会。大家认真学习了江泽民同志在庆祝中国共产党成立八十周年大会上的讲话，并围绕讲话内容展开了讨论。来自同方、紫光、美院、通力、机......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2001.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353265388708/20110225225353265388708_.html" target="_blank">我校师生对江泽民总书记重要讲话反响强烈</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document看庆祝大会现场直播 谈中华复兴远大理想我校师生对江泽民总书记重要讲话反响强烈7月1日上午，中共中央在人民大会堂举行大会，隆重庆祝中国共产党成立80周年。中共中央总书记江泽民在大会上发表重要讲话，系统总结中国共产党80年光辉历程和基本经验，全面阐述"三个代表"重要思想的科学内涵，提出了新的历史条件下加强和改进党的建设的重大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2001.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353250651681/20110225225353250651681_.html" target="_blank">清华大学师生学习江总书记重要讲话</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学师生学习江总书记重要讲话中国教育报 2001年7月2日本报记者　王鹰7月1日中午，清华大学师生在收看庆祝中国共产党成立80周年大会实况后，认真进行学习座谈。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353812570512/20110225225353812570512_.html" target="_blank">江泽民参观艺术与科学国际作品展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民参观艺术与科学国际作品展指出艺术和科学在很多方面可以相互交融《人民日报》 (2001年06月05日第一版)本报北京6月4日讯 记者郑宏范报道：中共中央总书记、国家主席江泽民今天下午来到中国美术馆，参观了艺术与科学国际作品展。这个展览是清华大学为庆祝建校90周年举办的一系列学术活动的组成部分，共展出来自19个国家......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353781101313/20110225225353781101313_.html" target="_blank">指导高等教育改革发展的思想武器和行动指南</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document指导高等教育改革发展的思想武器和行动指南教育部党组学习中心组深入学习江泽民同志在庆祝清华大学建校九十周年大会上的讲话《中国教育报》2001年6月5日第1版本报讯　江泽民同志在庆祝清华大学建校90周年大会上的讲话发表后，在教育系统特别是高校广大干部和师生员工中引起了强烈反响。5月31日上午，教育部党组书记、部长陈至立主持党......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353890581096/20110225225353890581096_.html" target="_blank">江泽民参观艺术与科学国际作品展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民参观艺术与科学国际作品展科技日报 2001年6月5日新华社北京6月4日电（记者尹鸿祝）中共中央总书记、国家主席江泽民今天下午来到中国美术馆，参观了艺术与科学国际作品展。这个展览是清华大学为庆祝建校90周年举办的一系列学术活动的组成部分，共展出来自19个国家32所高等院校的近700件作品。作品以绘画、雕塑、艺术设......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353843691639/20110225225353843691639_.html" target="_blank">江泽民参观艺术与科学国际作品展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民参观艺术与科学国际作品展(新华网 2001.06.04 21:52:41)新华网北京６月４日电（记者尹鸿祝）中共中央总书记、国家主席江泽民今天下午来到中国美术馆，参观了艺术与科学国际作品展。这个展览是清华大学为庆祝建校９０周年举办的一系列学术活动的组成部分，共展出来自１９个国家３２所高等院校的近7００件作品。作......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353859366049/20110225225353859366049_.html" target="_blank">江泽民参观艺术与科学国际作品展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民参观艺术与科学国际作品展光明日报 2001年6月5日记者　尹鸿祝新华社北京6月4日电　中共中央总书记、国家主席江泽民今天下午来到中国美术馆，参观了艺术与科学国际作品展。这个展览是清华大学为庆祝建校90周年举办的一系列学术活动的组成部分，共展出来自19个国家32所高等院校的近700件作品。作品以绘画、雕塑、艺术设......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354437538308/20110225225354437538308_.html" target="_blank">校党委通过决定：全校师生员工要认真学习江...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document校党委通过决定：全校师生员工要认真学习江泽民总书记的题词和讲话【新闻中心讯】记者 庄雯 5月7日，校党委常委扩大会议讨论通过了《关于组织全校师生员工学习江泽民总书记给清华大学的题词和在庆祝清华大学建校90周年大会上讲话的决定》，号召我校师生员工认真学习江泽民总书记的题词和讲话，《决定》指出，江泽民总书记的题词和讲话充......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354453186348/20110225225354453186348_.html" target="_blank">教育部发出通知：认真学习江泽民同志在庆祝...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document教育部发出通知：认真学习江泽民同志在庆祝清华建校九十周年大会上的重要讲话中国教育报 2001年5月10日记者　焦新本报北京5月9日讯(记者　焦新)教育部日前发出通知，要求各级教育部门、高等学校组织广大党员干部和师生认真学习江泽民同志重要讲话，深刻认识讲话的重要意义。通知指出，4月29日，中共中央总书记、国家主席江泽民......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354468262994/20110225225354468262994_.html" target="_blank">高扬青春旗帜　投身民族振兴伟业</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document高扬青春旗帜　投身民族振兴伟业江泽民总书记在清华建校90周年大会上的重要讲话激发了高校师生不断进取为祖国和人民而奋斗的强大动力中国教育报 2001年5月10日本报北京5月9日讯(记者　时晓玲)激扬睿智的论述、总揽全局的谆谆教诲，4月29日，江泽民总书记在清华大学建校90周年大会上的重要讲话，在全国大学校园引起了强烈震撼。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225626656629593/20110225225626656629593_.html" target="_blank">为中华民族的伟大复兴而努力</a></h3>
+              <p class="thnews_jqzy">　　――学习江总书记在建校90周年庆祝大会上的讲话有感为中华民族的伟大复兴而努力——学习江总书记在建校90周年庆祝大会上的讲话有感人文学院匡辉从2001年的春天开学到现在，一直在等待清华90年校庆这一个节日的来临，其中也为校庆的一些事情奔波。春天是一个复苏的季节，蛰伏了一个冬天的激情，在校庆的筹备过程中慢慢地积累，终于到4月29日校庆这一天喷博而出。作为一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354515567478/20110225225354515567478_.html" target="_blank">特写:清华学子牢记总书记的嘱托</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document特写:清华学子牢记总书记的嘱托大洋网 2001年5月4日大洋网讯　新华社报道，“我认为‘以身许国’的号召，对今天的青年学子仍然具有很强的现实意义”。清华大学研究生会主席刘桓在今天该校组织的学习江泽民总书记重要讲话座谈会上说。４月２９日，中共中央总书记、国家主席江泽民在庆祝清华大学建校九十周年大会上发表了重要讲话，对全......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354531862166/20110225225354531862166_.html" target="_blank">牢记党和人民的嘱托</a></h3>
+              <p class="thnews_jqzy">　　牢记党和人民的嘱托牢记党和人民的嘱托──清华大学学生认真学习江总书记重要讲话决心以实际行动创造无愧于时代和人民的业绩4月29日，中共中央总书记、国家主席江泽民在庆祝清华大学建校90周年大会上发表了重要讲话，对全国大学生提出了殷切希望：希望大学生们成为理想远大、热爱祖国的人，成为追求真理、勇于创新的人，成为德才兼备、全面发展的人，成为视野开阔、胸怀宽广的人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2001.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225626687535748/20110225225626687535748_.html" target="_blank">牢记党和人民的嘱托</a></h3>
+              <p class="thnews_jqzy">　　牢记党和人民的嘱托牢记党和人民的嘱托──清华大学学生认真学习江总书记重要讲话决心以实际行动创造无愧于时代和人民的业绩4月29日，中共中央总书记、国家主席江泽民在庆祝清华大学建校90周年大会上发表了重要讲话，对全国大学生提出了殷切希望：希望大学生们成为理想远大、热爱祖国的人，成为追求真理、勇于创新的人，成为德才兼备、全面发展的人，成为视野开阔、胸怀宽广的人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231224671903481/20110225231224671903481_.html" target="_blank">江泽民在清华大学考察工作</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江泽民在清华大学考察工作科技日报 2001年4月30日据新华社北京4月29日电（记者尹鸿祝江涛）正值清华大学庆祝90年华诞之际，中共中央总书记、国家主席江泽民今天来到清华园，听取了学校的工作汇报，参观了清华大学科技成果展览。他对清华大学取得的成绩表示祝贺，希望清华大学朝着具有世界先进水平的一流大学的目标不懈努力。中共......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231224796621992/20110225231224796621992_.html" target="_blank">江主席在清华大学考察工作</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document江主席在清华大学考察工作李岚清等一同听取汇报参观展览《人民日报》 (2001年04月30日第四版)本报北京4月29日讯 记者温红彦报道：绿草如茵的清华园，紫荆、丁香盛开，彩旗飘扬。正值清华大学庆祝90周年盛典之际，中共中央总书记、国家主席江泽民今天来到清华大学，听取了学校的工作汇报，参观了清华大学科技成果展览。他对清华大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354734982989/20110225225354734982989_.html" target="_blank">我校建校90周年庆祝大会召开</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document建设世界一流大学　为实现中华民族的伟大复兴而努力奋斗江泽民总书记为我校建校90周年题词我校建校90周年庆祝大会召开【新闻中心讯】对于清华人来说，4月29日是个不平凡的日子，清华人用自己的方式庆祝九十年历史铸就的辉煌。庆祝大会在新落成的综合体育中心隆重举行。庄重、简朴的会场容纳了将近6千名来自海内外的校友、嘉宾和师生员......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

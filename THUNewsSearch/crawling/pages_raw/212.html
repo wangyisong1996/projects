@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>长大了，我也要当科学家</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231212765889090&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9655/index.html' class='navigation_style'>专题新闻</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9708/index.html' class='navigation_style'>清华大学90周年校庆</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">长大了，我也要当科学家</h3><p align="center"> ——“今日清华”展示清华大学建校90周年成就 </p><p align="center">本报记者 鲍效农 刘帆</p><p align="center">（中国教育报 2001年4月9日）</p><p> 　　《今日清华——清华大学建校90周年展览》日前在中国历史博物馆开幕。北京市市长刘淇、国务院副秘书长徐荣凯等出席了开幕式。</p><p> 　　建校90年来，清华大学始终秉承“自强不息、厚德载物”的校训，为祖国培养了数十万计的优秀毕业生，成长出众多的学术大师与社会栋梁，其中涌现出401位中科院及工程院院士、300多位国家副部级以上领导干部。在科学研究方面，截至2000年，清华大学共获得国家级科技奖励279项。近年来，清华大学的校办产业也在迅猛发展，2000年校办高新技术企业营业总收入达65亿元。</p><p> 　　此次《今日清华——清华大学建校90周年展览》，通过成长的历程、辉煌的成就、面向未来、建设世界一流大学几个部分，全面展示该校建校90年来取得的辉煌成就，介绍清华大学为建设世界一流大学所作的努力。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月09日 08:40:36　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231217359794002/20110225231217359794002_.html" target="_blank">计算机系师生参观“今日清华”展览</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document计算机系师生参观“今日清华”展览4月21日上午，计算机系150余名在职和离退休教职工及50余名学生党员，参观了正在中国历史博物馆展出的"今日清华--清华大学建校九十周年成就展"。通观整个展览，使人强烈的感受到清华大学的命运与我们国家的强盛衰败息息相连，清华的发展历程就是二十世纪中国历史的一个缩影。诞生在旧中国最落后、......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231216578460905/20110225231216578460905_.html" target="_blank">清华大学举办建校90周年成就展</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学举办建校90周年成就展(人民日报海外版 2001年04月24日第九版)新华社电 （记者 江涛）《今日清华———清华大学建校90周年成就展览》正在中国历史博物馆展出，近500幅真实生动的图片和大量文字、实物、模型向人们全面展示了清华建校90年来的辉煌成就。展览分3个部分：成长的历程，辉煌的成就，面向未来、建设世......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231216890553694/20110225231216890553694_.html" target="_blank">《今日清华--清华大学建校90周年企业成...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document《今日清华--清华大学建校90周年企业成果展》在历史博物馆开幕4月24日上午，《今日清华--清华大学建校90周年企业成果展》在中国历史博物馆展出。教育部、我校的有关领导出席了展览开幕式。今年是我校建校90周年。自1911年建校以来，特别是建国50多年来，我校在人才培养、科技创新等方面取得了显著的成果，为国家建设、社会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231214921532876/20110225231214921532876_.html" target="_blank">清华成就进了国家博物馆</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华成就进了国家博物馆杨兆敏（2001-4-17 工人日报）对中国人来说，清华大学无疑是国内的一流大学，用“妇孺皆知”来形容它的知名度恐怕一点也不为过。就是这样一所著名大学，在跨入新世纪的第一个春季里，把自己建校90周年的成就展办到了中国历史博物馆，这在全国高校中可谓首开先河。 据负责展览工作的蒋耘中老师说，清华大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231213000589084/20110225231213000589084_.html" target="_blank">2000年清华大学科技全面丰收  《今日...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document2000年清华大学科技全面丰收《今日清华》展览办进历史博物馆（科技日报 2001年4月10日）本报讯记者李大庆报道：全面反映清华大学建校90周年以来的各项成就的展览《今日清华》4月7日在北京中国历史博物馆开展。北京市市长刘琪、国务院副秘书长徐荣凯和清华大学党委书记贺美英共同为展览剪彩。到今年4月29日，清华大学将走过......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231213421378767/20110225231213421378767_.html" target="_blank">清华教授当讲解员</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华教授当讲解员（北京晚报 2001年4月10日）在历博展出的《今日清华》，清华大学林登彩教授在他主持设计的10兆瓦高温气冷实验堆前，手握一个球形燃料元件为每一位参观者做细致的讲解。林教授介绍说，高温气冷堆是第三代核能发电装置，由于技术较复杂，怕观众不好理解，所以特意来展会现场做讲解员。白继开　摄</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231213015715372/20110225231213015715372_.html" target="_blank">网上看清华</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document网上看清华（光明日报 2001年4月9日）本报记者 高腾 摄《今日清华———清华大学建校90周年成就展览》4月7日在中国 历史博物馆开幕。图为清华附中的同学在用展会上的笔记本电脑浏览 清华大学建校90年来所取得的辉煌成就。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212953216119/20110225231212953216119_.html" target="_blank">“今日清华”尽现90年风采</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“今日清华”尽现90年风采首都新闻工作者书写清华精神（中国青年报 2001年4月8日）　 　 本报北京4月7日电 （记者原春琳）今天上午，水木清华90年风采尽现于中国历史博物馆。一场名为《今日清华》的清华大学建校90周年成就展览在此间隆重开幕。　 翻开这本大书，成长的历程、辉煌的成就和面向世界、建设世界一流大学三个篇章，一一......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212734831189/20110225231212734831189_.html" target="_blank">清华建校90周年成就展在京举行（图文)</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华建校90周年成就展在京举行（图文）(2001.04.09 新华网)４月７日，《今日清华－－清华大学建校９０周年成就展览》在北京中国历史博物馆开幕。展览分成长的历程、辉煌的成就和面向未来、建设世界一流大学三个部分，全面展示了清华大学建校９０周年来所取得的辉煌成就。图为清华附中的学生在“今日清华”展厅参观。新华社记者......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212687250942/20110225231212687250942_.html" target="_blank">《今日清华》展尽写清华大学九十年辉煌</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document《今日清华》展尽写清华大学九十年辉煌（2001年4月8日 中国新闻网）中新社北京四月七日电(刘禹)《今日清华--清华大学建校九十周年成就展览》今天上午在中国历史博物馆开幕。北京市长刘淇在开幕式上致辞。他称赞清华大学“两弹一星”的功勋和对中国科技的奉献不可磨灭，并代表北京市和一千三百万市民祝贺清华大学九十年华诞。清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212656385183/20110225231212656385183_.html" target="_blank">清华建校90周年成就展开幕首都新闻工作者...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华建校90周年成就展开幕首都新闻工作者挥毫同贺(2001.04.08 经济日报)本报北京4月7日讯 记者李向南 实习生程凯报道 《今日清华————清华大学建校90周年成就展览》今天在中国历史博物馆开幕，拉开了清华大学90周年校庆活动的序幕。北京市市长刘淇、国务院副秘书长徐荣凯等领导出席了今天的开幕式并参观展览。这次......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212640659143/20110225231212640659143_.html" target="_blank">世纪清华 享誉世界</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document世纪清华 享誉世界刘淇在清华九十周年成就展上讲话 徐荣凯等出席（北京日报 2001年4月8日）本报讯（记者戚海燕）世纪清华，九十春秋；今日清华，享誉世界。昨天上午，《今日清华———清华大学建校90周年成就展览》在中国历史博物馆前广场隆重开幕，拉开了清华大学建校90周年系列庆祝活动的序幕。市长刘淇致辞，国务院副秘书长徐荣凯......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212578307792/20110225231212578307792_.html" target="_blank">博物馆里看清华 两院院士最抢眼</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学９０周年校庆展昨天在历博开展博物馆里看清华 两院院士最抢眼（北京晨报 2001年4月8日）晨报讯 （记者 廖厚才） “这就是张光斗院士。”“看，他就是吴良镛院士！”……昨天，在中国历史博物馆举办的《今日清华——清华大学建校９０周年成就展览》现场，清华大学两院院士的大幅彩照、高科技模型等成了人们关注的热点。   在......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212562815406/20110225231212562815406_.html" target="_blank">“今日清华”展昨开幕</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document“今日清华”展昨开幕（北京青年报 2001年4月8日）本报实习记者建立摄影报道　“今日清华———清华大学建校90周年成就展览” 于昨天上午在中国历史博物馆隆重开幕。北京市市长刘淇等领导同志出席了开幕式   并参观了展览。为纪念清华大学建校90周年，清华大学特于2001年4月7日至5月7日在中国历史 博物馆举办此展览。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212703689031/20110225231212703689031_.html" target="_blank">我校建校90周年成就展在中国历史博物馆展出</a></h3>
+              <p class="thnews_jqzy">　　水木湛清华，九十春与秋我校建校90周年成就展在中国历史博物馆展出【新闻中心讯】记者类延旭春光浩荡，万木争荣。新千年第一春，我校将迎来90华诞。为总结90年光辉历史，展望未来美好前景，我校举办的《今日清华清华大学建校90周年成就展》于4月7日上午10：00在中国历史博物馆隆重开幕。北京市市长刘淇、国务院副秘书长徐荣凯、校党委书记贺美英等领导出席开幕......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212515223652/20110225231212515223652_.html" target="_blank">新闻解读：今日清华</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document新闻解读：今日清华（北京晚报 2001年4月7日）（一）（二）（三）（四）（五）（六）白继开 贾津摄影报道今天上午，由清华大学主办的《今日清华———清华大学建校90周年成就展览》在中国历史博物馆隆重拉开帷幕，举办学校成就展，对于“历博”来说还是第一次。1911年，清华大学的前身“清华留美预备学校”成立，2001年4月......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212468715327/20110225231212468715327_.html" target="_blank">清华展览90年</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华展览90年（北京晚报 2001年4月7日） 本报讯（记者李莉）今天上午的历史博物馆充满了浓郁的学术气息。《今日清华———清华大学建校90周年成就展览》在这里开幕。北京市市长刘淇、国务院副秘书长徐荣凯、市委常委徐锡安等人为开幕式剪了彩。 90年来，共有10万余学子带着理想走出清华校门，投身社会各个行业。他们当中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212437531372/20110225231212437531372_.html" target="_blank">《今日清华》展示清华大学建校90周年成就</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document《今日清华》展示清华大学建校90周年成就(2001.04.07 新华网)新华网北京４月７日电（记者江涛）《今日清华—— 清华大学建校９０周年成就展览》今天在中国历史博物馆开幕，近５００幅真实生动的图片和大量文字、实物、模型向人们全面展示了清华建校９０年来的辉煌成就。清华大学的前身是始建于１９１１年的清华学堂，是清政府......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2000.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9708/2011/20110225231212609537716/20110225231212609537716_.html" target="_blank">清华大学建校90周年成就展览今开幕</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学建校90周年成就展览今开幕（大洋网 2001年4月7日）大洋网讯 《今日清华——清华大学建校９０周年成就展览》今天（4.7）在中国历史博物馆开幕，近５００幅真实生动的图片和大量文字、实物、模型向人们全面展示了清华建校９０年来的辉煌成就。清华大学的前身是始建于１９１１年的清华学堂，是清政府用美国“退还”的部分“庚子......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

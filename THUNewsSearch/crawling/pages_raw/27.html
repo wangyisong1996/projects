@@ -1,0 +1,559 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>【女生节写真】去年的女生节</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225627187670266&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9654/index.html' class='navigation_style'>校园写意</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>去年的女生节</TITLE><META NAME="Template" CONTENT="D:\office97\Office\html.dot"></HEAD><BODY LINK="#0000ff" VLINK="#800080" bgcolor="#FFFFFF"><FONT FACE="幼圆" LANG="ZH-CN" SIZE=4> <P ALIGN="left"><font size="3" face="楷体_GB2312">女生节马上就要到了，这是一篇去年女生节时写的文章，记得那一天学校的气氛特别好，天气也不错。不知道今年会怎么样。   这篇文章所描述的是我的亲身经历，我相信这也代表了清华很大一部分男生的心声。一见钟情不会处处有，但这种感觉真的很是微妙，冥冥中似乎有着一种力量在将两颗陌生的心灵拉近、拉近。如今，这位女孩已经成为我的女朋友了，我感谢这份难得的机缘以及那天的勇气。同时也想告诉所有情窦初开的男孩女孩，珍惜心灵的每一次悸动，珍惜你现在所拥有的一切。</font> </P><h3 ALIGN="CENTER"><font size="5">去年的女生节</font></h3></FONT><FONT FACE="宋体" LANG="ZH-CN"> <P ALIGN="JUSTIFY">“走吧！”我收拾起饭后的残局，跟身边偶然碰到的室友黄说。起身，背上书包，拿起碗筷，转身一个久盼的身影从门口飘然而至，一样的红黑交叠的穿在身上象一个淘气小女孩的运动上衣，一样的将修长的大腿衬托得无与伦比的俏皮的仔裤，一样轻盈飘逸的短发，一样灿烂的笑颜，当她回眸与同行的女伴说话的时候，我看到了她脸上那颗似乎已经根植于我心的显眼的墨痣。</P><P ALIGN="JUSTIFY">根植于我心，我不禁为自己感到好笑，笑她竟然真的出现在我的殷殷期盼中，笑竟然是在这样一个清华女孩改称为“女生节”的今年似乎要大张旗鼓加以庆贺的日子里。</P><P ALIGN="JUSTIFY">说大张旗鼓，其实一点也不过分，这种扑鼻而来的气息从下课铃声一响的那一刻起就已经开始了，女孩们脸上洋溢的少有的青春笑颜，男孩们那一声声诡秘而意味深长的“节日快乐！”，主道旁婆娑的白杨树也似乎幻化成多情的少女，要不为何身上披上了从未有的闪闪发光的彩带，千万只五彩缤纷的气球迎风飘扬，而十字路口一位笑容可掬的女士手捧一大堆巧克力正在分赠给过往的行人。我不知趣地在她的跟前故意将车速减慢，正在纳闷为何我就得不到这份多情的礼物的时候，恍然大悟之中突然想起这是专为女生独享的。</P><P ALIGN="JUSTIFY">就在我连声大骂自己笨苯的时候，我又一次想起了她（事实上几乎天天有她的影子在我的脑中盘旋），这位我称之为长得极象我的表妹的、素不相识的小女生。于是我的破车不再听我使唤，车头一拐，拐进了路边这个所有菜都烧得稀巴烂、吃得我连连反胃的十食堂，因为就在这里，几天前我曾见过她一次。</P><P ALIGN="JUSTIFY">结果竟然真的又一次碰到了她。</P></FONT><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN"></font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">…</FONT> <FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">…</font></P><FONT FACE="宋体" LANG="ZH-CN"><P ALIGN="JUSTIFY">“还不快点？”黄已经等得不耐烦了，而我仍然找不到我那辆还未上税的破车。</P><P ALIGN="JUSTIFY">“你先走吧！”我有点心不在焉。</P></FONT><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN"></font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">…</FONT> <FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">…</font></P><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN">又一次碰到她又能怎么样呢？即使是出现在我的殷殷期盼中，即使是出现在今天这个清华女孩改称为“女生节”的处处洋溢着喜庆气氛的日子里，难道就可以牵强的说这是天赐良机、天降奇缘吗？藉助于这个美丽的借口，我就可以手捧玫瑰，冲进大门，当着所有的饮食男女向她大声宣告“</font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">I love you</FONT><FONT FACE="宋体" LANG="ZH-CN">”吗？而她会在全体食客为我俩的喝采声中向我款款走来，回赠我甜蜜而幸福之吻吗？</font></P><FONT FACE="宋体" LANG="ZH-CN"><P ALIGN="JUSTIFY">我摇摇头，暗笑自己的妙想和天真，骑车飞快地奔向自己的宿舍。</P><P ALIGN="JUSTIFY">一进门，我便蒙头而睡，一时间我的头脑很是有点乱。</P></FONT><P ALIGN="JUSTIFY"><FONT FACE="宋体" LANG="ZH-CN"></font><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">…</FONT> <FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">…</font></P><FONT FACE="宋体" LANG="ZH-CN"><P ALIGN="JUSTIFY">“晚上礼堂电影，两张五元！”</P><P ALIGN="JUSTIFY">这个破徐，一进门就大吼大叫。</P><P ALIGN="JUSTIFY">“真的？陈，晚上请你看电影。”</P><P ALIGN="JUSTIFY">黄两年前就欠我一次电影，还好他还一直念念不忘。</P><P ALIGN="JUSTIFY">“哥们，来点专业精神好不好，这是女生节嗳，为女孩子准备的，再说我们两个大老爷们的，不觉得别扭吗？”</P><P ALIGN="JUSTIFY">我蒙着头，有点没好气。</P><P ALIGN="JUSTIFY">“咳――，这厮今天怎么啦？”</P><P ALIGN="JUSTIFY">我没理会他，继续梳理我那愈来愈乱的思绪。</P></FONT><P ALIGN="JUSTIFY"><FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN"> …</font>   <FONT FACE="System,Acid Reflux (BRK)" LANG="ZH-CN">…</font></P><FONT FACE="宋体" LANG="ZH-CN"><P ALIGN="JUSTIFY">今天天气这么好，和风习习，太阳暖洋洋的，我突然感觉在今天这样一个特别的日子里，自己做错点什么也一定不会让人觉得太恶心。</P><P ALIGN="JUSTIFY">又一阵飞奔，我一头扎进流星小站，鲜花派送小姐正微笑着注视着我。</P><P ALIGN="JUSTIFY">“快！一支玫瑰，不用包装了，跟我走！”</P><P ALIGN="JUSTIFY">我的神态一定把她给吓呆了。</P><P ALIGN="JUSTIFY">我领着这位小姐来到十食堂，谢天谢地，她还没走，透过窗玻璃我轻易就找到了她。</P><P ALIGN="JUSTIFY">“先生要留下姓名吗？”派送小姐笑着提醒我。</P><P ALIGN="JUSTIFY">“不用了，有缘的话，她会认识我的。”</P><P ALIGN="JUSTIFY">我的心砰砰乱跳，待小姐走进去以后，我转身离去。</P><P ALIGN="JUSTIFY">我静静地走在校园的主干道上，太阳仍然在头顶暖洋洋的照着，和风仍习习。我想象着她在收到这份礼物时那种羞涩而不安的神态，面颊上那粒恰到好处的墨痣此刻一定更能衬托出其青春无尘的光彩照人。</P><P ALIGN="JUSTIFY">“今天的天气真好，送花了吗？”我对每一个经过我身边的男生说。</P></FONT></BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月05日 10:43:56　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2016.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2016/20160310095750910671738/20160310095750910671738_.html" target="_blank">清华女性外籍专家参加人民大会堂妇女节庆祝...</a></h3>
+              <p>3月7日下午，清华大学富布莱特学者Heather Shirey女士、中法中心法方主任Chloe Froissart女士等来自七个国家的7名长期在校的女性外籍专家和专家夫人应邀赴人民大会堂参加了“纪念‘三八’国际妇女节中外妇女招待会”。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2015.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150309084300228791635/20150309084300228791635_.html" target="_blank">校党委常务副书记、副校长邱勇看望女教工</a></h3>
+              <p>在“三八”妇女节来临之际，3月6日下午，校党委常务副书记、副校长邱勇来到心理学系、材料学院和饮食中心，看望了部分女教工代表，并代表学校向全体女教工致以节日祝贺。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120309160755413675317/20120309160755413675317_.html" target="_blank">清华女性外籍专家参加人民大会堂妇女节庆祝...</a></h3>
+              <p class="thnews_jqzy">　　清华女性外籍专家参加人民大会堂&ldquo;三八&rdquo;妇女节庆祝活动清华新闻网3月9日电（通讯员王珍时）3月7日下午，清华大学6名女性外籍专家和专家夫人应邀赴人民大会堂参加了&ldquo;纪念&lsquo;三八&rsquo;国际妇女节102周年中外妇女招待会&rdquo;。全国人大常委会副委员长、全国妇联主席陈至立在招待会上向各国妇女致以节日祝贺......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2012.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2012/20120307170222865529008/20120307170222865529008_.html" target="_blank">清华召开新百年女教职工论坛庆祝“三·八”...</a></h3>
+              <p class="thnews_jqzy">　　清华大学召开新百年女教职工论坛庆祝&ldquo;三&middot;八&rdquo;妇女节清华新闻网3月7日电（通讯员王 颖）3月6日下午，为庆祝&ldquo;三&middot;八&rdquo;妇女节的到来，清华大学工会在医学院组织召开了清华大学新百年女教职工论坛。图为校党委书记胡和平在论坛上致辞。北京市教育工会常务副主席、女教职工委员会主任刘欢，校党......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225557937686530/20110225225557937686530_.html" target="_blank">温馨女生周欢乐嘉年华</a></h3>
+              <p class="thnews_jqzy">　　温馨女生周欢乐嘉年华&nbsp;&nbsp;&nbsp; 【新闻中心讯 研通社通讯员 苏冠华 王侃】在3月7日至3月12日这一周的时间里，清华大学校研究生会为全体女生精心准备了主题为“Balloon Fairy”的女生节系列嘉年华活动。活动种类丰富，时间横跨一周，参与人数广泛，经初步统计，参与系列活动的总人数超过了1000人次。从3月7日到3月12日，多姿多......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225557953612982/20110225225557953612982_.html" target="_blank">清华研究生欢度女生节</a></h3>
+              <p class="thnews_jqzy">　　瑞雪纷飞早春天 异彩纷呈暖人心——清华研究生欢度女生节【新闻中心讯 学生通讯员 邢贞珍】3月7日，雪花飘飘，乍暖还寒。清华大学的传统节日女生节如期而至，三月的清华园也因此平添了一抹别样的浪漫与温馨。各院系男生精心策划，为美丽女生们呈现了丰富多彩的庆祝活动，惊喜、感动、快乐成为这一天的主题词。女生们绽放美丽的笑容女生节的序幕早在3月5日就被拉开。5日下......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225559453978948/20110225225559453978948_.html" target="_blank">清华女生节：女生我最大</a></h3>
+              <p class="thnews_jqzy">　　清华女生节：女生我最大【新闻中心讯】3月6日中午，由自动化系和电子系学生会主办的一场名为“女生我最大”的游戏活动在清华大学紫荆四号楼楼下展开。整场活动由“猜价格”“投飞镖”“跳皮筋”“编中国结4部分游戏组成。活动现场布置也满含着温馨的气息，绳子上挂着送给每位电子与自动化女生的贺卡，这是各班男生对女生最诚挚的问候。给女生的奖品也独具特色，实用的篮子、眼......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225559421466283/20110225225559421466283_.html" target="_blank">清华研究生欢度女生节</a></h3>
+              <p class="thnews_jqzy">　　清华研究生欢度女生节【新闻中心讯】3月的北京，温暖的阳光中仍然带着丝丝寒意。在这样一个万物复苏的季节里，我们又迎来了清华大学的女生节。在这个温馨的节日里，清华大学各院系的研究生同学们举办了各种独具匠心的活动，给女生们送上节日的祝福。3月6日中午，在精仪系系馆大厅中，精仪系研究生会的同学摆上了80余件各种小礼品，同时拿出准备好的小纸条和答题卡，以抽签答......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2009.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225559468399354/20110225225559468399354_.html" target="_blank">2009“清华女生节”关注女性健康</a></h3>
+              <p class="thnews_jqzy">　　2009“清华女生节”关注女性健康【新闻中心讯 研通社通讯员 赵毅】3月6日，在一年一度女生节即将到来之际，清华大学人文学院研团总支携手清华大学关注女性发展协会为广大女生奉上了一场有关女性中医保健的讲座，演讲嘉宾萧宏慈对女性健康精准入理的讲解以及与现场同学间的诊疗互动让所有听讲者者获益匪浅。由于女性健康已经成为社会和校园中大家关心的焦点，所以此次活动......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225602281243517/20110225225602281243517_.html" target="_blank">【女生节】无偿献血 别样佳节</a></h3>
+              <p class="thnews_jqzy">　　编者按：3月7日是清华传统的“女生节”。班级、学生会、研究生会、学生社团等各个学生组织举办了丰富多彩的活动来庆祝这个清华女生特殊的节日。清华新闻网特以系列稿件展示这期间多样的活动。无偿献血 别样佳节【新闻中心讯】对于清华来说，3月7日是一个十分特殊的日子。这一天既是清华一年一度的女生节，也是本学期清华第一个无偿献血日。在献血地点——旧环境系系馆，随处......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225602250945967/20110225225602250945967_.html" target="_blank">【女生节】心灵手巧显创意 美丽欢乐女生街</a></h3>
+              <p class="thnews_jqzy">　　心灵手巧显创意 美丽欢乐女生街【新闻中心讯 研通社记者 周寰】3月9日中午，紫荆综合服务楼前的街道上，人山人海，热闹非凡。校研究生会主办的女生节系列活动的最后一场活动：大型女生游乐街——“逛吧”正火热进行中。虽然女生节的日子已过去两天，但过节的气氛仍丝毫未减。汉服这次活动分10个板块：“精彩秀吧”、“美丽加分”、“素手生花”、“指尖灵动”、“水果颂歌......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225602218628363/20110225225602218628363_.html" target="_blank">【女生节】院系创意永无限 女生节温馨永恒</a></h3>
+              <p class="thnews_jqzy">　　院系创意永无限 女生节温馨永恒又到一年女生节，在这个与众不同的节日里，浪漫和创意是关键，感动和温馨是主题。为了让女生们能够享受节日的快乐，各个院系开动脑筋，发挥创意，让这个特别的节日充满了欢乐的色彩。自动化系、电子系：美味女生节，心动三月初在3月7日这一天里，各个院系都用各自不同的方式向身边的女生表示祝贺，而自动化与电子这两大信息学院代表工科......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225602171289396/20110225225602171289396_.html" target="_blank">【女生节】紫荆园前玫瑰艳 多姿多彩过佳节</a></h3>
+              <p class="thnews_jqzy">　　紫荆园前玫瑰艳 多姿多彩过佳节【新闻中心讯 学生通讯员 丁然 刑国卿】又是一年一度的女生节，清华园里洋溢着节日的喜庆，写有“女生节快乐”字样的横幅随处可见，温馨之情流露其中。3月7日中午紫荆园前，凡是到此用餐的女生都得到了一枝玫瑰花和优惠打折卡等礼物，这是校学生会女生部为庆祝女生节而举办的系列活动之一。活动现场十分热闹，工作人员为陆续到来的女生送上玫......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225602265221641/20110225225602265221641_.html" target="_blank">【女生节】新生女生节 体验新奇与温情</a></h3>
+              <p class="thnews_jqzy">　　新生女生节 体验新奇与温情学通社记者 高婧 郏叶婧“伴着清晨朦胧的晨光，女生节悄悄地走来……”一个7字班男生在送给女生的贺卡中写道。首个女生节，新生们不免有许多预想和憧憬，他们正是在这样的好奇与热情中体验了新奇的一天。美妙的早晨+狂欢的夜晚一阵杂乱的脚步声后是“咚、咚、咚”的敲门声，社科7的男生们把精心准备的早餐送到女生手中。有鸡蛋、牛奶，还有自......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225602312953706/20110225225602312953706_.html" target="_blank">【女生节】“缤纷女生节”系列活动精彩纷呈</a></h3>
+              <p class="thnews_jqzy">　　“缤纷女生节”系列活动精彩纷呈●研通社记者 王象武3月7日，清华女生的传统节日——女生节又到来了。为了迎接这个特殊的节日，各研究生组织各显其能，校研会从3月5日开始就推出了“缤纷女生节”系列活动，丰富而充满创意的活动给女生们一个又一个惊喜。卡片送祝福，鲜花暖人心今年的活动与以往有所不同，研会通过卡片和鲜花给女生们送去美好的祝福，让清华女生感受到春......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2007.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225606687295982/20110225225606687295982_.html" target="_blank">清华女生献血过节</a></h3>
+              <p class="thnews_jqzy">　　清华女生献血过节《京华时报》 2007-03-08 生 李琳琳 宋合营 陈喆昨天，150多名清华女生以集体自愿无偿献血方式度过女生节，不少男生也参与进来。每位献血的女生都能获得纪念品和一支红玫瑰。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2007.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225606703673113/20110225225606703673113_.html" target="_blank">清华男生自制糕点送女同学</a></h3>
+              <p class="thnews_jqzy">　　每年三八前一天被定为女生节清华男生自制糕点送女同学《京华时报》 2007-03-08 颜慧本报讯 （实习生颜慧）昨天是清华大学一年一度的女生节。中午12点，清华紫荆公寓道路旁，几位年轻的男“厨师”在一个摊点内紧张地烹制着爆米花、棉花糖和蛋糕等点心，并不断将这些点心送给四周等待的女生。一位“厨师助理”说，他们是清华大学自动化系与电子系的学生，当天是学校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225341203772438/20110225225341203772438_.html" target="_blank">清华女生无偿献血庆节日</a></h3>
+              <p class="thnews_jqzy">　　清华女生无偿献血庆节日成分血捐献者与校领导的合影【新闻中心讯】3月7日是一个特殊的日子——既是清华一年一度的女生节，也是本学期清华第一个无偿献血日。在献血地点环境系系馆，我们随处可见手捧红玫瑰、洋溢着青春笑容的清华女生，她们来到这里用无偿鲜血来庆祝自己的节日。“虽然没有做细致的统计，但是我们估算这次无偿献血的女同学比去年同期有所增加，我们为前来献......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225614390123636/20110225225614390123636_.html" target="_blank">【女生节特别活动】点点愿望寄托美丽心情</a></h3>
+              <p class="thnews_jqzy">　　【女生节特别活动】点点愿望寄托美丽心情研通社记者 蒋雯正午的阳光很好，透过树枝留下一地的斑驳，每一个人都静静的享受着这午后馨暖的空气。在阳春三月暖暖的正午，与女孩们悄悄换上的那一身的五彩缤纷相伴而来的，还有挂满许愿卡片的许愿树和女生节空气里那一丝丝温馨浪漫的味道。3月7日中午，由校研究生会女生部推出女生节“许愿树”活动在女研究生公寓区内的花坛举行，这......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225614359707742/20110225225614359707742_.html" target="_blank">【女生节特别活动】精仪女生 魅力风采</a></h3>
+              <p class="thnews_jqzy">　　【女生节特别活动】精仪女生 魅力风采研通社记者 朱毅3月7日，女生节的清晨，第一缕阳光才刚刚绽放光芒，精仪系馆门前就已经洋溢着春天的温情：那是精仪系研会和研团的工作人员，手捧着鲜艳的玫瑰和精致的礼物静候在那里，要送给每位女生一份惊喜和祝福。当女生们一手接过鲜花，一手拿起礼物，同时耳畔还响起祝福“女生节快乐”的时候，笑容在她们的脸上绽放，好奇写在她们的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225614343667062/20110225225614343667062_.html" target="_blank">【女生节特别活动】世界妇女的过去和现在</a></h3>
+              <p class="thnews_jqzy">　　【女生节特别活动】世界妇女的过去和现在 3月7日晚，为庆祝女生节，法学院特邀请了中国科学院世界历史研究所的刘军研究员为大家举行了一场题为“世界妇女的过去和现在”的演讲。刘军从世界上几种不同的传统文化下妇女的权利和地位、有关女权主义运动的理论与实践以及对现代妇女的生存状况的小结三方面为大家分析了世界妇女的过去和现在。刘军认为，尽管过去世界上各种文化传统......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2005.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225614375571154/20110225225614375571154_.html" target="_blank">【女生节特别活动】“国耻勿忘、铭记在心”...</a></h3>
+              <p class="thnews_jqzy">　　【女生节特别活动】“国耻勿忘、铭记在心”——汽研三班党支部卢沟桥之行研通社记者 曾帆3月6日一早，趁着初春里难得的风和日丽，汽车系研究生三班党支部一行十六人，乘车前往卢沟桥遗址参观。这是本学期该支部第一次以实践为主题的支部生活，同时也是庆祝女生节的活动之一。同学们参观抗日纪念雕塑园，穿过宛平城，来到卢沟桥遗址，“前事不忘，后事之师”，站在当年日寇铁蹄......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2004.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225618578274739/20110225225618578274739_.html" target="_blank">“氤氲芙蓉，碧水情深”——记电机系女生节...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档氤氲芙蓉，碧水情深——记电机系女生节水上游艺会【新闻中心讯 学生记者 周宇】3月7日是我校最具特色的女生节。在这一天，平时严肃学问的清华男生们无不会费尽心力地买礼物、做表演来带给美眉们欢乐。今年，电机系便在游泳馆举行了一场别开生面的水上游艺会——“氤氲芙蓉，碧水情深”。水上游艺会由接力游泳、水中赛跑、潜水捞物等多个趣味比赛组成，男女皆可参加......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

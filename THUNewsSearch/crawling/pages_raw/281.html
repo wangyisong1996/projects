@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>季羡林９０岁主演广告片</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231214500759832&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">季羡林９０岁主演广告片</h3><p align="center">（北京晨报 2001年4月16日）</p><p> 　　晨报讯 （记者 吴彬）一代文化宗师季羡林先生将作为公益广告的主角出现在荧屏上。拍这部广告片，老人将不收取任何报酬。今年８月季老将度过九十周岁生日，提出并赞助这个公益广告片拍摄的企业希望，用这一特殊方式为季老庆九十大寿。   季老是一位造诣精深的语言学家、翻译家和散文家，亲身经历了２０世纪中华民族及其学术文化的兴衰荣辱。他在自己涉及过的每一领域都取得了重大成就。他多次呼吁政府和社会应该重视和加强人文学科的建设及人文教育的普及。   这部公益宣传片由中国文化书院、北京大学中国哲学与文化研究所、广州南方高科有限公司合拍，主旨在于弘扬“自强不息”的民族精神和展现中华民族重视道德和人文教育的优良传统。通过描述耕耘教坛６０余载、９０岁高龄的季老先生怀念他的母亲和他的老师们——胡也频、胡适、陈寅恪、汤用彤、冯友兰、朱光潜，以及他的德国老师，从而提倡中国人尊师重道、薪火相传的传统美德。   ３家还将为季老拍摄电视专题片，通过记叙他由一个出身贫寒的农家子弟，经过个人不懈努力，终于成为学富五车、学贯中西的一代学人的经历，体现出中华民族的“天行健，君子以自强不息”的民族精神以及“周虽旧邦，其命惟新”的时代特征。   电视专题片及公益宣传片的艺术主创人员汇集了中国最优秀的艺术家，有数位中国第五代导演参与献计献策。该电视专题片及公益宣传片将在中央电视台、北京电视台等多家电视台的黄金时段播出。 </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年04月16日 10:39:12　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2008.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232129875117491/20110225232129875117491_.html" target="_blank">季羡林：人文奥运就是两句话</a></h3>
+              <p class="thnews_jqzy">　　季羡林：人文奥运就是两句话奥运来了，这方面的宣传可以说是铺天盖地而来，让人目不暇接。然而，其中称得上新鲜的观点，特别是深刻的观点，似乎是少而又少，实在遗憾已极。然而笔者读到学术大家季羡林先生关于“人文奥运”的诠释，确乎令人耳目一新，难以忘怀。季老说：“人文奥运就是两句话——宣传中国优秀文化，吸收外国优秀文化。”言简意赅，一语到位，既说明了“人文”，又......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2008.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232107875816608/20110225232107875816608_.html" target="_blank">【清华名人名言】季羡林：只有知不足的人才...</a></h3>
+              <p class="thnews_jqzy">　　季羡林：只有知不足的人才能为人类文化做出贡献●宣传部 周襄楠1999年，季羡林在书房季羡林至今笔耕不缀。他在90岁高龄写下《知足知不足》一文，道出了自己几十年来风雨历练的人生心得：“中外几千年的思 想史和科学史，也都证明了一个事实：只有知不足的人才能为人类文化做出贡献。”季羡林是国内外知名学者，精通六七种外语，博古通今；他的研究高屋建瓴，新意迭出，研究 ......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2008.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232106125912030/20110225232106125912030_.html" target="_blank">印度外长向季羡林授予该国最高荣誉奖</a></h3>
+              <p class="thnews_jqzy">　　印度外长向季羡林授予该国最高荣誉奖6日，解放军总医院阳光明媚的病房里，年已望百的国学大师季羡林和印度外交部长慕克吉的手紧紧握在一起。“只要还有精力，我就要继续致力于中印两个伟大民族、伟大国家的友好。”季羡林的话感动着在场的来宾。正在中国访问的慕克吉今天专程来看望在医院的季老，还带来了印度人民给予这位毕生致力于推进中印两个伟大民族相互理解的世纪老人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2007.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231936437204691/20110225231936437204691_.html" target="_blank">清华大学副校长谢维和等看望季羡林学长</a></h3>
+              <p class="thnews_jqzy">　　清华大学副校长谢维和等看望季羡林学长 【新闻中心讯】9月24日下午，清华大学副校长谢维和、文科工作委员会副主任胡显章、校史研究室主任田芊专程前往解放军总医院看望季羡林老学长。大家向季老致以中秋慰问，96岁高龄的季老高兴地说：“我是‘与校同寿’。”谢维和向他汇报了清华近几年文科建设发展情况，并告知学校正准备建一个文科图书馆。季老针对教授们捐赠藏书和......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2007.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225605671459689/20110225225605671459689_.html" target="_blank">回首淡定——读季羡林先生《另一种回忆录》</a></h3>
+              <p class="thnews_jqzy">　　回首淡定——读季羡林先生《另一种回忆录》老虫子季先生《另一种回忆录》，以举重若轻的笔触叙述其“起伏人生、不辍治学”的生命历程。人们得以通过阅读季先生的这本书，领悟老一代知识分子的精神风貌与思辨的力量。季先生从故乡童年、青春游历、老年回首、治学人生四个方面入手，回忆了自己丰富的人生经历，道出了杂陈的人生况味，文字风格兼具纪实性与抒情性，将时代变迁与个人经验......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231805390115536/20110225231805390115536_.html" target="_blank">教师节前夕季老感念母校清华</a></h3>
+              <p class="thnews_jqzy">　　教师节前夕季老感念母校清华【新闻中心讯 通讯员 黄文辉】“清华是我的娘家，北大是我的婆家。”见到前来看望他的清华校友，季羡林先生高兴地说。2006年9月7日下午，在教师节来临前夕，我校原党委副书记胡显章，教育基金会秘书长黄建华，以及校友总会和教育基金会等单位的有关同志到解放军总医院看望季羡林老先生，为季老送去清华师生的祝福。出身于清华、在北大工作了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2004.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231441500833186/20110225231441500833186_.html" target="_blank">布衣学者季羡林</a></h3>
+              <p class="thnews_jqzy">　　布衣学者季羡林&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2004.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231437718798384/20110225231437718798384_.html" target="_blank">静静的人——记清华校友季羡林、杨绛</a></h3>
+              <p class="thnews_jqzy">　　静静的人——记清华校友季羡林、杨绛文汇报 2004-5-16 版次:7   作者:李景端&nbsp;&nbsp;&nbsp;&nbsp;“……钱不多，不过来路清楚，都是自己‘爬格子’所得，希望能够抛砖引玉，为母校做点贡献”&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在追逐名人成为时下一种新潮时尚之际，大凡名......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231220656608022/20110225231220656608022_.html" target="_blank">季羡林：清华颂</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document季羡林：清华颂（光明网 2001年4月28日）清华园，永远占据着我的心灵。回忆起清华园，就像回忆我的母亲。又怎能不这样呢？我离开清华已经40多年了，中间只回去二、三次。但是每次回到清华园，就像回到我母亲的身边，我内心深处油然起幸福之感。在清华的四年生活，是我一生中最难忘、最愉快的四年。在那时候，我们国家民族正处在危急......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355750636362/20110225225355750636362_.html" target="_blank">季羡林：清华是“李白” 北大是“杜甫”</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document季羡林：清华是“李白” 北大是“杜甫”（2001/04/18 中国新闻网）中新社北京四月十七日电(记者王玲)著名国学大师、八十九岁高龄的北大教授季羡林今天下午在新华网与网民交流时，就清华大学、北京大学各自不同的风格评论说，清华好比中国古代“诗仙”李白，北大好比“诗圣”杜甫。季羡林与母校清华大学有过十四年的不解之缘，而......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231214515702906/20110225231214515702906_.html" target="_blank">季羡林为社会做公益广告</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document尊师重道　现身说法季羡林为社会做公益广告（光明日报 2001年4月16日）本报北京4月15日电　今天，有关方面在北京举行祝贺季羡林先生 九十华诞、季羡林先生电视专题片及公益宣传片开机仪式。公益宣传 片的主题是季羡林怀念他的母亲和他的老师们，从而提倡中国人尊师   重道、薪火相传的传统美德。今年8月，北京大学教授、中国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231214468110886/20110225231214468110886_.html" target="_blank">季羡林90高龄开拍公益广告</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document季羡林90高龄开拍公益广告(2001.04.15 新华网)新华网北京4月15日电 今天下午，北京友谊宾馆高朋满座，喜气洋洋，祝贺季羡林先生九十华诞，季羡林先生电视专题片及公益宣传片开机仪式暨广州南方高科有限公司向中国文化书院捐款仪式在这里举行。社会各界知名人士，文化名流和多家新闻媒体纷纷前来表示祝贺。今年8月即将迎来......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231213890902773/20110225231213890902773_.html" target="_blank">恭贺季羡林先生９０华诞</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document恭贺季羡林先生９０华诞(2001.04.14 新华网)今年八月即将迎来北京大学教授、中国文化书院院务委员会主席季羡林先生九十周岁生日，作为一位著作等身、涉猎广博而且造诣精深的语言学家、翻译家和散文家，季先生在其长达六、七十年极富创造力的学术生涯中，为世界贡献了一笔宝贵的精神财富，而在学术界、教育界、文化界赢得了崇高的声誉......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231213953174303/20110225231213953174303_.html" target="_blank">季羡林：清华大学毕业后返母校济南高中任教...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学毕业后返母校济南高中任教时留影　１９３４年(2001.04.14新华网)</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231213937235964/20110225231213937235964_.html" target="_blank">季羡林：清华大学毕业学位照</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学毕业学位照(2001.04.14 新华网)</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231213906712150/20110225231213906712150_.html" target="_blank">季羡林：清华大学毕业证书</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学毕业证书(2001.04.14 新华网)</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231213796951627/20110225231213796951627_.html" target="_blank">季羡林自传</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document季羡林自传(2001.04.13 新华网)我于一九一一年八月六日生于山东省清平县（现并入临清市）官庄。我们家大概也小康过。可是到了我出生的时候，祖父母双亡，家道中落，形同贫农。父亲亲兄弟三人，无怙无恃，孤苦伶仃，一个送了人，剩下的两个也是食不果腹，衣不蔽体，饿得到枣林里去拣落到地上的干枣来吃。六岁以前，我有一个老师马......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231213781854188/20110225231213781854188_.html" target="_blank">一生为东方文化招魂——从齐鲁大地到清华大学</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document一生为东方文化招魂——从齐鲁大地到清华大学(2001.04.13 新华网)季羡林先生，字希甫，以名行。一九一一年八月六日生於山东省清平县（今归临清市）官庄，家贫重学。六岁之前，师从马景恭先生。六岁赴济南投奔叔父。叔父无子，视先生为己出。先生叔父自学成家，曾自编自选理学文章成《课姪文选》，教授先生。高小期间，先生开始学习英......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231210406846707/20110225231210406846707_.html" target="_blank">季羡林：清新俊逸清华园</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我与清华清新俊逸清华园季羡林（光明日报 2001年3月23日）清华园，简单淳朴的三个字；但却似乎具有极大的启示性，极深 邃的内涵。谁见了会不油然从内心深处漾起一缕诗情画意呢？人们眼 前晃动的一定会是水木明瑟，花草葳蕤，宛如人间的桃源，天上的净   土。记得在七十一年前，在1930年夏天，我从山东到北京来投考大学。 当......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

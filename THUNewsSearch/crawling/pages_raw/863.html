@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>人物访谈：听葛兆光教授聊清华的旧事和新情</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231225734901990&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">人物访谈：听葛兆光教授聊清华的旧事和新情</h3><p align="center"> 2001/05/07 11:58 南方网</p><p> 　　清华大学历九十年春秋矣。</p><p> 　　一部清华史，颇多转折，由学堂(留美预备学校)而大学部，由综合大学(文、理、工、法、农)而工科大学再综合大学。国学研究院之清华，是文化重镇；西南联大之清华是民主堡垒；“文化革命”之清华，是造反派策源地……尽是难忘篇章。</p><p> 　　为了考究清华一题，记者搜罗了不少文字资料，其中一本是《走进清华》，主编者是清华大学人文学院教授葛兆光先生。记者就势采访了葛先生，听他聊一聊清华的旧事和新情。</p><p> 　　记：4月29日是清华建校90周年的日子，说到清华的校长，被提到最多的好像是梅贻琦。</p><p> 　　葛：这是因为梅贻琦掌校时间最长，从1931年到1948年，而且那是清华大学一段艰苦卓绝，却又很值得记忆的时间，所以大家对他的印象比较深。解放后蒋南翔掌校也有十三年(1952年—1966年)，而且兼任高教部长，影响也很大。在他的任上，形成了新的传统“双肩挑”(一个肩膀挑政治，一个肩膀挑业务)。清华毕业生有许多出来做了领导干部，包括现在中央的许多领导人物，大概跟这个“双肩挑”都有关系吧。</p><p> 　　记：清华著名的国学研究院为什么只延续了四年就终止了呢？</p><p> 　　葛：终止的原因非常复杂，可能涉及到学校内部人事问题以及方针政策。研究院是与梁启超、王国维、陈寅恪、赵元任等四位导师相关的。它的正式名称是清华学校研究院，而不是现在习惯叫的国学研究院。四位导师，梁、王、陈、赵之外，再加上一个李济，李是讲师，但实际相当于教授。当时一下子就很辉煌，培养了好几届研究生。但是，王国维1927年自沉；梁启超1929年去世，去世前已经有一段时间不能理事了；赵元任与校方大概有点矛盾；李济经常在外面，他是考古的；再加上一些其他方面的原因。那个时候清华已有大学部了，学校有人提出将研究院归并到系里去。所以研究院就被撤销了。</p><p> 　　记：老清华虽然有文学院、理学院、工学院、法学院，但在我们印象中好像还是文学院影响大。</p><p> 　　葛：话不能这么说。当时文学院、理学院都很了不起。老清华有很多著名的数学家、物理学家、化学家。这是学科本身的问题。因为，一般来说，容易在社会产生最大影响的是文科。特别是文科留下的文字材料比较多，这些材料被当作历史资料使用，所以在历史中被记忆得比较重。这有一个历史取向偏差的问题。比方我们容易记忆起清华文科特别是国学研究院，记忆起王国维、陈寅恪。但是当时清华的文科还有许多很好的学科，很多著名的学者。比方哲学的金岳霖，史学的张荫麟，社会学的潘光旦，在学术史上非常重要。像潘光旦，在三十年代他对行为遗传学的研究，放在当时的国际学术界，他也是很前卫的。可是，我们一讲清华就讲到文史两科，一讲到文史，就只讲到国学院、四大导师。讲得仿佛只是一脉单传。看来是有些偏差。那四个人和那四年是很值得记忆，但也不能只提那一段呵。清华有九十年的历史。当然，因为九十年代国内对研究院那一段历史特别热。实际上应当记住，二三十年代，都是清华历史上特别好的时期。我曾经选编过一本清华大学三十年代人文社会学科的毕业论文，那些论文的水准足以令今天的教授吃惊和惭愧。</p><p> 　　记：清华学派是怎样一个概念？</p><p> 　　葛：这个概念大概是王瑶先生生前比较爱提的。他是朱自清的学生，他对当时我们文科的状况和学风很反感很焦虑，便反复提“清华学派”这个概念，我的理解是他提这个概念，有他关于现状的考虑。但是历史上是不是有这个学派呢？我觉得不太好界定。清华的学风是与北大有些不同的。一方面，作为留美预备学校，清华受欧美的影响确实是比较大的。但是另一方面，一回忆到四大导师，又觉得他们是在传统中的学派。所以，有人便说清华学风是“古今融会、中外贯通”，这好像太笼统。北大、辅仁、燕京、中法、圣约翰(大学)，是不是也可以这样说呢。</p><p> 　　记：在台湾新竹，也有一所清华大学。它也是以理工大学为主吗？</p><p> 　　葛：我只去过一次，情况不熟悉，不过好像新竹的清华大学校园里，还保留了许多老清华的名称和景致，老名称与新地点，让人产生历史的联想。它傍着新竹工业园，也是以理工科为主。它的历史系、中文系，主要是研究生，现在清华大学思想文化所的李学勤先生在那里当访问教授。它的中文系，跟我们的中文系不同，更类似国学系，而我们的中文系却更偏重文学。新竹的清华，除台大外，在台湾也是最好的学校。两个清华之间联系很多。我刚刚从台湾回来，从那里的报纸上看到，前几天，这边清华的代表团，大概还有艺术团，去台湾那边访问，还引起一点小小的风波。据说，为了让校友能够参加两边的活动，台湾(的清华)把庆典提前到了23日，把正日子让给北京的清华，这件事在台湾报纸上还引起争论。杨振宁去参加了那边的校庆，金庸也被请过去参加校庆，还给他授予名誉教授。</p><p> 　　记：1952年清华被“减”成工科大学，是清华的巨变。好像很多人都为此觉得遗憾。</p><p> 　　葛：1952年按着苏联模式进行的院校调整，使清华变得功能单一，中断了清华的传统，造成很大的可以说是不可挽回的损失。这可以说，在现在已经是一个共识，比如1948年的清华有五个院(文、理、工、法、农)，二十六个系，工科的实干、理科的冷静、文科的敏锐、法科的严谨和后来建立的农科的贴近中国，融汇为清华当年的精神和学风，在互相砥砺中摒弃庸俗、实用和短浅。但是，1952年院系调整，清华不但文、法学院，连理学院也分出去了，变成了纯工科大学。没有了文科和理科的大学，再大也只是跛足的巨人，因为那种广博的视野、自由的精神和活跃的风气，在仅仅充满了实用与实干的气氛中难以建立。</p><p> 　　现在，清华在全面恢复，但我很忧虑的是，能恢复到什么程度还很难说。清华八十年代以后重新建立文、理、经、法等学科，但目前还是工科的特征比较占优。至少，文科独特的评价机制、需要的环境还没有完全建立起来。以“工程师的摇篮”著称的工科学校，乍一变成综合大学，要重建传统、扭转风格，还有许多事情要做。</p><p> 　　记：清华的理工科确是很强盛的。</p><p> 　　葛：我以前说过，清华的工科给学校挣来的面子贴不到文科脸上，倒是太强大的工科会使文科相形见绌，历史的辉煌也无法给今天增光，没有了四大导师，没有了朱自清、闻一多，没有了冯友兰，今天的清华文科应该怎样证明自己的地位？这都值得讨论。</p><p> 　　记：人文学科对大学真那么要紧吗？</p><p> 　　葛：没有了人文学科，学术上的自由思想争论也就少得多了。九十年代初，一个叫布鲁姆的美国芝加哥大学教授说：“大学是容纳探索和思想开放的地方，它鼓励人们不是功利地而是为了理性而利用理性，它提供一种气氛使哲学怀疑不至于被道德风尚和占上风的势力吓倒。”他还说：虽然工科理科也有思想的争论，但是，少了文科的存在和争论，大学真正的自由意义和纯粹的学术意味，就好像不那么货真价实。自然科学家出身的，曾经当过哈佛大学校长的科南特在其题名为《理解科学》的演说中说，科学精神从何而来？“我们得从那少数深深浸染了苏格拉底传统的人身上去寻找，得从那些凭着原始考古方法首先获得希腊、罗马文化的早期学者身上去寻找，在文艺复兴的第一阶段里，把冷静追求真理的爱好发扬起来的人，恰恰都是研究人文的。”</p><p> 　　记：说到底，人文学科有什么“用”呢？</p><p> 　　葛：人文学科说起来就是让人适应常情理解常理具备常识，现在的时新说法叫“素质教育”。素质说来很玄，其实一个人的素质，是在种种日常生活和常识上表现的。前面提到的布罗姆教授的《美国心灵的封闭》，成了美国九十年代轰动的畅销书，他的意思是希望美国的学生读一些古典的名著，因为美国的“现在一代的心灵需要来自古希腊、罗马的古典，不然智慧就会在现代科技的网络中渐渐生锈”，那么我们中国现在一代是不是也需要一些源自古典的人文常识的滋养，不然会不会有了知识而少了文化？(夏辰   南方周末) </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年05月08日 12:42:51　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231212171933287/20110225231212171933287_.html" target="_blank">葛兆光七年写就《中国思想史》</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document葛兆光七年写就《中国思想史》记者 张蜀津（中华读书报 2001年4月4日）本报讯 日前，复旦大学出版社出版了著名学者、清华大学教 授葛兆光的《中国思想史》，终于圆了葛先生多年以来“写一部个人 视野的思想史”的梦。这部巨著共分两卷，第一卷《七世纪前中国的   知识、思想与信仰世界》自1994年动笔，于1998年问世，曾引起......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

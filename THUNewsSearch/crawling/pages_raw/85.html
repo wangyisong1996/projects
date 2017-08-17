@@ -1,0 +1,762 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我校召开全校本科生大会</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225225627093704678&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9654/index.html' class='navigation_style'>校园写意</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80"><META NAME="Generator" CONTENT="Microsoft Word 97"><TITLE>王大中校长语重心长寄予清华学子：</TITLE></HEAD><BODY BGCOLOR="#FFFFFF"><FONT FACE="宋体" LANG="ZH-CN" SIZE=4><P ALIGN="CENTER">王大中校长语重心长寄予清华学子：</P><H3 ALIGN="CENTER">继承和发扬清华的优良传统 <BR>担起创世界一流的历史使命</H3><P ALIGN="CENTER">我校召开全校本科生大会</P><P ALIGN="CENTER"></P><P ALIGN="JUSTIFY">【新闻中心讯】记者 冬梅3月22日，王大中校长以“回顾90年清华历史，担起创一流历史使命，继承清华优良传统，培育新一代栋梁人才”为主线，向全校本科生作了一个半小时的报告。他语重心长寄予清华学子：要继承和发扬我校的优良传统，担起创建世界一流大学的历史使命，成为祖国需要的、全面发展的高质量人才。</P><P ALIGN="JUSTIFY">面对台下那一张张年轻而充满朝气的面孔，王校长首先回顾了我校建校90年的历史。他说，我校90年的历史是与世界科技进步和社会发展潮流紧密相连的，是与中国人民争取民族独立和解放斗争紧密相连的，是与中国人民建设繁荣富强的社会主义新中国的奋斗历程紧密相连的。在她90年的成长历程中，经历了从1928年国立清华大学的成立到1937年抗日战争爆发，学校被迫南迁，仅十多年的时间就迅速崛起，发展成为当时国内一流的、具有理、工、文、法四大学院的综合性大学；在山河破碎、办学条件异常艰苦的抗日战争年代，我校创造了战时高等教育的奇迹，培育了众多国家的栋梁之材；解放后，在蒋南翔校长的领导下，我校很快成为培养工程技术人才的重要基地，被誉为“红色工程师的摇篮”；“文革”期间我校成了“重灾区”，但1978年以后又迅速崛起，发展成为今天具有理、工、文、法、艺术、管理等多学科的综合性、研究型和开放式的全国著名大学，这是几代清华人奋斗的结果。</P><P ALIGN="JUSTIFY">王校长强调，建世界一流大学是我校义不容辞的责任和使命。他说，我校之所以要创建世界一流大学，是为了适应国家发展的需要。据统计，美国一流研究型大学对该国科技、经济发展、综合国力的提高有着重要的贡献，影响人类生活方式的重大科研成果70％诞生于一流研究型大学，1993～2000年美国获诺贝尔奖的51人中，47人来自美国的一流研究型大学。从二战中原子弹的爆炸、雷达的发明，到60～70年代的空间技术，到80年代高科技产业的发展，美国研究型大学都起了关键作用。有人说，如果没有美国的研究型大学，美国的历史很可能不是今天这样。正因为如此，尽管90年来，我校为国家培养了十万余名毕业生，一批优良的清华学子为我校在国内外争得了良好的声誉，成长出众多学术大师、兴业之将、治国之材，使我校成为全国青年向往的最高学府。但我校同世界一流大学相比还存在很大的差距，还需在人才培养、学科建设，科学研究，师资队伍建设、成果转化、总体办学条件等方面不断开拓进取，为国家培养出一批具有国际竞争能力的高素质人才，在新世纪，以新的面貌再创我校历史上新的辉煌。</P><P ALIGN="JUSTIFY">他说，我校正在创建世界一流大学，衡量一流大学水平的重要标志是人才培养质量，而本科生是大学中人才培养的基础。他说，现在我校正在举行第21次教育工作讨论会，这是我校今后5年教育教学改革的一次重要会议，主题是探讨如何构建具有研究型大学特色的教学体系，校庆后学校将推出一系列改革举措。他希望学生们能积极参与到讨论中来，为学校的改革发展出谋划策。</P><P ALIGN="JUSTIFY">王校长最后重点谈到了继承我校优良学风校风问题。他认为，一所名校之所以成为名校，其主要标志就是有优良的传统、校风和学风，它是名校形象的集中反映。校园规划、建筑风格等固然是学校的外在形象，但一所大学的精神面貌、校园文化则更体现了这所大学的内涵，是更本质的。清华校风、学风是经过全校师生长期以来共同努力，在教学、科研、思想教育、行政管理当中形成的一种治学态度和工作作风，是一种宝贵的精神财富。他希望清华学子以90周年校庆为契机，将我校爱国奉献、“自强不息，厚德载物”、“行胜于言”、“严谨、勤奋、求实、创新”这些优良传统发扬广大，杜绝情绪浮躁、玩游戏不能自拔及抄袭作业等不良学风，担当起建设世界一流大学的历史使命，并以朱总理的一封贺信勉励清华学子。</P><P ALIGN="JUSTIFY">朱镕基总理在1992年4月1日贺我校电机系建系60周年的贺信中这样写到：四十多年前，母校电机系主任章名涛教授在一次会上对我们讲过这样一段话：“你们来到清华，既要学会怎样为学，更要学会怎样为人。青年人首先要学‘为人’，然后才是学‘为学’。为人不好，为学再好，也可能成为害群之马。学为人，首先是当一个有骨气的中国人。”</P><P ALIGN="JUSTIFY">哲人已逝，言犹在耳。清华就是教我们“为人”的地方，它以严谨的学风和革命的传统，培育了一代又一代献身革命和建设祖国的“有骨气的中国人”。饮水思源，终身难忘。</P><P ALIGN="JUSTIFY">为学在严，严格认真，严谨求实，严师出高徒。</P><P ALIGN="JUSTIFY">为人要正，正大光明，正直清廉，正己然后正人。</P><P ALIGN="JUSTIFY">清华电机系行年六十，弟子六千，为人为学，人才辈出。值此建系六十周年大庆，敬录章师名言，愿与同学共勉。</P><P ALIGN="JUSTIFY">校党委副书记张再兴教授主持了会议。</P></FONT> </BODY></HTML>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月22日 12:44:44　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2015.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2015/20150708112555108718302/20150708112555108718302_.html" target="_blank">《跨越世纪清华梦》出版座谈会举行</a></h3>
+              <p>7月6日下午，《跨越世纪清华梦——王大中校长十年启示录》出版座谈会在第二教学楼会议室举行。清华大学校长邱勇，校党委书记陈旭，清华大学原校长王大中，校党委原书记方惠坚、贺美英等学校老领导、教师、校友代表以及学校相关部处负责人等50余人参加座谈会。常务副校长程建平主持会议。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2013.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20131213150324194791359/20131213150324194791359_.html" target="_blank">清华大学原校长王大中院士做客“学术人生”...</a></h3>
+              <p>12月11日晚，清华大学罗姆楼阳光厅“站”无虚席，中国核反应堆工程与核安全专家、中国科学院院士、清华大学原校长王大中做客清华大学“学术人生”讲坛，与师生们畅谈学术人生与治校感悟。校党委副书记史宗恺作为特邀嘉宾出席了讲坛。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2011.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110421121613355700277/20110421121613355700277_.html" target="_blank">百年校庆系列丛书《王大中教育文集》出版</a></h3>
+              <p class="thnews_jqzy">　　百年校庆系列丛书《王大中教育文集》出版清华新闻网4月21日电（通讯员孙海涛）近日，作为百年校庆系列丛书之一的《王大中教育文集》由清华大学出版社正式出版发行。该书收录了王大中同志任清华大学校长期间的著述62篇，内容涉及学校发展战略、人才培养、科学研究、社会服务、师资队伍建设、行政管理和后勤服务等各个方面。这些著述体现了王大中同志的教育思想和办学思路，总结了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232218031975415/20110225232218031975415_.html" target="_blank">【改革开放30年】王大中：建设世界一流大...</a></h3>
+              <p class="thnews_jqzy">　　王大中：建设世界一流大学 确立跨越式发展的办学理念●新闻中心记者 张莞昀改革开放以来，我国的高等教育事业取得了举世瞩目的成就，实现了改革与发展的历史性跨越，同时也带来了许多新的挑战。在有限的综合国力下，既要实现高等教育大众化，又要建设世界一流大学，无疑是双重难题和双重目标。走什么样的发展道路，采取什么样的发展模式，成为高等教育必须面对的重大问题。19......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2008.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232212046104592/20110225232212046104592_.html" target="_blank">王大中院士当选改革开放30年“中国教育时...</a></h3>
+              <p class="thnews_jqzy">　　王大中院士当选改革开放30年“中国教育时代人物”【新闻中心讯】历时一个月的纪念改革开放30年“中国教育时代人物”大型网络评选活动近日结束。经过网友投票和专家评审，30位“中国教育时代人物”和30位“中国教育风云人物”最终揭晓，清华大学校务委员会名誉主任、前校长王大中院士获得改革开放30年“中国教育时代人物”称号。王大中，清华大学校务委员会名誉主任，中......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232001734602138/20110225232001734602138_.html" target="_blank">王大中院士出席第三届联合国秘书长大学校长会</a></h3>
+              <p class="thnews_jqzy">　　王大中院士出席第三届联合国秘书长大学校长会【新闻中心讯】11月28至29日，清华大学校务委员会名誉主任王大中院士赴美参加第三届联合国秘书长大学校长会。本次会议的主题是全球气候变化，包括后京都议定书时期如何切实落实减排的各项政策和措施，以及大学在应对全球气候变化中应该发挥的作用。王大中院士与联合国秘书长潘基文王大中院士代表清华大学在会上做了发言。他从高......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231853781822928/20110225231853781822928_.html" target="_blank">【校庆特稿】王大中：发扬团队精神 实现自...</a></h3>
+              <p class="thnews_jqzy">　　发扬团队精神 实现自主创新●王大中10兆瓦高温气冷堆是国家“863计划”的一项重点项目，该项目自1986年列入“863计划”到2003年满功率发电，前后历时17年。模块式高温气冷堆属于当前国际上第四代先进核动力堆，我国研制成功具有自主知识产权的10兆瓦高温气冷堆，这不仅使我国在该领域跨入国际先进行列，同时，也使我国在占领下一代先进核动力堆领域制高点上......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2006.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231815750177007/20110225231815750177007_.html" target="_blank">哈萨克斯坦共和国教育部部长访问清华</a></h3>
+              <p class="thnews_jqzy">　　哈萨克斯坦共和国教育部部长访问清华【新闻中心讯 记者 李含】10月19日，哈萨克斯坦共和国教育部部长艾绨莫娃到清华访问。校务委员会名誉主任王大中会见了艾绨莫娃女士，并同她进行了友好的交谈。在会谈中，艾绨莫娃介绍了哈萨克斯坦共和国在学生培养方面的政策，她希望将来能有更多的哈萨克斯坦学生到清华学习，同时能在教师交流等方面与清华加强合作。王大中介绍了清华的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231719421658846/20110225231719421658846_.html" target="_blank">王大中院士一行考察清华深圳研究生院</a></h3>
+              <p class="thnews_jqzy">　　无标题文档王大中院士一行考察清华深圳研究生院【新闻中心讯】2月24日，清华大学前校长、校务委员会名誉主任王大中院士、清华控股有限公司董事长荣泳霖、清华控股有限公司总裁宋军一行到深圳研究生院考察工作。下午，王大中在副院长刘文煌、林孝康、马辉等陪同下参观了深圳研究生院文理学部、管理学部、信息学部、生命学部、工程学部的十余个实验室，并先后与蔡德麟教授、钟玉......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2004.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231534953777995/20110225231534953777995_.html" target="_blank">王大中院士当选中国学位与研究生教育学会会长</a></h3>
+              <p class="thnews_jqzy">　　无标题文档王大中院士当选中国学位与研究生教育学会会长【新闻中心讯 特约记者 梁君健】12月6-7日，中国学位与研究生教育学会会员大会在北京召开，我校校务委员会名誉主任、前校长王大中院士当选该学会会长。同时，我校研究生院常务副院长陈皓明当选学会秘书长，研究生院副院长赵伟当选学会常务理事。  教育部副部长吴启迪参加了大会开幕式，祝贺学会成立十周年，介绍了......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2004.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231427109583325/20110225231427109583325_.html" target="_blank">王大中院士被巴黎中央大学授予荣誉博士学位</a></h3>
+              <p class="thnews_jqzy">　　无标题文档王大中院士被巴黎中央大学授予荣誉博士学位&nbsp;2004年2月5日，中国科学院院士、我校校务委员会名誉主任和前校长王大中在巴黎中央大学举行的授予仪式上被授予该校荣誉博士学位。据介绍，巴黎中央大学的这次名誉学衔授予活动是法国高校国际化战略的重要组成部分，一共授予四位世界知名学者。同时接受名誉学衔的其他三名学者分别是瑞典斯德哥尔摩皇家工学院......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2004.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231424703195805/20110225231424703195805_.html" target="_blank">市委教育工委领导来校看望王大中同志和贺美...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档市委教育工委领导来校看望王大中同志和贺美英同志1月17日上午，北京市委常委、市委教育工委书记朱善璐同志一行来校看望王大中同志和贺美英同志，代表市委、市政府带来春节的慰问。王大中同志是我校前任校长，离开校长岗位后，继续为学校的重大发展事项出谋划策，还担任国家中长期规划专题组组长，并继续从事科研工作。贺美英同志是我校前任党委书记，离开书记岗位后......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2003.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9661/2011/20110225231354515292311/20110225231354515292311_.html" target="_blank">王大中院士热情寄语天津考生</a></h3>
+              <p class="thnews_jqzy">　　无标题文档王大中院士热情寄语天津考生我校校务委员会名誉主任、前校长王大中院士，日前为天津电视台专题介绍清华大学的电视片接受了采访，希望更多的优秀学子报考清华大学。 王大中教授不久前刚刚卸下了已担任近10年的校长职务。这位68岁的教育家和核能专家，当年在海河岸边度过了自己的青少年时代，50年代从天津考入我校。他曾在回忆文章中和接受记者采访时，饶有兴趣地......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231350687785756/20110225231350687785756_.html" target="_blank">王大中与清华一同走向世界一流</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document王大中与清华一同走向世界一流光明日报 2003年5月22日本报记者　丰捷清华大学历史上第三位掌校时间最长的校长在这个春夏之交的季节里欣然走下了他为之呕心沥血的岗位。他说他年龄已大，而学校正面临很好的发展机遇，应该让年富力强的同志担当校长，那将有利于学校干部的新老交替，有利于学校整体工作的连续性。于是，清华园里这位可亲可敬......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2003.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231344750800434/20110225231344750800434_.html" target="_blank"><font color=red>倾一腔心...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档倾一腔心智　建一流大学——写在王大中院士离任清华大学校长职务后《中国教育报》2003年5月9日第1版当王大中院士在一次又一次热烈的掌声中反复起身致谢时，清华大学的师生们心头一阵阵发热，这位深受师生员工敬重和爱戴的师长将不再是自己的校长了。2003年4月28日，清华大学举行的全校党政干部和师生代表大会，为他近10年的校长生涯划上闪光的句号。其......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231339890300618/20110225231339890300618_.html" target="_blank">顾秉林院士出任清华大学校长</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document顾秉林院士出任清华大学校长新华网北京频道 2003-04-29新华网北京４月２９日电（记者李江涛）清华大学２９日宣布，中国科学院院士顾秉林接替因年龄原因辞职的王大中出任清华大学校长，王大中担任校务委员会名誉主任。顾秉林院士出生于１９４５年，吉林德惠人。他１９６５年考入清华大学工程物理系学习，１９７０年大学毕业并留校任......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231339796634581/20110225231339796634581_.html" target="_blank">顾秉林出任清华大学校长</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document顾秉林出任清华大学校长中国青年报 2003-04-28　 本报北京4月28日电（记者原春琳）清华大学今天正式对外宣布：顾秉林院士成为清华新一任校长。据介绍，王大中由于年龄原因辞去校长一职，仍担任校务委员会名誉主任。　 据介绍，现年57岁的清华新任校长顾秉林，是中国科学院院士，物理学家，丹麦Aarhus大学博士。1965年考入......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231339812304863/20110225231339812304863_.html" target="_blank">清华大学新校长上任</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学新校长上任北京晚报 2003年4月29日本报讯昨天，清华大学举行党政干部会，传达党中央、国务院关于清华大学校长职务任免的决定。经中共中央批准，国务院于2003年4月25日做出决定，任命顾秉林同志为清华大学校长；免去王大中同志的清华大学校长职务。此次对清华大学校长职务的调整，是一次正常的新老交替，也是正常的职务变动......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231339921626351/20110225231339921626351_.html" target="_blank">顾秉林出任清华大学校长</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document顾秉林出任清华大学校长新华网 2003-04-29　 北京4月28日电（记者原春琳）清华大学今天正式对外宣布：顾秉林院士成为清华新一任校长。据介绍，王大中由于年龄原因辞去校长一职，仍担任校务委员会名誉主任。　 据介绍，现年57岁的清华新任校长顾秉林，是中国科学院院士，物理学家，丹麦Aarhus大学博士。1965年考入清华大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231339859781218/20110225231339859781218_.html" target="_blank">顾秉林出任清华大学校长 原校长王大中辞职...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document顾秉林出任清华大学校长 原校长王大中辞职(图)中新网 2003年04月29日清华大学校长易人，两校长亲切握手。图右为原校长王大中中新网4月29日电 清华大学昨天正式对外宣布：党中央、国务院任命顾秉林院士成为清华新一任校长。王大中由于年龄原因辞去校长一职，仍担任校务委员会名誉主任。来自清华大学的消息称，4月28日上......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231339843302996/20110225231339843302996_.html" target="_blank">顾秉林任清华大学校长</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document顾秉林任清华大学校长中国教育报2003年4月29日范绪锋本报北京4月28日讯(记者 范绪锋)中共中央、国务院日前决定：顾秉林任清华大学校长(副部长级)，免去王大中的清华大学校长职务。清华大学今天举行了中层党政干部会暨校长任命仪式。教育部党组书记、部长周济，中组部副部长沈跃跃，中共北京市委副书记龙新民出席会议并讲话。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348046978008/20110225225348046978008_.html" target="_blank">党中央国务院任命顾秉林任清华大学校长</a></h3>
+              <p class="thnews_jqzy">　　无标题文档党中央国务院任命顾秉林任清华大学校长王大中担任清华大学校务委员会名誉主任【新闻中心4月28日讯】4月28日上午，我校在主楼接待厅举行党政干部会，传达党中央、国务院关于清华大学校长职务任免的决定。中组部副部长沈跃跃、教育部部长周济、北京市委副书记龙新民及有关部门的领导到会，我校中层以上干部近200人出席了会议。 会议由校党委书记陈希同志主持。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231339078510888/20110225231339078510888_.html" target="_blank">王大中：在全校党政干部会上的讲话</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在全校党政干部会上的讲话王大中（2003年4月28日）各位领导，同志们： 刚才，中组部沈跃跃副部长宣布了中央关于我校校长的任免决定，我坚决拥护中央的决定。 我本人由于年龄已大，向上级请求辞去校长职务，很感谢中央批准了我的请求。感谢领导同志讲话中对我校和我本人工作的肯定。这次经过民主推荐和考察，中央任命顾秉林同志任校长，这是众望所归，代表了清......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231338937376212/20110225231338937376212_.html" target="_blank">党中央国务院任命顾秉林任清华大学校长</a></h3>
+              <p class="thnews_jqzy">　　无标题文档党中央国务院任命顾秉林任清华大学校长王大中担任清华大学校务委员会名誉主任【新闻中心4月28日讯】4月28日上午，我校在主楼接待厅举行党政干部会，传达党中央、国务院关于清华大学校长职务任免的决定。中组部副部长沈跃跃、教育部部长周济、北京市委副书记龙新民及有关部门的领导到会，我校中层以上干部近200人出席了会议。 会议由校党委书记陈希同志主持。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348078669649/20110225225348078669649_.html" target="_blank">校庆日 王大中校长看望同学们 检查防“非...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档校庆日 王大中校长看望同学们 检查防“非典”工作4月27日，春光明媚的清华园内，一排排新颖别致的彩色刀旗迎风招展。历史悠久而青春蓬勃的清华大学，迎来了她92岁的生辰华诞。尽管非典型肺炎在北京的蔓延，使学校不得不取消了各项大型校庆活动，但蓝天绿草掩映下的紫荆花和师生们一张张欢快而自信的笑脸，依然为校庆日增添了无限的美丽和生机。接近中午时，王大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231338421526569/20110225231338421526569_.html" target="_blank">校领导王大中等与学生共庆校庆</a></h3>
+              <p class="thnews_jqzy">　　无标题文档庆校庆 献爱心 共渡难关 共祝祖国校领导王大中等与学生共庆校庆 今天是清华92周年校庆日，校园里飘舞的彩旗和五彩缤纷的纸鹤渲染着节日的气氛。由紫荆志愿者服务总队和爱心协会发起的“千纸鹤行动”和艺术团同学们的自发表演，表达了清华学子对战斗在非典第一线的医务工作者的敬意和对清华母校92岁生日的特殊祝福。校领导王大中、张再兴、庄丽君、杨振斌等来到同学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231338390121408/20110225231338390121408_.html" target="_blank">校庆日 王大中校长看望同学们 检查防“非...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档校庆日 王大中校长看望同学们 检查防“非典”工作4月27日，春光明媚的清华园内，一排排新颖别致的彩色刀旗迎风招展。历史悠久而青春蓬勃的清华大学，迎来了她92岁的生辰华诞。尽管非典型肺炎在北京的蔓延，使学校不得不取消了各项大型校庆活动，但蓝天绿草掩映下的紫荆花和师生们一张张欢快而自信的笑脸，依然为校庆日增添了无限的美丽和生机。接近中午时，王大......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231337609298212/20110225231337609298212_.html" target="_blank">王大中校长致全体校友的一封信</a></h3>
+              <p class="thnews_jqzy">　　无标题文档王大中校长致全体校友的一封信在清华大学即将迎来建校92周年之际，我谨向祖国各地和旅居海外的校友们致以亲切的问候！过去的一年是我校建设发展取得新进展的一年。完善综合性学科布局，提高学科建设水平。2002年在教育部和卫生部的大力支持下，北京协和医科大学将更名为“清华大学北京协和医学院”。至此，涵盖工、理、文、法、管理、艺术和医学等学科领域的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225348093915997/20110225225348093915997_.html" target="_blank">王大中校长致全体校友的一封信</a></h3>
+              <p class="thnews_jqzy">　　无标题文档王大中校长致全体校友的一封信在清华大学即将迎来建校92周年之际，我谨向祖国各地和旅居海外的校友们致以亲切的问候！过去的一年是我校建设发展取得新进展的一年。完善综合性学科布局，提高学科建设水平。2002年在教育部和卫生部的大力支持下，北京协和医科大学将更名为“清华大学北京协和医学院”。至此，涵盖工、理、文、法、管理、艺术和医学等学科领域的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231335328340879/20110225231335328340879_.html" target="_blank">清华大学校长：如何创建世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学校长：如何创建世界一流大学王大中人民日报 2003年04月18日第八版编者按：世界一流大学什么样？中国如何创建世界一流大学？早在1993年，清华大学就明确提出创建世界一流大学的奋斗目标，作为校长，王大中同志的思考值得一读。“创建世界一流大学”不应仅是目标，更要成为压力，化为行动。只有一步一个脚印，在继承的基础上不......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2003.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231334187155979/20110225231334187155979_.html" target="_blank">怎样建设世界一流大学</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document怎样建设世界一流大学清华大学校长王大中：向世界一流大学跨越中国教育报 2003年4月11日记者　左春明　通讯员　周月红刚刚结束的的“一流大学建设与实践学术研讨会”上，清华大学校长王大中宣布了清华大学“三个九年，分三步走”的总体发展规划。规划提出：在2012到2020年的“第三个九年”中，清华将“在总体上建成世界一流大学”......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231333015744500/20110225231333015744500_.html" target="_blank">清华亮出建设世界一流大学时间表</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华亮出建设世界一流大学时间表2011年力争跻身世界一流，2020年总体建成世界一流科技日报 2003-03-31本报记者 仇方迎清华大学校长王大中3月29日介绍了清华大学建设世界一流大学的时间表。按照该校“三个九年，分三步走”的总体发展规划，该校将在2011年力争跻身世界一流大学行列，2020年总体建成世界一流大学。王......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2003.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231331109585783/20110225231331109585783_.html" target="_blank">我校王大中等五位教授担任全国政协专门委员...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档我校王大中等五位教授担任全国政协专门委员会委员3月14日，第十届全国政协委员会第一次主席会议通过了政协第十届全国委员会专门委员会名单。我校王大中校长任科教文卫体委员会委员，水利系王光谦教授任人口资源环境委员会委员，物理系吴国祯教授、人文学院蔡继明教授任港澳台侨委员会委员，美术学院李燕教授任文史资料委员会委员。（春雨）</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2003.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231326828510837/20110225231326828510837_.html" target="_blank">我国新一代核反应堆在北京并网发电成功</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document我国新一代核反应堆在北京并网发电成功新华社 2003-01-071月7日，10兆瓦高温气冷堆总控室的技术人员在密切关注反应堆运行发电情况。当日11时11分，由清华大学核能技术设计研究院承担的国家863计划重点项目——10兆瓦高温气冷实验堆成功并网发电，这是中国在核技术研究领域取得的又一重要进展，表明中国已经掌握了高温气冷堆设......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2003.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231326625419561/20110225231326625419561_.html" target="_blank">清华大学到中科院调研侧记</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document鼻息互通血脉相连——清华大学到中科院调研侧记科技日报 2003-01-03本报记者郑千里“我们与清华大学可谓血脉相连。”2003年1月2日下午，中国科学院物理研究所所长王恩哥在贵宾厅入口处迎接清华大学领导一行时，开场白是这样一句话。他指着墙上挂的研究所历任所长照片说，“比如萨本栋先生1946年出任我所第二任所长，然后......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231320234335570/20110225231320234335570_.html" target="_blank">王大中：感言十六大 畅谈新思路（一）</a></h3>
+              <p class="thnews_jqzy">　　无标题文档感言十六大 畅谈新思路（一）王大中校长：清华师生要为全面建设小康社会做出贡献●新闻中心记者 周襄楠在主楼，王大中校长向我们谈起刚刚闭幕的十六大，满是欣喜和希望：“这次大会开得非常成功，正像胡锦涛同志说的那样，这是一次团结的大会、胜利的大会、奋进的大会和继往开来的大会，对我们党来说具有非常重要的历史意义。”他说，“这次大会上，把‘三个代表’的重要......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>11</span>2002.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231318812129884/20110225231318812129884_.html" target="_blank">高校师生努力开拓成英才</a></h3>
+              <p class="thnews_jqzy">　　无标题文档高校师生努力开拓成英才北京日报 2001年11月9日本报讯（记者戚海燕）昨天，首都高校百万师生员工怀着喜悦的心情，聚集在教室和宿舍，通过电视和电脑网络收听收看党的十六大开幕式，纷纷表示要肩负起历史和时代赋予的庄严使命，继往开来，与时俱进，为实现中华民族伟大复兴而努力奋斗。清华大学校长王大中院士说，江泽民同志的报告鼓舞人心。我们要努力实现科教......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231310421171179/20110225231310421171179_.html" target="_blank">王大中：在2002级本科生开学典礼上的讲话</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在2002级本科生开学典礼上的讲话清华大学校长 王大中同学们：今天我们在这里隆重集会，召开2002级本科新生开学典礼。我代表全校师生员工向全体新同学表示衷心的祝贺和热烈的欢迎！ 我校今年从全国各省、市、自治区共招收本科新生3411人，第二学位学生113人。同学们经过艰苦的努力，脱颖而出成为了清华学子，学校在为你们曾取得的成绩感到高兴的同时，也要......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2002.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231310484647307/20110225231310484647307_.html" target="_blank">王大中：在2002级研究生开学典礼上的讲话</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在2002级研究生开学典礼上的讲话清华大学校长 王大中各位老师，各位同学： 今天，我们在这里隆重召开2002级研究生开学典礼，首先请允许我代表全校师生员工向今年新入学的970名博士研究生和2713名硕士生研究生表示衷心的祝贺和热烈的欢迎！ 清华大学自1911年建校，至今已走过91个春秋。自九十年代中期，我校提出了综合性、研究型、开放式的办学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231257640194972/20110225231257640194972_.html" target="_blank">王大中：在庆祝张光斗先生从事水利水电事业...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在庆祝张光斗先生从事水利水电事业68周年暨90寿辰大会上的讲话王大中尊敬的张光斗先生和张夫人，尊敬的宋健、钱正英副主席，尊敬的各位领导、各位来宾：在这春光明媚的4月，在清华大学91年校庆之际，我们怀着喜悦的心情欢聚在一起，举行张光斗先生从事水利水电事业68周年暨90寿辰庆祝会。在此，我谨代表学校向张光斗先生致以热烈的祝贺和崇高的敬意！张光斗......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225349921763082/20110225225349921763082_.html" target="_blank">王大中：在庆祝张光斗先生从事水利水电事业...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档在庆祝张光斗先生从事水利水电事业68周年暨90寿辰大会上的讲话王大中尊敬的张光斗先生和张夫人，尊敬的宋健、钱正英副主席，尊敬的各位领导、各位来宾：在这春光明媚的4月，在清华大学91年校庆之际，我们怀着喜悦的心情欢聚在一起，举行张光斗先生从事水利水电事业68周年暨90寿辰庆祝会。在此，我谨代表学校向张光斗先生致以热烈的祝贺和崇高的敬意！张光斗......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2002.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225349953880135/20110225225349953880135_.html" target="_blank">校长致辞</a></h3>
+              <p class="thnews_jqzy">　　无标题文档校长致辞清华大学校长、中国科学院院士 王大中在新千年第二个春天，清华大学迎来了建校91周年校庆。我谨代表全校师生员工，向海内外的学子以及关心清华大学发展的各界人士致以真诚的问候。90周年校庆，是我校历史上的一个重要的里程碑，也是我校建设与发展的新起点。一年来，我校围绕着创建综合性、研究型、开放式世界一流大学的总目标不断开拓进取，学校的物质文......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2002.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231246843214949/20110225231246843214949_.html" target="_blank">王大中校长荣获“先进校长”称号</a></h3>
+              <p class="thnews_jqzy">　　无标题文档王大中校长荣获“先进校长”称号近年来，在中共北京市委教育工委的领导下，北京高等学校中涌现出一批依靠教职工办好学校的先进党委书记、校长。他们在学校工作中努力贯彻党的全心全意依靠工人阶级的指导方针，充分尊重教职工群众当家作主的权利，能最大限度地保护和调动广大教职工的积极性，不断增强学校的凝聚力和向心力，积极推动学校的民主政治建设，注意发挥工会和教代......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2002.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225350734114034/20110225225350734114034_.html" target="_blank">王大中校长荣获“先进校长”称号</a></h3>
+              <p class="thnews_jqzy">　　无标题文档王大中校长荣获“先进校长”称号近年来，在中共北京市委教育工委的领导下，北京高等学校中涌现出一批依靠教职工办好学校的先进党委书记、校长。他们在学校工作中努力贯彻党的全心全意依靠工人阶级的指导方针，充分尊重教职工群众当家作主的权利，能最大限度地保护和调动广大教职工的积极性，不断增强学校的凝聚力和向心力，积极推动学校的民主政治建设，注意发挥工会和教代......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2002.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225350781368839/20110225225350781368839_.html" target="_blank">大学者 有大师之谓也——访清华大学校长王...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档大学者 有大师之谓也——访清华大学校长王大中——清华大学校长王大中谈以一流人才建一流大学《文汇报》 2002年1月09日编者按本报从今天起推出“大学校长访谈”系列报道。在经济全球化的过程中，科技的发展与社会的进步对人类自身的发展不断提出新的要求，高等教育正是通过培养高层次人才、传承文化、知识创新以及维护社会价值准则，不断满足这些要求。我们这......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231225156407075/20110225231225156407075_.html" target="_blank">清华大学校长王大中在清华90年校庆会上发言</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学校长王大中在清华90年校庆会上发言中国新闻网 2001年4月29日 22:54中国北京清华大学校长王大中院士，四月二十九日在庆祝清华大学建校90年大会上发言。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231225562297921/20110225231225562297921_.html" target="_blank">从核能专家到一校之长——王大中志在一流</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document院士风采从核能专家到一校之长王大中志在一流庄雯　孙立群（中国青年报－大教育时代 2001年4月26日）　 1993年夏，清华大学在酝酿新一任校长人选时，我国核能专家、当时的清华核研院院长王大中得到了相当的认同。1994年，他出任清华大学校长。交到他手中的是一张铺设在桌上刚刚写下标题的蓝图。蓝图的标题引人注目：到2011年清华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354562557786/20110225225354562557786_.html" target="_blank">从核能专家到一校之长——王大中志在一流</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document院士风采从核能专家到一校之长王大中志在一流庄雯　孙立群（中国青年报－大教育时代 2001年4月26日）　 1993年夏，清华大学在酝酿新一任校长人选时，我国核能专家、当时的清华核研院院长王大中得到了相当的认同。1994年，他出任清华大学校长。交到他手中的是一张铺设在桌上刚刚写下标题的蓝图。蓝图的标题引人注目：到2011年清华......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225354843949825/20110225225354843949825_.html" target="_blank">王大中：在清华大学建校九十周年庆祝大会上...</a></h3>
+              <p class="thnews_jqzy">　　在清华大学建校九十周年庆典上的讲话在清华大学建校九十周年庆祝大会上的讲话清华大学校长王大中（2001年4月29日）尊敬的江泽民主席、尊敬的朱镕基总理、尊敬的各位领导、各位嘉宾、各位学长、老师们、同学们、朋友们：在21世纪的第一个春天,我们在这里隆重集会,庆祝清华大学建校90周年。在这样的历史性时刻，有这么多领导和海内外同仁、嘉宾莅临我校，我们的喜悦与感激......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355093465700/20110225225355093465700_.html" target="_blank">行健不息须自强——清华大学校长王大中谈建...</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document行健不息须自强——清华大学校长王大中谈建设世界一流大学(人民日报海外版 2001年04月28日)王大中校长近影本报记者 王君超暮春时节，清华园紫荆盛开，丁香吐艳，整个校园洋溢着一派迎接90周年校庆的热烈气氛。校庆前夕，记者采访了清华大学校长、我国著名核技术专家王大中院士。谈到即将到来的90周年庆典，儒雅、平实的王校长......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231216796724260/20110225231216796724260_.html" target="_blank">清华大学现任校长王大中</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document清华大学现任校长王大中(2001.04.24 新华网)新华网消息王大中（1935－），1994年1月出任清华大学校长。王大中，男，1935年生于河北省。1958年毕业于清华大学工程物理系核反应堆专业。1981-1982年在联邦德国于利希核中心从事高温气冷堆研究，1982年在联邦德国亚琛工业大学获自然科学博士学位。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2001.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225355671381973/20110225225355671381973_.html" target="_blank">世纪清华：自强不息 再铸辉煌</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document世纪清华：自强不息 再铸辉煌（2001年4月19日 中国新闻网）中新社北京四月十八日电世纪清华：自强不息再铸辉煌——访清华大学校长王大中院士中新社记者王锦娜清华大学建校九十周年之际，本社记者在绿影婆娑、春意盎然的清华园采访了清华大学校长王大中教授。王大中校长是新中国成立后清华大学的第五任校长，也是清华历史上第......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

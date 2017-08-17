@@ -1,0 +1,538 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>科学大师的艺术情怀</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231211078296276&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9656/index.html' class='navigation_style'>清华人物</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><h3 align="center">科学大师的艺术情怀</h3><p align="center">（中华读书报 2001年3月28日）</p><p align="center"> 　　<b> 《叶之恋》：科学大师的真情流露</b></p><p> 　　翻着案头那本以《科学与艺术》为主题的大型画册，主编李政道 博士那种艺术情怀和他孜孜不倦地追求“科艺交融”意境的认真实践 场景，又一次浮现在自己的眼前。</p><p> 　　大型画册《科学与艺术》（上海科学技术出版社2000年9月第一版） 从酝酿到出版，历时三年之久。这三年，可谓是主编李政道教授时间 与情感投入的三年。在1998年年中之时，画册正在遴选画作者的代表   作，我通过中国高等科学技术中心的柳怀祖先生（画册副主编）表示 了一个心愿，希望能有一幅李政道教授的代表作。此后，传来消息说， 李政道教授对此并未立即做出答复，对这本画册的出版，他需要时间   和情感的投入，他说：“我要认真考虑一下。”一年后的1999年年中， 我意外地得到了李政道教授于当年初春时创作的两幅珍贵画作—— 《叶之恋》和《叶之舞》，并同时获悉，这两幅画作是他怀念和思恋   于三年前仙逝的夫人秦惠女士所作。</p><p> 　　在《叶之舞》这幅画中，画面是被秋风吹拂着的竹叶，竹叶飞舞 着，不知飘向何处去。在画面的右上方写着“念”两字，还有着科 学大师满怀深情的两句诗句：“竹神萧萧问秋风，君影茫茫去何处。”   这两句诗句起首的一个字“竹”与“君”叠加起来（竹字头底下一个 君字），正是他夫人名中的“”字。同样，在《叶之恋》这幅画中， 画面是两片不同色泽的叶子，一片是红色，一片是绿色，画名又称作   “恋”。这是李先生追忆着自己与夫人秦惠女士相濡以沫度过共 同岁月之情所作。当我获得李先生这两幅珍贵代表作，并知晓了这两 幅画的创作背景与作者所抒发的情感，顿时，从我内心深处迸发出一   种从未有过的复杂心情。</p><p> 　　秦惠女士生前一直热忱关心着祖国的科学和教育事业，尤其对 祖国年轻人的培养。她对李政道教授亲自倡导和组织的中美联合招考 物理研究生（简称CUSPEA）项目，非常关心与支持。据李政道先生回   忆，在她病危期间，“嘱我一定要继续关心和帮助祖国大学生学习与 了解科学”。秦惠女士去世后，李政道教授用他和夫人的私人积蓄 在复旦大学设立了“秦惠－李政道基金”。</p><p> 　　李先生本人喜欢《叶之舞》这幅画，可能是此画画面更显刚毅， 还寄托着他对爱妻的无限哀思。而我却更喜欢《叶之恋》这幅画，因 为其寓意更加丰富：每片叶子本身两半近似对称而非完全对称，造型   优美，正如《科学与艺术》画册中关于“对称与不对称”主题所述： “一幅近似对称的山水画，能给人一种美的享受，但如果将画的一半 与它的镜象组合，形成一幅完全对称的山水画，效果就会迥然不同。   自然界的对称美，令人赞叹。李政道和杨振宁两位教授提出了基本粒 子在弱相互作用条件下的宇称不守恒定律，揭示了自然界的对称与不 对称原则，这与美学中对称与不对称原则相似。”树叶本身似对称而   非对称，正是表现了自然界的这种美，而画中的两片叶子相依相知， 又表现出人世间最美丽的情感。在征得李先生同意后，我最终选择了 《叶之恋》这幅画。然而，这两幅画的创作背景和科学大师为此倾注   的情感一直萦绕在我心中。</p><p align="center"> 　　 <b>一幅画，一段“科艺沟通”的逸事</b></p><p> 　　多年来，李政道教授一直身体力行，倡导科学与艺术的交融。自 1986年中国高等科学技术中心成立之始，每年都要举办一两次学术会 议，每次会议都会产生一幅主题画，并以这些主题画为主画面印制会   议的宣传画。殊不知，这一幅幅画渗透着李政道教授的科学思想与艺 术创意，最早两届学术会议的主题画就是由李政道教授亲自设计并创 作的，这就是出版《科学与艺术》画册，并由李政道教授担纲主编的   缘由。</p><p> 　　李政道教授有着相当深的艺术造诣。他年轻时代，在国外时就开 始收藏吴作人、李可染、黄胄等著名画家的画作。后来，这些艺术大 师与李政道教授成了朋友，又都应李政道教授之邀，为中国高等科技   中心主办的学术会议创作主题画。李政道教授不但熟悉中国当代著名 画家的作画风格与擅长的表现手法，并能根据他们的擅长画法，邀请 其创作相应科学议题的画作，他还草拟画面，与艺术大师们沟通画作   的表现形式与意境。</p><p> 　　漫画大师华君武为“高温超导体和C60家族”会议创作的漫画《双 结生翅成超导，单行苦奔遇阻力》，不仅画面形象生动，其创作过程 亦富有情趣。</p><p> 　　李政道教授在与华君武大师交流时，将会议主题蕴含的科学思想 作了这样的解释：当两个电子在低温状态下一起结成库珀对时，呈现 “自由”状态，就能实现超导，而单独的电子则被束缚和困扰，就像   在球场上，一个球员独自带球前进会受到对方多人拦截，不容易前进 得很远，但两个球员则可以互相配合，传球前进，自由进退。李先生 还画了两幅草图，一幅图下面是C60晶体，上面画了一个小孩沿晶体表   面往上爬，但是爬不上。李先生说，他无法表现出小孩痛苦的神态， 而另一幅画画面上的两个小孩双手相携，便能跳得很高。华君武先生 从艺术表现角度着手，认为立体的晶体不美观，建议改成片状的，将   C60连成一片，像云一样，然后他又问李政道先生，要让小孩跑得快， 可否让他们插上翅膀。李先生非常高兴地说，画家的想像力更丰富。 于是，就有了画册中《双结生翅成超导，单行苦奔遇阻力》那幅生动   形象的画作。画面上，插上翅膀的小孩（画册中将其解释为小蜜蜂， 更显得形象逼真）笑眯眯地飞离晶体，而单独的小孩却愁眉苦脸地被 束缚在晶体上。中国科学院院士杨福家教授曾在一次向大学生作科普   报告时引用了这幅画，引起听众很大反响。枯燥的科学理论被富有艺 术情趣的画面表现得栩栩如生。</p><p> 　　在《科学与艺术》画册中，有一幅题为《似对称而不对称》的画， 是由常沙娜教授即兴创作的，画的左下方还有“水边铁花两三枝”几 个小字。李政道先生说，这是他即兴写上去的，因为左边不压上几个   字，整幅画面的对称性就会差得太远。艺术家和科学家共聚一堂，共 同即兴创作画，仅是在中国高等科技中心主办的科学与艺术研讨会上 的一个场景，使科学议题的探讨和对艺术作品的欣赏融为一体，这也   是李政道先生倡导的科学与艺术的交流、沟通的生动体现。</p><p> 　　其实，画册中的每一幅画，都有一段科学家与艺术家交流和沟通 的趣闻。若能经常翻阅此画册，是很能感受到这种“科艺交融”深邃 意境的愉悦的。</p><p align="center"> 　　<b> 科学与艺术：永无止境的探索</b></p><p> 　　由于《科学与艺术》画册的缘故，我有幸多次聆听了李政道先生 对艺术感受的阐述。李政道先生曾说过，我是搞物理的，科学是我的 专业、本行，但是我对艺术一直很有兴趣。他在多种场合提到过“记   载公元前13世纪一次新星爆发的一片中国甲骨”，那是李政道先生年 轻时代第一次看到的甲骨文，给他印象非常深。他说，他有一种很亲 切的感觉，他认为，用这种生动的艺术象形文字记录科学新发现，显   示了科学发现与艺术表达的一致性。并由此引发了他对中国传统文化 中蕴含的科学道理和艺术表现手法的热爱与向往。</p><p> 　　在《科学与艺术》画册出版后，李政道教授对倡导科学与艺术的 结合更为热心。在这本画册的出版座谈会后，我应邀参加了中国高等 科技中心主办的、由科学工作者和艺术工作者共同参与的一次“科艺   沟通”研讨会。在会上，李政道先生向来自清华大学美术学院的中青 年艺术工作者展示了画册中《大鹏》、《创天》等画作，并形象地解 释了有关宇宙的诞生、人类对宇宙以及对物质世界的探索等等情况，   他还认真地解释了科学中蕴含着的艺术美，与艺术家讨论如何向公众 展示科学中的艺术形象……同时，在场的中国科学院各研究所的科学 工作者也展示了如宇宙星空景观、自然界各种鸟类昆虫的形态、遥感   遥测记录的地貌图等各类科学照片，真实的科学照片本身的艺术美激 发起了艺术家们浓厚的兴趣，讨论场面十分热烈。</p><p> 　　在《科学与艺术》画册的编辑出版过程中，我亲眼目睹了科学家 与艺术家们的交流，被科学大师为此付出的精力和心血深深感动，这 是科学大师为了人类最高尚和最成功的精神表现——科学与艺术的交   融所进行的一项重要实践。作为科学书刊的编辑，在我们日常的科学 传播活动中，为了社会公众，不也应该尝试追求一种“科艺交融”意 境的实践，并为此付出我们的努力吗？</p><p> 　　（本文作者系上海科学技术出版社副编审、“科学编辑部”执行 主任、大型画册《科学与艺术》的责任编辑之一） </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月30日 14:41:13　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2015.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2015/20150505201449319539015/20150505201449319539015_.html" target="_blank">杨振宁、李政道获马塞尔·格罗斯曼奖</a></h3>
+              <p>　　2015年是爱因斯坦提出广义相对论100周年。为纪念这一划时代的进展，今天上午，“引力和宇宙学国际学术会议/第四届伽利略—徐光启国际会议”在中国科学院大学拉开序幕。会上，著名理论物理学家、诺贝尔物理奖获得者杨振宁和李政道共同获得马塞尔？格罗斯曼奖。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2013/20130429135609903770838/20130429135609903770838_.html" target="_blank">清华图书馆举办“李政道先生影像展”</a></h3>
+              <p class="thnews_jqzy">　　清华图书馆举办&ldquo;李政道先生影像展&rdquo;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;清华新闻网4月29日电（通讯员袁 欣）为迎接清华大学102周年校庆，4月27日，图书馆举办了&ldquo;李政道先生影像展&rdquo;，吸引了众多校友、师生前来参观。不久前，李政道先生将自己的部分著作和各个时期......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2013.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2013/20130329134723275264223/20130329134723275264223_.html" target="_blank">上海交大筹办李政道图书馆</a></h3>
+              <p class="thnews_jqzy">　　上海交大筹办李政道图书馆来源：文汇报 2013-3-29 姜澎上海交通大学钱学森图书馆昨天主办&ldquo;新时期人物纪念馆基本陈列内容设计研讨会&rdquo;，主办方透露，上海交通大学正在筹办李政道图书馆。人物纪念馆陈列内容设计是人物纪念馆工作中的一个关键环节，也是一项集学术研究、知识传播、创意构思于一体的系统工程。</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2010.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9669/2011/20110225232550671488763/20110225232550671488763_.html" target="_blank">创新人才需“一对一”培养</a></h3>
+              <p class="thnews_jqzy">　　创新人才需“一对一”培养中国科学院外籍院士 李政道这两天，很多人在纪念钱学森先生去世一周年，“钱学森之问”也再次成为议论的热点。一所大学怎样才能培养出具有创新精神的科技人才？要寻找答案，我们不妨先看看钱学森先生的求学经历。我一直认为，要培养出善于创新的人才，需要“一对一”的精英教育。钱先生当年在美国留学时，就经常接受他的老师冯&#8226;卡门教......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225232312000837699/20110225232312000837699_.html" target="_blank">李政道：祖国科学界现在缺少一些最成功榜样</a></h3>
+              <p class="thnews_jqzy">　　李政道：祖国科学界现在缺少一些最成功榜样6月11日下午，中国高等科学技术中心四楼会客室，诺贝尔物理学奖得主李政道博士就中国的大学教育和科学研究等话题，接受了《科学新闻》杂志专访。多年来，李政道一直关注中国的科技事业发展。他积极建议重视科技人才的培养以及基础科学研究，如促成中美高能物理合作、建议和协助建造北京正负电子对撞机、建议成立自然科学基金、设立C......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9668/2011/20110225232147953176791/20110225232147953176791_.html" target="_blank">李政道：大音希声 大象无形-纪念叶企孙老...</a></h3>
+              <p class="thnews_jqzy">　　大音希声 大象无形——纪念叶企孙老师110周年诞辰李政道叶企孙老师是中国杰出的物理学家、教育家和爱国者。 叶先生在物理学上的成就有目共睹。早在1921年，他用X射线法重新测定了普朗克常数h的值为（6.556±0.009）×10－27尔格秒（其不确定值度为0.14％），这是二十世纪二三十年代公认为最精确的值，在国际物理学界沿用达十余年之久。他在铁磁性金属的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225231853125564574/20110225231853125564574_.html" target="_blank">“科学与艺术”雕塑落成</a></h3>
+              <p class="thnews_jqzy">　　“科学与艺术”雕塑落成《人民日报》 2007-04-29&nbsp; 杨健本报北京４月２８日讯&nbsp;&nbsp; 记者杨健报道：“科学与艺术”主题雕塑日前在清华科技园落成。这一雕塑取材于绘画大师李可染为诺贝尔物理学奖获得者李政道创作的国画——《核子重如牛，对撞生新态》。1984年，北京正负电子对撞机动工兴建，为此付出辛劳的李政道博士心情非常激动......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2007.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9650/2011/20110225231852937964974/20110225231852937964974_.html" target="_blank">清华科技园主雕塑落成[图]</a></h3>
+              <p class="thnews_jqzy">　　清华科技园主雕塑落成新华网  2007年04月28日 陈建力4月26日，艺术大师李可染的夫人邹佩珠女士（左）在落成的“科学与艺术”主雕塑前与来宾合影。当日，清华科技园“科学与艺术”主雕塑落成仪式在清华科技园举行。这座雕塑是以绘画艺术大师李可染先生1986年为著名科学家李政道创作的“核子重如牛对撞生新态”的绘画为基础，由雕塑家邹佩珠女士等人二次创作完成......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231821625862858/20110225231821625862858_.html" target="_blank">第二届艺术与科学国际作品展暨学术研讨会举行</a></h3>
+              <p class="thnews_jqzy">　　倡导艺术与科学的有机结合第二届艺术与科学国际作品展暨学术研讨会举行中国教育报 2006-11-13 杨晨光艺术与科学的关系究竟有多密切？在清华大学11月11日举行的“第二届艺术与科学国际作品展暨学术研讨会”上，来自21个国家和地区的210件作品、130多篇论文围绕这一话题展开。有关专家指出，倡导人文科学与自然科学的有机结合，尤其是将艺术的素养和感觉融入科......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231821515250049/20110225231821515250049_.html" target="_blank">科学巨匠与艺术大师携手探求艺术与科学内在...</a></h3>
+              <p class="thnews_jqzy">　　科学巨匠与艺术大师携手探求艺术与科学内在联系光明日报&nbsp; 2006-11-12&nbsp; 张蕾 殷燕召作为构建社会文化的两大支柱，艺术与科学都是人类创造性的劳动成果，两者的融合与创新已成为当代世界文化建构的重要内容，新世纪呼唤着艺术与科学的整合。在今天开幕的第二届“艺术与科学国际作品展暨学术研讨会”上，著名物理学家李政道和著名画家吴冠中等科学巨......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231821375896314/20110225231821375896314_.html" target="_blank">“科学与艺术”主题雕塑落户清华 李政道为...</a></h3>
+              <p class="thnews_jqzy">　　“科学与艺术”主题雕塑落户清华 李政道为雕塑揭幕新华网 2006-11-11 李斌 周凯莉“科学与艺术”主题雕塑11日“落户”清华科技园，诺贝尔奖获得者李政道为雕塑揭幕。“科学与艺术”主题雕塑以已故中国画大师李可染于1986年专门为李政道所作的画作《核子重如牛，对撞生新态》为模型创作而成。这一雕塑也成为李政道80寿诞的生日礼物。李政道1926年生......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231821312740876/20110225231821312740876_.html" target="_blank">艺术与科学在这里深深契合—记李政道、吴冠...</a></h3>
+              <p class="thnews_jqzy">　　艺术与科学在这里深深契合—记李政道、吴冠中两位先生的演讲【新闻中心讯 记者 程曦】《对称与不对称》，李政道先生的演讲题目并不令人意外——这是理论物理领域中直指“真理与美”终极命题的一组概念，50年前他与杨振宁先生合作发表的那篇重要论文，也正与此相关。意外的是他没有讲物理。讲台两侧的投影屏幕上，这6个字以气韵生动的书法形式出现；当他需要举例时，款款而出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231821453262247/20110225231821453262247_.html" target="_blank">“科学与艺术”主题雕塑在清华科技园揭幕</a></h3>
+              <p class="thnews_jqzy">　　“科学与艺术”主题雕塑在清华科技园揭幕科技日报 2006-11-11 李艳&nbsp;&nbsp;11月11日，由诺贝尔奖获得者、著名物理学家李政道与著名画家吴冠中共同主持召开的第二届艺术与科学国际作品展暨研讨会在清华大学开幕。同时，“科学与艺术”主题雕塑揭幕仪式在清华科技园举行。著名科学家李政道，科技部党组成员、科技日报社社长张景安，清华大学校长顾秉林......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225339875680865/20110225225339875680865_.html" target="_blank">第二届“艺术与科学国际作品展暨学术研讨会...</a></h3>
+              <p class="thnews_jqzy">　　艺术与科学再度携手的盛会第二届“艺术与科学国际作品展暨学术研讨会”在清华开幕【新闻中心讯 记者 程曦 摄影 郭海军】11月11日上午，第二届“艺术与科学国际作品展暨学术研讨会”在清华大学主楼报告厅隆重开幕，诺贝尔奖获得者、著名物理学家李政道先生和清华大学教授、著名画家吴冠中先生等发表精彩演讲。开幕式上，清华大学校长顾秉林院士回顾了5年前首届“艺术与科......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231821265344404/20110225231821265344404_.html" target="_blank">第二届“艺术与科学国际作品展暨学术研讨会...</a></h3>
+              <p class="thnews_jqzy">　　艺术与科学再度携手的盛会第二届“艺术与科学国际作品展暨学术研讨会”在清华开幕【新闻中心讯 记者 程曦 摄影 郭海军】11月11日上午，第二届“艺术与科学国际作品展暨学术研讨会”在清华大学主楼报告厅隆重开幕，诺贝尔奖获得者、著名物理学家李政道先生和清华大学教授、著名画家吴冠中先生等发表精彩演讲。开幕式上，清华大学校长顾秉林院士回顾了5年前首届“艺术与科......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2005.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231657484849149/20110225231657484849149_.html" target="_blank">李政道藏头诗庆祝博士后制度20年</a></h3>
+              <p class="thnews_jqzy">　　无标题文档李政道藏头诗庆祝博士后制度20年光明日报 2005年11月2日记者蔡闯、王庆环本报北京11月1日电(记者蔡闯、王庆环)近日,北京大学、清华大学分别举行庆祝会,庆祝中国博士后制度20年。博士后制度首倡者、诺贝尔奖得主李政道与北大、清华师生一起交流研讨,共叙发展。李政道在北大、清华进行了精彩演讲,并用一首“藏头诗”鼓励两校博士后人员:“祝贺中华青年......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2005.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9664/2011/20110225231655500276515/20110225231655500276515_.html" target="_blank">李政道清华开讲21世纪最大谜题</a></h3>
+              <p class="thnews_jqzy">　　李政道清华开讲21世纪最大谜题京华时报  2005-10-25  肖锋李政道在演讲中(本报记者 董世彪/摄)&nbsp;&nbsp;&nbsp;&nbsp;参加纪念中国博士后流动站成立二十周年活动&nbsp;&nbsp;&nbsp;&nbsp;本报讯 (记者 肖锋) 21世纪科学最大的谜题是什么？昨天下午，著名物理学家、诺贝尔物理学奖获得者李政道来到清华大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353921764903/20110225225353921764903_.html" target="_blank">吴冠中李政道笑论艺术与科学</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document吴冠中李政道笑论艺术与科学中国青年报 2001年6月3日本报记者 陈娉舒　 “有一种实用主义观点认为，艺术是虚无缥缈的，科学相对更实在有用。如果真是这样，中国更需要艺术家，还是科学家？”　 面对这一问题，李政道幽默地一笑：“我对艺术的认识水平，本身就很‘虚无缥缈’。”此言一出，台上台下笑声顿起。李政道敛容继续评说：“但是，必......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2001.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225353968365983/20110225225353968365983_.html" target="_blank">科学与艺术“牵手”清华园</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document科学与艺术“牵手”清华园我校举办艺术与科学国际作品展【新闻中心讯】5月31日下午3点整，全国政协主席李瑞环、全国政协副主席钱伟长、朱光亚，教育部长陈至立，科学大师李政道、丁肇中，艺术大师吴冠中，中国科学院院长路甬祥，我校校长王大中、党委书记贺美英，联合国教科文组织代表林川真红和等步入中国美术馆大厅，前来参加我校90周年校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2000.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231211031878020/20110225231211031878020_.html" target="_blank">科学大师的艺术情怀</a></h3>
+              <p class="thnews_jqzy">　　Untitled Document科学大师的艺术情怀（中华读书报 2001年3月28日）《叶之恋》：科学大师的真情流露翻着案头那本以《科学与艺术》为主题的大型画册，主编李政道 博士那种艺术情怀和他孜孜不倦地追求“科艺交融”意境的认真实践 场景，又一次浮现在自己的眼前。大型画册《科学与艺术》（上海科学技术出版社2000年9月第一版） 从酝酿到出版，......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

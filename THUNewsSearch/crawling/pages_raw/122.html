@@ -1,0 +1,1063 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>环境系举办青年教师学术报告会</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/publish/thunews/css/base.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/font/font.css" rel="stylesheet" type="text/css">
+<link href="/publish/thunews/css/inner.css" rel="stylesheet" type="text/css">
+<script src="/publish/thunews/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/slick.css">
+<script src="/publish/thunews/js/slick.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/regexcut.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/publish/thunews/css/owl.carousel.css">
+<script src="/publish/thunews/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/comm.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="/publish/thunews/js/html5.js" type="text/javascript"></script>
+<script src="/publish/thunews/js/json2.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/publish/thunews/js/regex-cn.js" type="text/javascript"></script>
+<!--[if lt IE 8]>
+ <link rel="stylesheet" href="/publish/thunews/font/ie7/ie7.css">
+<!--<![endif]-->
+<script language="javascript" type="text/javascript">
+  window.onerror = function(){return true;};
+  function cutSummary(summaryStr,lengTh){
+    if(summaryStr.length>lengTh){
+   summaryStr=summaryStr.substring(0,lengTh)+"...";
+    }
+    document.write(summaryStr);
+  }
+ $(document).ready(function() {
+  $("a.nivo-nextNav").click();
+ });
+ </script>
+<script type="text/javascript">
+// 对Date的扩展，将 Date 转化为指定格式的String 
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
+// (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
+Date.prototype.Format = function(fmt) 
+{ 
+ //author: meizz 
+  var o = { 
+    "M+" : this.getMonth()+1,                 //月份 
+    "d+" : this.getDate(),                    //日 
+    "h+" : this.getHours(),                   //小时 
+    "m+" : this.getMinutes(),                 //分 
+    "s+" : this.getSeconds(),                 //秒 
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+    "S"  : this.getMilliseconds()             //毫秒 
+  }; 
+  if(/(y+)/.test(fmt)) 
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+  for(var k in o) 
+    if(new RegExp("("+ k +")").test(fmt)) 
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length))); 
+  return fmt; 
+}
+//2015.08 年.月
+function getYM(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");  
+var yyyy=time2.substr(0,7);
+$("#"+id).text(yyyy);
+return yyyy; 
+}
+//10 日期
+function getDay(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+var md=time2.substr(8); 
+$("#"+id).text(md);
+return md; 
+}
+//2015.08.10 年.月.日
+function getYMD(dtStr,id){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("yyyy.MM.dd");
+//var md=time2.substr(8);
+$("#"+id).text(time2);
+return time2; 
+}
+function getMdd(dtStr){
+var dtArr = dtStr.split("-");
+var dt = new Date(dtArr[0], dtArr[1]-1, dtArr[2]);
+//var time1 = dt.Format("yyyy-MM-dd hh:mm:ss");  
+var time2 = dt.Format("MM.dd.yyyy");
+var mdd=time2.substr(0,5); 
+$(".mdd").text(mdd);
+return mdd; 
+}
+</script>
+<script type="text/javascript">
+function getResData(fwl){
+ jQuery.get("/application/visitor/article_list_visitors_2.jsp?articleID="+fwl+"&"+Math.random(), function(data){
+   $(".itemlist_total_"+fwl).empty().text(data);
+ });
+};
+ getResData('20160808154125426718341');
+ getResData('20160808092410103503742');
+ getResData('20160805155520350670626');
+ getResData('20160805134701811511056');
+ getResData('20160805124947586474045');
+ getResData('20160803160424718610743');
+ getResData('20160803115902107506313');
+ getResData('20160803090114447171187');
+ getResData('20160801103328912754749');
+ getResData('20160731150325552194344');
+ getResData('20160730162222817643009');
+ getResData('20160730152226169785915');
+ getResData('20160729150529434398889');
+ getResData('20160727190532668596861');
+ getResData('20160726192332442506519');
+ getResData('20160719162720777708397');
+ getResData('20160719091356830370257');
+ getResData('20160718160353808320486');
+ getResData('20160716121904758473951');
+ getResData('20160717103656364130661');
+ getResData('20160716111810484580973');
+ getResData('20160715162726007114209');
+ getResData('20160715145741214893925');
+ getResData('20160714025458274317937');
+ getResData('20160715094644091434589');
+ getResData('20160714193927299720302');
+ getResData('20160714173517593223526');
+ getResData('20160714082636529838626');
+ getResData('20160714093612562811918');
+ getResData('20160713195237413356383');
+ getResData('20160713194617428129650');
+ getResData('20160713150706110472564');
+ getResData('20160713103520011737564');
+ getResData('20160712154358355854748');
+ getResData('20160711182323760968800');
+ getResData('20160711100129658410721');
+ getResData('20160711184159708196606');
+ getResData('20160711165504249215153');
+ getResData('20160711092715473616695');
+ getResData('20160708155909726240591');
+ getResData('20160707113001495328567');
+ getResData('20160707115600394549733');
+ getResData('20160706085905334327219');
+ getResData('20160705112825980911584');
+ getResData('20160705133627783236434');
+ getResData('20160705101254679460618');
+ getResData('20160704212040664874740');
+ getResData('20160704164300254871217');
+ getResData('20160704100943010593116');
+ getResData('20160703173856495685702');
+</script>
+<link href="/publish/thunews/css/manhuahtmlarea.1.0.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/publish/thunews/js/manhuahtmlarea.1.0.js"></script>
+<script>
+auto_play = false;
+</script>
+</head>
+<body>
+<header class="clearfix">
+<section class="mainWrap">
+     <div class="topwraper relative clearfix">
+          <div class="ulink">
+                <ul class="clearfix">
+                     <li class="socialnet"><a href="http://weibo.com/tsinghua" class="circle"  title="微博" target="_blamk"><i class="thunews-weibo"></i></a>
+                    <li class="socialnet"><a href="javascript:;" class="circle"  title="微信"><i class="thunews-weixin"></i></a>
+                     <div class="socialwraper"><i><em></em></i><img src="/publish/thunews/images/weixin.jpg"></div>
+                    </li>
+                  </li>
+                      <li class="socialnet"><a href="/publish/thunews/10237/index.html" class="circle"   title="rss订阅"><i class="thunews-rss"></i></a></li>
+                    <li class="mr"><a href="/publish/thunewsen/index.html" class="en" target="_blank">ENGLISH</a></li>
+                    <li class="thuold mr"><a href=http://www.tsinghua.edu.cn/publish/news/index.html target="_blank">怀念老版</a></li>
+                    <li class="thuhome mr"><a href=http://www.tsinghua.edu.cn target="_blank">清华主页</a></li>
+                </ul>
+            </div>
+            <a href="/publish/thunews/index.html" class="logo"><img src="/publish/thunews/images/logo.png" alt="logo"></a>
+            <div class="search">
+               <form id="searchForm" target="_blank">
+<input name="query" type="text" >
+<input name="ie" type="hidden" value="utf8">
+<input name="cid" type="hidden" value="3">
+ <a href="javascript:;" onclick="searchSub();"><i class="thunews-search"></i></a>
+</form>
+            </div>
+        </div>
+        </section>
+<script src="/publish/thunews/js/searchsub.js"></script><nav class="navwrap yahei">
+ <section class="mainWrap">
+  <div id="smenu" class="smenu"><i class="thunews-bars"></i></div>
+  <script type="text/javascript">
+   jQuery(function(){
+    jQuery('#nav li a [class^=item]').removeClass('current');
+    jQuery('#nav li a.item0').addClass('current');
+   });
+  </script>
+  <ul id="nav">
+   <li><a href="/publish/thunews/index.html" class="item0">首页</a></li>
+   <li><a href="/publish/thunews/9648/index.html" class="item9648">头条新闻</a></li>
+   <li><a href="/publish/thunews/10303/index.html" class="item10303">综合新闻</a></li>
+   <li><a href="/publish/thunews/9649/index.html" class="item9649">要闻聚焦</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9658/index.html#dqwz">时讯快递</a></li>
+    <li><a href="/publish/thunews/9659/index.html#dqwz">学术科研</a></li>
+    <li><a href="/publish/thunews/9660/index.html#dqwz">教育教学</a></li>
+    <li><a href="/publish/thunews/9661/index.html#dqwz">招生就业</a></li>
+    <li><a href="/publish/thunews/9662/index.html#dqwz">交流合作</a></li>
+    <li><a href="/publish/thunews/9663/index.html#dqwz">观点报道</a></li>
+    <li><a href="/publish/thunews/9664/index.html#dqwz">社会服务</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9650/index.html" class="item9650">媒体清华</a></li>
+   <li><a href="/publish/thunews/9652/index.html" class="item9652">图说清华</a></li>
+   <li><a href="http://tv.tsinghua.edu.cn/" target="_blank">视频空间</a></li>
+   <li><a href="/publish/thunews/9656/index.html" class="item9656">清华人物</a></li>
+   <li><a href="/publish/thunews/9654/index.html" class="item9654">校园写意</a>
+   <ul>
+    <i><em></em></i>
+    <li><a href="/publish/thunews/9665/index.html#dqwz">广角透视</a></li>
+    <li><a href="/publish/thunews/9666/index.html#dqwz">校园生活</a></li>
+    <li><a href="/publish/thunews/9667/index.html#dqwz">文化漫谈</a></li>
+    <li><a href="/publish/thunews/9668/index.html#dqwz">清华史苑</a></li>
+    <li><a href="/publish/thunews/9669/index.html#dqwz">高教视点</a></li>
+   </ul>
+   </li>
+   <li><a href="/publish/thunews/9655/index.html" class="item9655">专题新闻</a></li>
+   <li><a href="/publish/thunews/10304/index.html" class="item10304">新闻排行</a></li>
+   <li><a href="/publish/thunews/9657/index.html" class="item9657">新闻合集</a></li>
+   </ul>
+   
+ </section>
+</nav></header>
+<div class="content yahei subchannel">
+ <div class="mainWrap clearfix">
+  <section class="colunm1">
+   <div class="usharewraper">
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+$("a.xiao_ming").remove();
+if($("#play_pc").children().length===0){
+$("#play_pc").hide();
+}
+    getResData();
+//自动设置视频宽度
+self.setInterval("auto_size()",200);
+auto_size = function(){
+if ($("a#play_pc").size()>0){
+var width = $(".article").width();
+$("a#play_pc")[0].style.width = width + "px";
+$("a#play_pc")[0].style.height = width/7*5 + "px";
+}
+}
+    function getResData(){
+    jQuery.get("/application/visitor/article_item_visitors_2.jsp?articleID=20110225231210984787533&"+Math.random(), function(data){
+    $("#item_total").empty();
+    $("#item_total").append(data);
+    });
+    };
+    });
+    </script>
+    <ul class="ushare">
+     <li><b><i class="thunews-eye"></i></b><span id="item_total"></span></li>
+   
+   <li class="share bdsharebuttonbox"><b><i class="thunews-share-alt"></i></b><a data-cmd="more" href="#" onclick="return false">分享</a></li>
+    </ul>
+   </div>
+   <div class="articleheader clearfix">
+ <script>
+ $(document).ready(function() {
+ $("#findjctj").find(":contains('精彩推荐')").removeAttr('href');
+ 
+});
+ </script>
+    <nav id="findjctj"><a>&nbsp;<A href='/publish/thunews/index.html' class='navigation_style'>首页</a>&nbsp;&nbsp - </a><a><A href='/publish/thunews/9649/index.html' class='navigation_style'>要闻聚焦</a>&nbsp;&nbsp - </a><a>内容</a> </nav>
+   </div>
+   <article class="article">
+   <html><head><title>Untitled Document</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head><body bgcolor="#FFFFFF"><p align="center">探讨活性氧与人体健康</p><h3 align="center">环境系举办青年教师学术报告会</h3><p>3月27日，环境系青年教师学术报告会举行。杨曦博士作了题为《天然水体中的活性氧》的学术报告，简要介绍了目前国内外活性氧研究的学科背景，水体中各种活性氧的来源、反应和环境意义，以及利用分子探针技术和各种图谱技术测定活性氧的分析方法。</p><p> 　　活性氧与人类健康息息相关。据报道，人体至少有60多种疾病和活性氧有关。大气环境科学家因为研究光化学烟雾形成、平流层臭氧损耗以及酸雨形成等问题的需要，对活性氧开展了卓有成效的研究工作。然而，水环境中活性氧的研究相对比较滞后。直到80年代以后，由于各种精妙的分子探针技术以及各种自旋捕获剂的出现，环境科学家才开始对水体中活性氧的生成、归趋及其在生物地球化学循环中的作用有了初步的认识。由于臭氧层破坏，到达地球表面的紫外线越来越多，究竟对生态系统会产生什么样的后果？能量辐射可以破坏污染物的分子结构，相应的机理什么？是否可以应用于环境污染控制？回答这些问题，都需要我们进一步研究环境中活性氧参与的复杂反应过程。</p><p> 　　目前，国际上对活性氧的研究非常活跃，国内的工作大多限于生命科学等领域。深入研究环境中的活性氧，不仅可以帮助我们了解大自然的奥秘，还可能引发新型环保技术的诞生。（环境系） </p></body></html>
+    <div class="articletimewrapper">
+ 
+            <div class="articletime"><i class="thunews-clock-o"></i>2001年03月29日 10:39:59　　清华新闻网</div>
+          </div>
+   </article>
+   <aside class="relativelink">
+    <h2>相关新闻</h2>
+    <ul class="timenewslist">
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104114390487442/20110226104114390487442_.html" target="_blank">清华首位研究生志愿兵李敦柱：携笔从戎，青...</a></h3>
+              <p class="thnews_jqzy">　　携笔从戎，青春无悔——记清华大学首位研究生志愿兵李敦柱■环境系 贾倩倩李敦柱，一听名字就有一种敦实厚重的感觉，人如其名，他看上去成熟稳重，而实际上他却是2010年研究生新生中年纪较小的一位。这个出生于1989年的安徽男孩，在这个冬天给了我们最强烈的信念和最震撼的决定——他成为2005年在清华开展征兵工作以来第一个应征入伍的研究生。2010年夏天，李敦......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2010.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232603687960328/20110225232603687960328_.html" target="_blank">清华首位研究生志愿兵李敦柱：携笔从戎，青...</a></h3>
+              <p class="thnews_jqzy">　　携笔从戎，青春无悔——记清华大学首位研究生志愿兵李敦柱■环境系 贾倩倩李敦柱，一听名字就有一种敦实厚重的感觉，人如其名，他看上去成熟稳重，而实际上他却是2010年研究生新生中年纪较小的一位。这个出生于1989年的安徽男孩，在这个冬天给了我们最强烈的信念和最震撼的决定——他成为2005年在清华开展征兵工作以来第一个应征入伍的研究生。2010年夏天，李敦......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2010.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232544937832097/20110225232544937832097_.html" target="_blank">环境系国家重大水专项阶段实施方案通过专家...</a></h3>
+              <p class="thnews_jqzy">　　环境系国家重大水专项阶段实施方案通过专家论证【新闻中心讯】10月13日～15日，由住房和城乡建设部主办的国家重大水专项“城市水污染控制与水环境综合整治技术研究与示范”主题（以下简称“城市水”主题）“十二五”项目（课题）实施方案论证会在京召开。由我国著名环境工程专家和环境教育家、清华大学环境系教授钱易院士，哈尔滨工业大学张杰院士等17位专家组成的论证委员会......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2010.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232537046611198/20110225232537046611198_.html" target="_blank">清华环境系承办2010城市供水应急技术和...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系承办2010城市供水应急技术和管理研讨会【新闻中心讯 通讯员 周圆 摄影 林朋飞】9月8日～10日，“2010城市供水应急技术和管理”研讨会在山东省济南市举行。本次研讨会由住房和城乡建设部城镇水务管理办公室主办，清华大学环境系、住建部城市供水水质监测中心、济南市供排水监测中心承办，清华大学环境系张晓健教授担任大会主席。来自高校的研究人员，供水行......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2010.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232523375809279/20110225232523375809279_.html" target="_blank">国家重大水专项督查评估组督查评估清华水专项</a></h3>
+              <p class="thnews_jqzy">　　国家重大水专项督查评估组督查评估清华水专项【新闻中心讯】7月19日下午，由中国水利水电科学院王浩院士及来自河海大学环境学院、财政部教科文司科学处、国家科技评估中心、科技部重大专项办公室、北京市科学技术委员会等一行12人组成的国家重大水专项督查评估组到清华大学环境系督查评估其承担的水专项工作进展情况。国家重大水专项技术副总师、清华大学常务副校长陈吉宁向......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2010.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232507796614331/20110225232507796614331_.html" target="_blank">环境系：为了纯净的蓝天，我们一直在努力</a></h3>
+              <p class="thnews_jqzy">　　贺克斌教授、郝吉明院士和他们的团队研发的“大气颗粒物及其前体排放与复合污染特征”获2009年度国家自然科学二等奖为了纯净的蓝天，我们一直在努力●学生记者 王仙茅 徐雯你是否能够想象：有一天，当你抬头仰望天空时，纯净的蓝天早已无影无踪，城市上空被灰色云层笼罩，“灰霾”一样的天气让你出门时不得不戴上厚厚的口罩。近年来，环境污染、气候变化等问题越来越受到人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232453640798803/20110225232453640798803_.html" target="_blank">清华联合主办持久性有机污染物论坛</a></h3>
+              <p class="thnews_jqzy">　　清华联合主办持久性有机污染物论坛【新闻中心讯】5月17日，由清华大学持久性有机污染物研究中心、环境保护部斯德哥尔摩公约履约办公室、中国环境科学学会持久性有机污染物专业委员会、中国化学会环境化学专业委员会共同主办，南京大学环境学院承办的“持久性有机污染物论坛2010暨第五届持久性有机污染物全国学术研讨会”（简称“POPs论坛2010”）在江苏南京隆重开幕。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2010.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225232450906172185/20110225232450906172185_.html" target="_blank">清华与耶鲁共办环境与城市可持续发展高级研...</a></h3>
+              <p class="thnews_jqzy">　　清华与耶鲁大学共办环境与城市可持续发展高级研究班【新闻中心讯】5月12日上午，由清华大学、耶鲁大学和中国市长协会共同主办的清华－耶鲁“环境与城市可持续发展高级研究班”在环境节能楼正式开班。清华大学常务副校长陈吉宁致欢迎辞，中共中央组织部干部教育局副局长张福根作动员讲话。住房和城乡建设部副部长仇保兴出席开班仪式并致辞。中国市长协会副会长陶斯亮、清华环境系主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2010.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232435515529123/20110225232435515529123_.html" target="_blank">环境系通过北京市循环经济主题计划重点项目...</a></h3>
+              <p class="thnews_jqzy">　　环境系通过北京市循环经济主题计划重点项目验收【新闻中心讯】日前，清华大学环境系承担的北京市科技计划重点项目“生物质废物资源化重大技术装备研究与示范工程”的“沼气提纯及高值利用系统研究”课题和“沼液资源化利用技术研发”课题在北京市可持续发展促进中心顺利通过北京市科学技术委员会组织的验收。此前，“单项多级厌氧消化工艺及设备研发”课题已经顺利通过验收。至此，环......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9663/2011/20110225232423421705937/20110225232423421705937_.html" target="_blank">傅国伟：血铅事件凸显深层问题</a></h3>
+              <p class="thnews_jqzy">　　血铅事件凸显深层问题——访清华大学环境科学与工程系教授傅国伟中国经济时报 2010-03-26湖南郴州血铅事件已成为时下舆论焦点之一。日前，中国经济时报记者就此专访了清华大学环境专家傅国伟教授，傅国伟常年关注湖南重金属污染，现在主持国家环保部“锰三角”环境治理规划项目。“血铅事件，不是一个简单而孤立的环境污染事件，血铅背后隐藏着更深更多的问题。”傅国......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232420890731369/20110225232420890731369_.html" target="_blank">国家环保技术与评估技术中心通过可行性论证</a></h3>
+              <p class="thnews_jqzy">　　国家环保技术与评估技术中心通过可行性论证【新闻中心讯】3月17日上午，清华大学环境系申请的“国家环境保护技术管理与评估工程技术中心”（以下简称“中心”）的建设可行性论证会在环境节能楼召开，国家环境保护部科技司主持会议，以中科院生态环境研究中心曲久辉院士为组长的专家组一致通过了中心的建立。专家组认为，中心的建设符合《国家环境保护工程技术中心“十一五”专项规......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2010.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232418687787154/20110225232418687787154_.html" target="_blank">清华环境系博士生论文获ES&T年度最佳论...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系博士生论文获ES&amp;T2009年度最佳论文奖【新闻中心讯 通讯员 刘莉】3月11日，美国化学会旗下的《环境科学与技术》(Environmental Science and Technology，ES&amp;T)期刊评选的2009年度十佳论文揭晓，清华大学环境系博士生于2009年发表在该期刊第43卷第18期的有关脱盐新技术（A New M......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2009.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232337031166846/20110225232337031166846_.html" target="_blank">清华环境系承办全国给水深度处理研究会20...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系承办全国给水深度处理研究会2009年年会【新闻中心讯】10月11～12日，全国给水深度处理研究会2009年年会在清华大学环境系召开。此次年会由挂靠清华环境系的中国土木工程学会给水深度处理研究会、中国工业经济联合会臭氧专业委员会、北京市城镇供水协会共同主办，环境系、北京市自来水集团有限责任公司和北京市市政工程设计研究总院共同承办。住房和城乡建......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2009.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232336359142089/20110225232336359142089_.html" target="_blank">钱易获世界工程组织联合会2009年优秀工...</a></h3>
+              <p class="thnews_jqzy">　　钱易获世界工程组织联合会2009年优秀工程教育奖【新闻中心讯】根据世界工程组织联合会（World Federation of Engineering Organization, 简称WFEO）来函，清华大学环境系钱易院士经中国科协推荐获WFEO2009年优秀工程教育奖，她将应邀出席11月1～6日在科威特召开的WFEO2009年大会，并在5日举行的晚宴上领......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232328843254545/20110225232328843254545_.html" target="_blank">环境系科研成果荣获第十八届全国发明展览会...</a></h3>
+              <p class="thnews_jqzy">　　环境系科研成果荣获第十八届全国发明展览会金奖【新闻中心讯】在不久前结束的第十八届全国发明展览会上，清华大学环境系李振瑜副教授负责的“彗星式纤维滤料及应用”项目获本届展览会金奖。彗星式纤维滤料是在国家“863计划”支持下研制成功的水处理用过滤材料，是结合了传统石英砂滤料与纤维滤料各自优点的新型过滤材料，因其外形类似彗星而得名。几年来，彗星式纤维滤料......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110226104116812938881/20110226104116812938881_.html" target="_blank">【人物】钱易：在人间传播绿色</a></h3>
+              <p class="thnews_jqzy">　　在人间传播绿色——记清华大学突出贡献奖获得者钱易●学生记者 王仙茅 吴婷婷钱易　学生记者　司徒哲阳　摄影钱易，环境科学与工程系教授，中国工程院院士，我国著名的环境工程专家和环境教育家，清华大学学术委员会主任。数十年来致力于研究开发适合我国国情的高效、低耗废水处理新技术，为水资源开发与可持续利用贡献了新理论与方法，为中国水污染防治作出了重要贡献。参与并推动......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232326796134917/20110225232326796134917_.html" target="_blank">【人物】钱易：在人间传播绿色</a></h3>
+              <p class="thnews_jqzy">　　在人间传播绿色——记清华大学突出贡献奖获得者钱易●学生记者 王仙茅 吴婷婷钱易　学生记者　司徒哲阳　摄影钱易，环境科学与工程系教授，中国工程院院士，我国著名的环境工程专家和环境教育家，清华大学学术委员会主任。数十年来致力于研究开发适合我国国情的高效、低耗废水处理新技术，为水资源开发与可持续利用贡献了新理论与方法，为中国水污染防治作出了重要贡献。参与并推动......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232325843622799/20110225232325843622799_.html" target="_blank">清华共同主办中国（苏州）国际节能环保产品...</a></h3>
+              <p class="thnews_jqzy">　　清华共同主办中国（苏州）国际节能环保产品与技术展览会【新闻中心讯】9月10日，为期3天的第三届中国（苏州）国际节能环保产品与技术展览会在苏州高新国际会展中心开幕。苏州市副市长周伟强、清华大学常务副校长陈吉宁、国家发展与改革委资环司副司长李静等多位负责同志与专家出席了本次展会并剪彩。中国（苏州）国际节能环保产品与技术展览会每年兴办一届，旨在促进苏州地区......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2009.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232325781552988/20110225232325781552988_.html" target="_blank">清华和苏州联合举办中国城市循环经济发展论坛</a></h3>
+              <p class="thnews_jqzy">　　清华和苏州联合举办中国城市循环经济发展论坛【新闻中心讯】9月10日下午，2009中国城市循环经济发展论坛在苏州香格里拉大酒店召开。本次论坛已是苏州市和清华大学联合举办的第3届盛会。在论坛上，来自江苏省、苏州市、清华大学、美国能源基金会、世界自然基金会、东南大学、苏州大学、苏州科技学院的有关负责同志和有关专家学者约200余人围绕相关热点议题展开深入的讨论，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2009.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232319203326443/20110225232319203326443_.html" target="_blank">日本福冈代表团与环境系开展技术交流活动</a></h3>
+              <p class="thnews_jqzy">　　日本福冈代表团与环境系开展技术交流活动【新闻中心讯】应清华环境系邀请，日本福冈市环境局吉泽温局长、福冈大学松藤康司教授一行6人于8月17日访问环境系，开始了为期3天的清华大学—福冈市—福冈大学环境技术交流活动。访问期间，中国工程院院士、环境系教授郝吉明代表清华大学环境科学与工程研究院与福冈市政府和福冈大学在环境节能楼续签了三方《环境领域技术合作协议》......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232317515963782/20110225232317515963782_.html" target="_blank">“建设循环型社会”中日学术研讨会在清华举行</a></h3>
+              <p class="thnews_jqzy">　　“建设循环型社会”中日学术研讨会在清华举行【新闻中心讯】7月23日下午，“建设循环型社会”中日学术研讨会在清华大学中意环境节能楼召开。研讨会由清华大学环境系中国循环经济产业研究中心和清华大学&#8226;野村综研中国研究中心共同举办。清华大学常务副校长陈吉宁教授致开幕辞，来自中国和日本的多位专家带来了精彩的主题报告。近年来，发展循环经济成为一种世界潮......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232313828678772/20110225232313828678772_.html" target="_blank">环境系承担的大连生态市建设规划通过环保部...</a></h3>
+              <p class="thnews_jqzy">　　环境系承担的大连生态市建设规划通过环保部组织的专家论证【新闻中心讯】7月3日，由清华大学常务副校长陈吉宁教授负责，环境系承担的《大连生态市建设规划（2009-2020）》（以下简称《规划》）通过了由环境保护部自然生态司组织的专家论证。专家组一致同意通过论证，建议尽快报批并组织实施。《规划》计划用5－10年时间，将大连市建成国家级生态市。生态市建设......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>08</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232313312620886/20110225232313312620886_.html" target="_blank">校党委书记胡和平与环境系师生座谈</a></h3>
+              <p class="thnews_jqzy">　　校党委书记胡和平与环境系师生座谈【新闻中心讯 记者 周襄楠 摄影 刘恢奇】7月2日下午，清华大学党委书记胡和平与党办、人事处、科研院等负责同志一起来到环境系调研，并与环境系师生座谈。在座谈中，环境系党委书记杜鹏飞首先汇报了环境系学习实践科学发展观活动的整体情况，环境系系主任余刚介绍了环境系创建世界一流环境学科工作的进展与计划，包括学科调整与发展、人才......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>06</span>2009.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225232312890632285/20110225232312890632285_.html" target="_blank">清华大学中国循环经济产业研究中心成立</a></h3>
+              <p class="thnews_jqzy">　　清华大学中国循环经济产业研究中心成立【新闻中心讯 通讯员 莫虹频】7月4日上午，清华大学宣布成立中国循环经济产业研究中心（CICE）。CICE将围绕相关产业的减量化、再利用和资源化，以产业政策、技术政策、技术评估和集成应用为研究重点，组织学术活动和国际合作，推动循环经济产业关键技术的研究开发、推广应用和产业化，力争发展成为具有国际先进水平、在国内外有重要......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2009.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232306515824025/20110225232306515824025_.html" target="_blank">清华庆祝曲格平先生八十华诞暨从事环保工作...</a></h3>
+              <p class="thnews_jqzy">　　清华庆祝曲格平先生八十华诞暨从事环保工作四十年【新闻中心讯 摄影 郭海军】6月13日上午，由清华大学环境系和北京东方环境研究院共同主办的曲格平先生八十华诞暨从事环境保护工作四十年庆贺会在清华环境节能楼举行。清华大学校长顾秉林院士代表清华大学致辞，对曲先生的八十华诞以及从事环境保护工作四十年表示热烈祝贺，并对曲老多年来为我国环境保护事业的发展和清华大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2009.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232258234228570/20110225232258234228570_.html" target="_blank">清华共同主办的持久性有机污染物论坛召开</a></h3>
+              <p class="thnews_jqzy">　　清华共同主办的持久性有机污染物论坛召开【新闻中心讯】5月17日，“持久性有机污染物论坛2009暨第四届持久性有机污染物全国学术研讨会”在浙江宁波开幕。此次论坛由清华大学持久性有机污染物研究中心、依托于清华环境系的中国环境科学学会持久性有机污染物专业委员会联合环境保护部斯德哥尔摩公约履约办公室、中国化学会环境化学专业委员会共同主办。本次会议得到了国内外持久......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2009.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232255078162322/20110225232255078162322_.html" target="_blank">依托清华建立的“Basel公约亚太协调中...</a></h3>
+              <p class="thnews_jqzy">　　依托清华建立的“Basel公约亚太协调中心”获准为POPs公约区域中心【新闻中心讯】5月4～8日，《关于持久性有机污染物（POPs）的斯德哥尔摩公约》第4次缔约方大会在瑞士日内瓦召开，来自149个国家、地区或经济一体化组织的800多名代表参加了本次会议。依托清华大学建立的“Basel公约亚太协调中心”等8个机构顺利通过缔约方大会的评估，被批准为POPs公......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>13</span>2009.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232254000317475/20110225232254000317475_.html" target="_blank">清华环境系接待英国埃克塞特大学来访</a></h3>
+              <p class="thnews_jqzy">　　清华环境系接待英国埃克塞特大学来访【新闻中心讯】5月11日上午，清华大学环境系主任余刚教授会见了来访的英国埃克塞特大学校长Steve Smith教授（兼任英国大学联盟主席）、副校长Neil Armstrong教授、David Allen教授等一行5人。余刚对Steve Smith一行来访表示热烈欢迎，向来宾介绍了环境系近年来在教学、科研、国际合作等方面的......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>15</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232241546559167/20110225232241546559167_.html" target="_blank">清华牵头负责四川德阳市地震灾后战略环评</a></h3>
+              <p class="thnews_jqzy">　　清华牵头负责四川德阳市地震灾后战略环评【新闻中心讯】清华牵头的德阳市灾后恢复重建总体实施规划环境影响评价项目4月12日通过了国家环境保护部在京组织的评审会。评审专家一致认为该报告书环保目标明确、评价思路清晰、内容全面、重点突出，环境影响预测分析技术方法合理，评价结论可信，提出的规划实施建议和环境保护对策可行，可以作为《德阳市灾后恢复重建总体实施规划》修改......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2009.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232241234168331/20110225232241234168331_.html" target="_blank">清华牵头的“环渤海地区沿海重点产业发展战...</a></h3>
+              <p class="thnews_jqzy">　　清华牵头的“环渤海地区沿海重点产业发展战略环境评价”项目技术方案通过评审【新闻中心讯】4月8日上午，国家环保部在京组织召开“环渤海地区沿海重点产业发展战略环境评价”技术方案专家评审会。包括4位院士在内的12名评审专家，以及环境影响评价管理司、环境保护部环境工程评估中心，辽宁省、河北省、天津市三地环保厅/局和地方政府部门领导，环渤海项目课题组成员等共70余......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232205593442081/20110225232205593442081_.html" target="_blank">中日韩6所著名大学联手推进环境学科拔尖创...</a></h3>
+              <p class="thnews_jqzy">　　中日韩6所著名大学联手推进环境学科拔尖创新人才培养【新闻中心讯】“中日韩区域环境与可持续发展”博士课程2008年课程总结暨2009年课程规划会议于11月21日在日本东北大学召开。清华大学环境系副主任胡洪营教授和刘书明副研究员作为2008年课程的轮值主持单位代表参加会议，并对2008年课程进行了全面的总结汇报。参与2008年课程的同济大学、日本东北大学......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>24</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232202609933793/20110225232202609933793_.html" target="_blank">清华大学环境系与挪威生命科学大学开展教学...</a></h3>
+              <p class="thnews_jqzy">　　清华大学环境系与挪威生命科学大学开展教学科研合作【新闻中心讯】11月21日上午，清华大学环境系与挪威生命科学大学合作协议签字仪式在环境节能楼举行，挪威生命科学大学校长Knut Hove教授和清华环境系副主任段雷副教授分别代表双方签署协议。清华大学研究生院常务副院长贺克斌教授出席签字仪式并讲话，他向来宾综合介绍了清华大学的教学科研情况及办学特色，并期望双方......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>10</span>2008.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232157609658071/20110225232157609658071_.html" target="_blank">清华环境系与依迪亚株式会社将共建高水平二...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系与依迪亚株式会社将共建高水平二恶英分析实验室【新闻中心讯】11月8日，清华大学环境系与日本依迪亚株式会社签署了关于“共同建设高水平二恶英分析实验室”的合作协议书，签字仪式在环境节能楼举行。清华大学环境系主任余刚和日本依迪亚株式会社董事长田畑日出男分别代表双方在合作协议书上签字。国家环境保护部和日本大使馆有关负责人和部分技术专家参加签字仪式。......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225600203765832/20110225225600203765832_.html" target="_blank">绿色实践，行胜于言—环境系举行学生专业实...</a></h3>
+              <p class="thnews_jqzy">　　绿色实践，行胜于言环境系举行学生专业实践专题研讨会【新闻中心讯】总结交流专业实践组织和成果转化的经验心得，并为今后相关活动的开展作进一步的培训，10月13日晚，环境系团委在环境节能楼举行了“绿色实践，行胜于言”的学生专业实践专题研讨会。在刚刚结束的2008年暑期社会实践中，环境系高举“专业实践、绿色实践”大旗，积极寻求教师资源。在环境系系主任余刚教授的带......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2008.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232149218476753/20110225232149218476753_.html" target="_blank">环境系教师参加教育部高等学校环境科学与工...</a></h3>
+              <p class="thnews_jqzy">　　环境系教师参加教育部高等学校环境科学与工程教学指导委员会工作会议【新闻中心讯】10月11日－12日，教育部高等学校环境科学与工程教学指导委员会工作会议（2008）暨第二届全国环境学科院长/系主任联络会在桂林召开，来自全国140多所院校的环境学科院长/系主任、学科建设负责人以及环境类主干课程负责教师等400余人参加了会议。会议以“质量工程”背景下高校环......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2008.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232138312681343/20110225232138312681343_.html" target="_blank">清华承担的我国环保公益性行业科研专项启动</a></h3>
+              <p class="thnews_jqzy">　　清华承担的我国环保公益性行业科研专项启动【新闻中心讯】近日，2008年环保公益性行业科研专项“氯碱、煤化工行业技术减排潜力分析研究”项目得到国家财政部和环保部的批复，正式启动。该项目由清华大学作为承担单位，清华环境系教师温宗国博士担任课题技术负责人，石油和化学工业规划院及北京思路创新科技有限公司作为协作单位。该项目围绕我国氯碱和煤化工行业污染物减排和......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2008.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232131171876738/20110225232131171876738_.html" target="_blank">清华张天柱教授作为专家组组长参与起草我国...</a></h3>
+              <p class="thnews_jqzy">　　清华张天柱教授作为专家组组长参与起草我国《循环经济促进法》【新闻中心讯】8月29日闭幕的第十一届全国人大常委会第四次会议表决通过了《中华人民共和国循环经济促进法》。该法律将于2009年1月1日起正式施行。清华大学环境系教授张天柱作为国家循环经济促进法立法研究专家组组长，自2005年以来参与了立法研究的全过程。《循环经济法》是一部针对我国经济发展与资源......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2008.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232126968610989/20110225232126968610989_.html" target="_blank">联合国副秘书长参观环境系承担的奥森公园源...</a></h3>
+              <p class="thnews_jqzy">　　联合国副秘书长参观环境系承担的奥森公园源分离生态卫生项目【新闻中心讯】日前，联合国副秘书长兼联合国环境规划署执行主任阿齐姆&#8226;施泰纳先生在清华大学环境系教师陆文静的陪同下考察了奥林匹克森林公园的环保项目。陆文静详细介绍了公园内包括中水净化、近自然林系统、源分离系统、废物资源循环利用等在内的多项生态技术的示范应用。这些项目均为科技部立项的针对奥林......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2008.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232124937684240/20110225232124937684240_.html" target="_blank">清华环境系为奥林匹克森林公园“龙形水系”...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系为奥林匹克森林公园“龙形水系”保驾护航被称为“北京奥运后花园”的奥林匹克森林公园已于近日与公众见面。大气的设计、丰富的物种、富有新意的生态走廊……森林公园有太多让世人称赞的地方。而这其中，“龙形水系”成为点睛之笔，激活了整个森林公园，正应了那句古话，“水不在深，有龙则灵”。而良好的水质更是“龙形水系”的灵魂。然而对于水资源相对短缺的北京来说......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2008.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232121031620943/20110225232121031620943_.html" target="_blank">环境系王伟教授课题组参与青岛“战浒苔，保...</a></h3>
+              <p class="thnews_jqzy">　　环境系王伟教授课题组参与青岛“战浒苔，保奥运”工作【新闻中心讯】浒苔在青岛的大规模爆发引起社会的广泛关注。清华大学环境系王伟教授带领博士生和各地专家一起参与了浒苔治理工作。7月3日，为科学、有序地应对青岛海域浒苔爆发事件，由山东省处置青岛奥帆赛场海域浒苔爆发事件应急指挥部、科技部、中国科学院和国家海洋局联合成立了青岛及周边海域浒苔自然灾害应急处置专家......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>02</span>2008.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232114656238955/20110225232114656238955_.html" target="_blank">清华环境系获科技部国家级国际联合研究中心...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系获科技部国家级国际联合研究中心授牌【新闻中心讯】6月27日，在科技部和国家外专局在京举办的国家级国际联合研究中心授牌仪式上，我国首批33家国家级国际联合研究中心的代表出席领取了标牌并进行了经验交流，清华大学环境系的新能源与环境国际研发中心便是其中之一。环境系主任助理刘毅博士参加了会议，并代表新能源与环境国际研发中心上台领取了标牌。新能源与环......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2008.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225601015670908/20110225225601015670908_.html" target="_blank">清华大学第三届环境友好科技竞赛完满落幕</a></h3>
+              <p class="thnews_jqzy">　　清华大学第三届环境友好科技竞赛完满落幕【新闻中心讯】历时八个多月的第三届环境友好科技竞赛在经过激烈的初评以后，终于进入到了最终评审阶段。6月10日在清华大学环境节能楼，来自清华环境系、西安建筑科技大学环境与市政工程学院、同济大学环境科学与工程学院的教师，以及赞助方美国哈希公司。日本三洋公司的代表共同组成了评审专家组，对27件入围作品进行了最终评审。环......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2008.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232104718684436/20110225232104718684436_.html" target="_blank">清华环境系完成国家减灾委科技抗震救灾第一...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系完成国家减灾委科技抗震救灾第一阶段任务【新闻中心讯】由清华大学环境系李振瑜副教授任组长的国家减灾委科技抗震救灾饮用水安全专家组日前完成了抗震救灾的第一阶段工作。自5月16日以来，该小组先后完成《抗震救灾实用知识、技术与产品手册（安全饮水与供水分册）》、绘制出《汶川地震灾区应急与灾区重建供水对策图》、编制出《灾区受损涉水构筑物快速修复办法》等......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2008.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232103468405334/20110225232103468405334_.html" target="_blank">清华研发“再生资源交易与循环经济信息网”...</a></h3>
+              <p class="thnews_jqzy">　　清华研发“再生资源交易与循环经济信息网”正式开通　【新闻中心讯】5月27日上午，由清华大学主要负责研发、多方参与的国家“十一五”重大科技支撑项目示范工程——再生资源交易与循环经济信息网（www.5RChina.com）正式开通。科技部21世纪议程中心处长徐俊、苏州市副市长周伟强、清华大学常务副校长陈吉宁和江苏省科技厅副厅长夏冰共同为5R网点击开通。“苏州......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232100218657382/20110225232100218657382_.html" target="_blank">清华环境系积极参与《灾后废墟清理及废物管...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系积极参与《灾后废墟清理及废物管理指南》编制【新闻中心讯】环境系积极响应环保部的号召，迅速展开行动，组织起草《灾后废墟清理及废物管理指南（试行）》。该系固体废物污染控制与资源化研究所李金惠、王洪涛、蒋建国、金宜英等固废专家广泛动员课题组成员及巴塞尔公约区域中心工作人员参与翻译及资料整理工作。《环境风险分析》研究生课程的部分选课学生也积极参与了应急......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232059031171890/20110225232059031171890_.html" target="_blank">清华环境系为抗震救灾饮用水安全提供技术支撑</a></h3>
+              <p class="thnews_jqzy">　　清华环境系为抗震救灾饮用水安全提供技术支撑【新闻中心讯】5月22日，由清华大学环境系教师李振瑜牵头负责的科技抗震救灾技术支撑专家组饮用水安全小组向科技部提交了《阶段工作总结报告》，全面汇报了这一阶段工作情况。该小组自5月16日成立以来，各项工作进展顺利，取得了阶段性成果。该小组通过多种方式，收集信息，迅速编制完成《地震灾区安全饮水知识卡》和《地震灾区......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232055718398695/20110225232055718398695_.html" target="_blank">第三届持久性有机污染物全国学术研讨会在清...</a></h3>
+              <p class="thnews_jqzy">　　第三届持久性有机污染物全国学术研讨会在清华召开【新闻中心讯】5月17日，由清华大学持久性有机污染物研究中心、环境保护部斯德哥尔摩公约履约办公室、中国环境科学学会持久性有机污染物专业委员会、中国化学会环境化学专业委员会共同发起并主办的 “持久性有机污染物论坛2008暨第三届持久性有机污染物全国学术研讨会”（下简称“POPs论坛2008”）在清华大学举行。　......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232055765455576/20110225232055765455576_.html" target="_blank">“清华—查尔姆斯理工大学可持续发展论坛”...</a></h3>
+              <p class="thnews_jqzy">　　“清华—查尔姆斯理工大学可持续发展论坛”在清华召开【新闻中心讯】“清华—查尔姆斯理工大学可持续发展论坛”于5月13日、14日在清华大学环境系举行。清华大学钱易院士与查尔姆斯理工大学（Chalmers University of Technology）G&ouml;teborg环境与可持续中心主任Oliver Lindqvist教授在开幕式上作主题发言。本......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2008.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232047234300128/20110225232047234300128_.html" target="_blank">清华环境系饮用水安全研究所荣获“全国五一...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系饮用水安全研究所荣获“全国五一劳动奖状”【新闻中心讯】4月29日，庆祝“五一”国际劳动节大会在北京人民大会堂召开。中共中央政治局委员、全国人大常委会副委员长、中华全国总工会主席王兆国出席会议并发表重要讲话。会上，全国总工会副主席、书记处书记乔传秀宣读了《中华全国总工会关于表彰先进集体、先进个人的决定》。430个先进集体荣获“全国五一劳动奖状......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>28</span>2008.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232046218752292/20110225232046218752292_.html" target="_blank">清华大学-北京健坤伟华废弃物资源化与新能...</a></h3>
+              <p class="thnews_jqzy">　　清华大学-北京健坤伟华废弃物资源化与新能源技术研发中心揭牌【新闻中心讯】4月26日上午，清华大学（环境科学与工程系）-北京健坤伟华废弃物资源化与新能源技术研发中心揭牌仪式暨陶葆楷励学基金捐赠仪式在中意清华环境节能楼举行。清华大学常务副校长陈吉宁、环境保护部污控司司长樊元生、北京健坤伟华新能源科技有限公司董事长赵伟国、清华环境系党委书记杜鹏飞等出席了仪......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>17</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232027359167985/20110225232027359167985_.html" target="_blank">由清华等共同发起的环境院系博士生课程接收...</a></h3>
+              <p class="thnews_jqzy">　　由清华等共同发起的环境院系博士生课程接收东京大学为新成员【新闻中心讯】“中日韩区域环境与可持续发展”博士生课程协调领导小组工作会议于3月14日在韩国科学技术院（KAIST）举行，中国清华大学和同济大学、日本京都大学和东北大学、韩国科学技术院和韩国浦项科技大学（POSTECH）6所亚洲著名大学环境院系的院长、系主任或代表经过认真讨论，决定接受日本东京大学加......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>03</span>2008.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232022562893949/20110225232022562893949_.html" target="_blank">环境系与苏伊士环境集团签署合作备忘录</a></h3>
+              <p class="thnews_jqzy">　　环境系与苏伊士环境集团签署合作备忘录【新闻中心讯】2月28日上午，清华大学环境系与苏伊士环境集团在中意清华环境节能楼签署了合作备忘录。苏伊士环境中国地区首席执行官Frederic Gourdin先生，环境系党委书记杜鹏飞分别代表双方签署备忘录并致辞。根据备忘录，双方将通过专家互访、合作研究、共同举办研讨会及开设环境类课程等形式重点加强在水环境、废水及......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232005843592895/20110225232005843592895_.html" target="_blank">“2007中国固废高级论坛”在清华举行</a></h3>
+              <p class="thnews_jqzy">　　“2007中国固废高级论坛”在清华举行【新闻中心讯 通讯员 刘莉】12月6日，由清华大学环境系和中国固废网共同主办的“2007中国固废高级论坛”在中意清华环境节能楼开幕。清华大学副校长陈吉宁主持了开幕式并致辞。此次论坛云集了中国固废领域最有代表性的权威专家和知名企业，以“深度研讨”、“案例解读”的形式为重点，并结合“热点对话”和“交流答疑”的互动方式......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>04</span>2007.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225232000250577135/20110225232000250577135_.html" target="_blank">环境系召开毕业生就业动员会</a></h3>
+              <p class="thnews_jqzy">　　环境系召开毕业生就业动员会【新闻中心讯 研通社通讯员 吴华勇】11月23日晚，环境系在中意环境节能楼召开了环境系2008届毕业生就业动员会。环境系2008届全体本科毕业生和研究生毕业生参加了本次会议。环境系党委副书记蒋建国分析了环境系近几年的就业总体情况，按照就业城市、就业行业、毕业去向等作了细致的分类统计与介绍。他鼓励大家勇于投身到关系我国可持续发......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2007.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231951218169456/20110225231951218169456_.html" target="_blank">亚琛工业大学马克斯·多曼教授受聘清华客座...</a></h3>
+              <p class="thnews_jqzy">　　亚琛工业大学马克斯·多曼教授受聘清华大学客座教授【新闻中心讯】11月16日下午，德国亚琛工业大学资深教授、德国水环境保护研究的学术带头人之一马克斯&#8226;多曼（Max Dohmann）教授受聘清华大学客座教授。受聘仪式在中意清华环境节能楼举行。清华大学副校长陈吉宁向多曼教授颁发了聘书。陈吉宁在致辞中表示“清华大学正在努力向着世界一流大学的目标迈......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2007.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231842437199465/20110225231842437199465_.html" target="_blank">清华松花江污染应急科技专项课题通过验收</a></h3>
+              <p class="thnews_jqzy">　　清华松花江污染应急科技专项课题通过验收【新闻中心讯】3月26日，由清华大学环境系牵头承担的松花江污染应急科技专项“松花江重大污染事件爆炸现场排水管线污染应急修复技术”课题通过科技部在哈尔滨组织的评审验收，并得到了评审专家组的高度评价。专家组认为，该课题紧密结合中国石油吉林石化公司“11.13”爆炸事故现场排水管线污染应急治理与修复工程实施，以迅速消除......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2007.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231839546464577/20110225231839546464577_.html" target="_blank">清华环境系与京都大学联合开展再生水可持续...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系与京都大学联合开展再生水可持续安全利用研究【新闻中心讯】3月2日，由国家自然科学基金委员会（NSFC）与日本学术振兴机构（JST）联合资助的重大国际合作项目“以降低环境风险为目标的再生水监测评价与控制技术研究”课题在清华大学环境系举行项目启动会暨第一次学术研讨会。国家自然科学基金委、日本JST驻华办事处相关人员及清华科研院、环境系相关负责人......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>27</span>2006.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231831500509401/20110225231831500509401_.html" target="_blank">清华大学参与北京市新农村建设</a></h3>
+              <p class="thnews_jqzy">　　清华大学参与北京市新农村建设【新闻中心讯】日前，清华大学副校长陈吉宁教授以及环境系、建筑学院、规划院部分教师应邀参加了北京市政府召开的“北京市新农村建设座谈会”和“北京市新农村建设小组座谈会”，会议决定成立新农村建设合作小组，清华大学作为其中一员积极参与北京新农村建设。会上，清华的部分教师与北京市农委、市市政管委、市发改委、市规划委、市建委、市水务......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2006.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231830625192685/20110225231830625192685_.html" target="_blank">“纪念陶葆楷先生诞辰100周年”学术论坛...</a></h3>
+              <p class="thnews_jqzy">　　“纪念陶葆楷先生诞辰100周年”学术论坛暨环境系第五届博士生论坛举行【新闻中心讯】12月16～17日，“纪念陶葆楷先生诞辰100周年”学术论坛暨清华环境系第五届博士生论坛在环境系系馆举行。环境系主任余刚教授出席论坛，并在致辞中回顾了环境系的发展历史和成就。全国优秀博士学位论文获得者段雷副教授和何苗副教授做了特邀学术报告，对酸沉降和环境生物监测方面的学术前......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2006.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231829218966921/20110225231829218966921_.html" target="_blank">清华大学纪念陶葆楷先生诞辰100周年</a></h3>
+              <p class="thnews_jqzy">　　清华大学纪念陶葆楷先生诞辰100周年【新闻中心讯 通讯员 屈彩云】12月16日，陶葆楷先生诞辰100周年纪念大会在清华大学隆重举行。陶葆楷先生（1906－1992）是我国环境工程学科的奠基人之一、清华大学环境科学与工程学科创始人，他从事市政工程和环境工程教育和科研工作60载，硕果累累，桃李满天下，为我国市政建设和环境保护事业做出了重大贡献。校长顾......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231825906316985/20110225231825906316985_.html" target="_blank">清华环境系等主办第三届中日环境管理研讨会</a></h3>
+              <p class="thnews_jqzy">　　清华环境系等主办第三届中日环境管理研讨会【新闻中心讯 通讯员 吴乾元】11月28日，第三届中日环境管理研讨会在四川大学江安校区举行。四川省环保局副局长谢天、日本横滨国立大学环境信息研究院浦野纮平教授、清华大学环境科学与工程系胡洪营教授、四川大学建筑与环境学院艾南山教授、丰田汽车公司工厂工程部生产环境室樋口正裕室长、四川一汽丰田汽车有限公司刘富荣副总经......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>01</span>2006.11</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231818625578424/20110225231818625578424_.html" target="_blank">清华举行“面向可持续发展的工程教育国际研...</a></h3>
+              <p class="thnews_jqzy">　　清华大学举行“面向可持续发展的工程教育国际研讨会”，与会学者认为：要努力将可持续发展理念贯穿大学工程教育【新闻中心讯 记者 张莞昀 通讯员 屈彩云 摄影 郭海军】 10月31日上午，“面向可持续发展的工程教育国际研讨会”在清华大学主楼接待厅开幕。来自国内外的150多位与会学者探讨了可持续发展战略对工程教育提出的新要求、工程教育面临的新挑战及其对策等主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>20</span>2006.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231815640231937/20110225231815640231937_.html" target="_blank">环境系启动“优秀博士论文支持计划”</a></h3>
+              <p class="thnews_jqzy">　　环境系启动“优秀博士论文支持计划”【新闻中讯 通讯员 屈彩云】为进一步提高环境系博士生学术水平，增强博士生创新能力，培育环境学科青年拔尖人才，环境系“优秀博士生支持与奖励计划”开始实施。该计划由“博士生优秀科研成果奖励计划”和“优秀博士论文支持计划”两部分构成，对博士论文选题具有前瞻性、创新性，符合国家战略需求和学科发展趋势，前期工作中已取得重要研究成果......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>09</span>2006.10</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231812359535036/20110225231812359535036_.html" target="_blank">国内外专家关注清华环境系膜法水处理技术</a></h3>
+              <p class="thnews_jqzy">　　国内外专家关注清华环境系膜法水处理技术　【新闻中心讯】日前，国际IWA膜技术专家组的近60名国内外专家专程来到清华环境系进行了IWA膜技术交流活动。环境系水污染控制实验室主任、膜技术研发与应用中心主任黄霞教授和文湘华教授、汪诚文副教授等膜中心科研人员与来访专家进行了交流和深入讨论。针对中国水污染问题与现状，清华环境系从“九五”开始长期从事有关膜-生物......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231811625274081/20110225231811625274081_.html" target="_blank">由清华大学牵头完成的大连市城市发展规划环...</a></h3>
+              <p class="thnews_jqzy">　　由清华大学牵头完成的大连市城市发展规划环评项目通过评审验收【新闻中心讯 通讯员屈彩云】近日，由清华大学总负责的大连市城市发展规划环评项目通过了国家环保总局的评审验收，环评报告得到了验收专家组的高度评价。大连市城市发展规划环评项目是国家环保总局规划环评试点项目之一，由清华大学环境科学与工程系牵头总负责，联合清华城市规划设计研究院、大连市环境科学设计......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231809328857711/20110225231809328857711_.html" target="_blank">环境系多位教师参加第五届世界水大会</a></h3>
+              <p class="thnews_jqzy">　　环境系多位教师参加第五届世界水大会【新闻中心讯】近日，由中国建设部和国际水协共同举办的第五届世界水大会在北京召开。清华大学副校长、清华环境系教授陈吉宁，环境系钱易院士、张晓健教授、黄霞教授等多位教师参加了此次世界水大会。有来自90多个国家和地区的3000多位中外专家学者、政府官员和企业家参加了此次大会。大会组委会名誉主席、国务院副总理曾培炎出......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>19</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225608171663063/20110225225608171663063_.html" target="_blank">没有结束的暑期社会实践——环境系举办专题...</a></h3>
+              <p class="thnews_jqzy">　　没有结束的暑期社会实践——环境系举办专题实践交流周【新闻中心讯】当新学期再次来临，当大家挥手告别暑假，对于许多参加社会实践的同学来说，暑期的实践经历成为他们记忆中浓墨重彩的一笔。实践活动虽然结束了，但活动带给同学们的收获和影响却沉淀在大家的心灵之处——暑期社会实践在他们心中延续。利用9月11日、12日和13日三天晚上，环境系举办了专题实践交流周活动，参......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2006.09</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231807500376186/20110225231807500376186_.html" target="_blank">“十五”重大课题“淄博市中心城区水环境质...</a></h3>
+              <p class="thnews_jqzy">　　“十五”重大课题“淄博市中心城区水环境质量改善技术与综合示范”通过验收【新闻中心讯】9月15日，由清华大学环境科学与工程系作为技术负责单位实施的国家“十五”重大科技专项课题“淄博市中心城区水环境质量改善技术与综合示范”通过了国家科技部验收，研究成果得到了验收专家组的高度评价。课题组在淄博市政府、淄博市水利渔业局等单位的支持和配合下，克......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>23</span>2006.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231801812624665/20110225231801812624665_.html" target="_blank">清华环境系1996级系友捐资建立励学金</a></h3>
+              <p class="thnews_jqzy">　　清华环境系1996级系友捐资建立励学金【新闻中心讯 通讯员 张春生 记者 秦励】日前，清华大学环境系全体1996级系友在入学十周年之际，集资设立了“清华校友——环境96级励学金”，用于资助2006级环境系贫困学生，该项励学金每年1.2万元，将为6名学生连续4年提供资助。在他们写给环境系的来信中提到：“饮水思源，不忘培育之恩……虽然资助金额不高......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>22</span>2006.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231801640587125/20110225231801640587125_.html" target="_blank">清华环境系教授受聘为国家环境咨询委员会委员</a></h3>
+              <p class="thnews_jqzy">　　清华环境系教授受聘为国家环境咨询委员会委员【新闻中心讯】“国家环境咨询委员会”、“国家环保总局科学技术委员会”在8月18日召开的“全国环保科技大会”上宣布成立，清华大学环境系钱易院士、郝吉明院士和清华大学副校长陈吉宁教授被聘为国家环境咨询委员会委员，同时陈吉宁教授还被聘为“国家环保总局科学技术委员会”副主任，井文涌教授当选该委员会的委员。“国家环境咨......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2006.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225608375324980/20110225225608375324980_.html" target="_blank">【实践感悟】我在西部的四十二个日夜</a></h3>
+              <p class="thnews_jqzy">　　我在西部的四十二个日夜●环境系博士生 李雪一直绞尽脑汁搜索着能够为自己的西部之行确切定义的词汇，精疲力尽之余才蓦然发现，这四十二天里发生的故事已经远远超出了言语所能表述的范围，仿佛潮水一般顷刻淹没了所有的语句，一张张曾经熟悉的面庞在回到了车马喧嚣的北京以后却一下子变得遥远起来，连同那天高云淡的草原和苍劲雄浑的山脉一并定格在回忆之中。勿庸置疑，西部的实践之......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2006.08</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231800281183969/20110225231800281183969_.html" target="_blank">北京市首个区域环境影响评价项目通过验收</a></h3>
+              <p class="thnews_jqzy">　　北京市首个区域环境影响评价项目通过验收【新闻中心讯】日前，由清华大学环境科学与工程系与北京市环境保护科学研究院共同完成的“北京西南部地区区域环境影响评价研究”项目通过评审验收。刘鸿亮院士、金鉴明院士、任阵海院士等专家充分肯定了该项研究对社会经济发展和环境管理的指导意义和实用价值，认为该研究方法科学、有开创性，引领了该领域的研究发展方向，其研究成果可作......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>14</span>2006.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231758890844097/20110225231758890844097_.html" target="_blank">清华环境系参展“2006年中国国际循环经...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系参展“2006年中国国际循环经济博览会”【新闻中心讯】7月8-9日，中国国际循环经济博览会（苏州）暨循环经济立法与政策研讨会在苏州召开，主办单位辟出将近60平米的空间给清华环境科学与工程系做了特展。此外，应主办单位邀请，清华环境科学与工程系在会上主办了“清华大学循环经济和废物资源化论坛”。清华大学副校长陈吉宁教授以循环经济分析工具......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2006.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9648/2011/20110225225340500576145/20110225225340500576145_.html" target="_blank">中意清华环境节能楼剪彩仪式举行</a></h3>
+              <p class="thnews_jqzy">　　中意清华环境节能楼剪彩仪式举行【新闻中心讯 记者 李 含 通讯员 屈彩云　摄影 郭海军】7月6日，由中国科技部和意大利环境与领土资源部共同建设的中意清华环境节能楼剪彩仪式和庆祝大会在清华大学举行。中国科学技术部部长徐冠华、副部长尚勇，中国教育部副部长章新胜，国务院参事室参事（前中国科技部秘书长）石定寰，意大利环境与领土资源部部长佩克拉罗&#8226;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2006.07</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9662/2011/20110225231756484146026/20110225231756484146026_.html" target="_blank">中意清华环境节能楼剪彩仪式举行</a></h3>
+              <p class="thnews_jqzy">　　中意清华环境节能楼剪彩仪式举行【新闻中心讯 记者 李 含 通讯员 屈彩云　摄影 郭海军】7月6日，由中国科技部和意大利环境与领土资源部共同建设的中意清华环境节能楼剪彩仪式和庆祝大会在清华大学举行。中国科学技术部部长徐冠华、副部长尚勇，中国教育部副部长章新胜，国务院参事室参事（前中国科技部秘书长）石定寰，意大利环境与领土资源部部长佩克拉罗&#8226;......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231754328699269/20110225231754328699269_.html" target="_blank">由清华提供技术支持的密云县污水处理厂再生...</a></h3>
+              <p class="thnews_jqzy">　　由清华提供技术支持的密云县污水处理厂再生水回用工程竣工【新闻中心讯】6月23日在密云县污水处理厂，由清华大学环境科学与工程系膜技术研发与应用中心提供技术支持的密云县污水处理厂再生水回用工程举行了竣工典礼。该工程采用了当今世界最先进的膜-生物反应器（简称MBR）技术。MBR是将膜分离和传统生物处理工艺有机结合的一种新型高效污水处理与回用工艺，集生物......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.06</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231749875297393/20110225231749875297393_.html" target="_blank">清华环境影响评价室获国家环保总局表彰</a></h3>
+              <p class="thnews_jqzy">　　清华大学环境影响评价室获国家环保总局表彰　【新闻中心讯】日前，在国家环保总局召开的“全国环境影响评价管理工作会议”上，清华大学环境影响评价室 被授予“全国建设项目环境影响评价优秀甲级单位”称号。会议表彰了包括清华大学环境影响评价室在内的全国10家荣获“优秀甲级建设项目环境影响评价单位”称号的评价机构。清华大学环境影响评价室作为获奖单位的唯一高校......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>25</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225608875876423/20110225225608875876423_.html" target="_blank">在环境友好科技竞赛中交流创意 碰撞思想</a></h3>
+              <p class="thnews_jqzy">　　在环境友好科技竞赛中交流创意 碰撞思想【新闻中心讯 通讯员 吴乾元】由清华大学环境科学与工程系主办的环境友好科技竞赛，为同学们提供了充分展示自己想法和创意的空间，吸引了校内外众多同学的热情参与。为了让参赛选手更深入地了解环境友好的理念，促进师生之间和选手之间的交流，竞赛组委会于5月20日晚在清青咖啡厅举办了环境友科技竞赛交流会。参赛选手根据其作品类型......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>18</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231745609206205/20110225231745609206205_.html" target="_blank">持久性有机污染物论坛清华开讲</a></h3>
+              <p class="thnews_jqzy">　　持久性有机污染物论坛清华开讲&nbsp;&nbsp;&nbsp; 【新闻中心讯 通讯员 屈彩云】5月17~18日，“持久性有机污染物论坛2006暨第一届持久性有机污染物全国学术研讨会”在清华大学召开。这既是我国持久性有机污染物（POPs）领域政府、学术界、产业界集思广益、共谋对策的一次盛会，也是国内POPs研究领域的一场科学盛宴。本次论坛旨在POPs领域为各......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.05</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231744468563691/20110225231744468563691_.html" target="_blank">清华环境系教授出席联合国环境署《POPs...</a></h3>
+              <p class="thnews_jqzy">　　清华环境系教授出席联合国环境署《POPs公约》第二届缔约国大会【新闻中心讯】《持久性有机污染物公约》（简称《POPs公约》）第二届缔约国大会于5月1～5日在瑞士日内瓦召开。联合国环境规划署（UNEP）副执行主任Shafqat Kakakhe先生出席大会开幕式并致辞，来自130多个国家以及50多个政府间组织（IGOs）和非政府组织（NGOs）的450多名代......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231739640599608/20110225231739640599608_.html" target="_blank">清华与京都大学联手举行水论坛</a></h3>
+              <p class="thnews_jqzy">　　清华与京都大学联手举行水论坛【新闻中心讯 通讯员 屈彩云】4月27日下午，清华大学－京都大学水论坛在主楼召开。论坛围绕“臭氧在污水处理中的应用”，“中国城市污水处理基础设施的发展、现状与规划、政策和市场”，“北京排水的现状和未来”，“中国水业的投资机会”等主题做了报告，并进行了研讨。会议邀请了清华大学环境系水业政策中心常杪副教授、京都大学工程系津野......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231739250306737/20110225231739250306737_.html" target="_blank">清华环境系与哈希共建水质监测联合研究中心</a></h3>
+              <p class="thnews_jqzy">　　清华环境系与哈希共建水质监测联合研究中心【新闻中心讯】清华环境系将与水质监测仪器的知名公司美国哈希（HACH）联手共建“水质监测联合研究中心”。4月28日上午，“清华环境系&#8226;哈希水质监测联合研究中心”签字仪式在环境系系馆举行。清华大学副校长陈吉宁教授和美国哈希公司亚洲区副总裁周祥德先生先后致辞。陈吉宁说，在目前我国环境事件频发，水环......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>26</span>2006.04</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231733812377883/20110225231733812377883_.html" target="_blank">清华大学环境友好科技大赛启动</a></h3>
+              <p class="thnews_jqzy">　　清华大学环境友好科技大赛启动【新闻中心讯 研通社记者魏巍】4月22日晚，清华西区饮食广场的咖啡厅内座无虚席，由环境系主办的“第一届清华大学环境友好科技大赛”的启动仪式在此举行。中国工程院院士、环境系钱易教授有关环境问题的讲演声情并茂，深深地吸引了每一个人，大家听得聚精会神，并踊跃提问，钱老师都一一作答。第二部分是互动环节，主要以竞猜、有奖征答的方......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231725531177537/20110225231725531177537_.html" target="_blank">世行与清华联合举办中国城市水业挑战与对策...</a></h3>
+              <p class="thnews_jqzy">　　世行与清华联合举行城市水业挑战与对策研讨会　【新闻中心讯】3月25日下午，世界银行和清华大学联合在京举行“中国城市供水和污水行业研究：挑战与对策”研讨会，就中国城市水行业的发展历史以及未来10年发展趋势进行了深入的讨论。此次研讨会是世界银行与清华大学环境系正在进行的中国城市水行业研究项目专家咨询会，会议由清华大学环境系组织，邀请了政府部门、行业协会、核心......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2006.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231723875461998/20110225231723875461998_.html" target="_blank">清华授予联合国副秘书长特普费尔博士名誉教...</a></h3>
+              <p class="thnews_jqzy">　　清华授予联合国副秘书长特普费尔博士名誉教授称号【新闻中心讯】3月17日上午，中国驻肯尼亚使馆和常驻联合国环境署代表处在内罗毕联合国环境署总部举行仪式，由中国常驻联合国环境署代表郭崇立大使代表中国政府和清华大学向联合国副秘书长兼联合国内罗毕办事处总干事、环境署执行主任特普费尔博士颁发清华大学名誉教授聘书。郭崇立大使宣读了清华大学校长顾秉林院士的致函。顾......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2006.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231714359187748/20110225231714359187748_.html" target="_blank">环境系举行新年首场学术讨论会</a></h3>
+              <p class="thnews_jqzy">　　环境系举行新年首场学术讨论会【新闻中心讯 通讯员 屈彩云】1月11日，清华大学环境系水质科学与工程研究所第一届学术讨论会在环境系系馆举行。这是环境系2006年的首场大型学术讨论会，拉开了该系2006年学术讨论的序幕。水质科学与工程研究所在校的全体教师和同学参加了讨论会。系党委书记李振瑜老师致开幕词并主持了第一场报告会。张晓健等教师就近期的研究进展做......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>12</span>2006.01</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231712875101415/20110225231712875101415_.html" target="_blank">十五攻关课题“受污染场地环境风险评价与修...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档十五攻关课题“受污染场地环境风险评价与修复技术规范研究”通过验收　【新闻中心讯】1月8日，清华大学环境系的十五攻关课题“受污染场地环境风险评价与修复技术规范研究”通过验收。在由国家环保总局科技司主持召开的“十五”攻关课题验收会上，课题负责人李广贺教授汇报了课题完成情况和取得的研究成果，并得到验收专家组的充分肯定和高度评价。验收专家组一致认为，......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>31</span>2005.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231710921130277/20110225231710921130277_.html" target="_blank">清华与苏州签署环境领域合作备忘录</a></h3>
+              <p class="thnews_jqzy">　　无标题文档清华与苏州签署环境领域合作备忘录　【新闻中心讯】为了更好地利用清华在环境学科的综合优势，推进区域循环经济发展，为地方建设环境友好型社会服务，12月26日《苏州市人民政府、清华大学关于落实全面合作协议，深入开展环境领域合作备忘录》在苏州签署。清华大学副校长康克军与苏州市市长阎立代表双方签署了备忘录。清华大学环境系系主任陈吉宁与苏州国家高新技术产业开......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>30</span>2005.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231710531190035/20110225231710531190035_.html" target="_blank">“膜-生物反应器”通过“863”专家验收</a></h3>
+              <p class="thnews_jqzy">　　“膜-生物反应器”通过“863”专家验收&nbsp;&nbsp;&nbsp; 【新闻中心讯】12月27日，由我校环境系牵头组织攻关的863”计划——“新型膜-生物反应器的研制与应用”通过国家“863”资源环境领域办公室组织的专家验收。在验收会上，课题负责人黄霞教授做了课题完成情况以及最终成果的汇报，得到了课题验收专家组的充分肯定和高度评价。&nbsp;&nb......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2005.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9654/2011/20110225225610984954932/20110225225610984954932_.html" target="_blank">张彦仲院士畅谈建设节约型社会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档张彦仲院士畅谈建设节约型社会12月5日下午，中国工程院院士、“建设节约型社会战略研究”研究组组长张彦仲在理科楼报告厅为我校同学们做了一场题为“建设资源节约型与环境友好型社会”的专题报告。张彦仲院士首先阐明了我国日益枯竭的自然资源与快速增长的资源需求之间的尖锐矛盾。并指出“不改变经济增长模式，不建设节约型社会，是不可能实现‘十一五’的奋斗目标......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>07</span>2005.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231705281979573/20110225231705281979573_.html" target="_blank">张彦仲院士畅谈建设节约型社会</a></h3>
+              <p class="thnews_jqzy">　　无标题文档张彦仲院士畅谈建设节约型社会12月5日下午，中国工程院院士、“建设节约型社会战略研究”研究组组长张彦仲在理科楼报告厅为我校同学们做了一场题为“建设资源节约型与环境友好型社会”的专题报告。张彦仲院士首先阐明了我国日益枯竭的自然资源与快速增长的资源需求之间的尖锐矛盾。并指出“不改变经济增长模式，不建设节约型社会，是不可能实现‘十一五’的奋斗目标......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>05</span>2005.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231704750428392/20110225231704750428392_.html" target="_blank">我国学者初当国际紫外线协会常务理事</a></h3>
+              <p class="thnews_jqzy">　　我国学者首次当选国际紫外线协会常务理事【新闻中心讯】日前，我校环境系刘文君副教授接到国际紫外线协会（IUVA）的正式通知，在该组织于11月6日在加拿大魁北克城召开的大会上他被选为该协会的常务理事（Board Member），这是我国学者首次入选该组织的常务理事。&nbsp;&nbsp;&nbsp; 国际紫外线协会目前有来自38个国家的1000多名会员，主......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>21</span>2004.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/10303/2011/20110225231538000646003/20110225231538000646003_.html" target="_blank">环境系建系20周年庆典举行</a></h3>
+              <p class="thnews_jqzy">　　无标题文档拼搏进取 开拓创新 建设世界一流环境学科环境系建系20周年庆典举行【新闻中心讯 特约记者 梁君健 学生记者 肖佳平】12月18日下午，环境科学与工程系在主楼后厅隆重举行建系20周年庆典。庆典由环境系党委书记李振瑜主持。国家环保总局局长解振华等政府部门领导和校党委书记陈希、学校老领导方惠坚、杨家庆等及相关部处负责人出席了庆典。来自全国各地的200......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>16</span>2003.12</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9656/2011/20110225231422656150640/20110225231422656150640_.html" target="_blank">环境系学长访谈录之一 访西图中国集团的鲁...</a></h3>
+              <p class="thnews_jqzy">　　无标题文档环境系学长访谈录之一——访西图中国集团的鲁玺学长【编者按】对于面临择业的毕业生，如何选择自己的职业、如何把握专业的前景，都是让大家感到困惑甚至迷茫的问题。为了让本系即将毕业的同学们能了解前人的经验，调整自己的心态，环境系研团总支组织了这次学长访谈系列活动，希望能使大家从中得到一些有用的东西。第一期访谈对象是环境系固体所2003届硕士毕业生鲁玺师......</p>
+             </div>
+     </li>
+          <li class="clearfix">
+      <div class="mtime"><span>29</span>2001.03</div>
+      <div class="newscontent">
+       <h3><a href="/publish/thunews/9649/2011/20110225231211046293397/20110225231211046293397_.html" target="_blank">环境系承担的“滇池流域面源污染控制技术研...</a></h3>
+              <p class="thnews_jqzy">　　滇池课题2000年度考核会环境系承担的“滇池流域面源污染控制技术研究”课题进展顺利3月22～23日，由国家科技部和云南省有关领导组成的国家重大污染控制专项“滇池水污染控制技术研究”项目领导小组和聘请的项目咨询专家组联合在昆明召开了2000年度执行情况考核会，我校环境系钱易院士和陈吉宁教授共同负责的“滇池流域面源污染控制技术研究”课题阶段成果突出，在汇报答......</p>
+             </div>
+     </li>
+         </ul>
+   </aside>
+   
+  </section>
+  <section class="colunm2">
+   <section class="mod">
+    <h2><a href="/publish/thunews/9652/index.html" class="more" target="_blank">更多 &#8250;</a><span class="iconwraper"><i class="thunews-picture-o"></i></span>图说清华</h2>
+    <div class="slidegallery">
+     <ul id="thunews_tsqh">
+     
+     </ul>
+    </div>
+    
+   </section>
+   <section class="mod withborder">
+    <h2 class="red"><span class="iconwraper"><i class="thunews-line-chart"></i></span>最新更新</h2>
+    <script language="javascript" type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+    getResData();
+    //获取数据
+    function getResData(){
+ 
+    jQuery.get("/publish/thunews/thunews_zxgx.json?r="+Math.random(), function(data){
+ data = eval('('+data+')');
+ $("#datalist_secl").empty();
+    var html = "<ul class='asidetimeline'>";
+    jQuery.each(data,function(entryIndex,entry){
+    dt = new Date();
+    var time2 = dt.Format("MM.dd.yyyy");
+    var mdd=time2.substr(0,5);
+  var href =(entry["videourl"]==''?entry["href"]:entry["videourl"]);
+    if(getMdd(entry["datetime"])==mdd){
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time today'><i class='arrow'><em></em></i><code></code>" + '今天' + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }else{
+    html += "<li><span class='click'><i class='thunews-eye'></i> " +entry["dotnum"]+ " </span><div class='time'><i class='arrow'><em></em></i><code></code>" + getMdd(entry["datetime"]) + "</div><h3><a href='"+href+"' title='" +entry["title"]+ "'>" + entry["title"] + "</a></h3></li>"
+    }
+    });
+    html += "</ul>";
+    $("#datalist_secl").append(html);
+    });
+    };
+    });
+    //]]>
+    </script>
+    <div id="datalist_secl"></div>
+   </section>
+  </section>
+ </div>
+</div>
+<footer>
+ <div class="mainWrap clearfix">
+     <section>
+         <div class="thulogo"><img src="/publish/thunews/images/thulogo.png"></div>
+            <div class="copyright"><span><a href="/publish/thunews/10274/index.html">网站地图</a>　│　<a href="/publish/thunews/10225/index.html">关于我们</a>　│　<a href="/publish/thunews/10217/index.html">友情链接</a>　│　<a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/picture/map.png" target="_blank">清华地图</a></span>
+            清华大学新闻中心版权所有，清华大学新闻网编辑部维护，电子信箱:news@tsinghua.edu.cn<br>
+Copyright 2001-2016 news.tsinghua.edu.cn. All rights reserved.
+            </div>
+        </section>
+    </div></footer>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"></script> 
+    <script language="javascript" type="text/javascript">
+jQuery(function(){
+      jQuery('#nav li a.item0').removeClass('current');
+     });
+    $(document).ready(function(){
+$(".article p img").closest("p").css("text-indent","0");
+    });
+</script>
+<script>
+ jQuery.ajaxSettings.async = false; 
+ getResData1();
+ function getResData1(){
+     jQuery.getJSON("/publish/thunews/thunews_tsqh.json?r="+Math.random(), function(data){
+       //$("#thunews_tsqh").empty();
+       jQuery.each(data,function(index){
+  
+      var html = "<li>";
+      html += "<a href=\""+data[index]["href"]+"\" title=\"" +data[index]["span"]+ "\" target=\"_blank\">";
+   html += "<img src=\""+data[index]["src"]+"\">";
+   html += "<div><b></b>";
+   html += "<span>"+data[index]["span"]+"</span>"
+      html += "</div></a></li>";
+      $("#thunews_tsqh").append(html);
+       });
+     });
+   test();
+      };
+ function test(){
+   $('.slidegallery ul').slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   centerMode: false,
+   dots:true,
+   prevArrow:"<div class=\"sliderbutton prev\"><i class=\"thunews-angle-left\"></i></div>",
+   nextArrow:"<div class=\"sliderbutton next\"><i class=\"thunews-angle-right\"></i></div>"
+  });
+ $('.slidegallery .sliderbutton.prev,.slidegallery .sliderbutton.next').hide();
+ }
+ </script>
+ <script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"40"},"share":{},"image":{},"selectShare":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>
